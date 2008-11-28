@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenERP Server 5.0.0-rc1\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
-"POT-Creation-Date: 2008-11-28 17:02:42+0000\n"
-"PO-Revision-Date: 2008-11-28 17:02:42+0000\n"
+"POT-Creation-Date: 2008-11-28 16:53:56+0000\n"
+"PO-Revision-Date: 2008-11-28 16:53:56+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 #. module: account_analytic_analysis
 #: constraint:ir.model:0
 msgid "The Object name must start with x_ and not contain any special character !"
-msgstr "O nome do objecto deve começar com x_ e não pode conter um caracter especial!"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,remaining_ca:0
@@ -38,7 +38,7 @@ msgstr ""
 #. module: account_analytic_analysis
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_action_account_analytic_all
 msgid "All Analytic Accounts"
-msgstr "Todas as contas de contabilidade analítica"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_managed_open
@@ -49,7 +49,7 @@ msgstr ""
 #. module: account_analytic_analysis
 #: constraint:ir.ui.view:0
 msgid "Invalid XML for View Architecture!"
-msgstr "XML inválido para a arquitectura de vista"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,last_invoice_date:0
@@ -74,13 +74,13 @@ msgstr ""
 #. module: account_analytic_analysis
 #: model:ir.model,name:account_analytic_analysis.model_account_analytic_analysis_summary_user
 msgid "Hours summary by user"
-msgstr "Sumario de horas por utilizador"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_new
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_action_account_analytic_new
 msgid "New Analytic Account"
-msgstr "Nova conta da contabilidade analítica"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,theorical_margin:0
@@ -137,7 +137,7 @@ msgstr ""
 #: field:account.analytic.account,user_ids:0
 #: field:account_analytic_analysis.summary.user,user:0
 msgid "User"
-msgstr "Utilizador"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_managed_pending
@@ -175,7 +175,7 @@ msgstr ""
 #. module: account_analytic_analysis
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_account
 msgid "Analytic Accounts"
-msgstr "Contas da contabilidade analítica"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,ca_invoiced:0
@@ -191,13 +191,13 @@ msgstr ""
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_hr_tree_invoiced_my
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_action_hr_tree_invoiced_my
 msgid "My Uninvoiced Entries"
-msgstr "Minhas entradas não facturadas"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_all_pending
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_action_account_analytic_all_pending
 msgid "Pending Analytic Accounts"
-msgstr "Contas da contabilidade analítica pendentes"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,remaining_hours:0
@@ -222,7 +222,7 @@ msgstr ""
 #. module: account_analytic_analysis
 #: model:ir.model,name:account_analytic_analysis.model_account_analytic_analysis_summary_month
 msgid "Hours summary by month"
-msgstr "Sumário de horas por mês"
+msgstr ""
 
 #. module: account_analytic_analysis
 #, python-format
@@ -248,7 +248,7 @@ msgstr ""
 #. module: account_analytic_analysis
 #: view:account.analytic.account:0
 msgid "Analytic accounts"
-msgstr "Conta da Contabilidade analítica"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,last_worked_invoiced_date:0
@@ -279,7 +279,7 @@ msgstr ""
 #: field:account_analytic_analysis.summary.month,unit_amount:0
 #: field:account_analytic_analysis.summary.user,unit_amount:0
 msgid "Total Time"
-msgstr "Tempo total"
+msgstr ""
 
 #. module: account_analytic_analysis
 #, python-format
@@ -291,13 +291,13 @@ msgstr ""
 #: field:account.analytic.account,month_ids:0
 #: field:account_analytic_analysis.summary.month,month:0
 msgid "Month"
-msgstr "Mês"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: field:account_analytic_analysis.summary.month,account_id:0
 #: field:account_analytic_analysis.summary.user,account_id:0
 msgid "Analytic Account"
-msgstr "Conta da Contabilidade Analítica"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_hr_tree_invoiced_all
