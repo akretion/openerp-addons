@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenERP Server 5.0.0_rc2\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
-"POT-Creation-Date: 2008-12-22 17:57:56+0000\n"
-"PO-Revision-Date: 2008-12-22 17:57:56+0000\n"
+"POT-Creation-Date: 2008-12-22 18:06:12+0000\n"
+"PO-Revision-Date: 2008-12-22 18:06:12+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -49,7 +49,7 @@ msgstr ""
 #. module: account_analytic_analysis
 #: constraint:ir.ui.view:0
 msgid "Invalid XML for View Architecture!"
-msgstr ""
+msgstr "Görüntüleme mimarisi için Geçersiz XML"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,last_invoice_date:0
