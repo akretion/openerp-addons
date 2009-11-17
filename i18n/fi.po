@@ -1,15 +1,16 @@
-# Translation of OpenERP Server.
-# This file contains the translation of the following modules:
-#	* account_analytic_analysis
+# Finnish translation for openobject-addons
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the openobject-addons package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenERP Server 5.0.0_rc3\n"
-"Report-Msgid-Bugs-To: support@openerp.com\n"
+"Project-Id-Version: openobject-addons\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2009-08-28 16:01+0000\n"
-"PO-Revision-Date: 2009-09-16 14:31+0000\n"
-"Last-Translator: Fabien (Open ERP) <fp@tinyerp.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2009-11-12 11:09+0000\n"
+"Last-Translator: pete-rok <Unknown>\n"
+"Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,97 +23,96 @@ msgid ""
 "Number of hours that can be invoiced plus those that already have been "
 "invoiced."
 msgstr ""
+"Tuntien lukumäärä jotka voidaan laskuttaa ja jotka ovat jo laskutettu."
 
 #. module: account_analytic_analysis
 #: model:ir.model,name:account_analytic_analysis.model_account_analytic_analysis_summary_user
 msgid "Hours summary by user"
-msgstr ""
+msgstr "Käyttäjän tuntiyhteenveto"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,last_invoice_date:0
 msgid "Last Invoice Date"
-msgstr ""
+msgstr "Viimeisen laskun päiväys"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,remaining_ca:0
 msgid "Computed using the formula: Max Invoice Price - Invoiced Amount."
-msgstr ""
+msgstr "Laskettu kaavalla: Laskun hinta enintään - Laskutettu"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,remaining_hours:0
 msgid "Computed using the formula: Maximum Quantity - Hours Tot."
-msgstr ""
+msgstr "Laskettu kaavalla: Enimmäismäärä - Tunteja yhteensä"
 
 #. module: account_analytic_analysis
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_action_account_analytic_all
 msgid "All Analytic Accounts"
-msgstr ""
+msgstr "Kaikki analyyttiset tilit"
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_managed_open
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_analytic_account_to_valid_open
 msgid "My Current Accounts"
-msgstr ""
+msgstr "Nykyiset omat tilit"
 
 #. module: account_analytic_analysis
 #: constraint:ir.ui.view:0
 msgid "Invalid XML for View Architecture!"
-msgstr "Invalido XML para Arquitetura da View"
+msgstr "Virheellinen XML näkymäarkkitehtuurille!"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,last_invoice_date:0
 msgid "Date of the last invoice created for this analytic account."
-msgstr ""
+msgstr "Viimeksi luodun laskun päiväys tällä analyyttiselle tilille"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,ca_theorical:0
 msgid "Theorical Revenue"
-msgstr ""
+msgstr "Teoreettinen tulo"
 
 #. module: account_analytic_analysis
 #: constraint:ir.actions.act_window:0
 msgid "Invalid model name in the action definition."
-msgstr ""
+msgstr "Virheellinen mallin nimi toimenpiteen määrittelyssä."
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,theorical_margin:0
 msgid "Computed using the formula: Theorial Revenue - Total Costs"
-msgstr ""
+msgstr "Laskettu kaavalla: Teoreettinen tulo - Kokonaiskustannukset"
 
 #. module: account_analytic_analysis
 #: constraint:ir.model:0
 msgid ""
 "The Object name must start with x_ and not contain any special character !"
-msgstr ""
-"O nome do objeto precisa iniciar com x_ e não conter nenhum caracter "
-"especial!"
+msgstr "Objektin nimen tulee alkaa x_ ja se ei saa sisältää erikoismerkkejä!"
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_new
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_action_account_analytic_new
 msgid "New Analytic Account"
-msgstr "Nova conta analítica"
+msgstr "Uusi analyyttinen tili"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,theorical_margin:0
 msgid "Theorical Margin"
-msgstr ""
+msgstr "Teoreettinen kate"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,real_margin_rate:0
 msgid "Real Margin Rate (%)"
-msgstr ""
+msgstr "Toteutunut kate (%)"
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_all_open
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_action_account_analytic_all_open
 msgid "Current Analytic Accounts"
-msgstr ""
+msgstr "Tämänhetkiset analyyttiset tilit"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,last_worked_date:0
 msgid "Date of the latest work done on this account."
-msgstr ""
+msgstr "Päivämäärä viimeiselle Työ valmis merkinnälle"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,last_worked_invoiced_date:0
@@ -124,17 +124,17 @@ msgstr ""
 #. module: account_analytic_analysis
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_invoicing
 msgid "Invoicing"
-msgstr ""
+msgstr "Laskutus"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,last_worked_date:0
 msgid "Date of Last Cost/Work"
-msgstr ""
+msgstr "Viimeisen kulun/työn päivämäärä"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,total_cost:0
 msgid "Total Costs"
-msgstr ""
+msgstr "Kokonaiskulut"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,hours_quantity:0
@@ -146,7 +146,7 @@ msgstr ""
 #. module: account_analytic_analysis
 #: field:account.analytic.account,remaining_hours:0
 msgid "Remaining Hours"
-msgstr ""
+msgstr "Jäljellä olevat tunnit"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,ca_theorical:0
@@ -155,35 +155,37 @@ msgid ""
 "if all these costs have been invoiced at the normal sale price provided by "
 "the pricelist."
 msgstr ""
+"Perustuu projektin kustannuksille.Mikä olisi ollut tulo jos kaikki kulut "
+"oltaisiin laskutettu hintalistan listahinnalla."
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,user_ids:0
 #: field:account_analytic_analysis.summary.user,user:0
 msgid "User"
-msgstr ""
+msgstr "Käyttäjä"
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_managed_pending
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_analytic_account_to_valid_pending
 msgid "My Pending Accounts"
-msgstr ""
+msgstr "Omat avoimet tilit"
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_hr_tree_invoiced_my
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_action_hr_tree_invoiced_my
 msgid "My Uninvoiced Entries"
-msgstr ""
+msgstr "Minun laskuttamattomat merkinnät"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,real_margin:0
 msgid "Computed using the formula: Invoiced Amount - Total Costs."
-msgstr ""
+msgstr "Laskettu kaavalla: Laskutettu - Kokonaiskulut"
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_managed
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_analytic_account_managed
 msgid "My Accounts"
-msgstr ""
+msgstr "Tilit"
 
 #. module: account_analytic_analysis
 #: model:ir.module.module,description:account_analytic_analysis.module_meta_information
@@ -196,17 +198,17 @@ msgstr ""
 #. module: account_analytic_analysis
 #: field:account.analytic.account,hours_qtt_non_invoiced:0
 msgid "Uninvoiced Hours"
-msgstr ""
+msgstr "Laskuttamattomat tunnit"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,hours_quantity:0
 msgid "Hours Tot"
-msgstr ""
+msgstr "Kokonaistunnit"
 
 #. module: account_analytic_analysis
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_account
 msgid "Analytic Accounts"
-msgstr "Contas analíticas"
+msgstr "Analyyttiset tilit"
 
 #. module: account_analytic_analysis
 #: model:ir.module.module,shortdesc:account_analytic_analysis.module_meta_information
@@ -216,12 +218,12 @@ msgstr ""
 #. module: account_analytic_analysis
 #: field:account.analytic.account,ca_invoiced:0
 msgid "Invoiced Amount"
-msgstr ""
+msgstr "Laskutetut määrä"
 
 #. module: account_analytic_analysis
 #: model:ir.ui.menu,name:account_analytic_analysis.next_id_71
 msgid "Financial Project Management"
-msgstr ""
+msgstr "Finanssiprojektinhallinta"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,last_worked_invoiced_date:0
@@ -231,7 +233,7 @@ msgstr ""
 #. module: account_analytic_analysis
 #: field:account.analytic.account,ca_to_invoice:0
 msgid "Uninvoiced Amount"
-msgstr ""
+msgstr "Laskuttamaton määrä"
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_all_pending
@@ -242,22 +244,22 @@ msgstr ""
 #. module: account_analytic_analysis
 #: field:account.analytic.account,hours_qtt_invoiced:0
 msgid "Invoiced Hours"
-msgstr ""
+msgstr "Laskutetut tunnit"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,real_margin:0
 msgid "Real Margin"
-msgstr ""
+msgstr "Todellinen kate"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,ca_invoiced:0
 msgid "Total customer invoiced amount for this account."
-msgstr ""
+msgstr "Asiakkaiden kokonaislaskutuksen määrä tälle kuukaudelle"
 
 #. module: account_analytic_analysis
 #: model:ir.model,name:account_analytic_analysis.model_account_analytic_analysis_summary_month
 msgid "Hours summary by month"
-msgstr ""
+msgstr "Kuukauden tuntiyhteenveto"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,real_margin_rate:0
@@ -274,7 +276,7 @@ msgstr ""
 #. module: account_analytic_analysis
 #: view:account.analytic.account:0
 msgid "Analytic accounts"
-msgstr ""
+msgstr "Analyyttiset tilit"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,remaining_ca:0
@@ -302,19 +304,19 @@ msgstr ""
 #: field:account_analytic_analysis.summary.month,unit_amount:0
 #: field:account_analytic_analysis.summary.user,unit_amount:0
 msgid "Total Time"
-msgstr ""
+msgstr "Kokonaisaika"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,month_ids:0
 #: field:account_analytic_analysis.summary.month,month:0
 msgid "Month"
-msgstr ""
+msgstr "Kuukausi"
 
 #. module: account_analytic_analysis
 #: field:account_analytic_analysis.summary.month,account_id:0
 #: field:account_analytic_analysis.summary.user,account_id:0
 msgid "Analytic Account"
-msgstr ""
+msgstr "Analyyttinen tili"
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_managed_overpassed
@@ -326,7 +328,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_hr_tree_invoiced_all
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_action_hr_tree_invoiced_all
 msgid "All Uninvoiced Entries"
-msgstr ""
+msgstr "Kaikki laskuttamattomat määrät"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,total_cost:0

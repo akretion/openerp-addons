@@ -1,15 +1,16 @@
-# Translation of OpenERP Server.
-# This file contains the translation of the following modules:
-#	* account_analytic_analysis
+# Latvian translation for openobject-addons
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the openobject-addons package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenERP Server 5.0.0_rc3\n"
-"Report-Msgid-Bugs-To: support@openerp.com\n"
+"Project-Id-Version: openobject-addons\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2009-08-28 16:01+0000\n"
-"PO-Revision-Date: 2009-09-16 14:31+0000\n"
+"PO-Revision-Date: 2009-09-08 14:28+0000\n"
 "Last-Translator: Fabien (Open ERP) <fp@tinyerp.com>\n"
-"Language-Team: \n"
+"Language-Team: Latvian <lv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -46,18 +47,18 @@ msgstr ""
 #. module: account_analytic_analysis
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_action_account_analytic_all
 msgid "All Analytic Accounts"
-msgstr ""
+msgstr "Visi Analītiskie Konti"
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_managed_open
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_analytic_account_to_valid_open
 msgid "My Current Accounts"
-msgstr ""
+msgstr "Mani Tekošie Konti"
 
 #. module: account_analytic_analysis
 #: constraint:ir.ui.view:0
 msgid "Invalid XML for View Architecture!"
-msgstr "Invalido XML para Arquitetura da View"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,last_invoice_date:0
@@ -84,14 +85,12 @@ msgstr ""
 msgid ""
 "The Object name must start with x_ and not contain any special character !"
 msgstr ""
-"O nome do objeto precisa iniciar com x_ e não conter nenhum caracter "
-"especial!"
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_new
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_action_account_analytic_new
 msgid "New Analytic Account"
-msgstr "Nova conta analítica"
+msgstr "Jauns Analītiskais Konts"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,theorical_margin:0
@@ -107,7 +106,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_all_open
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_action_account_analytic_all_open
 msgid "Current Analytic Accounts"
-msgstr ""
+msgstr "Tekošie Analītiskie Konti"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,last_worked_date:0
@@ -134,7 +133,7 @@ msgstr ""
 #. module: account_analytic_analysis
 #: field:account.analytic.account,total_cost:0
 msgid "Total Costs"
-msgstr ""
+msgstr "Kopējās Izmaksas"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,hours_quantity:0
@@ -146,7 +145,7 @@ msgstr ""
 #. module: account_analytic_analysis
 #: field:account.analytic.account,remaining_hours:0
 msgid "Remaining Hours"
-msgstr ""
+msgstr "Atlikušas Stundas"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,ca_theorical:0
@@ -160,7 +159,7 @@ msgstr ""
 #: field:account.analytic.account,user_ids:0
 #: field:account_analytic_analysis.summary.user,user:0
 msgid "User"
-msgstr ""
+msgstr "Lietotājs"
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_managed_pending
@@ -183,7 +182,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_managed
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_analytic_account_managed
 msgid "My Accounts"
-msgstr ""
+msgstr "Mani Konti"
 
 #. module: account_analytic_analysis
 #: model:ir.module.module,description:account_analytic_analysis.module_meta_information
@@ -206,7 +205,7 @@ msgstr ""
 #. module: account_analytic_analysis
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_account
 msgid "Analytic Accounts"
-msgstr "Contas analíticas"
+msgstr "Analītiskie Konti"
 
 #. module: account_analytic_analysis
 #: model:ir.module.module,shortdesc:account_analytic_analysis.module_meta_information
@@ -274,7 +273,7 @@ msgstr ""
 #. module: account_analytic_analysis
 #: view:account.analytic.account:0
 msgid "Analytic accounts"
-msgstr ""
+msgstr "Analītiskie konti"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,remaining_ca:0
@@ -302,19 +301,19 @@ msgstr ""
 #: field:account_analytic_analysis.summary.month,unit_amount:0
 #: field:account_analytic_analysis.summary.user,unit_amount:0
 msgid "Total Time"
-msgstr ""
+msgstr "Kopējais Laiks"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,month_ids:0
 #: field:account_analytic_analysis.summary.month,month:0
 msgid "Month"
-msgstr ""
+msgstr "Mēnesis"
 
 #. module: account_analytic_analysis
 #: field:account_analytic_analysis.summary.month,account_id:0
 #: field:account_analytic_analysis.summary.user,account_id:0
 msgid "Analytic Account"
-msgstr ""
+msgstr "Analītiskais Konts"
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_managed_overpassed

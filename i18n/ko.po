@@ -1,15 +1,16 @@
-# Translation of OpenERP Server.
-# This file contains the translation of the following modules:
-#	* account_analytic_analysis
+# Korean translation for openobject-addons
+# Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
+# This file is distributed under the same license as the openobject-addons package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenERP Server 5.0.0_rc3\n"
-"Report-Msgid-Bugs-To: support@openerp.com\n"
+"Project-Id-Version: openobject-addons\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2009-08-28 16:01+0000\n"
-"PO-Revision-Date: 2009-09-16 14:31+0000\n"
-"Last-Translator: Fabien (Open ERP) <fp@tinyerp.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2009-09-16 11:34+0000\n"
+"Last-Translator: sunygu <sunygyu@gmail.com>\n"
+"Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,7 +22,7 @@ msgstr ""
 msgid ""
 "Number of hours that can be invoiced plus those that already have been "
 "invoiced."
-msgstr ""
+msgstr "한시간 마다 항상 기재되고 있습니다."
 
 #. module: account_analytic_analysis
 #: model:ir.model,name:account_analytic_analysis.model_account_analytic_analysis_summary_user
@@ -31,12 +32,12 @@ msgstr ""
 #. module: account_analytic_analysis
 #: field:account.analytic.account,last_invoice_date:0
 msgid "Last Invoice Date"
-msgstr ""
+msgstr "마지막 송장 정보"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,remaining_ca:0
 msgid "Computed using the formula: Max Invoice Price - Invoiced Amount."
-msgstr ""
+msgstr "식을 사용하여 계산합니다."
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,remaining_hours:0
@@ -46,28 +47,28 @@ msgstr ""
 #. module: account_analytic_analysis
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_action_account_analytic_all
 msgid "All Analytic Accounts"
-msgstr ""
+msgstr "전체 분석적인  설명"
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_managed_open
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_analytic_account_to_valid_open
 msgid "My Current Accounts"
-msgstr ""
+msgstr "현재 설명"
 
 #. module: account_analytic_analysis
 #: constraint:ir.ui.view:0
 msgid "Invalid XML for View Architecture!"
-msgstr "Invalido XML para Arquitetura da View"
+msgstr "망가져가는 XML의 구조를 볼수 있다!"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,last_invoice_date:0
 msgid "Date of the last invoice created for this analytic account."
-msgstr ""
+msgstr "만기 마지막 상품은 분석적인 설명을 만들어 낸다."
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,ca_theorical:0
 msgid "Theorical Revenue"
-msgstr ""
+msgstr "Theorical 수익"
 
 #. module: account_analytic_analysis
 #: constraint:ir.actions.act_window:0
@@ -83,15 +84,13 @@ msgstr ""
 #: constraint:ir.model:0
 msgid ""
 "The Object name must start with x_ and not contain any special character !"
-msgstr ""
-"O nome do objeto precisa iniciar com x_ e não conter nenhum caracter "
-"especial!"
+msgstr "물건이름은 X_가 같이 사용되어야 하고 특별한 이름을 사용하면 안됩니다."
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_new
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_action_account_analytic_new
 msgid "New Analytic Account"
-msgstr "Nova conta analítica"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,theorical_margin:0
@@ -201,12 +200,12 @@ msgstr ""
 #. module: account_analytic_analysis
 #: field:account.analytic.account,hours_quantity:0
 msgid "Hours Tot"
-msgstr ""
+msgstr "한 시간 조금"
 
 #. module: account_analytic_analysis
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_account
 msgid "Analytic Accounts"
-msgstr "Contas analíticas"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: model:ir.module.module,shortdesc:account_analytic_analysis.module_meta_information
