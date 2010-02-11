@@ -146,16 +146,7 @@ def map_data(cr, uid, obj):
 class CalDAV(object):
     __attribute__ = {}
 
-    def get_recurrent_dates(self, rrulestring, exdate, startdate=None):
-        if not startdate:
-            startdate = datetime.now()
-        rset1 = rrulestr(rrulestring, dtstart=startdate, forceset=True)
-
-        for date in exdate:
-            datetime_obj = todate(date)
-            rset1._exdate.append(datetime_obj)
-        re_dates = map(lambda x:x.strftime('%Y-%m-%d %H:%M:%S'), rset1._iter())
-        return re_dates
+    
 
     def ical_set(self, name, value, type):
         if name in self.__attribute__ and self.__attribute__[name]:
