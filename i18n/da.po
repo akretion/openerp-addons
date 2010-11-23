@@ -1,15 +1,16 @@
-# Translation of OpenERP Server.
-# This file contains the translation of the following modules:
-#	* account_analytic_analysis
+# Danish translation for openobject-addons
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the openobject-addons package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenERP Server 6.0dev_rc3\n"
-"Report-Msgid-Bugs-To: support@openerp.com\n"
+"Project-Id-Version: openobject-addons\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2010-11-18 16:11+0000\n"
-"PO-Revision-Date: 2010-11-22 17:00+0000\n"
-"Last-Translator: Chertykov Denis <chertykov@gmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2010-11-22 07:38+0000\n"
+"Last-Translator: Martin Pihl <martinpihl@gmail.com>\n"
+"Language-Team: Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,86 +22,80 @@ msgstr ""
 msgid ""
 "Number of hours that can be invoiced plus those that already have been "
 "invoiced."
-msgstr ""
-"Количество часов, которое может быть выставлено в счете, а также те, которые "
-"уже были выставлены к оплате."
+msgstr "Antal timer der kan faktureres plus de som allerede er faktureret."
 
 #. module: account_analytic_analysis
 #: constraint:ir.model:0
 msgid ""
 "The Object name must start with x_ and not contain any special character !"
 msgstr ""
-"Название объекта должно начинаться с x_  и не должно содержать специальных "
-"символов !"
+"Objektnavnet skal starte med x_ og må ikke indeholde specialkarakterer!"
 
 #. module: account_analytic_analysis
 #: constraint:ir.actions.act_window:0
 msgid "Invalid model name in the action definition."
-msgstr "Недопустимое имя модели в определении действия."
+msgstr "Ugyldigt modelnavn i handlingsdefinitionen"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,remaining_ca:0
 msgid "Computed using the formula: Max Invoice Price - Invoiced Amount."
 msgstr ""
-"Вычислено, с использованием формулы: Максимальная цена по Счету - Итоговая "
-"сумма по выставленным счета."
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,remaining_hours:0
 msgid "Computed using the formula: Maximum Quantity - Hours Tot."
 msgstr ""
-"Вычисленное используя формулу: Максимальное Количество - Всего Часов."
 
 #. module: account_analytic_analysis
 #: code:addons/account_analytic_analysis/account_analytic_analysis.py:0
 #, python-format
 msgid "AccessError"
-msgstr "Ошибка доступа"
+msgstr "Adgangsfejl"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,ca_theorical:0
 msgid "Theorical Revenue"
-msgstr "Теоретический доход"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,last_invoice_date:0
 msgid "Last Invoice Date"
-msgstr "Последняя дата выписки счета"
+msgstr "Sidste faktureringsdato"
 
 #. module: account_analytic_analysis
 #: sql_constraint:ir.module.module:0
 msgid "The name of the module must be unique !"
-msgstr "Название модуля должно быть уникальным !"
+msgstr "Modulets navn skal være unikt"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,last_invoice_date:0
 msgid "Date of the last invoice created for this analytic account."
-msgstr "Дата последнего счета, созданного для этого аналитического счета."
+msgstr ""
 
 #. module: account_analytic_analysis
 #: constraint:ir.ui.menu:0
 msgid "Error ! You can not create recursive Menu."
-msgstr "Ошибка ! Нельзя создать зацикленные меню."
+msgstr ""
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,theorical_margin:0
 msgid "Computed using the formula: Theorial Revenue - Total Costs"
-msgstr "Вычисленное используя формулу: Доход теоретический - Общая Стоимость"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,theorical_margin:0
 msgid "Theorical Margin"
-msgstr "Теоретическая маржа"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,real_margin_rate:0
 msgid "Real Margin Rate (%)"
-msgstr "Реальный размер маржи (%)"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: sql_constraint:ir.module.module:0
 msgid "The certificate ID of the module must be unique !"
-msgstr "Идентификатор сертификата модуля должен быть уникальным !"
+msgstr "Modulets certifikat-ID skal være unikt"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,last_worked_invoiced_date:0
@@ -108,23 +103,21 @@ msgid ""
 "If invoice from the costs, this is the date of the latest work or cost that "
 "have been invoiced."
 msgstr ""
-"Если счет составлен из расходов, это дата последней работы и затраты, "
-"которые были при выставлении счета."
 
 #. module: account_analytic_analysis
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_invoicing
 msgid "Billing"
-msgstr ""
+msgstr "Fakturering"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,last_worked_date:0
 msgid "Date of Last Cost/Work"
-msgstr "Дата Последней Стоимости / Работы"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,total_cost:0
 msgid "Total Costs"
-msgstr "Общая Стоимость"
+msgstr "Samlet udgifter"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,hours_quantity:0
@@ -132,13 +125,11 @@ msgid ""
 "Number of hours you spent on the analytic account (from timesheet). It "
 "computes on all journal of type 'general'."
 msgstr ""
-"Количество часов, которые Вы истратили на аналитический счет (из табеля). "
-"Вычисляется по всем журналам типа 'Общий'."
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,remaining_hours:0
 msgid "Remaining Hours"
-msgstr "Оставшиеся часы"
+msgstr "Tilbageværende timer"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,ca_theorical:0
@@ -152,37 +143,37 @@ msgstr ""
 #: field:account.analytic.account,user_ids:0
 #: field:account_analytic_analysis.summary.user,user:0
 msgid "User"
-msgstr "Пользователь"
+msgstr "Bruger"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,ca_to_invoice:0
 msgid "Uninvoiced Amount"
-msgstr "Сумма не выставлена"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,real_margin:0
 msgid "Computed using the formula: Invoiced Amount - Total Costs."
-msgstr "Вычисленно используя формулу: Общая сумма по счету - Общая Стоимость"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,hours_qtt_non_invoiced:0
 msgid "Uninvoiced Hours"
-msgstr "Не выставлено Часов"
+msgstr "Ufakturerede timer"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,last_worked_date:0
 msgid "Date of the latest work done on this account."
-msgstr "Дата последней работы сделанной на этом счете."
+msgstr ""
 
 #. module: account_analytic_analysis
 #: constraint:ir.ui.view:0
 msgid "Invalid XML for View Architecture!"
-msgstr "Неправильный XML для просмотра архитектуры!"
+msgstr "Ugyldig XML for View Architecture!"
 
 #. module: account_analytic_analysis
 #: model:ir.module.module,shortdesc:account_analytic_analysis.module_meta_information
 msgid "report_account_analytic"
-msgstr "report_account_analytic"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: model:ir.model,name:account_analytic_analysis.model_account_analytic_analysis_summary_user
@@ -192,44 +183,43 @@ msgstr ""
 #. module: account_analytic_analysis
 #: field:account.analytic.account,ca_invoiced:0
 msgid "Invoiced Amount"
-msgstr "Сумма к оплате"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: code:addons/account_analytic_analysis/account_analytic_analysis.py:0
 #, python-format
 msgid "You try to bypass an access rule (Document type: %s)."
-msgstr "Вы пытаетесь нарушить правила доступа (Тип документа: %s)."
+msgstr ""
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,last_worked_invoiced_date:0
 msgid "Date of Last Invoiced Cost"
-msgstr "Дата последнего счета расходов"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,hours_qtt_invoiced:0
 msgid "Invoiced Hours"
-msgstr "Выставленные часы"
+msgstr "Fakturerede timer"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,real_margin:0
 msgid "Real Margin"
-msgstr "Реальная маржа"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,ca_invoiced:0
 msgid "Total customer invoiced amount for this account."
-msgstr "Итого сумма к оплате заказчику для этого счета."
+msgstr ""
 
 #. module: account_analytic_analysis
 #: model:ir.model,name:account_analytic_analysis.model_account_analytic_analysis_summary_month
 msgid "Hours summary by month"
-msgstr "Итоги в часах по месяцам"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,real_margin_rate:0
 msgid "Computes using the formula: (Real Margin / Total Costs) * 100."
 msgstr ""
-"Вычислить, используя формулу: (Реальная Маржа / общий объем расходов) * 100."
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,hours_qtt_non_invoiced:0
@@ -237,18 +227,16 @@ msgid ""
 "Number of hours (from journal of type 'general') that can be invoiced if you "
 "invoice based on analytic account."
 msgstr ""
-"Количество часов (из журнала типа \"Общие\"), которые могут быть занесены в "
-"счет, если счет основан на аналитическом счету."
 
 #. module: account_analytic_analysis
 #: view:account.analytic.account:0
 msgid "Analytic accounts"
-msgstr "Счета аналитики"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,remaining_ca:0
 msgid "Remaining Revenue"
-msgstr "Оставшийся доход"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,ca_to_invoice:0
@@ -256,37 +244,35 @@ msgid ""
 "If invoice from analytic account, the remaining amount you can invoice to "
 "the customer based on the total costs."
 msgstr ""
-"Если счет основан на аналитическом счете, оставшуюся сумму вы можете "
-"выставить клиенту на основе совокупного объема расходов."
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,revenue_per_hour:0
 msgid "Computed using the formula: Invoiced Amount / Hours Tot."
-msgstr "Вычислено по формуле: Всего по счету / Всего Часов."
+msgstr ""
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,revenue_per_hour:0
 msgid "Revenue per Hours (real)"
-msgstr "Доход за Часы (реальные)"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: field:account_analytic_analysis.summary.month,unit_amount:0
 #: field:account_analytic_analysis.summary.user,unit_amount:0
 msgid "Total Time"
-msgstr "Общее время"
+msgstr "Tid i alt"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,month_ids:0
 #: field:account_analytic_analysis.summary.month,month:0
 msgid "Month"
-msgstr "Месяц"
+msgstr "Måned"
 
 #. module: account_analytic_analysis
 #: field:account_analytic_analysis.summary.month,account_id:0
 #: field:account_analytic_analysis.summary.user,account_id:0
 #: model:ir.model,name:account_analytic_analysis.model_account_analytic_account
 msgid "Analytic Account"
-msgstr "Счет аналитики"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_managed_overpassed
@@ -298,17 +284,17 @@ msgstr ""
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_hr_tree_invoiced_all
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_action_hr_tree_invoiced_all
 msgid "All Uninvoiced Entries"
-msgstr "Все не выставленные записи"
+msgstr ""
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,hours_quantity:0
 msgid "Hours Tot"
-msgstr "Часов всего"
+msgstr "Timer i alt"
 
 #. module: account_analytic_analysis
 #: sql_constraint:ir.model.fields:0
 msgid "Size of the field can never be less than 1 !"
-msgstr "Размер поля никогда не может быть меньше 1 !"
+msgstr "Feltets størrelse kan aldrig være mindre end 1 !"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,total_cost:0
@@ -316,38 +302,3 @@ msgid ""
 "Total of costs for this account. It includes real costs (from invoices) and "
 "indirect costs, like time spent on timesheets."
 msgstr ""
-"Общий объем расходов на этот счет. Он включает в себя реальные затраты (из "
-"счетов) и косвенные издержки, как и время, затраченное по табелям."
-
-#~ msgid "Hours summary by user"
-#~ msgstr "Итого часов по пользователям"
-
-#~ msgid "All Analytic Accounts"
-#~ msgstr "Все счета аналитики"
-
-#~ msgid "New Analytic Account"
-#~ msgstr "Новый счет аналитики"
-
-#~ msgid "Analytic Accounts"
-#~ msgstr "Счета аналитики"
-
-#~ msgid "My Current Accounts"
-#~ msgstr "Мои текущие счета"
-
-#~ msgid "Current Analytic Accounts"
-#~ msgstr "Текущие счета аналитики"
-
-#~ msgid "Invoicing"
-#~ msgstr "Выставление счетов"
-
-#~ msgid "My Pending Accounts"
-#~ msgstr "Мои Незаконченные Отчеты"
-
-#~ msgid "Financial Project Management"
-#~ msgstr "Финансовое Управление Проектом"
-
-#~ msgid "Pending Analytic Accounts"
-#~ msgstr "Незаконченные Аналитические Отчеты"
-
-#~ msgid "My Accounts"
-#~ msgstr "Мои аккаунты"
