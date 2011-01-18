@@ -1,17 +1,16 @@
-# Spanish translation for openobject-addons
-# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# Dutch translation for openobject-addons
+# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
 # This file is distributed under the same license as the openobject-addons package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-01-11 11:15+0000\n"
-"PO-Revision-Date: 2011-01-18 01:41+0000\n"
-"Last-Translator: Jordi Esteve (www.zikzakmedia.com) "
-"<jesteve@zikzakmedia.com>\n"
-"Language-Team: Spanish <es@li.org>\n"
+"PO-Revision-Date: 2011-01-17 10:09+0000\n"
+"Last-Translator: Douwe Wullink (Dypalio) <Unknown>\n"
+"Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,62 +21,62 @@ msgstr ""
 #: view:purchase.requisition:0
 #: selection:purchase.requisition,state:0
 msgid "In Progress"
-msgstr "En proceso"
+msgstr "Loopt"
 
 #. module: purchase_requisition
 #: code:addons/purchase_requisition/wizard/purchase_requisition_partner.py:44
 #, python-format
 msgid "No Product in Tender"
-msgstr "No hay producto en la licitación"
+msgstr "Geen product in tender"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Confirm"
-msgstr "Confirmar"
+msgstr "Bevestigen"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 #: field:purchase.requisition,user_id:0
 msgid "Responsible"
-msgstr "Responsable"
+msgstr "Verantwoordelijke"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Group By..."
-msgstr "Agrupar por..."
+msgstr "Groepeer op..."
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 #: field:purchase.requisition,state:0
 msgid "State"
-msgstr "Estado"
+msgstr "Status"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 #: selection:purchase.requisition,state:0
 msgid "Draft"
-msgstr "Borrador"
+msgstr "Concept"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Supplier"
-msgstr "Proveedor"
+msgstr "Leverancier"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,exclusive:0
 msgid "Requisition Type"
-msgstr "Tipo de solicitud"
+msgstr "Soort aanvraag"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Product Detail"
-msgstr "Detalle del producto"
+msgstr "Product detail"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 #: field:purchase.requisition,date_start:0
 msgid "Requisition Date"
-msgstr "Fecha de solicitud"
+msgstr "Aanvraagdatum"
 
 #. module: purchase_requisition
 #: model:ir.actions.act_window,name:purchase_requisition.action_purchase_requisition_partner
@@ -89,29 +88,29 @@ msgstr "Fecha de solicitud"
 #: field:purchase.requisition.line,requisition_id:0
 #: view:purchase.requisition.partner:0
 msgid "Purchase Requisition"
-msgstr "Solicitud de compra"
+msgstr "Inkoopaanvraag"
 
 #. module: purchase_requisition
 #: model:ir.model,name:purchase_requisition.model_purchase_requisition_line
 msgid "Purchase Requisition Line"
-msgstr "Línea solicitud de compra"
+msgstr "Inkoopaanvraag regel"
 
 #. module: purchase_requisition
 #: model:ir.model,name:purchase_requisition.model_product_product
 #: field:purchase.requisition.line,product_id:0
 msgid "Product"
-msgstr "Producto"
+msgstr "Product"
 
 #. module: purchase_requisition
 #: sql_constraint:purchase.order:0
 msgid "Order Reference must be unique !"
-msgstr "¡La referencia del pedido debe ser única!"
+msgstr "Orderreferentie moet uniek zijn!"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 #: field:purchase.requisition,description:0
 msgid "Description"
-msgstr "Descripción"
+msgstr "Omschrijving"
 
 #. module: purchase_requisition
 #: help:product.product,purchase_requisition:0
@@ -119,39 +118,39 @@ msgid ""
 "Check this box so that requisitions generates purchase requisitions instead "
 "of directly requests for quotations."
 msgstr ""
-"Marque esta opción para generar solicitudes de compra en lugar de "
-"directamente solicitudes de presupuestos."
+"Vink dit aan zodat aanvragen inkoopaanvragen genereren in plaats van direct "
+"offerteaanvragen."
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Type"
-msgstr "Tipo"
+msgstr "Soort"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,company_id:0
 #: field:purchase.requisition.line,company_id:0
 msgid "Company"
-msgstr "Compañía"
+msgstr "Bedrijf"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Request a Quotation"
-msgstr "Solicitar un presupuesto"
+msgstr "Vraag een offerte aan"
 
 #. module: purchase_requisition
 #: selection:purchase.requisition,exclusive:0
 msgid "Multiple Requisitions"
-msgstr "Solicitudes múltiples"
+msgstr "Meer aanvragen"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Approved by Supplier"
-msgstr "Aprobado por proveedor"
+msgstr "Goedgekeurd door leverancier"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Reset to Draft"
-msgstr "Cambiar a borrador"
+msgstr "Terugzetten naar Concept"
 
 #. module: purchase_requisition
 #: model:ir.module.module,description:purchase_requisition.module_meta_information
@@ -164,26 +163,25 @@ msgid ""
 "order all your purchase orders.\n"
 msgstr ""
 "\n"
-"    Este módulo le permite gestionar sus solicitudes de compra.\n"
-"    Cuando se crea un pedido de compra, ahora tiene la oportunidad de "
-"guardar la solicitud relacionada.\n"
-"    Este nuevo objeto reagrupará y le permitirá fácilmente controlar y "
-"ordenar todos sus pedidos de compra.\n"
+"    Deze module laat u inkoopaanvragen beheren.\n"
+"    Als een inkooporder is gemaakt, kunt u de verbonden aanvraag opslaan.\n"
+"    Dit nieuwe object hergroepeert uw inkooporders en laat u deze eenvoudig "
+"volgen.\n"
 
 #. module: purchase_requisition
 #: field:purchase.requisition.partner,partner_address_id:0
 msgid "Address"
-msgstr "Dirección"
+msgstr "Adres"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Order Reference"
-msgstr "Referencia pedido"
+msgstr "Order referentie"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Start Date"
-msgstr "Fecha inicio"
+msgstr "Startdatum"
 
 #. module: purchase_requisition
 #: model:ir.actions.act_window,help:purchase_requisition.action_purchase_requisition
@@ -194,59 +192,58 @@ msgid ""
 "negotiation, once you have reviewed all the supplier's offers, you can "
 "validate some and cancel others."
 msgstr ""
-"Una solicitud de compra es el paso previo a una solicitud de presupuesto. En "
-"una solicitud de compra (o licitación de compra), puede registrar los "
-"productos que necesita comprar y activar la creación de solicitudes de "
-"presupuesto a los proveedores. Después de la negociación, una vez que haya "
-"revisado todas las ofertas del proveedor, puede validar algunas y cancelar "
-"otras."
+"Een inkoopaanvraag is de stap voorafgaand aan de offerteaanvraag. In een "
+"inkoopaanvraag (of inkoop tender), kunt u producten zetten die u moet kopen "
+"en het maken van offerteaanvragen naar leveranciers activeren. Na de "
+"onderhandeling, nadat u de leverancier aanbiedingen heeft bekeken, kunt u er "
+"een aantal bevestigen en anderen annuleren."
 
 #. module: purchase_requisition
 #: field:purchase.requisition.line,product_qty:0
 msgid "Quantity"
-msgstr "Cantidad"
+msgstr "Aantal"
 
 #. module: purchase_requisition
 #: model:ir.actions.act_window,name:purchase_requisition.action_purchase_requisition
 #: model:ir.ui.menu,name:purchase_requisition.menu_purchase_requisition_pro_mgt
 msgid "Purchase Requisitions"
-msgstr "Solicitudes de compra"
+msgstr "Inkoopaanvragen"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "End Date"
-msgstr "Fecha final"
+msgstr "Einddatum"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 #: field:purchase.requisition,name:0
 msgid "Requisition Reference"
-msgstr "Referencia de solicitud"
+msgstr "Aanvraag referentie"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,line_ids:0
 msgid "Products to Purchase"
-msgstr "Productos a comprar"
+msgstr "In te kopen producten"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,date_end:0
 msgid "Requisition Deadline"
-msgstr "Fecha límite de solicitud"
+msgstr "Aanvraag einddatum"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Search Purchase Requisition"
-msgstr "Buscar solicitud de compra"
+msgstr "Inkoopaanvragen zoeken"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Notes"
-msgstr "Notas"
+msgstr "Notities"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Date Ordered"
-msgstr "Fecha pedido"
+msgstr "Besteldatum"
 
 #. module: purchase_requisition
 #: help:purchase.requisition,exclusive:0
@@ -257,48 +254,48 @@ msgid ""
 "orders.On confirmation of a purchase order it does not cancel the remaining "
 "orders"
 msgstr ""
-"Solicitud de compra (exclusiva): En la confirmación de un pedido de compra, "
-"cancela los restantes pedidos de compra.\n"
-"Solicitud de compra (múltiple): Permite tener varios pedidos de compra. En "
-"la confirmación de un pedido de compra no cancela el resto de pedidos."
+"Inkoopaanvraag (exclusief): Bij de bevestiging van de inkooporder worden de "
+"resterende aanvragen geannuleerd.\n"
+"Inkoopaanvraag (meer): Er kunnen meer inkooporders zijn. Bij bevestiging van "
+"de inkooporder worden de resterende aanvragen niet geannuleerd."
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Cancel Purchase Order"
-msgstr "Cancelar pedido de compra"
+msgstr "Verwijder Inkooporder"
 
 #. module: purchase_requisition
 #: model:ir.model,name:purchase_requisition.model_purchase_order
 #: view:purchase.requisition:0
 msgid "Purchase Order"
-msgstr "Pedido de compra"
+msgstr "Inkooporder"
 
 #. module: purchase_requisition
 #: code:addons/purchase_requisition/wizard/purchase_requisition_partner.py:44
 #, python-format
 msgid "Error!"
-msgstr "¡Error!"
+msgstr "Fout!"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 #: field:purchase.requisition.line,product_uom_id:0
 msgid "Product UoM"
-msgstr "UdM de producto"
+msgstr "Product meeteenheid"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Products"
-msgstr "Productos"
+msgstr "Producten"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Order Date"
-msgstr "Fecha pedido"
+msgstr "Orderdatum"
 
 #. module: purchase_requisition
 #: selection:purchase.requisition,state:0
 msgid "Cancelled"
-msgstr "Cancelado"
+msgstr "Geannuleerd"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
@@ -308,7 +305,7 @@ msgstr "["
 #. module: purchase_requisition
 #: model:ir.model,name:purchase_requisition.model_purchase_requisition_partner
 msgid "Purchase Requisition Partner"
-msgstr "Proveedor de solicitud de compra"
+msgstr "Inkoopaanvraag relatie"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
@@ -318,112 +315,112 @@ msgstr "]"
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Quotation Detail"
-msgstr "Detalle del presupuesto"
+msgstr "Offerte detail"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Purchase for Requisitions"
-msgstr "Compra para solicitudes"
+msgstr "Inkoopaanvragen"
 
 #. module: purchase_requisition
 #: model:ir.actions.act_window,name:purchase_requisition.act_res_partner_2_purchase_order
 msgid "Purchase orders"
-msgstr "Pedidos de compra"
+msgstr "Inkooporders"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 #: view:purchase.requisition:0
 #: field:purchase.requisition,origin:0
 msgid "Origin"
-msgstr "Origen"
+msgstr "Brondocument"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Reference"
-msgstr "Referencia"
+msgstr "Referentie"
 
 #. module: purchase_requisition
 #: model:ir.model,name:purchase_requisition.model_procurement_order
 msgid "Procurement"
-msgstr "Abastecimiento"
+msgstr "Verwerving"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,warehouse_id:0
 msgid "Warehouse"
-msgstr "Almacén"
+msgstr "Magazijn"
 
 #. module: purchase_requisition
 #: field:procurement.order,requisition_id:0
 msgid "Latest Requisition"
-msgstr "Última solicitud"
+msgstr "Laatste inkoop"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Quotations"
-msgstr "Presupuestos"
+msgstr "Offertes"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Qty"
-msgstr "Ctd."
+msgstr "Hvhd"
 
 #. module: purchase_requisition
 #: selection:purchase.requisition,exclusive:0
 msgid "Purchase Requisition (exclusive)"
-msgstr "Solicitud de compra (exclusiva)"
+msgstr "Inkoopaanvraag (exclusief)"
 
 #. module: purchase_requisition
 #: view:purchase.requisition.partner:0
 msgid "Create Quotation"
-msgstr "Crear presupuesto"
+msgstr "Offerte maken"
 
 #. module: purchase_requisition
 #: constraint:product.product:0
 msgid "Error: Invalid ean code"
-msgstr "Error: Codigo ean incorrecto"
+msgstr "Fout: ongeldige ean code"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 #: selection:purchase.requisition,state:0
 msgid "Done"
-msgstr "Realizado"
+msgstr "Klaar"
 
 #. module: purchase_requisition
 #: view:purchase.requisition.partner:0
 msgid "_Cancel"
-msgstr "_Cancelar"
+msgstr "_Annuleren"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Confirm Purchase Order"
-msgstr "Confirmar pedido de compra"
+msgstr "Inkooporder bevestigen"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Annuleren"
 
 #. module: purchase_requisition
 #: field:purchase.requisition.partner,partner_id:0
 msgid "Partner"
-msgstr "Empresa"
+msgstr "Relatie"
 
 #. module: purchase_requisition
 #: model:ir.module.module,shortdesc:purchase_requisition.module_meta_information
 msgid "Purchase - Purchase Requisition"
-msgstr "Compra - Solicitud de compra"
+msgstr "Inkoop - Inkoopaanvraag"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Unassigned"
-msgstr "No asignado"
+msgstr "Niet toegewezen"
 
 #. module: purchase_requisition
 #: view:purchase.order:0
 msgid "Requisition"
-msgstr "Solicitud"
+msgstr "Aanvraag"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,purchase_ids:0
 msgid "Purchase Orders"
-msgstr "Pedidos de compra"
+msgstr "Inkooporders"
