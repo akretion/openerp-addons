@@ -1,17 +1,16 @@
-# German translation for openobject-addons
-# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# Romanian translation for openobject-addons
+# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
 # This file is distributed under the same license as the openobject-addons package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-01-11 11:15+0000\n"
-"PO-Revision-Date: 2011-01-18 11:55+0000\n"
-"Last-Translator: Thorsten Vocks (OpenBig.org) <thorsten.vocks@big-"
-"consulting.net>\n"
-"Language-Team: German <de@li.org>\n"
+"PO-Revision-Date: 2011-01-18 18:25+0000\n"
+"Last-Translator: Mihai Boiciuc <Unknown>\n"
+"Language-Team: Romanian <ro@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,62 +21,62 @@ msgstr ""
 #: view:purchase.requisition:0
 #: selection:purchase.requisition,state:0
 msgid "In Progress"
-msgstr "In Bearbeitung"
+msgstr "În derulare"
 
 #. module: purchase_requisition
 #: code:addons/purchase_requisition/wizard/purchase_requisition_partner.py:44
 #, python-format
 msgid "No Product in Tender"
-msgstr "Kein Produkt in Ausschreibung"
+msgstr ""
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Confirm"
-msgstr "Bestätige"
+msgstr "Confirmă"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 #: field:purchase.requisition,user_id:0
 msgid "Responsible"
-msgstr "Verantwortlich"
+msgstr "Responsabil"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Group By..."
-msgstr "Gruppierung..."
+msgstr "Grupează după..."
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 #: field:purchase.requisition,state:0
 msgid "State"
-msgstr "Status"
+msgstr "Stare"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 #: selection:purchase.requisition,state:0
 msgid "Draft"
-msgstr "Entwurf"
+msgstr "Ciornă"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Supplier"
-msgstr "Lieferant"
+msgstr "Furnizor"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,exclusive:0
 msgid "Requisition Type"
-msgstr "Bedarfsanforderung Typ"
+msgstr ""
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Product Detail"
-msgstr "Produkte Details"
+msgstr "Detaliu produs"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 #: field:purchase.requisition,date_start:0
 msgid "Requisition Date"
-msgstr "Datum Bedarfsmeldung"
+msgstr "Data Rechiziţie"
 
 #. module: purchase_requisition
 #: model:ir.actions.act_window,name:purchase_requisition.action_purchase_requisition_partner
@@ -89,29 +88,29 @@ msgstr "Datum Bedarfsmeldung"
 #: field:purchase.requisition.line,requisition_id:0
 #: view:purchase.requisition.partner:0
 msgid "Purchase Requisition"
-msgstr "Bedarfsanforderung"
+msgstr ""
 
 #. module: purchase_requisition
 #: model:ir.model,name:purchase_requisition.model_purchase_requisition_line
 msgid "Purchase Requisition Line"
-msgstr "Bedarfsanforderung Positionen"
+msgstr ""
 
 #. module: purchase_requisition
 #: model:ir.model,name:purchase_requisition.model_product_product
 #: field:purchase.requisition.line,product_id:0
 msgid "Product"
-msgstr "Produkt"
+msgstr "Produs"
 
 #. module: purchase_requisition
 #: sql_constraint:purchase.order:0
 msgid "Order Reference must be unique !"
-msgstr "Die Auftragsreferenz muss eindeutig sein!"
+msgstr ""
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 #: field:purchase.requisition,description:0
 msgid "Description"
-msgstr "Beschreibung"
+msgstr "Descriere"
 
 #. module: purchase_requisition
 #: help:product.product,purchase_requisition:0
@@ -119,39 +118,37 @@ msgid ""
 "Check this box so that requisitions generates purchase requisitions instead "
 "of directly requests for quotations."
 msgstr ""
-"Aktiviere diese Option, damit ein Materialbedarf zuerst eine Bedarfsmeldung "
-"anstelle einer direkten Angebotsanfrage generiert."
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Type"
-msgstr "Typ"
+msgstr "Tip"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,company_id:0
 #: field:purchase.requisition.line,company_id:0
 msgid "Company"
-msgstr "Unternehmen"
+msgstr "Compania"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Request a Quotation"
-msgstr "Anfrage eines Angebots"
+msgstr "Cere o ofertă"
 
 #. module: purchase_requisition
 #: selection:purchase.requisition,exclusive:0
 msgid "Multiple Requisitions"
-msgstr "Bedarfsmeldung (Multiple)"
+msgstr ""
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Approved by Supplier"
-msgstr "Bestätigung Lieferant"
+msgstr "Aprobat de furnizor"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Reset to Draft"
-msgstr "Zurücksetzen auf Entwurf"
+msgstr "Readuce in stadiul de ciornă"
 
 #. module: purchase_requisition
 #: model:ir.module.module,description:purchase_requisition.module_meta_information
@@ -164,27 +161,26 @@ msgid ""
 "order all your purchase orders.\n"
 msgstr ""
 "\n"
-"    Diese Anwendung ermöglicht die Verwaltung von Bedarfsmeldungen an den "
-"Einkauf.\n"
-"    Bei der Erstellung eines Beschaffungsauftrags können Sie nun wahlweise "
-"die korrespondierende Bedarfsmeldung speichern.\n"
-"    Das neue Modul bietet somit ein weiteres Kriterium für die Suche und "
-"Gruppierung von Beschaffungsaufträgen.\n"
+"    Acest modul vă permite să gestionaţi dvs. Licitaţiile de achiziţie .\n"
+"    Atunci când o comandă de achiziţie este creat, acum aveţi posibilitatea "
+"de a salva licitaţiile de achiziţie aferente.\n"
+"    Acest nou obiect va regrupa şi vă va permite să păstraţi cu uşurinţă "
+"evidenţa şi pentru toate comenzile dvs. de achiziţie.\n"
 
 #. module: purchase_requisition
 #: field:purchase.requisition.partner,partner_address_id:0
 msgid "Address"
-msgstr "Anschrift"
+msgstr "Adresă"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Order Reference"
-msgstr "Referenz Bestellung"
+msgstr "Referinţă comandă"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Start Date"
-msgstr "Von Datum"
+msgstr "Data de început"
 
 #. module: purchase_requisition
 #: model:ir.actions.act_window,help:purchase_requisition.action_purchase_requisition
@@ -195,61 +191,58 @@ msgid ""
 "negotiation, once you have reviewed all the supplier's offers, you can "
 "validate some and cancel others."
 msgstr ""
-"Eine Bedarfsanforderung erfolgt einen Schritt vor einer Angebotsanfrage an "
-"Lieferanten. Durch die Erstellung einer Bedarfsanforderung (oder auch "
-"Ausschreibung des Einkaufs) können Sie benötigte Produkte erfassen und "
-"Angebotsanfragen an verschiedene Produktanbieter erstellen und versenden. "
-"Nach Überprüfung aller Angebote, sowie Verhandlungen mit den Lieferanten "
-"können Sie sich dann für das Angebot eines Lieferanten entscheiden und "
-"gleichzeitig die anderen für diese Ausschreibung nicht berücksichtigten "
-"Angebote stornieren."
+"O ofertă de cumpărare este un pas înaintea unei cereri de ofertă. În cazul "
+"unei oferte de cumpărare  (sau licitaţie de achiziţie), puteţi înregistra "
+"produsele pe care aveţi nevoie să le cumpăraţi şi să declanşeze crearea de "
+"Cereri de Oferta la furnizori. După negocieri, odată ce au revizuit toate "
+"ofetrele furnizorilor, puteţi valida unele şi anula altele."
 
 #. module: purchase_requisition
 #: field:purchase.requisition.line,product_qty:0
 msgid "Quantity"
-msgstr "Menge"
+msgstr "Cantitate"
 
 #. module: purchase_requisition
 #: model:ir.actions.act_window,name:purchase_requisition.action_purchase_requisition
 #: model:ir.ui.menu,name:purchase_requisition.menu_purchase_requisition_pro_mgt
 msgid "Purchase Requisitions"
-msgstr "Bedarfsmeldungen"
+msgstr "Licitaţii de achiziţie"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "End Date"
-msgstr "Bis Datum"
+msgstr "Data de sfîrșit"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 #: field:purchase.requisition,name:0
 msgid "Requisition Reference"
-msgstr "Bedarfsreferenz"
+msgstr ""
 
 #. module: purchase_requisition
 #: field:purchase.requisition,line_ids:0
 msgid "Products to Purchase"
-msgstr "Zu beschaffende Produkte"
+msgstr "Produse pentru achiziţionare"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,date_end:0
 msgid "Requisition Deadline"
-msgstr "Bedarfsmeldung Ablauf"
+msgstr "Termen final licitaţie"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Search Purchase Requisition"
-msgstr "Suche Bedarfsmeldung"
+msgstr "Caută Licitaţie de achiziţie"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Notes"
-msgstr "Bemerkungen"
+msgstr "Note"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Date Ordered"
-msgstr "Bestelldatum"
+msgstr "Data comenzii"
 
 #. module: purchase_requisition
 #: help:purchase.requisition,exclusive:0
@@ -260,49 +253,48 @@ msgid ""
 "orders.On confirmation of a purchase order it does not cancel the remaining "
 "orders"
 msgstr ""
-"Bedarfsmeldung (Exklusiv): Bei Bestätigung einer Bestellung, werden "
-"automatisch verbleibende Angebote gelöscht.\n"
-"Bedarfsmeldung (Multiple): Ermöglicht mehrere Bestellungen für einen "
-"gemeldeten Bedarf. Bei Bestätigung einer Bestellung verbleiben die "
-"bestehenden Angebote im System"
+"Ofertă de cumpărare(exclusiv): La confirmarea unui ordin de cumpărare, "
+"anulează ordinul de cumpărare rămas.\n"
+"Ofertă de cumpărare (multiple): Permite deţinerea mai multor ordine de "
+"cumpărare. La confirmarea unui ordin de cumpărare nu anulează ordinele rămase"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Cancel Purchase Order"
-msgstr "Storniere Beschaffungsauftrag"
+msgstr "Anuleaza comanda de achiziţie"
 
 #. module: purchase_requisition
 #: model:ir.model,name:purchase_requisition.model_purchase_order
 #: view:purchase.requisition:0
 msgid "Purchase Order"
-msgstr "Beschaffungsauftrag"
+msgstr "Comandă achiziţie"
 
 #. module: purchase_requisition
 #: code:addons/purchase_requisition/wizard/purchase_requisition_partner.py:44
 #, python-format
 msgid "Error!"
-msgstr "Fehler!"
+msgstr "Eroare!"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 #: field:purchase.requisition.line,product_uom_id:0
 msgid "Product UoM"
-msgstr "Produkt ME"
+msgstr "UM produs"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Products"
-msgstr "Produkte"
+msgstr "Produse"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Order Date"
-msgstr "Auftragsdatum"
+msgstr "Data comenzii"
 
 #. module: purchase_requisition
 #: selection:purchase.requisition,state:0
 msgid "Cancelled"
-msgstr "Abgebrochen"
+msgstr "Anulat"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
@@ -312,7 +304,7 @@ msgstr "["
 #. module: purchase_requisition
 #: model:ir.model,name:purchase_requisition.model_purchase_requisition_partner
 msgid "Purchase Requisition Partner"
-msgstr "Bedarfsmeldung Partner"
+msgstr ""
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
@@ -322,149 +314,112 @@ msgstr "]"
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Quotation Detail"
-msgstr "Angebot Details"
+msgstr "Detaliu ofertă"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Purchase for Requisitions"
-msgstr "Bedarfsmeldung für Beschaffung"
+msgstr ""
 
 #. module: purchase_requisition
 #: model:ir.actions.act_window,name:purchase_requisition.act_res_partner_2_purchase_order
 msgid "Purchase orders"
-msgstr "Beschaffungsaufträge"
+msgstr "Comenzi de achiziţie"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 #: view:purchase.requisition:0
 #: field:purchase.requisition,origin:0
 msgid "Origin"
-msgstr "Herkunft"
+msgstr "Origine"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Reference"
-msgstr "Referenz"
+msgstr "Referinţă"
 
 #. module: purchase_requisition
 #: model:ir.model,name:purchase_requisition.model_procurement_order
 msgid "Procurement"
-msgstr "Beschaffung"
+msgstr "Aprovizionare"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,warehouse_id:0
 msgid "Warehouse"
-msgstr "Zentrallager"
+msgstr "Depozit"
 
 #. module: purchase_requisition
 #: field:procurement.order,requisition_id:0
 msgid "Latest Requisition"
-msgstr "Letzte Bedarfsmeldung"
+msgstr ""
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Quotations"
-msgstr "Angebote"
+msgstr "Oferte"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Qty"
-msgstr "Menge"
+msgstr "Cant."
 
 #. module: purchase_requisition
 #: selection:purchase.requisition,exclusive:0
 msgid "Purchase Requisition (exclusive)"
-msgstr "Bedarfsmeldung (Exklusiv)"
+msgstr "Ofertă de cumpărare(exclusiv)"
 
 #. module: purchase_requisition
 #: view:purchase.requisition.partner:0
 msgid "Create Quotation"
-msgstr "Erfasse Angebot"
+msgstr "Creaţi oferta"
 
 #. module: purchase_requisition
 #: constraint:product.product:0
 msgid "Error: Invalid ean code"
-msgstr "Fehler: Falscher EAN code"
+msgstr "Eroare: cod EAN invalid"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 #: selection:purchase.requisition,state:0
 msgid "Done"
-msgstr "Erledigt"
+msgstr "Efectuat"
 
 #. module: purchase_requisition
 #: view:purchase.requisition.partner:0
 msgid "_Cancel"
-msgstr "Abbrechen"
+msgstr "_Renunță"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Confirm Purchase Order"
-msgstr "Bestätige Beschaffungsauftrag"
+msgstr "Confirmă comanda de achiziţie"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Cancel"
-msgstr "Abbrechen"
+msgstr "Renunță"
 
 #. module: purchase_requisition
 #: field:purchase.requisition.partner,partner_id:0
 msgid "Partner"
-msgstr "Partner"
+msgstr "Partener"
 
 #. module: purchase_requisition
 #: model:ir.module.module,shortdesc:purchase_requisition.module_meta_information
 msgid "Purchase - Purchase Requisition"
-msgstr "Beschaffung - Bedarfsmeldung"
+msgstr ""
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Unassigned"
-msgstr "Nicht zugewiesen"
+msgstr "Neatribuit"
 
 #. module: purchase_requisition
 #: view:purchase.order:0
 msgid "Requisition"
-msgstr "Bedarfsmeldung"
+msgstr ""
 
 #. module: purchase_requisition
 #: field:purchase.requisition,purchase_ids:0
 msgid "Purchase Orders"
-msgstr "Beschaffungsaufträge"
-
-#~ msgid ""
-#~ "The Object name must start with x_ and not contain any special character !"
-#~ msgstr "Das Objekt muss mit x_ beginnen und darf keine Sonderzeichen haben !"
-
-#~ msgid "Invalid model name in the action definition."
-#~ msgstr "Ungültiger Modulname in der Aktionsdefinition."
-
-#~ msgid "Error ! You can not create recursive Menu."
-#~ msgstr "Fehler! Sie können keine rekursiven Menüs erzeugen."
-
-#~ msgid "Invalid XML for View Architecture!"
-#~ msgstr "Fehlerhafter xml Quellcode für diese Ansicht !"
-
-#~ msgid "Size of the field can never be less than 1 !"
-#~ msgstr "Die Größe des Feldes sollte niemals kleiner als 1 sein !"
-
-#~ msgid ""
-#~ "A purchase requisition is a step before the request for quotation. In a "
-#~ "purchase requisition (or purchase tender), you can record the products you "
-#~ "need to buy and trigger the creation of RfQs to supplier. After the "
-#~ "negotiation, once you have reviewed all the supplier's offers, you can "
-#~ "validate some and cancel others."
-#~ msgstr ""
-#~ "Eine Bedarfsmeldung ist einer Beschaffungsanfrage an Lieferanten "
-#~ "vorgeschaltet. In einer Bedarfsmeldung (oder einer Ausschreibung) können Sie "
-#~ "die Produkte vermerken, die beschafft werden sollen, bevor dann konkret "
-#~ "Angebote bei Lieferanten angefragt werden. Nach abgeschlossener Verhandlung "
-#~ "mit Lieferanten können Sie entscheiden, welches Angebot oder welche Angebote "
-#~ "zur Bedarfsdeckung ausgeführt werden sollen. Die verbleibenden nicht "
-#~ "angenommen Angebote werden dabei automatisch verworfen."
-
-#~ msgid "The certificate ID of the module must be unique !"
-#~ msgstr "Die Zertifikat ID des Moduls sollte eindeutig sein !"
-
-#~ msgid "The name of the module must be unique !"
-#~ msgstr "Die Modulbezeichnung sollte eindeutig sein !"
+msgstr "Comenzi de achiziţie"
