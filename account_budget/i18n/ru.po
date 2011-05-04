@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-01-11 11:14+0000\n"
-"PO-Revision-Date: 2011-03-11 12:27+0000\n"
-"Last-Translator: Stanislav Hanzhin <Unknown>\n"
+"PO-Revision-Date: 2011-05-03 15:17+0000\n"
+"Last-Translator: Chertykov Denis <chertykov@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-03-12 06:15+0000\n"
-"X-Generator: Launchpad (build 12559)\n"
+"X-Launchpad-Export-Date: 2011-05-04 05:33+0000\n"
+"X-Generator: Launchpad (build 12758)\n"
 
 #. module: account_budget
 #: field:crossovered.budget,creating_user_id:0
@@ -36,7 +36,7 @@ msgstr "Бюджетные статьи"
 #: code:addons/account_budget/account_budget.py:119
 #, python-format
 msgid "The General Budget '%s' has no Accounts!"
-msgstr ""
+msgstr "Основной бюджет '%s' не имеет счетов!"
 
 #. module: account_budget
 #: report:account.budget:0
@@ -56,7 +56,7 @@ msgstr "Проверить пользователя"
 #. module: account_budget
 #: model:ir.actions.act_window,name:account_budget.action_account_budget_crossvered_summary_report
 msgid "Print Summary"
-msgstr ""
+msgstr "Печатать итоги"
 
 #. module: account_budget
 #: field:crossovered.budget.lines,paid_date:0
@@ -135,7 +135,7 @@ msgstr ""
 #. module: account_budget
 #: view:account.budget.crossvered.summary.report:0
 msgid "This wizard is used to print summary of budgets"
-msgstr ""
+msgstr "Этот мастер используется для печати итогов по бюджетам"
 
 #. module: account_budget
 #: report:account.budget:0
@@ -152,7 +152,7 @@ msgstr "Описание"
 #. module: account_budget
 #: report:crossovered.budget.report:0
 msgid "Currency"
-msgstr ""
+msgstr "Валюта"
 
 #. module: account_budget
 #: report:crossovered.budget.report:0
@@ -164,17 +164,17 @@ msgstr "Всего :"
 #: field:crossovered.budget,company_id:0
 #: field:crossovered.budget.lines,company_id:0
 msgid "Company"
-msgstr ""
+msgstr "Компания"
 
 #. module: account_budget
 #: view:crossovered.budget:0
 msgid "To Approve"
-msgstr ""
+msgstr "Одобрить"
 
 #. module: account_budget
 #: view:crossovered.budget:0
 msgid "Reset to Draft"
-msgstr ""
+msgstr "Вернуть в черновики"
 
 #. module: account_budget
 #: view:account.budget.post:0
@@ -199,7 +199,7 @@ msgstr "Выполнено"
 #: report:account.budget:0
 #: report:crossovered.budget.report:0
 msgid "Practical Amt"
-msgstr ""
+msgstr "Факт. сумма"
 
 #. module: account_budget
 #: view:account.analytic.account:0
@@ -207,7 +207,7 @@ msgstr ""
 #: view:crossovered.budget:0
 #: field:crossovered.budget.lines,practical_amount:0
 msgid "Practical Amount"
-msgstr ""
+msgstr "Фактическая сумма"
 
 #. module: account_budget
 #: field:crossovered.budget,date_to:0
@@ -238,7 +238,7 @@ msgstr "Имя"
 #. module: account_budget
 #: model:ir.model,name:account_budget.model_crossovered_budget_lines
 msgid "Budget Line"
-msgstr ""
+msgstr "Строка бюджета"
 
 #. module: account_budget
 #: view:account.analytic.account:0
@@ -272,7 +272,7 @@ msgstr "Код"
 #: view:account.budget.analytic:0
 #: view:account.budget.crossvered.report:0
 msgid "This wizard is used to print budget"
-msgstr ""
+msgstr "Этот мастер используется для печати бюджета"
 
 #. module: account_budget
 #: model:ir.actions.act_window,name:account_budget.act_crossovered_budget_view
@@ -301,7 +301,7 @@ msgstr "Отменено"
 #. module: account_budget
 #: view:crossovered.budget:0
 msgid "Approve"
-msgstr ""
+msgstr "Одобрить"
 
 #. module: account_budget
 #: field:crossovered.budget,date_from:0
@@ -333,7 +333,7 @@ msgstr ""
 #: report:account.budget:0
 #: report:crossovered.budget.report:0
 msgid "Theoretical Amt"
-msgstr ""
+msgstr "Предполаг. сумма"
 
 #. module: account_budget
 #: view:account.budget.analytic:0
@@ -395,7 +395,7 @@ msgstr "Бюджет:"
 #: report:account.budget:0
 #: report:crossovered.budget.report:0
 msgid "Planned Amt"
-msgstr ""
+msgstr "Планируемая сумма"
 
 #. module: account_budget
 #: view:account.budget.post:0
