@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-01-11 11:14+0000\n"
-"PO-Revision-Date: 2011-05-03 17:10+0000\n"
-"Last-Translator: Chertykov Denis <chertykov@gmail.com>\n"
+"PO-Revision-Date: 2011-05-04 12:40+0000\n"
+"Last-Translator: Nikolay Chesnokov <chesnokov_n@msn.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-05-04 05:33+0000\n"
-"X-Generator: Launchpad (build 12758)\n"
+"X-Launchpad-Export-Date: 2011-05-05 06:00+0000\n"
+"X-Generator: Launchpad (build 12959)\n"
 
 #. module: board
 #: view:res.log.report:0
@@ -218,7 +218,7 @@ msgstr "Октябрь"
 #. module: board
 #: model:ir.model,name:board.model_board_board_line
 msgid "Board Line"
-msgstr ""
+msgstr "Строки панели"
 
 #. module: board
 #: field:board.menu.create,menu_parent_id:0
@@ -250,7 +250,7 @@ msgstr "Ноябрь"
 msgid ""
 "Gives the sequence order                         when displaying a list of "
 "board lines."
-msgstr ""
+msgstr "Определяет порядок следования строк списка"
 
 #. module: board
 #: selection:res.log.report,month:0
@@ -295,7 +295,7 @@ msgstr "Название меню"
 #: view:board.board:0
 #: model:ir.actions.act_window,name:board.action_latest_activities_tree
 msgid "Latest Activities"
-msgstr ""
+msgstr "Последнее мероприятие"
 
 #. module: board
 #: selection:board.board.line,position:0

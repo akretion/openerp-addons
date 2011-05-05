@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-01-11 11:14+0000\n"
-"PO-Revision-Date: 2011-05-03 09:25+0000\n"
+"PO-Revision-Date: 2011-05-04 18:00+0000\n"
 "Last-Translator: Chertykov Denis <chertykov@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-05-04 05:33+0000\n"
-"X-Generator: Launchpad (build 12758)\n"
+"X-Launchpad-Export-Date: 2011-05-05 06:00+0000\n"
+"X-Generator: Launchpad (build 12959)\n"
 
 #. module: account
 #: model:process.transition,name:account.process_transition_supplierreconcilepaid0
@@ -3583,7 +3583,7 @@ msgstr ""
 #. module: account
 #: field:account.move.line,date:0
 msgid "Effective date"
-msgstr "Действительно до"
+msgstr "Дата вступления в силу"
 
 #. module: account
 #: code:addons/account/wizard/account_move_bank_reconcile.py:53
@@ -5073,7 +5073,7 @@ msgstr ""
 #: field:account.model.line,amount_currency:0
 #: field:account.move.line,amount_currency:0
 msgid "Amount Currency"
-msgstr "Валюта суммы"
+msgstr "Сумма в валюте"
 
 #. module: account
 #: code:addons/account/wizard/account_validate_account_move.py:39
@@ -5107,7 +5107,7 @@ msgstr "Количество"
 #. module: account
 #: view:account.move.line:0
 msgid "Number (Move)"
-msgstr "Номер (перемещение)"
+msgstr "Номер"
 
 #. module: account
 #: view:account.invoice.refund:0
@@ -5568,6 +5568,10 @@ msgid ""
 "line of the expense account. OpenERP will propose to you automatically the "
 "Tax related to this account and the counterpart \"Account Payable\"."
 msgstr ""
+"Здесь можно быстро вводить бухгалтерские проводки. Если вы хотите отразить "
+"счет-фактуру поставщика, начните с записи движения по счету расходов. "
+"OpenERP автоматически предложит вам налог, относящийся к этому счету и "
+"корреспондирующий счет \"Кредиторская задолженность\"."
 
 #. module: account
 #: field:account.entries.report,date_created:0
@@ -8653,7 +8657,7 @@ msgstr "План счетов"
 #. module: account
 #: field:account.move.line,date_maturity:0
 msgid "Due date"
-msgstr "Срок"
+msgstr "Срок оплаты"
 
 #. module: account
 #: view:account.move.journal:0
@@ -9783,7 +9787,7 @@ msgstr ""
 #. module: account
 #: field:account.analytic.line,amount_currency:0
 msgid "Amount currency"
-msgstr "Валюта суммы"
+msgstr "Сумма в валюте"
 
 #. module: account
 #: code:addons/account/wizard/account_report_aged_partner_balance.py:55
