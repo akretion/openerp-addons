@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-05-09 10:19+0000\n"
-"PO-Revision-Date: 2011-03-05 01:50+0000\n"
+"PO-Revision-Date: 2011-05-10 10:36+0000\n"
 "Last-Translator: Santi (Pexego) <santiago@pexego.es>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-05-10 07:48+0000\n"
+"X-Launchpad-Export-Date: 2011-05-11 05:44+0000\n"
 "X-Generator: Launchpad (build 12959)\n"
 
 #. module: users_ldap
@@ -75,6 +75,9 @@ msgid ""
 "This module only works with Unix/Linux\n"
 "    "
 msgstr ""
+"Engade soporte para a autenticación por un servidor Idap.\n"
+"Este módulo só funciona con Unix/Linux\n"
+"    "
 
 #. module: users_ldap
 #: field:res.company.ldap,ldap_base:0
