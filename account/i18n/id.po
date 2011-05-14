@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-05-09 10:18+0000\n"
-"PO-Revision-Date: 2011-05-12 09:12+0000\n"
+"PO-Revision-Date: 2011-05-13 08:36+0000\n"
 "Last-Translator: moelyana <Unknown>\n"
 "Language-Team: Indonesian <id@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-05-13 05:48+0000\n"
+"X-Launchpad-Export-Date: 2011-05-14 05:52+0000\n"
 "X-Generator: Launchpad (build 12959)\n"
 
 #. module: account
@@ -1853,12 +1853,12 @@ msgstr "Deklarasi Pajak: Invoice"
 #. module: account
 #: field:account.cashbox.line,subtotal:0
 msgid "Sub Total"
-msgstr ""
+msgstr "Sub Total"
 
 #. module: account
 #: view:account.account:0
 msgid "Treasury Analysis"
-msgstr ""
+msgstr "Perbendaharaan Analisa"
 
 #. module: account
 #: constraint:res.company:0
@@ -1912,7 +1912,7 @@ msgstr "Penutupan buku didasarkan pada Mulai Transaksi Saldo dan Kas"
 #: model:process.node,note:account.process_node_reconciliation0
 #: model:process.node,note:account.process_node_supplierreconciliation0
 msgid "Comparison between accounting and payment entries"
-msgstr ""
+msgstr "Perbandingan antara catatan akuntansi dan pembayaran"
 
 #. module: account
 #: view:account.tax:0
@@ -2042,7 +2042,7 @@ msgstr "Validasi"
 #. module: account
 #: view:account.entries.report:0
 msgid "This F.Year"
-msgstr ""
+msgstr "Fiskal tahun ini"
 
 #. module: account
 #: view:account.tax.chart:0
@@ -2070,7 +2070,7 @@ msgstr "Pro-forma"
 #: code:addons/account/installer.py:348
 #, python-format
 msgid " Journal"
-msgstr ""
+msgstr " Jurnal"
 
 #. module: account
 #: code:addons/account/account.py:1333
@@ -2346,6 +2346,12 @@ msgid ""
 "useful because it enables you to preview at any time the tax that you owe at "
 "the start and end of the month or quarter."
 msgstr ""
+"Menu ini mencetak deklarasi PPN didasarkan pada faktur atau pembayaran. "
+"Pilih satu atau beberapa periode tahun fiskal. Informasi yang diperlukan "
+"untuk suatu pernyataan pajak secara otomatis dihasilkan menurut ERP sistem "
+"dari invoice (atau pembayaran, di beberapa negara). Data ini diperbaharui "
+"secara real time. Itu sangat berguna karena memungkinkan Anda untuk meninjau "
+"setiap saat pajak yang Anda berutang pada awal dan akhir bulan atau triwulan."
 
 #. module: account
 #: selection:account.move.line,centralisation:0
@@ -2551,14 +2557,14 @@ msgstr "Terbayar/ Terekonsiliasi"
 #: field:account.tax,ref_base_code_id:0
 #: field:account.tax.template,ref_base_code_id:0
 msgid "Refund Base Code"
-msgstr ""
+msgstr "Pengembalian dana beradasarkan kode"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_bank_statement_periodic_tree
 #: model:ir.actions.act_window,name:account.action_bank_statement_tree
 #: model:ir.ui.menu,name:account.menu_bank_statement_tree
 msgid "Bank Statements"
-msgstr ""
+msgstr "Pernyataan Bank"
 
 #. module: account
 #: selection:account.tax.template,applicable_type:0
@@ -2571,7 +2577,7 @@ msgstr "Benar"
 #: view:account.move:0
 #: view:account.move.line:0
 msgid "Dates"
-msgstr ""
+msgstr "Tanggal"
 
 #. module: account
 #: field:account.tax,parent_id:0
@@ -2585,6 +2591,8 @@ msgid ""
 "Automatically generate entries based on what has been entered in the  system "
 "before a specific date."
 msgstr ""
+"Secara otomatis membuat entri berdasarkan apa yang telah dimasukkan dalam "
+"sistem sebelum tanggal spesifik"
 
 #. module: account
 #: view:account.aged.trial.balance:0
@@ -2597,7 +2605,7 @@ msgstr ""
 #: model:process.transition,name:account.process_transition_entriesreconcile0
 #: model:process.transition,name:account.process_transition_supplierentriesreconcile0
 msgid "Accounting entries"
-msgstr ""
+msgstr "Entri Akunting"
 
 #. module: account
 #: field:account.invoice.line,discount:0
@@ -2613,30 +2621,35 @@ msgid ""
 "Note that journal entries that are automatically created by the system are "
 "always skipping that state."
 msgstr ""
+"Centang box ini jika Anda tidak ingin entri jurnal baru untuk melewati "
+"status 'draft' dan bukannya pergi langsung ke 'status yang sudah diposting' "
+"tanpa validasi manual.\n"
+"Perhatikan bahwa jurnal entri yang otomatis akan dibuat menurut sistem "
+"dimana status selalu dilewat."
 
 #. module: account
 #: model:ir.actions.server,name:account.ir_actions_server_action_wizard_multi_chart
 #: model:ir.ui.menu,name:account.menu_act_ir_actions_bleble
 msgid "New Company Financial Setting"
-msgstr ""
+msgstr "Mengatur Keuangan Perusahaan Baru"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_report_account_sales_tree_all
 #: view:report.account.sales:0
 #: view:report.account_type.sales:0
 msgid "Sales by Account"
-msgstr ""
+msgstr "Penjualan menurut Akun"
 
 #. module: account
 #: view:account.use.model:0
 msgid "This wizard will create recurring accounting entries"
-msgstr ""
+msgstr "Panduan ini akan membuat entri akuntansi yang berulang"
 
 #. module: account
 #: code:addons/account/account.py:1195
 #, python-format
 msgid "No sequence defined on the journal !"
-msgstr ""
+msgstr "Tidak ada sequence yang didefinisikan di jurnal ini!"
 
 #. module: account
 #: code:addons/account/account.py:2097
@@ -2646,7 +2659,7 @@ msgstr ""
 #: code:addons/account/wizard/account_use_model.py:81
 #, python-format
 msgid "You have to define an analytic journal on the '%s' journal!"
-msgstr ""
+msgstr "Anda harus mendefinisikan jurnal analitik di jurnal '%s'!"
 
 #. module: account
 #: view:account.invoice.tax:0
@@ -2659,14 +2672,14 @@ msgstr "Kode-kode pajak"
 #: model:ir.ui.menu,name:account.menu_account_customer
 #: model:ir.ui.menu,name:account.menu_finance_receivables
 msgid "Customers"
-msgstr ""
+msgstr "Customer"
 
 #. module: account
 #: report:account.analytic.account.cost_ledger:0
 #: report:account.analytic.account.journal:0
 #: report:account.analytic.account.quantity_cost_ledger:0
 msgid "Period to"
-msgstr ""
+msgstr "Periode untuk"
 
 #. module: account
 #: selection:account.entries.report,month:0
@@ -2675,7 +2688,7 @@ msgstr ""
 #: selection:report.account.sales,month:0
 #: selection:report.account_type.sales,month:0
 msgid "August"
-msgstr ""
+msgstr "Agustus"
 
 #. module: account
 #: code:addons/account/account_bank_statement.py:307
@@ -2687,12 +2700,12 @@ msgstr ""
 #. module: account
 #: model:process.transition,note:account.process_transition_paymentreconcile0
 msgid "Payment entries are the second input of the reconciliation."
-msgstr ""
+msgstr "entri Pembayaran adalah input kedua dari rekonsiliasi"
 
 #. module: account
 #: selection:account.print.journal,sort_selection:0
 msgid "Reference Number"
-msgstr ""
+msgstr "Nomor Referensi"
 
 #. module: account
 #: selection:account.entries.report,month:0
@@ -2701,7 +2714,7 @@ msgstr ""
 #: selection:report.account.sales,month:0
 #: selection:report.account_type.sales,month:0
 msgid "October"
-msgstr ""
+msgstr "Oktober"
 
 #. module: account
 #: help:account.move.line,quantity:0
@@ -2709,6 +2722,9 @@ msgid ""
 "The optional quantity expressed by this line, eg: number of product sold. "
 "The quantity is not a legal requirement but is very useful for some reports."
 msgstr ""
+"Jumlah pilihan dinyatakan oleh baris ini, misalnya: jumlah produk yang "
+"dijual. Jumlah yang tidak merupakan persyaratan hukum, tetapi sangat berguna "
+"untuk beberapa laporan."
 
 #. module: account
 #: view:account.payment.term.line:0
@@ -2718,7 +2734,7 @@ msgstr ""
 #. module: account
 #: field:account.journal.column,required:0
 msgid "Required"
-msgstr ""
+msgstr "Diperlukan"
 
 #. module: account
 #: view:account.chart.template:0
@@ -2731,17 +2747,20 @@ msgstr "Akun Biaya"
 #: help:account.invoice,period_id:0
 msgid "Keep empty to use the period of the validation(invoice) date."
 msgstr ""
+"Tetap kosongkan untuk menggunakan periode tanggal validasi (invoice)."
 
 #. module: account
 #: help:account.bank.statement,account_id:0
 msgid ""
 "used in statement reconciliation domain, but shouldn't be used elswhere."
 msgstr ""
+"digunakan dalam domain laporan rekonsiliasi, tetapi seharusnya tidak "
+"digunakan di tempat lain."
 
 #. module: account
 #: field:account.invoice.tax,base_amount:0
 msgid "Base Code Amount"
-msgstr ""
+msgstr "Dasar pengenakan pajak"
 
 #. module: account
 #: field:wizard.multi.charts.accounts,sale_tax:0
