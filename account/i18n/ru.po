@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-05-09 10:18+0000\n"
-"PO-Revision-Date: 2011-05-13 08:44+0000\n"
-"Last-Translator: Stanislav Hanzhin <Unknown>\n"
+"PO-Revision-Date: 2011-05-14 16:59+0000\n"
+"Last-Translator: Chertykov Denis <chertykov@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-05-14 05:52+0000\n"
+"X-Launchpad-Export-Date: 2011-05-15 05:38+0000\n"
 "X-Generator: Launchpad (build 12959)\n"
 
 #. module: account
@@ -724,7 +724,7 @@ msgstr "Проверка"
 #. module: account
 #: field:account.partner.reconcile.process,today_reconciled:0
 msgid "Partners Reconciled Today"
-msgstr "Партнеры сверенные сегодня"
+msgstr "Контрагенты сверенные сегодня"
 
 #. module: account
 #: code:addons/account/account_bank_statement.py:306
@@ -835,6 +835,8 @@ msgid ""
 "Can not %s invoice which is already reconciled, invoice should be "
 "unreconciled first. You can only Refund this invoice"
 msgstr ""
+"Нельзя \"%s\" счет, который уже сверен, сначала надо отменить сверку. Вы "
+"можете только вернуть счет."
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_subscription_form_new
@@ -849,7 +851,7 @@ msgstr "Вычисления"
 #. module: account
 #: view:account.move.line:0
 msgid "Next Partner to reconcile"
-msgstr "Следующий партнер для сверки"
+msgstr "Следующий контрагент для сверки"
 
 #. module: account
 #: code:addons/account/account_move_line.py:1197
@@ -1529,6 +1531,11 @@ msgid ""
 "the Payment column of a line, you can press F1 to open the reconciliation "
 "form."
 msgstr ""
+"Банковская выписка является отражением всех финансовых операций, прошедших в "
+"течение определенного периода по банковскому счету, кредитной карте или "
+"любому другому виду финансового счета. Начальный баланс будет предложен "
+"автоматически, а конечное сальдо должно быть в выписке. Когда вы находитесь "
+"в столбце Оплата, вы можете нажать F1, чтобы открыть форму сверки."
 
 #. module: account
 #: report:account.analytic.account.cost_ledger:0
@@ -4007,7 +4014,7 @@ msgstr "Банковские выписки введены в систему."
 #: code:addons/account/wizard/account_reconcile.py:133
 #, python-format
 msgid "Reconcile Writeoff"
-msgstr ""
+msgstr "Сверить списание"
 
 #. module: account
 #: field:account.model.line,date_maturity:0
@@ -4660,7 +4667,7 @@ msgstr "Описание счетов"
 #. module: account
 #: field:account.partner.reconcile.process,next_partner_id:0
 msgid "Next Partner to Reconcile"
-msgstr "Следующий партнер для сверки"
+msgstr "Следующий контрагент для сверки"
 
 #. module: account
 #: field:account.invoice.tax,account_id:0
@@ -5312,6 +5319,9 @@ msgid ""
 "Shows you the progress made today on the reconciliation process. Given by \n"
 "Partners Reconciled Today \\ (Remaining Partners + Partners Reconciled Today)"
 msgstr ""
+"Показывает прогресс, достигнутый сегодня по сверке. Определяется как\n"
+"Контрагенты сверенные сегодня / (Оставшиеся контрагенты + Контрагенты "
+"сверенные сегодня)"
 
 #. module: account
 #: help:account.payment.term.line,value:0
@@ -6219,6 +6229,10 @@ msgid ""
 "reconcile in a series of accounts. It finds entries for each partner where "
 "the amounts correspond."
 msgstr ""
+"Для счета, который считается оплаченным, проводки на основе этого счета "
+"должны сверяться с их корреспондирующими частями, обычно платежами. В "
+"процессе автоматической сверки, OpenERP ищет проводки в ряде счетов. Система "
+"ищет проводки с соответствующей суммой для каждого контрагента."
 
 #. module: account
 #: view:account.move:0
@@ -6795,6 +6809,8 @@ msgid ""
 "the system to go through the reconciliation process, based on the latest day "
 "it have been reconciled."
 msgstr ""
+"Это поле показывает вам следующего контрагента, который автоматически выбран "
+"системой для сверки. Выбор основан на дате последней сверки."
 
 #. module: account
 #: field:account.move.line.reconcile.writeoff,comment:0
