@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-05-09 10:18+0000\n"
-"PO-Revision-Date: 2011-05-11 08:48+0000\n"
+"PO-Revision-Date: 2011-05-19 06:22+0000\n"
 "Last-Translator: Ayhan KIZILTAN <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-05-12 05:59+0000\n"
+"X-Launchpad-Export-Date: 2011-05-19 06:23+0000\n"
 "X-Generator: Launchpad (build 12959)\n"
 
 #. module: account
@@ -270,7 +270,7 @@ msgstr "'%s' nolu fatura kısmen ödendi: (Ödenen %s%s Toplam %s%s Kalan %s%s)"
 #. module: account
 #: model:process.transition,note:account.process_transition_supplierentriesreconcile0
 msgid "Accounting entries are an input of the reconciliation."
-msgstr "Hesap girişleri uzlaşmaya ait girişlerdir."
+msgstr ""
 
 #. module: account
 #: model:ir.ui.menu,name:account.menu_finance_management_belgian_reports
@@ -627,8 +627,9 @@ msgid ""
 "If you unreconciliate transactions, you must also verify all the actions "
 "that are linked to those transactions because they will not be disable"
 msgstr ""
-"If you unreconciliate transactions, you must also verify all the actions "
-"that are linked to those transactions because they will not be disable"
+"Bu işlemlerden uzlaşmayı kaldırırsanız, aynı zamanda, bu işlemlere bağlı "
+"diğer hareketleri de doğrulamalısınız aksi takdirde bu işlemler devre dışı "
+"bırakılamaz."
 
 #. module: account
 #: view:analytic.entries.report:0
@@ -638,7 +639,7 @@ msgstr "   30 Gün   "
 #. module: account
 #: field:ir.sequence,fiscal_ids:0
 msgid "Sequences"
-msgstr "Sıra No"
+msgstr "Diziliş"
 
 #. module: account
 #: view:account.fiscal.position.template:0
@@ -670,13 +671,13 @@ msgstr "SAJ"
 #. module: account
 #: help:account.bank.statement,balance_end_real:0
 msgid "closing balance entered by the cashbox verifier"
-msgstr "closing balance entered by the cashbox verifier"
+msgstr "Kasa doğrulayıcı tarafından girilen kapanış bilançosu"
 
 #. module: account
 #: view:account.period:0
 #: view:account.period.close:0
 msgid "Close Period"
-msgstr "Aralığı Kapat"
+msgstr "Dönemi Kapat"
 
 #. module: account
 #: model:ir.model,name:account.model_account_common_partner_report
@@ -1452,7 +1453,7 @@ msgstr ""
 #. module: account
 #: field:account.installer.modules,account_anglo_saxon:0
 msgid "Anglo-Saxon Accounting"
-msgstr "Anglo-Saxon Accounting"
+msgstr "Anglo-Saxon Muhasebesi"
 
 #. module: account
 #: view:account.automatic.reconcile:0
@@ -1890,7 +1891,7 @@ msgstr "Closing balance based on Starting Balance and Cash Transactions"
 #: model:process.node,note:account.process_node_reconciliation0
 #: model:process.node,note:account.process_node_supplierreconciliation0
 msgid "Comparison between accounting and payment entries"
-msgstr "Comparison between accounting and payment entries"
+msgstr "Hesapların ve ödeme girişlerinin karşılaştırılması"
 
 #. module: account
 #: view:account.tax:0
@@ -1959,9 +1960,9 @@ msgid ""
 "be with same name as statement name. This allows the statement entries to "
 "have the same references than the statement itself"
 msgstr ""
-"if you give the Name other then /, its created Accounting Entries Move will "
-"be with same name as statement name. This allows the statement entries to "
-"have the same references than the statement itself"
+"Eğer Ad olarak oluşturulandan farklı bir isim verirseniz /, Muhasebe Giriş "
+"Hareketleri ekstre adlarıyla aynı olacaktır. Bu da ekstre girişlerinin "
+"ekstrenin kendisiyle ayn referansa sahip olmasını sağlar."
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_unreconcile
@@ -2134,7 +2135,7 @@ msgstr "Income Account"
 #: code:addons/account/invoice.py:351
 #, python-format
 msgid "There is no Accounting Journal of type Sale/Purchase defined!"
-msgstr "There is no Accounting Journal of type Sale/Purchase defined!"
+msgstr "Tanımlanan Satış/Satınalma tipli Muhasebe yevmiyesi yoktur!"
 
 #. module: account
 #: view:product.category:0
@@ -2484,7 +2485,7 @@ msgstr "Etiket"
 #. module: account
 #: view:account.tax:0
 msgid "Accounting Information"
-msgstr "Accounting Information"
+msgstr "Muahsebe Bilgisi"
 
 #. module: account
 #: view:account.tax:0
@@ -2580,7 +2581,7 @@ msgstr "Aged Partner Balance"
 #: model:process.transition,name:account.process_transition_entriesreconcile0
 #: model:process.transition,name:account.process_transition_supplierentriesreconcile0
 msgid "Accounting entries"
-msgstr "Accounting entries"
+msgstr "Muhasebe girişleri"
 
 #. module: account
 #: field:account.invoice.line,discount:0
@@ -2618,7 +2619,7 @@ msgstr "Hesaba Göre Satışlar"
 #. module: account
 #: view:account.use.model:0
 msgid "This wizard will create recurring accounting entries"
-msgstr "This wizard will create recurring accounting entries"
+msgstr "Bu sihirbaz yinelenen muhasebe girişleri oluşturu"
 
 #. module: account
 #: code:addons/account/account.py:1195
@@ -2754,7 +2755,7 @@ msgstr ""
 #. module: account
 #: model:ir.ui.menu,name:account.menu_finance_accounting
 msgid "Financial Accounting"
-msgstr "Finansal Muhasebe"
+msgstr "Mali Muhasebe"
 
 #. module: account
 #: view:account.pl.report:0
@@ -3093,13 +3094,13 @@ msgstr "Alış"
 #: model:ir.actions.act_window,name:account.action_account_installer
 #: view:wizard.multi.charts.accounts:0
 msgid "Accounting Application Configuration"
-msgstr "Accounting Application Configuration"
+msgstr "Muhaseb Uygulamaları Yapılandırması"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.open_board_account
 #: model:ir.ui.menu,name:account.menu_board_account
 msgid "Accounting Dashboard"
-msgstr "Hesap Panosu"
+msgstr "Muhasebe Panosu"
 
 #. module: account
 #: field:account.bank.statement,balance_start:0
@@ -3155,7 +3156,7 @@ msgstr "Draft"
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_configuration_installer
 msgid "Accounting Chart Configuration"
-msgstr "Accounting Chart Configuration"
+msgstr "Muhasebe Tablosu Yapılandırması"
 
 #. module: account
 #: field:account.tax.code,notprintable:0
@@ -3644,7 +3645,7 @@ msgstr "Journal for analytic entries"
 #: view:product.template:0
 #: view:res.partner:0
 msgid "Accounting"
-msgstr "Accounting"
+msgstr "Muhasebe"
 
 #. module: account
 #: help:account.central.journal,amount_currency:0
@@ -3655,13 +3656,13 @@ msgid ""
 "Print Report with the currency column if the currency is different then the "
 "company currency"
 msgstr ""
-"Print Report with the currency column if the currency is different then the "
-"company currency"
+"Eğer para birimi firma para bitriminden farklıysa Raporu para birimi sütunu "
+"ile yazdırın."
 
 #. module: account
 #: view:account.analytic.line:0
 msgid "General Accounting"
-msgstr "General Accounting"
+msgstr "Genel Muhasebe"
 
 #. module: account
 #: report:account.overdue:0
@@ -4342,8 +4343,8 @@ msgid ""
 "All draft account entries in this journal and period will be validated. It "
 "means you won't be able to modify their accounting fields anymore."
 msgstr ""
-"Bu yevmiyeye döneme ait bütün taslak hesap girişleri doğrulanacaktır. Bu da "
-"hesap alanlarını değiştiremeyeceğiniz anlamına gelir."
+"Bu yevmiyeye ve döneme ait bütün taslak hesap girişleri doğrulanacaktır. Bu "
+"da hesap alanlarını değiştiremeyeceğiniz anlamına gelir."
 
 #. module: account
 #: report:account.account.balance.landscape:0
@@ -4370,8 +4371,7 @@ msgstr "Ürün Şablonu Gelen Hes."
 #: help:res.partner,last_reconciliation_date:0
 msgid ""
 "Date on which the partner accounting entries were reconciled last time"
-msgstr ""
-"Date on which the partner accounting entries were reconciled last time"
+msgstr "Paydaş hesap girişlerinin uzlaşılmasının yapıldığı en son tarihtir."
 
 #. module: account
 #: field:account.fiscalyear.close,fy2_id:0
@@ -4777,7 +4777,7 @@ msgstr "Balance Sheet"
 #. module: account
 #: model:ir.ui.menu,name:account.final_accounting_reports
 msgid "Accounting Reports"
-msgstr "Accounting Reports"
+msgstr "Muhasebe Raporları"
 
 #. module: account
 #: field:account.move,line_id:0
@@ -4991,7 +4991,7 @@ msgstr "İletişim"
 #. module: account
 #: model:ir.ui.menu,name:account.menu_analytic_accounting
 msgid "Analytic Accounting"
-msgstr "Analytic Accounting"
+msgstr "Analiz Muhasebesi"
 
 #. module: account
 #: selection:account.invoice,type:0
@@ -5079,7 +5079,7 @@ msgstr "Change Currency"
 #: model:process.node,note:account.process_node_accountingentries0
 #: model:process.node,note:account.process_node_supplieraccountingentries0
 msgid "Accounting entries."
-msgstr "Accounting entries."
+msgstr "Muhasebe girişleri"
 
 #. module: account
 #: view:account.invoice:0
@@ -7703,7 +7703,7 @@ msgstr ""
 #. module: account
 #: model:ir.module.module,shortdesc:account.module_meta_information
 msgid "Accounting and Financial Management"
-msgstr "Accounting and Financial Management"
+msgstr "Muhasebe ve Finansal Yönetim"
 
 #. module: account
 #: field:account.automatic.reconcile,period_id:0
@@ -8221,7 +8221,7 @@ msgstr ""
 #. module: account
 #: model:process.transition,note:account.process_transition_validentries0
 msgid "Accountant validates the accounting entries coming from the invoice."
-msgstr "Accountant validates the accounting entries coming from the invoice."
+msgstr "Muhasebeci faturalardan yapılan girişleri doğrular."
 
 #. module: account
 #: model:ir.actions.act_window,help:account.action_account_fiscalyear_form
@@ -8550,8 +8550,7 @@ msgstr "Toplam Alacak"
 #. module: account
 #: model:process.transition,note:account.process_transition_suppliervalidentries0
 msgid "Accountant validates the accounting entries coming from the invoice. "
-msgstr ""
-"Accountant validates the accounting entries coming from the invoice. "
+msgstr "Muhasebeci faturalardan yapılan girişleri doğrular. "
 
 #. module: account
 #: code:addons/account/invoice.py:1014
@@ -8751,7 +8750,7 @@ msgstr "Hesap Tipi Bazında Bakiye"
 #. module: account
 #: model:process.transition,note:account.process_transition_entriesreconcile0
 msgid "Accounting entries are the first input of the reconciliation."
-msgstr "Accounting entries are the first input of the reconciliation."
+msgstr "Muhasebe girişleri uzlaşma için ilk girişlerdir."
 
 #. module: account
 #: model:ir.actions.act_window,help:account.action_account_period_form
@@ -9919,7 +9918,7 @@ msgstr "Genel Bilgiler"
 #: view:account.move:0
 #: view:account.move.line:0
 msgid "Accounting Documents"
-msgstr "Accounting Documents"
+msgstr "Muhasebe Belgeleri"
 
 #. module: account
 #: model:ir.model,name:account.model_validate_account_move_lines
