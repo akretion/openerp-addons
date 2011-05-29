@@ -7,25 +7,25 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-05-09 10:18+0000\n"
-"PO-Revision-Date: 2011-03-01 14:44+0000\n"
-"Last-Translator: Özge Altınışık <Unknown>\n"
+"PO-Revision-Date: 2011-05-28 19:26+0000\n"
+"Last-Translator: Ayhan KIZILTAN <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-05-10 07:20+0000\n"
+"X-Launchpad-Export-Date: 2011-05-29 05:33+0000\n"
 "X-Generator: Launchpad (build 12959)\n"
 
 #. module: account_followup
 #: code:addons/account_followup/wizard/account_followup_print.py:298
 #, python-format
 msgid "Follwoup Summary"
-msgstr ""
+msgstr "İzleme Özeti"
 
 #. module: account_followup
 #: view:account_followup.followup:0
 msgid "Search Followup"
-msgstr ""
+msgstr "İzleme Ara"
 
 #. module: account_followup
 #: model:ir.module.module,description:account_followup.module_meta_information
@@ -55,7 +55,7 @@ msgstr ""
 #. module: account_followup
 #: view:account_followup.stat:0
 msgid "Group By..."
-msgstr "Grupla..."
+msgstr "Gruplandır..."
 
 #. module: account_followup
 #: code:addons/account_followup/wizard/account_followup_print.py:290
@@ -68,14 +68,14 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"E-posta aşağıdaki İş Ortaklarına başarıyla gönderildi. !\n"
+"E-posta aşağıdaki Paydaşlara başarıyla gönderildi. !\n"
 "\n"
 
 #. module: account_followup
 #: view:account_followup.followup:0
 #: field:account_followup.followup,followup_line:0
 msgid "Follow-Up"
-msgstr "İş Takipçisi"
+msgstr "İzleme"
 
 #. module: account_followup
 #: field:account_followup.followup,company_id:0
@@ -93,13 +93,14 @@ msgstr "Fatura Tarihi"
 #. module: account_followup
 #: field:account.followup.print.all,email_subject:0
 msgid "Email Subject"
-msgstr "E-Mail Konusu"
+msgstr "Eposta Konusu"
 
 #. module: account_followup
 #: model:ir.actions.act_window,help:account_followup.action_followup_stat
 msgid ""
 "Follow up on the reminders sent over to your partners for unpaid invoices."
 msgstr ""
+"Ödenmemiş faturalar için paydaşlarınıza gönderilen anımsatmaları izleyin."
 
 #. module: account_followup
 #: view:account.followup.print.all:0
@@ -115,38 +116,38 @@ msgstr "Tamam"
 #. module: account_followup
 #: view:account.followup.print.all:0
 msgid "Select Partners to Remind"
-msgstr "Hatırlatmak için İş Ortağı seç"
+msgstr "Anımsatma yapılacak Paydaşı seç"
 
 #. module: account_followup
 #: constraint:account.move.line:0
 msgid "You can not create move line on closed account."
-msgstr ""
+msgstr "Kapanmış bir hesap için hareket yaratamazsınız."
 
 #. module: account_followup
 #: field:account.followup.print,date:0
 msgid "Follow-up Sending Date"
-msgstr "İş Takibi Gönderim Tarihi"
+msgstr "İzleme Gönderim Tarihi"
 
 #. module: account_followup
 #: sql_constraint:account.move.line:0
 msgid "Wrong credit or debit value in accounting entry !"
-msgstr ""
+msgstr "Hesap girişindeki alacak ya da Borç değeri hatalı !"
 
 #. module: account_followup
 #: selection:account_followup.followup.line,start:0
 msgid "Net Days"
-msgstr ""
+msgstr "Net Gün Sayısı"
 
 #. module: account_followup
 #: model:ir.actions.act_window,name:account_followup.action_account_followup_definition_form
 #: model:ir.ui.menu,name:account_followup.account_followup_menu
 msgid "Follow-Ups"
-msgstr "İş Takipçisi"
+msgstr "İzlemeler"
 
 #. module: account_followup
 #: view:account_followup.stat.by.partner:0
 msgid "Balance > 0"
-msgstr ""
+msgstr "Bakiye > 0"
 
 #. module: account_followup
 #: view:account.move.line:0
@@ -156,18 +157,18 @@ msgstr "Toplam Borç"
 #. module: account_followup
 #: view:account.followup.print.all:0
 msgid "%(heading)s: Move line header"
-msgstr ""
+msgstr "%(başlık)lar: Hareket kalemi başlığı"
 
 #. module: account_followup
 #: view:res.company:0
 #: field:res.company,follow_up_msg:0
 msgid "Follow-up Message"
-msgstr "İş Takipçisi Mesajı"
+msgstr "İzleme Mesajı"
 
 #. module: account_followup
 #: field:account.followup.print,followup_id:0
 msgid "Follow-up"
-msgstr "Takip"
+msgstr "İzleme"
 
 #. module: account_followup
 #: report:account_followup.followup.print:0
@@ -179,7 +180,7 @@ msgstr "KDV :"
 #: field:account_followup.stat,partner_id:0
 #: field:account_followup.stat.by.partner,partner_id:0
 msgid "Partner"
-msgstr "Ortak"
+msgstr "Paydaş"
 
 #. module: account_followup
 #: report:account_followup.followup.print:0
@@ -189,18 +190,18 @@ msgstr "Tarih :"
 #. module: account_followup
 #: field:account.followup.print.all,partner_ids:0
 msgid "Partners"
-msgstr "Cari Kartlar"
+msgstr "Paydaşlar"
 
 #. module: account_followup
 #: code:addons/account_followup/wizard/account_followup_print.py:138
 #, python-format
 msgid "Invoices Reminder"
-msgstr "Fatura Hatırlatıcısı"
+msgstr "Fatura Anımsatıcıs"
 
 #. module: account_followup
 #: model:ir.model,name:account_followup.model_account_followup_followup
 msgid "Account Follow Up"
-msgstr "Hesap Takibi"
+msgstr "Hesap İzleme"
 
 #. module: account_followup
 #: selection:account_followup.followup.line,start:0
@@ -210,12 +211,12 @@ msgstr "Ay sonu"
 #. module: account_followup
 #: view:account_followup.stat:0
 msgid "Not Litigation"
-msgstr ""
+msgstr "Dava açılmamış"
 
 #. module: account_followup
 #: view:account.followup.print.all:0
 msgid "%(user_signature)s: User name"
-msgstr ""
+msgstr "%(kullanıcı_imzası)ları: Kullanıcı Adı"
 
 #. module: account_followup
 #: field:account_followup.stat,debit:0
@@ -229,6 +230,9 @@ msgid ""
 "You can send them the default message for unpaid invoices or manually enter "
 "a message should you need to remind them of a specific information."
 msgstr ""
+"Bu özellik paydaşlarınızın bekleyen faturaları için anımsatma göndermenizi "
+"sağlar. Ödenmeyen faturalar için varsayılan mesajı gönderebilir ya da özel "
+"bir bilgiyi onlara anımsatmak için elle bir mesaj girebilirsiniz."
 
 #. module: account_followup
 #: report:account_followup.followup.print:0
@@ -238,24 +242,24 @@ msgstr "Ref"
 #. module: account_followup
 #: help:account_followup.followup.line,sequence:0
 msgid "Gives the sequence order when displaying a list of follow-up lines."
-msgstr ""
+msgstr "İzleme satırlarını görüntülerken sıralamayı verir."
 
 #. module: account_followup
 #: view:account.followup.print.all:0
 #: field:account.followup.print.all,email_body:0
 msgid "Email body"
-msgstr "Email Mesaj Alanı"
+msgstr "Eposta gövdesi"
 
 #. module: account_followup
 #: field:account.move.line,followup_line_id:0
 msgid "Follow-up Level"
-msgstr "Takip Seviyesi"
+msgstr "İzleme Seviyesi"
 
 #. module: account_followup
 #: field:account_followup.stat,date_followup:0
 #: field:account_followup.stat.by.partner,date_followup:0
 msgid "Latest followup"
-msgstr "Son İş Takibi"
+msgstr "Son İzleme"
 
 #. module: account_followup
 #: model:account_followup.followup.line,description:account_followup.demo_followup_line2
@@ -280,21 +284,38 @@ msgid ""
 "\n"
 "Best Regards,\n"
 msgstr ""
+"\n"
+"Sayın %(paydaş_adı)ları,\n"
+"\n"
+"Size bir anımsatma göndermemize karşın ödemenizin ciddi olarak geciktiğini "
+"görmekten bizi hayal kırıklığına uğratmıştır.\n"
+"\n"
+"Acil olarak ödeme yapmanız gerekmektedir, aksi takdirde hesabınız kesilecek "
+"olup firmanıza bundan sonra (malzeme/hizmet) satışı yapılmayacaktır.\n"
+"Önümüzdeki 8 gün içerisinde, lütfen bu ödemenin yapılmasını sağlayın. \n"
+"\n"
+"Eğer bilmediğimiz bir sorun yüzünden bu ödeme yapılamıyorsa, lütfen muhasebe "
+"bölümümüzle(+32).10.68.94.39. den ilişkiye geçmekten çekinmeyin ki bu soruna "
+"hızlı bir şekilde çözüm bulalım.\n"
+"\n"
+"Geciken ödemenizle ilgili ayrıntılar aşağıda yazılmıştır.\n"
+"\n"
+"Saygılarımızla,\n"
 
 #. module: account_followup
 #: field:account.followup.print.all,partner_lang:0
 msgid "Send Email in Partner Language"
-msgstr "E-Maili Carinin Dilinde Gönder"
+msgstr "Epostayı Paydaşın Dilinde Gönder"
 
 #. module: account_followup
 #: view:account.followup.print.all:0
 msgid "Partner Selection"
-msgstr "Cari Seçimi"
+msgstr "Paydaş Seçimi"
 
 #. module: account_followup
 #: field:account_followup.followup.line,description:0
 msgid "Printed Message"
-msgstr ""
+msgstr "Yazılı Mesaj"
 
 #. module: account_followup
 #: view:account.followup.print:0
@@ -303,18 +324,18 @@ msgstr ""
 #: model:ir.actions.act_window,name:account_followup.action_account_followup_print_all
 #: model:ir.ui.menu,name:account_followup.account_followup_print_menu
 msgid "Send followups"
-msgstr ""
+msgstr "İzlemeleri gönder"
 
 #. module: account_followup
 #: view:account_followup.stat.by.partner:0
 msgid "Partner to Remind"
-msgstr ""
+msgstr "Anımsatma Gönderilecek Paydaş"
 
 #. module: account_followup
 #: field:account_followup.followup.line,followup_id:0
 #: field:account_followup.stat,followup_id:0
 msgid "Follow Ups"
-msgstr ""
+msgstr "İzlemeler"
 
 #. module: account_followup
 #: model:account_followup.followup.line,description:account_followup.demo_followup_line1
@@ -356,12 +377,12 @@ msgstr ""
 #. module: account_followup
 #: view:account.followup.print.all:0
 msgid "Send Mails"
-msgstr ""
+msgstr "Postaları Gönder"
 
 #. module: account_followup
 #: report:account_followup.followup.print:0
 msgid "Currency"
-msgstr ""
+msgstr "Para Birimi"
 
 #. module: account_followup
 #: model:ir.model,name:account_followup.model_account_followup_stat_by_partner
