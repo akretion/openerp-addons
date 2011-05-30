@@ -8,29 +8,29 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-05-09 10:19+0000\n"
-"PO-Revision-Date: 2011-05-29 01:28+0000\n"
-"Last-Translator: Ahmet Altınışık <Unknown>\n"
+"PO-Revision-Date: 2011-05-29 12:32+0000\n"
+"Last-Translator: Ayhan KIZILTAN <Unknown>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-05-29 05:34+0000\n"
+"X-Launchpad-Export-Date: 2011-05-30 05:41+0000\n"
 "X-Generator: Launchpad (build 12959)\n"
 
 #. module: procurement
 #: view:make.procurement:0
 msgid "Ask New Products"
-msgstr "Yeni Ürün Oluştur"
+msgstr "Yeni Ürün İste"
 
 #. module: procurement
 #: model:ir.ui.menu,name:procurement.menu_stock_sched
 msgid "Schedulers"
-msgstr "Zamanlayıcılar"
+msgstr "Planlayıcılar"
 
 #. module: procurement
 #: model:ir.model,name:procurement.model_make_procurement
 msgid "Make Procurements"
-msgstr "Sipariş Oluştur"
+msgstr "Tedarik Oluştur"
 
 #. module: procurement
 #: help:procurement.order.compute.all,automatic:0
@@ -46,18 +46,18 @@ msgstr ""
 #. module: procurement
 #: view:stock.warehouse.orderpoint:0
 msgid "Group By..."
-msgstr "Grupla..."
+msgstr "Gruplandır..."
 
 #. module: procurement
 #: help:stock.warehouse.orderpoint,procurement_draft_ids:0
 msgid "Draft procurement of the product and location of that orderpoint"
-msgstr "Sipariş noktasının lokasyonu ve ürünün taslak satınalması"
+msgstr "Sipariş noktası konumunun ve ürünün taslak tedariki"
 
 #. module: procurement
 #: code:addons/procurement/procurement.py:288
 #, python-format
 msgid "No supplier defined for this product !"
-msgstr "Bu ürün için tedarikçi tanımı bulunamadı!"
+msgstr "Bu ürün için tedarikçi tanımı yok!"
 
 #. module: procurement
 #: field:make.procurement,uom_id:0
@@ -67,13 +67,13 @@ msgstr "Ölçü Birimi"
 #. module: procurement
 #: field:procurement.order,procure_method:0
 msgid "Procurement Method"
-msgstr "Satınalma Yöntemi"
+msgstr "Tedarik Yöntemi"
 
 #. module: procurement
 #: code:addons/procurement/procurement.py:304
 #, python-format
 msgid "No address defined for the supplier"
-msgstr "Bu tedarikçi için bir adres tanımı bulunamadı!"
+msgstr "Tedarikçi için bir adres tanımlanmaış!"
 
 #. module: procurement
 #: model:ir.actions.act_window,name:procurement.action_procurement_compute
@@ -89,18 +89,18 @@ msgstr "Firma"
 #. module: procurement
 #: field:procurement.order,product_uos_qty:0
 msgid "UoS Quantity"
-msgstr "UoS Miktarı"
+msgstr "2.Br. Miktarı"
 
 #. module: procurement
 #: view:procurement.order:0
 #: field:procurement.order,name:0
 msgid "Reason"
-msgstr "Sebep"
+msgstr "Neden"
 
 #. module: procurement
 #: view:procurement.order.compute:0
 msgid "Compute Procurements"
-msgstr "Satınalmaları Hesapla"
+msgstr "Tedarikleri Hesapla"
 
 #. module: procurement
 #: field:procurement.order,message:0
@@ -115,7 +115,7 @@ msgstr "Sadece bilgi amaçlıdır, hesaplamalarda kullanılmaz."
 #. module: procurement
 #: field:stock.warehouse.orderpoint,procurement_id:0
 msgid "Latest procurement"
-msgstr "Son satınalma"
+msgstr "Son tedarik"
 
 #. module: procurement
 #: view:procurement.order:0
@@ -125,12 +125,12 @@ msgstr "Notlar"
 #. module: procurement
 #: selection:procurement.order,procure_method:0
 msgid "on order"
-msgstr "Sipariş"
+msgstr "sipariş üzerine"
 
 #. module: procurement
 #: help:procurement.order,message:0
 msgid "Exception occurred while computing procurement orders."
-msgstr "Satınalma emirlerini işlerken bir istisna oluştu."
+msgstr "Tedarik emirlerini işlerken bir kuraldışılık oluştu."
 
 #. module: procurement
 #: help:procurement.order,state:0
@@ -144,12 +144,12 @@ msgid ""
 " It is in 'Waiting'. state when the procurement is waiting for another one "
 "to finish."
 msgstr ""
-"Satınalma ilk  'Taslak' durumunda oluşturulur.\n"
-" Satınalma onaylandığında durumu 'Onaylandı' olur.            \n"
+"Tedarik ilk  'Taslak' durumunda oluşturulur.\n"
+" Tedarik onaylandığında durumu 'Onaylandı' olur.            \n"
 "Onaylandıktan sonra durumu 'Yolda' olur.\n"
 " Bir istisna oluşursa durumu 'İstisna' olur.\n"
 " İstisna kaldırıldıktan sonra 'Hazır' durumuna geçer.\n"
-" Başka bir satınalmanın tamamlanmasını bekliyorsa 'Beklemede' durumundadır."
+" Başka bir tedariğin tamamlanmasını bekliyorsa 'Beklemede' durumundadır."
 
 #. module: procurement
 #: view:stock.warehouse.orderpoint:0
@@ -168,7 +168,7 @@ msgstr ""
 #. module: procurement
 #: view:procurement.order.compute.all:0
 msgid "Scheduler Parameters"
-msgstr "Zamanlayıcı Parametreleri"
+msgstr "Planlamacı Katsayıları"
 
 #. module: procurement
 #: model:ir.model,name:procurement.model_stock_move
@@ -178,7 +178,7 @@ msgstr "Stok Hareketi"
 #. module: procurement
 #: model:ir.model,name:procurement.model_procurement_order_compute_all
 msgid "Compute all schedulers"
-msgstr "Tüm zamanlayıcıları hesapla"
+msgstr "Tüm Planlamacıları Hesapla"
 
 #. module: procurement
 #: view:procurement.order:0
@@ -198,7 +198,7 @@ msgstr "Otomatik Sipariş Noktası"
 #. module: procurement
 #: field:mrp.property,composition:0
 msgid "Properties composition"
-msgstr "Özellik Birleşimi"
+msgstr "Bileşim Özellikleri"
 
 #. module: procurement
 #: selection:procurement.order,state:0
@@ -214,7 +214,7 @@ msgstr "Yeniden Dene"
 #: view:procurement.order.compute:0
 #: view:procurement.orderpoint.compute:0
 msgid "Parameters"
-msgstr "Parametreler"
+msgstr "Katsayılar"
 
 #. module: procurement
 #: view:procurement.order:0
@@ -226,24 +226,23 @@ msgstr "Onayla"
 msgid ""
 "Reference of the document that created this Procurement.\n"
 "This is automatically completed by OpenERP."
-msgstr ""
-"Open ERP, bu satınalmayı başlatan belgeyi otomatik olarak kapamıştır."
+msgstr "Open ERP, bu tedariği başlatan belgeyi otomatik olarak kapamıştır."
 
 #. module: procurement
 #: view:stock.warehouse.orderpoint:0
 msgid "Procurement Orders to Process"
-msgstr "İşlenecek Satınalma Emirleri"
+msgstr "İşlenecek Tedarik Emirleri"
 
 #. module: procurement
 #: constraint:res.company:0
 msgid "Error! You can not create recursive companies."
-msgstr "Hata! İç içe tekrarlayan şirketler seçemezsiniz."
+msgstr "Hata! Yinelemeli şirketler oluşturamazsınız."
 
 #. module: procurement
 #: code:addons/procurement/procurement.py:384
 #, python-format
 msgid "Procurement '%s' is in exception: "
-msgstr ""
+msgstr "Tedarik '%s' de kuraldışılık var: "
 
 #. module: procurement
 #: field:procurement.order,priority:0
@@ -558,7 +557,7 @@ msgstr "Aynı üründen olmayan bir sarf atamaya çalışıyorsunuz"
 #: code:addons/procurement/procurement.py:381
 #, python-format
 msgid "Not enough stock."
-msgstr ""
+msgstr "Yeterli stok yok."
 
 #. module: procurement
 #: field:stock.warehouse.orderpoint,active:0
@@ -584,7 +583,7 @@ msgstr "İstisna"
 #: code:addons/procurement/procurement.py:379
 #, python-format
 msgid "No minimum orderpoint rule defined."
-msgstr ""
+msgstr "Enaz siparişnoktası kuralı tanımlanmamış."
 
 #. module: procurement
 #: code:addons/procurement/schedulers.py:179
@@ -730,7 +729,7 @@ msgstr "Acil Değil"
 #: code:addons/procurement/procurement.py:294
 #, python-format
 msgid "No default supplier defined for this product"
-msgstr ""
+msgstr "Bu ürün için varsayılan tedarikçi tanımlanmamış"
 
 #. module: procurement
 #: view:procurement.order:0
