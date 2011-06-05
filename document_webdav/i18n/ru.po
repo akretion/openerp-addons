@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-05-09 10:18+0000\n"
-"PO-Revision-Date: 2011-06-03 21:01+0000\n"
+"PO-Revision-Date: 2011-06-04 09:07+0000\n"
 "Last-Translator: Stanislav Hanzhin <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-06-04 06:25+0000\n"
+"X-Launchpad-Export-Date: 2011-06-05 06:14+0000\n"
 "X-Generator: Launchpad (build 12959)\n"
 
 #. module: document_webdav
@@ -72,6 +72,26 @@ msgid ""
 "server,\n"
 "        which needs explicit configuration in openerp-server.conf, too.\n"
 msgstr ""
+" Этот модуль активирует сервер WebDAV для документов.\n"
+"        После активации можно использовать любой совместимый браузер для "
+"просмотра вложений в OpenObject.\n"
+"\n"
+"        После установки, сервер WebDAV можно конфигурировать в секции "
+"[webdav] основного конфигурационного файла.\n"
+"        Параметки конфигурации сервера:\n"
+"        [webdav]\n"
+"        ; enable = True ; Обслуживать запросы WebDAV по http(s)\n"
+"        ; vdir = webdav ; каталог, в котором хранятся файлы WebDAV\n"
+"          ; значения по-умолчанию настраивают сервер\n"
+"          ; на адрес \"http://localhost:8069/webdav/\"\n"
+"        ; verbose = True ; Включить подробный вывод WebDAV\n"
+"        ; debug = True ; Включить отладочный вывод WebDAV\n"
+"          ; Поскольку сообщения направляются системе логирования python\n"
+"          ; с уровнями \"debug\" и \"debug_rpc\" соответственно, можно\n"
+"          ; оставить эти настройки как есть.\n"
+"          \n"
+"        Для обнаружения сервисов на http-сервере, реализован IETF RFC 5785,\n"
+"        который требует отдельной настройки в файле openerp-server.conf.\n"
 
 #. module: document_webdav
 #: model:ir.model,name:document_webdav.model_document_webdav_file_property
@@ -134,11 +154,14 @@ msgid ""
 "http://code.google.com/p/pywebdav/downloads/detail?name=PyWebDAV-"
 "0.9.4.tar.gz&can=2&q=/"
 msgstr ""
+"Требуется установить PyWebDAV с адреса "
+"http://code.google.com/p/pywebdav/downloads/detail?name=PyWebDAV-"
+"0.9.4.tar.gz&can=2&q=/"
 
 #. module: document_webdav
 #: model:ir.ui.menu,name:document_webdav.menu_dir_props
 msgid "DAV properties for folders"
-msgstr ""
+msgstr "DAV-свойства папок"
 
 #. module: document_webdav
 #: view:document.directory:0
@@ -179,7 +202,7 @@ msgstr "Автор последнего изменения"
 #. module: document_webdav
 #: view:document.webdav.dir.property:0
 msgid "Dir"
-msgstr ""
+msgstr "Кат."
 
 #. module: document_webdav
 #: field:document.webdav.dir.property,write_date:0
@@ -196,7 +219,7 @@ msgstr "Создатель"
 #. module: document_webdav
 #: model:ir.module.module,shortdesc:document_webdav.module_meta_information
 msgid "WebDAV server for Document Management"
-msgstr ""
+msgstr "Сервер WebDAV для управления документами"
 
 #. module: document_webdav
 #: sql_constraint:document.directory:0
