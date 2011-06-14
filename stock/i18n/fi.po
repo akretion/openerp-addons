@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-05-09 10:19+0000\n"
-"PO-Revision-Date: 2011-01-19 12:00+0000\n"
-"Last-Translator: Pekka Pylvänäinen <Unknown>\n"
+"PO-Revision-Date: 2011-06-13 09:12+0000\n"
+"Last-Translator: Juha Kotamäki <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-06-11 06:12+0000\n"
+"X-Launchpad-Export-Date: 2011-06-14 05:30+0000\n"
 "X-Generator: Launchpad (build 13168)\n"
 
 #. module: stock
@@ -48,7 +48,7 @@ msgstr ""
 #. module: stock
 #: field:stock.move.split.lines,action:0
 msgid "Action"
-msgstr ""
+msgstr "Toiminto"
 
 #. module: stock
 #: view:stock.production.lot:0
@@ -64,7 +64,7 @@ msgstr ""
 #. module: stock
 #: view:stock.move:0
 msgid "Today"
-msgstr ""
+msgstr "Tänään"
 
 #. module: stock
 #: field:stock.production.lot.revision,indice:0
@@ -223,7 +223,7 @@ msgstr "Muu viite tai sarjanumero"
 #: view:stock.picking:0
 #: field:stock.picking,origin:0
 msgid "Origin"
-msgstr ""
+msgstr "Lähde"
 
 #. module: stock
 #: view:report.stock.lines.date:0
@@ -253,7 +253,7 @@ msgstr ""
 #. module: stock
 #: constraint:product.category:0
 msgid "Error ! You can not create recursive categories."
-msgstr ""
+msgstr "Virhe ! Et voi luoda rekursiivisia luokkia."
 
 #. module: stock
 #: help:stock.fill.inventory,set_stock_zero:0
@@ -416,7 +416,7 @@ msgstr "Saatavilla"
 #: view:stock.picking:0
 #: field:stock.picking,min_date:0
 msgid "Expected Date"
-msgstr ""
+msgstr "Oletettu päivämäärä"
 
 #. module: stock
 #: view:board.board:0
@@ -3870,13 +3870,13 @@ msgstr ""
 #. module: stock
 #: selection:report.stock.move,month:0
 msgid "April"
-msgstr ""
+msgstr "Huhtikuu"
 
 #. module: stock
 #: view:report.stock.inventory:0
 #: view:stock.move:0
 msgid "Future"
-msgstr ""
+msgstr "Tulevaisuudessa"
 
 #. module: stock
 #: field:stock.invoice.onshipping,invoice_date:0
@@ -3893,7 +3893,7 @@ msgstr ""
 #: code:addons/stock/wizard/stock_return_picking.py:194
 #, python-format
 msgid "Warning !"
-msgstr ""
+msgstr "Varoitus !"
 
 #. module: stock
 #: model:stock.location,name:stock.stock_location_output
@@ -3919,7 +3919,7 @@ msgstr ""
 #: view:report.stock.move:0
 #: field:report.stock.move,year:0
 msgid "Year"
-msgstr ""
+msgstr "Vuosi"
 
 #. module: stock
 #: model:stock.location,name:stock.stock_location_locations
@@ -3929,7 +3929,7 @@ msgstr "Aineelliset paikat"
 #. module: stock
 #: model:ir.model,name:stock.model_stock_partial_move
 msgid "Partial Move"
-msgstr ""
+msgstr "Osasiirto"
 
 #. module: stock
 #: help:stock.location,posx:0
