@@ -8,32 +8,32 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-01-11 11:15+0000\n"
-"PO-Revision-Date: 2011-01-19 12:00+0000\n"
-"Last-Translator: Black Jack <onetimespeed@hotmail.com>\n"
+"PO-Revision-Date: 2011-06-23 05:27+0000\n"
+"Last-Translator: openerp-china.Black Jack <onetimespeed@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-01-25 06:41+0000\n"
-"X-Generator: Launchpad (build 12177)\n"
+"X-Launchpad-Export-Date: 2011-06-23 05:57+0000\n"
+"X-Generator: Launchpad (build 13168)\n"
 
 #. module: hr_evaluation
 #: selection:hr.evaluation.report,state:0
 #: selection:hr_evaluation.evaluation,state:0
 msgid "Plan In Progress"
-msgstr ""
+msgstr "计划进度"
 
 #. module: hr_evaluation
 #: field:hr_evaluation.plan.phase,wait:0
 msgid "Wait Previous Phases"
-msgstr ""
+msgstr "等待前面的阶段"
 
 #. module: hr_evaluation
 #: view:hr.evaluation.interview:0
 #: view:hr.evaluation.report:0
 #: view:hr_evaluation.plan:0
 msgid "Group By..."
-msgstr ""
+msgstr "分组..."
 
 #. module: hr_evaluation
 #: field:hr.evaluation.interview,request_id:0
@@ -45,87 +45,87 @@ msgstr ""
 #: field:hr.evaluation.report,progress_bar:0
 #: field:hr_evaluation.evaluation,progress:0
 msgid "Progress"
-msgstr ""
+msgstr "进度"
 
 #. module: hr_evaluation
 #: view:board.board:0
 #: model:ir.actions.act_window,name:hr_evaluation.act_hr_evaluation_tree
 msgid "My Evaluation Remaining"
-msgstr ""
+msgstr "我的评估还有"
 
 #. module: hr_evaluation
 #: view:hr_evaluation.plan.phase:0
 msgid "Legend"
-msgstr ""
+msgstr "图表"
 
 #. module: hr_evaluation
 #: code:addons/hr_evaluation/hr_evaluation.py:311
 #, python-format
 msgid "You cannot start evaluation without Evaluation."
-msgstr ""
+msgstr "您不能开启没有评估的评估项"
 
 #. module: hr_evaluation
 #: selection:hr.evaluation.report,month:0
 msgid "March"
-msgstr ""
+msgstr "3月"
 
 #. module: hr_evaluation
 #: field:hr.evaluation.report,delay_date:0
 msgid "Delay to Start"
-msgstr ""
+msgstr "推延开启"
 
 #. module: hr_evaluation
 #: view:hr.evaluation.report:0
 #: field:hr_evaluation.evaluation,rating:0
 msgid "Appreciation"
-msgstr ""
+msgstr "正面评价"
 
 #. module: hr_evaluation
 #: code:addons/hr_evaluation/hr_evaluation.py:242
 #: code:addons/hr_evaluation/hr_evaluation.py:311
 #, python-format
 msgid "Warning !"
-msgstr ""
+msgstr "警告！"
 
 #. module: hr_evaluation
 #: view:hr_evaluation.plan:0
 #: field:hr_evaluation.plan,company_id:0
 #: field:hr_evaluation.plan.phase,company_id:0
 msgid "Company"
-msgstr ""
+msgstr "公司"
 
 #. module: hr_evaluation
 #: model:ir.actions.act_window,name:hr_evaluation.act_hr_employee_2_hr__evaluation_interview
 msgid "Evaluation Interviews"
-msgstr ""
+msgstr "当面评估"
 
 #. module: hr_evaluation
 #: field:hr_evaluation.plan.phase,survey_id:0
 msgid "Appraisal Form"
-msgstr ""
+msgstr "考核表"
 
 #. module: hr_evaluation
 #: view:hr.evaluation.report:0
 #: field:hr.evaluation.report,day:0
 msgid "Day"
-msgstr ""
+msgstr "日"
 
 #. module: hr_evaluation
 #: field:hr.evaluation.interview,evaluation_id:0
 msgid "Evaluation Form"
-msgstr ""
+msgstr "评估表"
 
 #. module: hr_evaluation
 #: help:hr_evaluation.plan.phase,send_anonymous_employee:0
 msgid "Send an anonymous summary to the employee"
-msgstr ""
+msgstr "发给员工的匿名摘要"
 
 #. module: hr_evaluation
 #: help:hr_evaluation.plan,month_first:0
 msgid ""
 "This number of months will be used to schedule the first evaluation date of "
 "the employee when selecting an evaluation plan. "
-msgstr ""
+msgstr "这个月份将用于员工评估计划的首次评估日期。 "
 
 #. module: hr_evaluation
 #: view:hr.employee:0
@@ -135,57 +135,57 @@ msgstr "备注"
 #. module: hr_evaluation
 #: view:hr.evaluation.interview:0
 msgid "Interview Request"
-msgstr ""
+msgstr "面谈（试）要求"
 
 #. module: hr_evaluation
 #: constraint:hr.employee:0
 msgid ""
 "Error ! You cannot select a department for which the employee is the manager."
-msgstr ""
+msgstr "错误！您不能选择一部门因为该员工是经理。"
 
 #. module: hr_evaluation
 #: view:hr_evaluation.plan.phase:0
 msgid "Mail Body"
-msgstr ""
+msgstr "邮件内容"
 
 #. module: hr_evaluation
 #: view:hr.evaluation.report:0
 #: model:ir.actions.act_window,name:hr_evaluation.action_evaluation_report_all
 #: model:ir.ui.menu,name:hr_evaluation.menu_evaluation_report_all
 msgid "Evaluations Analysis"
-msgstr ""
+msgstr "评估分析"
 
 #. module: hr_evaluation
 #: selection:hr.evaluation.report,state:0
 #: selection:hr_evaluation.evaluation,state:0
 msgid "Cancelled"
-msgstr ""
+msgstr "已取消"
 
 #. module: hr_evaluation
 #: model:ir.model,name:hr_evaluation.model_hr_evaluation_reminder
 msgid "Sends Reminders to employess to fill the evaluations"
-msgstr ""
+msgstr "发送提醒员工填满全部的评估"
 
 #. module: hr_evaluation
 #: selection:hr.evaluation.report,rating:0
 #: selection:hr_evaluation.evaluation,rating:0
 msgid "Did not meet expectations"
-msgstr ""
+msgstr "没有达到预期"
 
 #. module: hr_evaluation
 #: view:hr_evaluation.evaluation:0
 msgid "Appraisal"
-msgstr ""
+msgstr "考核"
 
 #. module: hr_evaluation
 #: selection:hr.evaluation.report,month:0
 msgid "July"
-msgstr ""
+msgstr "7月"
 
 #. module: hr_evaluation
 #: field:hr_evaluation.plan,month_next:0
 msgid "Periodicity of Evaluations (months)"
-msgstr ""
+msgstr "评估周期（月）"
 
 #. module: hr_evaluation
 #: code:addons/hr_evaluation/hr_evaluation.py:242
