@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-05-09 10:18+0000\n"
-"PO-Revision-Date: 2011-06-26 17:49+0000\n"
+"PO-Revision-Date: 2011-06-27 17:05+0000\n"
 "Last-Translator: dquo <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-06-27 05:01+0000\n"
+"X-Launchpad-Export-Date: 2011-06-28 05:30+0000\n"
 "X-Generator: Launchpad (build 13168)\n"
 
 #. module: account
@@ -165,7 +165,7 @@ msgstr "选择会计年度 "
 msgid ""
 "If the active field is set to False, it will allow you to hide the payment "
 "term without removing it."
-msgstr ""
+msgstr "如果设置为false，该付款条款将会被隐藏。"
 
 #. module: account
 #: code:addons/account/invoice.py:1436
@@ -258,7 +258,7 @@ msgstr ""
 #. module: account
 #: model:process.transition,note:account.process_transition_supplierentriesreconcile0
 msgid "Accounting entries are an input of the reconciliation."
-msgstr ""
+msgstr "会计分录必须借贷相等"
 
 #. module: account
 #: model:ir.ui.menu,name:account.menu_finance_management_belgian_reports
@@ -274,7 +274,7 @@ msgstr "不能添加/修改已结帐的凭证"
 #. module: account
 #: view:account.bank.statement:0
 msgid "Calculated Balance"
-msgstr ""
+msgstr "计算余额"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_use_model_create_entry
@@ -334,7 +334,7 @@ msgstr ""
 #. module: account
 #: model:ir.model,name:account.model_account_unreconcile
 msgid "Account Unreconcile"
-msgstr ""
+msgstr "科目反核销"
 
 #. module: account
 #: view:product.product:0
@@ -1026,7 +1026,7 @@ msgstr "争议中"
 #: model:ir.actions.act_window,name:account.action_view_bank_statement_tree
 #: model:ir.ui.menu,name:account.journal_cash_move_lines
 msgid "Cash Registers"
-msgstr ""
+msgstr "出纳现金"
 
 #. module: account
 #: selection:account.account.type,report_type:0
@@ -1043,7 +1043,7 @@ msgstr "-"
 #. module: account
 #: view:account.analytic.account:0
 msgid "Manager"
-msgstr ""
+msgstr "经理"
 
 #. module: account
 #: view:account.subscription.generate:0
@@ -2343,7 +2343,7 @@ msgstr "辅助核算项目"
 #: model:ir.ui.menu,name:account.menu_action_account_form
 #: model:ir.ui.menu,name:account.menu_analytic
 msgid "Accounts"
-msgstr ""
+msgstr "科目"
 
 #. module: account
 #: code:addons/account/invoice.py:350
@@ -2355,7 +2355,7 @@ msgstr "设置错误!"
 #: view:account.invoice.report:0
 #: field:account.invoice.report,price_average:0
 msgid "Average Price"
-msgstr ""
+msgstr "平均价格"
 
 #. module: account
 #: report:account.overdue:0
@@ -2446,7 +2446,7 @@ msgstr "真"
 #: view:account.move:0
 #: view:account.move.line:0
 msgid "Dates"
-msgstr ""
+msgstr "日期"
 
 #. module: account
 #: field:account.tax,parent_id:0
@@ -2576,7 +2576,7 @@ msgstr "关联单号数"
 #: selection:report.account.sales,month:0
 #: selection:report.account_type.sales,month:0
 msgid "October"
-msgstr ""
+msgstr "10月"
 
 #. module: account
 #: help:account.move.line,quantity:0
@@ -2588,7 +2588,7 @@ msgstr ""
 #. module: account
 #: view:account.payment.term.line:0
 msgid "Line 2:"
-msgstr ""
+msgstr "第2行"
 
 #. module: account
 #: field:account.journal.column,required:0
@@ -2764,7 +2764,7 @@ msgstr ""
 #. module: account
 #: view:account.analytic.line:0
 msgid "Total Quantity"
-msgstr ""
+msgstr "合计数量"
 
 #. module: account
 #: field:account.move.line.reconcile.writeoff,writeoff_acc_id:0
@@ -3090,7 +3090,7 @@ msgstr "你的科目和现金科目"
 #. module: account
 #: view:account.move:0
 msgid "Search Move"
-msgstr ""
+msgstr "移动搜索"
 
 #. module: account
 #: field:account.tax.code,name:0
@@ -3134,13 +3134,13 @@ msgstr "进销存数据"
 #. module: account
 #: field:account.invoice.report,state:0
 msgid "Invoice State"
-msgstr ""
+msgstr "发票状态"
 
 #. module: account
 #: view:account.invoice.report:0
 #: field:account.invoice.report,categ_id:0
 msgid "Category of Product"
-msgstr ""
+msgstr "产品类别"
 
 #. module: account
 #: view:account.move:0
@@ -3148,7 +3148,7 @@ msgstr ""
 #: view:account.move.line:0
 #: field:account.move.line,narration:0
 msgid "Narration"
-msgstr ""
+msgstr "描述"
 
 #. module: account
 #: view:account.addtmpl.wizard:0
@@ -9281,17 +9281,17 @@ msgstr "如果是一个多货币凭证可选其它货币"
 #: model:process.transition,note:account.process_transition_invoiceimport0
 msgid ""
 "Import of the statement in the system from a supplier or customer invoice"
-msgstr ""
+msgstr "供应商或客户发票在系统中的入口"
 
 #. module: account
 #: model:ir.ui.menu,name:account.menu_finance_periodical_processing_billing
 msgid "Billing"
-msgstr ""
+msgstr "发票"
 
 #. module: account
 #: view:account.account:0
 msgid "Parent Account"
-msgstr ""
+msgstr "父科目"
 
 #. module: account
 #: model:ir.actions.act_window,help:account.action_account_journal_form
@@ -9307,7 +9307,7 @@ msgstr ""
 #. module: account
 #: model:ir.model,name:account.model_account_analytic_chart
 msgid "Account Analytic Chart"
-msgstr ""
+msgstr "科目分析图表"
 
 #. module: account
 #: help:account.invoice,residual:0
@@ -9317,14 +9317,14 @@ msgstr "剩余的欠款"
 #. module: account
 #: model:ir.ui.menu,name:account.menu_finance_statistic_report_statement
 msgid "Statistic Reports"
-msgstr ""
+msgstr "统计报告"
 
 #. module: account
 #: field:account.installer,progress:0
 #: field:account.installer.modules,progress:0
 #: field:wizard.multi.charts.accounts,progress:0
 msgid "Configuration Progress"
-msgstr ""
+msgstr "配置进度"
 
 #. module: account
 #: view:account.fiscal.position.template:0
