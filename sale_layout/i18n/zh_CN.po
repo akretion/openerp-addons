@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-01-11 11:16+0000\n"
-"PO-Revision-Date: 2011-06-28 05:30+0000\n"
+"PO-Revision-Date: 2011-06-28 05:37+0000\n"
 "Last-Translator: shjerryzhou <Unknown>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-06-28 05:30+0000\n"
+"X-Launchpad-Export-Date: 2011-06-29 05:31+0000\n"
 "X-Generator: Launchpad (build 13168)\n"
 
 #. module: sale_layout
@@ -154,7 +154,7 @@ msgstr "发票地址:"
 #. module: sale_layout
 #: model:ir.module.module,shortdesc:sale_layout.module_meta_information
 msgid "Sale Order Layout"
-msgstr ""
+msgstr "销售订单样式"
 
 #. module: sale_layout
 #: selection:sale.order.line,layout_type:0
@@ -184,67 +184,67 @@ msgstr "税金"
 #. module: sale_layout
 #: report:sale.order.layout:0
 msgid "Net Total :"
-msgstr ""
+msgstr "总净重："
 
 #. module: sale_layout
 #: report:sale.order.layout:0
 msgid "Tel. :"
-msgstr ""
+msgstr "电话："
 
 #. module: sale_layout
 #: report:sale.order.layout:0
 msgid "Total :"
-msgstr ""
+msgstr "合计:"
 
 #. module: sale_layout
 #: report:sale.order.layout:0
 msgid "Payment Terms"
-msgstr ""
+msgstr "付款条款"
 
 #. module: sale_layout
 #: view:sale.order:0
 msgid "History"
-msgstr ""
+msgstr "日志"
 
 #. module: sale_layout
 #: view:sale.order:0
 msgid "Sale Order Lines"
-msgstr ""
+msgstr "销售订单明细"
 
 #. module: sale_layout
 #: selection:sale.order.line,layout_type:0
 msgid "Separator Line"
-msgstr ""
+msgstr "分隔线"
 
 #. module: sale_layout
 #: report:sale.order.layout:0
 msgid "Your Reference"
-msgstr ""
+msgstr "你的关联单号"
 
 #. module: sale_layout
 #: report:sale.order.layout:0
 msgid "Quotation Date"
-msgstr ""
+msgstr "报价日期"
 
 #. module: sale_layout
 #: report:sale.order.layout:0
 msgid "TVA :"
-msgstr ""
+msgstr "增值税："
 
 #. module: sale_layout
 #: view:sale.order:0
 msgid "Qty"
-msgstr ""
+msgstr "数量"
 
 #. module: sale_layout
 #: view:sale.order:0
 msgid "States"
-msgstr ""
+msgstr "状态"
 
 #. module: sale_layout
 #: view:sale.order:0
 msgid "Sales order lines"
-msgstr ""
+msgstr "销售订单明细"
 
 #. module: sale_layout
 #: model:ir.actions.report.xml,name:sale_layout.sale_order_1
@@ -254,39 +254,39 @@ msgstr ""
 #. module: sale_layout
 #: view:sale.order:0
 msgid "Extra Info"
-msgstr ""
+msgstr "附加信息"
 
 #. module: sale_layout
 #: report:sale.order.layout:0
 msgid "Taxes :"
-msgstr ""
+msgstr "税："
 
 #. module: sale_layout
 #: report:sale.order.layout:0
 msgid "Fax :"
-msgstr ""
+msgstr "传真："
 
 #. module: sale_layout
 #: model:ir.model,name:sale_layout.model_sale_order
 msgid "Sales Order"
-msgstr ""
+msgstr "销售订单"
 
 #. module: sale_layout
 #: view:sale.order:0
 msgid "Order Line"
-msgstr ""
+msgstr "订单明细"
 
 #. module: sale_layout
 #: report:sale.order.layout:0
 msgid "Price"
-msgstr ""
+msgstr "价格"
 
 #. module: sale_layout
 #: model:ir.model,name:sale_layout.model_sale_order_line
 msgid "Sales Order Line"
-msgstr ""
+msgstr "销售订单明细"
 
 #. module: sale_layout
 #: view:sale.order:0
 msgid "Stock Moves"
-msgstr ""
+msgstr "库存调拨"
