@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-05-09 10:19+0000\n"
-"PO-Revision-Date: 2011-06-29 01:07+0000\n"
+"PO-Revision-Date: 2011-07-01 23:50+0000\n"
 "Last-Translator: mrshelly <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-06-30 05:20+0000\n"
+"X-Launchpad-Export-Date: 2011-07-02 05:50+0000\n"
 "X-Generator: Launchpad (build 13168)\n"
 
 #. module: project
@@ -317,7 +317,7 @@ msgstr "如果项目允许，能够按实际工时生成发票"
 #: view:project.project:0
 msgid ""
 "Automatic variables for headers and footer. Use exactly the same notation."
-msgstr "页眉页脚的自动变量.使用同一个符号."
+msgstr ""
 
 #. module: project
 #: selection:project.task,state:0
