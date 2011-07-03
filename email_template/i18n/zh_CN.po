@@ -8,30 +8,30 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-05-09 10:18+0000\n"
-"PO-Revision-Date: 2011-01-21 10:38+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2011-07-03 05:21+0000\n"
+"Last-Translator: openerp-china.Black Jack <onetimespeed@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-05-10 07:29+0000\n"
-"X-Generator: Launchpad (build 12959)\n"
+"X-Launchpad-Export-Date: 2011-07-03 05:28+0000\n"
+"X-Generator: Launchpad (build 13168)\n"
 
 #. module: email_template
 #: help:email_template.account,auto_delete:0
 msgid "Permanently delete emails after sending"
-msgstr ""
+msgstr "电子邮件发送后永久删除"
 
 #. module: email_template
 #: view:email_template.account:0
 msgid "Email Account Configuration"
-msgstr ""
+msgstr "邮件帐户配置"
 
 #. module: email_template
 #: code:addons/email_template/wizard/email_template_send_wizard.py:195
 #, python-format
 msgid "Emails for multiple items saved in outbox."
-msgstr ""
+msgstr "发件箱保存的多封电子邮件"
 
 #. module: email_template
 #: code:addons/email_template/wizard/email_template_send_wizard.py:59
@@ -42,31 +42,33 @@ msgid ""
 "Either ask admin to enforce an account for this template or get yourself a "
 "personal email account."
 msgstr ""
+"你没设置私人电子邮件帐户。\n"
+"要求管理员强制用这模板的帐户否则输入你自己的私人电子邮件帐户。"
 
 #. module: email_template
 #: view:email_template.mailbox:0
 msgid "Personal Emails"
-msgstr ""
+msgstr "私人电子邮件"
 
 #. module: email_template
 #: field:email.template,file_name:0
 msgid "Report Filename"
-msgstr ""
+msgstr "报告文件名"
 
 #. module: email_template
 #: view:email.template:0
 msgid "Email Content  "
-msgstr ""
+msgstr "邮件内容  "
 
 #. module: email_template
 #: view:email_template.send.wizard:0
 msgid "Send mail Wizard"
-msgstr ""
+msgstr "发送邮件向导"
 
 #. module: email_template
 #: selection:email_template.mailbox,mail_type:0
 msgid "Plain Text & HTML with no attachments"
-msgstr ""
+msgstr "纯文本或HTML(无附件)"
 
 #. module: email_template
 #: help:email.template,model_object_field:0
@@ -76,6 +78,9 @@ msgid ""
 "in the box below\n"
 "(Note:If there are no values make sure you have selected the correct model)"
 msgstr ""
+"你想在模型里用的字段。\n"
+"如果它是一个关联字段，你可以在这下拉框中选择相关值。\n"
+"（备注：如果没有值，确认你选择了正确的模型)"
 
 #. module: email_template
 #: field:email_template.preview,body_html:0
@@ -83,77 +88,77 @@ msgstr ""
 #: field:email_template.send.wizard,body_html:0
 #: field:email_template.send.wizard,body_text:0
 msgid "Body"
-msgstr ""
+msgstr "内容"
 
 #. module: email_template
 #: code:addons/email_template/email_template.py:304
 #, python-format
 msgid "Deletion of Record failed"
-msgstr ""
+msgstr "记录删除失败"
 
 #. module: email_template
 #: help:email_template.account,company:0
 msgid ""
 "Select if this mail account does not belong to specific user but to the "
 "organization as a whole. eg: info@companydomain.com"
-msgstr ""
+msgstr "选择该邮件帐户不是作为特定的个人而是机构。如：info@companydomain.com"
 
 #. module: email_template
 #: view:email_template.send.wizard:0
 msgid "Send now"
-msgstr ""
+msgstr "立刻发送"
 
 #. module: email_template
 #: selection:email_template.mailbox,state:0
 msgid "Not Applicable"
-msgstr ""
+msgstr "不适用"
 
 #. module: email_template
 #: view:email_template.account:0
 #: model:ir.ui.menu,name:email_template.menu_email_account_all_tools
 #: model:ir.ui.menu,name:email_template.menu_email_template_account_all
 msgid "Email Accounts"
-msgstr ""
+msgstr "电子邮件帐户"
 
 #. module: email_template
 #: view:email_template.send.wizard:0
 msgid "Send all mails"
-msgstr ""
+msgstr "发送所有邮件"
 
 #. module: email_template
 #: help:email_template.account,smtpuname:0
 msgid ""
 "Specify the username if your SMTP server requires authentication, otherwise "
 "leave it empty."
-msgstr ""
+msgstr "指定用户名如果你的SMTP服务器需要验证。否则为空。"
 
 #. module: email_template
 #: field:email_template.mailbox,server_ref:0
 msgid "Server Reference of mail"
-msgstr ""
+msgstr "邮件服务器参考"
 
 #. module: email_template
 #: view:email_template.account:0
 #: selection:email_template.account,state:0
 msgid "Approved"
-msgstr ""
+msgstr "已审批"
 
 #. module: email_template
 #: help:email.template,def_cc:0
 msgid ""
 "Carbon Copy address(es), comma-separated. Placeholders can be used here. "
 "e.g. ${object.email_cc}"
-msgstr ""
+msgstr "抄送地址用逗号分隔。这里可以用占用符如： ${object.email_cc}"
 
 #. module: email_template
 #: view:email.template:0
 msgid "Account"
-msgstr ""
+msgstr "帐号"
 
 #. module: email_template
 #: field:email.template,table_html:0
 msgid "HTML code"
-msgstr ""
+msgstr "HTML代码"
 
 #. module: email_template
 #: help:email_template.account,name:0
@@ -161,44 +166,44 @@ msgid ""
 "The description is used as the Sender name along with the provided From "
 "Email, unless it is already specified in the From Email, e.g: John Doe "
 "<john@doe.com>"
-msgstr ""
+msgstr "在邮件里这描述作为发送人名称。除非它在邮件中早已经指定。如：John Doe <john@doe.com>"
 
 #. module: email_template
 #: field:email.template,from_account:0
 msgid "Email Account"
-msgstr ""
+msgstr "电子邮件帐户"
 
 #. module: email_template
 #: code:addons/email_template/wizard/email_template_send_wizard.py:201
 #, python-format
 msgid "Email sending failed for one or more objects."
-msgstr ""
+msgstr "一个或多个对象发送邮件失败。"
 
 #. module: email_template
 #: view:email_template.send.wizard:0
 msgid ""
 "Add here all attachments of the current document you want to include in the "
 "Email."
-msgstr ""
+msgstr "在这里添加你在邮件里把当前文件作为 附件。"
 
 #. module: email_template
 #: help:email.template,lang:0
 msgid ""
 "The default language for the email. Placeholders can be used here. eg. "
 "${object.partner_id.lang}"
-msgstr ""
+msgstr "电子邮件的默认语言。可以在这里使用占位符。例如.${object.partner_id.lang}"
 
 #. module: email_template
 #: help:email.template,sub_model_object_field:0
 msgid ""
 "When you choose relationship fields this field will specify the sub value "
 "you can use."
-msgstr ""
+msgstr "当你选择相关联字段的字段时你将可以使用具体的值。"
 
 #. module: email_template
 #: selection:email_template.send.wizard,state:0
 msgid "Wizard Complete"
-msgstr ""
+msgstr "向导完成"
 
 #. module: email_template
 #: field:email.template,reply_to:0
@@ -206,65 +211,65 @@ msgstr ""
 #: field:email_template.preview,reply_to:0
 #: field:email_template.send.wizard,reply_to:0
 msgid "Reply-To"
-msgstr ""
+msgstr "回复:"
 
 #. module: email_template
 #: view:email.template:0
 msgid "Delete Action"
-msgstr ""
+msgstr "删除操作"
 
 #. module: email_template
 #: view:email_template.account:0
 msgid "Approve Account"
-msgstr ""
+msgstr "审核帐户"
 
 #. module: email_template
 #: field:email_template.preview,rel_model_ref:0
 #: field:email_template.send.wizard,rel_model_ref:0
 msgid "Referred Document"
-msgstr ""
+msgstr "相关文档"
 
 #. module: email_template
 #: field:email_template.send.wizard,full_success:0
 msgid "Complete Success"
-msgstr ""
+msgstr "发送成功"
 
 #. module: email_template
 #: selection:email_template.account,send_pref:0
 msgid "Both HTML & Text (Mixed)"
-msgstr ""
+msgstr "HTML & Text (混合)"
 
 #. module: email_template
 #: view:email_template.preview:0
 msgid "OK"
-msgstr ""
+msgstr "确认"
 
 #. module: email_template
 #: field:email_template.account,auto_delete:0
 msgid "Auto Delete"
-msgstr ""
+msgstr "自动删除"
 
 #. module: email_template
 #: selection:email_template.account,send_pref:0
 msgid "Both HTML & Text (Alternative)"
-msgstr ""
+msgstr "HTML & Text (二选其一)"
 
 #. module: email_template
 #: field:email_template.send.wizard,requested:0
 msgid "No of requested Mails"
-msgstr ""
+msgstr "无要求的邮件"
 
 #. module: email_template
 #: field:email.template,def_body_text:0
 #: view:email_template.mailbox:0
 #: field:email_template.mailbox,body_text:0
 msgid "Standard Body (Text)"
-msgstr ""
+msgstr "邮件内容(纯文本)"
 
 #. module: email_template
 #: field:email.template,attachment_ids:0
 msgid "Attached Files"
-msgstr ""
+msgstr "文件附件"
 
 #. module: email_template
 #: field:email_template.account,smtpssl:0
@@ -274,35 +279,35 @@ msgstr ""
 #. module: email_template
 #: field:email_template.account,email_id:0
 msgid "From Email"
-msgstr ""
+msgstr "来自邮件"
 
 #. module: email_template
 #: code:addons/email_template/email_template.py:304
 #, python-format
 msgid "Warning"
-msgstr ""
+msgstr "警告"
 
 #. module: email_template
 #: model:ir.actions.act_window,name:email_template.action_email_template_account_tree_all
 msgid "Accounts"
-msgstr ""
+msgstr "帐户"
 
 #. module: email_template
 #: view:email_template.preview:0
 msgid "Body(Text)"
-msgstr ""
+msgstr "内容（Txt）"
 
 #. module: email_template
 #: view:email_template.mailbox:0
 msgid "Company Emails"
-msgstr ""
+msgstr "公司电子邮件"
 
 #. module: email_template
 #: view:email_template.send.wizard:0
 msgid ""
 "Tip: Multiple emails are sent in the same language (the first one is "
 "proposed). We suggest you send emails in groups according to language."
-msgstr ""
+msgstr "提示：发送的多个电子邮件用相同的语言（第一个建议）。我们建议你按语言分群组发送邮件。"
 
 #. module: email_template
 #: help:email_template.preview,reply_to:0
@@ -310,7 +315,7 @@ msgstr ""
 msgid ""
 "The address recipients should reply to, if different from the From address. "
 "Placeholders can be used here."
-msgstr ""
+msgstr "如果发件人地址不是原地址，这地址是要回复的收件人地址。这里能使用占用符。"
 
 #. module: email_template
 #: field:email.template,def_subject:0
@@ -318,24 +323,24 @@ msgstr ""
 #: field:email_template.preview,subject:0
 #: field:email_template.send.wizard,subject:0
 msgid "Subject"
-msgstr ""
+msgstr "主题"
 
 #. module: email_template
 #: code:addons/email_template/email_template_account.py:256
 #, python-format
 msgid "Reason: %s"
-msgstr ""
+msgstr "原因：%s"
 
 #. module: email_template
 #: field:email_template.mailbox,email_from:0
 msgid "From"
-msgstr ""
+msgstr "发件人"
 
 #. module: email_template
 #: field:email_template.preview,ref_template:0
 #: field:email_template.send.wizard,ref_template:0
 msgid "Template"
-msgstr ""
+msgstr "模版"
 
 #. module: email_template
 #: code:addons/email_template/email_template_account.py:367
@@ -344,88 +349,90 @@ msgid ""
 "Mail from Account %s failed. Probable Reason: Server Send Error\n"
 " Description: %s"
 msgstr ""
+"邮件发送人帐户  %s  失败。问题原因：发送服务器错误。\n"
+"描述： %s"
 
 #. module: email_template
 #: view:email.template:0
 msgid "Insert Simple Field"
-msgstr ""
+msgstr "插入简单的字段"
 
 #. module: email_template
 #: view:email_template.preview:0
 msgid "Body(Html)"
-msgstr ""
+msgstr "内容（HTML）"
 
 #. module: email_template
 #: help:email.template,def_bcc:0
 msgid ""
 "Blind Carbon Copy address(es), comma-separated. Placeholders can be used "
 "here. e.g. ${object.email_bcc}"
-msgstr ""
+msgstr "密件抄送地址用逗号。这里能使用占位符如：${object.email_bcc}"
 
 #. module: email_template
 #: model:ir.actions.act_window,name:email_template.wizard_email_template_preview
 msgid "Template Preview"
-msgstr ""
+msgstr "模板预览"
 
 #. module: email_template
 #: field:email.template,def_body_html:0
 msgid "Body (Text-Web Client Only)"
-msgstr ""
+msgstr "内容(HTML - 仅Web客户端)"
 
 #. module: email_template
 #: field:email_template.account,state:0
 #: view:email_template.mailbox:0
 msgid "State"
-msgstr ""
+msgstr "状态"
 
 #. module: email_template
 #: field:email.template,ref_ir_value:0
 msgid "Wizard Button"
-msgstr ""
+msgstr "向导按钮"
 
 #. module: email_template
 #: help:email_template.account,email_id:0
 msgid "eg: 'john@doe.com' or 'John Doe <john@doe.com>'"
-msgstr ""
+msgstr "例如: 'john@doe.com'  或 'John Doe <john@doe.com>'"
 
 #. module: email_template
 #: view:email.template:0
 #: field:email.template,object_name:0
 msgid "Resource"
-msgstr ""
+msgstr "来源"
 
 #. module: email_template
 #: code:addons/email_template/email_template_account.py:255
 #, python-format
 msgid "Out going connection test failed"
-msgstr ""
+msgstr "发送连接测试失败"
 
 #. module: email_template
 #: code:addons/email_template/email_template_account.py:371
 #, python-format
 msgid "Mail from Account %s successfully Sent."
-msgstr ""
+msgstr "邮件发信人帐户 %s 发送成功。"
 
 #. module: email_template
 #: view:email_template.mailbox:0
 msgid "Standard Body"
-msgstr ""
+msgstr "邮件内容"
 
 #. module: email_template
 #: selection:email.template,template_language:0
 msgid "Mako Templates"
-msgstr ""
+msgstr "建立模板"
 
 #. module: email_template
 #: code:addons/email_template/email_template.py:449
 #, python-format
 msgid " (Email Attachment)"
-msgstr ""
+msgstr " （邮件附件）"
 
 #. module: email_template
 #: selection:email_template.mailbox,folder:0
 msgid "Sent Items"
-msgstr ""
+msgstr "发送邮件"
 
 #. module: email_template
 #: view:email_template.account:0
