@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-05-09 10:19+0000\n"
-"PO-Revision-Date: 2011-01-19 12:00+0000\n"
-"Last-Translator: Rungsan Suyala <rungsan@gmail.com>\n"
+"PO-Revision-Date: 2011-07-08 11:42+0000\n"
+"Last-Translator: Suparak Panyaupatump <suparak.p@almacom.co.th>\n"
 "Language-Team: Thai <th@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-05-10 07:44+0000\n"
-"X-Generator: Launchpad (build 12959)\n"
+"X-Launchpad-Export-Date: 2011-07-09 05:40+0000\n"
+"X-Generator: Launchpad (build 13168)\n"
 
 #. module: purchase
 #: model:process.transition,note:purchase.process_transition_confirmingpurchaseorder0
@@ -23,12 +23,14 @@ msgid ""
 "The buyer has to approve the RFQ before being sent to the supplier. The RFQ "
 "becomes a confirmed Purchase Order."
 msgstr ""
+"ผู้ซื้อต้องอนุมัติใบแจ้งขอใบเสนอราคาก่อนที่จะส่งให้ซัพพลายเออร์, "
+"ใบแจ้งขอใบเสนอราคาจึงจะเปลี่ยนเป็นใบสั่งซื้อสถานะยืนยัน"
 
 #. module: purchase
 #: code:addons/purchase/purchase.py:292
 #, python-format
 msgid "You can not confirm purchase order without Purchase Order Lines."
-msgstr ""
+msgstr "คุณไม่สามารถยืนยันใบสั่งซื้อที่ไม่มีรายการสั่งซื้อได้"
 
 #. module: purchase
 #: field:purchase.order,invoiced:0
@@ -48,7 +50,7 @@ msgstr "ปลายทาง"
 msgid ""
 "You have to select a product UOM in the same category than the purchase UOM "
 "of the product"
-msgstr ""
+msgstr "คุณต้องเลือกหน่วยของสินค้าที่อยู่ในประเภทเดียวกันกับหน่วยที่สั่งซื้อ"
 
 #. module: purchase
 #: help:purchase.report,date:0
@@ -67,11 +69,18 @@ msgid ""
 "supplier invoices: based on the order, based on the receptions or manual "
 "encoding."
 msgstr ""
+"คุณสามารถสร้างใบแจ้งขอใบเสนอราคาได้จากใบสั่งซื้อที่สถานะยังไม่ยืนยัน "
+"และใช้สำหรับตรวจสอบใบแจ้งขอใบเสนอราคาที่ระบบสร้างขึ้นอัตโนมัติจากกฎต่างๆ "
+"เช่น จากกฎการสั่งซื้อ เป็นต้น; คุณสามารถเปลี่ยนจากใบแจ้งขอใบเสนอราคา "
+"ให้เป็นใบสั่งซื้อสถานะยืนยันได้; "
+"หากคุณใช้มุมมองแบบแสดงทั้งหมด(สามารถเลือกได้จากการตั้งค่าของแต่ละผู้ใช้งาน) "
+"คุณจะสามารถเลือกรูปแบบการสร้างใบแจ้งหนี้โดย สร้างจากใบสั่งซื้อ, "
+"สร้างจากใบรับสินค้า และสร้างเอง"
 
 #. module: purchase
 #: selection:purchase.order,invoice_method:0
 msgid "From Picking"
-msgstr ""
+msgstr "จากใบรับสินค้า"
 
 #. module: purchase
 #: view:purchase.order:0
@@ -106,7 +115,7 @@ msgstr "ผู้จำหน่าย"
 #. module: purchase
 #: view:purchase.order.line_invoice:0
 msgid "Do you want to generate the supplier invoices ?"
-msgstr ""
+msgstr "คุณต้องการสร้างใบแจ้งหนี้หรือไม่?"
 
 #. module: purchase
 #: model:ir.actions.act_window,help:purchase.purchase_form_action
@@ -115,17 +124,20 @@ msgid ""
 "products, etc. For each purchase order, you can track the products received, "
 "and control the supplier invoices."
 msgstr ""
+"ใช้เมนูนี้เพื่อค้นหาใบสั่งซื้อจาก เลขที่, ซัพพลายเออร์, สินค้า เป็นต้น; "
+"คุณสามารถตรวจสอบสถานะใบสั่งซื้อได้ด้วยว่ารับสินค้ามาแล้วเท่าไหร่และแจ้งหนี้แล"
+"้วเท่าใด"
 
 #. module: purchase
 #: code:addons/purchase/wizard/purchase_line_invoice.py:156
 #, python-format
 msgid "Supplier Invoices"
-msgstr ""
+msgstr "ใบแจ้งหนี้จากซัพพลายเออร์"
 
 #. module: purchase
 #: sql_constraint:purchase.order:0
 msgid "Order Reference must be unique !"
-msgstr ""
+msgstr "เลขที่เอกสารห้ามซ้ำกัน!"
 
 #. module: purchase
 #: model:process.transition,name:purchase.process_transition_packinginvoice0
@@ -137,7 +149,7 @@ msgstr ""
 #: code:addons/purchase/purchase.py:660
 #, python-format
 msgid "No Pricelist !"
-msgstr ""
+msgstr "ไม่มีรายการาคา!"
 
 #. module: purchase
 #: field:purchase.order.line,product_qty:0
