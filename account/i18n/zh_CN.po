@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-05-09 10:18+0000\n"
-"PO-Revision-Date: 2011-07-09 03:37+0000\n"
-"Last-Translator: dquo <Unknown>\n"
+"PO-Revision-Date: 2011-07-10 03:52+0000\n"
+"Last-Translator: openerp-china.Black Jack <onetimespeed@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-07-09 05:40+0000\n"
+"X-Launchpad-Export-Date: 2011-07-10 05:15+0000\n"
 "X-Generator: Launchpad (build 13168)\n"
 
 #. module: account
@@ -24,7 +24,7 @@ msgstr "系统支付"
 #. module: account
 #: view:account.journal:0
 msgid "Other Configuration"
-msgstr "其他配置"
+msgstr "其它设置"
 
 #. module: account
 #: code:addons/account/account.py:516
@@ -32,17 +32,17 @@ msgstr "其他配置"
 msgid ""
 "You cannot remove/deactivate an account which is set as a property to any "
 "Partner."
-msgstr "您不能删除或禁用一个已经设为任意业务伙伴属性的科目。"
+msgstr "您不能删除或禁用一个已经有业务伙伴属性的科目。"
 
 #. module: account
 #: view:account.move.reconcile:0
 msgid "Journal Entry Reconcile"
-msgstr "日记账分录对账"
+msgstr "分录核销"
 
 #. module: account
 #: field:account.installer.modules,account_voucher:0
 msgid "Voucher Management"
-msgstr "发票管理"
+msgstr "手工单据管理"
 
 #. module: account
 #: view:account.account:0
@@ -62,7 +62,7 @@ msgstr "剩余的"
 #: code:addons/account/invoice.py:793
 #, python-format
 msgid "Please define sequence on invoice journal"
-msgstr "请为发票日记账对应序列"
+msgstr "请定义发票序时薄的序列"
 
 #. module: account
 #: constraint:account.period:0
@@ -72,12 +72,12 @@ msgstr "错误!这会计期间无效 "
 #. module: account
 #: field:account.analytic.line,currency_id:0
 msgid "Account currency"
-msgstr "会计货币"
+msgstr "辅助核算项的货币"
 
 #. module: account
 #: view:account.tax:0
 msgid "Children Definition"
-msgstr "子定义"
+msgstr "子项定义"
 
 #. module: account
 #: model:ir.model,name:account.model_report_aged_receivable
@@ -87,24 +87,24 @@ msgstr "直到今天的应收款"
 #. module: account
 #: field:account.partner.ledger,reconcil:0
 msgid "Include Reconciled Entries"
-msgstr "包括已核销凭证"
+msgstr "包括已核销分录"
 
 #. module: account
 #: view:account.pl.report:0
 msgid ""
 "The Profit and Loss report gives you an overview of your company profit and "
 "loss in a single document"
-msgstr "损益表报告给与你公司损失与收益的概况"
+msgstr "损益表报告给出你公司的损失与收益概况"
 
 #. module: account
 #: model:process.transition,name:account.process_transition_invoiceimport0
 msgid "Import from invoice or payment"
-msgstr "从发票或支付凭证导入"
+msgstr "从发票或支付款导入"
 
 #. module: account
 #: model:ir.model,name:account.model_wizard_multi_charts_accounts
 msgid "wizard.multi.charts.accounts"
-msgstr "多科目图表向导"
+msgstr ""
 
 #. module: account
 #: view:account.move:0
@@ -116,7 +116,7 @@ msgstr "借方合计"
 msgid ""
 "If you unreconciliate transactions, you must also verify all the actions "
 "that are linked to those transactions because they will not be disabled"
-msgstr "如果您用非关联交易，您还必须验证所有链接到这些交易行动，因为他们不会被禁用"
+msgstr "如果您反核销交易，您必须检查所有与这交易有关的操作，因为他们不会被关闭。"
 
 #. module: account
 #: report:account.tax.code.entries:0
@@ -258,7 +258,7 @@ msgstr "发票'%s'已部分支付了%s%s ，总金额为：%s%s, 尚余%s%s未�
 #. module: account
 #: model:process.transition,note:account.process_transition_supplierentriesreconcile0
 msgid "Accounting entries are an input of the reconciliation."
-msgstr "会计分录必须借贷相等"
+msgstr "会计分录是一个核销的输入"
 
 #. module: account
 #: model:ir.ui.menu,name:account.menu_finance_management_belgian_reports
@@ -1501,7 +1501,7 @@ msgid ""
 "and the closing balance is to be found on your statement. When you are in "
 "the Payment column of a line, you can press F1 to open the reconciliation "
 "form."
-msgstr "银行对帐单是在一个给定的时间上的存款帐户发生的明细。当是你的一个网上交易清单，你可以按F1打开核销的形式。"
+msgstr "银行对帐单是在一个银行账户在给定时间内的所有业务，它将自动计算起初余额和期末余额。当在一行的付款栏可以按F1打开调节视图。"
 
 #. module: account
 #: report:account.analytic.account.cost_ledger:0
@@ -2394,7 +2394,7 @@ msgstr "特殊算法"
 #: view:account.move.bank.reconcile:0
 #: model:ir.actions.act_window,name:account.action_account_bank_reconcile_tree
 msgid "Bank reconciliation"
-msgstr "银行对账"
+msgstr "银行调节"
 
 #. module: account
 #: report:account.invoice:0
@@ -2566,7 +2566,7 @@ msgstr "预期的余额为(%.2f)它和计算额(%.2f)不同。"
 #. module: account
 #: model:process.transition,note:account.process_transition_paymentreconcile0
 msgid "Payment entries are the second input of the reconciliation."
-msgstr ""
+msgstr "付款分录是调节的第二个输入项"
 
 #. module: account
 #: selection:account.print.journal,sort_selection:0
@@ -2615,7 +2615,7 @@ msgstr "留空使用审核（发票）日期的会计期间"
 #: help:account.bank.statement,account_id:0
 msgid ""
 "used in statement reconciliation domain, but shouldn't be used elswhere."
-msgstr "用于声明核销区间，但不能使用到别处。"
+msgstr "用于调节报表，但不能使用到别处。"
 
 #. module: account
 #: field:account.invoice.tax,base_amount:0
