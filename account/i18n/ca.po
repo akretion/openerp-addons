@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-05-09 10:18+0000\n"
-"PO-Revision-Date: 2011-07-30 09:12+0000\n"
+"PO-Revision-Date: 2011-07-31 12:41+0000\n"
 "Last-Translator: mgaja (GrupoIsep.com) <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-07-31 05:15+0000\n"
+"X-Launchpad-Export-Date: 2011-08-01 05:06+0000\n"
 "X-Generator: Launchpad (build 13405)\n"
 
 #. module: account
@@ -8990,7 +8990,7 @@ msgstr "Assentaments de pagament"
 #: selection:report.account.sales,month:0
 #: selection:report.account_type.sales,month:0
 msgid "July"
-msgstr ""
+msgstr "Juliol"
 
 #. module: account
 #: view:account.account:0
@@ -9441,7 +9441,7 @@ msgstr ""
 #: selection:account.account.template,type:0
 #: selection:account.entries.report,type:0
 msgid "Regular"
-msgstr ""
+msgstr "Regular"
 
 #. module: account
 #: view:account.account:0
@@ -9922,7 +9922,7 @@ msgstr "Facturació"
 #. module: account
 #: view:account.account:0
 msgid "Parent Account"
-msgstr ""
+msgstr "Compte pare"
 
 #. module: account
 #: model:ir.actions.act_window,help:account.action_account_journal_form
