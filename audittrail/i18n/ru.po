@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-01-11 11:14+0000\n"
-"PO-Revision-Date: 2011-05-03 17:09+0000\n"
-"Last-Translator: Chertykov Denis <chertykov@gmail.com>\n"
+"PO-Revision-Date: 2011-08-01 10:23+0000\n"
+"Last-Translator: Stanislav Hanzhin <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-05-04 05:33+0000\n"
-"X-Generator: Launchpad (build 12758)\n"
+"X-Launchpad-Export-Date: 2011-08-02 05:19+0000\n"
+"X-Generator: Launchpad (build 13552)\n"
 
 #. module: audittrail
 #: model:ir.module.module,shortdesc:audittrail.module_meta_information
@@ -124,6 +124,8 @@ msgid ""
 "Select this if you want to keep track of workflow on any record of the "
 "object of this rule"
 msgstr ""
+"Выберите, если требуется отслеживать обработку любой записи объекта по этому "
+"правилу."
 
 #. module: audittrail
 #: field:audittrail.rule,user_id:0
@@ -160,7 +162,7 @@ msgstr "Новое значение текста: "
 #. module: audittrail
 #: view:audittrail.rule:0
 msgid "Search Audittrail Rule"
-msgstr ""
+msgstr "Поиск правила"
 
 #. module: audittrail
 #: model:ir.actions.act_window,name:audittrail.action_audittrail_rule_tree
@@ -198,7 +200,7 @@ msgstr ""
 #. module: audittrail
 #: field:audittrail.rule,log_create:0
 msgid "Log Creates"
-msgstr ""
+msgstr "Журналировать создание"
 
 #. module: audittrail
 #: help:audittrail.rule,object_id:0
@@ -213,7 +215,7 @@ msgstr "Старое значение текста: "
 #. module: audittrail
 #: field:audittrail.rule,log_workflow:0
 msgid "Log Workflow"
-msgstr ""
+msgstr "Журналировать процессы"
 
 #. module: audittrail
 #: model:ir.module.module,description:audittrail.module_meta_information
@@ -240,7 +242,7 @@ msgstr ""
 #. module: audittrail
 #: field:audittrail.rule,log_read:0
 msgid "Log Reads"
-msgstr ""
+msgstr "Журналировать чтение"
 
 #. module: audittrail
 #: code:addons/audittrail/audittrail.py:82
@@ -298,7 +300,7 @@ msgstr "Отписаться"
 #. module: audittrail
 #: field:audittrail.rule,log_unlink:0
 msgid "Log Deletes"
-msgstr ""
+msgstr "Журналировать удаление"
 
 #. module: audittrail
 #: field:audittrail.log.line,field_description:0
@@ -308,12 +310,12 @@ msgstr "Описание поля"
 #. module: audittrail
 #: view:audittrail.log:0
 msgid "Search Audittrail Log"
-msgstr ""
+msgstr "Поиск по журналу"
 
 #. module: audittrail
 #: field:audittrail.rule,log_write:0
 msgid "Log Writes"
-msgstr ""
+msgstr "Журналировать запись"
 
 #. module: audittrail
 #: view:audittrail.view.log:0
@@ -343,7 +345,7 @@ msgstr "Логи проведения аудита"
 #. module: audittrail
 #: model:ir.model,name:audittrail.model_audittrail_log
 msgid "Audittrail Log"
-msgstr ""
+msgstr "Журнал"
 
 #. module: audittrail
 #: help:audittrail.rule,log_action:0
@@ -389,7 +391,7 @@ msgstr "Строка протокола"
 #. module: audittrail
 #: field:audittrail.rule,log_action:0
 msgid "Log Action"
-msgstr ""
+msgstr "Журналировать действия"
 
 #. module: audittrail
 #: help:audittrail.rule,log_create:0

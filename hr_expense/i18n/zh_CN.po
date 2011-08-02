@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-05-09 10:18+0000\n"
-"PO-Revision-Date: 2011-07-27 10:58+0000\n"
+"PO-Revision-Date: 2011-08-01 09:25+0000\n"
 "Last-Translator: openerp-china.black-jack <onetimespeed@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-07-28 05:13+0000\n"
-"X-Generator: Launchpad (build 13405)\n"
+"X-Launchpad-Export-Date: 2011-08-02 05:19+0000\n"
+"X-Generator: Launchpad (build 13552)\n"
 
 #. module: hr_expense
 #: model:process.node,name:hr_expense.process_node_confirmedexpenses0
@@ -335,7 +335,7 @@ msgstr "报销费用"
 #: field:hr.expense.expense,journal_id:0
 #: field:hr.expense.report,journal_id:0
 msgid "Force Journal"
-msgstr "强制的明细账"
+msgstr "强制的账薄"
 
 #. module: hr_expense
 #: view:hr.expense.report:0
@@ -626,7 +626,7 @@ msgstr "其它信息"
 #. module: hr_expense
 #: help:hr.expense.expense,journal_id:0
 msgid "The journal used when the expense is invoiced"
-msgstr "这费用开发票时用这明细账"
+msgstr "这费开发票时用这账簿"
 
 #. module: hr_expense
 #: view:hr.expense.expense:0

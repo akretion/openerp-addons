@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-01-11 11:15+0000\n"
-"PO-Revision-Date: 2011-07-28 14:26+0000\n"
+"PO-Revision-Date: 2011-08-01 15:45+0000\n"
 "Last-Translator: DReis <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-07-29 05:42+0000\n"
-"X-Generator: Launchpad (build 13405)\n"
+"X-Launchpad-Export-Date: 2011-08-02 05:19+0000\n"
+"X-Generator: Launchpad (build 13552)\n"
 
 #. module: hr_contract
 #: view:hr.contract.wage.type:0
@@ -74,7 +74,7 @@ msgstr "Factor de custo por hora"
 #. module: hr_contract
 #: view:hr.contract:0
 msgid "Overpassed"
-msgstr ""
+msgstr "Caducado"
 
 #. module: hr_contract
 #: view:hr.contract.wage.type:0
@@ -96,7 +96,7 @@ msgstr "Base"
 #: field:hr.contract,employee_id:0
 #: model:ir.model,name:hr_contract.model_hr_employee
 msgid "Employee"
-msgstr "Empregado"
+msgstr "Funcionário"
 
 #. module: hr_contract
 #: selection:hr.contract.wage.type,type:0
@@ -145,7 +145,7 @@ msgstr "Procurar contrato"
 #. module: hr_contract
 #: help:hr.employee,contract_id:0
 msgid "Latest contract of the employee"
-msgstr "Último contrato do empregado"
+msgstr "Último contrato do funcionário"
 
 #. module: hr_contract
 #: field:hr.contract,advantages_net:0
@@ -163,6 +163,14 @@ msgid ""
 "    You can assign several contracts per employee.\n"
 "    "
 msgstr ""
+"\n"
+"    Agregar todos os dados para a gestão de contratos:\n"
+"    * Estado civil\n"
+"    * Número de segurança social\n"
+"    * Local e data de nascimento\n"
+"    * etc.\n"
+"    É possível associar vários contratos ao mesmo funcionário.\n"
+"    "
 
 #. module: hr_contract
 #: view:hr.contract:0
@@ -173,7 +181,7 @@ msgstr "Vantagens"
 #. module: hr_contract
 #: view:hr.contract:0
 msgid "Valid for"
-msgstr ""
+msgstr "Válido por"
 
 #. module: hr_contract
 #: view:hr.contract:0
@@ -236,7 +244,7 @@ msgstr "Notas"
 msgid ""
 "Error ! You cannot select a department for which the employee is the manager."
 msgstr ""
-"Erro! Não pode seleccionar um departamento cujo gestor é o empregado."
+"Erro ! Não pode seleccionar um departamento cujo gestor é o funcionário."
 
 #. module: hr_contract
 #: view:hr.contract:0
@@ -258,7 +266,7 @@ msgstr "Tipo de Contrato"
 #. module: hr_contract
 #: view:hr.contract.wage.type.period:0
 msgid "Search Wage Period"
-msgstr ""
+msgstr "Procurar período de pagamento de salários"
 
 #. module: hr_contract
 #: view:hr.contract:0
@@ -347,8 +355,8 @@ msgid ""
 "This field is used by the timesheet system to compute the price of an hour "
 "of work wased on the contract of the employee"
 msgstr ""
-"Este campo é utilizado pelo sistema de horário para calcular o preço de uma "
-"hora de trabalho baseado no contrato do funcionário"
+"Este campo é utilizado pelas folhas de trabalho para calcular o preço de uma "
+"hora de trabalho cok base no contrato do funcionário"
 
 #. module: hr_contract
 #: view:hr.contract:0
@@ -368,7 +376,7 @@ msgstr "Abonos"
 #. module: hr_contract
 #: view:hr.contract:0
 msgid "Main Data"
-msgstr ""
+msgstr "Dados principais"
 
 #. module: hr_contract
 #: view:hr.contract.type:0
