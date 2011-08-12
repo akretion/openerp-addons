@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-05-09 10:19+0000\n"
-"PO-Revision-Date: 2011-08-07 20:12+0000\n"
+"PO-Revision-Date: 2011-08-11 19:59+0000\n"
 "Last-Translator: mgaja (GrupoIsep.com) <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-08-08 05:15+0000\n"
-"X-Generator: Launchpad (build 13613)\n"
+"X-Launchpad-Export-Date: 2011-08-12 05:07+0000\n"
+"X-Generator: Launchpad (build 13662)\n"
 
 #. module: stock_planning
 #: code:addons/stock_planning/wizard/stock_planning_createlines.py:73
@@ -718,6 +718,11 @@ msgid ""
 "Period of selected Product. To plan this value look at Confirmed Out or "
 "Sales Forecasts. This value should be equal or greater than Confirmed Out."
 msgstr ""
+"Introduïu la quantitat sortint planificada per al magatzem seleccionat "
+"durant el període seleccionat i per al producte seleccionat. Per planificar "
+"aquest valor podeu fixar-se en les sortides confirmades o les previsions de "
+"vendes. Aquest valor hauria de ser igual o superior a les sortides "
+"confirmades."
 
 #. module: stock_planning
 #: model:ir.module.module,description:stock_planning.module_meta_information
@@ -1387,6 +1392,10 @@ msgid ""
 "between Planned In and Confirmed In. For current period Already In is also "
 "calculated. This value is used to create procurement for lacking quantity."
 msgstr ""
+"Quantitat restant de la quantitat entrant planificada. Es calcula mitjançant "
+"la diferència entre les entrades planificades i les entrades confirmades. "
+"Per al període actual les entrades realitzades també es calculen. Aquest "
+"valor s'utilitza per crear proveïments per a la quantitat restant."
 
 #. module: stock_planning
 #: help:stock.planning,incoming:0
@@ -1406,6 +1415,10 @@ msgid ""
 "supply will be made from Output location of Supply Warehouse. Used in "
 "'Supply from Another Warhouse' with Supply Warehouse."
 msgstr ""
+"Marqueu aquesta opció per subministrar des de la ubicació estoc del magatzem "
+"de subministrament. Si no es marca, el subministrament es realitzarà des de "
+"la ubicació de sortida del magatzem de subministrament. Utilitzat "
+"'Subministrar des d'un altre magatzem' amb un magatzem de subministrament."
 
 #. module: stock_planning
 #: view:stock.planning:0
