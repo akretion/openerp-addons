@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-01-11 11:14+0000\n"
-"PO-Revision-Date: 2011-08-15 04:48+0000\n"
-"Last-Translator: openerp-china.black-jack <onetimespeed@gmail.com>\n"
+"PO-Revision-Date: 2011-08-15 07:49+0000\n"
+"Last-Translator: Joshua Jan <popkar77@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-08-15 05:04+0000\n"
-"X-Generator: Launchpad (build 13674)\n"
+"X-Launchpad-Export-Date: 2011-08-16 04:57+0000\n"
+"X-Generator: Launchpad (build 13687)\n"
 
 #. module: anonymization
 #: model:ir.model,name:anonymization.model_ir_model_fields_anonymize_wizard
@@ -86,7 +86,7 @@ msgstr "隐藏"
 #. module: anonymization
 #: field:ir.model.fields.anonymization,state:0
 msgid "unknown"
-msgstr "未知的"
+msgstr "状态"
 
 #. module: anonymization
 #: field:ir.model.fields.anonymization,model_id:0
@@ -138,7 +138,7 @@ msgstr "无隐藏"
 #. module: anonymization
 #: selection:ir.model.fields.anonymization.history,direction:0
 msgid "clear -> anonymized"
-msgstr "无隐藏->隐藏"
+msgstr "无隐藏 -> 隐藏"
 
 #. module: anonymization
 #: view:ir.model.fields.anonymize.wizard:0
@@ -159,7 +159,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"这个字段允许你隐藏一个数据库\n"
+"这模块允许你隐藏一个数据库\n"
 "    "
 
 #. module: anonymization
@@ -204,7 +204,7 @@ msgstr "隐藏数据库"
 #. module: anonymization
 #: field:ir.model.fields.anonymize.wizard,name:0
 msgid "File Name"
-msgstr "文件的名称"
+msgstr "文件名"
 
 #. module: anonymization
 #: selection:ir.model.fields.anonymization.history,direction:0
@@ -219,7 +219,7 @@ msgstr "已开始"
 #. module: anonymization
 #: selection:ir.model.fields.anonymization.history,state:0
 msgid "Done"
-msgstr "已完成"
+msgstr "完成"
 
 #. module: anonymization
 #: view:ir.model.fields.anonymization.history:0

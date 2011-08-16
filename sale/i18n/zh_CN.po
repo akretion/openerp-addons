@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-01-11 11:16+0000\n"
-"PO-Revision-Date: 2011-08-14 16:00+0000\n"
+"PO-Revision-Date: 2011-08-15 12:29+0000\n"
 "Last-Translator: openerp-china.black-jack <onetimespeed@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-08-15 05:04+0000\n"
-"X-Generator: Launchpad (build 13674)\n"
+"X-Launchpad-Export-Date: 2011-08-16 04:57+0000\n"
+"X-Generator: Launchpad (build 13687)\n"
 
 #. module: sale
 #: view:board.board:0
@@ -945,7 +945,7 @@ msgstr "基于已运送或被订购的数据。"
 #. module: sale
 #: field:sale.order,picking_ids:0
 msgid "Related Picking"
-msgstr "关联的分拣单"
+msgstr "装箱单"
 
 #. module: sale
 #: field:sale.config.picking_policy,name:0
@@ -1129,7 +1129,7 @@ msgstr "基于销售订单开票"
 #. module: sale
 #: model:ir.model,name:sale.model_stock_picking
 msgid "Picking List"
-msgstr "分拣单"
+msgstr "装箱单"
 
 #. module: sale
 #: code:addons/sale/sale.py:387
@@ -1175,7 +1175,7 @@ msgstr "发货和手工发票"
 #: code:addons/sale/sale.py:1051
 #, python-format
 msgid "Picking Information !"
-msgstr "分拣单信息 ！"
+msgstr "装箱单信息 ！"
 
 #. module: sale
 #: view:sale.report:0
@@ -1191,7 +1191,7 @@ msgstr "销售管理"
 #. module: sale
 #: selection:sale.order,order_policy:0
 msgid "Invoice From The Picking"
-msgstr "来自分拣单的发票"
+msgstr "来自装箱单的发票"
 
 #. module: sale
 #: model:process.node,note:sale.process_node_invoice0
@@ -1308,7 +1308,7 @@ msgstr ""
 #. module: sale
 #: selection:sale.config.picking_policy,step:0
 msgid "Picking List & Delivery Order"
-msgstr "分拣单 & 发货单"
+msgstr "装箱单 & 发货单"
 
 #. module: sale
 #: field:sale.order,origin:0
@@ -1323,7 +1323,7 @@ msgstr "待处理"
 #. module: sale
 #: field:sale.order,picking_policy:0
 msgid "Picking Policy"
-msgstr "分拣方式"
+msgstr "装箱方式"
 
 #. module: sale
 #: model:process.node,note:sale.process_node_deliveryorder0
@@ -1372,7 +1372,7 @@ msgstr "取消指定"
 #. module: sale
 #: model:ir.model,name:sale.model_sale_config_picking_policy
 msgid "sale.config.picking_policy"
-msgstr "销售设置领料/提货方式"
+msgstr "sale.config.picking_policy"
 
 #. module: sale
 #: help:sale.order,state:0
