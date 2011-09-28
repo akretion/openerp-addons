@@ -7,24 +7,24 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-01-11 11:14+0000\n"
-"PO-Revision-Date: 2011-01-19 12:00+0000\n"
-"Last-Translator: <>\n"
+"PO-Revision-Date: 2011-09-27 13:21+0000\n"
+"Last-Translator: Walter Cheuk <wwycheuk@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-08-30 05:21+0000\n"
-"X-Generator: Launchpad (build 13794)\n"
+"X-Launchpad-Export-Date: 2011-09-28 06:02+0000\n"
+"X-Generator: Launchpad (build 14049)\n"
 
 #. module: base_module_doc_rst
 #: view:ir.module.module:0
 msgid "You can save this image as .png file"
-msgstr ""
+msgstr "可將圖像存為 .png 檔"
 
 #. module: base_module_doc_rst
 #: wizard_view:tech.guide.rst,init:0
 msgid "Technical Guide in rst format"
-msgstr ""
+msgstr "rst 格式技術指南"
 
 #. module: base_module_doc_rst
 #: wizard_button:create.relation.graph,init,end:0
@@ -57,39 +57,39 @@ msgstr ""
 #. module: base_module_doc_rst
 #: wizard_field:tech.guide.rst,init,name:0
 msgid "filename"
-msgstr ""
+msgstr "檔案名稱"
 
 #. module: base_module_doc_rst
 #: model:ir.actions.wizard,name:base_module_doc_rst.wiz_tech_guide_rst
 msgid "Create RST Technical Guide"
-msgstr ""
+msgstr "建立 RST 技術指南"
 
 #. module: base_module_doc_rst
 #: model:ir.actions.wizard,name:base_module_doc_rst.wiz_gen_graph
 msgid "Generate Relationship Graph"
-msgstr ""
+msgstr "建立關係圖"
 
 #. module: base_module_doc_rst
 #: wizard_view:create.relation.graph,init:0
 #: view:ir.module.module:0
 #: field:ir.module.module,file_graph:0
 msgid "Relationship Graph"
-msgstr ""
+msgstr "關係圖"
 
 #. module: base_module_doc_rst
 #: model:ir.model,name:base_module_doc_rst.model_ir_module_module
 msgid "Module"
-msgstr ""
+msgstr "模組"
 
 #. module: base_module_doc_rst
 #: wizard_field:tech.guide.rst,init,rst_file:0
 msgid "file"
-msgstr ""
+msgstr "檔案"
 
 #. module: base_module_doc_rst
 #: wizard_button:tech.guide.rst,init,end:0
 msgid "Close"
-msgstr ""
+msgstr "關閉"
 
 #. module: base_module_doc_rst
 #: model:ir.module.module,shortdesc:base_module_doc_rst.module_meta_information
@@ -104,4 +104,4 @@ msgstr ""
 #. module: base_module_doc_rst
 #: wizard_view:tech.guide.rst,init:0
 msgid "Create Technical Guide in rst format"
-msgstr ""
+msgstr "以 rst 格式建立技術指南"
