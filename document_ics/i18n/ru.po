@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-01-11 11:15+0000\n"
-"PO-Revision-Date: 2011-03-16 15:07+0000\n"
+"PO-Revision-Date: 2011-11-14 05:24+0000\n"
 "Last-Translator: Stanislav Hanzhin <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-10-05 05:20+0000\n"
-"X-Generator: Launchpad (build 14085)\n"
+"X-Launchpad-Export-Date: 2011-11-14 05:30+0000\n"
+"X-Generator: Launchpad (build 14277)\n"
 
 #. module: document_ics
 #: help:document.ics.crm.wizard,claims:0
@@ -38,11 +38,12 @@ msgstr "uid"
 msgid ""
 "This may help associations in their fund raising process and tracking."
 msgstr ""
+"Это может помочь ассоциациям в процессе сбора средств и для отслеживания."
 
 #. module: document_ics
 #: field:document.ics.crm.wizard,jobs:0
 msgid "Jobs Hiring Process"
-msgstr ""
+msgstr "Процесс замещения должностей"
 
 #. module: document_ics
 #: view:document.ics.crm.wizard:0
@@ -57,12 +58,12 @@ msgstr "Техподдержка"
 #. module: document_ics
 #: selection:document.directory.ics.fields,fn:0
 msgid "Interval in hours"
-msgstr ""
+msgstr "Интервал в часах"
 
 #. module: document_ics
 #: selection:document.directory.ics.fields,name:0
 msgid "dtstamp"
-msgstr ""
+msgstr "dtstamp"
 
 #. module: document_ics
 #: help:document.directory.content,fname_field:0
@@ -70,6 +71,7 @@ msgid ""
 "The field of the                         object used in the filename. Has to "
 "be a unique identifier."
 msgstr ""
+"Поле объекта, используемое в качестве имени файла. Должно быть уникальным."
 
 #. module: document_ics
 #: field:document.directory.ics.fields,content_id:0
@@ -86,16 +88,18 @@ msgstr "Календарь встреч"
 msgid ""
 "OpenERP can create and pre-configure a series of integrated calendar for you."
 msgstr ""
+"OpenERP может создать и предварительно настроить цепочку интегрированных "
+"календарей для вас."
 
 #. module: document_ics
 #: help:document.ics.crm.wizard,helpdesk:0
 msgid "Manages an Helpdesk service."
-msgstr ""
+msgstr "Работает в качестве службы поддержки"
 
 #. module: document_ics
 #: selection:document.directory.ics.fields,name:0
 msgid "dtend"
-msgstr ""
+msgstr "dtend"
 
 #. module: document_ics
 #: selection:document.directory.ics.fields,name:0
@@ -105,7 +109,7 @@ msgstr "сводка"
 #. module: document_ics
 #: model:ir.model,name:document_ics.model_crm_meeting
 msgid "Meeting"
-msgstr ""
+msgstr "Встреча"
 
 #. module: document_ics
 #: help:document.ics.crm.wizard,lead:0

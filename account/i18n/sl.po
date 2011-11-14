@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-05-09 10:18+0000\n"
-"PO-Revision-Date: 2011-01-19 12:00+0000\n"
-"Last-Translator: rok <Unknown>\n"
+"PO-Revision-Date: 2011-11-13 19:19+0000\n"
+"Last-Translator: Gregor Ljubič (radioglas.com) <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-10-05 04:59+0000\n"
-"X-Generator: Launchpad (build 14085)\n"
+"X-Launchpad-Export-Date: 2011-11-14 05:30+0000\n"
+"X-Generator: Launchpad (build 14277)\n"
 
 #. module: account
 #: model:process.transition,name:account.process_transition_supplierreconcilepaid0
@@ -267,7 +267,7 @@ msgstr ""
 #. module: account
 #: model:ir.ui.menu,name:account.menu_finance_management_belgian_reports
 msgid "Belgian Reports"
-msgstr ""
+msgstr "Belgijsko poročilo"
 
 #. module: account
 #: code:addons/account/account_move_line.py:1176
@@ -278,7 +278,7 @@ msgstr "V zaprtem dnevniku ne morete dodajati/spreminjati postavk."
 #. module: account
 #: view:account.bank.statement:0
 msgid "Calculated Balance"
-msgstr ""
+msgstr "Izračunano stanje"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_use_model_create_entry
@@ -388,12 +388,12 @@ msgstr "Datum nastanka"
 #. module: account
 #: selection:account.journal,type:0
 msgid "Purchase Refund"
-msgstr ""
+msgstr "Nakup vračilo"
 
 #. module: account
 #: selection:account.journal,type:0
 msgid "Opening/Closing Situation"
-msgstr ""
+msgstr "Odpiranje / zapiranje stanja"
 
 #. module: account
 #: help:account.journal,currency:0
@@ -701,7 +701,7 @@ msgstr "prosim potrdite knjiženje"
 #. module: account
 #: selection:account.bank.accounts.wizard,account_type:0
 msgid "Check"
-msgstr ""
+msgstr "Preveri"
 
 #. module: account
 #: field:account.partner.reconcile.process,today_reconciled:0
@@ -797,7 +797,7 @@ msgstr ""
 #: selection:report.account.sales,month:0
 #: selection:report.account_type.sales,month:0
 msgid "September"
-msgstr ""
+msgstr "September"
 
 #. module: account
 #: selection:account.subscription,period_type:0
@@ -868,7 +868,7 @@ msgstr "Zapadlo"
 #: view:account.invoice.report:0
 #: field:account.invoice.report,price_total_tax:0
 msgid "Total With Tax"
-msgstr ""
+msgstr "Skupaj z DDV"
 
 #. module: account
 #: view:account.invoice:0
@@ -876,7 +876,7 @@ msgstr ""
 #: view:validate.account.move:0
 #: view:validate.account.move.lines:0
 msgid "Approve"
-msgstr ""
+msgstr "Odobri"
 
 #. module: account
 #: view:account.invoice:0
@@ -931,7 +931,7 @@ msgstr ""
 #. module: account
 #: view:account.analytic.line:0
 msgid "Purchases"
-msgstr ""
+msgstr "Nabave"
 
 #. module: account
 #: field:account.model,lines_id:0
@@ -1048,7 +1048,7 @@ msgstr "-"
 #. module: account
 #: view:account.analytic.account:0
 msgid "Manager"
-msgstr ""
+msgstr "Direktor"
 
 #. module: account
 #: view:account.subscription.generate:0
@@ -1058,7 +1058,7 @@ msgstr ""
 #. module: account
 #: selection:account.bank.accounts.wizard,account_type:0
 msgid "Bank"
-msgstr ""
+msgstr "Banka"
 
 #. module: account
 #: field:account.period,date_start:0
@@ -1093,7 +1093,7 @@ msgstr ""
 #. module: account
 #: view:account.invoice.cancel:0
 msgid "Cancel Invoices"
-msgstr ""
+msgstr "Prekliči račun"
 
 #. module: account
 #: view:account.unreconcile.reconcile:0
@@ -1192,7 +1192,7 @@ msgstr ""
 #. module: account
 #: field:account.account,level:0
 msgid "Level"
-msgstr ""
+msgstr "Nivo"
 
 #. module: account
 #: report:account.invoice:0
@@ -1228,7 +1228,7 @@ msgstr ""
 #. module: account
 #: report:account.invoice:0
 msgid "Your Reference"
-msgstr ""
+msgstr "Vaš sklic"
 
 #. module: account
 #: view:account.move.reconcile:0
@@ -1274,7 +1274,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:account.action_partner_all
 #: model:ir.ui.menu,name:account.next_id_22
 msgid "Partners"
-msgstr ""
+msgstr "Partnerji"
 
 #. module: account
 #: view:account.bank.statement:0
@@ -1561,7 +1561,7 @@ msgstr ""
 #: field:account.bank.statement,user_id:0
 #: view:account.invoice:0
 msgid "Responsible"
-msgstr ""
+msgstr "Odgovoren"
 
 #. module: account
 #: report:account.overdue:0
@@ -1583,7 +1583,7 @@ msgstr ""
 #. module: account
 #: model:ir.ui.menu,name:account.periodical_processing_invoicing
 msgid "Invoicing"
-msgstr ""
+msgstr "Izdajanje računov"
 
 #. module: account
 #: field:account.chart.template,tax_code_root_id:0
@@ -1628,7 +1628,7 @@ msgstr ""
 #. module: account
 #: field:account.cashbox.line,pieces:0
 msgid "Values"
-msgstr ""
+msgstr "Vrednosti"
 
 #. module: account
 #: help:account.journal.period,active:0
@@ -1789,7 +1789,7 @@ msgstr ""
 #. module: account
 #: constraint:res.company:0
 msgid "Error! You can not create recursive companies."
-msgstr ""
+msgstr "Napaka! Ne morete ustvariti rekurzivnih podjetij."
 
 #. module: account
 #: view:account.analytic.account:0
@@ -1817,7 +1817,7 @@ msgstr ""
 #. module: account
 #: model:ir.model,name:account.model_product_category
 msgid "Product Category"
-msgstr ""
+msgstr "Kategorija izdelkov"
 
 #. module: account
 #: selection:account.account.type,report_type:0
@@ -1878,7 +1878,7 @@ msgstr ""
 #: field:account.installer.modules,config_logo:0
 #: field:wizard.multi.charts.accounts,config_logo:0
 msgid "Image"
-msgstr ""
+msgstr "Slika"
 
 #. module: account
 #: view:account.invoice:0
@@ -1946,7 +1946,7 @@ msgstr ""
 #: selection:report.account.sales,month:0
 #: selection:report.account_type.sales,month:0
 msgid "January"
-msgstr ""
+msgstr "Januar"
 
 #. module: account
 #: view:account.journal:0
@@ -2088,7 +2088,7 @@ msgstr ""
 #. module: account
 #: model:ir.model,name:account.model_product_template
 msgid "Product Template"
-msgstr ""
+msgstr "Predloga proizvoda"
 
 #. module: account
 #: report:account.account.balance:0
@@ -2268,7 +2268,7 @@ msgstr ""
 #: view:analytic.entries.report:0
 #: field:analytic.entries.report,day:0
 msgid "Day"
-msgstr ""
+msgstr "Dan"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.act_account_renew_view
@@ -2333,7 +2333,7 @@ msgstr ""
 #. module: account
 #: constraint:product.category:0
 msgid "Error ! You can not create recursive categories."
-msgstr ""
+msgstr "Napaka! Rekurzivnih kategorij ne morete ustvariti."
 
 #. module: account
 #: report:account.invoice:0
@@ -2362,7 +2362,7 @@ msgstr "Analitični konto"
 #: model:ir.ui.menu,name:account.menu_action_account_form
 #: model:ir.ui.menu,name:account.menu_analytic
 msgid "Accounts"
-msgstr ""
+msgstr "Računi"
 
 #. module: account
 #: code:addons/account/invoice.py:351
@@ -2393,7 +2393,7 @@ msgstr ""
 #. module: account
 #: report:account.journal.period.print:0
 msgid "Label"
-msgstr ""
+msgstr "Oznaka"
 
 #. module: account
 #: view:account.tax:0
@@ -2466,7 +2466,7 @@ msgstr "Dejanski"
 #: view:account.move:0
 #: view:account.move.line:0
 msgid "Dates"
-msgstr ""
+msgstr "Datumi"
 
 #. module: account
 #: field:account.tax,parent_id:0
