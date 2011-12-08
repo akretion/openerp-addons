@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-05-09 10:18+0000\n"
-"PO-Revision-Date: 2011-12-05 08:29+0000\n"
+"PO-Revision-Date: 2011-12-07 23:36+0000\n"
 "Last-Translator: kifcaliph <kifcaliph@hotmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-12-06 06:04+0000\n"
-"X-Generator: Launchpad (build 14435)\n"
+"X-Launchpad-Export-Date: 2011-12-08 06:10+0000\n"
+"X-Generator: Launchpad (build 14443)\n"
 
 #. module: account
 #: model:process.transition,name:account.process_transition_supplierreconcilepaid0
@@ -203,7 +203,7 @@ msgstr "سالب"
 #: code:addons/account/wizard/account_move_journal.py:95
 #, python-format
 msgid "Journal: %s"
-msgstr "سجل : %s"
+msgstr "يومية: %s"
 
 #. module: account
 #: help:account.analytic.journal,type:0
@@ -224,7 +224,7 @@ msgstr "قوالب الضريبة"
 #. module: account
 #: model:ir.model,name:account.model_account_tax
 msgid "account.tax"
-msgstr "حساب.ضريبة"
+msgstr "account.tax"
 
 #. module: account
 #: code:addons/account/account.py:901
@@ -655,7 +655,7 @@ msgstr "اقفال الفترة"
 #. module: account
 #: model:ir.model,name:account.model_account_common_partner_report
 msgid "Account Common Partner Report"
-msgstr ""
+msgstr "تقرير الحساب المشترك للشريك"
 
 #. module: account
 #: field:account.fiscalyear.close,period_id:0
@@ -908,7 +908,7 @@ msgstr "مرشحات مفصلة..."
 #. module: account
 #: model:ir.ui.menu,name:account.menu_account_central_journal
 msgid "Centralizing Journal"
-msgstr "مركزية السجل"
+msgstr "مركزية اليومية"
 
 #. module: account
 #: selection:account.journal,type:0
@@ -9789,3 +9789,15 @@ msgstr "غير مستحق"
 
 #~ msgid "Particulars"
 #~ msgstr "أفراد"
+
+#~ msgid "Ref. :"
+#~ msgstr "مرجع:"
+
+#~ msgid "Number:"
+#~ msgstr "رقم:"
+
+#~ msgid "Journal:"
+#~ msgstr "يومية:"
+
+#~ msgid "Authorised Signatory"
+#~ msgstr "إمضاء المسؤول"
