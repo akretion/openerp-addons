@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-05-09 10:18+0000\n"
-"PO-Revision-Date: 2011-11-14 14:13+0000\n"
-"Last-Translator: Douwe Wullink (Dypalio) <Unknown>\n"
+"PO-Revision-Date: 2011-12-21 20:33+0000\n"
+"Last-Translator: Erwin <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-12-17 05:39+0000\n"
-"X-Generator: Launchpad (build 14525)\n"
+"X-Launchpad-Export-Date: 2011-12-22 05:35+0000\n"
+"X-Generator: Launchpad (build 14560)\n"
 
 #. module: account
 #: model:process.transition,name:account.process_transition_supplierreconcilepaid0
@@ -1732,7 +1732,7 @@ msgstr "Voeg grootboekkaart toe om afboeking naar toe te schrijven!"
 #. module: account
 #: model:ir.model,name:account.model_account_common_journal_report
 msgid "Account Common Journal Report"
-msgstr ""
+msgstr "Algemeen grootboekrekening rapport"
 
 #. module: account
 #: selection:account.partner.balance,display_partner:0
@@ -2045,7 +2045,7 @@ msgstr "Dit fisc.jaar"
 #. module: account
 #: view:account.tax.chart:0
 msgid "Account tax charts"
-msgstr ""
+msgstr "Grootboek BTW-grafieken"
 
 #. module: account
 #: constraint:account.period:0
@@ -2139,7 +2139,7 @@ msgstr "Omschrijving"
 #: code:addons/account/installer.py:498
 #, python-format
 msgid "ECNJ"
-msgstr ""
+msgstr "ECNJ"
 
 #. module: account
 #: view:account.subscription:0
@@ -3618,7 +3618,7 @@ msgstr "Eenheidsprijs"
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_tree1
 msgid "Analytic Items"
-msgstr ""
+msgstr "Analytische attributen"
 
 #. module: account
 #: code:addons/account/account_move_line.py:1128
@@ -3657,7 +3657,7 @@ msgstr "Opstaande factuur"
 #. module: account
 #: field:account.invoice.tax,factor_tax:0
 msgid "Multipication factor Tax code"
-msgstr ""
+msgstr "BTW-code vermenigvuldigingsfactor"
 
 #. module: account
 #: view:account.fiscal.position:0
@@ -3680,7 +3680,7 @@ msgstr "Naam"
 #. module: account
 #: model:ir.model,name:account.model_account_aged_trial_balance
 msgid "Account Aged Trial balance Report"
-msgstr ""
+msgstr "Grootboek meerjarig proefbalansrapport"
 
 #. module: account
 #: field:account.move.line,date:0
@@ -3926,6 +3926,9 @@ msgid ""
 "Analytic costs (timesheets, some purchased products, ...) come from analytic "
 "accounts. These generate draft supplier invoices."
 msgstr ""
+"Analytische kosten (Tijdregistratie, sommige aangekochte producten, ...) "
+"zijn afkomstig van analytische rekeningen. Deze genereren proforma facturen "
+"van leveranciers"
 
 #. module: account
 #: view:account.bank.statement:0
@@ -4128,7 +4131,7 @@ msgstr "Rekeningnaam"
 #. module: account
 #: help:account.fiscalyear.close,report_name:0
 msgid "Give name of the new entries"
-msgstr ""
+msgstr "Geef een naam aan de nieuwe regels"
 
 #. module: account
 #: model:ir.model,name:account.model_account_invoice_report
@@ -4172,7 +4175,7 @@ msgstr "Niet geïmplementeerd"
 #. module: account
 #: model:ir.model,name:account.model_account_journal_select
 msgid "Account Journal Select"
-msgstr ""
+msgstr "Rekening journaal selectie"
 
 #. module: account
 #: view:account.invoice:0
@@ -4913,6 +4916,8 @@ msgid ""
 "The Journal Entry of the invoice have been totally reconciled with one or "
 "several Journal Entries of payment."
 msgstr ""
+"Het Inboeken van de factuur zijn volledig in overeenstemming  met een of "
+"meerdere Journaalposten van de betaling."
 
 #. module: account
 #: field:account.tax,child_depend:0
@@ -5036,7 +5041,7 @@ msgstr ""
 #. module: account
 #: model:ir.model,name:account.model_account_common_account_report
 msgid "Account Common Account Report"
-msgstr ""
+msgstr "Algemeen grootboekrekening rapport"
 
 #. module: account
 #: field:account.bank.statement.line,name:0
@@ -5306,19 +5311,19 @@ msgstr ""
 #. module: account
 #: model:ir.model,name:account.model_account_move_journal
 msgid "Move journal"
-msgstr ""
+msgstr "Verplaats grootboek"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_fiscalyear_close
 #: model:ir.ui.menu,name:account.menu_wizard_fy_close
 msgid "Generate Opening Entries"
-msgstr ""
+msgstr "Genereer opening boekingen"
 
 #. module: account
 #: code:addons/account/account_move_line.py:738
 #, python-format
 msgid "Already Reconciled!"
-msgstr ""
+msgstr "Al in overeenstemming"
 
 #. module: account
 #: help:account.tax,type:0
@@ -5342,7 +5347,7 @@ msgstr "Aanmaakdatum"
 #: model:ir.actions.act_window,name:account.action_account_analytic_journal_form
 #: model:ir.ui.menu,name:account.account_def_analytic_journal
 msgid "Analytic Journals"
-msgstr ""
+msgstr "Analyse grootboeken"
 
 #. module: account
 #: field:account.account,child_id:0
@@ -5404,7 +5409,7 @@ msgstr ""
 #. module: account
 #: field:account.payment.term.line,value:0
 msgid "Valuation"
-msgstr ""
+msgstr "Raming"
 
 #. module: account
 #: selection:account.aged.trial.balance,result_selection:0
@@ -9979,13 +9984,13 @@ msgstr ""
 #: report:account.balancesheet:0
 #: report:account.balancesheet.horizontal:0
 msgid "Assets"
-msgstr ""
+msgstr "Activa"
 
 #. module: account
 #: report:account.balancesheet:0
 #: report:account.balancesheet.horizontal:0
 msgid "Liabilities"
-msgstr ""
+msgstr "Passiva"
 
 #. module: account
 #: report:account.balancesheet.horizontal:0
@@ -9993,13 +9998,13 @@ msgstr ""
 #: report:pl.account.horizontal:0
 #: report:pl.account:0
 msgid "Balance:"
-msgstr ""
+msgstr "Balans:"
 
 #. module: account
 #: report:pl.account.horizontal:0
 #: report:pl.account:0
 msgid "Particular"
-msgstr ""
+msgstr "Specifiek"
 
 #. module: account
 #: report:account.aged_trial_balance:0
@@ -10009,17 +10014,17 @@ msgstr "Historische trial balance"
 #. module: account
 #: report:account.aged_trial_balance:0
 msgid "Period Length(days)"
-msgstr ""
+msgstr "Periode lengte (in dagen)"
 
 #. module: account
 #: report:account.aged_trial_balance:0
 msgid "Account Total"
-msgstr ""
+msgstr "Rekening totaal"
 
 #. module: account
 #: report:account.aged_trial_balance:0
 msgid "Not due"
-msgstr ""
+msgstr "Niet vervallen"
 
 #~ msgid "Ref. :"
 #~ msgstr "Ref. :"
