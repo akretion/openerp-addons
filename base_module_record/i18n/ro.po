@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-01-11 11:14+0000\n"
-"PO-Revision-Date: 2011-02-11 06:03+0000\n"
-"Last-Translator: Jay Vora <Unknown>\n"
+"PO-Revision-Date: 2011-12-29 15:29+0000\n"
+"Last-Translator: Fekete Mihai <mihai.fekete@etotalpc.ro>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-12-17 05:58+0000\n"
-"X-Generator: Launchpad (build 14525)\n"
+"X-Launchpad-Export-Date: 2011-12-30 05:56+0000\n"
+"X-Generator: Launchpad (build 14560)\n"
 
 #. module: base_module_record
 #: wizard_field:base_module_record.module_record_objects,info,category:0
@@ -196,7 +196,7 @@ msgstr "Înregistrare"
 #. module: base_module_record
 #: model:ir.module.module,shortdesc:base_module_record.module_meta_information
 msgid "Module Record"
-msgstr ""
+msgstr "Inregistrare modul"
 
 #. module: base_module_record
 #: wizard_button:base_module_record.module_record_objects,info,save:0
