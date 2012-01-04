@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-05-09 10:18+0000\n"
-"PO-Revision-Date: 2011-12-29 16:34+0000\n"
+"PO-Revision-Date: 2012-01-03 17:19+0000\n"
 "Last-Translator: Fekete Mihai <mihai.fekete@etotalpc.ro>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-12-30 05:56+0000\n"
-"X-Generator: Launchpad (build 14560)\n"
+"X-Launchpad-Export-Date: 2012-01-04 05:21+0000\n"
+"X-Generator: Launchpad (build 14616)\n"
 
 #. module: crm
 #: view:crm.lead.report:0
@@ -814,6 +814,11 @@ msgid ""
 "using the caldav interface.\n"
 "        "
 msgstr ""
+"Intalnirea calendar este impartita intre echipele de vanzare si este complet "
+"integrata cu alte aplicatii, precum concediile angajatilor sau "
+"oportunitatile de afaceri. De asemenea, puteti sincroniza intalnirile cu "
+"telefonul dumneavoastra mobil folosind interfata caldav.\n"
+"        "
 
 #. module: crm
 #: field:crm.lead.report,probable_revenue:0
@@ -1340,6 +1345,37 @@ msgid ""
 "    * My Cases (list)\n"
 "    * Jobs Tracking (graph)\n"
 msgstr ""
+"Sistemul general Managementul Relatiilor cu Clientii OpenERP \n"
+"permite unui grup de oameni sa gestioneze in mod inteligent si eficient \n"
+"piste, oportunitati, intalniri, apeluri telefonice, etc. \n"
+"Gestioneaza sarcini cheie precum comunicarea, identificarea, prioritizarea, "
+"\n"
+"atribuirea, rezolvarea si instiintarea. \n"
+"\n"
+"OpenERP se asigura ca toate cazurile sunt urmarite cu succes de catre "
+"urilizatori, clienti si \n"
+"furnizori. Poate trimite automat mamento-uri, sa prioritizeze cererile, sa "
+"declanseze \n"
+"metode specifice si o multime de alte actiuni pe baza regulilor propriei "
+"companii. \n"
+"\n"
+"Cel mai extraordinar lucru in legatura cu acest sistem este faptul ca "
+"utilizatorii nu trebuie \n"
+"sa faca nimic special. Este suficient ca ei sa transmita un mesaj catre "
+"urmarire cereri. OpenERP le\n"
+"va multumi pentru mesaj, trimitandu-l automat catre angajatii adecvati, si "
+"se va asigura ca toata \n"
+"corespondenta viitoare sa ajunga in locul potrivit. \n"
+"\n"
+"Modulul MRC are un email gateway pentru interfata sincronizarii dintre \n"
+"email-uri si OpenERP. \n"
+"Creeaza tabloul de bord pentru MRC care include: \n"
+"          * Pistele mele (lista)\n"
+"          * Piste dupa Etapa (grafic) \n"
+"          * Intalnirile mele (lista) \n"
+"          * Desfasurarea vanzarilor dupa Etapa (grafic) \n"
+"          * Cazurile mele (lista) \n"
+"          * Urmarirea locurilor de munca (grafic)\n"
 
 #. module: crm
 #: view:crm.case.section:0
@@ -1588,7 +1624,7 @@ msgstr "Stare"
 #. module: crm
 #: model:crm.case.resource.type,name:crm.type_lead1
 msgid "Telesales"
-msgstr ""
+msgstr "Vanzari prin telefon"
 
 #. module: crm
 #: field:crm.meeting,freq:0
@@ -1743,7 +1779,7 @@ msgstr "Zi de naştere"
 #. module: crm
 #: view:crm.meeting:0
 msgid "The"
-msgstr ""
+msgstr "-l"
 
 #. module: crm
 #: field:crm.send.mail.attachment,wizard_id:0
@@ -2066,7 +2102,7 @@ msgstr "Email campania 2"
 #. module: crm
 #: model:crm.case.resource.type,name:crm.type_lead2
 msgid "Mail Campaign 1"
-msgstr ""
+msgstr "Campanie prin email 1"
 
 #. module: crm
 #: view:crm.lead:0
