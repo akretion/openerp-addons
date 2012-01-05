@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-01-11 11:16+0000\n"
-"PO-Revision-Date: 2011-12-28 10:04+0000\n"
+"PO-Revision-Date: 2012-01-04 19:46+0000\n"
 "Last-Translator: Gregor Ljubič (radioglas.com) <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-12-29 05:00+0000\n"
-"X-Generator: Launchpad (build 14560)\n"
+"X-Launchpad-Export-Date: 2012-01-05 06:06+0000\n"
+"X-Generator: Launchpad (build 14625)\n"
 
 #. module: sale
 #: view:board.board:0
@@ -128,7 +128,7 @@ msgstr "Stranka"
 #. module: sale
 #: view:sale.order:0
 msgid "Order Line"
-msgstr "Postavka naloga"
+msgstr "Vrstni red"
 
 #. module: sale
 #: model:ir.actions.act_window,help:sale.action_order_form
@@ -471,7 +471,7 @@ msgstr "Naslov računa za tekočo prodajo"
 #. module: sale
 #: view:sale.installer:0
 msgid "Enhance your core Sales Application with additional functionalities."
-msgstr ""
+msgstr "Izboljšajte svojo jedro \"Prijava prodaje\" z dodatnimi funkcijami."
 
 #. module: sale
 #: field:sale.order,invoiced_rate:0
@@ -568,7 +568,7 @@ msgstr "Postavka prodajnega naročila"
 #. module: sale
 #: view:sale.config.picking_policy:0
 msgid "Setup your sales workflow and default values."
-msgstr ""
+msgstr "Namestiti vaš potek prodaje in privzete vrednosti."
 
 #. module: sale
 #: field:sale.shop,warehouse_id:0
