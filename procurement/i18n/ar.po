@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-05-09 10:19+0000\n"
-"PO-Revision-Date: 2012-01-12 05:49+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2012-01-13 14:56+0000\n"
+"Last-Translator: kifcaliph <Unknown>\n"
 "Language-Team: Arabic <ar@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-01-13 05:05+0000\n"
+"X-Launchpad-Export-Date: 2012-01-14 05:46+0000\n"
 "X-Generator: Launchpad (build 14664)\n"
 
 #. module: procurement
@@ -43,7 +43,7 @@ msgstr ""
 #. module: procurement
 #: view:stock.warehouse.orderpoint:0
 msgid "Group By..."
-msgstr ""
+msgstr "تجميع حسب..."
 
 #. module: procurement
 #: help:stock.warehouse.orderpoint,procurement_draft_ids:0
@@ -64,7 +64,7 @@ msgstr ""
 #. module: procurement
 #: field:procurement.order,procure_method:0
 msgid "Procurement Method"
-msgstr ""
+msgstr "طريقة الشراء"
 
 #. module: procurement
 #: code:addons/procurement/procurement.py:307
@@ -81,7 +81,7 @@ msgstr ""
 #: field:procurement.order,company_id:0
 #: field:stock.warehouse.orderpoint,company_id:0
 msgid "Company"
-msgstr ""
+msgstr "شركة"
 
 #. module: procurement
 #: field:procurement.order,product_uos_qty:0
@@ -92,7 +92,7 @@ msgstr ""
 #: view:procurement.order:0
 #: field:procurement.order,name:0
 msgid "Reason"
-msgstr ""
+msgstr "السبب"
 
 #. module: procurement
 #: view:procurement.order.compute:0
@@ -117,12 +117,12 @@ msgstr ""
 #. module: procurement
 #: view:procurement.order:0
 msgid "Notes"
-msgstr ""
+msgstr "ملاحظات"
 
 #. module: procurement
 #: selection:procurement.order,procure_method:0
 msgid "on order"
-msgstr ""
+msgstr "تحت الطلب"
 
 #. module: procurement
 #: help:procurement.order,message:0
@@ -162,7 +162,7 @@ msgstr ""
 #. module: procurement
 #: model:ir.model,name:procurement.model_stock_move
 msgid "Stock Move"
-msgstr ""
+msgstr "حركة مخزن"
 
 #. module: procurement
 #: model:ir.model,name:procurement.model_procurement_order_compute_all
@@ -177,7 +177,7 @@ msgstr ""
 #. module: procurement
 #: selection:procurement.order,state:0
 msgid "Ready"
-msgstr ""
+msgstr "جاهز"
 
 #. module: procurement
 #: field:procurement.order.compute.all,automatic:0
@@ -192,23 +192,23 @@ msgstr ""
 #. module: procurement
 #: selection:procurement.order,state:0
 msgid "Confirmed"
-msgstr ""
+msgstr "مؤكد"
 
 #. module: procurement
 #: view:procurement.order:0
 msgid "Retry"
-msgstr ""
+msgstr "إعادة المحاولة"
 
 #. module: procurement
 #: view:procurement.order.compute:0
 #: view:procurement.orderpoint.compute:0
 msgid "Parameters"
-msgstr ""
+msgstr "المحددات"
 
 #. module: procurement
 #: view:procurement.order:0
 msgid "Confirm"
-msgstr ""
+msgstr "تأكيد"
 
 #. module: procurement
 #: help:procurement.order,origin:0
@@ -225,7 +225,7 @@ msgstr ""
 #. module: procurement
 #: constraint:res.company:0
 msgid "Error! You can not create recursive companies."
-msgstr ""
+msgstr "خطأ! لا يمكنك إنشاء شركات متداخلة (شركات تستخدم نفسها)."
 
 #. module: procurement
 #: code:addons/procurement/procurement.py:386
@@ -236,32 +236,32 @@ msgstr ""
 #. module: procurement
 #: field:procurement.order,priority:0
 msgid "Priority"
-msgstr ""
+msgstr "أولوية"
 
 #. module: procurement
 #: view:procurement.order:0
 #: field:procurement.order,state:0
 msgid "State"
-msgstr ""
+msgstr "الحالة"
 
 #. module: procurement
 #: field:procurement.order,location_id:0
 #: view:stock.warehouse.orderpoint:0
 #: field:stock.warehouse.orderpoint,location_id:0
 msgid "Location"
-msgstr ""
+msgstr "المكان"
 
 #. module: procurement
 #: model:ir.model,name:procurement.model_stock_picking
 msgid "Picking List"
-msgstr ""
+msgstr "قائمة الالتقاط"
 
 #. module: procurement
 #: field:make.procurement,warehouse_id:0
 #: view:stock.warehouse.orderpoint:0
 #: field:stock.warehouse.orderpoint,warehouse_id:0
 msgid "Warehouse"
-msgstr ""
+msgstr "المخزن"
 
 #. module: procurement
 #: selection:stock.warehouse.orderpoint,logic:0
@@ -302,18 +302,18 @@ msgstr ""
 #. module: procurement
 #: field:make.procurement,date_planned:0
 msgid "Planned Date"
-msgstr ""
+msgstr "الوقت المخطط"
 
 #. module: procurement
 #: view:procurement.order:0
 msgid "Group By"
-msgstr ""
+msgstr "تجميع حسب"
 
 #. module: procurement
 #: field:make.procurement,qty:0
 #: field:procurement.order,product_qty:0
 msgid "Quantity"
-msgstr ""
+msgstr "كمية"
 
 #. module: procurement
 #: code:addons/procurement/procurement.py:379
@@ -325,17 +325,17 @@ msgstr ""
 #: code:addons/procurement/procurement.py:137
 #, python-format
 msgid "Invalid action !"
-msgstr ""
+msgstr "إجراء خاطئ!"
 
 #. module: procurement
 #: view:procurement.order:0
 msgid "References"
-msgstr ""
+msgstr "مراجع"
 
 #. module: procurement
 #: view:res.company:0
 msgid "Configuration"
-msgstr ""
+msgstr "إعدادات"
 
 #. module: procurement
 #: field:stock.warehouse.orderpoint,qty_multiple:0
@@ -364,7 +364,7 @@ msgstr ""
 #: model:process.process,name:procurement.process_process_procurementprocess0
 #: view:procurement.order:0
 msgid "Procurement"
-msgstr ""
+msgstr "المشتريات"
 
 #. module: procurement
 #: model:ir.actions.act_window,name:procurement.procurement_action
@@ -379,7 +379,7 @@ msgstr ""
 #. module: procurement
 #: view:procurement.order:0
 msgid "Exceptions"
-msgstr ""
+msgstr "الإستثنائات"
 
 #. module: procurement
 #: model:process.node,note:procurement.process_node_serviceonorder0
@@ -389,7 +389,7 @@ msgstr ""
 #. module: procurement
 #: model:ir.model,name:procurement.model_mrp_property
 msgid "Property"
-msgstr ""
+msgstr "ممتلكات"
 
 #. module: procurement
 #: model:ir.actions.act_window,name:procurement.act_make_procurement
@@ -405,7 +405,7 @@ msgstr ""
 #. module: procurement
 #: model:process.process,name:procurement.process_process_serviceproductprocess0
 msgid "Service"
-msgstr ""
+msgstr "خدمة"
 
 #. module: procurement
 #: model:ir.module.module,description:procurement.module_meta_information
@@ -434,12 +434,12 @@ msgstr ""
 #. module: procurement
 #: selection:procurement.order,priority:0
 msgid "Urgent"
-msgstr ""
+msgstr "عاجل"
 
 #. module: procurement
 #: selection:mrp.property,composition:0
 msgid "plus"
-msgstr ""
+msgstr "زائد"
 
 #. module: procurement
 #: code:addons/procurement/procurement.py:328
@@ -488,12 +488,12 @@ msgstr ""
 #: view:procurement.order:0
 #: field:procurement.order,note:0
 msgid "Note"
-msgstr ""
+msgstr "ملاحظة"
 
 #. module: procurement
 #: selection:procurement.order,state:0
 msgid "Draft"
-msgstr ""
+msgstr "مسودة"
 
 #. module: procurement
 #: view:procurement.order.compute:0
@@ -503,12 +503,12 @@ msgstr ""
 #. module: procurement
 #: view:procurement.order:0
 msgid "Status"
-msgstr ""
+msgstr "الحالة"
 
 #. module: procurement
 #: selection:procurement.order,priority:0
 msgid "Normal"
-msgstr ""
+msgstr "عادي"
 
 #. module: procurement
 #: constraint:stock.move:0
@@ -524,7 +524,7 @@ msgstr ""
 #. module: procurement
 #: field:stock.warehouse.orderpoint,active:0
 msgid "Active"
-msgstr ""
+msgstr "نشط"
 
 #. module: procurement
 #: model:process.node,name:procurement.process_node_procureproducts0
@@ -539,7 +539,7 @@ msgstr ""
 #. module: procurement
 #: selection:procurement.order,state:0
 msgid "Exception"
-msgstr ""
+msgstr "استثناء"
 
 #. module: procurement
 #: code:addons/procurement/procurement.py:381
@@ -566,12 +566,12 @@ msgstr ""
 #. module: procurement
 #: model:ir.model,name:procurement.model_res_company
 msgid "Companies"
-msgstr ""
+msgstr "الشركات"
 
 #. module: procurement
 #: view:procurement.order:0
 msgid "Extra Information"
-msgstr ""
+msgstr "معلومات إضافية"
 
 #. module: procurement
 #: help:procurement.order,name:0
@@ -581,7 +581,7 @@ msgstr ""
 #. module: procurement
 #: constraint:stock.move:0
 msgid "You must assign a production lot for this product"
-msgstr ""
+msgstr "يجب تعيين دفعة إنتاج لهذا المنتج"
 
 #. module: procurement
 #: view:procurement.order:0
@@ -601,7 +601,7 @@ msgstr ""
 #. module: procurement
 #: field:procurement.order,date_close:0
 msgid "Date Closed"
-msgstr ""
+msgstr "تاريخ الإغلاق"
 
 #. module: procurement
 #: view:procurement.order:0
@@ -630,22 +630,22 @@ msgstr ""
 #. module: procurement
 #: view:stock.warehouse.orderpoint:0
 msgid "Misc"
-msgstr ""
+msgstr "متفرقات"
 
 #. module: procurement
 #: view:stock.warehouse.orderpoint:0
 msgid "Locations"
-msgstr ""
+msgstr "الأماكن"
 
 #. module: procurement
 #: selection:procurement.order,procure_method:0
 msgid "from stock"
-msgstr ""
+msgstr "من المخزون"
 
 #. module: procurement
 #: view:stock.warehouse.orderpoint:0
 msgid "General Information"
-msgstr ""
+msgstr "معلومات عامة"
 
 #. module: procurement
 #: view:procurement.order:0
@@ -655,7 +655,7 @@ msgstr ""
 #. module: procurement
 #: selection:procurement.order,state:0
 msgid "Done"
-msgstr ""
+msgstr "تم"
 
 #. module: procurement
 #: help:stock.warehouse.orderpoint,qty_multiple:0
@@ -670,7 +670,7 @@ msgstr ""
 #: view:procurement.order.compute.all:0
 #: view:procurement.orderpoint.compute:0
 msgid "Cancel"
-msgstr ""
+msgstr "إلغاء"
 
 #. module: procurement
 #: field:stock.warehouse.orderpoint,logic:0
@@ -680,7 +680,7 @@ msgstr ""
 #. module: procurement
 #: field:procurement.order,origin:0
 msgid "Source Document"
-msgstr ""
+msgstr "مستند المصدر"
 
 #. module: procurement
 #: selection:procurement.order,priority:0
@@ -696,7 +696,7 @@ msgstr ""
 #. module: procurement
 #: view:procurement.order:0
 msgid "Current"
-msgstr ""
+msgstr "الحالي"
 
 #. module: procurement
 #: view:board.board:0
@@ -706,7 +706,7 @@ msgstr ""
 #. module: procurement
 #: view:procurement.order:0
 msgid "Details"
-msgstr ""
+msgstr "تفاصيل"
 
 #. module: procurement
 #: model:ir.actions.act_window,name:procurement.procurement_action5
@@ -743,23 +743,23 @@ msgstr ""
 #: field:procurement.order,product_id:0
 #: field:stock.warehouse.orderpoint,product_id:0
 msgid "Product"
-msgstr ""
+msgstr "المنتج"
 
 #. module: procurement
 #: view:procurement.order:0
 msgid "Temporary"
-msgstr ""
+msgstr "مؤقت"
 
 #. module: procurement
 #: field:mrp.property,description:0
 #: field:mrp.property.group,description:0
 msgid "Description"
-msgstr ""
+msgstr "وصف"
 
 #. module: procurement
 #: selection:mrp.property,composition:0
 msgid "min"
-msgstr ""
+msgstr "أدنى"
 
 #. module: procurement
 #: view:stock.warehouse.orderpoint:0
@@ -769,12 +769,12 @@ msgstr ""
 #. module: procurement
 #: selection:procurement.order,state:0
 msgid "Running"
-msgstr ""
+msgstr "قيد التنفيذ"
 
 #. module: procurement
 #: field:stock.warehouse.orderpoint,product_uom:0
 msgid "Product UOM"
-msgstr ""
+msgstr "وحدة قياس المنتج"
 
 #. module: procurement
 #: model:process.node,name:procurement.process_node_serviceonorder0
@@ -789,7 +789,7 @@ msgstr ""
 #. module: procurement
 #: selection:procurement.order,state:0
 msgid "Waiting"
-msgstr ""
+msgstr "جاري الانتظار"
 
 #. module: procurement
 #: model:ir.actions.act_window,help:procurement.action_orderpoint_form
@@ -828,12 +828,12 @@ msgstr ""
 #: field:mrp.property,name:0
 #: field:stock.warehouse.orderpoint,name:0
 msgid "Name"
-msgstr ""
+msgstr "الاسم"
 
 #. module: procurement
 #: selection:mrp.property,composition:0
 msgid "max"
-msgstr ""
+msgstr "أقصى"
 
 #. module: procurement
 #: field:procurement.order,product_uos:0
@@ -871,7 +871,7 @@ msgstr ""
 #. module: procurement
 #: field:procurement.order,product_uom:0
 msgid "Product UoM"
-msgstr ""
+msgstr "وحدة القياس للمنتج"
 
 #. module: procurement
 #: view:procurement.order:0
@@ -889,7 +889,7 @@ msgstr ""
 #. module: procurement
 #: selection:procurement.order,priority:0
 msgid "Very Urgent"
-msgstr ""
+msgstr "عاجل جداً"
 
 #. module: procurement
 #: field:procurement.orderpoint.compute,automatic:0
