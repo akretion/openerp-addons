@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-05-09 10:18+0000\n"
-"PO-Revision-Date: 2012-01-10 19:26+0000\n"
-"Last-Translator: kifcaliph <Unknown>\n"
+"PO-Revision-Date: 2012-01-21 15:59+0000\n"
+"Last-Translator: Mohamed M. Hagag <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-01-11 04:58+0000\n"
-"X-Generator: Launchpad (build 14640)\n"
+"X-Launchpad-Export-Date: 2012-01-22 05:52+0000\n"
+"X-Generator: Launchpad (build 14700)\n"
 
 #. module: account
 #: model:process.transition,name:account.process_transition_supplierreconcilepaid0
@@ -335,6 +335,10 @@ msgid ""
 "You can create one in the menu: \n"
 "Configuration/Financial Accounting/Accounts/Journals."
 msgstr ""
+"لايمكن العثور على دفتر حسابات من النوع %s لهذه الشركة.\n"
+"\n"
+"يمكنك إضافة دفتر من القائمة:\n"
+"إعدادات > حسابات مالية > حسابات > دفاتر"
 
 #. module: account
 #: model:ir.model,name:account.model_account_unreconcile
@@ -368,6 +372,9 @@ msgid ""
 "OpenERP. Journal items are created by OpenERP if you use Bank Statements, "
 "Cash Registers, or Customer/Supplier payments."
 msgstr ""
+"طريقة العرض هذه يتم استخدامها بواسطة المحاسبين لإدخال مجموعة بيانات دفعة "
+"واحدة. أما بنود الدفتر يتم إنشاءها في حالة استخدام كشف حساف، تسجيل نقدية أو "
+"مدفوعات مورد/عميل."
 
 #. module: account
 #: model:ir.model,name:account.model_account_tax_template
@@ -410,7 +417,7 @@ msgstr "فتح سنة مالية"
 msgid ""
 "This field contains the informatin related to the numbering of the journal "
 "entries of this journal."
-msgstr ""
+msgstr "هذا الحقل يحتوي على معلومات مرتبطة بترقيم بنود هذا الدفتر."
 
 #. module: account
 #: field:account.journal,default_debit_account_id:0
@@ -5485,7 +5492,7 @@ msgstr ""
 #. module: account
 #: model:ir.model,name:account.model_account_analytic_line
 msgid "Analytic Line"
-msgstr "خط بياني"
+msgstr "خط تحليلي"
 
 #. module: account
 #: field:product.template,taxes_id:0
