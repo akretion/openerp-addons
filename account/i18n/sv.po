@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 5.0.14\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-05-09 10:18+0000\n"
-"PO-Revision-Date: 2011-10-13 12:28+0000\n"
-"Last-Translator: Anders Wallenquist <anders.wallenquist@vertel.se>\n"
+"PO-Revision-Date: 2012-01-25 12:13+0000\n"
+"Last-Translator: Mikael Akerberg <mikael.akerberg@dermanord.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-01-24 05:57+0000\n"
-"X-Generator: Launchpad (build 14713)\n"
+"X-Launchpad-Export-Date: 2012-01-26 05:39+0000\n"
+"X-Generator: Launchpad (build 14719)\n"
 
 #. module: account
 #: model:process.transition,name:account.process_transition_supplierreconcilepaid0
@@ -2278,6 +2278,13 @@ msgid ""
 "useful because it enables you to preview at any time the tax that you owe at "
 "the start and end of the month or quarter."
 msgstr ""
+"Denna meny skriver ut en momsdeklaration baseras på fakturor eller "
+"betalningar. Välj en eller flera perioder av räkenskapsåret. Information som "
+"krävs för att en skall skattedeklaration genereras automatiskt hämtas av "
+"OpenERP från fakturor (eller betalningar, i vissa länder). Dessa data "
+"uppdateras i realtid. Det är väldigt användbart eftersom det gör att du kan "
+"förhandsgranska, när som helst, den skatt som du är skyldig i början och "
+"slutet av månaden eller kvartalet."
 
 #. module: account
 #: selection:account.move.line,centralisation:0
@@ -3246,7 +3253,7 @@ msgstr ""
 #. module: account
 #: report:account.invoice:0
 msgid "VAT :"
-msgstr "VAT :"
+msgstr "Moms:"
 
 #. module: account
 #: report:account.central.journal:0
@@ -7547,6 +7554,13 @@ msgid ""
 "useful because it enables you to preview at any time the tax that you owe at "
 "the start and end of the month or quarter."
 msgstr ""
+"Denna meny skriver ut en momsdeklaration baseras på fakturor eller "
+"betalningar. Välj en eller flera perioder av räkenskapsåret. Information som "
+"krävs för att en skall skattedeklaration genereras automatiskt hämtas av "
+"OpenERP från fakturor (eller betalningar, i vissa länder). Dessa data "
+"uppdateras i realtid. Det är väldigt användbart eftersom det gör att du kan "
+"förhandsgranska, när som helst, den skatt som du är skyldig i början och "
+"slutet av månaden eller kvartalet."
 
 #. module: account
 #: report:account.invoice:0

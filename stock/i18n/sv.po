@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 5.0.14\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-10-03 14:08+0000\n"
-"PO-Revision-Date: 2011-10-05 08:27+0000\n"
-"Last-Translator: Daniel Stenlöv (XCLUDE) <Unknown>\n"
+"PO-Revision-Date: 2012-01-25 13:40+0000\n"
+"Last-Translator: Mikael Akerberg <mikael.akerberg@dermanord.se>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-01-24 06:52+0000\n"
-"X-Generator: Launchpad (build 14713)\n"
+"X-Launchpad-Export-Date: 2012-01-26 05:40+0000\n"
+"X-Generator: Launchpad (build 14719)\n"
 
 #. module: stock
 #: field:product.product,track_outgoing:0
@@ -191,7 +191,7 @@ msgstr ""
 #. module: stock
 #: model:ir.actions.server,name:stock.action_partial_move_server
 msgid "Deliver/Receive Products"
-msgstr ""
+msgstr "Leverera / Ta emot Produkter"
 
 #. module: stock
 #: code:addons/stock/report/report_stock.py:78
@@ -426,7 +426,7 @@ msgstr ""
 #: model:ir.actions.act_window,help:stock.action_warehouse_form
 msgid ""
 "Create and manage your warehouses and assign them a location from here"
-msgstr ""
+msgstr "Skapa och hantera dina lager och tilldela dem en plats härifrån"
 
 #. module: stock
 #: field:report.stock.move,product_qty_in:0
@@ -511,6 +511,8 @@ msgid ""
 "Current quantity of products with this Production Lot Number available in "
 "company warehouses"
 msgstr ""
+"Aktuell antal av produkter med denna produktions Lot nummer som finns i "
+"företagets lager"
 
 #. module: stock
 #: field:stock.move,move_history_ids:0
@@ -827,7 +829,7 @@ msgstr "Future P&L"
 #: model:ir.ui.menu,name:stock.menu_action_picking_tree4
 #: view:stock.picking:0
 msgid "Incoming Shipments"
-msgstr ""
+msgstr "Inkommande Leveranser"
 
 #. module: stock
 #: view:report.stock.inventory:0
@@ -1190,7 +1192,7 @@ msgstr ""
 #. module: stock
 #: selection:stock.return.picking,invoice_state:0
 msgid "To be refunded/invoiced"
-msgstr ""
+msgstr "Att få tillbaka / faktureras"
 
 #. module: stock
 #: model:stock.location,name:stock.stock_location_shop0
@@ -1376,7 +1378,7 @@ msgstr "Downstream traceability"
 #: code:addons/stock/wizard/stock_invoice_onshipping.py:112
 #, python-format
 msgid "No Invoices were created"
-msgstr ""
+msgstr "Inga fakturor skapades"
 
 #. module: stock
 #: model:stock.location,name:stock.stock_location_company
@@ -1440,7 +1442,7 @@ msgstr ""
 #: code:addons/stock/wizard/stock_partial_move.py:85
 #, python-format
 msgid "Cannot deliver products which are already delivered !"
-msgstr ""
+msgstr "Kan inte leverera produkter som redan är levererade!"
 
 #. module: stock
 #: model:ir.model,name:stock.model_stock_invoice_onshipping
@@ -1760,7 +1762,7 @@ msgstr ""
 #. module: stock
 #: view:stock.picking:0
 msgid "Create Invoice"
-msgstr ""
+msgstr "Skapa faktura"
 
 #. module: stock
 #: view:stock.move:0
@@ -1975,7 +1977,7 @@ msgstr "Stock Input Account"
 #: model:ir.ui.menu,name:stock.menu_stock_warehouse_mgmt
 #: model:ir.ui.menu,name:stock.menu_warehouse_config
 msgid "Warehouse Management"
-msgstr ""
+msgstr "Lagerstyrning"
 
 #. module: stock
 #: selection:stock.picking,move_type:0
@@ -2239,7 +2241,7 @@ msgstr "Revideringar"
 #. module: stock
 #: view:stock.picking:0
 msgid "This operation will cancel the shipment. Do you want to continue?"
-msgstr ""
+msgstr "Denna operation kommer att avbryta leveransen. Vill du fortsätta?"
 
 #. module: stock
 #: help:product.product,valuation:0
@@ -2430,13 +2432,13 @@ msgstr ""
 #: model:ir.ui.menu,name:stock.menu_action_pdct_in
 #: view:stock.move:0
 msgid "Receive Products"
-msgstr ""
+msgstr "Ta emot Produkter"
 
 #. module: stock
 #: model:ir.actions.act_window,name:stock.action_out_picking_move
 #: model:ir.ui.menu,name:stock.menu_action_pdct_out
 msgid "Deliver Products"
-msgstr ""
+msgstr "Leverera Produkter"
 
 #. module: stock
 #: view:stock.location.product:0
@@ -2693,7 +2695,7 @@ msgstr "Revision Name"
 #: field:product.product,warehouse_id:0
 #: view:stock.warehouse:0
 msgid "Warehouse"
-msgstr "Warehouse"
+msgstr "Lager"
 
 #. module: stock
 #: view:stock.location.product:0
@@ -2752,8 +2754,7 @@ msgstr "Date done"
 #, python-format
 msgid ""
 "Please put a partner on the picking list if you want to generate invoice."
-msgstr ""
-"Please put a partner on the picking list if you want to generate invoice."
+msgstr "Välj en partner på plocklistan om du vill generera faktura."
 
 #. module: stock
 #: selection:stock.move,priority:0
@@ -2769,7 +2770,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:stock.action_warehouse_form
 #: model:ir.ui.menu,name:stock.menu_action_warehouse_form
 msgid "Warehouses"
-msgstr "Warehouses"
+msgstr "Lager"
 
 #. module: stock
 #: field:stock.journal,user_id:0
@@ -3033,7 +3034,7 @@ msgstr "Framtida produktioner"
 #. module: stock
 #: view:stock.picking:0
 msgid "To Invoice"
-msgstr ""
+msgstr "Att fakturera"
 
 #. module: stock
 #: view:stock.return.picking:0
@@ -3337,7 +3338,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:stock.action_stock_invoice_onshipping
 #: view:stock.invoice.onshipping:0
 msgid "Create invoice"
-msgstr "Create invoice"
+msgstr "Skapa Faktura"
 
 #. module: stock
 #: model:ir.ui.menu,name:stock.menu_stock_configuration
@@ -3429,6 +3430,10 @@ msgid ""
 "according to the original purchase order. You can validate the shipment "
 "totally or partially."
 msgstr ""
+"Inkommande Leveranser är listan över alla beställningar du får från din "
+"leverantör. En inkommande leverans innehåller en förteckning över produkter "
+"som skall tas emot enligt den ursprungliga beställningen. Du kan godkänna "
+"transporten helt eller delvis."
 
 #. module: stock
 #: field:stock.move,auto_validate:0
@@ -3494,7 +3499,7 @@ msgstr ""
 #. module: stock
 #: selection:stock.picking,invoice_state:0
 msgid "Invoiced"
-msgstr "Invoiced"
+msgstr "Fakturerad"
 
 #. module: stock
 #: field:stock.move,address_id:0
@@ -3718,7 +3723,7 @@ msgstr "Spårbarhet"
 #. module: stock
 #: view:stock.picking:0
 msgid "To invoice"
-msgstr ""
+msgstr "Att Faktureras"
 
 #. module: stock
 #: model:ir.actions.act_window,name:stock.action_location_form
