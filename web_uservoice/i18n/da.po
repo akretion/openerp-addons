@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2010-08-02 17:52+0530\n"
-"PO-Revision-Date: 2012-01-27 08:52+0000\n"
+"POT-Creation-Date: 2011-01-12 16:15+0000\n"
+"PO-Revision-Date: 2012-01-27 06:45+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,4 +17,13 @@ msgstr ""
 "X-Launchpad-Export-Date: 2012-01-28 05:15+0000\n"
 "X-Generator: Launchpad (build 14727)\n"
 
+#. module: web_uservoice
+#: model:ir.module.module,shortdesc:web_uservoice.module_meta_information
+msgid "Add uservoice button in header"
+msgstr ""
 
+#. module: web_uservoice
+#: code:addons/web_uservoice/web/editors.py:72
+#, python-format
+msgid "feedback"
+msgstr ""
