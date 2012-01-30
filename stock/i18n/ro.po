@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-10-03 14:08+0000\n"
-"PO-Revision-Date: 2012-01-26 21:07+0000\n"
+"PO-Revision-Date: 2012-01-29 16:11+0000\n"
 "Last-Translator: Dorin <dhongu@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-01-27 05:40+0000\n"
+"X-Launchpad-Export-Date: 2012-01-30 05:02+0000\n"
 "X-Generator: Launchpad (build 14727)\n"
 
 #. module: stock
@@ -435,7 +435,7 @@ msgstr "Disponibil"
 #: view:stock.picking:0
 #: field:stock.picking,min_date:0
 msgid "Expected Date"
-msgstr "Dată prevazută"
+msgstr "Dată estimată"
 
 #. module: stock
 #: view:board.board:0
@@ -2411,7 +2411,7 @@ msgstr "Operatiune interzisă"
 #. module: stock
 #: help:stock.picking,min_date:0
 msgid "Expected date for the picking to be processed"
-msgstr "Data estimata pentru ridicare va fi procesata"
+msgstr "Data estimată pentru ridicare"
 
 #. module: stock
 #: code:addons/stock/product.py:437
@@ -3790,7 +3790,7 @@ msgstr "Adresă destinaţie"
 #. module: stock
 #: field:stock.picking,max_date:0
 msgid "Max. Expected Date"
-msgstr "Data maxima estimata"
+msgstr "Data maximă estimată"
 
 #. module: stock
 #: field:stock.picking,auto_picking:0
