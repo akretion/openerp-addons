@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-05-09 10:18+0000\n"
-"PO-Revision-Date: 2012-02-07 18:28+0000\n"
-"Last-Translator: walid sayed <mashyuser@hotmail.com>\n"
+"PO-Revision-Date: 2012-02-26 20:57+0000\n"
+"Last-Translator: amani ali <applepie9911@yahoo.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-02-22 05:11+0000\n"
-"X-Generator: Launchpad (build 14838)\n"
+"X-Launchpad-Export-Date: 2012-02-27 05:15+0000\n"
+"X-Generator: Launchpad (build 14868)\n"
 
 #. module: account
 #: model:process.transition,name:account.process_transition_supplierreconcilepaid0
@@ -2080,7 +2080,7 @@ msgstr "وصف"
 #: code:addons/account/account.py:3119
 #, python-format
 msgid "ECNJ"
-msgstr ""
+msgstr "ECNJ"
 
 #. module: account
 #: view:account.subscription:0
@@ -2338,7 +2338,7 @@ msgstr "إدخالات نماذج الحسابات"
 #: code:addons/account/account.py:3117
 #, python-format
 msgid "EXJ"
-msgstr ""
+msgstr "EXJ"
 
 #. module: account
 #: field:product.template,supplier_taxes_id:0
@@ -2831,6 +2831,11 @@ msgid ""
 "software system you may have to use the rate at date. Incoming transactions "
 "always use the rate at date."
 msgstr ""
+"سيحدد هذا كيف تم حساب معدل العملة الحالية للمعاملات الخارجة. في معظم البلاد "
+"المنهج القانوني هو \"متوسط\" لكن قليل من أنظمة البرنامج فقط قادة "
+"لادارتها.\r\n"
+"فلذلك اذا قمت بلبتوريد من نظام برنامج اخر قد تستخدم المعدل عند التاريخ. "
+"تستخدم المعاملات القادمة المعدل عند التاريخ."
 
 #. module: account
 #: help:account.chart.template,code_digits:0
@@ -2888,7 +2893,7 @@ msgstr "عرض"
 #: code:addons/account/account_bank.py:90
 #, python-format
 msgid "BNK"
-msgstr ""
+msgstr "بنك"
 
 #. module: account
 #: field:account.move.line,analytic_lines:0
@@ -3378,6 +3383,9 @@ msgid ""
 "based on partner payment term!\n"
 "Please define partner on it!"
 msgstr ""
+"تم انشاء تاريخ الاستحقاق لخط المدخل بواسطة خط النموذج ‘%s‘ للنموذج ‘%s‘ "
+"بناءًا على شرط الدفع للشريك !\n"
+"الرجاء حدد شريك عليها!"
 
 #. module: account
 #: code:addons/account/account_move_line.py:837
@@ -3875,6 +3883,10 @@ msgid ""
 "the system on document validation (invoices, bank statements...) and will be "
 "created in 'Posted' state."
 msgstr ""
+"كل ما انشيء يدويًا لمخل اليومية الجديدة عادةً في حالة‘غير مسجل‘, لكن يمكنك "
+"وضع اختيار لتخطي تلك الحالة على اليومية المتعلقة. في حالة, سيكون كمدخلات "
+"يومية تلقائية أُنشأت بواسطة النظام في التحقق من الوثيقة (الفواتير, نصاريح "
+"البنك...) وستُنشأ في حالة ‘مسجل‘."
 
 #. module: account
 #: code:addons/account/account_analytic_line.py:93
@@ -4117,7 +4129,7 @@ msgstr ""
 #. module: account
 #: model:ir.model,name:account.model_account_analytic_cost_ledger_journal_report
 msgid "Account Analytic Cost Ledger For Journal Report"
-msgstr ""
+msgstr "يقدردفتر حساب للتكلفة التحليلية للحساب للتقرير اليومي"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_model_form
