@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 5.0.4\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-05-09 10:18+0000\n"
-"PO-Revision-Date: 2012-02-03 11:58+0000\n"
-"Last-Translator: amani ali <applepie9911@yahoo.com>\n"
+"PO-Revision-Date: 2012-02-27 08:29+0000\n"
+"Last-Translator: walid sayed <mashyuser@hotmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-02-22 05:36+0000\n"
-"X-Generator: Launchpad (build 14838)\n"
+"X-Launchpad-Export-Date: 2012-02-28 06:08+0000\n"
+"X-Generator: Launchpad (build 14874)\n"
 
 #. module: crm
 #: view:crm.lead.report:0
@@ -2582,7 +2582,7 @@ msgstr "لوحة المبيعات"
 #: code:addons/crm/wizard/crm_lead_to_partner.py:56
 #, python-format
 msgid "A partner is already defined on this lead."
-msgstr "تم تحديد الشريك في هذه المهمة."
+msgstr "تم تحديد الشريك في هذا المصدر ."
 
 #. module: crm
 #: field:crm.lead.report,nbr:0 field:crm.phonecall.report,nbr:0
@@ -2786,7 +2786,7 @@ msgstr ""
 #. module: crm
 #: view:crm.case.section:0
 msgid "Mailgateway"
-msgstr "مدخل البريد"
+msgstr "بوابة البريد"
 
 #. module: crm
 #: help:crm.lead,user_id:0
@@ -2828,7 +2828,7 @@ msgstr "الجدول/سجل المكالمات"
 #. module: crm
 #: field:crm.installer,fetchmail:0
 msgid "Fetch Emails"
-msgstr "الايملات المُوصلة"
+msgstr "جلب رسائل البريد الإلكتروني"
 
 #. module: crm
 #: selection:crm.meeting,state:0
@@ -2922,7 +2922,7 @@ msgstr "جدول المكالمات"
 #: code:addons/crm/wizard/crm_lead_to_opportunity.py:260
 #, python-format
 msgid "Closed/Cancelled Leads Could not convert into Opportunity"
-msgstr "لاتستطيع المهام الملغاة/المغلقة التحويل إلى فرصة"
+msgstr "لاتستطيع المصادر الملغاة/المغلقة التحويل إلى فرصة"
 
 #. module: crm
 #: view:crm.segmentation:0
