@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-05-09 10:19+0000\n"
-"PO-Revision-Date: 2012-02-14 20:41+0000\n"
+"PO-Revision-Date: 2012-03-01 19:25+0000\n"
 "Last-Translator: amani ali <applepie9911@yahoo.com>\n"
 "Language-Team: Arabic <ar@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-02-22 06:09+0000\n"
-"X-Generator: Launchpad (build 14838)\n"
+"X-Launchpad-Export-Date: 2012-03-02 04:56+0000\n"
+"X-Generator: Launchpad (build 14886)\n"
 
 #. module: project_mailgate
 #: view:project.task:0
@@ -38,6 +38,11 @@ msgid ""
 "Moreover, it keeps track of all further communications and task states.\n"
 "    "
 msgstr ""
+"هذه الوحدة هي تفاعل التي تتزامن البريد مع مهام مشروع OpenERP .\n"
+"وهي تسمح بإنشاء المهام في اقرب وقت كما يصل البريد الجديد في خادم البريد الذي "
+"تم ضبطه.\n"
+"علاوة على ذلك, تستمر في تعقب المزيد من كل الاتصالات وحالات المهمة.\n"
+"    "
 
 #. module: project_mailgate
 #: view:project.task:0
