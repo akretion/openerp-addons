@@ -57,6 +57,8 @@ class email_template(osv.osv):
            :param int res_id: id of the document record this mail is related to.
         """
         if not template: return u""
+        if context is None:
+            context = {}
         try:
             template = tools.ustr(template)
             record = None
@@ -338,7 +340,7 @@ class email_template(osv.osv):
         attachments = {}
         # Add report as a Document
         if template.report_template:
-            report_name = template.report_name
+            report_name = self.render_template(cr, uid, template.report_name, template.model, res_id, context=context)
             report_service = 'report.' + report_xml_pool.browse(cr, uid, template.report_template.id, context).report_name
             # Ensure report is rendered using template's language
             ctx = context.copy()

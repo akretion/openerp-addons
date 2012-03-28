@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-02-08 00:37+0000\n"
-"PO-Revision-Date: 2012-02-28 17:26+0000\n"
-"Last-Translator: Erwin <Unknown>\n"
+"PO-Revision-Date: 2012-03-21 15:36+0000\n"
+"Last-Translator: Anne Sedee (Therp) <anne@therp.nl>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-02-29 05:27+0000\n"
-"X-Generator: Launchpad (build 14874)\n"
+"X-Launchpad-Export-Date: 2012-03-22 06:23+0000\n"
+"X-Generator: Launchpad (build 14981)\n"
 
 #. module: stock_planning
 #: code:addons/stock_planning/wizard/stock_planning_createlines.py:73
@@ -130,7 +130,7 @@ msgstr "Minimum voorraad regels indicatoren"
 #. module: stock_planning
 #: help:stock.sale.forecast.createlines,period_id:0
 msgid "Period which forecasts will concern."
-msgstr ""
+msgstr "Periode waar de 'forcasts' betrekking op hebben."
 
 #. module: stock_planning
 #: field:stock.planning,stock_only:0
@@ -185,6 +185,8 @@ msgstr "Alle producten met prognose"
 #: help:stock.planning,maximum_op:0
 msgid "Maximum quantity set in Minimum Stock Rules for this Warehouse"
 msgstr ""
+"Het voor dit magazijn bij de 'Minimale Voorraad Regels'  gedefinieerde  "
+"maximale aantal."
 
 #. module: stock_planning
 #: view:stock.sale.forecast:0
@@ -202,7 +204,7 @@ msgstr ""
 #: help:stock.planning,already_in:0
 msgid ""
 "Quantity which is already picked up to this warehouse in current period."
-msgstr ""
+msgstr "Het aantal dat in de huidige periode reeds in dit magazijn"
 
 #. module: stock_planning
 #: code:addons/stock_planning/wizard/stock_planning_forecast.py:60
@@ -264,6 +266,8 @@ msgid ""
 "All sales forecasts for whole company (for all Warehouses) of selected "
 "Product during selected Period."
 msgstr ""
+"Alle verkoop-prognoses voor dit bedrijf van het geselecteerde product in de "
+"geselecteerde periode (berekend over alle magazijnen)"
 
 #. module: stock_planning
 #: field:stock.sale.forecast,analyzed_period1_per_user:0
@@ -502,7 +506,7 @@ msgstr "Gemaakt/Gecontroleerd door"
 #. module: stock_planning
 #: field:stock.planning,warehouse_forecast:0
 msgid "Warehouse Forecast"
-msgstr ""
+msgstr "Magazijn"
 
 #. module: stock_planning
 #: code:addons/stock_planning/stock_planning.py:674
@@ -516,7 +520,7 @@ msgstr ""
 #: code:addons/stock_planning/stock_planning.py:146
 #, python-format
 msgid "Cannot delete a validated sales forecast!"
-msgstr ""
+msgstr "Een gevalideerde verkoop-prognose kan niet verwijderd worden."
 
 #. module: stock_planning
 #: field:stock.sale.forecast,analyzed_period5_per_company:0
