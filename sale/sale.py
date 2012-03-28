@@ -1197,6 +1197,7 @@ class sale_order_line(osv.osv):
         product_uom_obj = self.pool.get('product.uom')
         partner_obj = self.pool.get('res.partner')
         product_obj = self.pool.get('product.product')
+        fpos_obj = self.pool.get('account.fiscal.position')
         context = {'lang': lang, 'partner_id': partner_id}
         if partner_id:
             lang = partner_obj.browse(cr, uid, partner_id).lang
@@ -1228,10 +1229,15 @@ class sale_order_line(osv.osv):
                 uos = False
         if product_obj.description_sale:
             result['notes'] = product_obj.description_sale
-        fpos = fiscal_position and self.pool.get('account.fiscal.position').browse(cr, uid, fiscal_position) or False
+        fpos = fiscal_position and fpos_obj.browse(cr, uid, fiscal_position) or False
         if update_tax: #The quantity only have changed
             result['delay'] = (product_obj.sale_delay or 0.0)
-            result['tax_id'] = self.pool.get('account.fiscal.position').map_tax(cr, uid, fpos, product_obj.taxes_id)
+            a = product_obj.product_tmpl_id.property_account_income.id
+            if not a:
+                a = product_obj.categ_id.property_account_income_categ.id
+            a = fpos_obj.map_account(cr, uid, fpos, a)
+            taxes = product_obj.taxes_id or (a and self.pool.get('account.account').browse(cr, uid, a, context=context).tax_ids)
+            result['tax_id'] = fpos_obj.map_tax(cr, uid, fpos, taxes)
             result.update({'type': product_obj.procure_method})
 
         if not flag:

@@ -795,8 +795,12 @@ class purchase_order_line(osv.osv):
         price = product_pricelist.price_get(cr, uid, [pricelist_id],
                     product.id, qty or 1.0, partner_id, {'uom': uom_id, 'date': date_order})[pricelist_id]
         
-        taxes = account_tax.browse(cr, uid, map(lambda x: x.id, product.supplier_taxes_id))
         fpos = fiscal_position_id and account_fiscal_position.browse(cr, uid, fiscal_position_id, context=context) or False
+        a = product.product_tmpl_id.property_account_expense.id
+        if not a:
+            a = product.categ_id.property_account_expense_categ.id
+        a = account_fiscal_position.map_account(cr, uid, fpos, a)
+        taxes = product.supplier_taxes_id or (a and self.pool.get('account.account').browse(cr, uid, a, context=context).tax_ids)
         taxes_ids = account_fiscal_position.map_tax(cr, uid, fpos, taxes)
         res['value'].update({'price_unit': price, 'taxes_id': taxes_ids})
 
