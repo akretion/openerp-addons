@@ -598,6 +598,7 @@ class product_product(osv.osv):
         return result
 
     def name_search(self, cr, user, name='', args=None, operator='ilike', context=None, limit=100):
+        print "Limit:::",limit
         if not args:
             args = []
         if name:
@@ -611,9 +612,10 @@ class product_product(osv.osv):
                 # Performing a quick memory merge of ids in Python will give much better performance
                 ids = set()
                 ids.update(self.search(cr, user, args + [('default_code',operator,name)], limit=limit, context=context))
-                if len(ids) < limit:
+                if not limit or len(ids) < limit:
+                    print "Limit2@@@:::",limit , len(ids)
                     # we may underrun the limit because of dupes in the results, that's fine
-                    ids.update(self.search(cr, user, args + [('name',operator,name)], limit=(limit-len(ids)), context=context))
+                    ids.update(self.search(cr, user, args + [('name',operator,name)], limit=(limit-len(ids) if limit else limit) , context=context))
                 ids = list(ids)
             if not ids:
                 ptrn = re.compile('(\[(.*?)\])')
