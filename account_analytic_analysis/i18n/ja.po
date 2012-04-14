@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-01-11 11:14+0000\n"
-"PO-Revision-Date: 2012-04-13 05:58+0000\n"
+"PO-Revision-Date: 2012-04-13 18:24+0000\n"
 "Last-Translator: Akira Hiyama <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-04-13 06:01+0000\n"
+"X-Launchpad-Export-Date: 2012-04-14 05:08+0000\n"
 "X-Generator: Launchpad (build 15070)\n"
 
 #. module: account_analytic_analysis
@@ -27,12 +27,12 @@ msgstr "これから請求されるものに加えて既に請求済みの時間
 #. module: account_analytic_analysis
 #: help:account.analytic.account,remaining_ca:0
 msgid "Computed using the formula: Max Invoice Price - Invoiced Amount."
-msgstr "式を使って計算：最大請求価格 - 請求された金額"
+msgstr "式を使った計算：最大請求価格 - 請求金額"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,remaining_hours:0
 msgid "Computed using the formula: Maximum Quantity - Hours Tot."
-msgstr "式を使って計算：最大数量 - 時間合計"
+msgstr "公式による計算：最大数量 - 時間合計"
 
 #. module: account_analytic_analysis
 #: code:addons/account_analytic_analysis/account_analytic_analysis.py:551
@@ -72,7 +72,7 @@ msgstr "前回請求日"
 #. module: account_analytic_analysis
 #: help:account.analytic.account,theorical_margin:0
 msgid "Computed using the formula: Theorial Revenue - Total Costs"
-msgstr "式を使って計算：理論的な収入 - 総コスト"
+msgstr "式を使った計算：理論的な収入 - 総コスト"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,real_margin_rate:0
@@ -116,7 +116,7 @@ msgstr "分析アカウントの上に費やした時間数（タイムシート
 #. module: account_analytic_analysis
 #: field:account.analytic.account,remaining_hours:0
 msgid "Remaining Hours"
-msgstr "残り時間"
+msgstr "残り時間数"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,theorical_margin:0
@@ -145,17 +145,17 @@ msgstr "未請求金額"
 #. module: account_analytic_analysis
 #: help:account.analytic.account,real_margin:0
 msgid "Computed using the formula: Invoiced Amount - Total Costs."
-msgstr ""
+msgstr "式を使った計算：請求アカウント - 合計コスト"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,hours_qtt_non_invoiced:0
 msgid "Uninvoiced Hours"
-msgstr ""
+msgstr "未請求時間数"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,last_worked_date:0
 msgid "Date of the latest work done on this account."
-msgstr ""
+msgstr "このアカウントの最後の作業完了日"
 
 #. module: account_analytic_analysis
 #: model:ir.module.module,shortdesc:account_analytic_analysis.module_meta_information
@@ -165,103 +165,103 @@ msgstr ""
 #. module: account_analytic_analysis
 #: model:ir.model,name:account_analytic_analysis.model_account_analytic_analysis_summary_user
 msgid "Hours Summary by User"
-msgstr ""
+msgstr "ユーザごとの時間合計"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,ca_invoiced:0
 msgid "Invoiced Amount"
-msgstr ""
+msgstr "請求金額"
 
 #. module: account_analytic_analysis
 #: code:addons/account_analytic_analysis/account_analytic_analysis.py:552
 #: code:addons/account_analytic_analysis/account_analytic_analysis.py:723
 #, python-format
 msgid "You try to bypass an access rule (Document type: %s)."
-msgstr ""
+msgstr "アクセスルール（ドキュメントタイプ：%s）を回避してみて下さい。"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,last_worked_invoiced_date:0
 msgid "Date of Last Invoiced Cost"
-msgstr ""
+msgstr "最後の請求コストの日"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,hours_qtt_invoiced:0
 msgid "Invoiced Hours"
-msgstr ""
+msgstr "請求時間数"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,real_margin:0
 msgid "Real Margin"
-msgstr ""
+msgstr "実マージン"
 
 #. module: account_analytic_analysis
 #: constraint:account.analytic.account:0
 msgid ""
 "Error! The currency has to be the same as the currency of the selected "
 "company"
-msgstr ""
+msgstr "エラー。通貨は選択された会社の通貨と同じでなければなりません。"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,ca_invoiced:0
 msgid "Total customer invoiced amount for this account."
-msgstr ""
+msgstr "このアカウントに対する顧客請求金額の合計"
 
 #. module: account_analytic_analysis
 #: model:ir.model,name:account_analytic_analysis.model_account_analytic_analysis_summary_month
 msgid "Hours summary by month"
-msgstr ""
+msgstr "月別時間数合計"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,real_margin_rate:0
 msgid "Computes using the formula: (Real Margin / Total Costs) * 100."
-msgstr ""
+msgstr "公式による計算：（実マージン / 合計コスト） * 100"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,hours_qtt_non_invoiced:0
 msgid ""
 "Number of hours (from journal of type 'general') that can be invoiced if you "
 "invoice based on analytic account."
-msgstr ""
+msgstr "分析アカウントに基づく請求の場合、請求することができる時間数（仕訳帳のタイプが\"一般\"から）"
 
 #. module: account_analytic_analysis
 #: view:account.analytic.account:0
 msgid "Analytic accounts"
-msgstr ""
+msgstr "分析アカウント"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,remaining_ca:0
 msgid "Remaining Revenue"
-msgstr ""
+msgstr "残りの収入"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,ca_to_invoice:0
 msgid ""
 "If invoice from analytic account, the remaining amount you can invoice to "
 "the customer based on the total costs."
-msgstr ""
+msgstr "分析アカウントからの請求書の場合、合計コストに基づいて顧客に請求することができる残った金額です。"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,revenue_per_hour:0
 msgid "Computed using the formula: Invoiced Amount / Hours Tot."
-msgstr ""
+msgstr "公式による計算：請求金額 / 時間数合計"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,revenue_per_hour:0
 msgid "Revenue per Hours (real)"
-msgstr ""
+msgstr "時間当たりの収入（実質）"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,hours_quantity:0
 #: field:account_analytic_analysis.summary.month,unit_amount:0
 #: field:account_analytic_analysis.summary.user,unit_amount:0
 msgid "Total Time"
-msgstr ""
+msgstr "合計時間"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,month_ids:0
 #: field:account_analytic_analysis.summary.month,month:0
 msgid "Month"
-msgstr ""
+msgstr "月"
 
 #. module: account_analytic_analysis
 #: view:account.analytic.account:0
@@ -269,33 +269,33 @@ msgstr ""
 #: field:account_analytic_analysis.summary.user,account_id:0
 #: model:ir.model,name:account_analytic_analysis.model_account_analytic_account
 msgid "Analytic Account"
-msgstr ""
+msgstr "分析アカウント"
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_managed_overpassed
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_action_account_analytic_managed_overpassed
 msgid "Overpassed Accounts"
-msgstr ""
+msgstr "オーバーパスアカウント"
 
 #. module: account_analytic_analysis
 #: model:ir.actions.act_window,name:account_analytic_analysis.action_hr_tree_invoiced_all
 #: model:ir.ui.menu,name:account_analytic_analysis.menu_action_hr_tree_invoiced_all
 msgid "All Uninvoiced Entries"
-msgstr ""
+msgstr "全ての未請求エントリー"
 
 #. module: account_analytic_analysis
 #: field:account.analytic.account,hours_quantity:0
 msgid "Hours Tot"
-msgstr ""
+msgstr "時間数合計"
 
 #. module: account_analytic_analysis
 #: constraint:account.analytic.account:0
 msgid "Error! You can not create recursive analytic accounts."
-msgstr ""
+msgstr "エラー。反復した分析アカウントを作ることはできません"
 
 #. module: account_analytic_analysis
 #: help:account.analytic.account,total_cost:0
 msgid ""
 "Total of costs for this account. It includes real costs (from invoices) and "
 "indirect costs, like time spent on timesheets."
-msgstr ""
+msgstr "アカウントのコストの合計。これには実際のコスト（請求書から）とタイムシートの上で費やされた時間といった間接コストも含まれます。"
