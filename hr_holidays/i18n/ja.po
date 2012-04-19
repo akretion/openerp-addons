@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-04-18 05:07+0000\n"
+"X-Launchpad-Export-Date: 2012-04-19 04:54+0000\n"
 "X-Generator: Launchpad (build 15108)\n"
 
 #. module: hr_holidays
@@ -119,6 +119,8 @@ msgid ""
 "the employee. You can define several allowance types (paid holidays, "
 "sickness, etc.) and manage allowances per type."
 msgstr ""
+"従業員が休暇申請を記録して、マネジャが承認します。休暇が承認されると、それは自動的に従業員の予定に表示されます。休暇タイプ（有給休暇、病欠など）をいくつか"
+"定義して、タイプごとに休暇を管理できます。"
 
 #. module: hr_holidays
 #: model:ir.actions.report.xml,name:hr_holidays.report_holidays_summary
@@ -343,7 +345,7 @@ msgstr "小麦色"
 #. module: hr_holidays
 #: constraint:resource.calendar.leaves:0
 msgid "Error! leave start-date must be lower then leave end-date."
-msgstr "エラー。休暇開始日は休暇終了日の前でなければいけません。"
+msgstr "エラー：休暇開始日は休暇終了日の前でなければいけません。"
 
 #. module: hr_holidays
 #: view:hr.holidays:0 field:hr.holidays,number_of_days:0
@@ -634,7 +636,7 @@ msgstr "詳細"
 msgid ""
 "By Employee: Allocation/Request for individual Employee, By Employee "
 "Category: Allocation/Request for group of employees in category"
-msgstr ""
+msgstr "従業員別：従業員への割当て/申請，従業員カテゴリ：カテゴリ内の従業員グループへの割当て/申請"
 
 #. module: hr_holidays
 #: code:addons/hr_holidays/hr_holidays.py:199
@@ -682,7 +684,7 @@ msgstr "終了日"
 msgid ""
 "If you tick this checkbox, the system will allow, for this section, the "
 "employees to take more leaves than the available ones."
-msgstr ""
+msgstr "このボックスをチェックすると、従業員はこの部分について有効な休暇よりも多くの休暇を取ることができます。"
 
 #. module: hr_holidays
 #: help:hr.holidays.status,leaves_taken:0
@@ -706,7 +708,7 @@ msgstr "最大許容数"
 msgid ""
 "This area is automaticly filled by the user who validate the leave with "
 "second level (If Leave type need second validation)"
-msgstr ""
+msgstr "この部分は、休暇を承認をする第２レベルのユーザによって自動的に入力されます（休暇タイプが第２レベルんの承認が必要な場合）。"
 
 #. module: hr_holidays
 #: model:ir.module.module,shortdesc:hr_holidays.module_meta_information
