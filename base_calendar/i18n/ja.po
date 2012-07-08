@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-05-09 10:18+0000\n"
-"PO-Revision-Date: 2012-07-06 21:13+0000\n"
+"PO-Revision-Date: 2012-07-08 04:22+0000\n"
 "Last-Translator: Akira Hiyama <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-07-07 05:37+0000\n"
+"X-Launchpad-Export-Date: 2012-07-08 04:52+0000\n"
 "X-Generator: Launchpad (build 15558)\n"
 
 #. module: base_calendar
@@ -723,7 +723,7 @@ msgstr "個人"
 #: help:calendar.event,count:0
 #: help:calendar.todo,count:0
 msgid "Repeat x times"
-msgstr "ｎ回繰り返し"
+msgstr "x回繰り返し"
 
 #. module: base_calendar
 #: field:calendar.alarm,user_id:0
@@ -1219,7 +1219,7 @@ msgstr "ユーザ責任者"
 #: selection:res.users,availability:0
 #, python-format
 msgid "Busy"
-msgstr "ビジー"
+msgstr "割当済"
 
 #. module: base_calendar
 #: model:ir.model,name:base_calendar.model_calendar_event
