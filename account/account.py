@@ -1047,10 +1047,15 @@ class account_period(osv.osv):
         else:
             company_id = self.pool.get('res.users').browse(cr, uid, uid, context=context).company_id.id
             args.append(('company_id', '=', company_id))
-        ids = self.search(cr, uid, args, context=context)
-        if not ids:
+        result = []
+        if context.get('account_period_prefer_normal'):
+            # look for non-special periods first, and fallback to all if no result is found
+            result = self.search(cr, uid, args + [('special', '=', False)], context=context)
+        if not result:
+            result = self.search(cr, uid, args, context=context)
+        if not result:
             raise osv.except_osv(_('Error !'), _('No period defined for this date: %s !\nPlease create one.')%dt)
-        return ids
+        return result
 
     def action_draft(self, cr, uid, ids, *args):
         mode = 'draft'
@@ -1223,10 +1228,9 @@ class account_move(osv.osv):
         return res
 
     def _get_period(self, cr, uid, context=None):
-        periods = self.pool.get('account.period').find(cr, uid)
-        if periods:
-            return periods[0]
-        return False
+        ctx = dict(context or {}, account_period_prefer_normal=True)
+        period_ids = self.pool.get('account.period').find(cr, uid, context=ctx)
+        return period_ids[0]
 
     def _amount_compute(self, cr, uid, ids, name, args, context, where =''):
         if not ids: return {}
@@ -1351,7 +1355,9 @@ class account_move(osv.osv):
 
     def button_cancel(self, cr, uid, ids, context=None):
         for line in self.browse(cr, uid, ids, context=context):
-            if not line.journal_id.update_posted:
+            if line.period_id.state == 'done':
+                raise osv.except_osv(_('Error !'), _('You can not modify a posted entry of closed periods'))
+            elif not line.journal_id.update_posted:
                 raise osv.except_osv(_('Error !'), _('You can not modify a posted entry of this journal !\nYou should set the journal to allow cancelling entries if you want to do that.'))
         if ids:
             cr.execute('UPDATE account_move '\
@@ -2910,7 +2916,7 @@ class account_fiscal_position_template(osv.osv):
         obj_fiscal_position = self.pool.get('account.fiscal.position')
         fp_ids = self.search(cr, uid, [('chart_template_id', '=', chart_temp_id)])
         for position in self.browse(cr, uid, fp_ids, context=context):
-            new_fp = obj_fiscal_position.create(cr, uid, {'company_id': company_id, 'name': position.name})
+            new_fp = obj_fiscal_position.create(cr, uid, {'company_id': company_id, 'name': position.name, 'note': position.note})
             for tax in position.tax_ids:
                 obj_tax_fp.create(cr, uid, {
                     'tax_src_id': tax_template_ref[tax.tax_src_id.id],

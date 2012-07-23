@@ -182,7 +182,7 @@ class crm_lead(crm_case, osv.osv):
         'priority': fields.selection(crm.AVAILABLE_PRIORITIES, 'Priority', select=True),
         'date_closed': fields.datetime('Closed', readonly=True),
         'stage_id': fields.many2one('crm.case.stage', 'Stage', domain="[('section_ids', '=', section_id)]"),
-        'user_id': fields.many2one('res.users', 'Salesman'),
+        'user_id': fields.many2one('res.users', 'Salesman', select=1),
         'referred': fields.char('Referred By', size=64),
         'date_open': fields.datetime('Opened', readonly=True),
         'day_open': fields.function(_compute_day, string='Days to Open', \
@@ -501,7 +501,7 @@ class crm_lead(crm_case, osv.osv):
         oldest = self._merge_find_oldest(cr, uid, ids, context=context)
         if ctx_opportunities :
             first_opportunity = ctx_opportunities[0]
-            tail_opportunities = opportunities_list
+            tail_opportunities = opportunities_list + ctx_opportunities[1:]
         else:
             first_opportunity = opportunities_list[0]
             tail_opportunities = opportunities_list[1:]
@@ -570,19 +570,21 @@ class crm_lead(crm_case, osv.osv):
         for lead in self.browse(cr, uid, ids, context=context):
             if lead.state in ('done', 'cancel'):
                 continue
-            if user_ids or section_id:
-                self.allocate_salesman(cr, uid, [lead.id], user_ids, section_id, context=context)
 
             vals = self._convert_opportunity_data(cr, uid, lead, customer, section_id, context=context)
             self.write(cr, uid, [lead.id], vals, context=context)
-
             self._convert_opportunity_notification(cr, uid, lead, context=context)
+            self.case_open(cr, uid, [lead.id])
             #TOCHECK: why need to change partner details in all messages of lead ?
             if lead.partner_id:
                 msg_ids = [ x.id for x in lead.message_ids]
                 mail_message.write(cr, uid, msg_ids, {
                         'partner_id': lead.partner_id.id
                     }, context=context)
+
+        if user_ids or section_id:
+            self.allocate_salesman(cr, uid, ids, user_ids, section_id, context=context)
+
         return True
 
     def _lead_create_partner(self, cr, uid, lead, context=None):
@@ -634,10 +636,10 @@ class crm_lead(crm_case, osv.osv):
         if context is None:
             context = {}
         partner_ids = {}
+        force_partner_id = partner_id
         for lead in self.browse(cr, uid, ids, context=context):
             if action == 'create':
-                if not partner_id:
-                    partner_id = self._lead_create_partner(cr, uid, lead, context=context)
+                partner_id = force_partner_id or self._lead_create_partner(cr, uid, lead, context=context)
                 self._lead_create_partner_address(cr, uid, lead, partner_id, context=context)
             self._lead_set_partner(cr, uid, lead, partner_id, context=context)
             partner_ids[lead.id] = partner_id
@@ -667,9 +669,9 @@ class crm_lead(crm_case, osv.osv):
             value = {}
             if team_id:
                 value['section_id'] = team_id
-            if index < len(user_ids):
+            if user_ids:
                 value['user_id'] = user_ids[index]
-                index += 1
+                index = (index + 1) % len(user_ids)
             if value:
                 self.write(cr, uid, [lead_id], value, context=context)
         return True

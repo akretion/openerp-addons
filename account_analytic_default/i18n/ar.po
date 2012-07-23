@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-02-08 00:35+0000\n"
-"PO-Revision-Date: 2012-02-17 09:10+0000\n"
-"Last-Translator: Mantavya Gajjar (Open ERP) <Unknown>\n"
+"PO-Revision-Date: 2012-04-29 11:45+0000\n"
+"Last-Translator: kifcaliph <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-02-18 06:12+0000\n"
-"X-Generator: Launchpad (build 14814)\n"
+"X-Launchpad-Export-Date: 2012-05-17 05:25+0000\n"
+"X-Generator: Launchpad (build 15259)\n"
 
 #. module: account_analytic_default
 #: help:account.analytic.default,partner_id:0
@@ -130,12 +130,14 @@ msgstr "تحليل الإفتراضيات"
 #. module: account_analytic_default
 #: sql_constraint:stock.picking:0
 msgid "Reference must be unique per Company!"
-msgstr ""
+msgstr "المرجع يجب أن يكون فريداً لكل شركة علي حدا!"
 
 #. module: account_analytic_default
 #: view:account.analytic.default:0
 msgid "Analytical defaults whose end date is greater than today or None"
 msgstr ""
+"التحليل الإفتراضي يجب التاريخ يكون بعد اليوم أو في المستقبل و إلا لن تجد "
+"نتيجة."
 
 #. module: account_analytic_default
 #: help:account.analytic.default,product_id:0
@@ -151,7 +153,7 @@ msgstr ""
 #. module: account_analytic_default
 #: field:account.analytic.default,sequence:0
 msgid "Sequence"
-msgstr "تسلسل"
+msgstr "مسلسل"
 
 #. module: account_analytic_default
 #: model:ir.model,name:account_analytic_default.model_account_invoice_line

@@ -22,6 +22,7 @@
 from datetime import datetime
 from osv import osv, fields
 import decimal_precision as dp
+from tools import float_compare
 from tools.translate import _
 import netsvc
 import time
@@ -513,7 +514,8 @@ class mrp_production(osv.osv):
             'move_created_ids' : [],
             'move_created_ids2' : [],
             'product_lines' : [],
-            'picking_id': False
+            'move_prod_id' : False,
+            'picking_id' : False
         })
         return super(mrp_production, self).copy(cr, uid, id, default, context)
 
@@ -727,8 +729,7 @@ class mrp_production(osv.osv):
                 if raw_product:
                     # qtys we have to consume
                     qty = total_consume - consumed_data.get(scheduled.product_id.id, 0.0)
-
-                    if qty > qty_avail:
+                    if float_compare(qty, qty_avail, precision_rounding=scheduled.product_id.uom_id.rounding) == 1:
                         # if qtys we have to consume is more than qtys available to consume
                         prod_name = scheduled.product_id.name_get()[0][1]
                         raise osv.except_osv(_('Warning!'), _('You are going to consume total %s quantities of "%s".\nBut you can only consume up to total %s quantities.') % (qty, prod_name, qty_avail))
@@ -736,7 +737,8 @@ class mrp_production(osv.osv):
                         # we already have more qtys consumed than we need 
                         continue
 
-                    raw_product[0].action_consume(qty, raw_product[0].location_id.id, context=context)
+                    for consume_line in raw_product:
+                        consume_line.action_consume(qty, consume_line.location_id.id, context=context)
 
         if production_mode == 'consume_produce':
             # To produce remaining qty of final product
@@ -786,6 +788,7 @@ class mrp_production(osv.osv):
         for wc_line in production.workcenter_lines:
             wc = wc_line.workcenter_id
             if wc.costs_journal_id and wc.costs_general_account_id:
+                # Cost per hour
                 value = wc_line.hour * wc.costs_hour
                 account = wc.costs_hour_account_id.id
                 if value and account:
@@ -799,9 +802,9 @@ class mrp_production(osv.osv):
                         'ref': wc.code,
                         'product_id': wc.product_id.id,
                         'unit_amount': wc_line.hour,
-                        'product_uom_id': wc.product_id.uom_id.id
+                        'product_uom_id': wc.product_id and wc.product_id.uom_id.id or False
                     } )
-            if wc.costs_journal_id and wc.costs_general_account_id:
+                # Cost per cycle
                 value = wc_line.cycle * wc.costs_cycle
                 account = wc.costs_cycle_account_id.id
                 if value and account:
@@ -815,7 +818,7 @@ class mrp_production(osv.osv):
                         'ref': wc.code,
                         'product_id': wc.product_id.id,
                         'unit_amount': wc_line.cycle,
-                        'product_uom_id': wc.product_id.uom_id.id
+                        'product_uom_id': wc.product_id and wc.product_id.uom_id.id or False
                     } )
         return amount
 

@@ -188,7 +188,7 @@ class stock_location(osv.osv):
                 "by a worker. With 'Automatic No Step Added', the location is replaced in the original move."
             ),
         'chained_picking_type': fields.selection([('out', 'Sending Goods'), ('in', 'Getting Goods'), ('internal', 'Internal')], 'Shipping Type', help="Shipping Type of the Picking List that will contain the chained move (leave empty to automatically detect the type based on the source and destination locations)."),
-        'chained_company_id': fields.many2one('res.company', 'Chained Company', help='The company the Picking List containing the chained move will belong to (leave empty to use the default company determination rules'),
+        'chained_company_id': fields.many2one('res.company', 'Chained Company', help="Picking List containing the chained move will belong to this company ( leave empty to use the default company determination rules )."),
         'chained_delay': fields.integer('Chaining Lead Time',help="Delay between original move and chained move in days"),
         'address_id': fields.many2one('res.partner.address', 'Location Address',help="Address of  customer or supplier."),
         'icon': fields.selection(tools.icons, 'Icon', size=64,help="Icon show in  hierarchical tree view"),
@@ -1103,6 +1103,9 @@ class stock_picking(osv.osv):
             res[picking.id] = invoice_id
             for move_line in picking.move_lines:
                 if move_line.state == 'cancel':
+                    continue
+                if move_line.scrapped:
+                    # do no invoice scrapped products
                     continue
                 vals = self._prepare_invoice_line(cr, uid, group, picking, move_line,
                                 invoice_id, invoice_vals, context=context)
@@ -2628,12 +2631,14 @@ class stock_inventory(osv.osv):
         'company_id': lambda self,cr,uid,c: self.pool.get('res.company')._company_default_get(cr, uid, 'stock.inventory', context=c)
     }
 
-    def copy(self, cr, uid, id, default=None, context=None):
+    def copy_data(self, cr, uid, id, default=None, context=None):
         if default is None:
             default = {}
-        default = default.copy()
-        default.update({'move_ids': [], 'date_done': False})
-        return super(stock_inventory, self).copy(cr, uid, id, default, context=context)
+        # force new date, date_done and move_ids on copied datas
+        default.update(date=False, date_done=False, move_ids=[])
+        copied_data = super(stock_inventory, self).copy_data(cr, uid, id, default=default, context=context)
+        copied_data.pop('date',None)
+        return copied_data
 
     def _inventory_line_hook(self, cr, uid, inventory_line, move_vals):
         """ Creates a stock move from an inventory line
@@ -2651,7 +2656,11 @@ class stock_inventory(osv.osv):
             context = {}
         move_obj = self.pool.get('stock.move')
         for inv in self.browse(cr, uid, ids, context=context):
-            move_obj.action_done(cr, uid, [x.id for x in inv.move_ids], context=context)
+            inventory_move_ids = [x.id for x in inv.move_ids]
+            move_obj.action_done(cr, uid, inventory_move_ids, context=context)
+            # ask 'stock.move' action done are going to change to 'date' of the move,
+            # we overwrite the date as moves must appear at the inventory date.
+            move_obj.write(cr, uid, inventory_move_ids, {'date': inv.date}, context=context)
             self.write(cr, uid, [inv.id], {'state':'done', 'date_done': time.strftime('%Y-%m-%d %H:%M:%S')}, context=context)
         return True
 

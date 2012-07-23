@@ -272,6 +272,7 @@ class project(osv.osv):
         default = default or {}
         context['active_test'] = False
         default['state'] = 'open'
+        default['line_ids'] = []
         default['tasks'] = []
         proj = self.browse(cr, uid, id, context=context)
         if not default.get('name', False):
@@ -941,9 +942,9 @@ class task(osv.osv):
                 'name': newname,
             }, context=context)
             if delegate_data['state'] == 'pending':
-                self.do_pending(cr, uid, task.id, context=context)
+                self.do_pending(cr, uid, [task.id], context=context)
             elif delegate_data['state'] == 'done':
-                self.do_close(cr, uid, task.id, context=context)
+                self.do_close(cr, uid, [task.id], context=context)
             
             message = _("The task '%s' has been delegated to %s.") % (delegate_data['name'], delegate_data['user_id'][1])
             self.log(cr, uid, task.id, message)
@@ -1138,12 +1139,12 @@ class account_analytic_account(osv.osv):
             vals['child_ids'] = []
         return super(account_analytic_account, self).create(cr, uid, vals, context=context)
 
-    def unlink(self, cr, uid, ids, *args, **kwargs):
+    def unlink(self, cr, uid, ids, context=None):
         project_obj = self.pool.get('project.project')
-        analytic_ids = project_obj.search(cr, uid, [('analytic_account_id','in',ids)])
+        analytic_ids = project_obj.search(cr, uid, [('analytic_account_id','in',ids)], context=context)
         if analytic_ids:
             raise osv.except_osv(_('Warning !'), _('Please delete the project linked with this account first.'))
-        return super(account_analytic_account, self).unlink(cr, uid, ids, *args, **kwargs)
+        return super(account_analytic_account, self).unlink(cr, uid, ids, context=context)
 
 account_analytic_account()
 

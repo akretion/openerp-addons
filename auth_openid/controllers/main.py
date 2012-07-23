@@ -118,8 +118,20 @@ class OpenIDController(openerpweb.Controller):
     def _get_realm(self, req):
         return req.httprequest.host_url
 
+    @openerpweb.httprequest
+    def verify_direct(self, req, db, url):
+        result = self._verify(req, db, url)
+        if 'error' in result:
+            return werkzeug.exceptions.BadRequest(result['error'])
+        if result['action'] == 'redirect':
+            return werkzeug.utils.redirect(result['value'])
+        return result['value']
+
     @openerpweb.jsonrequest
     def verify(self, req, db, url):
+        return self._verify(req, db, url)
+
+    def _verify(self, req, db, url):
         redirect_to = werkzeug.urls.Href(req.httprequest.host_url + 'auth_openid/login/process')(session_id=req.session_id)
         realm = self._get_realm(req)
 
@@ -199,7 +211,7 @@ class OpenIDController(openerpweb.Controller):
                         # TODO fill empty fields with the ones from sreg/ax
                         cr.commit()
 
-                        u = req.session.login(dbname, login, key)
+                        u = req.session.authenticate(dbname, login, key, {})
 
             if not user_id:
                 session['message'] = 'This OpenID identifier is not associated to any active users'
