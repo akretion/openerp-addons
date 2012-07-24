@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-02-08 00:35+0000\n"
-"PO-Revision-Date: 2012-05-29 11:14+0000\n"
-"Last-Translator: Kjell H. Skalmeraas (adEgo) <Unknown>\n"
+"PO-Revision-Date: 2012-07-23 10:56+0000\n"
+"Last-Translator: Kaare Pettersen <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-05-30 05:47+0000\n"
-"X-Generator: Launchpad (build 15316)\n"
+"X-Launchpad-Export-Date: 2012-07-24 06:06+0000\n"
+"X-Generator: Launchpad (build 15668)\n"
 
 #. module: account
 #: view:account.invoice.report:0
@@ -43,7 +43,7 @@ msgstr ""
 #. module: account
 #: view:account.move.reconcile:0
 msgid "Journal Entry Reconcile"
-msgstr ""
+msgstr "Bilagsregistreing Avstemming"
 
 #. module: account
 #: view:account.account:0
@@ -56,7 +56,7 @@ msgstr "Kontostatistikk"
 #. module: account
 #: view:account.invoice:0
 msgid "Proforma/Open/Paid Invoices"
-msgstr ""
+msgstr "Proforma/åpne/betalt fakturaer"
 
 #. module: account
 #: field:report.invoice.created,residual:0
@@ -169,7 +169,7 @@ msgstr "Advarsel!"
 #: code:addons/account/account.py:3112
 #, python-format
 msgid "Miscellaneous Journal"
-msgstr ""
+msgstr "Diverse journal"
 
 #. module: account
 #: field:account.fiscal.position.account,account_src_id:0
@@ -190,7 +190,7 @@ msgstr "Fakturaer Opprettet innefor de siste 15 dager"
 #. module: account
 #: field:accounting.report,label_filter:0
 msgid "Column Label"
-msgstr ""
+msgstr "Kolonneoverskrift"
 
 #. module: account
 #: code:addons/account/wizard/account_move_journal.py:95
@@ -223,7 +223,7 @@ msgstr "account.tax"
 #. module: account
 #: model:ir.model,name:account.model_account_move_line_reconcile_select
 msgid "Move line reconcile select"
-msgstr ""
+msgstr "Flytt linje velg for avstemming"
 
 #. module: account
 #: help:account.tax.code,notprintable:0
@@ -334,7 +334,7 @@ msgstr ""
 #. module: account
 #: model:ir.model,name:account.model_account_unreconcile
 msgid "Account Unreconcile"
-msgstr ""
+msgstr "Konto ikke avstemt"
 
 #. module: account
 #: view:product.product:0
@@ -404,7 +404,7 @@ msgstr "Innkjøpsrefusjon"
 #. module: account
 #: selection:account.journal,type:0
 msgid "Opening/Closing Situation"
-msgstr ""
+msgstr "Åpne/Avslutte Situasjon"
 
 #. module: account
 #: help:account.journal,currency:0
@@ -624,7 +624,7 @@ msgstr "Sekvenser"
 #: field:account.financial.report,account_report_id:0
 #: selection:account.financial.report,type:0
 msgid "Report Value"
-msgstr ""
+msgstr "Rapportverdi"
 
 #. module: account
 #: view:account.fiscal.position.template:0
@@ -734,12 +734,12 @@ msgstr "Partnere avstemt i dag"
 #. module: account
 #: view:report.hr.timesheet.invoice.journal:0
 msgid "Sale journal in this year"
-msgstr ""
+msgstr "Salgsjournal i dette året"
 
 #. module: account
 #: selection:account.financial.report,display_detail:0
 msgid "Display children with hierarchy"
-msgstr ""
+msgstr "Vis underliggende med hierarki"
 
 #. module: account
 #: selection:account.payment.term.line,value:0
@@ -773,7 +773,7 @@ msgstr "Dukan bare endre valuta for fakturakladder !"
 #. module: account
 #: model:ir.ui.menu,name:account.menu_account_report
 msgid "Financial Report"
-msgstr ""
+msgstr "Finansrapport"
 
 #. module: account
 #: view:account.analytic.journal:0
@@ -797,6 +797,8 @@ msgid ""
 "Taxes are missing!\n"
 "Click on compute button."
 msgstr ""
+"Avgifter mangler!\n"
+"Klikk på beregntasten."
 
 #. module: account
 #: model:ir.model,name:account.model_account_subscription_line
@@ -964,7 +966,7 @@ msgstr "Konsolidering"
 #: model:account.financial.report,name:account.account_financial_report_liability0
 #: model:account.financial.report,name:account.account_financial_report_liabilitysum0
 msgid "Liability"
-msgstr ""
+msgstr "Gjeld"
 
 #. module: account
 #: view:account.entries.report:0
@@ -1083,7 +1085,7 @@ msgstr ""
 #. module: account
 #: field:account.report.general.ledger,sortby:0
 msgid "Sort by"
-msgstr ""
+msgstr "Sorter etter"
 
 #. module: account
 #: help:account.fiscalyear.close,fy_id:0
@@ -1120,7 +1122,7 @@ msgstr "Til diskusjon"
 #: model:ir.actions.act_window,name:account.action_view_bank_statement_tree
 #: model:ir.ui.menu,name:account.journal_cash_move_lines
 msgid "Cash Registers"
-msgstr ""
+msgstr "Kasseløsning"
 
 #. module: account
 #: report:account.analytic.account.journal:0
@@ -1184,7 +1186,7 @@ msgstr "Credit Centralisation"
 #. module: account
 #: view:report.account_type.sales:0
 msgid "All Months Sales by type"
-msgstr ""
+msgstr "Alle måneder salg pr. type"
 
 #. module: account
 #: model:ir.actions.act_window,help:account.action_invoice_tree2
@@ -1209,12 +1211,12 @@ msgstr "Annuler fakturaer"
 #. module: account
 #: help:account.journal,code:0
 msgid "The code will be displayed on reports."
-msgstr ""
+msgstr "Koden vil bli vist på rapporter."
 
 #. module: account
 #: view:account.tax.template:0
 msgid "Taxes used in Purchases"
-msgstr ""
+msgstr "Avgift benyttet ved innkjøp."
 
 #. module: account
 #: field:account.invoice.tax,tax_code_id:0
@@ -1796,7 +1798,7 @@ msgstr "Kreditbeløp"
 #: code:addons/account/account.py:429
 #, python-format
 msgid "Error!"
-msgstr ""
+msgstr "Feil!"
 
 #. module: account
 #: sql_constraint:account.move.line:0
@@ -1828,7 +1830,7 @@ msgstr "Registreringslinjer"
 #. module: account
 #: field:account.vat.declaration,based_on:0
 msgid "Based on"
-msgstr ""
+msgstr "Basert på"
 
 #. module: account
 #: field:account.invoice,move_id:0
@@ -1858,7 +1860,7 @@ msgstr ""
 #. module: account
 #: constraint:res.company:0
 msgid "Error! You can not create recursive companies."
-msgstr ""
+msgstr "Feil ! Du kan ikke lage rekursive firmaer."
 
 #. module: account
 #: model:ir.actions.report.xml,name:account.account_journal_sale_purchase
