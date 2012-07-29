@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-02-08 00:36+0000\n"
-"PO-Revision-Date: 2012-07-28 04:26+0000\n"
+"PO-Revision-Date: 2012-07-28 11:06+0000\n"
 "Last-Translator: Fábio Martinelli <webmaster@guaru.net>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-07-28 05:23+0000\n"
+"X-Launchpad-Export-Date: 2012-07-29 04:51+0000\n"
 "X-Generator: Launchpad (build 15694)\n"
 
 #. module: crm_partner_assign
@@ -781,7 +781,7 @@ msgstr "País"
 #. module: crm_partner_assign
 #: field:crm.lead.forward.to.partner,headers:0
 msgid "Message headers"
-msgstr ""
+msgstr "Cabeçalho da mensagem"
 
 #. module: crm_partner_assign
 #: view:res.partner:0
@@ -822,7 +822,7 @@ msgstr "Pendente"
 #. module: crm_partner_assign
 #: view:crm.partner.report.assign:0
 msgid "Partner assigned Analysis"
-msgstr ""
+msgstr "Análise do Parceiro"
 
 #. module: crm_partner_assign
 #: model:ir.model,name:crm_partner_assign.model_crm_lead_report_assign
@@ -833,11 +833,12 @@ msgstr "Relatório de Prospecto CRM"
 #: help:crm.lead.forward.to.partner,references:0
 msgid "Message references, such as identifiers of previous messages"
 msgstr ""
+"Referências da mensagem, como identificadores de mensagens anteriores"
 
 #. module: crm_partner_assign
 #: constraint:res.partner:0
 msgid "Error ! You cannot create recursive associated members."
-msgstr ""
+msgstr "Erro! Você não pode criar recursivamente a membros associados."
 
 #. module: crm_partner_assign
 #: selection:crm.lead.forward.to.partner,history:0
@@ -852,12 +853,12 @@ msgstr "Sequência"
 #. module: crm_partner_assign
 #: model:ir.model,name:crm_partner_assign.model_crm_partner_report_assign
 msgid "CRM Partner Report"
-msgstr ""
+msgstr "CRM Relatório de Parceiro"
 
 #. module: crm_partner_assign
 #: model:ir.model,name:crm_partner_assign.model_crm_lead_forward_to_partner
 msgid "E-mail composition wizard"
-msgstr ""
+msgstr "Assistente de composição de E-mail."
 
 #. module: crm_partner_assign
 #: selection:crm.lead.report.assign,priority:0
@@ -878,7 +879,7 @@ msgstr "Data de Criação"
 #. module: crm_partner_assign
 #: field:crm.lead.forward.to.partner,filter_id:0
 msgid "Filters"
-msgstr ""
+msgstr "Filtros"
 
 #. module: crm_partner_assign
 #: view:crm.lead.report.assign:0
@@ -889,4 +890,4 @@ msgstr "Ano"
 #. module: crm_partner_assign
 #: help:crm.lead.forward.to.partner,reply_to:0
 msgid "Preferred response address for the message"
-msgstr ""
+msgstr "Endereço de resposta preferido"
