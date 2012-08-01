@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: pt_BR\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-02-08 01:37+0100\n"
-"PO-Revision-Date: 2012-02-17 09:10+0000\n"
-"Last-Translator: Emerson <Unknown>\n"
+"PO-Revision-Date: 2012-08-01 02:39+0000\n"
+"Last-Translator: Fábio Martinelli <webmaster@guaru.net>\n"
 "Language-Team: <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-05-17 05:47+0000\n"
-"X-Generator: Launchpad (build 15259)\n"
+"X-Launchpad-Export-Date: 2012-08-01 05:29+0000\n"
+"X-Generator: Launchpad (build 15719)\n"
 
 #. module: hr_timesheet_sheet
 #: field:hr.analytic.timesheet,sheet_id:0 field:hr.attendance,sheet_id:0
@@ -57,12 +57,12 @@ msgstr "Departamento"
 #. module: hr_timesheet_sheet
 #: view:hr.timesheet.report:0 view:timesheet.report:0
 msgid "Timesheet in current year"
-msgstr ""
+msgstr "Folha de Tempo neste ano"
 
 #. module: hr_timesheet_sheet
 #: model:process.transition,name:hr_timesheet_sheet.process_transition_tasktimesheet0
 msgid "Task timesheet"
-msgstr ""
+msgstr "Folha de tempo de tarefas"
 
 #. module: hr_timesheet_sheet
 #: view:hr_timesheet_sheet.sheet:0
@@ -85,12 +85,12 @@ msgstr "Março"
 #. module: hr_timesheet_sheet
 #: view:timesheet.report:0 field:timesheet.report,cost:0
 msgid "#Cost"
-msgstr ""
+msgstr "#Custo"
 
 #. module: hr_timesheet_sheet
 #: view:hr.timesheet.report:0 view:timesheet.report:0
 msgid "Timesheet of last month"
-msgstr ""
+msgstr "Folha de Tempo do mês passado"
 
 #. module: hr_timesheet_sheet
 #: view:hr.timesheet.report:0 field:hr.timesheet.report,company_id:0
@@ -127,13 +127,14 @@ msgstr "Baseado na planilha de apontamento"
 #. module: hr_timesheet_sheet
 #: view:hr.timesheet.report:0 view:timesheet.report:0
 msgid "Group by day of date"
-msgstr ""
+msgstr "Agrupar por dia da data"
 
 #. module: hr_timesheet_sheet
 #: code:addons/hr_timesheet_sheet/hr_timesheet_sheet.py:615
 #, python-format
 msgid "You cannot modify an entry in a confirmed timesheet!"
 msgstr ""
+"Você não pode modificar uma entrada em uma folha de tempo confirmada!"
 
 #. module: hr_timesheet_sheet
 #: model:process.transition.action,name:hr_timesheet_sheet.process_transition_action_validatetimesheet0
@@ -143,7 +144,7 @@ msgstr "Validar"
 #. module: hr_timesheet_sheet
 #: selection:hr_timesheet_sheet.sheet,state:0
 msgid "Approved"
-msgstr ""
+msgstr "Aprovado"
 
 #. module: hr_timesheet_sheet
 #: selection:hr_timesheet_sheet.sheet,state_attendance:0
@@ -162,6 +163,8 @@ msgid ""
 "In order to create a timesheet for this employee, you must assign the "
 "employee to an analytic journal!"
 msgstr ""
+"Para criar uma folha de tempo para este funcionário, você precisa associar o "
+"funcionário a um diário analítico!"
 
 #. module: hr_timesheet_sheet
 #: view:hr_timesheet_sheet.sheet:0
@@ -176,6 +179,8 @@ msgstr "Recusar"
 msgid ""
 "You cannot enter an attendance date outside the current timesheet dates!"
 msgstr ""
+"Você não pode definir uma data de entrada de um atendimento fora das datas "
+"dessa folha!"
 
 #. module: hr_timesheet_sheet
 #: model:ir.actions.act_window,help:hr_timesheet_sheet.action_hr_timesheet_current_open
@@ -255,7 +260,6 @@ msgstr " Mês "
 #: view:hr_timesheet_sheet.sheet:0
 #: model:ir.actions.act_window,name:hr_timesheet_sheet.act_hr_employee_2_hr_timesheet
 #: model:ir.actions.act_window,name:hr_timesheet_sheet.act_hr_timesheet_sheet_form
-#: model:ir.actions.act_window,name:hr_timesheet_sheet.action_hr_timesheet_sheet_graph
 #: model:ir.ui.menu,name:hr_timesheet_sheet.menu_act_hr_timesheet_sheet_form
 #: view:res.company:0
 msgid "Timesheets"
