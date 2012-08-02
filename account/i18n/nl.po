@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-02-08 00:35+0000\n"
-"PO-Revision-Date: 2012-07-31 10:48+0000\n"
-"Last-Translator: Erwin <Unknown>\n"
+"PO-Revision-Date: 2012-08-01 14:49+0000\n"
+"Last-Translator: Stefan Rijnhart (Therp) <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-01 05:28+0000\n"
+"X-Launchpad-Export-Date: 2012-08-02 05:23+0000\n"
 "X-Generator: Launchpad (build 15719)\n"
 
 #. module: account
@@ -7784,7 +7784,7 @@ msgstr ""
 #. module: account
 #: view:account.move:0
 msgid "Unposted Journal Entries"
-msgstr "Niet geboekte journaalposten"
+msgstr "Ongeboekte journaalposten"
 
 #. module: account
 #: view:product.product:0
@@ -7919,7 +7919,7 @@ msgstr "Rapportnaam"
 #: code:addons/account/account.py:3003
 #, python-format
 msgid "Cash"
-msgstr "Vlottende activa"
+msgstr "Kas"
 
 #. module: account
 #: field:account.fiscal.position.account,account_dest_id:0
@@ -10078,7 +10078,7 @@ msgstr "April"
 #. module: account
 #: model:account.financial.report,name:account.account_financial_report_profitloss_toreport0
 msgid "Profit (Loss) to report"
-msgstr "Winst (verlies) te rapoprteren"
+msgstr "Winst (verlies) te rapporteren"
 
 #. module: account
 #: view:account.move.line.reconcile.select:0
@@ -10750,11 +10750,12 @@ msgid ""
 "created by the system on document validation (invoices, bank statements...) "
 "and will be created in 'Posted' state."
 msgstr ""
-"Alle handmatig gemaakte nieuwe journaalposten zijn meestal in de staat 'Niet "
-"geboekt', maar u kunt met de optie instellen om deze status over te slaan op "
-"het betreffende dagboek. In dat geval worden ze behandeld als journaalposten "
-"automatisch aangemaakt door het systeem bij document validatie (facturen, "
-"bankafschriften, ...). Tevens worden ze aangemaakt in de 'Geboekt' staat."
+"Alle handmatig gemaakte nieuwe journaalposten zijn meestal in de staat "
+"'Ongeboekt', maar u kunt met de optie instellen om deze status over te slaan "
+"op het betreffende dagboek. In dat geval worden ze behandeld als "
+"journaalposten automatisch aangemaakt door het systeem bij document "
+"validatie (facturen, bankafschriften, ...). Tevens worden ze aangemaakt in "
+"de 'Geboekt' staat."
 
 #. module: account
 #: view:account.fiscal.position.template:0
