@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2011-10-03 14:08+0000\n"
-"PO-Revision-Date: 2012-07-31 19:44+0000\n"
+"PO-Revision-Date: 2012-08-01 18:06+0000\n"
 "Last-Translator: Ayhan KIZILTAN <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-01 05:03+0000\n"
+"X-Launchpad-Export-Date: 2012-08-02 05:08+0000\n"
 "X-Generator: Launchpad (build 15719)\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,-1,0,-1,-1,-1,-1\n"
 
@@ -313,6 +313,8 @@ msgid ""
 "This account will be used to value stock moves that have this location as "
 "source, instead of the stock input account from the product."
 msgstr ""
+"Üründen stok giriş hesabı yapmak yerinde, bu konumu kaynak olarak kullanan "
+"stok hareketlerini değerlendirmek için bu hesap kullanılacaktır."
 
 #. module: stock
 #: model:ir.model,name:stock.model_stock_production_lot
@@ -759,7 +761,7 @@ msgstr "Üretim lotu ürüne bir seri numarası vermek için kullanılır"
 #, python-format
 msgid ""
 "Processing quantity %s for %s is larger than the available quantity %s!"
-msgstr ""
+msgstr "%s için %s işlem miktarı  %s mevcut miktarından  ten fazladır!"
 
 #. module: stock
 #: field:stock.warehouse,lot_input_id:0
@@ -845,6 +847,8 @@ msgid ""
 "Either there are no moves linked to the picking or Accounting Journals are "
 "misconfigured!"
 msgstr ""
+"Ne toplamaya ne de Hesap Günlüklerine bağlantılı yanlış ayarlanmış hareket "
+"yoktur!"
 
 #. module: stock
 #: view:stock.location:0
@@ -3555,7 +3559,7 @@ msgstr ""
 #: code:addons/stock/wizard/stock_fill_inventory.py:53
 #, python-format
 msgid "Stock Inventory is already Validated."
-msgstr ""
+msgstr "Mal Stoğu zaten Doğrulanmış."
 
 #. module: stock
 #: model:ir.ui.menu,name:stock.menu_stock_products_moves
@@ -3884,6 +3888,8 @@ msgid ""
 "This account will be used to value stock moves that have this location as "
 "destination, instead of the stock output account from the product."
 msgstr ""
+"Üründen stok çıkış hesabı yapmak yerinde, bu konumu hedef olarak kullanan "
+"stok hareketlerini değerlendirmek için bu hesap kullanılacaktır."
 
 #. module: stock
 #: model:ir.model,name:stock.model_stock_move_split
