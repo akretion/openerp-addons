@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-02-08 00:35+0000\n"
-"PO-Revision-Date: 2012-08-02 19:32+0000\n"
+"PO-Revision-Date: 2012-08-04 19:50+0000\n"
 "Last-Translator: Ayhan KIZILTAN <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-03 06:20+0000\n"
-"X-Generator: Launchpad (build 15734)\n"
+"X-Launchpad-Export-Date: 2012-08-05 05:14+0000\n"
+"X-Generator: Launchpad (build 15742)\n"
 
 #. module: account
 #: view:account.invoice.report:0
@@ -2860,6 +2860,8 @@ msgid ""
 "You need an Opening journal with centralisation checked to set the initial "
 "balance!"
 msgstr ""
+"Açılış bakiyesini ayarlamak için merkezden kontrollü bir Açılış günlüğüne "
+"gereksiminiz var!"
 
 #. module: account
 #: view:account.invoice.tax:0
@@ -3849,6 +3851,8 @@ msgid ""
 "centralised counterpart box in the related journal from the configuration "
 "menu."
 msgstr ""
+"Merkezden kontrollü günlükte bir fatura oluşturamazsınız. Yapılandırma "
+"menüsünden ilgili günlüğün karşılık gelen kutudan işareti kaldırın."
 
 #. module: account
 #: field:account.account,name:0
@@ -3950,6 +3954,8 @@ msgid ""
 "Value of Loss or Gain due to changes in exchange rate when doing multi-"
 "currency transactions."
 msgstr ""
+"Çoklu-para birimi işlemleri yaparken kur farklarındaki değişimlerden dolayı "
+"Kayıp ya da Kazanç oluşur."
 
 #. module: account
 #: view:account.analytic.line:0
@@ -4163,6 +4169,8 @@ msgid ""
 "You haven't supplied enough argument to compute the initial balance, please "
 "select a period and journal in the context."
 msgstr ""
+"Açılış bakiyesini hesaplamak için yeterli değişken sağlauamadınız, lütfen bu "
+"durumda bir dönem ve günlük seçin."
 
 #. module: account
 #: model:process.transition,note:account.process_transition_supplieranalyticcost0
@@ -4209,6 +4217,10 @@ msgid ""
 "some non legal fields or you must unconfirm the journal entry first! \n"
 "%s"
 msgstr ""
+"Onaylanmış birişte bu değişikliği yapamazsınız! Yalnızca geçerli olmayan "
+"bazı alanları değiştirebilirsiniz ya da önce günlük girişinin onayını "
+"kaldırmalısınız! \n"
+"%s"
 
 #. module: account
 #: field:res.company,paypal_account:0
@@ -4474,6 +4486,7 @@ msgstr "Allow Reconciliation"
 msgid ""
 "You can not modify company of this period as some journal items exists."
 msgstr ""
+"Bazı günlük maddeleri olduğu için bu döneme ait firmayı değiştiremezsiniz."
 
 #. module: account
 #: view:account.analytic.account:0
@@ -4748,6 +4761,9 @@ msgid ""
 "account if this is a Customer Invoice or Supplier Refund, otherwise a "
 "Partner bank account number."
 msgstr ""
+"Fatura ödemesinin yapılacağı Banka Hesabı. Eğer bu bir Müşteri Faturası ya "
+"da Tedarikçi İadesi ise bir Firma Banka Hesabı, yoksa bir Paydaş banka hesap "
+"numarasıdır."
 
 #. module: account
 #: view:account.state.open:0
@@ -4792,6 +4808,8 @@ msgid ""
 "You can not define children to an account with internal type different of "
 "\"View\"! "
 msgstr ""
+"Yapılandırma Hatası!\n"
+"İç türü \"Görünüm\" den değişik olan bir hesaba alt hesap tanımlayamazsınız! "
 
 #. module: account
 #: code:addons/account/account.py:923
@@ -4924,6 +4942,8 @@ msgid ""
 "From this view, have an analysis of your treasury. It sums the balance of "
 "every accounting entries made on liquidity accounts per period."
 msgstr ""
+"Bu görünümden, mali durumunuzun analizini elde edersiniz. Her dönem için "
+"nakit hesaplarına yapılan her muhasebe girişinin bilanço toplamını yapar."
 
 #. module: account
 #: field:account.journal,group_invoice_lines:0
@@ -5093,6 +5113,8 @@ msgid ""
 "encode the sale and purchase rates or choose from list of taxes. This last "
 "choice assumes that the set of tax defined on this template is complete"
 msgstr ""
+"Eğer kullanıcıya satış ve satınalma oranlarını şifrelemeyi ya da vergi "
+"listesinden seçmeyi önerecekseniz bu mantıksal işlem size yardım eder."
 
 #. module: account
 #: view:account.financial.report:0
@@ -5399,6 +5421,7 @@ msgstr "Müşteri İade Faturası"
 msgid ""
 "You can not create more than one move per period on centralized journal"
 msgstr ""
+"Merkezi günlük üzerinde ger dönem için birden fazla hareket oluşturmazsınız"
 
 #. module: account
 #: field:account.tax,ref_tax_sign:0
@@ -5634,6 +5657,8 @@ msgid ""
 "No fiscal year defined for this date !\n"
 "Please create one from the configuration of the accounting menu."
 msgstr ""
+"Bu tarih için tanımlanan mali yıl yok!\n"
+"Muhasebe menüsünün yapılandırmasını kullanarak bir tane oluşturun ."
 
 #. module: account
 #: view:account.move.line.reconcile:0
@@ -6178,6 +6203,9 @@ msgid ""
 "choice assumes that the set of tax defined for the chosen template is "
 "complete"
 msgstr ""
+"Eğer kullanıcıya satış ve satınalma oranlarını şifrelemeyi ya da olağan m2o "
+"alanlarını kullanmayı önerecekseniz bu mantıksal işlem size yardım eder. Bu "
+"son seçim, seçilen şablon için vergi setinin tamamlandığını sanar."
 
 #. module: account
 #: report:account.vat.declaration:0
@@ -6795,7 +6823,7 @@ msgstr "Mali Rapor Biçimi"
 #. module: account
 #: selection:account.financial.report,sign:0
 msgid "Preserve balance sign"
-msgstr ""
+msgstr "Bakiye koruma imi"
 
 #. module: account
 #: view:account.vat.declaration:0
@@ -6854,6 +6882,9 @@ msgid ""
 "row to display the amount of debit/credit/balance that precedes the filter "
 "you've set."
 msgstr ""
+"Süzgeçi tarih ya da dönem olarak seçtiyseniz, bu alan, ayarladığınız süzgeçe "
+"göre borç/alacak/bakiye tutarlarının görüntülenmesi için bir satır eklemnizi "
+"sağlar."
 
 #. module: account
 #: view:account.bank.statement:0
@@ -6877,6 +6908,10 @@ msgid ""
 "some non legal fields or you must unreconcile first!\n"
 "%s"
 msgstr ""
+"Uzlaştırılmış bir giriş için bu değişikliği yapamazsınız! Yalnızca bazı "
+"geçerli olmayan alanları değiştirebilirsiniz ya da önce uzlaşmayı "
+"kaldırmalısınız!\n"
+"%s"
 
 #. module: account
 #: report:account.general.ledger:0
@@ -7715,6 +7750,8 @@ msgstr "Cancel Selected Invoices"
 msgid ""
 "This field is used to generate legal reports: profit and loss, balance sheet."
 msgstr ""
+"Bu alan yasal raporlar oluşturmak için kullanılır: kar ve zarar, bilanço "
+"tablosu."
 
 #. module: account
 #: model:ir.actions.act_window,help:account.action_review_payment_terms_installer
@@ -7724,6 +7761,10 @@ msgid ""
 "terms for each letter. Each customer or supplier can be assigned to one of "
 "these payment terms."
 msgstr ""
+"Ödeme koşulları, bir ya da daha çok ödemede, bir müşteri ya da tedarikçi "
+"faturasının ödeme koşullarını tanımlar. Dönemsel müşteri anımsatıcıları, her "
+"mektupta ödeme koşullarını kullanır. Her müşteri ya da tedarikçi bu ödeme "
+"koşullarından birine atanmıştır."
 
 #. module: account
 #: selection:account.entries.report,month:0
@@ -7764,6 +7805,7 @@ msgid ""
 "The sequence field is used to order the resources from lower sequences to "
 "higher ones."
 msgstr ""
+"Sıra alanı, kaynakların düşükten yükseğe doğru sıralanması için kullanılır."
 
 #. module: account
 #: field:account.tax.code,code:0
@@ -8030,7 +8072,7 @@ msgstr "Select a currency to apply on the invoice"
 #, python-format
 msgid ""
 "The bank account defined on the selected chart of accounts hasn't a code."
-msgstr ""
+msgstr "Seçilen hesap tablosu için tanımlanan banka hesabının bir kodu yok."
 
 #. module: account
 #: code:addons/account/wizard/account_invoice_refund.py:108
@@ -8146,6 +8188,8 @@ msgstr ""
 msgid ""
 "Check this box if this account allows reconciliation of journal items."
 msgstr ""
+"Eğer bu hesap günlük maddelerinin uzlaştırılmasına izin veriyorsa bu kutuyu "
+"işaretleyin."
 
 #. module: account
 #: help:account.period,state:0
@@ -8314,6 +8358,8 @@ msgid ""
 "Total amount (in Company currency) for transactions held in secondary "
 "currency for this account."
 msgstr ""
+"İşlemler için toplam tutar (Firmanın para biriminde) bu hesap için ikincil "
+"para biriminde tutulur."
 
 #. module: account
 #: report:account.invoice:0
@@ -8351,6 +8397,8 @@ msgid ""
 "You can not cancel an invoice which is partially paid! You need to "
 "unreconcile related payment entries first!"
 msgstr ""
+"Kısmen ödenmiş bir faturayı iptal edemezsiniz! Önce ödeme girişlerinden "
+"uzlaşmayı kaldırmalısınız!"
 
 #. module: account
 #: field:account.chart.template,property_account_income_categ:0
@@ -8847,6 +8895,9 @@ msgid ""
 "Make sure you have configured payment terms properly !\n"
 "The latest payment term line should be of the type \"Balance\" !"
 msgstr ""
+"Denk olmayan bir girişi doğrulayamazsınız!\n"
+"Ödeme koşullarını doğru olarak ayarladığınızdan emin olun!\n"
+"Son ödeme koşulu satırını \"Denk\" türünde olmalıdır !"
 
 #. module: account
 #: view:account.account:0
