@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-02-08 01:37+0100\n"
-"PO-Revision-Date: 2012-08-04 10:00+0000\n"
+"PO-Revision-Date: 2012-08-05 09:34+0000\n"
 "Last-Translator: Erwin <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-05 05:15+0000\n"
-"X-Generator: Launchpad (build 15742)\n"
+"X-Launchpad-Export-Date: 2012-08-06 05:19+0000\n"
+"X-Generator: Launchpad (build 15745)\n"
 
 #. module: stock
 #: field:product.product,track_outgoing:0
@@ -331,7 +331,7 @@ msgstr "Waarschuwing!"
 #. module: stock
 #: field:stock.invoice.onshipping,group:0
 msgid "Group by partner"
-msgstr "Sorteer op relatie"
+msgstr "Samenvoegen op één factuur"
 
 #. module: stock
 #: model:ir.model,name:stock.model_res_partner view:report.stock.inventory:0
@@ -356,7 +356,7 @@ msgstr ""
 #. module: stock
 #: selection:stock.return.picking,invoice_state:0
 msgid "No invoicing"
-msgstr "Geen facturatie"
+msgstr "Geen credit factuur"
 
 #. module: stock
 #: view:stock.move:0
@@ -1386,7 +1386,7 @@ msgstr ""
 #. module: stock
 #: selection:stock.return.picking,invoice_state:0
 msgid "To be refunded/invoiced"
-msgstr "Terug te betalen/gefactureerd"
+msgstr "Terug te betalen (Credit factuur)"
 
 #. module: stock
 #: model:stock.location,name:stock.stock_location_shop0
