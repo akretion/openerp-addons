@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-02-08 01:37+0100\n"
-"PO-Revision-Date: 2012-08-05 22:03+0000\n"
+"PO-Revision-Date: 2012-08-06 06:55+0000\n"
 "Last-Translator: Ayhan KIZILTAN <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-06 05:18+0000\n"
+"X-Launchpad-Export-Date: 2012-08-07 06:31+0000\n"
 "X-Generator: Launchpad (build 15745)\n"
 
 #. module: account_asset
@@ -481,6 +481,12 @@ msgid ""
 "  * Ending Date: Choose the time between 2 depreciations and the date the "
 "depreciations won't go beyond."
 msgstr ""
+"Amortisman tarihlerini ve satırlarını hesaplamakta kullanılacak yöntemi "
+"seçin.\n"
+"  * Amortisman Sayısı: 2 Amortisman arasındaki amortisman satır sayısını "
+"sabitleyin.\n"
+"  * Bitiş Tarihi: 2 Amortisman arasındaki ,amortismanın daha ileriye "
+"gidemeyeceği süreyi ve tarihi seçin."
 
 #. module: account_asset
 #: view:asset.asset.report:0
@@ -710,6 +716,9 @@ msgid ""
 "You can manually close an asset when the depreciation is over. If the last "
 "line of depreciation is posted, the asset automatically goes in that state."
 msgstr ""
+"Demirbaş oluşturulduğunda 'Taslak' durumundadır.\n"
+"Demirbaş onaylanmışsa, durumu 'Çalışan' olur ve amortisman satırları "
+"muhasebeye işlenir"
 
 #. module: account_asset
 #: field:account.asset.category,name:0
@@ -722,6 +731,8 @@ msgid ""
 "Check this if you want to automatically confirm the assets of this category "
 "when created by invoices."
 msgstr ""
+"Faturalar oluşturulurken bu kategorideki demirbaşların otomatikmen "
+"onaylanmasını istiyorsanız bunu işaretleyin."
 
 #. module: account_asset
 #: view:account.asset.asset:0
@@ -774,6 +785,9 @@ msgid ""
 "search can also be used to personalise your Assets reports and so, match "
 "this analysis to your needs;"
 msgstr ""
+"Bu rapordan, bütün amortismanlara gözatabilirsiniz. Arama aracı Demirbaş "
+"raporlarını özelleştirmek için de kullanılabilir ve böylece bu ncelemeyi "
+"gereksinimlerinize uydurabilirsiniz;"
 
 #. module: account_asset
 #: help:account.asset.category,method_period:0

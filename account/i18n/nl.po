@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-02-08 00:35+0000\n"
-"PO-Revision-Date: 2012-08-05 10:34+0000\n"
+"PO-Revision-Date: 2012-08-06 11:33+0000\n"
 "Last-Translator: Erwin <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-06 05:18+0000\n"
+"X-Launchpad-Export-Date: 2012-08-07 06:31+0000\n"
 "X-Generator: Launchpad (build 15745)\n"
 
 #. module: account
@@ -2684,7 +2684,7 @@ msgstr "Kostenplaatsen"
 #: model:ir.ui.menu,name:account.menu_action_account_form
 #: model:ir.ui.menu,name:account.menu_analytic
 msgid "Accounts"
-msgstr "Rekeningen"
+msgstr "Grootboekrekeningen"
 
 #. module: account
 #: code:addons/account/account_invoice.py:369
@@ -6260,6 +6260,10 @@ msgid ""
 "choice assumes that the set of tax defined for the chosen template is "
 "complete"
 msgstr ""
+"Deze optie helpt u bij het kiezen of u de gebruiker de verkoop- en "
+"inkoopkoers wil laten invoeren of de gebruikelijke keuzevelden te gebruiken. "
+"Bij de laatste keuze neemt het systeem aan dat de belastingen voor het "
+"gekozen sjabloon compleet zijn."
 
 #. module: account
 #: report:account.vat.declaration:0
@@ -7780,6 +7784,12 @@ msgid ""
 "few new accounts (You don't need to define the whole structure that is "
 "common to both several times)."
 msgstr ""
+"Dit optionele veld geeft u de mogelijkheid om een rekeningsjabloon te "
+"koppelen aan een specifiek rekeningsjabloon, welke anders mag zijn dan de "
+"bovenliggende sjablonen. Dit geeft u de mogelijkheid om een rekeningsjabloon "
+"te definiëren welke een uitbreiding is op de andere, met een aantal extra "
+"nieuwe rekeningen (U hoeft niet de gehele structuur te definiëren voor het "
+"gedeelte wat gelijk is)."
 
 #. module: account
 #: view:account.move:0
@@ -8237,6 +8247,12 @@ msgid ""
 "Most of the OpenERP operations (invoices, timesheets, expenses, etc) "
 "generate analytic entries on the related account."
 msgstr ""
+"Het normale grootboekschema heeft een structuur volgens de wettelijke "
+"richtlijnen voor boekhouden. De kostenplaats rekeningen kunt u vrij "
+"inrichten naar uw behoeften. Kostenplaatsen worden normaliter gebruikt bij "
+"contracten, projecten en/of afdelingen. De meeste acties uitgevoerd door "
+"OpenERP (facturen, urenstaten, declaraties, etc.) genereren "
+"kostenplaatsboekingen."
 
 #. module: account
 #: field:account.account.type,close_method:0
