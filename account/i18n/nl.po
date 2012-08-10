@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-02-08 00:35+0000\n"
-"PO-Revision-Date: 2012-08-08 14:14+0000\n"
+"PO-Revision-Date: 2012-08-09 07:27+0000\n"
 "Last-Translator: Erwin <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-09 05:26+0000\n"
+"X-Launchpad-Export-Date: 2012-08-10 05:18+0000\n"
 "X-Generator: Launchpad (build 15761)\n"
 
 #. module: account
@@ -5155,7 +5155,7 @@ msgstr "Python Code (reverse)"
 #: model:ir.actions.act_window,name:account.action_payment_term_form
 #: model:ir.ui.menu,name:account.menu_action_payment_term_form
 msgid "Payment Terms"
-msgstr "Betalingsconditie"
+msgstr "Betalingscondities"
 
 #. module: account
 #: help:account.chart.template,complete_tax_set:0
@@ -5455,7 +5455,7 @@ msgstr "Communicatie"
 #. module: account
 #: model:ir.ui.menu,name:account.menu_analytic_accounting
 msgid "Analytic Accounting"
-msgstr "Kostenplaats dagboeken"
+msgstr "Kostenplaatsen"
 
 #. module: account
 #: field:account.partner.ledger,initial_balance:0
@@ -5856,7 +5856,7 @@ msgstr "Vrije referentie"
 #. module: account
 #: field:account.payment.term.line,value:0
 msgid "Valuation"
-msgstr "Raming"
+msgstr "Soort"
 
 #. module: account
 #: selection:account.aged.trial.balance,result_selection:0
@@ -8891,7 +8891,7 @@ msgstr "Onbetaalde facturen"
 #, python-format
 msgid "The payment term of supplier does not have a payment term line!"
 msgstr ""
-"De betalingsconditie van de leverancier heeft geen betalingconditieregels!"
+"De betalingsconditie van de leverancier heeft geen betalingsconditieregels!"
 
 #. module: account
 #: field:account.move.line.reconcile,debit:0
