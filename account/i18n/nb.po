@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-02-08 00:35+0000\n"
-"PO-Revision-Date: 2012-08-12 20:29+0000\n"
+"PO-Revision-Date: 2012-08-13 18:15+0000\n"
 "Last-Translator: Kaare Pettersen <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-13 05:52+0000\n"
+"X-Launchpad-Export-Date: 2012-08-14 05:20+0000\n"
 "X-Generator: Launchpad (build 15791)\n"
 
 #. module: account
@@ -2715,7 +2715,7 @@ msgstr "Betalt/avstemt"
 #: field:account.tax,ref_base_code_id:0
 #: field:account.tax.template,ref_base_code_id:0
 msgid "Refund Base Code"
-msgstr ""
+msgstr "Tilbakebetaling Base kode."
 
 #. module: account
 #: selection:account.tax.template,applicable_type:0
@@ -2734,7 +2734,7 @@ msgstr "Datoer"
 #. module: account
 #: field:account.chart.template,parent_id:0
 msgid "Parent Chart Template"
-msgstr ""
+msgstr "Forelder figur mal."
 
 #. module: account
 #: field:account.tax,parent_id:0
@@ -2754,6 +2754,8 @@ msgid ""
 "Automatically generate entries based on what has been entered in the  system "
 "before a specific date."
 msgstr ""
+"Automatisk genererer oppføringer basert på hva som har blitt lagt inn i "
+"systemet før en bestemt dato."
 
 #. module: account
 #: view:account.aged.trial.balance:0
@@ -2787,12 +2789,17 @@ msgid ""
 "Note that journal entries that are automatically created by the system are "
 "always skipping that state."
 msgstr ""
+"Merk denne boksen hvis du ikke vil at nye posteringer for å passere gjennom "
+"\"utkast\" staten og i stedet går direkte til \"postet statens uten manuell "
+"validering.\n"
+"Merk at posteringer som opprettes automatisk av systemet er alltid hopper "
+"over staten."
 
 #. module: account
 #: model:ir.actions.server,name:account.ir_actions_server_action_wizard_multi_chart
 #: model:ir.ui.menu,name:account.menu_act_ir_actions_bleble
 msgid "New Company Financial Setting"
-msgstr ""
+msgstr "Ny selskap finansiell innstilling"
 
 #. module: account
 #: view:account.installer:0
@@ -2809,7 +2816,7 @@ msgstr "Salg pr. konto"
 #. module: account
 #: view:account.use.model:0
 msgid "This wizard will create recurring accounting entries"
-msgstr ""
+msgstr "Denne veiviseren vil skape gjentakende regnskapspostene."
 
 #. module: account
 #: code:addons/account/account.py:1321
@@ -2823,7 +2830,7 @@ msgstr "Ingen sekvens angitt i journal !"
 #: code:addons/account/account_move_line.py:173
 #, python-format
 msgid "You have to define an analytic journal on the '%s' journal!"
-msgstr ""
+msgstr "Du må definere en analytisk journal på '% s' dagbok!"
 
 #. module: account
 #: code:addons/account/account.py:407
@@ -2832,6 +2839,8 @@ msgid ""
 "You need an Opening journal with centralisation checked to set the initial "
 "balance!"
 msgstr ""
+"Du trenger en åpning tidsskrift med sentralisering sjekket for å sette den "
+"innledende balanse!"
 
 #. module: account
 #: view:account.invoice.tax:0
@@ -2870,7 +2879,7 @@ msgstr "August"
 #. module: account
 #: model:process.transition,note:account.process_transition_paymentreconcile0
 msgid "Payment entries are the second input of the reconciliation."
-msgstr ""
+msgstr "Betaling oppføringer er den andre inngangen på forsoning."
 
 #. module: account
 #: selection:account.entries.report,month:0
@@ -2949,6 +2958,9 @@ msgid ""
 "between the creation date or the creation date of the entries plus the "
 "partner payment terms."
 msgstr ""
+"Forfallsdatoen for genererte oppføringer for denne modellen. Du kan velge "
+"mellom opprettelsesdatoen eller opprettelsesdatoen av oppføringene pluss "
+"samarbeidslandene betalingsvilkårene."
 
 #. module: account
 #: model:ir.ui.menu,name:account.menu_finance_accounting
@@ -2981,6 +2993,8 @@ msgid ""
 "Tax base different!\n"
 "Click on compute to update the tax base."
 msgstr ""
+"Skattegrunnlag annerledes!\n"
+"Klikk på datamaskinen for å oppdatere skattegrunnlaget."
 
 #. module: account
 #: field:account.partner.ledger,page_split:0
@@ -3007,6 +3021,8 @@ msgid ""
 "Set if the amount of tax must be included in the base amount before "
 "computing the next taxes."
 msgstr ""
+"Still hvis mengden av skatt må inkluderes i grunnbeløpet før du kan regne de "
+"neste skattene."
 
 #. module: account
 #: help:account.journal,user_id:0
@@ -3156,7 +3172,7 @@ msgstr "Kundekreditt"
 #. module: account
 #: view:account.payment.term.line:0
 msgid "  Day of the Month: 0"
-msgstr ""
+msgstr "  Dagen i måneden: 0"
 
 #. module: account
 #: view:account.subscription:0
@@ -3171,7 +3187,7 @@ msgstr ""
 #. module: account
 #: help:account.journal.column,sequence:0
 msgid "Gives the sequence order to journal column."
-msgstr ""
+msgstr "Gir sekvensen for å merke kolonne."
 
 #. module: account
 #: help:account.account,currency_id:0
@@ -3179,6 +3195,7 @@ msgstr ""
 #: help:account.bank.accounts.wizard,currency_id:0
 msgid "Forces all moves for this account to have this secondary currency."
 msgstr ""
+"Tvinger alle trekk for denne kontoen til å ha denne sekundære valuta."
 
 #. module: account
 #: model:ir.actions.act_window,help:account.action_validate_account_move_line
@@ -3186,6 +3203,8 @@ msgid ""
 "This wizard will validate all journal entries of a particular journal and "
 "period. Once journal entries are validated, you can not update them anymore."
 msgstr ""
+"Denne veiviseren vil validere alle posteringer på en bestemt journal og "
+"periode. Når bilag er validert, kan du ikke oppdatere dem lenger."
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_chart_template_form
@@ -3201,7 +3220,7 @@ msgstr "Opprett kontoplan fra mal"
 #. module: account
 #: view:report.account.sales:0
 msgid "This months' Sales by type"
-msgstr ""
+msgstr "Denne måneds Salgssentral etter type"
 
 #. module: account
 #: model:ir.model,name:account.model_account_unreconcile_reconcile
