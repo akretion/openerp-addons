@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-02-08 01:37+0100\n"
-"PO-Revision-Date: 2012-08-12 17:05+0000\n"
+"PO-Revision-Date: 2012-08-14 21:32+0000\n"
 "Last-Translator: Kaare Pettersen <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-13 05:53+0000\n"
-"X-Generator: Launchpad (build 15791)\n"
+"X-Launchpad-Export-Date: 2012-08-15 05:14+0000\n"
+"X-Generator: Launchpad (build 15801)\n"
 
 #. module: purchase
 #: model:process.transition,note:purchase.process_transition_confirmingpurchaseorder0
@@ -113,6 +113,9 @@ msgid ""
 "products, etc. For each purchase order, you can track the products received, "
 "and control the supplier invoices."
 msgstr ""
+"Bruk denne menyen til å søke innenfor dine bestillinger av referanser, "
+"leverandør, produkter osv. For hver bestilling, kan du spore produktene "
+"mottatt, og kontrollere leverandørfakturaer."
 
 #. module: purchase
 #: code:addons/purchase/wizard/purchase_line_invoice.py:145
@@ -517,6 +520,8 @@ msgid ""
 "of the purchase order, the invoice is based on received or on ordered "
 "quantities."
 msgstr ""
+"En plukkliste genererer en leverandør faktura. Avhengig Fakturering kontroll "
+"av bestillingen, blir fakturaen basert på mottatt eller bestilte mengder."
 
 #. module: purchase
 #: model:ir.actions.act_window,help:purchase.purchase_line_form_action2
@@ -527,6 +532,11 @@ msgid ""
 "supplier invoice, you can generate a draft supplier invoice based on the "
 "lines from this menu."
 msgstr ""
+"Hvis du setter Fakturering Kontroll på en bestilling som \"Basert på "
+"innkjøpsordrenumre linjer\", kan du spore alle innkjøpsordren linjer som du "
+"ennå ikke har mottatt leverandørfaktura. Når du er klar til å motta en "
+"leverandør faktura, kan du generere et utkast leverandør faktura basert på "
+"linjene fra denne menyen."
 
 #. module: purchase
 #: view:purchase.order:0
@@ -539,6 +549,8 @@ msgid ""
 "Reception Analysis allows you to easily check and analyse your company order "
 "receptions and the performance of your supplier's deliveries."
 msgstr ""
+"Mottak analyse kan du enkelt sjekke og analysere bedriftens bestiller "
+"mottakelser og resultatene til leverandør leveranser."
 
 #. module: purchase
 #: report:purchase.quotation:0
@@ -627,6 +639,8 @@ msgid ""
 "You have to select a partner in the purchase form !\n"
 "Please set one partner before choosing a product."
 msgstr ""
+"Du må velge en partner i kjøp av skjemaet!\n"
+"Vennligst sett en partner før du velger et produkt."
 
 #. module: purchase
 #: code:addons/purchase/purchase.py:349
@@ -642,6 +656,9 @@ msgid ""
 "order is 'On picking'. The invoice can also be generated manually by the "
 "accountant (Invoice control = Manual)."
 msgstr ""
+"Fakturaen opprettes automatisk hvis Faktura kontroll av innkjøpsordren er "
+"'på plukke'. Fakturaen kan også genereres manuelt av revisor (Faktura "
+"kontroll = Manuell)."
 
 #. module: purchase
 #: report:purchase.order:0
@@ -655,6 +672,9 @@ msgid ""
 "purchase history and performance. From this menu you can track your "
 "negotiation performance, the delivery performance of your suppliers, etc."
 msgstr ""
+"Oppkjøpsanalyse kan du enkelt sjekke og analysere bedriftens kjøp historie "
+"og ytelse. Fra denne menyen kan du spore din forhandling ytelse, levering "
+"ytelsen til leverandørene, etc."
 
 #. module: purchase
 #: model:ir.ui.menu,name:purchase.menu_configuration_misc
@@ -670,7 +690,7 @@ msgstr "Den valgte leverandøren selger dette produktet bare som %s"
 #. module: purchase
 #: view:purchase.report:0
 msgid "Reference UOM"
-msgstr ""
+msgstr "Referanse UOM"
 
 #. module: purchase
 #: field:purchase.order.line,product_qty:0 view:purchase.report:0
@@ -740,6 +760,10 @@ msgid ""
 "according to your settings. Once you receive a supplier invoice, you can "
 "match it with the draft invoice and validate it."
 msgstr ""
+"Bruk denne menyen til å kontrollere fakturaene som skal mottas fra din "
+"leverandør. OpenERP pregenerates utkast fakturaer fra dine innkjøpsordrer "
+"eller mottagelser, i henhold til dine innstillinger. Når du mottar en "
+"leverandør faktura, kan du matche det med utkastet faktura og bekrefte det."
 
 #. module: purchase
 #: model:process.node,name:purchase.process_node_draftpurchaseorder0
@@ -813,6 +837,8 @@ msgid ""
 "This is computed as the minimum scheduled date of all purchase order lines' "
 "products."
 msgstr ""
+"Dette er beregnet som minimum planlagt dato for alle kjøp ordrelinjer "
+"produkter."
 
 #. module: purchase
 #: model:ir.model,name:purchase.model_purchase_order_group
@@ -874,6 +900,7 @@ msgstr "Måned"
 #: model:email.template,subject:purchase.email_template_edi_purchase
 msgid "${object.company_id.name} Order (Ref ${object.name or 'n/a' })"
 msgstr ""
+"$ {object.company_id.name} Bestill (Ref $ {object.name eller 'n / a'})"
 
 #. module: purchase
 #: report:purchase.quotation:0
@@ -1003,7 +1030,7 @@ msgstr "Beløpet uten avgift"
 #: code:addons/purchase/purchase.py:754
 #, python-format
 msgid "Selected UOM does not belong to the same category as the product UOM"
-msgstr ""
+msgstr "Valgt UOM hører ikke til samme kategori som produktet UOM"
 
 #. module: purchase
 #: code:addons/purchase/purchase.py:907
@@ -1018,6 +1045,9 @@ msgid ""
 "the buyer. Depending on the Invoicing control of the purchase order, the "
 "invoice is based on received or on ordered quantities."
 msgstr ""
+"En kjøpsordre genererer en leverandør faktura, så snart den er bekreftet av "
+"kjøperen. Avhengig Fakturering kontroll av bestillingen, blir fakturaen "
+"basert på mottatt eller bestilte mengder."
 
 #. module: purchase
 #: field:purchase.order,amount_untaxed:0
@@ -1066,6 +1096,9 @@ msgid ""
 "order is 'On order'. The invoice can also be generated manually by the "
 "accountant (Invoice control = Manual)."
 msgstr ""
+"Fakturaen opprettes automatisk hvis Faktura kontroll av innkjøpsordren er "
+"«på bestilling». Fakturaen kan også genereres manuelt av revisor (Faktura "
+"kontroll = Manuell)."
 
 #. module: purchase
 #: model:ir.actions.act_window,name:purchase.action_email_templates
@@ -1113,7 +1146,7 @@ msgstr "Fakturakontroll ved innkjøp"
 #: code:addons/purchase/wizard/purchase_order_group.py:48
 #, python-format
 msgid "Please select multiple order to merge in the list view."
-msgstr ""
+msgstr "Velg flere for å fusjonere i listevisningen."
 
 #. module: purchase
 #: model:ir.actions.act_window,help:purchase.action_import_create_supplier_installer
@@ -1122,6 +1155,9 @@ msgid ""
 "can import your existing partners by CSV spreadsheet from \"Import Data\" "
 "wizard"
 msgstr ""
+"Opprette eller importere leverandører og deres kontakter manuelt fra dette "
+"skjemaet, eller du kan importere dine eksisterende partnere av CSV regneark "
+"fra \"Importer data\" wizard."
 
 #. module: purchase
 #: model:process.transition,name:purchase.process_transition_createpackinglist0
@@ -1221,6 +1257,11 @@ msgid ""
 "Based on generated invoice: create a draft invoice you can validate later.\n"
 "Based on receptions: let you create an invoice when receptions are validated."
 msgstr ""
+"Basert på Kjøp Bestill linjer: plass enkelte linjer i \"Faktura Kontroll> "
+"Basert på PO linjer 'fra der du kan velge å opprette en faktura.\n"
+"Basert på genererte faktura: lage et utkast faktura som du kan validere "
+"senere.\n"
+"Basert på mottakelser: lar deg lage en faktura når mottakelser er validert."
 
 #. module: purchase
 #: model:ir.actions.act_window,name:purchase.action_supplier_address_form
@@ -1241,7 +1282,7 @@ msgstr "Produktkategorier"
 #. module: purchase
 #: view:purchase.report:0 field:purchase.report,delay:0
 msgid "Days to Validate"
-msgstr ""
+msgstr "Dager som skal valideres"
 
 #. module: purchase
 #: help:purchase.order,origin:0
@@ -1263,6 +1304,12 @@ msgid ""
 "received, the state becomes 'Done'. If a cancel action occurs in the invoice "
 "or in the reception of goods, the state becomes in exception."
 msgstr ""
+"Tilstanden til kjøpsordre eller sitatet forespørselen. Et sitat er en "
+"kjøpsordre på en 'kladd' tilstand. Da ordren må bekreftes av brukeren, til "
+"staten bryteren 'Bekreftet'. Da leverandøren må bekrefte ordren å endre "
+"tilstanden til \"Godkjent\". Når bestillingen er betalt og mottatt, blir "
+"staten Ferdig. Hvis en avbryt handling skjer i fakturaen eller i resepsjonen "
+"av varer, blir staten i unntaket."
 
 #. module: purchase
 #: field:purchase.order.line,price_subtotal:0
