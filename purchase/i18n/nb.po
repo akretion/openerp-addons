@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-02-08 01:37+0100\n"
-"PO-Revision-Date: 2012-08-15 19:11+0000\n"
+"PO-Revision-Date: 2012-08-16 18:23+0000\n"
 "Last-Translator: Kaare Pettersen <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-16 05:10+0000\n"
+"X-Launchpad-Export-Date: 2012-08-17 05:12+0000\n"
 "X-Generator: Launchpad (build 15810)\n"
 
 #. module: purchase
@@ -29,12 +29,12 @@ msgstr ""
 #. module: purchase
 #: model:process.node,note:purchase.process_node_productrecept0
 msgid "Incoming products to control"
-msgstr "Inngående varer til kontroll"
+msgstr "Innkommende produkter til kontroll."
 
 #. module: purchase
 #: field:purchase.order,invoiced:0
 msgid "Invoiced & Paid"
-msgstr "Fakturert og betalt"
+msgstr "Fakturert & Betalt"
 
 #. module: purchase
 #: field:purchase.order,location_id:0 view:purchase.report:0
@@ -46,18 +46,18 @@ msgstr "Destinasjon"
 #: code:addons/purchase/purchase.py:236
 #, python-format
 msgid "In order to delete a purchase order, it must be cancelled first!"
-msgstr "for å kunne slette en innkjøpsordre, må den først kanselleres!"
+msgstr "For å slette en bestilling, må den bli kansellert først!"
 
 #. module: purchase
 #: help:purchase.report,date:0
 msgid "Date on which this document has been created"
-msgstr "Dato for når dokumentet ble laget"
+msgstr "Dato dette dokumentet er blitt opprettet"
 
 #. module: purchase
 #: view:purchase.order:0 view:purchase.order.line:0 view:purchase.report:0
 #: view:stock.picking:0
 msgid "Group By..."
-msgstr "Grupper etter..."
+msgstr "Grupper etter ..."
 
 #. module: purchase
 #: field:purchase.order,create_uid:0 view:purchase.report:0
@@ -1900,6 +1900,55 @@ msgid ""
 "% endif\n"
 "            "
 msgstr ""
+"\n"
+"Hei $ {object.partner_address_id.name og '' eller''} $ "
+"{object.partner_address_id.name eller''},\n"
+"Her er en kjøp ordrebekreftelse fra $ {object.company_id.name}:\n"
+"Bestillingsnummer: * $ {object.name} *\n"
+"Bestilling totalt: * $ {object.amount_total} $ "
+"{object.pricelist_id.currency_id.name} *\n"
+"Bestilling dato: $ {object.date orden}\n"
+"% Hvis object.origin\n"
+"Bestilling referanse: $ {object.origin\n"
+"Bestilling referanse: $ {object.origin}\n"
+" % endif\n"
+" % Hvis object.partner_ref:\n"
+"  Din referanse: $ {object.partner_ref} <br />\n"
+"  % endif\n"
+"  Din kontakt: $ {object.validator.name} $ {object.validator.user_email og "
+"'<% s>'% (object.validator.user_email) eller''}\n"
+"Du kan se ordrebekreftelsen og laste den ned ved hjelp av følgende link:\n"
+"  $ {ctx.get ('edi_web_url_view') eller 'n / a'}\n"
+"\n"
+"Hvis du har noen spørsmål, ikke nøl med å kontakte oss.\n"
+"\n"
+"Takk!\n"
+"\n"
+"\n"
+"-\n"
+"$ {object.validator.name} $ {object.validator.user_email og '<% s>'% "
+"(object.validator.user_email) eller''}\n"
+"$ {object.company_id.name}\n"
+"% Hvis object.company_id.street:\n"
+"$ {object.company_id.street eller''}\n"
+"% endif\n"
+"% Hvis object.company_id.street2:\n"
+"$ {object.company_id.street2}\n"
+"% endif\n"
+"% Hvis object.company_id.city eller object.company_id.zip:\n"
+"$ {object.company_id.zip eller''} $ {object.company_id.city eller''}\n"
+"% endif\n"
+"% Hvis object.company_id.country_id:\n"
+"$ {object.company_id.state_id og ('% s'% object.company_id.state_id.name) "
+"eller''} $ {object.company_id.country_id.name eller''}\n"
+"% endif\n"
+"% Hvis object.company_id.phone:\n"
+"Telefon: $ {object.company_id.phone}\n"
+"% endif\n"
+"% Hvis object.company_id.website:\n"
+"$ {object.company_id.website eller''}\n"
+"% endif\n"
+"            "
 
 #. module: purchase
 #: view:purchase.order:0
