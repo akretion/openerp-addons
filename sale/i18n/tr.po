@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev_rc3\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-02-08 01:37+0100\n"
-"PO-Revision-Date: 2012-09-01 18:20+0000\n"
+"PO-Revision-Date: 2012-09-02 17:12+0000\n"
 "Last-Translator: Ayhan KIZILTAN <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-09-02 04:55+0000\n"
+"X-Launchpad-Export-Date: 2012-09-03 05:36+0000\n"
 "X-Generator: Launchpad (build 15890)\n"
 
 #. module: sale
@@ -1369,6 +1369,9 @@ msgid ""
 "create a task, purchase order or manufacturing order linked to this sale "
 "order line."
 msgstr ""
+"Eğer 'siparişte' ise, satış siparişi bir görev oluşturmak üzere onaylanırsa "
+"bir satınalmayı başlatır, satınalma siparişi ya da üretim emri bu satış "
+"siparişi öğesine bağlantılıdır."
 
 #. module: sale
 #: field:sale.advance.payment.inv,amount:0
@@ -1776,6 +1779,8 @@ msgid ""
 "output area and the customer is done through the Delivery Order manually or "
 "automatically."
 msgstr ""
+"Çıkış konumunun yapılandırmasına bağlı olarak, müşteri ile çıkış konumu "
+"arasındaki hareket Teslimat Emri yoluyla elle ya da otomatik olarak yapılır."
 
 #. module: sale
 #: selection:sale.order,order_policy:0
@@ -1833,6 +1838,8 @@ msgid ""
 "Couldn't find a pricelist line matching this product and quantity.\n"
 "You have to change either the product, the quantity or the pricelist."
 msgstr ""
+"Bu ürün ve miktarla eşleşen bir fiyat listesi bulunamadı.\n"
+"Hem ürünü hem de miktarı ya da fiyat listesini değiştirmelisiniz."
 
 #. module: sale
 #: help:sale.order,picking_ids:0
@@ -2187,7 +2194,7 @@ msgstr "İstek üzerine teslimat & fatura"
 msgid ""
 "One Procurement order for each sales order line and for each of the "
 "components."
-msgstr ""
+msgstr "Her satış siparişi öğesi ve her bileşen için bir Satınalma İşlemi."
 
 #. module: sale
 #: model:process.transition.action,name:sale.process_transition_action_assign0
