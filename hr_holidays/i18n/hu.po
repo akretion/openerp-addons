@@ -7,15 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-02-08 01:37+0100\n"
-"PO-Revision-Date: 2012-02-17 09:10+0000\n"
-"Last-Translator: NOVOTRADE RENDSZERHÁZ ( novotrade.hu ) "
-"<openerp@novotrade.hu>\n"
+"PO-Revision-Date: 2012-09-06 08:42+0000\n"
+"Last-Translator: Herczeg Péter <herczegp@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-05-17 05:44+0000\n"
-"X-Generator: Launchpad (build 15259)\n"
+"X-Launchpad-Export-Date: 2012-09-07 05:14+0000\n"
+"X-Generator: Launchpad (build 15914)\n"
 
 #. module: hr_holidays
 #: selection:hr.holidays.status,color_name:0
@@ -50,7 +49,7 @@ msgstr "Csoportosítás..."
 #. module: hr_holidays
 #: view:hr.holidays:0
 msgid "Allocation Mode"
-msgstr ""
+msgstr "Jóváhagyás módja"
 
 #. module: hr_holidays
 #: view:hr.holidays:0 field:hr.holidays,department_id:0
@@ -75,7 +74,7 @@ msgstr "Alkalmazotti kategória"
 #. module: hr_holidays
 #: view:hr.holidays:0
 msgid " Month-1"
-msgstr ""
+msgstr " Előző hó"
 
 #. module: hr_holidays
 #: selection:hr.holidays.status,color_name:0
@@ -422,7 +421,7 @@ msgstr "Levendula"
 #. module: hr_holidays
 #: view:hr.holidays:0
 msgid "Month"
-msgstr ""
+msgstr "Hó"
 
 #. module: hr_holidays
 #: view:hr.holidays:0
@@ -557,7 +556,7 @@ msgstr "Szabadságok összegzése"
 #. module: hr_holidays
 #: view:hr.holidays:0
 msgid "Holidays during last month"
-msgstr ""
+msgstr "Szabadnapok múlt hónapban"
 
 #. module: hr_holidays
 #: code:addons/hr_holidays/wizard/hr_holidays_summary_department.py:44
@@ -829,12 +828,12 @@ msgstr "Menedzser"
 #. module: hr_holidays
 #: view:hr.holidays:0
 msgid "To Confirm"
-msgstr ""
+msgstr "Jóváhagyandó"
 
 #. module: hr_holidays
 #: view:hr.holidays:0
 msgid "Year"
-msgstr ""
+msgstr "Év"
 
 #. module: hr_holidays
 #: view:hr.holidays:0

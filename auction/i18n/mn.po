@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-02-08 00:36+0000\n"
-"PO-Revision-Date: 2012-07-10 09:33+0000\n"
+"PO-Revision-Date: 2012-08-17 08:23+0000\n"
 "Last-Translator: erdenebold <erdenebold10@gmail.com>\n"
 "Language-Team: Mongolian <mn@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-07-11 05:34+0000\n"
-"X-Generator: Launchpad (build 15593)\n"
+"X-Launchpad-Export-Date: 2012-08-28 09:33+0000\n"
+"X-Generator: Launchpad (build 15864)\n"
 
 #. module: auction
 #: model:ir.ui.menu,name:auction.auction_report_menu
@@ -205,7 +205,7 @@ msgstr ""
 #. module: auction
 #: view:auction.dates:0
 msgid "First Auction Date"
-msgstr ""
+msgstr "Анхны дуудлага худалдааны огноо"
 
 #. module: auction
 #: selection:report.auction,month:0
@@ -352,7 +352,7 @@ msgstr ""
 #. module: auction
 #: view:auction.lots:0
 msgid "Search Auction Lots"
-msgstr ""
+msgstr "Олон дуудлага худалдаанаас хайх"
 
 #. module: auction
 #: field:report.auction,net_revenue:0
@@ -407,7 +407,7 @@ msgstr ""
 #. module: auction
 #: field:auction.bid_line,name:0
 msgid "Bid date"
-msgstr ""
+msgstr "Үнийн саналын огноо"
 
 #. module: auction
 #: field:auction.dates,acc_expense:0
@@ -422,7 +422,7 @@ msgstr ""
 #. module: auction
 #: field:auction.lots,obj_desc:0
 msgid "Object Description"
-msgstr ""
+msgstr "Объёктын тайлбар"
 
 #. module: auction
 #: field:auction.lots,artist2_id:0
@@ -437,7 +437,7 @@ msgstr ""
 #. module: auction
 #: model:ir.model,name:auction.model_auction_lots_make_invoice_buyer
 msgid "Make Invoice for Buyer"
-msgstr ""
+msgstr "Худалдан авагч нэхэмжлэл үүсгэх"
 
 #. module: auction
 #: field:auction.lots,gross_revenue:0
@@ -469,7 +469,7 @@ msgstr ""
 #: report:auction.total.rml:0
 #: model:ir.ui.menu,name:auction.auction_buyers_menu
 msgid "Buyers"
-msgstr ""
+msgstr "Худалдан авагч"
 
 #. module: auction
 #: view:auction.lots:0
@@ -485,7 +485,7 @@ msgstr ""
 #. module: auction
 #: view:auction.dates:0
 msgid "Buyer Invoices"
-msgstr ""
+msgstr "Худалдан авагчийн нэхэмжлэл"
 
 #. module: auction
 #: model:ir.actions.report.xml,name:auction.res_w_buyer
@@ -542,7 +542,7 @@ msgstr ""
 #. module: auction
 #: view:auction.dates:0
 msgid "Last Auction Date"
-msgstr ""
+msgstr "Дуудлага худалдааны сүүлийн огноо"
 
 #. module: auction
 #: field:report.object.encoded,obj_num:0
@@ -601,7 +601,7 @@ msgstr ""
 #. module: auction
 #: help:auction.lots,gross_revenue:0
 msgid "Buyer Price - Seller Price"
-msgstr ""
+msgstr "Худалдан авагчийн үнэ - Борлуулах үнэ"
 
 #. module: auction
 #: field:auction.lots.make.invoice,objects:0
@@ -648,13 +648,13 @@ msgstr ""
 #. module: auction
 #: model:account.tax,name:auction.auction_tax4
 msgid "Seller Costs1"
-msgstr ""
+msgstr "Борлуулалтын Зардал1"
 
 #. module: auction
 #: field:auction.deposit,create_uid:0
 #: field:auction.lots,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Үүсгэх"
 
 #. module: auction
 #: report:auction.total.rml:0
@@ -664,7 +664,7 @@ msgstr ""
 #. module: auction
 #: field:auction.lots,costs:0
 msgid "Indirect costs"
-msgstr ""
+msgstr "Шууд бус зардал"
 
 #. module: auction
 #: help:auction.dates,seller_costs:0
@@ -682,7 +682,7 @@ msgstr ""
 #. module: auction
 #: field:auction.dates,journal_seller_id:0
 msgid "Seller Journal"
-msgstr ""
+msgstr "Борлуулалтын Журнал"
 
 #. module: auction
 #: view:auction.dates:0
@@ -699,7 +699,7 @@ msgstr ""
 #. module: auction
 #: view:auction.dates:0
 msgid "Invoiced Auction"
-msgstr ""
+msgstr "Дуудлага худалдааны нэхэмжлэл"
 
 #. module: auction
 #: view:auction.catalog.flagey:0
@@ -796,7 +796,7 @@ msgstr ""
 #. module: auction
 #: model:account.tax,name:auction.tax_seller
 msgid "Seller Costs (12%)"
-msgstr ""
+msgstr "Борлуулалтын Зардалын (12%)"
 
 #. module: auction
 #: field:aie.category,parent_id:0
@@ -830,7 +830,7 @@ msgstr ""
 #: code:addons/auction/wizard/auction_lots_numerotate.py:129
 #, python-format
 msgid "This record does not exist !"
-msgstr ""
+msgstr "Энд бичлэг байхгүй байна !"
 
 #. module: auction
 #: field:auction.pay.buy,total:0
@@ -902,12 +902,12 @@ msgstr ""
 #. module: auction
 #: field:auction.deposit,specific_cost_ids:0
 msgid "Specific Costs"
-msgstr ""
+msgstr "Онцгой үнэ"
 
 #. module: auction
 #: report:buyer.list:0
 msgid "To pay ("
-msgstr ""
+msgstr "Төлөх ("
 
 #. module: auction
 #: model:account.tax,name:auction.tax_buyer
@@ -925,7 +925,7 @@ msgstr ""
 #: model:ir.ui.menu,name:auction.auction_date_menu
 #: model:ir.ui.menu,name:auction.menu_auction_dates_next1
 msgid "Auctions"
-msgstr ""
+msgstr "Дуудлага худалдаа"
 
 #. module: auction
 #: view:board.board:0
@@ -961,7 +961,7 @@ msgstr ""
 #. module: auction
 #: model:ir.actions.report.xml,name:auction.v_report_barcode_lot
 msgid "Barcode batch"
-msgstr ""
+msgstr "Баркодын бүлэг"
 
 #. module: auction
 #: report:report.auction.buyer.result:0
@@ -998,7 +998,7 @@ msgstr ""
 #. module: auction
 #: view:auction.lots.make.invoice:0
 msgid "Create Invoices For Seller"
-msgstr ""
+msgstr "Борлуулалтын нэхэмжлэл үүсгэх"
 
 #. module: auction
 #: field:report.object.encoded,obj_margin:0
@@ -1008,7 +1008,7 @@ msgstr ""
 #. module: auction
 #: help:auction.lots,lot_local:0
 msgid "Auction Location"
-msgstr ""
+msgstr "Дуудлага худалдааны байршил"
 
 #. module: auction
 #: view:auction.dates:0
@@ -1030,7 +1030,7 @@ msgstr ""
 #. module: auction
 #: selection:auction.deposit,method:0
 msgid "Decrease limit of 10%"
-msgstr ""
+msgstr "Буурах хязгаар"
 
 #. module: auction
 #: field:auction.dates,adj_total:0
@@ -1046,7 +1046,7 @@ msgstr ""
 #. module: auction
 #: view:report.auction:0
 msgid "My Auction"
-msgstr ""
+msgstr "Миний дуудлага худалдаа"
 
 #. module: auction
 #: help:auction.lots,gross_margin:0
@@ -1056,7 +1056,7 @@ msgstr ""
 #. module: auction
 #: field:auction.bid,contact_tel:0
 msgid "Contact Number"
-msgstr ""
+msgstr "Харилцагчийн дугаар"
 
 #. module: auction
 #: view:auction.lots:0
@@ -1088,7 +1088,7 @@ msgstr ""
 #: code:addons/auction/wizard/auction_lots_numerotate.py:173
 #, python-format
 msgid "Active IDs not Found"
-msgstr ""
+msgstr "Идэвхтэй ID-нууд байхгүй"
 
 #. module: auction
 #: code:addons/auction/wizard/auction_aie_send.py:166
@@ -1101,7 +1101,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:auction.act_auction_lot_open_bid
 #: model:ir.actions.act_window,name:auction.action_bid_open
 msgid "Open Bids"
-msgstr ""
+msgstr "Нээлттэй санал"
 
 #. module: auction
 #: model:ir.actions.act_window,name:auction.open_board_auction
@@ -1126,7 +1126,7 @@ msgstr ""
 #: code:addons/auction/auction.py:692
 #, python-format
 msgid "The Buyer has no Invoice Address."
-msgstr ""
+msgstr "Худалдан авагчийн нэхэмжлэлийн хаяг байхгүй байна."
 
 #. module: auction
 #: model:ir.actions.act_window,name:auction.action_report_auction_adjudication_tree
@@ -1146,7 +1146,7 @@ msgstr ""
 #. module: auction
 #: model:ir.actions.report.xml,name:auction.seller_lots_3
 msgid "Seller Form"
-msgstr ""
+msgstr "Борлуулалтын Форм"
 
 #. module: auction
 #: field:auction.lots,lot_type:0
@@ -1168,7 +1168,7 @@ msgstr ""
 #: field:auction.lots,obj_num:0
 #: field:auction.lots.enable,confirm_en:0
 msgid "Catalog Number"
-msgstr ""
+msgstr "Каталогын дугаар"
 
 #. module: auction
 #: view:auction.dates:0
@@ -1178,7 +1178,7 @@ msgstr ""
 #. module: auction
 #: model:ir.actions.report.xml,name:auction.bid_phone
 msgid "Bids phones"
-msgstr ""
+msgstr "Тендерийн дугаарууд"
 
 #. module: auction
 #: field:report.auction,avg_estimation:0
@@ -1188,7 +1188,7 @@ msgstr ""
 #. module: auction
 #: report:auction.total.rml:0
 msgid "Debit:"
-msgstr ""
+msgstr "Дебит"
 
 #. module: auction
 #: code:addons/auction/wizard/auction_aie_send.py:166
@@ -1229,7 +1229,7 @@ msgstr ""
 #: report:bids.lots:0
 #: model:ir.model,name:auction.model_auction_bid_line
 msgid "Bid"
-msgstr ""
+msgstr "Тендер"
 
 #. module: auction
 #: view:report.object.encoded:0
@@ -1245,17 +1245,17 @@ msgstr ""
 #: report:auction.total.rml:0
 #: model:ir.ui.menu,name:auction.auction_seller_menu
 msgid "Sellers"
-msgstr ""
+msgstr "Борлуулагч"
 
 #. module: auction
 #: view:auction.dates:0
 msgid "Draft Auction"
-msgstr ""
+msgstr "Ноорог дуудлага худалдаа"
 
 #. module: auction
 #: help:auction.lots,lot_est2:0
 msgid "Maximum Estimate Price"
-msgstr ""
+msgstr "Үнийн дээд үнэлгээ"
 
 #. module: auction
 #: view:auction.lots:0
@@ -1282,7 +1282,7 @@ msgstr ""
 #: view:auction.dates:0
 #: field:auction.lots.auction.move,auction_id:0
 msgid "Auction Date"
-msgstr ""
+msgstr "Дуудлага худалдаын огноо"
 
 #. module: auction
 #: report:auction.code_bar_lot:0
@@ -1302,13 +1302,13 @@ msgstr ""
 #. module: auction
 #: view:auction.artists:0
 msgid "Author/Artist"
-msgstr ""
+msgstr "Зохиогч / Зураач"
 
 #. module: auction
 #: field:auction.lots,ach_login:0
 #: field:auction.lots.buyer_map,ach_login:0
 msgid "Buyer Username"
-msgstr ""
+msgstr "Худалдан авах хэрэглэгчийн нэр"
 
 #. module: auction
 #: field:auction.lot.category,priority:0
@@ -1349,7 +1349,7 @@ msgstr ""
 #. module: auction
 #: help:auction.lots,lot_est1:0
 msgid "Minimum Estimate Price"
-msgstr ""
+msgstr "Үнийн доод үнэлгээ"
 
 #. module: auction
 #: view:auction.deposit:0
@@ -1381,18 +1381,18 @@ msgstr ""
 #. module: auction
 #: field:auction.lots,lot_est1:0
 msgid "Minimum Estimation"
-msgstr ""
+msgstr "Доод үнэлгээ"
 
 #. module: auction
 #: model:ir.model,name:auction.model_auction_lots_sms_send
 msgid "Sms send "
-msgstr ""
+msgstr "Смс илгээх "
 
 #. module: auction
 #: view:auction.lots.auction.move:0
 #: model:ir.actions.act_window,name:auction.action_auction_lots_auction_move
 msgid "Change Auction Date"
-msgstr ""
+msgstr "Дуудлага худалдааг өөрчилсөн огноо"
 
 #. module: auction
 #: field:auction.artists,birth_death_dates:0
@@ -1414,13 +1414,13 @@ msgstr ""
 #: model:ir.actions.act_window,name:auction.action_report_auction
 #: model:ir.ui.menu,name:auction.menu_report_auction
 msgid "Auction Analysis"
-msgstr ""
+msgstr "Дуудлага худалдааны анализ"
 
 #. module: auction
 #: code:addons/auction/wizard/auction_pay_buy.py:80
 #, python-format
 msgid "Payment aborted !"
-msgstr ""
+msgstr "Төлбөр цуцалсан !"
 
 #. module: auction
 #: field:auction.lot.history,price:0
@@ -1430,7 +1430,7 @@ msgstr ""
 #. module: auction
 #: view:auction.dates:0
 msgid "Beginning of the auction"
-msgstr ""
+msgstr "Дуудлага худалдааны эхлэл"
 
 #. module: auction
 #: help:auction.pay.buy,statement_id3:0
@@ -1447,12 +1447,12 @@ msgstr ""
 #. module: auction
 #: report:auction.total.rml:0
 msgid "Max Estimate:"
-msgstr ""
+msgstr "Дээд үнэлгээ:"
 
 #. module: auction
 #: view:auction.lots:0
 msgid "Statistical"
-msgstr ""
+msgstr "Статистикийн"
 
 #. module: auction
 #: model:ir.model,name:auction.model_auction_deposit
@@ -1518,7 +1518,7 @@ msgstr ""
 #. module: auction
 #: field:auction.dates,journal_id:0
 msgid "Buyer Journal"
-msgstr ""
+msgstr "Худалдан авагчийн журнал"
 
 #. module: auction
 #: selection:auction.lots,state:0
@@ -1572,7 +1572,7 @@ msgstr ""
 #: field:auction.lots,sel_inv_id:0
 #: view:auction.lots.make.invoice:0
 msgid "Seller Invoice"
-msgstr ""
+msgstr "Борлуулалтын нэхэмжлэл"
 
 #. module: auction
 #: view:board.board:0
@@ -1599,7 +1599,7 @@ msgstr ""
 #. module: auction
 #: view:board.board:0
 msgid "Auction manager "
-msgstr ""
+msgstr "Дуудлага худалдааны менежер "
 
 #. module: auction
 #: code:addons/auction/wizard/auction_lots_invoice.py:67
@@ -1622,7 +1622,7 @@ msgstr ""
 #. module: auction
 #: field:auction.lots,vnd_lim:0
 msgid "Seller limit"
-msgstr ""
+msgstr "Борлуулалтын хязгаар"
 
 #. module: auction
 #: field:auction.deposit,transfer:0
@@ -1677,7 +1677,7 @@ msgstr ""
 #. module: auction
 #: view:auction.lots:0
 msgid "Seller Information"
-msgstr ""
+msgstr "Борлуулалтын мэдээлэл"
 
 #. module: auction
 #: view:auction.deposit:0
@@ -1691,7 +1691,7 @@ msgstr ""
 #. module: auction
 #: view:auction.dates:0
 msgid "Seller Invoices"
-msgstr ""
+msgstr "Борлуулалтын нэхэмжлэлүүд"
 
 #. module: auction
 #: report:auction.total.rml:0
@@ -1718,17 +1718,17 @@ msgstr ""
 #. module: auction
 #: view:auction.lots.sms.send:0
 msgid "SMS Text"
-msgstr ""
+msgstr "СМС текст"
 
 #. module: auction
 #: field:auction.dates,auction1:0
 msgid "First Auction Day"
-msgstr ""
+msgstr "Эхний дуудлага худалдааны өдөр"
 
 #. module: auction
 #: view:auction.lots.make.invoice.buyer:0
 msgid "Create Invoices For Buyer"
-msgstr ""
+msgstr "Худалдан авагчид нэхэмжлэл үүсгэх"
 
 #. module: auction
 #: model:res.groups,name:auction.group_auction_manager
@@ -1784,7 +1784,7 @@ msgstr ""
 #. module: auction
 #: field:auction.lots,seller_price:0
 msgid "Seller price"
-msgstr ""
+msgstr "Борлуулалтын үнэ"
 
 #. module: auction
 #: model:account.tax,name:auction.auction_tax20
@@ -1794,12 +1794,12 @@ msgstr ""
 #. module: auction
 #: model:ir.actions.report.xml,name:auction.buy_id_list
 msgid "Buyer List"
-msgstr ""
+msgstr "Худалдан авагчийн жагсаалт"
 
 #. module: auction
 #: report:buyer.list:0
 msgid "Buyer costs("
-msgstr ""
+msgstr "Худалдан авагчийн зардал("
 
 #. module: auction
 #: field:auction.pay.buy,statement_id1:0
@@ -1812,7 +1812,7 @@ msgstr ""
 #: help:auction.lots,seller_price:0
 #: help:auction.lots.make.invoice,amount:0
 msgid "Seller Price"
-msgstr ""
+msgstr "Борлуулалтын үнэ"
 
 #. module: auction
 #: model:account.tax,name:auction.auction_tax6
@@ -1877,7 +1877,7 @@ msgstr ""
 #. module: auction
 #: field:report.object.encoded,estimation:0
 msgid "Estimation"
-msgstr ""
+msgstr "Тооцоолох"
 
 #. module: auction
 #: view:auction.taken:0
@@ -1892,7 +1892,7 @@ msgstr ""
 #. module: auction
 #: field:auction.bid,partner_id:0
 msgid "Buyer Name"
-msgstr ""
+msgstr "Худалдан авагчийн нэр"
 
 #. module: auction
 #: view:report.auction:0
@@ -1919,7 +1919,7 @@ msgstr ""
 #. module: auction
 #: view:auction.dates:0
 msgid "Search Next Auction Dates"
-msgstr ""
+msgstr "Дараагийн дуудлага худалдааны огноогоор хайх"
 
 #. module: auction
 #: view:auction.catalog.flagey:0
@@ -1929,7 +1929,7 @@ msgstr ""
 #. module: auction
 #: field:auction.lots,ach_avance:0
 msgid "Buyer Advance"
-msgstr ""
+msgstr "Худалдан авагчийн урьдчилгаа"
 
 #. module: auction
 #: field:auction.lots,obj_comm:0
@@ -1959,7 +1959,7 @@ msgstr ""
 #. module: auction
 #: view:auction.lots:0
 msgid "Catalog"
-msgstr ""
+msgstr "Каталог"
 
 #. module: auction
 #: help:auction.lots,auction_id:0
@@ -2053,7 +2053,7 @@ msgstr ""
 #. module: auction
 #: model:ir.model,name:auction.model_auction_payer_sel
 msgid "Auction payment for seller"
-msgstr ""
+msgstr "Дуудлага худалдааны борлуулалтын төлбөр"
 
 #. module: auction
 #: view:auction.lots:0
@@ -2064,7 +2064,7 @@ msgstr ""
 #. module: auction
 #: model:ir.actions.report.xml,name:auction.seller_form_id
 msgid "Seller List"
-msgstr ""
+msgstr "Борлуулалтын жагсаалт"
 
 #. module: auction
 #: view:report.object.encoded:0
@@ -2100,7 +2100,7 @@ msgstr ""
 #: view:auction.dates:0
 #: model:ir.model,name:auction.model_auction_dates
 msgid "Auction Dates"
-msgstr ""
+msgstr "Дуудлага худалдааны огноо"
 
 #. module: auction
 #: model:ir.ui.menu,name:auction.menu_board_auction_open
@@ -2158,7 +2158,7 @@ msgstr ""
 #: model:account.tax,name:auction.auction_tax3
 #: field:auction.dates,buyer_costs:0
 msgid "Buyer Costs"
-msgstr ""
+msgstr "Худалдан авагчийн зардал"
 
 #. module: auction
 #: report:auction.total.rml:0
@@ -2175,7 +2175,7 @@ msgstr ""
 #: field:auction.lots,ach_inv_id:0
 #: view:auction.lots.make.invoice.buyer:0
 msgid "Buyer Invoice"
-msgstr ""
+msgstr "Худалдан авагчийэ нэхэижлэл"
 
 #. module: auction
 #: report:auction.bids:0
@@ -2185,7 +2185,7 @@ msgstr ""
 #. module: auction
 #: field:auction.lots,artist_id:0
 msgid "Artist/Author"
-msgstr ""
+msgstr "Зураач / Зохиолч"
 
 #. module: auction
 #: model:ir.actions.report.xml,name:auction.total_result1
@@ -2240,7 +2240,7 @@ msgstr ""
 #. module: auction
 #: field:auction.dates,auction2:0
 msgid "Last Auction Day"
-msgstr ""
+msgstr "Дараагийн дуудлага худалдааны өдөр"
 
 #. module: auction
 #: code:addons/auction/wizard/auction_pay_buy.py:89
@@ -2323,7 +2323,7 @@ msgstr ""
 #. module: auction
 #: model:ir.model,name:auction.model_auction_payer
 msgid "Auction payer"
-msgstr ""
+msgstr "Дуудлага худалдааны төлбөр төлөгч"
 
 #. module: auction
 #: view:report.auction:0
@@ -2333,7 +2333,7 @@ msgstr ""
 #. module: auction
 #: report:auction.total.rml:0
 msgid "Auction name:"
-msgstr ""
+msgstr "Дуудлага худалдааны нэр:"
 
 #. module: auction
 #: view:board.board:0
@@ -2343,7 +2343,7 @@ msgstr ""
 #. module: auction
 #: model:ir.actions.report.xml,name:auction.art2
 msgid "Artists Biography"
-msgstr ""
+msgstr "Зураачийн намтар"
 
 #. module: auction
 #: view:report.auction:0
@@ -2354,4 +2354,4 @@ msgstr ""
 #. module: auction
 #: field:auction.lots,history_ids:0
 msgid "Auction history"
-msgstr ""
+msgstr "Дуудлага худалдааны түүх"

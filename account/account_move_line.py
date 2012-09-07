@@ -200,15 +200,11 @@ class account_move_line(osv.osv):
     def convert_to_period(self, cr, uid, context=None):
         if context is None:
             context = {}
-        period_obj = self.pool.get('account.period')
         #check if the period_id changed in the context from client side
-        if context.get('period_id', False):
-            period_id = context.get('period_id')
-            if type(period_id) == str:
-                ids = period_obj.search(cr, uid, [('name', 'ilike', period_id)])
-                context.update({
-                    'period_id': ids[0]
-                })
+        period_id = context.get('period_id')
+        if isinstance(period_id, basestring):
+            ids = self.pool.get('account.period').search(cr, uid, [('name', 'ilike', period_id)])
+            context['period_id'] = ids and ids[0] or False
         return context
 
     def _default_get(self, cr, uid, fields, context=None):
@@ -698,17 +694,43 @@ class account_move_line(osv.osv):
     # writeoff; entry generated for the difference between the lines
     #
     def search(self, cr, uid, args, offset=0, limit=None, order=None, context=None, count=False):
-        if context is None:
-            context = {}
-        if context and context.get('next_partner_only', False):
-            if not context.get('partner_id', False):
-                partner = self.get_next_partner_only(cr, uid, offset, context)
-            else:
-                partner = context.get('partner_id', False)
-            if not partner:
-                return []
-            args.append(('partner_id', '=', partner[0]))
+        partner_domain = self._partner_domain(cr, uid, offset, context=context)
+        if partner_domain is None:
+            return []
+        args.extend(partner_domain)
         return super(account_move_line, self).search(cr, uid, args, offset, limit, order, context, count)
+
+    def read_group(self, cr, uid, domain, fields, groupby, offset=0,
+                   limit=None, context=None, orderby=False):
+        partner_domain = self._partner_domain(
+            cr, uid, offset, context=context)
+        if partner_domain is None:
+            # Always false domain, to return an empty groupby (no
+            # groups). Should create an empty groupby directly but no
+            # API and can't be arsed.
+            partner_domain = [('move_id', '=', False)]
+        domain.extend(partner_domain)
+        return super(account_move_line, self).read_group(
+            cr, uid, domain, fields, groupby,
+            offset, limit, context, orderby)
+
+    def _partner_domain(self, cr, uid, offset, context=None):
+        """ Returns a (complete) domain for the next partner with
+        unreconciled entries, to add to the existing domain.
+
+        May return an empty list if there is no filtering to be done
+        (``next_partner_only`` is not enabled).
+
+        Will return ``None`` if there is no partner with unreconciled
+        entries left, for the caller to handle as desired.
+        """
+        if context and context.get('next_partner_only'):
+            partner = context.get('partner_id', False) \
+                   or self.get_next_partner_only(cr, uid, offset, context)
+            if not partner:
+                return None
+            return [('partner_id', '=', partner[0])]
+        return []
 
     def get_next_partner_only(self, cr, uid, offset=0, context=None):
         cr.execute(
@@ -738,8 +760,7 @@ class account_move_line(osv.osv):
         total = 0.0
         merges_rec = []
         company_list = []
-        if context is None:
-            context = {}
+
         for line in self.browse(cr, uid, ids, context=context):
             if company_list and not line.company_id.id in company_list:
                 raise osv.except_osv(_('Warning !'), _('To reconcile the entries company should be the same for all entries'))
@@ -809,10 +830,7 @@ class account_move_line(osv.osv):
         writeoff = debit - credit
 
         # Ifdate_p in context => take this date
-        if context.has_key('date_p') and context['date_p']:
-            date=context['date_p']
-        else:
-            date = time.strftime('%Y-%m-%d')
+        date = context.get('date_p') or time.strftime(tools.DEFAULT_SERVER_DATE_FORMAT)
 
         cr.execute('SELECT account_id, reconcile_id '\
                    'FROM account_move_line '\

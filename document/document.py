@@ -187,6 +187,11 @@ class document_file(osv.osv):
         if not ids:
             return 0 if count else []
 
+        # Work with a set, as list.remove() is prohibitive for large lists of documents
+        # (takes 20+ seconds on a db with 100k docs during search_count()!)
+        orig_ids = ids
+        ids = set(ids)
+
         # Filter out documents that are in directories that the user is not allowed to read.
         # Must use pure SQL to avoid access rules exceptions (we want to remove the records,
         # not fail), and the records have been filtered in parent's search() anyway.
@@ -198,8 +203,10 @@ class document_file(osv.osv):
         for doc_id, parent_id in doc_pairs:
             if parent_id in disallowed_parents:
                 ids.remove(doc_id)
-        return len(ids) if count else ids
 
+        # sort result according to the original sort ordering
+        result = [id for id in orig_ids if id in ids]
+        return len(result) if count else result
 
     def copy(self, cr, uid, id, default=None, context=None):
         if not default:
