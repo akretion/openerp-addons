@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-02-08 00:35+0000\n"
-"PO-Revision-Date: 2012-09-07 21:36+0000\n"
+"PO-Revision-Date: 2012-09-08 17:33+0000\n"
 "Last-Translator: Ayhan KIZILTAN <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-09-08 05:29+0000\n"
+"X-Launchpad-Export-Date: 2012-09-09 05:07+0000\n"
 "X-Generator: Launchpad (build 15914)\n"
 
 #. module: account
@@ -825,7 +825,7 @@ msgstr "Account Subscription Line"
 #. module: account
 #: help:account.invoice,reference:0
 msgid "The partner reference of this invoice."
-msgstr "Bu faturaya ait paydaş kaynağı"
+msgstr "Bu faturaya ait paydaş referansı"
 
 #. module: account
 #: view:account.invoice.report:0
@@ -1737,7 +1737,7 @@ msgstr "Faturalama"
 #: code:addons/account/report/account_partner_balance.py:115
 #, python-format
 msgid "Unknown Partner"
-msgstr "Bilinmeyen İş Ortağı"
+msgstr "Bilinmeyen Paydaş"
 
 #. module: account
 #: field:account.tax.code,sum:0
@@ -1804,7 +1804,7 @@ msgstr "Account Common Journal Report"
 #. module: account
 #: selection:account.partner.balance,display_partner:0
 msgid "All Partners"
-msgstr "All Partners"
+msgstr "Bütün Paydaşlar"
 
 #. module: account
 #: view:account.analytic.chart:0
@@ -2175,11 +2175,10 @@ msgid ""
 "partners accounts (for debit/credit computations), closed for depreciated "
 "accounts."
 msgstr ""
-"This type is used to differentiate types with special effects in OpenERP: "
-"view can not have entries, consolidation are accounts that can have children "
-"accounts for multi-company consolidations, payable/receivable are for "
-"partners accounts (for debit/credit computations), closed for depreciated "
-"accounts."
+"Bu tip OpenERP de özel efektler ile türleri ayırt etmek için kullanılır: "
+"görünümde girişler yapılamaz, birleştirmeler çok-firmalı birleştirmeler için "
+"alt hesapları olan hesaplardır, ödenecek/alınacak paydaş hesapları içindir "
+"(borç/alacak hesaplamaları), amortismana tabi hesaplar için kapalıdır"
 
 #. module: account
 #: view:account.chart.template:0
@@ -2465,7 +2464,7 @@ msgstr "Draft state of an invoice"
 #. module: account
 #: view:account.partner.reconcile.process:0
 msgid "Partner Reconciliation"
-msgstr "Partner Reconciliation"
+msgstr "Paydaş Uzlaşması"
 
 #. module: account
 #: field:account.tax,tax_code_id:0
@@ -2614,8 +2613,7 @@ msgid ""
 "The fiscal position will determine taxes and the accounts used for the "
 "partner."
 msgstr ""
-"The fiscal position will determine taxes and the accounts used for the "
-"partner."
+"Mali durum vergileri ve paydaşlar için kullanılan hesapları belirleyecektir."
 
 #. module: account
 #: view:account.print.journal:0
@@ -2785,7 +2783,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:account.action_account_aged_balance_view
 #: model:ir.ui.menu,name:account.menu_aged_trial_balance
 msgid "Aged Partner Balance"
-msgstr "Aged Partner Balance"
+msgstr "Yaşlandırılmış Paydaş Bakiyesi"
 
 #. module: account
 #: model:process.transition,name:account.process_transition_entriesreconcile0
@@ -2984,9 +2982,9 @@ msgid ""
 "between the creation date or the creation date of the entries plus the "
 "partner payment terms."
 msgstr ""
-"The maturity date of the generated entries for this model. You can choose "
-"between the creation date or the creation date of the entries plus the "
-"partner payment terms."
+"Bu model için oluşturulan kayıtların vade tarihi. Sen oluşturulma tarihi "
+"veya girişlerin oluşturulma tarihi artı paydaş ödeme koşulları arasında "
+"seçim yapabilirsiniz."
 
 #. module: account
 #: model:ir.ui.menu,name:account.menu_finance_accounting
@@ -3025,7 +3023,7 @@ msgstr ""
 #. module: account
 #: field:account.partner.ledger,page_split:0
 msgid "One Partner Per Page"
-msgstr "One Partner Per Page"
+msgstr "Her Sayfada bir Paydaş"
 
 #. module: account
 #: field:account.account,child_parent_ids:0
@@ -3208,7 +3206,7 @@ msgstr "Starts on"
 #. module: account
 #: model:ir.model,name:account.model_account_partner_ledger
 msgid "Account Partner Ledger"
-msgstr "Account Partner Ledger"
+msgstr "Paydaş Hesabı Defteri"
 
 #. module: account
 #: help:account.journal.column,sequence:0
@@ -3330,7 +3328,7 @@ msgstr "Günlükler"
 #. module: account
 #: field:account.partner.reconcile.process,to_reconcile:0
 msgid "Remaining Partners"
-msgstr "Remaining Partners"
+msgstr "Kalan Paydaşlar"
 
 #. module: account
 #: view:account.subscription:0
@@ -3376,7 +3374,7 @@ msgstr "Açılış Bakiyesi"
 #: code:addons/account/account_invoice.py:1332
 #, python-format
 msgid "No Partner Defined !"
-msgstr "No Partner Defined !"
+msgstr "Tanımlı Paydaş Yok !"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_period_close
@@ -3610,7 +3608,7 @@ msgstr "%s%s \"görünüm\" hesabında günlük maddesi oluşturmazsınız"
 #. module: account
 #: model:ir.model,name:account.model_account_partner_reconcile_process
 msgid "Reconcilation Process partner by partner"
-msgstr "Reconcilation Process partner by partner"
+msgstr "Paydaş paydaş Uzlaşma İşlemi"
 
 #. module: account
 #: selection:account.automatic.reconcile,power:0
@@ -3696,7 +3694,7 @@ msgid ""
 "based on partner payment term!\n"
 "Please define partner on it!"
 msgstr ""
-"'%s' Modele ait '%s' model kalemince oluşturulan vade tarihi paydaş ödeme "
+"'%s' Modele ait '%s' model öğesince oluşturulan vade tarihi paydaş ödeme "
 "koşulu baz alınarak oluşturulur. Lütfen hangi paydaş olduğunu belirtiniz."
 
 #. module: account
@@ -4909,7 +4907,7 @@ msgid ""
 "This report is analysis by partner. It is a PDF report containing one line "
 "per partner representing the cumulative credit balance."
 msgstr ""
-"Bu rapor ortak tarafından analiz edilmiştir. Her satırda bir paydaş (ortak) "
+"Bu rapor paydaş tarafından incelenmiştir. Her satırda bir paydaş (ortak) "
 "için kümülatif kredi bakiyesi içeren bir PDF raporudur."
 
 #. module: account
@@ -5180,7 +5178,7 @@ msgstr "ay"
 #. module: account
 #: field:account.partner.reconcile.process,next_partner_id:0
 msgid "Next Partner to Reconcile"
-msgstr "Next Partner to Reconcile"
+msgstr "Uzlaşılacak Sonraki Paydaş"
 
 #. module: account
 #: field:account.invoice.tax,account_id:0
@@ -5315,7 +5313,7 @@ msgstr "Süre sonu geçmiş Analiz Hesapları"
 #. module: account
 #: report:account.partner.balance:0
 msgid "(Account/Partner) Name"
-msgstr "(Account/Partner) Name"
+msgstr "(Hesap/Paydaş) Adı"
 
 #. module: account
 #: view:account.bank.statement:0
@@ -5477,9 +5475,9 @@ msgid ""
 "something to reconcile or not. This figure already count the current partner "
 "as reconciled."
 msgstr ""
-"This is the remaining partners for who you should check if there is "
-"something to reconcile or not. This figure already count the current partner "
-"as reconciled."
+"Bu uzlaştırılacak veya uzlaştırılmayacak bir şey olup olmadığı kontrol "
+"edilecek kalan paydaşlardır. Bu geçerli paydaşı zaten uzlaşılmış olarak "
+"sayar."
 
 #. module: account
 #: view:account.subscription.line:0
@@ -5874,8 +5872,9 @@ msgid ""
 "Shows you the progress made today on the reconciliation process. Given by \n"
 "Partners Reconciled Today \\ (Remaining Partners + Partners Reconciled Today)"
 msgstr ""
-"Shows you the progress made today on the reconciliation process. Given by \n"
-"Partners Reconciled Today \\ (Remaining Partners + Partners Reconciled Today)"
+"Uzlaşma işlemi üzerinde bugün yapılan gelişmeyi gösterir. Tarafından "
+"verilen\n"
+"Bugünkü Paydaş Uzlaşmaları \\ (Kalan Paydaşlar+ Bugün Uzlaşılan Paydaşlar)"
 
 #. module: account
 #: help:account.payment.term.line,value:0
@@ -6366,7 +6365,7 @@ msgstr "Percentage"
 #. module: account
 #: selection:account.report.general.ledger,sortby:0
 msgid "Journal & Partner"
-msgstr "Journal & Partner"
+msgstr "Günlük & Paydaş"
 
 #. module: account
 #: field:account.automatic.reconcile,power:0
@@ -6402,7 +6401,7 @@ msgstr ""
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_partner_reconcile
 msgid "Reconciliation: Go to Next Partner"
-msgstr "Reconciliation: Go to Next Partner"
+msgstr "Uzlaşma: Sonraki Paydaşa Git"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_analytic_invert_balance
@@ -6744,8 +6743,8 @@ msgid ""
 "This account will be used instead of the default one as the receivable "
 "account for the current partner"
 msgstr ""
-"This account will be used instead of the default one as the receivable "
-"account for the current partner"
+"Bu hesap, geçerli paydaş için alacak hesabı olarak varsayılanın yerine "
+"kullanılır."
 
 #. module: account
 #: field:account.tax,python_applicable:0
@@ -6871,7 +6870,7 @@ msgstr ""
 "Bir faturanın ödenmiş olarak kabul edilmesi için, fatura girişlerinin "
 "karşılıkları ile, genelde ödemelerle uyuşması gerekir. Otomatik uzlaşma "
 "fonksiyonu ile OpenERP bir hesap serisi içerisinde uzlaştırmak için kendi "
-"aramasını yapar. Her ortak için uyuşan tutarları bulur."
+"aramasını yapar. Her paydaş için uyuşan tutarları bulur."
 
 #. module: account
 #: view:account.move:0
@@ -6903,7 +6902,7 @@ msgstr "Günlük Girdileri"
 #. module: account
 #: help:account.partner.ledger,page_split:0
 msgid "Display Ledger Report with One partner per page"
-msgstr "Display Ledger Report with One partner per page"
+msgstr "Her sayfada Bir paydaş olarak Defter Raporunu Göster"
 
 #. module: account
 #: code:addons/account/account_move_line.py:1218
@@ -6933,7 +6932,7 @@ msgid ""
 "This report is an analysis done by a partner. It is a PDF report containing "
 "one line per partner representing the cumulative credit balance"
 msgstr ""
-"Bu rapor bir ortak tarafından yapılmış bir analizdir. Her ortak için tek "
+"Bu rapor bir paydaş tarafından yapılmış bir incelemedir. Her paydaş için tek "
 "satırda kümülatif alacak bakiyelerini gösteren bir PDF raporudur."
 
 #. module: account
@@ -7531,9 +7530,8 @@ msgid ""
 "the system to go through the reconciliation process, based on the latest day "
 "it have been reconciled."
 msgstr ""
-"This field shows you the next partner that will be automatically chosen by "
-"the system to go through the reconciliation process, based on the latest day "
-"it have been reconciled."
+"Bu alan, uzlaşma işlemi süresince sistem tarafından seçilen sonraki paydaşı "
+"gösterir, uzlaşılan son gün temel alınır."
 
 #. module: account
 #: field:account.move.line.reconcile.writeoff,comment:0
@@ -8014,7 +8012,7 @@ msgstr "CashBox Line"
 #: model:ir.actions.report.xml,name:account.account_3rdparty_ledger_other
 #: model:ir.ui.menu,name:account.menu_account_partner_ledger
 msgid "Partner Ledger"
-msgstr "Partner Ledger"
+msgstr "Paydaş Defteri"
 
 #. module: account
 #: selection:account.tax.template,type:0
@@ -8077,7 +8075,7 @@ msgstr "Subscription Compute"
 #: model:ir.model,name:account.model_res_partner
 #: field:report.invoice.created,partner_id:0
 msgid "Partner"
-msgstr "Ortak"
+msgstr "Paydaş"
 
 #. module: account
 #: help:account.change.currency,currency_id:0
@@ -8246,13 +8244,13 @@ msgstr "Türe göre Bu Ayki Satışlar"
 #. module: account
 #: view:account.analytic.account:0
 msgid "Associated Partner"
-msgstr "Associated Partner"
+msgstr "İlişkili Paydaş"
 
 #. module: account
 #: code:addons/account/account_invoice.py:1332
 #, python-format
 msgid "You must first select a partner !"
-msgstr "You must first select a partner !"
+msgstr "Önce bir paydaş seçmelisiniz !"
 
 #. module: account
 #: view:account.invoice:0
@@ -8414,8 +8412,7 @@ msgid ""
 "This payment term will be used instead of the default one for the current "
 "partner"
 msgstr ""
-"This payment term will be used instead of the default one for the current "
-"partner"
+"Bu ödeme koşulu geçerli paydaş için varsayılan yerine kullanılacaktır"
 
 #. module: account
 #: view:account.tax.template:0
@@ -8539,8 +8536,8 @@ msgid ""
 "You can check this box to mark this journal item as a litigation with the "
 "associated partner"
 msgstr ""
-"You can check this box to mark this journal item as a litigation with the "
-"associated partner"
+"İlşikili paydaşla ilgili bir dava sözkonusu ise bu kutuyu işaretleyerek bu "
+"günlük öğesine not düşebilirsiniz"
 
 #. module: account
 #: field:account.move.line,reconcile_partial_id:0
@@ -8690,7 +8687,7 @@ msgstr "Company Analysis"
 #. module: account
 #: help:account.invoice,account_id:0
 msgid "The partner account used for this invoice."
-msgstr "The partner account used for this invoice."
+msgstr "Bu fatura için kullanılan paydaş hesabı"
 
 #. module: account
 #: code:addons/account/account.py:3296
@@ -9022,7 +9019,7 @@ msgstr "Force period"
 #. module: account
 #: model:ir.model,name:account.model_account_partner_balance
 msgid "Print Account Partner Balance"
-msgstr "Print Account Partner Balance"
+msgstr "Paydaş Hesabı Bakiyesini Yazdır"
 
 #. module: account
 #: help:account.financial.report,sign:0
@@ -9311,7 +9308,7 @@ msgstr "Analysis Direction"
 #. module: account
 #: field:res.partner,ref_companies:0
 msgid "Companies that refers to partner"
-msgstr "Companies that refers to partner"
+msgstr "Paydaşa başvurusu olan Firmalar"
 
 #. module: account
 #: view:account.journal:0
@@ -9835,8 +9832,8 @@ msgid ""
 "This account will be used instead of the default one as the payable account "
 "for the current partner"
 msgstr ""
-"This account will be used instead of the default one as the payable account "
-"for the current partner"
+"Bu hesap geçerli paydaşın ödemeler hesabında varsayılan yerine "
+"kullanılacaktır"
 
 #. module: account
 #: field:account.period,special:0
@@ -10496,7 +10493,7 @@ msgstr "Alıcılar Hesabı"
 #. module: account
 #: selection:account.model.line,date_maturity:0
 msgid "Partner Payment Term"
-msgstr "Paydaş Ödeme Şartı"
+msgstr "Paydaş Ödeme Koşulu"
 
 #. module: account
 #: field:temp.range,name:0
@@ -10806,12 +10803,12 @@ msgstr ""
 "''}${object.address_invoice_id.name or ''},\n"
 "\n"
 "${object.partner_id.name}:\n"
-"       | Invoice number: *${object.number}*\n"
+"       | Fatura Numarası: *${object.number}*\n"
 "       | Fatura toplamı: *${object.amount_total} "
 "${object.currency_id.name}*\n"
 "       | Fatura tarihi: ${object.date_invoice}\n"
 "       % if object.origin:\n"
-"       | Order reference: ${object.origin}\n"
+"       | Sipariş Referansı: ${object.origin}\n"
 "       % endif\n"
 "       | İlgili kişi: ${object.user_id.name} ${object.user_id.user_email and "
 "'<%s>'%(object.user_id.user_email) or ''}\n"
