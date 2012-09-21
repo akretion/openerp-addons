@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-02-08 01:37+0100\n"
-"PO-Revision-Date: 2012-09-17 11:48+0000\n"
+"PO-Revision-Date: 2012-09-20 14:36+0000\n"
 "Last-Translator: Erwin <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-09-18 05:31+0000\n"
-"X-Generator: Launchpad (build 15966)\n"
+"X-Launchpad-Export-Date: 2012-09-21 04:58+0000\n"
+"X-Generator: Launchpad (build 15985)\n"
 
 #. module: crm
 #: view:crm.lead.report:0
@@ -879,7 +879,7 @@ msgstr ""
 #. module: crm
 #: view:crm.phonecall2opportunity:0
 msgid "Convert To Opportunity "
-msgstr "Converteer naar prospect "
+msgstr "Converteren naar prospect "
 
 #. module: crm
 #: help:crm.meeting,recurrency:0
@@ -1932,7 +1932,7 @@ msgstr "Prospect word omgezet naar relatie"
 #. module: crm
 #: model:ir.actions.act_window,name:crm.phonecall2opportunity_act
 msgid "Convert To Opportunity"
-msgstr "Converteer naar prospect"
+msgstr "Converteren naar prospect"
 
 #. module: crm
 #: view:crm.case.channel:0
