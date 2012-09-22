@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-02-08 01:37+0100\n"
-"PO-Revision-Date: 2012-09-20 14:57+0000\n"
+"PO-Revision-Date: 2012-09-21 14:05+0000\n"
 "Last-Translator: Chertykov Denis <chertykov@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-09-21 04:58+0000\n"
+"X-Launchpad-Export-Date: 2012-09-22 05:24+0000\n"
 "X-Generator: Launchpad (build 15985)\n"
 
 #. module: purchase
@@ -842,7 +842,7 @@ msgstr "Кол-во"
 #. module: purchase
 #: view:purchase.report:0
 msgid "Month-1"
-msgstr ""
+msgstr "Месяц-1"
 
 #. module: purchase
 #: help:purchase.order,minimum_planned_date:0
@@ -916,7 +916,7 @@ msgstr "${object.company_id.name} Заказ (Ссылка ${object.name or 'n/a
 #. module: purchase
 #: report:purchase.quotation:0
 msgid "Request for Quotation :"
-msgstr ""
+msgstr "Запрос цен:"
 
 #. module: purchase
 #: model:ir.actions.act_window,name:purchase.purchase_waiting
@@ -1636,7 +1636,7 @@ msgstr "Резервирование"
 #. module: purchase
 #: view:purchase.order:0
 msgid "Purchase orders that include lines not invoiced."
-msgstr ""
+msgstr "Заказы закупки, которые имеют позиции не указанные в счетах."
 
 #. module: purchase
 #: view:purchase.order:0
@@ -1646,7 +1646,7 @@ msgstr "Сумма до налогов"
 #. module: purchase
 #: view:stock.picking:0
 msgid "Picking to Invoice"
-msgstr ""
+msgstr "Комплектование в Счёт"
 
 #. module: purchase
 #: view:purchase.config.wizard:0
@@ -1654,6 +1654,7 @@ msgid ""
 "This tool will help you to select the method you want to use to control "
 "supplier invoices."
 msgstr ""
+"Этот инструмент поможет вам выбрать способ  управления счетами поставщика."
 
 #. module: purchase
 #: model:process.transition,note:purchase.process_transition_confirmingpurchaseorder1
@@ -1662,8 +1663,8 @@ msgid ""
 "manually and confirm it. The RFQ becomes a confirmed Purchase Order."
 msgstr ""
 "В случае отсутствия поставщика этого продукта, покупатель может заполнить и "
-"подтвердить форму вручную. Запрос цен становится подтвержденным заказом на "
-"закупку."
+"подтвердить форму вручную. Запрос цен становится подтвержденным заказом "
+"закупки."
 
 #. module: purchase
 #: selection:purchase.report,month:0
@@ -1700,6 +1701,11 @@ msgid ""
 "receptions\", you can track here all the product receptions and create "
 "invoices for those receptions."
 msgstr ""
+"Если вы задали управление счётом по заказу закупки как 'На основе позиций "
+"заказа закупки', вы можете отслеживать здесь все позиции заказа закупки для "
+"которых вы ещё не получили счёт поставщика. При готовности получения счёта "
+"поставщика, вы можете создать черновик счёта поставщика на основе позиций из "
+"этого меню."
 
 #. module: purchase
 #: view:purchase.order:0
@@ -1731,6 +1737,16 @@ msgid ""
 "\n"
 " "
 msgstr ""
+" Пожалуйста учтите, что: \n"
+" \n"
+" Заказы могут быть объединены если: \n"
+" * заказы закупок черновые \n"
+" * заказы закупок принадлежат одному поставщику \n"
+" * заказы закупок имеют одно место хранения, один прайс-лист \n"
+" \n"
+" Позиции будут объединены только если: \n"
+" * позиции заказа точно те же, включая товар, количества и единицы \n"
+" "
 
 #. module: purchase
 #: field:purchase.report,negociation:0
@@ -1740,13 +1756,13 @@ msgstr "Стандартная цена закупки"
 #. module: purchase
 #: field:purchase.config.wizard,default_method:0
 msgid "Default Invoicing Control Method"
-msgstr ""
+msgstr "Способ управления выставлением счёта по умолчанию"
 
 #. module: purchase
 #: model:product.pricelist.type,name:purchase.pricelist_type_purchase
 #: field:res.partner,property_product_pricelist_purchase:0
 msgid "Purchase Pricelist"
-msgstr "Каталог закупок"
+msgstr "Закупочный прайс-лист"
 
 #. module: purchase
 #: field:purchase.order,invoice_method:0
@@ -1756,7 +1772,7 @@ msgstr "Контроль счетов"
 #. module: purchase
 #: view:stock.picking:0
 msgid "Back Orders"
-msgstr ""
+msgstr "Дозаказы"
 
 #. module: purchase
 #: model:process.transition.action,name:purchase.process_transition_action_approvingpurchaseorder0
@@ -1766,7 +1782,7 @@ msgstr "Утвердить"
 #. module: purchase
 #: model:product.pricelist.version,name:purchase.ver0
 msgid "Default Purchase Pricelist Version"
-msgstr "Версия каталога закупок по умолчанию."
+msgstr "Версия прайс-листа закупок по умолчанию."
 
 #. module: purchase
 #: view:purchase.order.line:0
@@ -1784,20 +1800,20 @@ msgid ""
 "                                      \n"
 "* The 'Cancelled' state is set automatically when user cancel purchase order."
 msgstr ""
-" * Состояние 'Черновик' устанавливается автоматически, когда заказ на "
-"закупку в состоянии черновик.\n"
-"* Состояние 'Подтверждено' устанавливается автоматически, когда заказ на "
-"закупку в состоянии подтверждено.\n"
-"* Состояние 'Сделано' устанавливается автоматически, когда заказ на закупку "
-"в состоянии сделано.\n"
+" * Состояние 'Черновик' устанавливается автоматически, когда заказ закупки в "
+"состоянии черновик.\n"
+"* Состояние 'Подтверждено' устанавливается автоматически, когда заказ "
+"закупки в состоянии подтверждено.\n"
+"* Состояние 'Сделано' устанавливается автоматически, когда заказ закупки в "
+"состоянии сделано.\n"
 "* Состояние 'Отменено' устанавливается автоматически, при отмене "
-"пользователем заказа на закупку."
+"пользователем заказа закупки."
 
 #. module: purchase
 #: code:addons/purchase/purchase.py:426
 #, python-format
 msgid "Purchase order '%s' is cancelled."
-msgstr "Заказ на закупку '%s' отменен."
+msgstr "Заказ закупки '%s' отменен."
 
 #. module: purchase
 #: field:purchase.order,amount_total:0
@@ -1807,12 +1823,12 @@ msgstr "Всего"
 #. module: purchase
 #: model:ir.ui.menu,name:purchase.menu_product_pricelist_action_purhase
 msgid "Pricelist Versions"
-msgstr "Версии каталогов"
+msgstr "Версии прайс-листов"
 
 #. module: purchase
 #: constraint:res.partner:0
 msgid "Error ! You cannot create recursive associated members."
-msgstr ""
+msgstr "Ошибка! Вы не можете создавать рекурсивные ссылки на участников."
 
 #. module: purchase
 #: code:addons/purchase/purchase.py:359
@@ -1824,12 +1840,12 @@ msgstr "Счет расходов не определен для этого то
 #. module: purchase
 #: view:purchase.order.group:0
 msgid "Are you sure you want to merge these orders ?"
-msgstr "Вы уверены, что хотите объединить данные заказы?"
+msgstr "Вы уверены, что хотите объединить эти заказы?"
 
 #. module: purchase
 #: model:process.transition,name:purchase.process_transition_purchaseinvoice0
 msgid "From a purchase order"
-msgstr "Из заказа на закупку"
+msgstr "Из заказа закупки"
 
 #. module: purchase
 #: code:addons/purchase/purchase.py:735
@@ -1838,7 +1854,7 @@ msgid ""
 "You have to select a pricelist or a supplier in the purchase form !\n"
 "Please set one before choosing a product."
 msgstr ""
-"Вы должны выбрать каталог или поставщика в форме ввода закупки !\n"
+"Вы должны выбрать прайс-лист или поставщика в форме ввода закупки !\n"
 "Пожалуйста выберите, перед выбором ТМЦ."
 
 #. module: purchase
@@ -1897,11 +1913,62 @@ msgid ""
 "% endif\n"
 "            "
 msgstr ""
+"\n"
+"Здравствуйте ${object.partner_address_id.name and ' ' or "
+"''}${object.partner_address_id.name or ''},\n"
+"\n"
+"Это подтверждение заказа закупки от ${object.company_id.name}:\n"
+"       | Номер заказа: *${object.name}*\n"
+"       | Сумма заказа: *${object.amount_total} "
+"${object.pricelist_id.currency_id.name}*\n"
+"       | Дата заказа: ${object.date_order}\n"
+"       % if object.origin:\n"
+"       | Ссылка заказа: ${object.origin}\n"
+"       % endif\n"
+"       % if object.partner_ref:\n"
+"       | Ваша ссылка: ${object.partner_ref}<br />\n"
+"       % endif\n"
+"       | Ваш контакт: ${object.validator.name} ${object.validator.user_email "
+"и '<%s>'%(object.validator.user_email) or ''}\n"
+"\n"
+"Вы можете можете видеть подтверждение заказа и загрузить его используя "
+"следующую ссылку:\n"
+"    ${ctx.get('edi_web_url_view') or 'n/a'}\n"
+"\n"
+"Если у вас есть вопросы, не стесняйтесь обратиться к нам.\n"
+"\n"
+"Спасибо!\n"
+"\n"
+"\n"
+"--\n"
+"${object.validator.name} ${object.validator.user_email and "
+"'<%s>'%(object.validator.user_email) or ''}\n"
+"${object.company_id.name}\n"
+"% if object.company_id.street:\n"
+"${object.company_id.street or ''}\n"
+"% endif\n"
+"% if object.company_id.street2:\n"
+"${object.company_id.street2}\n"
+"% endif\n"
+"% if object.company_id.city or object.company_id.zip:\n"
+"${object.company_id.zip or ''} ${object.company_id.city or ''}\n"
+"% endif\n"
+"% if object.company_id.country_id:\n"
+"${object.company_id.state_id and ('%s, ' % object.company_id.state_id.name) "
+"or ''} ${object.company_id.country_id.name or ''}\n"
+"% endif\n"
+"% if object.company_id.phone:\n"
+"Телефон: ${object.company_id.phone}\n"
+"% endif\n"
+"% if object.company_id.website:\n"
+"${object.company_id.website or ''}\n"
+"% endif\n"
+"            "
 
 #. module: purchase
 #: view:purchase.order:0
 msgid "Purchase orders which are in draft state"
-msgstr ""
+msgstr "Заказы закупки находящиеся в состоянии \"Черновик\""
 
 #. module: purchase
 #: selection:purchase.report,month:0
@@ -1911,17 +1978,17 @@ msgstr "Май"
 #. module: purchase
 #: model:res.groups,name:purchase.group_purchase_manager
 msgid "Manager"
-msgstr ""
+msgstr "Менеджер"
 
 #. module: purchase
 #: view:purchase.config.wizard:0
 msgid "res_config_contents"
-msgstr ""
+msgstr "res_config_contents"
 
 #. module: purchase
 #: view:purchase.report:0
 msgid "Order in current year"
-msgstr ""
+msgstr "Заказ в текущем году"
 
 #. module: purchase
 #: model:process.process,name:purchase.process_process_purchaseprocess0
@@ -1938,7 +2005,7 @@ msgstr "Год"
 #: model:ir.ui.menu,name:purchase.menu_purchase_line_order_draft
 #: selection:purchase.order,invoice_method:0
 msgid "Based on Purchase Order lines"
-msgstr ""
+msgstr "Основан на позициях заказа закупки"
 
 #. module: purchase
 #: model:ir.actions.todo.category,name:purchase.category_purchase_config
@@ -1954,7 +2021,7 @@ msgstr "Движение ТМЦ"
 #. module: purchase
 #: view:purchase.order.line_invoice:0
 msgid "Select an Open Sale Order"
-msgstr "Выберите открытый заказ на продажу"
+msgstr "Выберите открытый заказ продажи"
 
 #. module: purchase
 #: view:purchase.report:0
@@ -1967,7 +2034,7 @@ msgid ""
 "unique number of the purchase order,computed automatically when the purchase "
 "order is created"
 msgstr ""
-"Уникальный номер заказа на закупку, вычисленный автоматически при создании "
+"Уникальный номер заказа закупки, вычисленный автоматически при создании "
 "заказа."
 
 #. module: purchase
