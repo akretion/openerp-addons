@@ -22,6 +22,7 @@ from openerp.osv import osv, fields
 import uuid
 
 class res_users(osv.osv):
+    """Oauth2 Provider Class"""
     _inherit = 'res.users'
 
     _columns = {
