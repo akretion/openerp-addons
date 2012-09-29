@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-02-08 01:37+0100\n"
-"PO-Revision-Date: 2012-09-27 14:45+0000\n"
+"PO-Revision-Date: 2012-09-28 10:57+0000\n"
 "Last-Translator: Chertykov Denis <chertykov@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-09-28 04:55+0000\n"
-"X-Generator: Launchpad (build 16043)\n"
+"X-Launchpad-Export-Date: 2012-09-29 05:21+0000\n"
+"X-Generator: Launchpad (build 16049)\n"
 
 #. module: stock
 #: field:product.product,track_outgoing:0
@@ -1538,7 +1538,7 @@ msgstr "Вы можете удалить только черновик пере�
 #. module: stock
 #: model:ir.model,name:stock.model_stock_inventory_line_split_lines
 msgid "Inventory Split lines"
-msgstr ""
+msgstr "Строки разбития инвентаризации"
 
 #. module: stock
 #: model:ir.actions.report.xml,name:stock.report_location_overview
@@ -1559,7 +1559,7 @@ msgstr "Анализ включающий будущие перемещения 
 #. module: stock
 #: model:ir.actions.act_window,name:stock.action3 view:stock.tracking:0
 msgid "Downstream traceability"
-msgstr "Отслеживание вниз"
+msgstr "Нисходящее отслеживание"
 
 #. module: stock
 #: code:addons/stock/wizard/stock_invoice_onshipping.py:112
@@ -1588,7 +1588,7 @@ msgstr "Дата заказа"
 #: code:addons/stock/wizard/stock_change_product_qty.py:88
 #, python-format
 msgid "INV: %s"
-msgstr ""
+msgstr "ИНВ: %s"
 
 #. module: stock
 #: view:stock.location:0 field:stock.location,location_id:0
@@ -1643,7 +1643,7 @@ msgstr ""
 #. module: stock
 #: model:ir.model,name:stock.model_stock_invoice_onshipping
 msgid "Stock Invoice Onshipping"
-msgstr ""
+msgstr "Счёт по доставке"
 
 #. module: stock
 #: help:stock.move,state:0
@@ -1704,7 +1704,7 @@ msgstr "Статистика запасов"
 #. module: stock
 #: view:report.stock.move:0
 msgid "Month Planned"
-msgstr ""
+msgstr "Плановый месяц"
 
 #. module: stock
 #: field:product.product,track_production:0
@@ -1714,12 +1714,12 @@ msgstr "Отслеживать производимые партии"
 #. module: stock
 #: view:stock.picking:0
 msgid "Is a Back Order"
-msgstr ""
+msgstr "Является дозаказом"
 
 #. module: stock
 #: field:stock.location,valuation_out_account_id:0
 msgid "Stock Valuation Account (Outgoing)"
-msgstr ""
+msgstr "Счёт оценки запасов (исходящих)"
 
 #. module: stock
 #: model:ir.actions.act_window,name:stock.act_product_stock_move_open
