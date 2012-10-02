@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-02-08 01:37+0100\n"
-"PO-Revision-Date: 2012-09-28 10:57+0000\n"
+"PO-Revision-Date: 2012-10-01 10:14+0000\n"
 "Last-Translator: Chertykov Denis <chertykov@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-09-29 05:21+0000\n"
-"X-Generator: Launchpad (build 16049)\n"
+"X-Launchpad-Export-Date: 2012-10-02 05:51+0000\n"
+"X-Generator: Launchpad (build 16061)\n"
 
 #. module: stock
 #: field:product.product,track_outgoing:0
@@ -1760,7 +1760,7 @@ msgstr "Созданные перемещения товаров"
 #. module: stock
 #: field:stock.location,valuation_in_account_id:0
 msgid "Stock Valuation Account (Incoming)"
-msgstr ""
+msgstr "Счёт оценки запаса (входяшего)"
 
 #. module: stock
 #: model:stock.location,name:stock.stock_location_14
@@ -1775,7 +1775,7 @@ msgstr "Отслеживаемая партия"
 #. module: stock
 #: view:stock.picking:0
 msgid "Back Orders"
-msgstr ""
+msgstr "Дозаказы"
 
 #. module: stock
 #: view:product.product:0 view:product.template:0
@@ -1812,11 +1812,15 @@ msgid ""
 "specific valuation account set on the destination location. When not set on "
 "the product, the one from the product category is used."
 msgstr ""
+"При проведении оценки инвентаризации в реальном времени, корреспондирующие "
+"элементы журнала для всех исходящих перемещений будут помещены на этот счёт, "
+"если нет задан счёт в месте назначения. Его также можно установить "
+"непосредственно для каждого продукта."
 
 #. module: stock
 #: view:report.stock.move:0
 msgid "Day Planned"
-msgstr ""
+msgstr "Запланированный день"
 
 #. module: stock
 #: view:report.stock.inventory:0 field:report.stock.inventory,date:0
