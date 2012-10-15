@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-10-08 12:28+0000\n"
-"PO-Revision-Date: 2012-10-12 17:54+0000\n"
+"PO-Revision-Date: 2012-10-14 07:53+0000\n"
 "Last-Translator: Ayhan KIZILTAN <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-13 05:00+0000\n"
+"X-Launchpad-Export-Date: 2012-10-15 05:30+0000\n"
 "X-Generator: Launchpad (build 16137)\n"
 
 #. module: account
@@ -310,7 +310,7 @@ msgstr "Ara Top."
 #: code:addons/account/account_invoice.py:560
 #, python-format
 msgid "Invoice line account company does not match with invoice company."
-msgstr "Fatura satırındaki hesap firması ile fatura firması eşleşmiyor."
+msgstr "Fatura öğesi hesap firması ile fatura firması eşleşmiyor."
 
 #. module: account
 #: field:account.journal.column,field:0
@@ -1030,7 +1030,7 @@ msgid ""
 "basic amount(without tax)."
 msgstr ""
 "Eğer Vergi hesabı bir vergi kodu hesabı ise bu alan vergilendirilmiş tutarı "
-"içerecektir.. Eğe vergi hesabı temel vergi kodu ise bu alan temel tutarı "
+"içerecektir. Eğe vergi hesabı temel vergi kodu ise bu alan temel tutarı "
 "(vergisiz tutar) içerecektir."
 
 #. module: account
@@ -1359,7 +1359,7 @@ msgstr "Hesap"
 #. module: account
 #: field:account.tax,include_base_amount:0
 msgid "Included in base amount"
-msgstr "Included in base amount"
+msgstr "Matrah tutarına dahildir"
 
 #. module: account
 #: view:account.entries.report:0
@@ -1606,6 +1606,117 @@ msgid ""
 "</div>\n"
 "            "
 msgstr ""
+"\n"
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-"
+"serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"\n"
+"    <p>Merhaba${object.address_invoice_id.name and ' ' or "
+"''}${object.address_invoice_id.name or ''},</p>\n"
+"    \n"
+"    <p>Yeni bir fatura var${object.partner_id.name}: </p>\n"
+"    \n"
+"    <p style=\"border-left: 1px solid #8e0000; margin-left: 30px;\">\n"
+"       &nbsp;&nbsp;<strong>REFERENCES</strong><br />\n"
+"       &nbsp;&nbsp;Invoice number: <strong>${object.number}</strong><br />\n"
+"       &nbsp;&nbsp;Invoice total: <strong>${object.amount_total} "
+"${object.currency_id.name}</strong><br />\n"
+"       &nbsp;&nbsp;Invoice date: ${object.date_invoice}<br />\n"
+"       % if object.origin:\n"
+"       &nbsp;&nbsp;Order reference: ${object.origin}<br />\n"
+"       % endif\n"
+"       &nbsp;&nbsp;Your contact: <a "
+"href=\"mailto:${object.user_id.user_email or "
+"''}?subject=Invoice%20${object.number}\">${object.user_id.name}</a>\n"
+"    </p>  \n"
+"    \n"
+"    <p>\n"
+"    Fatuayı görebilirsiniz, indirebilir ve aşağıdaki bağlantıyı kullanarak "
+"çevrimiçi :\n"
+"    </p>\n"
+"            <a style=\"display:block; width: 150px; height:20px; margin-"
+"left: 120px; color: #DDD; font-family: 'Lucida Grande', Helvetica, Arial, "
+"sans-serif; font-size: 13px; font-weight: bold; text-align: center; text-"
+"decoration: none !important; line-height: 1; padding: 5px 0px 0px 0px; "
+"background-color: #8E0000; border-radius: 5px 5px; background-repeat: repeat "
+"no-repeat;\" \n"
+"               href=\"${ctx.get('edi_web_url_view') or ''}\">View "
+"Invoice</a>\n"
+"    \n"
+"    % if object.company_id.paypal_account and object.type in ('out_invoice', "
+"'in_refund'):\n"
+"    <% \n"
+"    comp_name = quote(object.company_id.name)\n"
+"    inv_number = quote(object.number)\n"
+"    paypal_account = quote(object.company_id.paypal_account)\n"
+"    inv_amount = quote(str(object.amount_total))\n"
+"    cur_name = quote(object.currency_id.name)\n"
+"    paypal_url = \"https://www.paypal.com/cgi-"
+"bin/webscr?cmd=_xclick&amp;business=%s&amp;item_name=%s%%20Invoice%%20%s&amp;"
+"\" \\\n"
+"                 "
+"\"invoice=%s&amp;amount=%s&amp;currency_code=%s&amp;button_subtype=services&a"
+"mp;no_note=1&amp;bn=OpenERP_Invoice_PayNow_%s\" % \\\n"
+"                 "
+"(paypal_account,comp_name,inv_number,inv_number,inv_amount,cur_name,cur_name)"
+"\n"
+"    %>\n"
+"    <br/>\n"
+"    <p>Doğrudan Paypal ile ödeme yapmak da mümkündür:</p>\n"
+"        <a style=\"margin-left: 120px;\" href=\"${paypal_url}\">\n"
+"            <img class=\"oe_edi_paypal_button\" "
+"src=\"https://www.paypal.com/en_US/i/btn/btn_paynowCC_LG.gif\"/>\n"
+"        </a>\n"
+"    % endif\n"
+"    \n"
+"    <br/>\n"
+"    <p>Herhangi bir sorunuz olursa bize danışmakta tereddüt etmeyin.</p>\n"
+"    <p>Seçtiğiniz için teşekkür ederiz${object.company_id.name or "
+"'us'}!</p>\n"
+"    <br/>\n"
+"    <br/>\n"
+"    <div style=\"width: 375px; margin: 0px; padding: 0px; background-color: "
+"#8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; "
+"background-repeat: repeat no-repeat;\">\n"
+"        <h3 style=\"margin: 0px; padding: 2px 14px; font-size: 12px; color: "
+"#DDD;\">\n"
+"            <strong style=\"text-"
+"transform:uppercase;\">${object.company_id.name}</strong></h3>\n"
+"    </div>\n"
+"    <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: "
+"16px; background-color: #F2F2F2;\">\n"
+"        <span style=\"color: #222; margin-bottom: 5px; display: block; \">\n"
+"        % if object.company_id.street:\n"
+"            ${object.company_id.street}<br/>\n"
+"        % endif\n"
+"        % if object.company_id.street2:\n"
+"            ${object.company_id.street2}<br/>\n"
+"        % endif\n"
+"        % if object.company_id.city or object.company_id.zip:\n"
+"            ${object.company_id.zip} ${object.company_id.city}<br/>\n"
+"        % endif\n"
+"        % if object.company_id.country_id:\n"
+"            ${object.company_id.state_id and ('%s, ' % "
+"object.company_id.state_id.name) or ''} ${object.company_id.country_id.name "
+"or ''}<br/>\n"
+"        % endif\n"
+"        </span>\n"
+"        % if object.company_id.phone:\n"
+"            <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: "
+"0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: "
+"0px; padding-left: 0px; \">\n"
+"                Phone:&nbsp; ${object.company_id.phone}\n"
+"            </div>\n"
+"        % endif\n"
+"        % if object.company_id.website:\n"
+"            <div>\n"
+"                Web :&nbsp;<a "
+"href=\"${object.company_id.website}\">${object.company_id.website}</a>\n"
+"            </div>\n"
+"        %endif\n"
+"        <p></p>\n"
+"    </div>\n"
+"</div>\n"
+"            "
 
 #. module: account
 #: model:ir.model,name:account.model_account_analytic_cost_ledger
@@ -1724,7 +1835,7 @@ msgstr "."
 #. module: account
 #: view:account.analytic.cost.ledger.journal.report:0
 msgid "and Journals"
-msgstr "ve günlükler"
+msgstr "ve Günlükler"
 
 #. module: account
 #: field:account.journal,groups_id:0
@@ -2225,7 +2336,7 @@ msgstr "Paydaş ID"
 #: view:account.journal.select:0
 #: view:project.account.analytic.line:0
 msgid "Open Entries"
-msgstr "Open Entries"
+msgstr "Açık Girişler"
 
 #. module: account
 #: field:account.automatic.reconcile,account_ids:0
@@ -2489,7 +2600,7 @@ msgstr "Fiscal Year"
 #: help:accounting.report,fiscalyear_id:0
 #: help:accounting.report,fiscalyear_id_cmp:0
 msgid "Keep empty for all open fiscal year"
-msgstr "Keep empty for all open fiscal year"
+msgstr "Bütün mali yıllar boş bırakın"
 
 #. module: account
 #: field:account.invoice.report,account_line_id:0
@@ -2558,7 +2669,7 @@ msgstr "Ödeme Vadesi"
 #: model:ir.actions.act_window,name:account.action_account_fiscal_position_form
 #: model:ir.ui.menu,name:account.menu_action_account_fiscal_position_form
 msgid "Fiscal Positions"
-msgstr "Fiscal Positions"
+msgstr "Mali Durumlar"
 
 #. module: account
 #: constraint:account.account:0
@@ -2589,7 +2700,7 @@ msgstr "Filters"
 #: selection:report.invoice.created,state:0
 #, python-format
 msgid "Open"
-msgstr "Open"
+msgstr "Açık"
 
 #. module: account
 #: model:process.node,note:account.process_node_draftinvoices0
@@ -2941,7 +3052,7 @@ msgstr "İletişim Türü"
 #. module: account
 #: field:account.invoice.line,discount:0
 msgid "Discount (%)"
-msgstr "İskonto (%)"
+msgstr "İndirim (%)"
 
 #. module: account
 #: help:account.journal,entry_posted:0
@@ -3064,8 +3175,8 @@ msgid ""
 "The optional quantity expressed by this line, eg: number of product sold. "
 "The quantity is not a legal requirement but is very useful for some reports."
 msgstr ""
-"The optional quantity expressed by this line, eg: number of product sold. "
-"The quantity is not a legal requirement but is very useful for some reports."
+"Bu satırda belirtilen seçmeli miktar, ör: satılan ürün sayısı. Miktar "
+"zorunlu bir gereksinim değildir ama bazı raporlar için çok kullanışlıdır."
 
 #. module: account
 #: view:account.payment.term.line:0
@@ -3156,7 +3267,7 @@ msgstr "Profit And Loss"
 #: model:ir.model,name:account.model_account_fiscal_position
 #: field:res.partner,property_account_position:0
 msgid "Fiscal Position"
-msgstr "Fiscal Position"
+msgstr "Mali Durum"
 
 #. module: account
 #: code:addons/account/account_invoice.py:744
@@ -3193,8 +3304,8 @@ msgid ""
 "Set if the amount of tax must be included in the base amount before "
 "computing the next taxes."
 msgstr ""
-"Set if the amount of tax must be included in the base amount before "
-"computing the next taxes."
+"Sonraki vergileri hesaplamadan önce vergi tutarının matrah tutarına dahil "
+"edilip edilmeyeceğini ayarlayın."
 
 #. module: account
 #: help:account.journal,user_id:0
@@ -3548,8 +3659,8 @@ msgid ""
 "The amount expressed in the related account currency if not equal to the "
 "company one."
 msgstr ""
-"The amount expressed in the related account currency if not equal to the "
-"company one."
+"Para birimi firmanınkine eşit değilse ilgili hesap para birimi tutarı "
+"ifadesi."
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_unreconcile
@@ -3744,7 +3855,7 @@ msgstr "Chart of Accounts"
 #. module: account
 #: view:account.tax.chart:0
 msgid "(If you do not select period it will take all open periods)"
-msgstr "(If you do not select period it will take all open periods)"
+msgstr "(dönem seçmezseniz bütün açık dönemleri alacaktır)"
 
 #. module: account
 #: field:account.journal,centralisation:0
@@ -3770,8 +3881,7 @@ msgstr "2"
 #. module: account
 #: view:account.chart:0
 msgid "(If you do not select Fiscal year it will take all open fiscal years)"
-msgstr ""
-"(If you do not select Fiscal year it will take all open fiscal years)"
+msgstr "Mali yıl seçmezseniz bütün açık mali yılları alacaktır)"
 
 #. module: account
 #: selection:account.aged.trial.balance,filter:0
@@ -3964,7 +4074,7 @@ msgstr "Hesap bakiyesi"
 #: report:account.invoice:0
 #: field:account.invoice.line,price_unit:0
 msgid "Unit Price"
-msgstr "Unit Price"
+msgstr "Birim Fiyat"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_tree1
@@ -3995,7 +4105,7 @@ msgstr "Bir iade taslağı oluştur"
 #. module: account
 #: view:account.state.open:0
 msgid "Open Invoice"
-msgstr "Open Invoice"
+msgstr "Fatura Aç"
 
 #. module: account
 #: field:account.invoice.tax,factor_tax:0
@@ -4665,7 +4775,7 @@ msgstr "Analiz Hesabı İstatistiği"
 #. module: account
 #: report:account.vat.declaration:0
 msgid "Based On"
-msgstr "Based On"
+msgstr "Temelli"
 
 #. module: account
 #: field:account.tax,price_include:0
@@ -4714,7 +4824,7 @@ msgstr "Tip Kontrolleri"
 #. module: account
 #: help:account.journal,default_credit_account_id:0
 msgid "It acts as a default account for credit amount"
-msgstr "It acts as a default account for credit amount"
+msgstr "Alacak tutarı için varsayılan hesap olarak davranır"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_validate_account_move_line
@@ -5459,7 +5569,7 @@ msgstr "Çocuk vergisi"
 #. module: account
 #: model:ir.model,name:account.model_account_fiscal_position_tax_template
 msgid "Template Tax Fiscal Position"
-msgstr "Template Tax Fiscal Position"
+msgstr "Vergi Mali Durum Şablonu"
 
 #. module: account
 #: field:account.journal,update_posted:0
@@ -5614,7 +5724,7 @@ msgstr "  Gün Sayısı: 14"
 #. module: account
 #: field:account.fiscalyear,end_journal_period_id:0
 msgid "End of Year Entries Journal"
-msgstr "Yıl Sonu Girişleri Yevmiyesi"
+msgstr "Yıl Sonu Girişleri Günlüğü"
 
 #. module: account
 #: code:addons/account/account.py:3463
@@ -5781,14 +5891,14 @@ msgstr ""
 #: view:account.fiscal.position.template:0
 #: field:account.fiscal.position.template,name:0
 msgid "Fiscal Position Template"
-msgstr "Fiscal Position Template"
+msgstr "Mali Durum Şablonu"
 
 #. module: account
 #: view:account.analytic.chart:0
 #: view:account.chart:0
 #: view:account.tax.chart:0
 msgid "Open Charts"
-msgstr "Open Charts"
+msgstr "Tablo Aç"
 
 #. module: account
 #: view:account.fiscalyear.close.state:0
@@ -5874,7 +5984,7 @@ msgstr "Move journal"
 #: model:ir.actions.act_window,name:account.action_account_fiscalyear_close
 #: model:ir.ui.menu,name:account.menu_wizard_fy_close
 msgid "Generate Opening Entries"
-msgstr "Generate Opening Entries"
+msgstr "Açılşı Girişleri Oluştur"
 
 #. module: account
 #: code:addons/account/account_move_line.py:775
@@ -6055,9 +6165,9 @@ msgid ""
 "that you should have your last line with the type 'Balance' to ensure that "
 "the whole amount will be threated."
 msgstr ""
-"Select here the kind of valuation related to this payment term line. Note "
-"that you should have your last line with the type 'Balance' to ensure that "
-"the whole amount will be threated."
+"Brada bu ödeme koşulu öğesiyle ilintili doğrulama türünü seçin. Tüm tutarın "
+"ele alınmasından emin olmak için son öğenin 'Bakiye' türünde olması "
+"gerektiğini unutmayın."
 
 #. module: account
 #: field:account.invoice,period_id:0
@@ -6065,7 +6175,7 @@ msgstr ""
 #: field:report.account.sales,period_id:0
 #: field:report.account_type.sales,period_id:0
 msgid "Force Period"
-msgstr "Force Period"
+msgstr "Dönemi Zorla"
 
 #. module: account
 #: view:account.invoice.report:0
@@ -6200,7 +6310,7 @@ msgstr "Günlük-Dönem Adı"
 #. module: account
 #: field:account.invoice.tax,factor_base:0
 msgid "Multipication factor for Base code"
-msgstr "Multipication factor for Base code"
+msgstr "Matrah Kodu çarpan faktörü"
 
 #. module: account
 #: code:addons/account/wizard/account_report_common.py:151
@@ -6231,7 +6341,7 @@ msgstr "Abonelik Sürüyor"
 #. module: account
 #: report:account.invoice:0
 msgid "Fiscal Position Remark :"
-msgstr "Fiscal Position Remark :"
+msgstr "Mali Durum Açıklaması :"
 
 #. module: account
 #: view:analytic.entries.report:0
@@ -6348,7 +6458,7 @@ msgstr "Satış Vergisi(%)"
 #. module: account
 #: view:account.addtmpl.wizard:0
 msgid "Create an Account based on this template"
-msgstr "Create an Account based on this template"
+msgstr "Bu şablona göre bir Hesap oluştur"
 
 #. module: account
 #: view:account.account.type:0
@@ -6564,8 +6674,8 @@ msgid ""
 "Indicates if the amount of tax must be included in the base amount for the "
 "computation of the next taxes"
 msgstr ""
-"Indicates if the amount of tax must be included in the base amount for the "
-"computation of the next taxes"
+"Sonraki vergilerin hesaplanmasında vergi tutarının matrah tutarına eklenip "
+"eklenmeyeceğini beliritr"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_partner_reconcile
@@ -6640,7 +6750,7 @@ msgstr "Bu görünümde,"
 #. module: account
 #: sql_constraint:account.journal:0
 msgid "The name of the journal must be unique per company !"
-msgstr "Günlük adı her firmada benzersiz olmalı."
+msgstr "Günlük adı her firmada eşsiz olmalı."
 
 #. module: account
 #: field:account.account.template,nocreate:0
@@ -6908,8 +7018,8 @@ msgid ""
 "This will automatically configure your chart of accounts, bank accounts, "
 "taxes and journals according to the selected template"
 msgstr ""
-"Bu Hesap Planınızı, banka hesaplarınızı, vergilerinizi ve günlükleri seçilen "
-"şablona uygun olarak otomatikmen yapılandıracaktır."
+"Bu Hesap Planınızı, banka hesaplarınızı, vergilerinizi ve günlüklerinizi "
+"seçilen şablona uygun olarak otomatikman yapılandıracaktır."
 
 #. module: account
 #: help:res.partner,property_account_receivable:0
@@ -7159,7 +7269,7 @@ msgstr "Günlük Seçimi"
 #: code:addons/account/account.py:432
 #, python-format
 msgid "Opening Balance"
-msgstr "Opening Balance"
+msgstr "Açılış Bakiyesi"
 
 #. module: account
 #: model:ir.model,name:account.model_account_move_reconcile
@@ -7169,7 +7279,7 @@ msgstr "Hesap Mutabakatı"
 #. module: account
 #: model:ir.model,name:account.model_account_fiscal_position_tax
 msgid "Taxes Fiscal Position"
-msgstr "Taxes Fiscal Position"
+msgstr "Vergiler Mali Durumu"
 
 #. module: account
 #: report:account.general.ledger:0
@@ -7524,7 +7634,7 @@ msgstr "Hesapözeti"
 #. module: account
 #: help:account.journal,default_debit_account_id:0
 msgid "It acts as a default account for debit amount"
-msgstr "It acts as a default account for debit amount"
+msgstr "Borç hesabı için varsayılan hesap olarak davranır"
 
 #. module: account
 #: model:ir.actions.act_window,help:account.action_account_journal_period_tree
@@ -7751,7 +7861,7 @@ msgstr ""
 #: field:account.invoice.tax,invoice_id:0
 #: model:ir.model,name:account.model_account_invoice_line
 msgid "Invoice Line"
-msgstr "Fatura Kalemi"
+msgstr "Fatura Öğesi"
 
 #. module: account
 #: view:account.invoice.report:0
@@ -7914,7 +8024,7 @@ msgstr "Manuel Uzlaşma"
 #. module: account
 #: report:account.overdue:0
 msgid "Total amount due:"
-msgstr "Total amount due:"
+msgstr "Ödenecek toplam tutar:"
 
 #. module: account
 #: field:account.analytic.chart,to_date:0
@@ -8088,7 +8198,7 @@ msgstr "Birbirinin alt kategorisi olan kategoriler oluşturamazsınız."
 #. module: account
 #: help:account.model.line,quantity:0
 msgid "The optional quantity on entries."
-msgstr "Girişlerdeki seçmeli miktar"
+msgstr "Girişlerdeki seçmeli miktar."
 
 #. module: account
 #: view:account.financial.report:0
@@ -8407,7 +8517,7 @@ msgstr "Inverted Analytic Balance -"
 #. module: account
 #: view:account.move.bank.reconcile:0
 msgid "Open for bank reconciliation"
-msgstr "Open for bank reconciliation"
+msgstr "Banka uzlaşması için aç"
 
 #. module: account
 #: view:account.analytic.line:0
@@ -8622,7 +8732,7 @@ msgstr "Düzeltilmiş Bilanço"
 #: model:ir.actions.act_window,name:account.action_account_fiscal_position_template_form
 #: model:ir.ui.menu,name:account.menu_action_account_fiscal_position_form_template
 msgid "Fiscal Position Templates"
-msgstr "Fiscal Position Templates"
+msgstr "Mali Durum Şablonları"
 
 #. module: account
 #: view:account.entries.report:0
@@ -8905,7 +9015,7 @@ msgstr "Refund Invoice: Creates the refund invoice, ready for editing."
 #. module: account
 #: field:account.invoice.line,price_subtotal:0
 msgid "Subtotal"
-msgstr "Subtotal"
+msgstr "Ara Toplam"
 
 #. module: account
 #: view:account.vat.declaration:0
@@ -9029,7 +9139,7 @@ msgstr "Miscellaneous"
 #. module: account
 #: help:res.partner,debit:0
 msgid "Total amount you have to pay to this supplier."
-msgstr "Total amount you have to pay to this supplier."
+msgstr "Bu tedarikçiye ödemeniz gereken toplam tutar."
 
 #. module: account
 #: model:process.node,name:account.process_node_analytic0
@@ -9084,7 +9194,7 @@ msgstr "Expense"
 #. module: account
 #: help:account.chart,fiscalyear:0
 msgid "Keep empty for all open fiscal years"
-msgstr "Keep empty for all open fiscal years"
+msgstr "Bütün açık mali yıllar için boş bırakın"
 
 #. module: account
 #: code:addons/account/account_move_line.py:1120
@@ -9193,7 +9303,7 @@ msgstr "Yanlış model !"
 #. module: account
 #: field:account.invoice.refund,period:0
 msgid "Force period"
-msgstr "Force period"
+msgstr "Dönemi Zorla"
 
 #. module: account
 #: model:ir.model,name:account.model_account_partner_balance
@@ -9236,7 +9346,7 @@ msgstr "unknown"
 #: code:addons/account/account.py:3130
 #, python-format
 msgid "Opening Entries Journal"
-msgstr "Opening Entries Journal"
+msgstr "Açılış Günlük Girişleri"
 
 #. module: account
 #: model:process.transition,note:account.process_transition_customerinvoice0
@@ -9250,9 +9360,8 @@ msgid ""
 "will be added, Loss: Amount will be deducted.), Which is calculated from "
 "Profilt & Loss Report"
 msgstr ""
-"This Account is used for transferring Profit/Loss(If It is Profit: Amount "
-"will be added, Loss: Amount will be deducted.), Which is calculated from "
-"Profilt & Loss Report"
+"Bu Hesap, Kar & Zarar Raporunda hesaplanan Kar/Zarar aktarımı için "
+"kullanılır (Kar ise:Tutar eklenir, Zarar ise: Tutar düşülür)"
 
 #. module: account
 #: code:addons/account/account_invoice.py:819
@@ -9285,8 +9394,8 @@ msgid ""
 "Set if the tax computation is based on the computation of child taxes rather "
 "than on the total amount."
 msgstr ""
-"Set if the tax computation is based on the computation of child taxes rather "
-"than on the total amount."
+"Vergi hesaplamasının toplam tutara göre mi alt vergilere göre mi "
+"yapılacağını ayarlayın."
 
 #. module: account
 #: selection:account.tax,applicable_type:0
@@ -10579,7 +10688,7 @@ msgstr "Dönem Sonu"
 #. module: account
 #: sql_constraint:account.journal:0
 msgid "The code of the journal must be unique per company !"
-msgstr "Günlük kodu her firma için benzersiz olmalı."
+msgstr "Günlük kodu her firma için eşsiz olmalı."
 
 #. module: account
 #: help:product.category,property_account_expense_categ:0
@@ -10626,7 +10735,7 @@ msgstr "Hesaplara göre Satış Raporu"
 #. module: account
 #: model:ir.model,name:account.model_account_fiscal_position_account
 msgid "Accounts Fiscal Position"
-msgstr "Mali Durum Raporu"
+msgstr "Hesapların Mali Durumu"
 
 #. module: account
 #: report:account.invoice:0
@@ -10855,7 +10964,7 @@ msgstr ""
 #. module: account
 #: view:account.payment.term:0
 msgid "Description On Invoices"
-msgstr "Faturalar üzerindeki açıklama"
+msgstr "Faturalar Üzerindeki Açıklama"
 
 #. module: account
 #: model:ir.model,name:account.model_account_analytic_chart
@@ -10938,7 +11047,7 @@ msgstr "Dönem sayısı"
 #: code:addons/account/account.py:1359
 #, python-format
 msgid "You can not modify a posted entry of closed periods"
-msgstr ""
+msgstr "Kapalı dönemlere ait işlenmiş bir girişi değiştiremezsiniz"
 
 #. module: account
 #: report:account.general.journal:0
