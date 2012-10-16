@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-02-08 01:37+0100\n"
-"PO-Revision-Date: 2012-10-15 04:49+0000\n"
+"PO-Revision-Date: 2012-10-15 08:03+0000\n"
 "Last-Translator: Jacara <Unknown>\n"
 "Language-Team: Mongolian <mn@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-15 05:30+0000\n"
+"X-Launchpad-Export-Date: 2012-10-16 05:03+0000\n"
 "X-Generator: Launchpad (build 16137)\n"
 
 #. module: account_voucher
@@ -104,9 +104,10 @@ msgid ""
 "automatically and you can record the customer payment related to this sales "
 "receipt."
 msgstr ""
-"Барааг захиалагчид борлуулахдаа борлуулалтын баримт эсвэл нэхэмжлэх түүнд "
-"өгч болно. Борлуулалтын баримт батлагдахад журналын бичилт автоматаар "
-"хийгдэж захиалагчийн төлбөрийг холбогдох борлуулалтын баримтанд хөтлөж болно."
+"Та захиалагчид бараа бүтээгдэхүүн зарахдаа түүнд борлуулалтын төлбөрийн "
+"баримт эсвэл нэхэмжлэл өгөх боломжтой. Борлуулалтын төлбөрийн баримт "
+"батлагдмагц тухайн борлуулалттай холбоотой төлбөрийн журналын бичилт "
+"автоматаар үүснэ."
 
 #. module: account_voucher
 #: view:account.voucher:0
@@ -433,7 +434,7 @@ msgstr "Тулгалтыг арилгаж, бичлэгийг устгахдаа
 #: model:ir.actions.act_window,name:account_voucher.action_sale_receipt
 #: model:ir.ui.menu,name:account_voucher.menu_action_sale_receipt
 msgid "Sales Receipt"
-msgstr "Борлуулалтын баримт"
+msgstr "Борлуулалтын төлбөрийн баримт"
 
 #. module: account_voucher
 #: code:addons/account_voucher/account_voucher.py:797
@@ -864,7 +865,7 @@ msgstr "Борлуулалтын Мэдээлэл"
 #: model:ir.ui.menu,name:account_voucher.menu_action_sale_receipt_report_all
 #: view:sale.receipt.report:0
 msgid "Sales Receipt Analysis"
-msgstr "Борлуулалтын Баримтын Шинжилгээ"
+msgstr "Борлуулалтын төлбөрийн баримтын анализ"
 
 #. module: account_voucher
 #: field:account.voucher.line,voucher_id:0
@@ -906,7 +907,7 @@ msgstr "Журналын бичилтүүд"
 #: model:ir.actions.act_window,name:account_voucher.action_vendor_receipt
 #: model:ir.ui.menu,name:account_voucher.menu_action_vendor_receipt
 msgid "Customer Payment"
-msgstr "Захиалагчийн Төлбөр"
+msgstr "Захиалагчийн төлөлт"
 
 #. module: account_voucher
 #: view:account.statement.from.invoice:0
@@ -970,7 +971,7 @@ msgstr "Илгээгдсэн Ваучерууд"
 #. module: account_voucher
 #: field:account.voucher,payment_rate:0
 msgid "Exchange Rate"
-msgstr "Төлбөрийн ханш"
+msgstr "Хөрвүүлэлтийн ханш"
 
 #. module: account_voucher
 #: view:account.voucher:0
@@ -1136,7 +1137,7 @@ msgstr "Татвар татахгүй дүн"
 #. module: account_voucher
 #: model:ir.model,name:account_voucher.model_sale_receipt_report
 msgid "Sales Receipt Statistics"
-msgstr "Борлуулалтын Баримтын Шинжилгээ"
+msgstr "Борлуулалтын төлбөрийн баримтын статистик"
 
 #. module: account_voucher
 #: view:sale.receipt.report:0 field:sale.receipt.report,year:0
