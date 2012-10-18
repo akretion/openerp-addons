@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-10-08 12:28+0000\n"
-"PO-Revision-Date: 2012-10-16 14:02+0000\n"
+"PO-Revision-Date: 2012-10-17 14:29+0000\n"
 "Last-Translator: Daniel Trajkovski <daniel.trajkovski@gmail.com>\n"
 "Language-Team: Macedonian <mk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-17 04:49+0000\n"
-"X-Generator: Launchpad (build 16152)\n"
+"X-Launchpad-Export-Date: 2012-10-18 04:58+0000\n"
+"X-Generator: Launchpad (build 16160)\n"
 
 #. module: hr_holidays
 #: selection:hr.holidays.status,color_name:0
@@ -25,7 +25,7 @@ msgstr "Сина"
 #. module: hr_holidays
 #: field:hr.holidays,holiday_type:0
 msgid "Allocation Type"
-msgstr "Тип на Алокација"
+msgstr "Тип на Распределба"
 
 #. module: hr_holidays
 #: selection:hr.employee,current_leave_state:0
@@ -51,7 +51,7 @@ msgstr "Групирај По..."
 #. module: hr_holidays
 #: view:hr.holidays:0
 msgid "Allocation Mode"
-msgstr "Мод на Алокација"
+msgstr "Режим на Распределба"
 
 #. module: hr_holidays
 #: view:hr.holidays:0
@@ -112,12 +112,12 @@ msgid ""
 "for every employee"
 msgstr ""
 "Менаџерот за отсуства може да го остави ова поле празно ако барањето за "
-"отсуство/преместување е за секој вработен"
+"отсуство/распределба е за секој вработен"
 
 #. module: hr_holidays
 #: view:hr.holidays:0
 msgid "Set to Draft"
-msgstr "Подеси на нацрт"
+msgstr "Сетирај на Драфт"
 
 #. module: hr_holidays
 #: xsl:holidays.summary:0
@@ -147,6 +147,11 @@ msgid ""
 "the employee. You can define several allowance types (paid holidays, "
 "sickness, etc.) and manage allowances per type."
 msgstr ""
+"Барањата за отсуство може да се евидентираат од страна на вработените и да "
+"се валидираат од нивните менаџери. Кога еднаш ќе се валидира барањето, се "
+"појавува автоматски во агендата на вработениот. Можете да дефинирате неколку "
+"типови на отсуства (платени денови, боледување, итн.) и да менаџирате "
+"отсуства по тип."
 
 #. module: hr_holidays
 #: model:ir.actions.report.xml,name:hr_holidays.report_holidays_summary
@@ -194,6 +199,10 @@ msgid ""
 "  \n"
 "The state is 'Approved', when holiday request is approved by manager."
 msgstr ""
+"Чекор 'Драфт', кога е креирано барање за отсуство.\n"
+"Чекор 'Се чека на одобрување', кога отсуството е потврдено.\n"
+"Чекор 'Одбиено', кога барањето е одбиено од менаџерот.\n"
+"Чекор 'Одобрено', кога барањето е одобрено од менаџерот."
 
 #. module: hr_holidays
 #: view:board.board:0
@@ -242,7 +251,7 @@ msgid ""
 "to create allocation/leave requests."
 msgstr ""
 "Вкупен број на легални отсуства дадени на овој вработен, промени ја оваа "
-"вредност за да креирате барање за отсуство/алокација"
+"вредност за да креирате барање за отсуство/распределба"
 
 #. module: hr_holidays
 #: view:hr.holidays.status:0
@@ -432,8 +441,6 @@ msgid ""
 "If its True then its Allocation/Request have to be validated by second "
 "validator"
 msgstr ""
-"Ако е точно тогаш неговата Алокација/Барање треба да биде потврдена од втор "
-"човек"
 
 #. module: hr_holidays
 #: selection:hr.employee,current_leave_state:0
@@ -563,7 +570,7 @@ msgstr "Отсуствата се веќе зафаени"
 #. module: hr_holidays
 #: xsl:holidays.summary:0
 msgid "holidays."
-msgstr "празници."
+msgstr "неработни денови."
 
 #. module: hr_holidays
 #: field:hr.holidays,user_id:0
@@ -605,7 +612,7 @@ msgstr "Прво Одобрување"
 #. module: hr_holidays
 #: model:hr.holidays.status,name:hr_holidays.holiday_status_unpaid
 msgid "Unpaid"
-msgstr "Неплатено"
+msgstr "Неплатени"
 
 #. module: hr_holidays
 #: view:hr.holidays:0
@@ -617,7 +624,7 @@ msgstr "Збир на Отсуства"
 #. module: hr_holidays
 #: view:hr.holidays:0
 msgid "Holidays during last month"
-msgstr "Празници во последниот месец"
+msgstr "Неработни денови во последниот месец"
 
 #. module: hr_holidays
 #: code:addons/hr_holidays/wizard/hr_holidays_summary_department.py:44
@@ -723,7 +730,7 @@ msgstr "Аплицирај Дупла Валидација"
 #. module: hr_holidays
 #: xsl:holidays.summary:0
 msgid "Holiday Type"
-msgstr "Тип на празник"
+msgstr "Тип на Неработен ден"
 
 #. module: hr_holidays
 #: view:hr.holidays.summary.dept:0
