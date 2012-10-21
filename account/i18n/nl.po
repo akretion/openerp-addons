@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-10-08 12:28+0000\n"
-"PO-Revision-Date: 2012-10-12 08:13+0000\n"
+"PO-Revision-Date: 2012-10-20 09:19+0000\n"
 "Last-Translator: Erwin van der Ploeg (Endian Solutions) <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-13 05:00+0000\n"
-"X-Generator: Launchpad (build 16137)\n"
+"X-Launchpad-Export-Date: 2012-10-21 05:10+0000\n"
+"X-Generator: Launchpad (build 16165)\n"
 
 #. module: account
 #: view:account.invoice.report:0
@@ -2101,7 +2101,7 @@ msgstr "Belastingaangifte: Credit facturen"
 #. module: account
 #: field:account.move.line.reconcile,credit:0
 msgid "Credit amount"
-msgstr "Creditbedrag"
+msgstr "Bedrag credit"
 
 #. module: account
 #: code:addons/account/account.py:407
@@ -5997,7 +5997,7 @@ msgstr ""
 #. module: account
 #: view:account.move.line.reconcile:0
 msgid "Reconcile With Write-Off"
-msgstr "Letter af met afboekingen"
+msgstr "Letter af met afboeken verschil"
 
 #. module: account
 #: selection:account.payment.term.line,value:0
@@ -8922,7 +8922,7 @@ msgstr ""
 #: field:account.move.line,reconcile_partial_id:0
 #: view:account.move.line.reconcile:0
 msgid "Partial Reconcile"
-msgstr "Letter deels af"
+msgstr "Letter (bij  verschil gedeeltelijk) af"
 
 #. module: account
 #: model:ir.model,name:account.model_account_analytic_inverted_balance
@@ -9188,7 +9188,7 @@ msgstr ""
 #. module: account
 #: field:account.move.line.reconcile,debit:0
 msgid "Debit amount"
-msgstr "Debet bedrag"
+msgstr "Bedrag Debet"
 
 #. module: account
 #: view:board.board:0
