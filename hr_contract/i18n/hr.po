@@ -7,64 +7,64 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-02-08 00:36+0000\n"
-"PO-Revision-Date: 2012-02-17 09:10+0000\n"
-"Last-Translator: Miro Glavić <glavicmiro@gmail.com>\n"
+"PO-Revision-Date: 2012-10-23 21:03+0000\n"
+"Last-Translator: Lovro Lazarin <lovro.lazarin@slobodni-programi.hr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-28 09:44+0000\n"
-"X-Generator: Launchpad (build 15864)\n"
+"X-Launchpad-Export-Date: 2012-10-24 05:50+0000\n"
+"X-Generator: Launchpad (build 16179)\n"
 
 #. module: hr_contract
 #: field:hr.contract,wage:0
 msgid "Wage"
-msgstr "Plata"
+msgstr "Plaća"
 
 #. module: hr_contract
 #: view:hr.contract:0
 msgid "Information"
-msgstr ""
+msgstr "Informacije"
 
 #. module: hr_contract
 #: view:hr.contract:0
 msgid "Trial Period"
-msgstr ""
+msgstr "Probni period"
 
 #. module: hr_contract
 #: field:hr.contract,trial_date_start:0
 msgid "Trial Start Date"
-msgstr ""
+msgstr "Početak probnog perioda"
 
 #. module: hr_contract
 #: view:hr.employee:0
 msgid "Medical Examination"
-msgstr ""
+msgstr "Sistematski pregled"
 
 #. module: hr_contract
 #: field:hr.employee,vehicle:0
 msgid "Company Vehicle"
-msgstr ""
+msgstr "Službeno vozilo"
 
 #. module: hr_contract
 #: view:hr.employee:0
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Razno"
 
 #. module: hr_contract
 #: view:hr.contract:0
 msgid "Current"
-msgstr ""
+msgstr "Važeći"
 
 #. module: hr_contract
 #: view:hr.contract:0
 msgid "Group By..."
-msgstr ""
+msgstr "Grupiraj po..."
 
 #. module: hr_contract
 #: field:hr.contract,department_id:0
 msgid "Department"
-msgstr ""
+msgstr "Odjel"
 
 #. module: hr_contract
 #: view:hr.contract:0
@@ -76,7 +76,7 @@ msgstr ""
 #: field:hr.contract,employee_id:0
 #: model:ir.model,name:hr_contract.model_hr_employee
 msgid "Employee"
-msgstr "Uposlenik"
+msgstr "Zaposlenik"
 
 #. module: hr_contract
 #: view:hr.contract:0
@@ -86,12 +86,12 @@ msgstr ""
 #. module: hr_contract
 #: view:hr.contract:0
 msgid "Contracts in progress"
-msgstr ""
+msgstr "Važeći ugovori"
 
 #. module: hr_contract
 #: field:hr.employee,vehicle_distance:0
 msgid "Home-Work Distance"
-msgstr ""
+msgstr "Udaljenost od kuće do posla"
 
 #. module: hr_contract
 #: view:hr.contract:0
@@ -105,7 +105,7 @@ msgstr "Ugovori"
 #. module: hr_contract
 #: view:hr.employee:0
 msgid "Personal Info"
-msgstr ""
+msgstr "Osobne Informacije"
 
 #. module: hr_contract
 #: view:hr.contract:0
@@ -120,7 +120,7 @@ msgstr ""
 #. module: hr_contract
 #: view:hr.contract:0
 msgid "Job"
-msgstr ""
+msgstr "Radno mjesto"
 
 #. module: hr_contract
 #: view:hr.contract:0
