@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-02-08 00:35+0000\n"
-"PO-Revision-Date: 2012-10-23 15:27+0000\n"
+"PO-Revision-Date: 2012-10-24 10:32+0000\n"
 "Last-Translator: Kaare Pettersen <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-24 05:50+0000\n"
+"X-Launchpad-Export-Date: 2012-10-25 06:12+0000\n"
 "X-Generator: Launchpad (build 16179)\n"
 
 #. module: account_coda
@@ -337,69 +337,69 @@ msgstr "nettobeløp"
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_03_11
 msgid "Department store cheque"
-msgstr ""
+msgstr "Varehus sjekk"
 
 #. module: account_coda
 #: model:account.coda.trans.category,description:account_coda.actrca_206
 msgid "Surety fee/payment under reserve"
-msgstr ""
+msgstr "Kausjonist avgift / betaling under Minstepris"
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_04_53
 msgid "Cash deposit at an ATM"
-msgstr ""
+msgstr "Depositum ved en minibank"
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_30_52
 msgid "Forward sale of foreign exchange"
-msgstr ""
+msgstr "Videresend salg av valuta"
 
 #. module: account_coda
 #: model:account.coda.trans.code,comment:account_coda.actcc_11_05
 msgid ""
 "Debit of the subscriber for the complementary payment of partly-paid shares"
-msgstr ""
+msgstr "Debet av abonnenten for utfyllende betaling av delvis betalte aksjer"
 
 #. module: account_coda
 #: model:ir.model,name:account_coda.model_account_bank_statement_line_global
 msgid "Batch Payment Info"
-msgstr ""
+msgstr "Satsvis Betalingsinformasjon"
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_00_33
 #: model:account.coda.trans.code,description:account_coda.actcc_00_83
 msgid "Value correction"
-msgstr ""
+msgstr "verdi korreksjon"
 
 #. module: account_coda
 #: model:account.coda.trans.code,comment:account_coda.actcc_80_27
 msgid "For publications of the financial institution"
-msgstr ""
+msgstr "For publikasjoner av finansinstitusjon."
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_47_01
 msgid "Payment of foreign bill"
-msgstr ""
+msgstr "Betaling av utenlandsk regning"
 
 #. module: account_coda
 #: model:account.coda.trans.category,description:account_coda.actrca_024
 msgid "Growth premium"
-msgstr ""
+msgstr "vekst premie"
 
 #. module: account_coda
 #: selection:account.coda.trans.code,type:0
 msgid "Transaction Code"
-msgstr ""
+msgstr "Transaksjonskode"
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_47_13
 msgid "Discount foreign supplier's bills"
-msgstr ""
+msgstr "Rabatt utenlandsk leverandørens regninger"
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcf_05
 msgid "Direct debit"
-msgstr ""
+msgstr "Direkte belastning"
 
 #. module: account_coda
 #: model:account.coda.trans.code,comment:account_coda.actcc_47_11
@@ -409,42 +409,42 @@ msgstr ""
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcf_00
 msgid "Undefined transactions"
-msgstr ""
+msgstr "Udefinerte transaksjoner"
 
 #. module: account_coda
 #: model:account.coda.trans.code,comment:account_coda.actcc_11_62
 msgid "When reimbursed separately to the subscriber"
-msgstr ""
+msgstr "Når refundert separat til abonnenten"
 
 #. module: account_coda
 #: view:account.coda.trans.category:0
 msgid "CODA Transaction Category"
-msgstr ""
+msgstr "CODA Transaksjon Kategori"
 
 #. module: account_coda
 #: model:account.coda.trans.category,description:account_coda.actrca_067
 msgid "Fixed loan advance - extension"
-msgstr ""
+msgstr "Fast lån før - forlengelse"
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_13_07
 msgid "Your repayment instalment credits"
-msgstr ""
+msgstr "Tilbakebetaling kreditter avdrag."
 
 #. module: account_coda
 #: model:account.coda.trans.code,comment:account_coda.actcc_09_13
 msgid "On the account of the head office"
-msgstr ""
+msgstr "På grunn av hovedkontoret."
 
 #. module: account_coda
 #: constraint:account.bank.statement:0
 msgid "The journal and period chosen have to belong to the same company."
-msgstr ""
+msgstr "Tidsskriftet og perioden valgt å tilhøre samme selskap."
 
 #. module: account_coda
 #: model:account.coda.comm.type,description:account_coda.acct_115
 msgid "Terminal cash deposit"
-msgstr ""
+msgstr "Terminal depositum"
 
 #. module: account_coda
 #: code:addons/account_coda/wizard/account_coda_import.py:301
@@ -454,33 +454,36 @@ msgid ""
 "\n"
 "The File contains an invalid Structured Communication Type : %s!"
 msgstr ""
+"\n"
+"Filen inneholder en ugyldig Strukturert Kommunikasjon Type:% s!"
 
 #. module: account_coda
 #: model:account.coda.trans.code,comment:account_coda.actcc_43_01
 msgid ""
 "Debit of a cheque in foreign currency or in EUR in favour of a foreigner"
 msgstr ""
+"Belastning av en sjekk i utenlandsk valuta eller euro i favør av en utlending"
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_47_54
 msgid "Discount abroad"
-msgstr ""
+msgstr "Rabatt i utlandet"
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_47_62
 msgid "Remittance of documents abroad - credit after collection"
-msgstr ""
+msgstr "Remittering av dokumenter i utlandet - kreditt etter samling"
 
 #. module: account_coda
 #: field:coda.bank.statement.line,name:0
 msgid "Communication"
-msgstr ""
+msgstr "Kommunikasjon"
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_00_35
 #: model:account.coda.trans.code,description:account_coda.actcc_00_85
 msgid "Correction"
-msgstr ""
+msgstr "Rettelse"
 
 #. module: account_coda
 #: code:addons/account_coda/wizard/account_coda_import.py:404
@@ -494,86 +497,94 @@ msgid ""
 "otherwise change the corresponding entry manually in the generated Bank "
 "Statement."
 msgstr ""
+"\n"
+"    Bank erklæring '% s' linjen '% s'\n"
+"Ingen partner rekord tildelt: Det er flere partnere med samme "
+"bankkontonummer '% s'!\n"
+"Vennligst korriger konfigurasjonen og utføre import igjen eller på annen "
+"måte endre den tilsvarende oppføringen manuelt i den genererte "
+"kontoutskriften."
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_30_33
 #: model:account.coda.trans.code,description:account_coda.actcc_30_83
 msgid "Value (date) correction"
-msgstr ""
+msgstr "Verdi (dato) korreksjon."
 
 #. module: account_coda
 #: model:account.coda.trans.category,description:account_coda.actrca_063
 msgid "Rounding differences"
-msgstr ""
+msgstr "Avrundings differanser"
 
 #. module: account_coda
 #: code:addons/account_coda/wizard/account_coda_import.py:295
 #: code:addons/account_coda/wizard/account_coda_import.py:487
 #, python-format
 msgid "Transaction Category unknown, please consult your bank."
-msgstr ""
+msgstr "Transaksjon Kategori ukjent, ta kontakt med din bank."
 
 #. module: account_coda
 #: view:account.coda.trans.code:0
 msgid "CODA Transaction Code"
-msgstr ""
+msgstr "CODA Transaksjonskode"
 
 #. module: account_coda
 #: model:account.coda.trans.category,description:account_coda.actrca_052
 msgid "Residence state tax"
-msgstr ""
+msgstr "Bosatt i statlig skatt"
 
 #. module: account_coda
 #: model:account.coda.trans.code,comment:account_coda.actcc_03_17
 msgid "Amount of the cheque; if any, charges receive code 37"
-msgstr ""
+msgstr "Beløpet på sjekken, om noen, kostnader mottakskoden 37"
 
 #. module: account_coda
 #: view:account.coda:0
 msgid "Additional Information"
-msgstr ""
+msgstr "Tilleggsinformasjon"
 
 #. module: account_coda
 #: model:account.coda.comm.type,description:account_coda.acct_120
 msgid "Correction of a transaction"
-msgstr ""
+msgstr "Korreksjon av en transaksjon."
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_01_64
 #: model:account.coda.trans.code,description:account_coda.actcc_41_64
 msgid "Transfer to your account"
-msgstr ""
+msgstr "Overføring til kontoen din."
 
 #. module: account_coda
 #: model:account.coda.comm.type,description:account_coda.acct_124
 msgid "Number of the credit card"
-msgstr ""
+msgstr "Antall kredittkort"
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_80_13
 msgid "Renting of safes"
-msgstr ""
+msgstr "Leie av safer"
 
 #. module: account_coda
 #: help:coda.bank.account,find_bbacom:0
 msgid ""
 "Partner lookup via the 'BBA' Structured Communication field of the Invoice."
 msgstr ""
+"Partner oppslag via \"BBA 'Strukturert Kommunikasjon feltet av fakturaen."
 
 #. module: account_coda
 #: model:account.coda.comm.type,description:account_coda.acct_104
 msgid "Equivalent in EUR"
-msgstr ""
+msgstr "Tilsvarende i EUR."
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_47_50
 msgid "Remittance of foreign bill credit after collection"
-msgstr ""
+msgstr "Remittering av utenlandsk regning kreditt etter samling."
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_03_03
 msgid "Your purchase by payment card"
-msgstr ""
+msgstr "Ditt kjøp med betalingskort."
 
 #. module: account_coda
 #: model:account.coda.trans.type,description:account_coda.actt_1
@@ -584,6 +595,11 @@ msgid ""
 "matter of principle, this type is also used when no detailed data is "
 "following (type 5)."
 msgstr ""
+"Beløp som summerte av kunden; f.eks en fil omgruppering betaling av lønn "
+"eller utbetalinger til leverandører eller en fil samle lokaliseringer "
+"samlinger som kunden er debitert eller kreditert med ett beløp. Som et "
+"spørsmål om prinsipp, er denne typen også brukes når ingen detaljerte data "
+"følger (type 5)."
 
 #. module: account_coda
 #: code:addons/account_coda/wizard/account_coda_import.py:519
@@ -593,11 +609,14 @@ msgid ""
 "CODA parsing error on information data record 3.3, seq nr %s!\n"
 "Please report this issue via your OpenERP support channel."
 msgstr ""
+"\n"
+"CODA analysefeil på informasjon datapost 3.3, seq nr% s!\n"
+"Vennligst rapporter dette problemet via OpenERP støtte kanal."
 
 #. module: account_coda
 #: view:coda.bank.statement.line:0
 msgid "Credit Transactions."
-msgstr ""
+msgstr "Kreditt transaksjoner."
 
 #. module: account_coda
 #: field:account.coda.trans.type,type:0
