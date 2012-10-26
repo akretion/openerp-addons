@@ -31,6 +31,8 @@ import time
 from report import report_sxw
 from common_report_header import common_report_header
 
+from tools.translate import _
+
 class general_ledger(report_sxw.rml_parse, common_report_header):
     _name = 'report.account.general.ledger'
 
@@ -83,6 +85,7 @@ class general_ledger(report_sxw.rml_parse, common_report_header):
             'get_start_period': self.get_start_period,
             'get_end_period': self.get_end_period,
             'get_filter': self._get_filter,
+            'has_filter': self._has_filter,
             'get_sortby': self._get_sortby,
             'get_start_date':self._get_start_date,
             'get_end_date':self._get_end_date,
@@ -299,10 +302,10 @@ class general_ledger(report_sxw.rml_parse, common_report_header):
 
     def _get_sortby(self, data):
         if self.sortby == 'sort_date':
-            return 'Date'
+            return _('Date')
         elif self.sortby == 'sort_journal_partner':
-            return 'Journal & Partner'
-        return 'Date'
+            return _('Journal & Partner')
+        return _('Date')
 
 report_sxw.report_sxw('report.account.general.ledger', 'account.account', 'addons/account/report/account_general_ledger.rml', parser=general_ledger, header='internal')
 report_sxw.report_sxw('report.account.general.ledger_landscape', 'account.account', 'addons/account/report/account_general_ledger_landscape.rml', parser=general_ledger, header='internal landscape')

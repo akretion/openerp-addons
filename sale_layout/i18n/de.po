@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-02-08 00:37+0000\n"
-"PO-Revision-Date: 2012-02-17 09:10+0000\n"
-"Last-Translator: Ferdinand @ Camptocamp <Unknown>\n"
+"PO-Revision-Date: 2012-09-21 13:48+0000\n"
+"Last-Translator: Rudolf Schnapka <rs@techno-flex.de>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-28 10:03+0000\n"
-"X-Generator: Launchpad (build 15864)\n"
+"X-Launchpad-Export-Date: 2012-09-22 05:24+0000\n"
+"X-Generator: Launchpad (build 15985)\n"
 
 #. module: sale_layout
 #: sql_constraint:sale.order:0
@@ -35,12 +35,12 @@ msgstr "Überschrift"
 #. module: sale_layout
 #: report:sale.order.layout:0
 msgid "Disc. (%)"
-msgstr "Rabatt (%)"
+msgstr "Rab. (%)"
 
 #. module: sale_layout
 #: selection:sale.order.line,layout_type:0
 msgid "Note"
-msgstr "Notiz"
+msgstr "Bemerkung"
 
 #. module: sale_layout
 #: field:sale.order.line,layout_type:0
@@ -55,7 +55,7 @@ msgstr "Bestellnummer"
 #. module: sale_layout
 #: field:sale.order,abstract_line_ids:0
 msgid "Order Lines"
-msgstr "Auftragszeilen"
+msgstr "Auftragspositionen"
 
 #. module: sale_layout
 #: report:sale.order.layout:0
@@ -65,12 +65,12 @@ msgstr "Rabatt (%)"
 #. module: sale_layout
 #: report:sale.order.layout:0
 msgid "Unit Price"
-msgstr "Preis/ME"
+msgstr "Einzelpreis"
 
 #. module: sale_layout
 #: view:sale.order:0
 msgid "Invoice Lines"
-msgstr "Rechnungszeilen"
+msgstr "Rechnungspositionen"
 
 #. module: sale_layout
 #: view:sale.order:0
@@ -100,7 +100,7 @@ msgstr "Tel.:"
 #. module: sale_layout
 #: report:sale.order.layout:0
 msgid "Quantity"
-msgstr "Anzahl"
+msgstr "Menge"
 
 #. module: sale_layout
 #: report:sale.order.layout:0
@@ -115,7 +115,7 @@ msgstr "USt."
 #. module: sale_layout
 #: view:sale.order:0
 msgid "Make Invoice"
-msgstr "Erzeuge Rechnung"
+msgstr "Rechnung anlegen"
 
 #. module: sale_layout
 #: view:sale.order:0
@@ -135,12 +135,12 @@ msgstr "Fax:"
 #. module: sale_layout
 #: view:sale.order:0
 msgid "Notes"
-msgstr "Notiz"
+msgstr "Bemerkungen"
 
 #. module: sale_layout
 #: report:sale.order.layout:0
 msgid "Date Ordered"
-msgstr "Auftragsdatum"
+msgstr "Bestelldatum"
 
 #. module: sale_layout
 #: report:sale.order.layout:0
@@ -151,7 +151,7 @@ msgstr "Lieferanschrift:"
 #: view:sale.order:0
 #: report:sale.order.layout:0
 msgid "Taxes"
-msgstr "Umsatzsteuer"
+msgstr "Steuern"
 
 #. module: sale_layout
 #: report:sale.order.layout:0
@@ -171,7 +171,7 @@ msgstr "Zahlungsbedingungen"
 #. module: sale_layout
 #: view:sale.order:0
 msgid "History"
-msgstr "Historie"
+msgstr "Verlauf"
 
 #. module: sale_layout
 #: selection:sale.order.line,layout_type:0
@@ -186,7 +186,7 @@ msgstr "Ihre Referenz"
 #. module: sale_layout
 #: report:sale.order.layout:0
 msgid "Quotation Date"
-msgstr "Datum Angebot"
+msgstr "Angebotsdatum"
 
 #. module: sale_layout
 #: report:sale.order.layout:0
@@ -201,7 +201,7 @@ msgstr "Anzahl"
 #. module: sale_layout
 #: view:sale.order:0
 msgid "States"
-msgstr "Status"
+msgstr "Zustände"
 
 #. module: sale_layout
 #: view:sale.order:0
@@ -221,12 +221,12 @@ msgstr "Zusatzinfo"
 #. module: sale_layout
 #: report:sale.order.layout:0
 msgid "Taxes :"
-msgstr "Umsatzsteuer:"
+msgstr "Steuern:"
 
 #. module: sale_layout
 #: selection:sale.order.line,layout_type:0
 msgid "Page Break"
-msgstr "Seitenwechsel"
+msgstr "Seitenumbruch"
 
 #. module: sale_layout
 #: model:ir.model,name:sale_layout.model_sale_order
@@ -236,7 +236,7 @@ msgstr "Verkaufsauftrag"
 #. module: sale_layout
 #: view:sale.order:0
 msgid "Order Line"
-msgstr "Auftragszeile"
+msgstr "Auftragsposition"
 
 #. module: sale_layout
 #: report:sale.order.layout:0
@@ -251,4 +251,4 @@ msgstr "Auftragsposition"
 #. module: sale_layout
 #: view:sale.order:0
 msgid "Stock Moves"
-msgstr "Lieferaufträge"
+msgstr "Lagerbuchungen"

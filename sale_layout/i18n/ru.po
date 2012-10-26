@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-02-08 00:37+0000\n"
-"PO-Revision-Date: 2012-02-17 09:10+0000\n"
+"PO-Revision-Date: 2012-09-26 13:57+0000\n"
 "Last-Translator: Chertykov Denis <chertykov@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-28 10:03+0000\n"
-"X-Generator: Launchpad (build 15864)\n"
+"X-Launchpad-Export-Date: 2012-09-27 05:01+0000\n"
+"X-Generator: Launchpad (build 16033)\n"
 
 #. module: sale_layout
 #: sql_constraint:sale.order:0
 msgid "Order Reference must be unique per Company!"
-msgstr ""
+msgstr "Ссылка на заказ должны быть уникальной для каждой компании!"
 
 #. module: sale_layout
 #: selection:sale.order.line,layout_type:0
@@ -45,7 +45,7 @@ msgstr "Заметка"
 #. module: sale_layout
 #: field:sale.order.line,layout_type:0
 msgid "Line Type"
-msgstr ""
+msgstr "Тип строки"
 
 #. module: sale_layout
 #: report:sale.order.layout:0
@@ -90,7 +90,7 @@ msgstr "Описание"
 #. module: sale_layout
 #: report:sale.order.layout:0
 msgid "Our Salesman"
-msgstr "Наш менеджер продаж"
+msgstr "Наш продавец"
 
 #. module: sale_layout
 #: report:sale.order.layout:0
@@ -206,7 +206,7 @@ msgstr "Состояния"
 #. module: sale_layout
 #: view:sale.order:0
 msgid "Sales order lines"
-msgstr "Позиции заказа на продажу"
+msgstr "Позиции заказа продаж"
 
 #. module: sale_layout
 #: model:ir.actions.report.xml,name:sale_layout.sale_order_1
@@ -231,7 +231,7 @@ msgstr "Разделитель страниц"
 #. module: sale_layout
 #: model:ir.model,name:sale_layout.model_sale_order
 msgid "Sales Order"
-msgstr "Заказ на продажу"
+msgstr "Заказ продаж"
 
 #. module: sale_layout
 #: view:sale.order:0
@@ -246,9 +246,9 @@ msgstr "Цена"
 #. module: sale_layout
 #: model:ir.model,name:sale_layout.model_sale_order_line
 msgid "Sales Order Line"
-msgstr "Позиция заказа на продажу"
+msgstr "Позиция заказа продаж"
 
 #. module: sale_layout
 #: view:sale.order:0
 msgid "Stock Moves"
-msgstr "Перемещения ТМЦ"
+msgstr "Движение ТМЦ"

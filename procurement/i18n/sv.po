@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-02-08 00:37+0000\n"
-"PO-Revision-Date: 2012-09-04 17:36+0000\n"
-"Last-Translator: Mikael Akerberg <mikael.akerberg@dermanord.se>\n"
+"PO-Revision-Date: 2012-10-24 14:40+0000\n"
+"Last-Translator: Anders Wallenquist <anders.wallenquist@vertel.se>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-09-05 05:07+0000\n"
-"X-Generator: Launchpad (build 15901)\n"
+"X-Launchpad-Export-Date: 2012-10-25 06:12+0000\n"
+"X-Generator: Launchpad (build 16179)\n"
 
 #. module: procurement
 #: view:make.procurement:0
@@ -190,7 +190,7 @@ msgstr "Planering"
 #. module: procurement
 #: selection:procurement.order,state:0
 msgid "Ready"
-msgstr "Klar"
+msgstr "Färdig"
 
 #. module: procurement
 #: field:procurement.order.compute.all,automatic:0
@@ -378,7 +378,7 @@ msgstr "Antal"
 #: code:addons/procurement/procurement.py:379
 #, python-format
 msgid "Not enough stock and no minimum orderpoint rule defined."
-msgstr "Inte tillräckligt lager och ingen regel för minsta lager definierad."
+msgstr "Ej tillräckligt lager och regel för minsta lager saknas."
 
 #. module: procurement
 #: code:addons/procurement/procurement.py:137
@@ -735,7 +735,7 @@ msgstr "Kör upphandling"
 #. module: procurement
 #: selection:procurement.order,state:0
 msgid "Done"
-msgstr "Färdig"
+msgstr "Avslutad"
 
 #. module: procurement
 #: view:make.procurement:0
@@ -861,7 +861,7 @@ msgstr "Produktenhet"
 #. module: procurement
 #: model:process.node,name:procurement.process_node_serviceonorder0
 msgid "Make to Order"
-msgstr "Tillverka på order"
+msgstr "Anskaffa på order"
 
 #. module: procurement
 #: view:procurement.order:0
@@ -918,7 +918,7 @@ msgstr "MRP & Logistik Schemaläggare"
 #: code:addons/procurement/procurement.py:138
 #, python-format
 msgid "Cannot delete Procurement Order(s) which are in %s state!"
-msgstr "Kan inte ta bort anskaffningsorder som är i %s tillstånd!"
+msgstr "Kan inte ta bort anskaffningsorder som är i status %s !"
 
 #. module: procurement
 #: sql_constraint:res.company:0

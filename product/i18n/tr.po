@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev_rc3\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
-"POT-Creation-Date: 2012-02-08 00:37+0000\n"
-"PO-Revision-Date: 2012-08-30 14:18+0000\n"
+"POT-Creation-Date: 2012-10-08 12:29+0000\n"
+"PO-Revision-Date: 2012-09-08 15:42+0000\n"
 "Last-Translator: Ayhan KIZILTAN <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-31 05:13+0000\n"
-"X-Generator: Launchpad (build 15887)\n"
+"X-Launchpad-Export-Date: 2012-10-09 05:26+0000\n"
+"X-Generator: Launchpad (build 16112)\n"
 
 #. module: product
 #: model:product.template,name:product.product_product_ram512_product_template
@@ -57,9 +57,18 @@ msgid ""
 "Otherwise, this includes goods stored in any Stock Location typed as "
 "'internal'."
 msgstr ""
+"Tahmin miktarı (Eldek Miktar olarak hesaplanan - Çıkan + Giren)\n"
+"Tek Stok Konumu ile bir bağlamda, bu malların depolandığı konumu içerir , ya "
+"da onun herhangi bir alt konumunu.\n"
+"Tek Depo ile bir bağlamda, bu Depoda malların depolandığı Stok Konumunu "
+"içerir, ya da onun herhangi bir alt konumunu.\n"
+"Tek Mağaza ile bir bağlamda, bu Mağazaya ait Depoda malların depolandığı "
+"Stok Konumunu içerir, ya da onun herhangi bir alt konumunu.\n"
+"Aksi durumda, malların depolandığı 'iç' tipli herhangi bir Stok Konumunu "
+"içerir."
 
 #. module: product
-#: model:product.category,name:product.product_category_1
+#: model:product.category,name:product.cat1
 msgid "Sellable"
 msgstr "Satılabilir"
 
@@ -170,6 +179,8 @@ msgid ""
 "Conversion from Product UoM %s to Default UoM %s is not possible as they "
 "both belong to different Category!."
 msgstr ""
+"Ürün Ölçü Birimin %s den Varsayılan Ölçü Birimi %s e dönüştürmek, eğer her "
+"ikisi de farklı kategorilere aitse, olası değildir."
 
 #. module: product
 #: model:product.uom,name:product.product_uom_dozen
@@ -429,6 +440,15 @@ msgid ""
 "Otherwise, this includes goods stored in any Stock Location typed as "
 "'internal'."
 msgstr ""
+"Ürünlerin mevcut miktarı.\n"
+"Tek Stok Konumu ile bir bağlamda, bu Konumda depolanan malları içerir, ya da "
+"herhangi bir altındakini.\n"
+"Tek Depoyla bir bağlamda, bu Depoya ait Stok Konumunda depolanan malları "
+"içerir, ya da herhangi bir altındakini.\n"
+"Tek Mağaza ile bir bağlamda, bu Mağazaya ait Deponun Stok Konumunda "
+"depolanan malları içerir, ya da herhangi bir altındakini.\n"
+"Aksi durumda, 'iç' tipli herhangi bir Stok Konumunda depolanan malları "
+"içerir."
 
 #. module: product
 #: view:product.pricelist:0
@@ -480,7 +500,7 @@ msgid "Ending date for this pricelist version to be valid."
 msgstr "Bu fiyat listesinin geçerli olduğu son gün"
 
 #. module: product
-#: model:product.category,name:product.product_category_0
+#: model:product.category,name:product.cat0
 msgid "All products"
 msgstr "Tüm Ürünler"
 
@@ -648,6 +668,10 @@ msgid ""
 "you need to change the unit of measure, you may desactivate this product "
 "from the 'Procurement & Locations' tab and create a new one."
 msgstr ""
+"'%s' Yeni Ölçü Birimi, eski '%s' Ölçü Biriminin '%s' Ölçü Birimi "
+"kategorisine ait olmalıdır. Ölçü birimini değiştirmek isterseniz, 'Satınalma "
+"& Konumlar' sekmesinden bu ürünün etkinliğini kaldırmanız ve yeni bir tane "
+"oluşturmanız gerekir ."
 
 #. module: product
 #: view:product.pricelist.item:0
@@ -728,6 +752,14 @@ msgid ""
 "Otherwise, this includes goods arriving to any Stock Location typed as "
 "'internal'."
 msgstr ""
+"Gelmesi planlanan ürünlerin miktarı.\n"
+"Tek Stok Konumu ile bir bağlamda, bu Konuma gelecek malları içerir, ya da "
+"herhangi bir altındakini.\n"
+"Tek Depoyla bir bağlamda, bu Depoya ait Stok Konumuna gelecek malları "
+"içerir, ya da herhangi bir altındakini.\n"
+"Tek Mağaza ile bir bağlamda, bu Mağazaya ait Deponun Stok Konumuna gelecek "
+"malları içerir, ya da herhangi bir altındakini.\n"
+"Aksi durumda, 'iç' tipli herhangi bir Stok Konumuna gelecek malları içerir."
 
 #. module: product
 #: model:product.template,name:product.product_product_woodentable0_product_template
@@ -785,7 +817,7 @@ msgstr ""
 "olarak değerlendirilir."
 
 #. module: product
-#: model:product.category,name:product.product_category_5
+#: model:product.category,name:product.product_category_accessories
 msgid "Accessories"
 msgstr "Donatılar"
 
@@ -1131,6 +1163,11 @@ msgid "To Sell"
 msgstr "Satmak için"
 
 #. module: product
+#: help:product.product,ean13:0
+msgid "Barcode"
+msgstr ""
+
+#. module: product
 #: help:product.product,outgoing_qty:0
 msgid ""
 "Quantity of products that are planned to leave.\n"
@@ -1143,6 +1180,14 @@ msgid ""
 "Otherwise, this includes goods leaving from any Stock Location typed as "
 "'internal'."
 msgstr ""
+"Gönderilmesi planlanan ürünlerin miktarı.\n"
+"Tek Stok Konumu ile bir bağlamda, bu Konumdan çıkacak malları içerir, ya da "
+"herhangi bir altındakini.\n"
+"Tek Depoyla bir bağlamda, bu Depoya ait Stok Konumundan çıkacak malları "
+"içerir, ya da herhangi bir altındakini.\n"
+"Tek Mağaza ile bir bağlamda, bu Mağazaya ait Deponun Stok Konumundan çıkacak "
+"malları içerir, ya da herhangi bir altındakini.\n"
+"Aksi durumda, 'iç' tipli herhangi bir Stok Konumundan çıkacak malları içerir."
 
 #. module: product
 #: model:product.category,name:product.product_category_services0
@@ -1301,7 +1346,7 @@ msgid "Main Supplier who has highest priority in Supplier List."
 msgstr "Tedarikçi listesindeki en yüksek önceliğe sahip ana Tedarikçi"
 
 #. module: product
-#: model:product.category,name:product.product_category_6
+#: model:product.category,name:product.product_category_services
 #: view:product.product:0
 msgid "Services"
 msgstr "Hizmetler"
@@ -1342,12 +1387,6 @@ msgstr "Bu kural için fiyat hesaplama modu"
 #: view:product.product:0
 msgid "Pallet Dimension"
 msgstr "Palet Boyutu"
-
-#. module: product
-#: code:addons/product/product.py:668
-#, python-format
-msgid " (copy)"
-msgstr " (kopya)"
 
 #. module: product
 #: field:product.template,seller_ids:0
@@ -1391,7 +1430,7 @@ msgid "Minimal Quantity"
 msgstr "Min. Miktar"
 
 #. module: product
-#: model:product.category,name:product.product_category_9
+#: model:product.category,name:product.product_category_pc
 msgid "PC"
 msgstr "PC"
 
@@ -1508,6 +1547,8 @@ msgid ""
 "Will change the way procurements are processed. Consumable are product where "
 "you don't manage stock."
 msgstr ""
+"Satınalımaların işlenme yolunu değiştirecektir. Tüketim malları stok olarak "
+"işleyeceğiniz mallar değildir."
 
 #. module: product
 #: field:product.pricelist.version,date_start:0
@@ -1749,11 +1790,19 @@ msgid "Make to Order"
 msgstr "Siparişe Üretim"
 
 #. module: product
+#: code:addons/product/report/product_pricelist.py:49
+#, python-format
+msgid "units"
+msgstr ""
+
+#. module: product
 #: help:product.template,supply_method:0
 msgid ""
 "Produce will generate production order or tasks, according to the product "
 "type. Buy will trigger purchase orders when requested."
 msgstr ""
+"Üretim ürün türüne göre üretim emri ya da görevi oluşturacaktır. Talep "
+"oluştuğunda satınalma, satınalma siparişini tetikleyecektir."
 
 #. module: product
 #: field:product.product,variants:0
@@ -2417,7 +2466,7 @@ msgid "Category Type"
 msgstr "Kategori Tipi"
 
 #. module: product
-#: model:product.category,name:product.product_category_2
+#: model:product.category,name:product.cat2
 msgid "Private"
 msgstr "Özel"
 
@@ -2439,3 +2488,7 @@ msgstr "Hata ! yinelenen ilişkili üyeler oluşturamazsınız."
 #: field:product.pricelist.item,price_discount:0
 msgid "Price Discount"
 msgstr "Fiyat İskontosu"
+
+#, python-format
+#~ msgid " (copy)"
+#~ msgstr " (kopya)"
