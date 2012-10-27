@@ -2077,7 +2077,20 @@ class account_tax(osv.osv):
                 'taxes': []                  # List of taxes, see compute for the format
             }
         """
+
+        # By default, for each tax, tax amount will first be computed
+        # and rounded at the 'Account' decimal precision for each
+        # PO/SO/invoice line and then these rounded amounts will be
+        # summed, leading to the total amount for that tax. But, if the
+        # company has tax_calculation_rounding_method = round_globally,
+        # we still follow the same method, but we use a much larger
+        # precision when we round the tax amount for each line (we use
+        # the 'Account' decimal precision + 5), and that way it's like
+        # rounding after the sum of the tax amounts of each line
         precision = self.pool.get('decimal.precision').precision_get(cr, uid, 'Account')
+        tax_compute_precision = precision
+        if taxes and taxes[0].company_id.tax_calculation_rounding_method == 'round_globally':
+            tax_compute_precision += 5
         totalin = totalex = round(price_unit * quantity, precision)
         tin = []
         tex = []
@@ -2086,7 +2099,7 @@ class account_tax(osv.osv):
                 tex.append(tax)
             else:
                 tin.append(tax)
-        tin = self.compute_inv(cr, uid, tin, price_unit, quantity, address_id=address_id, product=product, partner=partner)
+        tin = self.compute_inv(cr, uid, tin, price_unit, quantity, address_id=address_id, product=product, partner=partner, precision=tax_compute_precision)
         for r in tin:
             totalex -= r.get('amount', 0.0)
         totlex_qty = 0.0
@@ -2094,7 +2107,7 @@ class account_tax(osv.osv):
             totlex_qty = totalex/quantity
         except:
             pass
-        tex = self._compute(cr, uid, tex, totlex_qty, quantity, address_id=address_id, product=product, partner=partner)
+        tex = self._compute(cr, uid, tex, totlex_qty, quantity, address_id=address_id, product=product, partner=partner, precision=tax_compute_precision)
         for r in tex:
             totalin += r.get('amount', 0.0)
         return {
@@ -2109,7 +2122,7 @@ class account_tax(osv.osv):
             "Deprecated, use compute_all(...)['taxes'] instead of compute(...) to manage prices with tax included")
         return self._compute(cr, uid, taxes, price_unit, quantity, address_id, product, partner)
 
-    def _compute(self, cr, uid, taxes, price_unit, quantity, address_id=None, product=None, partner=None):
+    def _compute(self, cr, uid, taxes, price_unit, quantity, address_id=None, product=None, partner=None, precision=None):
         """
         Compute tax values for given PRICE_UNIT, QUANTITY and a buyer/seller ADDRESS_ID.
 
@@ -2118,14 +2131,15 @@ class account_tax(osv.osv):
             tax = {'name':'', 'amount':0.0, 'account_collected_id':1, 'account_paid_id':2}
             one tax for each tax id in IDS and their children
         """
+        if not precision:
+            precision = self.pool.get('decimal.precision').precision_get(cr, uid, 'Account')
         res = self._unit_compute(cr, uid, taxes, price_unit, address_id, product, partner, quantity)
         total = 0.0
-        precision_pool = self.pool.get('decimal.precision')
         for r in res:
             if r.get('balance',False):
-                r['amount'] = round(r.get('balance', 0.0) * quantity, precision_pool.precision_get(cr, uid, 'Account')) - total
+                r['amount'] = round(r.get('balance', 0.0) * quantity, precision) - total
             else:
-                r['amount'] = round(r.get('amount', 0.0) * quantity, precision_pool.precision_get(cr, uid, 'Account'))
+                r['amount'] = round(r.get('amount', 0.0) * quantity, precision)
                 total += r['amount']
         return res
 
@@ -2203,7 +2217,7 @@ class account_tax(osv.osv):
             r['todo'] = 0
         return res
 
-    def compute_inv(self, cr, uid, taxes, price_unit, quantity, address_id=None, product=None, partner=None):
+    def compute_inv(self, cr, uid, taxes, price_unit, quantity, address_id=None, product=None, partner=None, precision=None):
         """
         Compute tax values for given PRICE_UNIT, QUANTITY and a buyer/seller ADDRESS_ID.
         Price Unit is a VAT included price
@@ -2213,15 +2227,15 @@ class account_tax(osv.osv):
             tax = {'name':'', 'amount':0.0, 'account_collected_id':1, 'account_paid_id':2}
             one tax for each tax id in IDS and their children
         """
+        if not precision:
+            precision = self.pool.get('decimal.precision').precision_get(cr, uid, 'Account')
         res = self._unit_compute_inv(cr, uid, taxes, price_unit, address_id, product, partner=None)
         total = 0.0
-        obj_precision = self.pool.get('decimal.precision')
         for r in res:
-            prec = obj_precision.precision_get(cr, uid, 'Account')
             if r.get('balance',False):
-                r['amount'] = round(r['balance'] * quantity, prec) - total
+                r['amount'] = round(r['balance'] * quantity, precision) - total
             else:
-                r['amount'] = round(r['amount'] * quantity, prec)
+                r['amount'] = round(r['amount'] * quantity, precision)
                 total += r['amount']
         return res
 
