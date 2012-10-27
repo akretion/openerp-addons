@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev_rc3\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-02-08 01:37+0100\n"
-"PO-Revision-Date: 2012-10-23 14:12+0000\n"
+"PO-Revision-Date: 2012-10-26 19:38+0000\n"
 "Last-Translator: Erwin van der Ploeg (Endian Solutions) <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-24 05:51+0000\n"
-"X-Generator: Launchpad (build 16179)\n"
+"X-Launchpad-Export-Date: 2012-10-27 05:23+0000\n"
+"X-Generator: Launchpad (build 16194)\n"
 
 #. module: sale
 #: field:sale.config.picking_policy,timesheet:0
@@ -488,8 +488,8 @@ msgid ""
 "The salesman confirms the quotation. The state of the sales order becomes "
 "'In progress' or 'Manual in progress'."
 msgstr ""
-"De verkoper bevestigt de offerte. De status van de verkooporder wordt "
-"'Loopt' of 'Loopt handmatig'."
+"De verkoper bevestigt de offerte. De status van de verkooporder wordt 'In "
+"behandeling'."
 
 #. module: sale
 #: code:addons/sale/sale.py:822
@@ -884,7 +884,7 @@ msgid ""
 "only after the scheduler(s) have been launched."
 msgstr ""
 "Dit geeft aan dat de verkooporder is geleverd. Dit veld wordt alleen "
-"bijgewerkt als de planning heeft loopt."
+"bijgewerkt als de planner is gestart."
 
 #. module: sale
 #: field:sale.order,date_order:0

@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-02-08 00:37+0000\n"
-"PO-Revision-Date: 2012-10-18 19:12+0000\n"
+"PO-Revision-Date: 2012-10-26 19:34+0000\n"
 "Last-Translator: Erwin van der Ploeg (Endian Solutions) <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-19 06:10+0000\n"
-"X-Generator: Launchpad (build 16165)\n"
+"X-Launchpad-Export-Date: 2012-10-27 05:23+0000\n"
+"X-Generator: Launchpad (build 16194)\n"
 
 #. module: procurement
 #: view:make.procurement:0
@@ -152,7 +152,7 @@ msgstr ""
 "Nadat een verwerving is gemaakt is de status ingesteld op 'Concept'.\n"
 "Als de verwerving is bevestigd, gaat de status naar 'Bevestigd'.            "
 "\n"
-"Na bevestiging gaat de status naar 'Loopt'.\n"
+"Na bevestiging gaat de status naar 'In behandeling'.\n"
 "Als er een fout optreedt in de order gaat de status naar 'Fout'.\n"
 "Als de uitzondering is verwijderd gaat de status naar 'Gereed'.\n"
 "De status is 'Wachtend' als de verwerving wacht op het afronden van een "
@@ -857,7 +857,7 @@ msgstr "Aantal regels"
 #. module: procurement
 #: selection:procurement.order,state:0
 msgid "Running"
-msgstr "Loopt"
+msgstr "In behandeling"
 
 #. module: procurement
 #: field:stock.warehouse.orderpoint,product_uom:0

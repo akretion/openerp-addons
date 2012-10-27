@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-10-23 11:48+0000\n"
-"PO-Revision-Date: 2012-09-26 14:43+0000\n"
+"PO-Revision-Date: 2012-10-26 17:28+0000\n"
 "Last-Translator: Chertykov Denis <chertykov@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-24 05:47+0000\n"
-"X-Generator: Launchpad (build 16179)\n"
+"X-Launchpad-Export-Date: 2012-10-27 05:23+0000\n"
+"X-Generator: Launchpad (build 16194)\n"
 
 #. module: account
 #: view:account.invoice.report:0
@@ -38,6 +38,8 @@ msgid ""
 "Determine the display order in the report 'Accounting \\ Reporting \\ "
 "Generic Reporting \\ Taxes \\ Taxes Report'"
 msgstr ""
+"Определяет порядок вывода в отчёте 'Учет \\ Отчётность \\ Общая отчётность \\"
+" Налоги \\ Отчёт по налогам'"
 
 #. module: account
 #: view:account.move.reconcile:0
@@ -81,7 +83,7 @@ msgstr "Определение наследников"
 #: code:addons/account/account_bank_statement.py:302
 #, python-format
 msgid "Journal item \"%s\" is not valid."
-msgstr ""
+msgstr "Недопустимый элемент журнала \"%s\""
 
 #. module: account
 #: model:ir.model,name:account.model_report_aged_receivable
@@ -123,6 +125,8 @@ msgid ""
 "Configuration error! The currency chosen should be shared by the default "
 "accounts too."
 msgstr ""
+"Ошибка настройки! Выбранная валюта должна соответствовать валюте счетов по "
+"умолчанию."
 
 #. module: account
 #: report:account.invoice:0
@@ -174,7 +178,7 @@ msgstr "Предупреждение!"
 #: code:addons/account/account.py:3129
 #, python-format
 msgid "Miscellaneous Journal"
-msgstr ""
+msgstr "Смешанный журнал"
 
 #. module: account
 #: field:account.fiscal.position.account,account_src_id:0
@@ -308,6 +312,7 @@ msgstr "ул."
 #, python-format
 msgid "Invoice line account company does not match with invoice company."
 msgstr ""
+"Позиция счёта-фактуры счёта компании не соответствует компании счёта-фактуры."
 
 #. module: account
 #: field:account.journal.column,field:0
@@ -355,6 +360,9 @@ msgid ""
 "leave the automatic formatting, it will be computed based on the financial "
 "reports hierarchy (auto-computed field 'level')."
 msgstr ""
+"Здесь вы можете задать формат для вывода этой записи. Если вы оставите "
+"автоформатирование, оно будет вычислено на основе иерархии финансовых "
+"отчётов (автоподсчитанное поле 'уровень')."
 
 #. module: account
 #: view:account.installer:0
@@ -558,7 +566,7 @@ msgstr "Название компании должно быть уникальн
 #. module: account
 #: model:ir.model,name:account.model_account_invoice_refund
 msgid "Invoice Refund"
-msgstr ""
+msgstr "Возмещение по счёту-фактуре"
 
 #. module: account
 #: report:account.overdue:0
@@ -638,7 +646,7 @@ msgstr "Последовательности"
 #: field:account.financial.report,account_report_id:0
 #: selection:account.financial.report,type:0
 msgid "Report Value"
-msgstr ""
+msgstr "Значение отчёта"
 
 #. module: account
 #: view:account.fiscal.position.template:0
@@ -659,7 +667,7 @@ msgstr "Основная нумерация должна отличаться о
 #: code:addons/account/account_move_line.py:1266
 #, python-format
 msgid "No period found or more than one period found for the given date."
-msgstr ""
+msgstr "Для заданной даты период не найден или найдено более одного периода."
 
 #. module: account
 #: field:account.invoice.tax,tax_amount:0
@@ -721,6 +729,8 @@ msgid ""
 "The date of your Journal Entry is not in the defined period! You should "
 "change the date or remove this constraint from the journal."
 msgstr ""
+"Дата проводки в журнале не в определённом периоде! Вы должны сменить дату "
+"или удалить это ограничение из журнала."
 
 #. module: account
 #: model:ir.model,name:account.model_account_report_general_ledger
@@ -755,7 +765,7 @@ msgstr "Журнал продаж в этом году"
 #. module: account
 #: selection:account.financial.report,display_detail:0
 msgid "Display children with hierarchy"
-msgstr ""
+msgstr "Показ подчинённость с иерархией"
 
 #. module: account
 #: selection:account.payment.term.line,value:0
@@ -778,7 +788,7 @@ msgstr "Аналитические проводки по строкам"
 #. module: account
 #: field:account.invoice.refund,filter_refund:0
 msgid "Refund Method"
-msgstr ""
+msgstr "Способ возмещения"
 
 #. module: account
 #: code:addons/account/wizard/account_change_currency.py:38

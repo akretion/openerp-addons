@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-02-08 00:35+0000\n"
-"PO-Revision-Date: 2012-10-25 19:49+0000\n"
+"PO-Revision-Date: 2012-10-26 11:30+0000\n"
 "Last-Translator: Kaare Pettersen <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-26 05:26+0000\n"
+"X-Launchpad-Export-Date: 2012-10-27 05:23+0000\n"
 "X-Generator: Launchpad (build 16194)\n"
 
 #. module: account_coda
@@ -928,6 +928,7 @@ msgstr ""
 #: model:account.coda.trans.code,description:account_coda.actcc_41_38
 msgid "Costs relating to incoming foreign and non-SEPA transfers"
 msgstr ""
+"Kostnader knyttet til innkommende utenlandske og ikke-SEPA overføringer."
 
 #. module: account_coda
 #: model:account.coda.trans.code,comment:account_coda.actcc_11_52
@@ -1233,7 +1234,7 @@ msgstr "Balansere På grunn forsikringspremie."
 #. module: account_coda
 #: model:account.coda.trans.code,comment:account_coda.actcc_11_11
 msgid "Debit of the issuer by the bank in charge of the financial service"
-msgstr ""
+msgstr "Belastning av utsteder ved bredden ansvarlig for finansiell tjeneste"
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_03_58
@@ -1260,6 +1261,9 @@ msgid ""
 "Description' fields of your configuration record match with '%s', '%s' and "
 "'%s' !"
 msgstr ""
+"\n"
+"Vennligst sjekk om den \"bankkontonummer ',' valuta 'og' Konto Beskrivelse-"
+"feltene i konfigurasjonen posten kamp med«% s ','% s ​​'og'% s '!"
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_47_58
@@ -1278,12 +1282,12 @@ msgstr ""
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_03_63
 msgid "Second credit of unpaid cheque"
-msgstr ""
+msgstr "Andre kreditt for ubetalt sjekk."
 
 #. module: account_coda
 #: model:account.coda.trans.category,description:account_coda.actrca_065
 msgid "Interest payment advice"
-msgstr ""
+msgstr "Rentebetaling Råd"
 
 #. module: account_coda
 #: field:account.coda.trans.code,type:0
@@ -1291,7 +1295,7 @@ msgstr ""
 #: field:coda.bank.statement,type:0
 #: field:coda.bank.statement.line,type:0
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #. module: account_coda
 #: model:account.coda.comm.type,description:account_coda.acct_112
@@ -1301,12 +1305,12 @@ msgstr ""
 #. module: account_coda
 #: field:coda.bank.account,description1:0
 msgid "Primary Account Description"
-msgstr ""
+msgstr "Primære kontobeskrivelsen"
 
 #. module: account_coda
 #: model:account.coda.comm.type,description:account_coda.acct_126
 msgid "Term investments"
-msgstr ""
+msgstr "Langsiktige Investeringer."
 
 #. module: account_coda
 #: model:account.coda.comm.type,description:account_coda.acct_100
@@ -1314,6 +1318,8 @@ msgid ""
 "(SEPA) payment with a structured format communication applying the ISO "
 "standard 11649: Structured creditor reference to remittan"
 msgstr ""
+"(SEPA) betaling med en strukturert format kommunikasjon søker ISO standard "
+"11649: Strukturert kreditor referanse til remittan."
 
 #. module: account_coda
 #: code:addons/account_coda/wizard/account_coda_import.py:164
@@ -1322,29 +1328,31 @@ msgid ""
 "\n"
 "Foreign bank accounts with IBAN structure are not supported !"
 msgstr ""
+"\n"
+"Utenlandske bankkonti med IBAN struktur støttes ikke!"
 
 #. module: account_coda
 #: model:account.coda.trans.category,description:account_coda.actrca_100
 msgid "Gross amount"
-msgstr ""
+msgstr "Bruttobeløp."
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_43_62
 msgid "Reversal of cheques"
-msgstr ""
+msgstr "Tilbakeføring AV sjekker"
 
 #. module: account_coda
 #: code:addons/account_coda/account_coda.py:299
 #, python-format
 msgid "Invalid action !"
-msgstr ""
+msgstr "Ugyldig hendelse !"
 
 #. module: account_coda
 #: model:account.coda.trans.code,comment:account_coda.actcc_01_64
 #: model:account.coda.trans.code,comment:account_coda.actcc_41_13
 #: model:account.coda.trans.code,comment:account_coda.actcc_41_64
 msgid "Intracompany"
-msgstr ""
+msgstr "Bedriftsinterne."
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_30_01
@@ -1360,13 +1368,13 @@ msgstr ""
 #: model:account.coda.trans.code,description:account_coda.actcc_05_05
 #: model:account.coda.trans.code,description:account_coda.actcc_05_54
 msgid "Reimbursement"
-msgstr ""
+msgstr "Refusjon"
 
 #. module: account_coda
 #: code:addons/account_coda/wizard/account_coda_import.py:868
 #, python-format
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 #. module: account_coda
 #: model:account.coda.trans.category,description:account_coda.actrca_405
@@ -1381,22 +1389,22 @@ msgstr ""
 #. module: account_coda
 #: model:account.coda.comm.type,description:account_coda.acct_008
 msgid "Identification of the de ultimate beneficiary/creditor (SEPA SCT/SDD)"
-msgstr ""
+msgstr "Identifisering av de ultimate mottaker / kreditor (SEPA SCT / SDD)"
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcf_49
 msgid "Foreign counter transactions"
-msgstr ""
+msgstr "Utenlandske telleren transaksjoner"
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_09_01
 msgid "Cash withdrawal"
-msgstr ""
+msgstr "Kontantuttak"
 
 #. module: account_coda
 #: field:coda.bank.statement.line,partner_id:0
 msgid "Partner"
-msgstr ""
+msgstr "Partner"
 
 #. module: account_coda
 #: model:account.coda.trans.code,comment:account_coda.actcc_80_37
@@ -1422,17 +1430,17 @@ msgstr ""
 #. module: account_coda
 #: model:account.coda.trans.category,description:account_coda.actrca_074
 msgid "Mailing costs"
-msgstr ""
+msgstr "Portoutgifter"
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_47_07
 msgid "Unpaid foreign bill"
-msgstr ""
+msgstr "Ubetalte utenlandsk Regning."
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_04_07
 msgid "Payment by GSM"
-msgstr ""
+msgstr "Betaling med GSM"
 
 #. module: account_coda
 #: view:coda.bank.account:0
@@ -1440,29 +1448,29 @@ msgstr ""
 #: view:coda.bank.statement:0
 #: selection:coda.bank.statement,type:0
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_05_50
 msgid "Credit after collection"
-msgstr ""
+msgstr "Kreditt etter samling."
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcf_80
 msgid "Separately charged costs and provisions"
-msgstr ""
+msgstr "Separat lade kostnader og avsetninger"
 
 #. module: account_coda
 #: view:coda.bank.account:0
 #: field:coda.bank.account,currency:0
 #: field:coda.bank.statement,currency:0
 msgid "Currency"
-msgstr ""
+msgstr "Valuta"
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_07_06
 msgid "Extension of maturity date"
-msgstr ""
+msgstr "Utvidelse AV forfall"
 
 #. module: account_coda
 #: field:coda.bank.account,def_receivable:0
@@ -1472,24 +1480,24 @@ msgstr ""
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_80_15
 msgid "Night safe"
-msgstr ""
+msgstr "Nattsafe"
 
 #. module: account_coda
 #: view:coda.bank.statement.line:0
 msgid "Total Amount"
-msgstr ""
+msgstr "Totalt BELØP"
 
 #. module: account_coda
 #: model:account.coda.trans.category,description:account_coda.actrca_214
 msgid "Issue commission (delivery order)"
-msgstr ""
+msgstr "Problemet kommisjon (leveranse)"
 
 #. module: account_coda
 #: model:account.coda.trans.code,comment:account_coda.actcc_13_07
 msgid ""
 "Often by standing order or direct debit. In case of direct debit, family 13 "
 "is used."
-msgstr ""
+msgstr "I tilfelle av direkte belastning, er familien 13 brukes."
 
 #. module: account_coda
 #: model:account.coda.trans.code,description:account_coda.actcc_04_01
@@ -1499,12 +1507,12 @@ msgstr ""
 #. module: account_coda
 #: model:account.coda.trans.category,description:account_coda.actrca_021
 msgid "Costs for drawing up a bank cheque"
-msgstr ""
+msgstr "Kostnader ved utarbeidelse av en bank sjekk."
 
 #. module: account_coda
 #: model:account.coda.trans.category,description:account_coda.actrca_026
 msgid "Handling commission"
-msgstr ""
+msgstr "Håndtering provisjon."
 
 #. module: account_coda
 #: model:account.coda.trans.category,description:account_coda.actrca_201
