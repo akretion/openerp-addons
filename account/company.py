@@ -46,7 +46,7 @@ class res_company(osv.osv):
 has already been paid, please disregard this notice. However, if you have any
 queries regarding your account, please contact us.
 Thank you in advance.
-'''
+''',
         'tax_calculation_rounding_method': 'round_per_line',
     }
 
