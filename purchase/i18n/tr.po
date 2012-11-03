@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-02-08 01:37+0100\n"
-"PO-Revision-Date: 2012-09-01 17:53+0000\n"
+"PO-Revision-Date: 2012-11-02 19:42+0000\n"
 "Last-Translator: Ayhan KIZILTAN <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-09-02 04:55+0000\n"
-"X-Generator: Launchpad (build 15890)\n"
+"X-Launchpad-Export-Date: 2012-11-03 05:28+0000\n"
+"X-Generator: Launchpad (build 16218)\n"
 
 #. module: purchase
 #: model:process.transition,note:purchase.process_transition_confirmingpurchaseorder0
@@ -211,7 +211,7 @@ msgid ""
 "This pricelist will be used, instead of the default one, for purchases from "
 "the current partner"
 msgstr ""
-"Mevcut ortaktan satınalmalarda, varsayılan yerine bu fiyat listesi "
+"Bu fiyat listesi, geçerli paydaştan yapılan alışlar için varsayılanın yerine "
 "kullanılacaktır"
 
 #. module: purchase
@@ -262,12 +262,12 @@ msgstr "Günün Siparişi"
 #. module: purchase
 #: view:board.board:0
 msgid "Monthly Purchases by Category"
-msgstr "Kategorilere Göre Aylık Satınalmalar"
+msgstr "Kategoriye göre Aylık Alışlar"
 
 #. module: purchase
 #: model:ir.actions.act_window,name:purchase.action_purchase_line_product_tree
 msgid "Purchases"
-msgstr "Satınalmalar"
+msgstr "Alışlar"
 
 #. module: purchase
 #: view:purchase.order:0
@@ -1092,7 +1092,7 @@ msgstr "Bu belgenin oluşturulduğu tarih."
 #. module: purchase
 #: view:res.partner:0
 msgid "Sales & Purchases"
-msgstr "Satışlar ve Satınalmalar"
+msgstr "Satışlar & Alışlar"
 
 #. module: purchase
 #: selection:purchase.report,month:0
@@ -1119,7 +1119,7 @@ msgstr "E-Posta Şablonları"
 #. module: purchase
 #: model:ir.model,name:purchase.model_purchase_report
 msgid "Purchases Orders"
-msgstr "Satınalma Siparişleri"
+msgstr "Alış Siparişleri"
 
 #. module: purchase
 #: view:purchase.order.line:0
@@ -1150,7 +1150,7 @@ msgstr "Uzatılmış Filtreler..."
 #. module: purchase
 #: view:purchase.config.wizard:0
 msgid "Invoicing Control on Purchases"
-msgstr "Satınalmalardaki Faturalama Kontrolü"
+msgstr "Alışlardaki Fatura Kontrolü"
 
 #. module: purchase
 #: code:addons/purchase/wizard/purchase_order_group.py:48
@@ -1855,7 +1855,7 @@ msgstr ""
 "Lütfen bir ürün seçmeden önce birini belirtin."
 
 #. module: purchase
-#: model:email.template,body_text:purchase.email_template_edi_purchase
+#: model:email.template,body:purchase.email_template_edi_purchase
 msgid ""
 "\n"
 "Hello${object.partner_address_id.name and ' ' or "
