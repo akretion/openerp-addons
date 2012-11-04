@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-02-08 00:37+0000\n"
-"PO-Revision-Date: 2012-11-02 20:05+0000\n"
+"PO-Revision-Date: 2012-11-03 21:41+0000\n"
 "Last-Translator: Ayhan KIZILTAN <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-11-03 05:28+0000\n"
+"X-Launchpad-Export-Date: 2012-11-04 05:17+0000\n"
 "X-Generator: Launchpad (build 16218)\n"
 
 #. module: purchase_requisition
@@ -99,17 +99,17 @@ msgstr "İstek Tarihi"
 #: field:purchase.requisition.line,requisition_id:0
 #: view:purchase.requisition.partner:0
 msgid "Purchase Requisition"
-msgstr "Alış İsteği"
+msgstr "Satınalma İsteği"
 
 #. module: purchase_requisition
 #: model:ir.model,name:purchase_requisition.model_purchase_requisition_line
 msgid "Purchase Requisition Line"
-msgstr "Alış İsteği Öğesi"
+msgstr "Satınalma İsteği Öğesi"
 
 #. module: purchase_requisition
 #: view:purchase.order:0
 msgid "Purchase Orders with requisition"
-msgstr "İstenen Alış Siparişleri"
+msgstr "İstekli Satınalma Siparişleri"
 
 #. module: purchase_requisition
 #: model:ir.model,name:purchase_requisition.model_product_product
@@ -134,7 +134,7 @@ msgid ""
 "Check this box so that requisitions generates purchase requisitions instead "
 "of directly requests for quotations."
 msgstr ""
-"İsteklerin, doğrudan teklif istekleri oluşturması yerine alış istekleri "
+"İsteklerin, doğrudan teklif istekleri oluşturması yerine satınalma istekleri "
 "oluşturması için burayı işaretleyin."
 
 #. module: purchase_requisition
@@ -183,7 +183,7 @@ msgstr "Taslağa Geri Dönüştür"
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Current Purchase Requisition"
-msgstr "Geçerli Alış İsteği"
+msgstr "Geçerli Satınalma İsteği"
 
 #. module: purchase_requisition
 #: model:res.groups,name:purchase_requisition.group_purchase_requisition_user
@@ -209,9 +209,9 @@ msgid ""
 "negotiation, once you have reviewed all the supplier's offers, you can "
 "validate some and cancel others."
 msgstr ""
-"Bir alış isteği, teklif isteğinden önce gelen adımdır. Bir alış isteğinde "
-"(ya da satınalma ihalesinde), istediğiniz ürünleri kaydedebilir ve "
-"tedarikçilere RfQs (Alış İstekleri) oluşturulmasını tetikleyebilirsiniz."
+"Bir satınalma isteği, teklif isteğinden önce gelen adımdır. Bir satınalma "
+"isteğinde (ya da satınalma ihalesinde), istediğiniz ürünleri kaydedebilir ve "
+"tedarikçilere RfQs (Satınalma İstekleri) oluşturulmasını tetikleyebilirsiniz."
 
 #. module: purchase_requisition
 #: field:purchase.requisition.line,product_qty:0
@@ -227,7 +227,7 @@ msgstr "Atanmamış İstek"
 #: model:ir.actions.act_window,name:purchase_requisition.action_purchase_requisition
 #: model:ir.ui.menu,name:purchase_requisition.menu_purchase_requisition_pro_mgt
 msgid "Purchase Requisitions"
-msgstr "Alış İstekleri"
+msgstr "Satınalma İstekleri"
 
 #. module: purchase_requisition
 #: code:addons/purchase_requisition/purchase_requisition.py:136
@@ -263,7 +263,7 @@ msgstr "İstek Bitiş Tarihi"
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Search Purchase Requisition"
-msgstr "Alış İsteği Ara"
+msgstr "Satınalma İsteği Ara"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
@@ -284,10 +284,10 @@ msgid ""
 "orders.On confirmation of a purchase order it does not cancel the remaining "
 "orders"
 msgstr ""
-"Alış İsteği (özel): Bir alış siparişinin onaylanmasıyla kalan siparişleri "
-"iptal eder.\n"
-"Alış İsteği (çoklu): Çoklu alış siparişlerine izin verir. Bir alış "
-"siparişinin onaylanmasıyla kalan siparişleri iptal etmez."
+"Satınalma İsteği (özel): Bir satınalma siparişinin onaylanmasıyla kalan "
+"siparişleri iptal eder.\n"
+"Satınalma İsteği (çoklu): Çoklu satınalma siparişlerine izin verir. Bir "
+"satınalma siparişinin onaylanmasıyla kalan siparişleri iptal etmez."
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
@@ -298,7 +298,7 @@ msgstr "Alış Siparişini İptal Et"
 #: model:ir.model,name:purchase_requisition.model_purchase_order
 #: view:purchase.requisition:0
 msgid "Purchase Order"
-msgstr "Alış Siparişi"
+msgstr "Satınalma Siparişi"
 
 #. module: purchase_requisition
 #: code:addons/purchase_requisition/wizard/purchase_requisition_partner.py:42
@@ -314,7 +314,7 @@ msgstr "İstek Türü"
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "New Purchase Requisition"
-msgstr "Yeni Alış İsteği"
+msgstr "Yeni Satınalma İsteği"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
@@ -344,7 +344,7 @@ msgstr "["
 #. module: purchase_requisition
 #: model:ir.model,name:purchase_requisition.model_purchase_requisition_partner
 msgid "Purchase Requisition Partner"
-msgstr "Alış İsteği Paydaşı"
+msgstr "Satınalma İsteği Paydaşı"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
@@ -359,12 +359,12 @@ msgstr "Teklif Ayrıntısı"
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Purchase for Requisitions"
-msgstr "İstek için Alış"
+msgstr "İstekler için Satınalma"
 
 #. module: purchase_requisition
 #: model:ir.actions.act_window,name:purchase_requisition.act_res_partner_2_purchase_order
 msgid "Purchase orders"
-msgstr "Alış siparişleri"
+msgstr "Satınalma siparişleri"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
@@ -381,7 +381,7 @@ msgstr "Referans"
 #. module: purchase_requisition
 #: model:ir.model,name:purchase_requisition.model_procurement_order
 msgid "Procurement"
-msgstr "Satınalma"
+msgstr "Tedarik"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,warehouse_id:0
@@ -427,7 +427,7 @@ msgstr "_Vazgeç"
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Confirm Purchase Order"
-msgstr "Alış Siparişi Onayla"
+msgstr "Satınalma Siparişi Onayla"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
@@ -452,4 +452,4 @@ msgstr "Atanmamış"
 #. module: purchase_requisition
 #: field:purchase.requisition,purchase_ids:0
 msgid "Purchase Orders"
-msgstr "Alış Siparişleri"
+msgstr "Satınalma Siparişleri"
