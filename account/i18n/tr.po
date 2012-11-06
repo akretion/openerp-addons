@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-10-23 11:48+0000\n"
-"PO-Revision-Date: 2012-11-04 17:56+0000\n"
-"Last-Translator: Fabien (Open ERP) <fp@tinyerp.com>\n"
+"PO-Revision-Date: 2012-11-05 19:28+0000\n"
+"Last-Translator: Ayhan KIZILTAN <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-11-05 04:54+0000\n"
+"X-Launchpad-Export-Date: 2012-11-06 05:20+0000\n"
 "X-Generator: Launchpad (build 16232)\n"
 
 #. module: account
@@ -140,7 +140,7 @@ msgstr "Kökeni"
 #: view:account.move.line.reconcile:0
 #: view:account.move.line.reconcile.writeoff:0
 msgid "Reconcile"
-msgstr "Uzlaşı"
+msgstr "Uzlaştır"
 
 #. module: account
 #: field:account.bank.statement.line,ref:0
@@ -841,7 +841,7 @@ msgstr "Bu faturaya ait paydaş referansı"
 #. module: account
 #: view:account.invoice.report:0
 msgid "Supplier Invoices And Refunds"
-msgstr "Tedarikçi Faturaları ve İadeler"
+msgstr "Tedarikçi Faturaları ve İadeleri"
 
 #. module: account
 #: view:account.move.line.unreconcile.select:0
@@ -1233,9 +1233,9 @@ msgid ""
 "purchase orders or receipts. This way, you can control the invoice from your "
 "supplier according to what you purchased or received."
 msgstr ""
-"Satıcı Faturaları ile satıcılarınızın kestiği faturaları girip "
+"Tedarikçi Faturaları ile tedarikçilerinizin kestiği faturaları girip "
 "işleyebilirsiniz. OpenERP, satınalım siparişlerinden veya alış fişlerinden "
-"taslak faturalar da oluşturabilir. Bu yolla siz de satıcı faturalarını "
+"taslak faturalar da oluşturabilir. Bu yolla siz de tedarikçi faturalarını "
 "satınalınan ve teslim alınan mala göre kontrol edebilirsainiz."
 
 #. module: account
@@ -2597,7 +2597,7 @@ msgstr "Fiscal Year"
 #: help:accounting.report,fiscalyear_id:0
 #: help:accounting.report,fiscalyear_id_cmp:0
 msgid "Keep empty for all open fiscal year"
-msgstr "Bütün mali yıllar boş bırakın"
+msgstr "Bütün mali yıllar için boş bırakın"
 
 #. module: account
 #: field:account.invoice.report,account_line_id:0
@@ -2709,7 +2709,7 @@ msgstr "Paydaş Uzlaşması"
 #: field:account.tax,tax_code_id:0
 #: view:account.tax.code:0
 msgid "Account Tax Code"
-msgstr "Account Tax Code"
+msgstr "Hesap Vergi Kodu"
 
 #. module: account
 #: code:addons/account/account_invoice.py:581
@@ -2745,7 +2745,7 @@ msgstr "Temel Kod"
 #. module: account
 #: help:account.invoice.tax,sequence:0
 msgid "Gives the sequence order when displaying a list of invoice tax."
-msgstr "Gives the sequence order when displaying a list of invoice tax."
+msgstr "Fatura vergisi listesi görüntülenirken diziliş sırasını verir."
 
 #. module: account
 #: field:account.tax,base_sign:0
@@ -2810,7 +2810,7 @@ msgstr "EXJ"
 #. module: account
 #: field:product.template,supplier_taxes_id:0
 msgid "Supplier Taxes"
-msgstr "Tedarikçi vergileri"
+msgstr "Tedarikçi Vergileri"
 
 #. module: account
 #: view:account.entries.report:0
@@ -2958,7 +2958,7 @@ msgstr "Ref"
 #. module: account
 #: help:account.move.line,tax_code_id:0
 msgid "The Account can either be a base tax code or a tax code account."
-msgstr "The Account can either be a base tax code or a tax code account."
+msgstr "Hesap hem vergi matrah kodu ya da vergi kodu hesabı olabilir."
 
 #. module: account
 #: sql_constraint:account.model.line:0
@@ -3004,7 +3004,7 @@ msgstr "Ana Tablo Şablonu"
 #: field:account.tax,parent_id:0
 #: field:account.tax.template,parent_id:0
 msgid "Parent Tax Account"
-msgstr "Asıl Vergi Hesabı"
+msgstr "Ana Vergi Hesabı"
 
 #. module: account
 #: code:addons/account/wizard/account_change_currency.py:59
@@ -3105,7 +3105,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:account.action_tax_code_list
 #: model:ir.ui.menu,name:account.menu_action_tax_code_list
 msgid "Tax codes"
-msgstr "Vergi Kodları"
+msgstr "Vergi kodları"
 
 #. module: account
 #: view:account.account:0
@@ -3261,7 +3261,7 @@ msgid ""
 "Click on compute to update the tax base."
 msgstr ""
 "Vergi Matrahı farklı!\n"
-"Hesapl'ya tıklayarak vergi matrahını güncelleyin."
+"Hesaplaya tıklayarak vergi matrahını güncelleyin."
 
 #. module: account
 #: field:account.partner.ledger,page_split:0
@@ -3399,7 +3399,7 @@ msgstr "Model"
 #. module: account
 #: help:account.invoice.tax,base_code_id:0
 msgid "The account basis of the tax declaration."
-msgstr "The account basis of the tax declaration."
+msgstr "Vergi bildirimi esası temelli hesap"
 
 #. module: account
 #: selection:account.account,type:0
@@ -3528,7 +3528,7 @@ msgstr "Mali yıl için yol sonu günlüğü tanımlanmamış"
 #: view:account.tax:0
 #: view:account.tax.template:0
 msgid "Keep empty to use the expense account"
-msgstr "Masraf hesabında kullanmak için boş bırak"
+msgstr "Masraf hesabını kullanmak için boş bırak"
 
 #. module: account
 #: field:account.aged.trial.balance,journal_ids:0
@@ -3721,7 +3721,7 @@ msgstr "Hareket Ara"
 #: field:account.tax.code,name:0
 #: field:account.tax.code.template,name:0
 msgid "Tax Case Name"
-msgstr "Vergi Servis Talep Adı"
+msgstr "Vergi Davası Adı"
 
 #. module: account
 #: report:account.invoice:0
@@ -3954,7 +3954,7 @@ msgstr "Some entries are already reconciled !"
 #. module: account
 #: view:account.tax:0
 msgid "Account Tax"
-msgstr "Verig Hesabı"
+msgstr "Vergi Hesabı"
 
 #. module: account
 #: model:ir.ui.menu,name:account.menu_finance_reporting_budgets
@@ -3999,8 +3999,7 @@ msgid ""
 "If not applicable (computed through a Python code), the tax won't appear on "
 "the invoice."
 msgstr ""
-"If not applicable (computed through a Python code), the tax won't appear on "
-"the invoice."
+"Uygulanabilir değilse (Python koduyla hesaplanmış), vergi faturada görünmez."
 
 #. module: account
 #: view:account.tax:0
@@ -4091,7 +4090,7 @@ msgstr "Fatura Aç"
 #. module: account
 #: field:account.invoice.tax,factor_tax:0
 msgid "Multipication factor Tax code"
-msgstr "Multipication factor Tax code"
+msgstr "Vergi kodu çarpan faktörü"
 
 #. module: account
 #: view:account.fiscal.position:0
@@ -4844,7 +4843,7 @@ msgstr ""
 #: view:account.tax:0
 #: view:account.tax.template:0
 msgid "Keep empty to use the income account"
-msgstr "Keep empty to use the income account"
+msgstr "Gelir hesabını kullanmak için boş bırakın"
 
 #. module: account
 #: code:addons/account/account.py:3316
@@ -4862,7 +4861,7 @@ msgstr "Generate Entries"
 #. module: account
 #: help:account.vat.declaration,chart_tax_id:0
 msgid "Select Charts of Taxes"
-msgstr "Vergi Tablosu seçin"
+msgstr "Vergi Tablosu Seçin"
 
 #. module: account
 #: view:account.fiscal.position:0
@@ -4920,7 +4919,7 @@ msgstr "Uzlaşısız işlemler"
 #: field:account.tax,ref_tax_code_id:0
 #: field:account.tax.template,ref_tax_code_id:0
 msgid "Refund Tax Code"
-msgstr "Refund Tax Code"
+msgstr "İade Vergi Kodu"
 
 #. module: account
 #: view:validate.account.move:0
@@ -5029,7 +5028,7 @@ msgstr "No"
 #. module: account
 #: help:account.invoice.tax,tax_code_id:0
 msgid "The tax basis of the tax declaration."
-msgstr "The tax basis of the tax declaration."
+msgstr "Vergi bildirimi vergi temeli."
 
 #. module: account
 #: view:account.addtmpl.wizard:0
@@ -5087,7 +5086,7 @@ msgstr "Hesapla"
 #. module: account
 #: field:account.tax,type_tax_use:0
 msgid "Tax Application"
-msgstr "Tax Application"
+msgstr "Vergi Uygulaması"
 
 #. module: account
 #: view:account.move:0
@@ -5266,7 +5265,7 @@ msgstr "Vergi Açıklaması"
 #. module: account
 #: field:account.tax,child_ids:0
 msgid "Child Tax Accounts"
-msgstr "Child Tax Accounts"
+msgstr "Alt Vergi Hesapları"
 
 #. module: account
 #: code:addons/account/account.py:1097
@@ -5281,8 +5280,7 @@ msgid ""
 "Check this if the price you use on the product and invoices includes this "
 "tax."
 msgstr ""
-"Check this if the price you use on the product and invoices includes this "
-"tax."
+"Ürün ve faturada kullandığınız fiyat vergi içeriyorsa bunu işaretleyin."
 
 #. module: account
 #: report:account.analytic.account.balance:0
@@ -5687,7 +5685,7 @@ msgstr ""
 #: field:account.tax.template,ref_tax_sign:0
 #: field:account.tax.template,tax_sign:0
 msgid "Tax Code Sign"
-msgstr "Vergi Kodu Girişi"
+msgstr "Vergi Kodu İşareti"
 
 #. module: account
 #: model:ir.model,name:account.model_report_invoice_created
@@ -5762,7 +5760,7 @@ msgstr "Para Birimi Değiştir"
 #. module: account
 #: view:account.invoice:0
 msgid "This action will erase taxes"
-msgstr "Eylem vergileri silecektir"
+msgstr "Bu eylem vergileri silecektir"
 
 #. module: account
 #: model:process.node,note:account.process_node_accountingentries0
@@ -5858,8 +5856,8 @@ msgid ""
 "The sequence field is used to order the payment term lines from the lowest "
 "sequences to the higher ones"
 msgstr ""
-"The sequence field is used to order the payment term lines from the lowest "
-"sequences to the higher ones"
+"Sıra alanı, ödeme koşulu satırlarını düşükten yükseğe doğru sıralamak için "
+"kullanılır"
 
 #. module: account
 #: view:account.fiscal.position.template:0
@@ -5968,7 +5966,7 @@ msgstr "Already Reconciled!"
 #. module: account
 #: help:account.tax,type:0
 msgid "The computation method for the tax amount."
-msgstr "The computation method for the tax amount."
+msgstr "Vergi tutarı hesaplama yöntemi."
 
 #. module: account
 #: view:account.payment.term.line:0
@@ -6203,7 +6201,7 @@ msgstr "Geçerli para birimi düzgün yapılandırılmadı!"
 #: field:account.tax,account_collected_id:0
 #: field:account.tax.template,account_collected_id:0
 msgid "Invoice Tax Account"
-msgstr "Fatura Vergi Hes."
+msgstr "Fatura Vergi Hesabı"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_general_journal
@@ -6363,9 +6361,9 @@ msgid ""
 "Tax related to this account and the counterpart \"Account Payable\"."
 msgstr ""
 "Bu görünüm, muhasebeciler tarafından OpenERP de hızlı kayıt girilmesi için "
-"kullanılabilir. Bir satıcı faturası girmek isterseniz, gider hesabı satırını "
-"kaydederek başlayın. OpenERP size bu Verginin bağlı olduğu hesabı ve karşıtı "
-"olan \"Borç Hesaplarını\" önerir."
+"kullanılabilir. Bir tedarikçi faturası girmek isterseniz, gider hesabı "
+"satırını kaydederek başlayın. OpenERP size bu Verginin bağlı olduğu hesabı "
+"ve karşıtı olan \"Borç Hesab\"ını önerir."
 
 #. module: account
 #: field:account.entries.report,date_created:0
@@ -6437,7 +6435,7 @@ msgstr "Reporting Configuration"
 #: field:account.tax,type:0
 #: field:account.tax.template,type:0
 msgid "Tax Type"
-msgstr "Vergi Tipi"
+msgstr "Vergi Türü"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_template_form
@@ -6460,7 +6458,7 @@ msgstr ""
 #. module: account
 #: report:account.vat.declaration:0
 msgid "Tax Statement"
-msgstr "Vergi Hesapözeti"
+msgstr "Vergi Bildirimi"
 
 #. module: account
 #: model:ir.model,name:account.model_res_company
@@ -6495,7 +6493,7 @@ msgstr "Select a fiscal year to close"
 #. module: account
 #: help:account.chart.template,tax_template_ids:0
 msgid "List of all the taxes that have to be installed by the wizard"
-msgstr "List of all the taxes that have to be installed by the wizard"
+msgstr "Sihirbaz tarafından kurulması gereken tüm vergilerin listesi"
 
 #. module: account
 #: model:ir.actions.report.xml,name:account.account_intracom
@@ -6674,9 +6672,9 @@ msgid ""
 "higher ones. The order is important if you have a tax that has several tax "
 "children. In this case, the evaluation order is important."
 msgstr ""
-"The sequence field is used to order the taxes lines from lower sequences to "
-"higher ones. The order is important if you have a tax that has several tax "
-"children. In this case, the evaluation order is important."
+"Diziliş alanı vergi satırlarının düşükten yükseğe sıralanması için "
+"kullanılır. Birçok alt vergisi olan bir vergi olduğunda sıra önem kazanır. "
+"Bu durumda, değerlendirme sırası önemlidir."
 
 #. module: account
 #: selection:account.account,type:0
@@ -7305,7 +7303,7 @@ msgstr "Özellikler"
 #. module: account
 #: model:ir.model,name:account.model_account_tax_chart
 msgid "Account tax chart"
-msgstr "Account tax chart"
+msgstr "Vergi hesap tablosu"
 
 #. module: account
 #: report:account.analytic.account.cost_ledger:0
@@ -7473,7 +7471,7 @@ msgstr "Vergiler:"
 #. module: account
 #: help:account.tax,amount:0
 msgid "For taxes of type percentage, enter % ratio between 0-1."
-msgstr "For taxes of type percentage, enter % ratio between 0-1."
+msgstr "Yüzde cinsindeki vergiler için 0-1 arasında % oranı yazın."
 
 #. module: account
 #: model:ir.actions.act_window,help:account.action_subscription_form
@@ -7817,7 +7815,9 @@ msgid ""
 "Tax related to this account and the counter-part \"Account Payable\"."
 msgstr ""
 "Bu görünüm, muhasebeciler tarafından girişlerin OpenERP de toplu olarak "
-"kaydı için kullanılır."
+"kaydı için kullanılır. Bir tedarikçi faturası girmek isterseniz, gider "
+"hesabı satırı kaydederek başlayın, OpenERP size otomatikman bu hesaba bağlı "
+"olduğu hesabı ve karşıtı olan \"Borç Hesabı\"nı önerir."
 
 #. module: account
 #: view:account.invoice.line:0
@@ -8092,7 +8092,7 @@ msgstr "Günlüğe ait Girişleri İşle"
 #. module: account
 #: view:product.product:0
 msgid "Sale Taxes"
-msgstr "Satış Vergisi"
+msgstr "Satış Vergileri"
 
 #. module: account
 #: field:account.financial.report,name:0
@@ -8181,7 +8181,7 @@ msgstr "Hesap Tipine Göre Satışlar"
 #. module: account
 #: help:account.invoice,move_id:0
 msgid "Link to the automatically generated Journal Items."
-msgstr "Link to the automatically generated Journal Items."
+msgstr "Otomatikman oluşturulan günlük öğelerine bağlantı"
 
 #. module: account
 #: selection:account.installer,period:0
@@ -8251,9 +8251,9 @@ msgid ""
 "to the higher ones. The order is important if you have a tax with several "
 "tax children. In this case, the evaluation order is important."
 msgstr ""
-"The sequence field is used to order the tax lines from the lowest sequences "
-"to the higher ones. The order is important if you have a tax with several "
-"tax children. In this case, the evaluation order is important."
+"Diziliş alanı vergi satırlarının düşükten yükseğe sıralanması için "
+"kullanılır. Birçok alt vergisi olan bir vergi olduğunda sıra önem kazanır. "
+"Bu durumda, değerlendirme sırası önemlidir."
 
 #. module: account
 #: model:ir.model,name:account.model_account_cashbox_line
@@ -8396,7 +8396,7 @@ msgstr ""
 #. module: account
 #: field:account.tax.template,type_tax_use:0
 msgid "Tax Use In"
-msgstr "vergi dahil"
+msgstr "Kullanılan Dahil Vergi"
 
 #. module: account
 #: code:addons/account/account_bank_statement.py:315
@@ -8450,7 +8450,7 @@ msgstr "Automatic entry"
 #. module: account
 #: constraint:account.tax.code.template:0
 msgid "Error ! You can not create recursive Tax Codes."
-msgstr "Error ! You can not create recursive Tax Codes."
+msgstr "Hata! Özyinelemeli Vergi Kodları oluşturmazsınız."
 
 #. module: account
 #: help:product.template,property_account_income:0
@@ -8603,7 +8603,7 @@ msgstr "Satınalma İade Günlüğü"
 #. module: account
 #: help:account.tax.template,amount:0
 msgid "For Tax Type percent enter % ratio between 0-1."
-msgstr "For Tax Type percent enter % ratio between 0-1."
+msgstr "Yüzde cinsinden vergi için 0-1 arası % oranı yazın."
 
 #. module: account
 #: view:account.analytic.account:0
@@ -8684,7 +8684,7 @@ msgstr ""
 #. module: account
 #: view:account.tax.template:0
 msgid "Compute Code for Taxes included prices"
-msgstr "Compute Code for Taxes included prices"
+msgstr "Vergi dahil fiyatlar için kod Hesapla"
 
 #. module: account
 #: code:addons/account/account_invoice.py:1042
@@ -8999,7 +8999,7 @@ msgstr "Ara Toplam"
 #. module: account
 #: view:account.vat.declaration:0
 msgid "Print Tax Statement"
-msgstr "Vergi Hesapözetini Yazdır"
+msgstr "Vergi Bildirimini Yazdır"
 
 #. module: account
 #: view:account.model.line:0
@@ -9165,8 +9165,7 @@ msgid ""
 "Unique number of the invoice, computed automatically when the invoice is "
 "created."
 msgstr ""
-"Unique number of the invoice, computed automatically when the invoice is "
-"created."
+"Fatura eşsiz numarası, fatura oluşturulurken otomatik olarak hesaplanır."
 
 #. module: account
 #: model:account.account.type,name:account.data_account_type_expense
@@ -9586,7 +9585,7 @@ msgstr "İnceleme Yönergesi"
 #. module: account
 #: field:res.partner,ref_companies:0
 msgid "Companies that refers to partner"
-msgstr "Paydaşa başvurusu olan Firmalar"
+msgstr "Paydaşı ilgilendiren firmalar"
 
 #. module: account
 #: view:account.journal:0
@@ -10041,8 +10040,8 @@ msgid ""
 "It indicates that the invoice has been paid and the journal entry of the "
 "invoice has been reconciled with one or several journal entries of payment."
 msgstr ""
-"Faturanın ödemiş olduğu görünmektedir ve faturaya ait günlük girişi, "
-"ödemenin bir ya da birkaç  günlük girişi ile uzlatırılmıştır."
+"Faturanın ödenmiş olduğu görünmektedir ve faturaya ait günlük girişi, "
+"ödemenin bir ya da birkaç günlük girişi ile uzlaştırılmıştır."
 
 #. module: account
 #: view:account.invoice:0
@@ -10290,7 +10289,7 @@ msgstr "Döviz Kuru"
 #: field:account.account,tax_ids:0
 #: field:account.account.template,tax_ids:0
 msgid "Default Taxes"
-msgstr "Default Taxes"
+msgstr "Varsayılan Vergiler"
 
 #. module: account
 #: selection:account.entries.report,month:0
@@ -10603,7 +10602,7 @@ msgstr "Firma"
 #. module: account
 #: model:ir.ui.menu,name:account.menu_action_subscription_form
 msgid "Define Recurring Entries"
-msgstr "Yinelenen Giriş Tanımla"
+msgstr "Özyinelenen Giriş Tanımla"
 
 #. module: account
 #: field:account.entries.report,date_maturity:0
@@ -10662,7 +10661,7 @@ msgstr "Empty Accounts ? "
 #. module: account
 #: constraint:account.bank.statement:0
 msgid "The journal and period chosen have to belong to the same company."
-msgstr "The journal and period chosen have to belong to the same company."
+msgstr "Seçilen günlük ve dönem aynı firmaya ait olmalıdır."
 
 #. module: account
 #: view:account.invoice:0
@@ -10699,7 +10698,7 @@ msgstr ""
 #: view:account.automatic.reconcile:0
 #: view:account.move.line.reconcile.writeoff:0
 msgid "Write-Off Move"
-msgstr "Write-Off Move"
+msgstr "Gider Kaydı Hareketi"
 
 #. module: account
 #: model:process.node,note:account.process_node_paidinvoice0
@@ -10773,7 +10772,7 @@ msgstr ""
 #. module: account
 #: constraint:account.account.template:0
 msgid "Error ! You can not create recursive account templates."
-msgstr "Hata! Yinelemeli hesap şablonları kullanamazsınız."
+msgstr "Hata! Özyinelemeli hesap şablonları kullanamazsınız."
 
 #. module: account
 #: selection:account.print.journal,sort_selection:0
@@ -10785,7 +10784,7 @@ msgstr "Günlük Girişi Numarası"
 #. module: account
 #: view:account.subscription:0
 msgid "Recurring"
-msgstr "Yinelenen"
+msgstr "Özyinelenen"
 
 #. module: account
 #: code:addons/account/account.py:642
@@ -10920,7 +10919,8 @@ msgstr "Eğer çoklu-para birimiyse seçmeli başka para birimi."
 msgid ""
 "Import of the statement in the system from a supplier or customer invoice"
 msgstr ""
-"Import of the statement in the system from a supplier or customer invoice"
+"Sistem içinde hesapözetinin bir tedarikçiden ya da müşteri faturasından "
+"aktarılması"
 
 #. module: account
 #: model:ir.ui.menu,name:account.menu_finance_periodical_processing_billing
@@ -10974,7 +10974,7 @@ msgstr "İstatistik Raporları"
 #: code:addons/account/account_move_line.py:1253
 #, python-format
 msgid "Bad account!"
-msgstr "Bad account!"
+msgstr "Hatalı hesap!"
 
 #. module: account
 #: field:account.print.journal,sort_selection:0
@@ -11260,12 +11260,12 @@ msgstr "Faturaya Elle Vergi Girilmesi"
 #. module: account
 #: field:account.account,parent_right:0
 msgid "Parent Right"
-msgstr "Parent Right"
+msgstr "Ana İzin"
 
 #. module: account
 #: model:ir.model,name:account.model_account_addtmpl_wizard
 msgid "account.addtmpl.wizard"
-msgstr "account.addtmpl.wizard"
+msgstr "hesap.sabekle.sihirbaz"
 
 #. module: account
 #: field:account.aged.trial.balance,result_selection:0
@@ -11351,7 +11351,7 @@ msgstr "Vade"
 #: code:addons/account/report/account_aged_partner_balance.py:383
 #, python-format
 msgid "Future"
-msgstr "İlerki"
+msgstr "İleriki"
 
 #. module: account
 #: view:account.move.line:0
