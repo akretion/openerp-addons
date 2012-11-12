@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-10-23 11:48+0000\n"
-"PO-Revision-Date: 2012-11-10 22:54+0000\n"
+"PO-Revision-Date: 2012-11-11 09:50+0000\n"
 "Last-Translator: Ayhan KIZILTAN <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-11-11 05:11+0000\n"
+"X-Launchpad-Export-Date: 2012-11-12 04:52+0000\n"
 "X-Generator: Launchpad (build 16251)\n"
 
 #. module: account
@@ -695,7 +695,7 @@ msgstr "Ortak Paydaş Hesabı Raporu"
 #. module: account
 #: field:account.fiscalyear.close,period_id:0
 msgid "Opening Entries Period"
-msgstr "Giriş Dönemi Açılışı"
+msgstr "Açılış Girişleri Dönemi"
 
 #. module: account
 #: model:ir.model,name:account.model_account_journal_period
@@ -1395,7 +1395,7 @@ msgstr "Vergiler"
 #: code:addons/account/wizard/account_report_common.py:145
 #, python-format
 msgid "Select a starting and an ending period"
-msgstr "Başlangıç ve bitiş dönemi seçin"
+msgstr "Başlangıç ve bitiş dönemini seçin"
 
 #. module: account
 #: model:account.financial.report,name:account.account_financial_report_profitandloss0
@@ -2245,8 +2245,8 @@ msgid ""
 "If set to True then do not accept the entry if the entry date is not into "
 "the period dates"
 msgstr ""
-"If set to True then do not accept the entry if the entry date is not into "
-"the period dates"
+"Kapalı'ya ayarlıysa, giriş tarihi dönem tarihleri arasında değilse giriş "
+"kabul edilmez"
 
 #. module: account
 #: code:addons/account/account_invoice.py:73
@@ -2780,7 +2780,7 @@ msgstr "borç merkezileştirmesi"
 #: view:account.invoice.confirm:0
 #: model:ir.actions.act_window,name:account.action_account_invoice_confirm
 msgid "Confirm Draft Invoices"
-msgstr "Confirm Draft Invoices"
+msgstr "Taslak Faturaları Onayla"
 
 #. module: account
 #: field:account.entries.report,day:0
@@ -2944,7 +2944,7 @@ msgstr "Bank reconciliation"
 #. module: account
 #: report:account.invoice:0
 msgid "Disc.(%)"
-msgstr "Disc.(%)"
+msgstr "İnd.(%)"
 
 #. module: account
 #: report:account.general.ledger:0
@@ -3123,7 +3123,7 @@ msgstr "Müşteriler"
 #: report:account.analytic.account.journal:0
 #: report:account.analytic.account.quantity_cost_ledger:0
 msgid "Period to"
-msgstr "Period to"
+msgstr "Bu döneme kadar"
 
 #. module: account
 #: selection:account.entries.report,month:0
@@ -4016,7 +4016,7 @@ msgstr "Qty"
 #. module: account
 #: field:account.invoice.report,address_contact_id:0
 msgid "Contact Address Name"
-msgstr "Contact Address Name"
+msgstr "İletişim Adresi Adı"
 
 #. module: account
 #: field:account.move.line,blocked:0
@@ -5143,7 +5143,7 @@ msgstr "Error"
 #: field:account.analytic.inverted.balance,date2:0
 #: field:account.analytic.journal.report,date2:0
 msgid "End of period"
-msgstr "Dönem Bitişi"
+msgstr "Dönem Sonu"
 
 #. module: account
 #: view:res.partner:0
@@ -5172,7 +5172,7 @@ msgstr ""
 #. module: account
 #: sql_constraint:account.invoice:0
 msgid "Invoice Number must be unique per Company!"
-msgstr "Fatura Numarası Her Şirkette Tekil Olmalı!"
+msgstr "Fatura Numarası her Firmada eşsiz olmalı!"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_receivable_graph
@@ -5271,7 +5271,7 @@ msgstr "Alt Vergi Hesapları"
 #: code:addons/account/account.py:1097
 #, python-format
 msgid "Start period should be smaller then End period"
-msgstr "Start period should be smaller then End period"
+msgstr "Dönem Başı dönem Sonundan küçük olmalı"
 
 #. module: account
 #: help:account.tax,price_include:0
@@ -5458,7 +5458,7 @@ msgstr "Genel Günlükler"
 #. module: account
 #: field:account.journal,allow_date:0
 msgid "Check Date in Period"
-msgstr "Dönemdeki Tarihi Denetleyin"
+msgstr "Dönemdeki Tarihi Denetle"
 
 #. module: account
 #: model:ir.ui.menu,name:account.final_accounting_reports
@@ -6632,7 +6632,7 @@ msgstr "Hesap Çözümsel Öğeleri Görünümü"
 #: field:account.invoice,internal_number:0
 #: field:report.invoice.created,number:0
 msgid "Invoice Number"
-msgstr "Invoice Number"
+msgstr "Fatura Numarası"
 
 #. module: account
 #: help:account.tax,include_base_amount:0
@@ -6982,7 +6982,7 @@ msgstr "Entry \"%s\" is not valid !"
 #. module: account
 #: report:account.invoice:0
 msgid "Fax :"
-msgstr "Fax :"
+msgstr "Faks:"
 
 #. module: account
 #: view:wizard.multi.charts.accounts:0
@@ -7518,8 +7518,8 @@ msgid ""
 "This date will be used as the invoice date for Refund Invoice and Period "
 "will be chosen accordingly!"
 msgstr ""
-"This date will be used as the invoice date for Refund Invoice and Period "
-"will be chosen accordingly!"
+"Bu tarih, İade Faturasında ve buna uygun seçilen dönem için fatura tarihi "
+"olarak kullanılacaktır!"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.act_account_invoice_partner_relation
@@ -7714,7 +7714,7 @@ msgstr ""
 #: code:addons/account/account.py:1095
 #, python-format
 msgid "You should have chosen periods that belongs to the same company"
-msgstr "You should have chosen periods that belongs to the same company"
+msgstr "Aynı firmaya ait dönemleri seçmelisiniz"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_review_payment_terms_installer
@@ -8182,7 +8182,7 @@ msgstr "Hesap Tipine Göre Satışlar"
 #. module: account
 #: help:account.invoice,move_id:0
 msgid "Link to the automatically generated Journal Items."
-msgstr "Otomatikman oluşturulan günlük öğelerine bağlantı"
+msgstr "Otomatikman oluşturulan günlük öğelerine bağlantı."
 
 #. module: account
 #: selection:account.installer,period:0
@@ -9372,7 +9372,7 @@ msgstr "Türe göre bu ayki Satışlar"
 #. module: account
 #: view:account.analytic.cost.ledger.journal.report:0
 msgid "Cost Ledger for period"
-msgstr "Cost Ledger for period"
+msgstr "Döneme ait maliyet defteri"
 
 #. module: account
 #: help:account.tax,child_depend:0
@@ -9439,7 +9439,7 @@ msgstr "KI"
 #: report:account.analytic.account.journal:0
 #: report:account.analytic.account.quantity_cost_ledger:0
 msgid "Period from"
-msgstr "Period from"
+msgstr "Bu dönemden"
 
 #. module: account
 #: code:addons/account/account.py:3127
@@ -9462,7 +9462,7 @@ msgstr "Registered payment"
 #. module: account
 #: view:account.fiscalyear.close.state:0
 msgid "Close states of Fiscal year and periods"
-msgstr "Close states of Fiscal year and periods"
+msgstr "Mali yıl ve dönemlerin durumlarını Kapat"
 
 #. module: account
 #: view:account.analytic.line:0
@@ -9536,7 +9536,7 @@ msgstr ""
 #: field:account.period,date_stop:0
 #: model:ir.ui.menu,name:account.menu_account_end_year_treatments
 msgid "End of Period"
-msgstr "Dönem Bitişi"
+msgstr "Dönem Sonu"
 
 #. module: account
 #: field:account.account,financial_report_ids:0
@@ -9574,7 +9574,7 @@ msgstr "Mali Raporlar"
 #: field:accounting.report,period_from:0
 #: field:accounting.report,period_from_cmp:0
 msgid "Start Period"
-msgstr "Start Period"
+msgstr "Dönem Başı"
 
 #. module: account
 #: field:account.aged.trial.balance,direction_selection:0
@@ -9950,7 +9950,7 @@ msgstr ""
 #: field:accounting.report,period_to:0
 #: field:accounting.report,period_to_cmp:0
 msgid "End Period"
-msgstr "End Period"
+msgstr "Dönem Sonu"
 
 #. module: account
 #: code:addons/account/installer.py:94
@@ -10373,7 +10373,7 @@ msgstr ""
 #. module: account
 #: model:ir.model,name:account.model_account_period
 msgid "Account period"
-msgstr "Hesap Dönemi"
+msgstr "Hesap dönemi"
 
 #. module: account
 #: view:account.subscription:0
@@ -10424,7 +10424,7 @@ msgstr "Bu Ay"
 #: view:account.analytic.journal.report:0
 #: model:ir.actions.act_window,name:account.action_account_partner_ledger
 msgid "Select Period"
-msgstr "Dönem Seçin"
+msgstr "Dönem Seç"
 
 #. module: account
 #: view:account.entries.report:0
@@ -10627,7 +10627,7 @@ msgstr ""
 #. module: account
 #: view:account.fiscalyear:0
 msgid "Create Monthly Periods"
-msgstr "Aylık Dönemleri Oluştur"
+msgstr ""
 
 #. module: account
 #: field:account.tax.code.template,sign:0
@@ -11029,7 +11029,7 @@ msgstr "Seçilen ürünle ilgili gelir ve gider hesabı."
 #. module: account
 #: field:account.subscription,period_total:0
 msgid "Number of Periods"
-msgstr "Dönem sayısı"
+msgstr "Dönem Sayısı"
 
 #. module: account
 #: code:addons/account/account.py:1359
