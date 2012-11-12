@@ -1424,7 +1424,7 @@
 					<field name="reconcile" eval="True"/>
 					<field ref="a_15" name="parent_id"/>
 				</record>
-				<record id="vat_payable6" model="account.account.template">
+				<record id="vat_payable_low" model="account.account.template">
 					<field name="name">Btw af te dragen laag</field>
 					<field name="code">1601</field>
 					<field name="type">other</field>
@@ -1432,7 +1432,7 @@
 					<field name="reconcile" eval="False"/>
 					<field ref="a_15" name="parent_id"/>
 				</record>
-				<record id="vat_payable19" model="account.account.template">
+				<record id="vat_payable_high" model="account.account.template">
 					<field name="name">Btw af te dragen hoog</field>
 					<field name="code">1602</field>
 					<field name="type">other</field>
@@ -1448,7 +1448,7 @@
 					<field name="reconcile" eval="False"/>
 					<field ref="a_15" name="parent_id"/>
 				</record>
-				<record id="vat_refund6" model="account.account.template">
+				<record id="vat_refund_low" model="account.account.template">
 					<field name="name">Btw te vorderen laag</field>
 					<field name="code">1611</field>
 					<field name="type">other</field>
@@ -1456,7 +1456,7 @@
 					<field name="reconcile" eval="False"/>
 					<field ref="a_15" name="parent_id"/>
 				</record>
-				<record id="vat_refund19" model="account.account.template">
+				<record id="vat_refund_high" model="account.account.template">
 					<field name="name">Btw te vorderen hoog</field>
 					<field name="code">1612</field>
 					<field name="type">other</field>
@@ -3909,7 +3909,7 @@
         <record id="btw_code_1a" model="account.tax.code.template">
             <field name="code">1a</field>
             <field name="parent_id" ref="btw_code_binnenland"/>
-            <field name="name">Leveringen/diensten belast met 19% (BTW)</field>
+            <field name="name">Leveringen/diensten belast met 21% (BTW)</field>
         </record>
         <record id="btw_code_1b" model="account.tax.code.template">
             <field name="code">1b</field>
@@ -4021,7 +4021,7 @@
         <record id="omz_code_1a" model="account.tax.code.template">
             <field name="code">1a</field>
             <field name="parent_id" ref="omz_code_binnenland"/>
-            <field name="name">Leveringen/diensten belast met 19% (omzet)</field>
+            <field name="name">Leveringen/diensten belast met 21% (omzet)</field>
         </record>
         <record id="omz_code_1b" model="account.tax.code.template">
             <field name="code">1b</field>
@@ -4266,8 +4266,8 @@ TODO rubriek 1c en 1d moeten nog, zijn variabel, dus BTW percentage moet door ge
             <field name="sequence">15</field>
             <field name="chart_template_id" ref="l10nnl_chart_template"/>
             <field name="name">BTW af te dragen verlegd (inkopen)</field>
-            <field name="description">19% BTW verlegd</field>
-            <field eval="0.19" name="amount"/>
+            <field name="description">21% BTW verlegd</field>
+            <field eval="0.21" name="amount"/>
             <field name="type">percent</field>
             <field name="account_collected_id" ref="vat_payable_verlegd"/>
             <field name="account_paid_id" ref="vat_payable_verlegd"/>
@@ -4312,8 +4312,8 @@ TODO rubriek 1c en 1d moeten nog, zijn variabel, dus BTW percentage moet door ge
             <field name="sequence">15</field>
             <field name="chart_template_id" ref="l10nnl_chart_template"/>
             <field name="name">BTW te vorderen verlegd (inkopen)</field>
-            <field name="description">19% BTW verlegd</field>
-            <field eval="0.19" name="amount"/>
+            <field name="description">21% BTW verlegd</field>
+            <field eval="0.21" name="amount"/>
             <field name="type">percent</field>
             <field name="account_collected_id" ref="vat_refund_verlegd"/>
             <field name="account_paid_id" ref="vat_refund_verlegd"/>
