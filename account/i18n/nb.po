@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-10-23 11:48+0000\n"
-"PO-Revision-Date: 2012-10-15 11:55+0000\n"
+"PO-Revision-Date: 2012-11-13 17:26+0000\n"
 "Last-Translator: Kaare Pettersen <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-24 05:46+0000\n"
-"X-Generator: Launchpad (build 16179)\n"
+"X-Launchpad-Export-Date: 2012-11-14 04:59+0000\n"
+"X-Generator: Launchpad (build 16251)\n"
 
 #. module: account
 #: view:account.invoice.report:0
@@ -6416,7 +6416,7 @@ msgstr "Bedriftsintern"
 #. module: account
 #: view:account.move.line.reconcile.writeoff:0
 msgid "Information addendum"
-msgstr ""
+msgstr "informasjon tillegget"
 
 #. module: account
 #: field:account.chart,fiscalyear:0
@@ -6981,7 +6981,7 @@ msgstr "Feil!"
 #. module: account
 #: field:account.financial.report,style_overwrite:0
 msgid "Financial Report Style"
-msgstr ""
+msgstr "Finansiell Rapport stil."
 
 #. module: account
 #: selection:account.financial.report,sign:0
@@ -7041,6 +7041,9 @@ msgid ""
 "row to display the amount of debit/credit/balance that precedes the filter "
 "you've set."
 msgstr ""
+"Hvis du valgte å filtrere etter dato eller periode, dette feltet kan du "
+"legge til en rad for å vise hvor mye debet / kredit / balanse som kommer før "
+"filteret du har angitt."
 
 #. module: account
 #: view:account.bank.statement:0
@@ -7116,6 +7119,7 @@ msgstr "Alle registreringer"
 msgid ""
 "Error: The default UOM and the purchase UOM must be in the same category."
 msgstr ""
+"Feil: Standard målenheter og kjøp målenheter må være i samme kategori."
 
 #. module: account
 #: view:account.journal.select:0
@@ -7221,7 +7225,7 @@ msgstr "Inntektskonto"
 #. module: account
 #: help:report.invoice.created,origin:0
 msgid "Reference of the document that generated this invoice report."
-msgstr ""
+msgstr "Referanse til dokumentet som genererte denne faktura rapporten."
 
 #. module: account
 #: field:account.tax.code,child_ids:0
@@ -7306,7 +7310,7 @@ msgstr "Kildedokument"
 #: code:addons/account/account.py:1449
 #, python-format
 msgid "You can not delete a posted journal entry \"%s\"!"
-msgstr ""
+msgstr "Du kan ikke slette en lagt ut bilagsregistrering \"% s\"!"
 
 #. module: account
 #: selection:account.partner.ledger,filter:0
@@ -7324,7 +7328,7 @@ msgstr "Oppgave for avstemming"
 #. module: account
 #: model:ir.model,name:account.model_accounting_report
 msgid "Accounting Report"
-msgstr ""
+msgstr "Regnskapsrapport."
 
 #. module: account
 #: report:account.invoice:0
@@ -7398,7 +7402,7 @@ msgstr "Mal for avgiftskonto"
 #. module: account
 #: view:account.journal.select:0
 msgid "Are you sure you want to open Journal Entries?"
-msgstr ""
+msgstr "Er du sikker på at du vil åpne bilagsregistrering?"
 
 #. module: account
 #: view:account.state.open:0
@@ -7413,6 +7417,8 @@ msgid ""
 "Can not find a chart of account, you should create one from the "
 "configuration of the accounting menu."
 msgstr ""
+"Kan ikke finne et diagram av kontoen, du bør lage en fra konfigurasjonen av "
+"regnskap menyen."
 
 #. module: account
 #: field:account.chart.template,property_account_expense_opening:0
@@ -7428,7 +7434,7 @@ msgstr "Regnskapsregistreringer"
 #. module: account
 #: field:account.account.template,parent_id:0
 msgid "Parent Account Template"
-msgstr ""
+msgstr "Overordnede konto Mal."
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_configuration_installer
@@ -7579,7 +7585,7 @@ msgstr "Foreta registreringer"
 #. module: account
 #: view:res.partner:0
 msgid "Information About the Bank"
-msgstr ""
+msgstr "Informasjon om bank."
 
 #. module: account
 #: model:ir.ui.menu,name:account.menu_finance_reporting
@@ -7601,7 +7607,7 @@ msgstr "Advarsel"
 #. module: account
 #: model:ir.actions.act_window,name:account.action_analytic_open
 msgid "Contracts/Analytic Accounts"
-msgstr ""
+msgstr "Kontrakter / Analytiske kontoer."
 
 #. module: account
 #: field:account.bank.statement,ending_details_ids:0
@@ -7669,7 +7675,7 @@ msgstr "Fakturalinje"
 #. module: account
 #: view:account.invoice.report:0
 msgid "Customer And Supplier Refunds"
-msgstr ""
+msgstr "Kunde og leverandør refusjoner."
 
 #. module: account
 #: field:account.financial.report,sign:0
@@ -7691,7 +7697,7 @@ msgstr ""
 #: code:addons/account/account.py:3138
 #, python-format
 msgid "OPEJ"
-msgstr ""
+msgstr "OPEJ"
 
 #. module: account
 #: report:account.invoice:0
@@ -7889,7 +7895,7 @@ msgstr "Betalbare konti"
 #: code:addons/account/account_invoice.py:741
 #, python-format
 msgid "Global taxes defined, but they are not in invoice lines !"
-msgstr ""
+msgstr "Global skatter definert, men de er ikke i fakturalinjer!"
 
 #. module: account
 #: model:ir.model,name:account.model_account_chart_template
@@ -7912,7 +7918,7 @@ msgstr "Kontantkode"
 #. module: account
 #: view:validate.account.move:0
 msgid "Post Journal Entries of a Journal"
-msgstr ""
+msgstr "Post bilagsregistrering av en Journal."
 
 #. module: account
 #: view:product.product:0
@@ -7981,7 +7987,7 @@ msgstr "Sekvens"
 #. module: account
 #: constraint:product.category:0
 msgid "Error ! You cannot create recursive categories."
-msgstr ""
+msgstr "Feil! Du kan ikke lage uendelig struktur med uendelige kategorier."
 
 #. module: account
 #: help:account.model.line,quantity:0
@@ -8165,7 +8171,7 @@ msgstr "Velg en valuta for fakturaen"
 #, python-format
 msgid ""
 "The bank account defined on the selected chart of accounts hasn't a code."
-msgstr ""
+msgstr "Bankkontoen er definert på den valgte kontoplan har ikke en kode."
 
 #. module: account
 #: code:addons/account/wizard/account_invoice_refund.py:108
@@ -8229,7 +8235,7 @@ msgstr ""
 #: code:addons/account/account_bank_statement.py:353
 #, python-format
 msgid "The account entries lines are not in valid state."
-msgstr ""
+msgstr "Konto oppføring linjene er ikke i gyldig tilstand."
 
 #. module: account
 #: model:ir.actions.act_window,help:account.action_account_analytic_account_tree2
@@ -8261,7 +8267,7 @@ msgstr "Automatisk registrering"
 #. module: account
 #: constraint:account.tax.code.template:0
 msgid "Error ! You can not create recursive Tax Codes."
-msgstr ""
+msgstr "Feil ! Du kan ikke opprette rekursive skatte koder."
 
 #. module: account
 #: help:product.template,property_account_income:0
@@ -8293,7 +8299,7 @@ msgstr ""
 #. module: account
 #: report:account.analytic.account.inverted.balance:0
 msgid "Inverted Analytic Balance -"
-msgstr ""
+msgstr "Omvendt Analytisk Balanse -"
 
 #. module: account
 #: view:account.move.bank.reconcile:0
@@ -8377,7 +8383,7 @@ msgstr "Proforma"
 #. module: account
 #: report:account.analytic.account.cost_ledger:0
 msgid "J.C. /Move name"
-msgstr ""
+msgstr "J.C./Flytte navn"
 
 #. module: account
 #: model:ir.model,name:account.model_account_open_closed_fiscalyear
@@ -8398,7 +8404,7 @@ msgstr "For avgiftstype angi % sats mellom 0-1"
 #. module: account
 #: view:account.analytic.account:0
 msgid "Current Accounts"
-msgstr ""
+msgstr "Nåværende kontoer."
 
 #. module: account
 #: view:account.invoice.report:0
@@ -8482,7 +8488,7 @@ msgstr ""
 #. module: account
 #: field:account.chart.template,property_account_income_categ:0
 msgid "Income Category Account"
-msgstr ""
+msgstr "Inntekt Kategori konto."
 
 #. module: account
 #: field:account.account,adjusted_balance:0
@@ -8586,18 +8592,18 @@ msgstr "Delvis avstemt"
 #. module: account
 #: model:ir.model,name:account.model_account_analytic_inverted_balance
 msgid "Account Analytic Inverted Balance"
-msgstr ""
+msgstr "Konto Analytisk Omvendt Balanse."
 
 #. module: account
 #: model:ir.model,name:account.model_account_common_report
 msgid "Account Common Report"
-msgstr ""
+msgstr "Felles Konto Rapporter."
 
 #. module: account
 #: view:account.invoice.report:0
 #: view:analytic.entries.report:0
 msgid "current month"
-msgstr ""
+msgstr "Nåværende måned."
 
 #. module: account
 #: code:addons/account/account.py:1057
@@ -8655,7 +8661,7 @@ msgstr "Nyavstemming"
 #: view:account.chart.template:0
 #: field:account.chart.template,property_account_receivable:0
 msgid "Receivable Account"
-msgstr ""
+msgstr "Fordring konto."
 
 #. module: account
 #: view:account.invoice:0
@@ -8710,7 +8716,7 @@ msgstr ""
 #: code:addons/account/wizard/account_fiscalyear_close.py:62
 #, python-format
 msgid "The entries to reconcile should belong to the same company"
-msgstr ""
+msgstr "Oppføringene for å avstemme skal tilhøre samme selskap."
 
 #. module: account
 #: help:account.invoice,account_id:0
@@ -8721,7 +8727,7 @@ msgstr "Partnerkonto benyttet for denne faktura."
 #: code:addons/account/account.py:3313
 #, python-format
 msgid "Tax %.2f%%"
-msgstr ""
+msgstr "Skatt %.2f%%"
 
 #. module: account
 #: view:account.analytic.account:0
@@ -8733,7 +8739,7 @@ msgstr "Kontakter"
 #: view:account.tax.code.template:0
 #: field:account.tax.code.template,parent_id:0
 msgid "Parent Code"
-msgstr ""
+msgstr "overordnede kode"
 
 #. module: account
 #: model:ir.model,name:account.model_account_payment_term_line
@@ -8896,7 +8902,7 @@ msgstr "Journalnavn"
 #. module: account
 #: view:account.move.line:0
 msgid "Next Partner Entries to reconcile"
-msgstr ""
+msgstr "Neste partner innlegg til å avstemme."
 
 #. module: account
 #: selection:account.financial.report,style_overwrite:0
@@ -8991,7 +8997,7 @@ msgstr "Valuta"
 #: help:account.bank.statement.line,sequence:0
 msgid ""
 "Gives the sequence order when displaying a list of bank statement lines."
-msgstr ""
+msgstr "Gir sekvensen ordre når du viser en liste over kontoutskrift linjer."
 
 #. module: account
 #: model:process.transition,note:account.process_transition_validentries0
@@ -9025,7 +9031,7 @@ msgstr "Kontaktadresse"
 #: code:addons/account/account.py:2273
 #, python-format
 msgid "Wrong model !"
-msgstr ""
+msgstr "Feil modell!"
 
 #. module: account
 #: field:account.invoice.refund,period:0
@@ -9035,7 +9041,7 @@ msgstr "Fastsett periode"
 #. module: account
 #: model:ir.model,name:account.model_account_partner_balance
 msgid "Print Account Partner Balance"
-msgstr ""
+msgstr "Skriv ut konto partner balanse."
 
 #. module: account
 #: help:account.financial.report,sign:0
@@ -9229,7 +9235,7 @@ msgstr "Vennligst opprett fakturalinje(er)"
 #. module: account
 #: report:account.overdue:0
 msgid "Dear Sir/Madam,"
-msgstr ""
+msgstr "Kjære herr / fru,"
 
 #. module: account
 #: field:account.vat.declaration,display_detail:0
@@ -9271,7 +9277,7 @@ msgstr "Periodeslutt"
 #: model:ir.actions.act_window,name:account.action_account_report
 #: model:ir.ui.menu,name:account.menu_account_reports
 msgid "Financial Reports"
-msgstr ""
+msgstr "Finansielle rapporter."
 
 #. module: account
 #: report:account.account.balance:0
