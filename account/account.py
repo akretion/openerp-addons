@@ -2319,6 +2319,14 @@ class account_model(osv.osv):
 
         return move_ids
 
+    def onchange_journal_id(self, cr, uid, ids, journal_id, context=None):
+        company_id = False
+        if journal_id:
+            journal = self.pool.get('account.journal').browse(cr, uid, journal_id, context=context)
+            if journal.company_id.id:
+                company_id = journal.company_id.id
+        return {'value': {'company_id': company_id}}
+
 account_model()
 
 class account_model_line(osv.osv):
