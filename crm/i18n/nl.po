@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-02-08 01:37+0100\n"
-"PO-Revision-Date: 2012-11-07 13:11+0000\n"
+"PO-Revision-Date: 2012-11-15 14:23+0000\n"
 "Last-Translator: Erwin van der Ploeg (Endian Solutions) <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-11-08 05:17+0000\n"
-"X-Generator: Launchpad (build 16232)\n"
+"X-Launchpad-Export-Date: 2012-11-16 04:57+0000\n"
+"X-Generator: Launchpad (build 16272)\n"
 
 #. module: crm
 #: view:crm.lead.report:0
@@ -367,7 +367,7 @@ msgstr "Lead '%s' is geopend."
 #. module: crm
 #: model:process.transition,name:crm.process_transition_opportunitymeeting0
 msgid "Opportunity Meeting"
-msgstr "Prospect bespreking"
+msgstr "Prospect afspraak"
 
 #. module: crm
 #: help:crm.lead.report,delay_close:0 help:crm.phonecall.report,delay_close:0
@@ -2198,7 +2198,7 @@ msgstr ""
 "Leads laat u alle initiële contacten met een prospect of relatie beheren en "
 "volgen die interesse toont in uw producten of diensten. Een lead is meestal "
 "de eerste stap in een verkoopcyclus. Eenmaal gekwalificeerd mag een lead "
-"worden omgezet in een verkoopkans terwijl een relatie wordt gemaakt voor het "
+"worden omgezet in een prospect terwijl een relatie wordt gemaakt voor het "
 "verder volgen van gerelateerde activiteiten. U kunt een prospect database "
 "importeren, visitekaartjes bijhouden of het contactformulier van uw website "
 "integreren met de OpenERP leads. Leads kunnen worden gekoppeld met de email "

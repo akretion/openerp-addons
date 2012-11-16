@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-10-23 11:48+0000\n"
-"PO-Revision-Date: 2012-11-11 12:42+0000\n"
+"PO-Revision-Date: 2012-11-15 15:07+0000\n"
 "Last-Translator: Erwin van der Ploeg (Endian Solutions) <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-11-12 04:52+0000\n"
-"X-Generator: Launchpad (build 16251)\n"
+"X-Launchpad-Export-Date: 2012-11-16 04:57+0000\n"
+"X-Generator: Launchpad (build 16272)\n"
 
 #. module: account
 #: view:account.invoice.report:0
@@ -2183,7 +2183,7 @@ msgstr "Verkoopboek/inkoopboek"
 #. module: account
 #: view:account.analytic.account:0
 msgid "Analytic account"
-msgstr "Kostenplaatsen"
+msgstr "Kostenplaats"
 
 #. module: account
 #: code:addons/account/account_bank_statement.py:339
@@ -2911,7 +2911,7 @@ msgstr "Belasting"
 #: field:account.move.line,analytic_account_id:0
 #: field:account.move.line.reconcile.writeoff,analytic_id:0
 msgid "Analytic Account"
-msgstr "Kostenplaatsen"
+msgstr "Kostenplaats"
 
 #. module: account
 #: report:account.aged_trial_balance:0
@@ -4465,9 +4465,8 @@ msgid ""
 "Analytic costs (timesheets, some purchased products, ...) come from analytic "
 "accounts. These generate draft supplier invoices."
 msgstr ""
-"Analytische kosten (Tijdregistratie, sommige aangekochte producten, ...) "
-"zijn afkomstig van kostenplaatsen. Deze genereren proforma facturen van "
-"leveranciers"
+"Kosten (Tijdregistratie, sommige aangekochte producten, ...) zijn afkomstig "
+"van kostenplaatsen. Deze genereren concept facturen van leveranciers"
 
 #. module: account
 #: view:account.bank.statement:0
@@ -9565,7 +9564,7 @@ msgstr "Product Informatie"
 #: view:account.move.line:0
 #: model:ir.ui.menu,name:account.next_id_40
 msgid "Analytic"
-msgstr "Kostenplaatsen"
+msgstr "Kostenplaats"
 
 #. module: account
 #: model:process.node,name:account.process_node_invoiceinvoice0

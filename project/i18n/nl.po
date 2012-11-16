@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-02-08 01:37+0100\n"
-"PO-Revision-Date: 2012-11-11 10:38+0000\n"
+"PO-Revision-Date: 2012-11-15 14:04+0000\n"
 "Last-Translator: Erwin van der Ploeg (Endian Solutions) <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-11-12 04:52+0000\n"
-"X-Generator: Launchpad (build 16251)\n"
+"X-Launchpad-Export-Date: 2012-11-16 04:57+0000\n"
+"X-Generator: Launchpad (build 16272)\n"
 
 #. module: project
 #: view:report.project.task.user:0
@@ -156,7 +156,7 @@ msgstr "Maart"
 #. module: project
 #: view:project.task:0
 msgid "Delegated tasks"
-msgstr "Toegewezen taken"
+msgstr "Gedelegeerde taken"
 
 #. module: project
 #: field:project.task,child_ids:0
@@ -1115,7 +1115,7 @@ msgstr "project.task.reevaluate"
 #: code:addons/project/wizard/project_task_delegate.py:81
 #, python-format
 msgid "CHECK: %s"
-msgstr "CHECK: %s"
+msgstr "CONTROLEER: %s"
 
 #. module: project
 #: view:project.project:0
@@ -1312,7 +1312,7 @@ msgstr "Oktober"
 #. module: project
 #: view:project.task:0
 msgid "Validate planned time and open task"
-msgstr "Bevestigen de geplande tijd en geopende taak"
+msgstr "Bevestig de geplande tijd en open de taak"
 
 #. module: project
 #: help:project.task,delay_hours:0
@@ -1606,7 +1606,7 @@ msgstr " Project tov uren"
 #. module: project
 #: view:project.task.delegate:0
 msgid "Delegated Task"
-msgstr "Toegewezen taak"
+msgstr "Gedelegeerde taak"
 
 #. module: project
 #: help:project.project,effective_hours:0
