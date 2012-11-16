@@ -173,6 +173,8 @@ class audittrail_log_line(osv.osv):
 class audittrail_objects_proxy(object_proxy):
     """ Uses Object proxy for auditing changes on object of subscribed Rules"""
 
+    _default_recursive_level = 1
+
     def get_value_text(self, cr, uid, pool, resource_pool, method, field, value):
         """
         Gets textual values for the fields.
@@ -300,7 +302,7 @@ class audittrail_objects_proxy(object_proxy):
         self.process_data(cr, uid_orig, pool, res_ids, model, method, old_values, new_values, field_list)
         return res
 
-    def get_data(self, cr, uid, pool, res_ids, model, method):
+    def get_data(self, cr, uid, pool, res_ids, model, method, recursive_level=None):
         """
         This function simply read all the fields of the given res_ids, and also recurisvely on
         all records of a x2m fields read that need to be logged. Then it returns the result in
@@ -319,6 +321,8 @@ class audittrail_objects_proxy(object_proxy):
                                            },
                 }
         """
+        if recursive_level is None:
+            recursive_level = self._default_recursive_level
         data = {}
         resource_pool = pool.get(model.model)
         # read all the fields of the given resources in super admin mode
@@ -335,7 +339,7 @@ class audittrail_objects_proxy(object_proxy):
                 values_text[field] = self.get_value_text(cr, 1, pool, resource_pool, method, field, resource[field])
 
                 field_obj = resource_pool._all_columns.get(field).column
-                if field_obj._type in ('one2many','many2many'):
+                if field_obj._type in ('one2many','many2many') and recursive_level:
                     # check if an audittrail rule apply in super admin mode
                     if self.check_rules(cr, 1, field_obj._obj, method):
                         # check if the model associated to a *2m field exists, in super admin mode
@@ -344,11 +348,11 @@ class audittrail_objects_proxy(object_proxy):
                         assert x2m_model_id, _("'%s' Model does not exist..." %(field_obj._obj))
                         x2m_model = pool.get('ir.model').browse(cr, 1, x2m_model_id)
                         #recursive call on x2m fields that need to be checked too
-                        data.update(self.get_data(cr, 1, pool, resource[field], x2m_model, method))
+                        data.update(self.get_data(cr, 1, pool, resource[field], x2m_model, method, recursive_level - 1))
             data[(model.id, resource_id)] = {'text':values_text, 'value': values}
         return data
 
-    def prepare_audittrail_log_line(self, cr, uid, pool, model, resource_id, method, old_values, new_values, field_list=[]):
+    def prepare_audittrail_log_line(self, cr, uid, pool, model, resource_id, method, old_values, new_values, field_list=[], recursive_level=None):
         """
         This function compares the old data (i.e before the method was executed) and the new data 
         (after the method was executed) and returns a structure with all the needed information to
@@ -378,6 +382,8 @@ class audittrail_objects_proxy(object_proxy):
         record (res.partner, for example), we may have to log a change done in a x2many field (on 
         res.partner.address, for example)
         """
+        if recursive_level is None:
+            recursive_level = self._default_recursive_level
         key = (model.id, resource_id)
         lines = {
             key: []
@@ -388,7 +394,7 @@ class audittrail_objects_proxy(object_proxy):
             if field_list and field_name not in field_list:
                 continue
             field_obj = field_definition.column
-            if field_obj._type in ('one2many','many2many'):
+            if field_obj._type in ('one2many','many2many') and recursive_level:
                 # checking if an audittrail rule apply in super admin mode
                 if self.check_rules(cr, 1, field_obj._obj, method):
                     # checking if the model associated to a *2m field exists, in super admin mode
@@ -403,7 +409,7 @@ class audittrail_objects_proxy(object_proxy):
                     # We use list(set(...)) to remove duplicates.
                     res_ids = list(set(x2m_old_values_ids + x2m_new_values_ids))
                     for res_id in res_ids:
-                        lines.update(self.prepare_audittrail_log_line(cr, 1, pool, x2m_model, res_id, method, old_values, new_values, field_list))
+                        lines.update(self.prepare_audittrail_log_line(cr, 1, pool, x2m_model, res_id, method, old_values, new_values, field_list, recursive_level=recursive_level - 1))
             # if the value value is different than the old value: record the change
             if key not in old_values or key not in new_values or old_values[key]['value'][field_name] != new_values[key]['value'][field_name]:
                 data = {
