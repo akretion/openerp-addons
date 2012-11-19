@@ -7,20 +7,20 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-10-23 11:48+0000\n"
-"PO-Revision-Date: 2012-11-17 22:29+0000\n"
+"PO-Revision-Date: 2012-11-18 17:23+0000\n"
 "Last-Translator: Ayhan KIZILTAN <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-11-18 04:56+0000\n"
+"X-Launchpad-Export-Date: 2012-11-19 04:59+0000\n"
 "X-Generator: Launchpad (build 16278)\n"
 
 #. module: account
 #: view:account.invoice.report:0
 #: view:analytic.entries.report:0
 msgid "last month"
-msgstr "geçen ay"
+msgstr ""
 
 #. module: account
 #: model:process.transition,name:account.process_transition_supplierreconcilepaid0
@@ -30,7 +30,7 @@ msgstr "Sistem ödemesi"
 #. module: account
 #: view:account.journal:0
 msgid "Other Configuration"
-msgstr "Diğer Yapılandırmalar"
+msgstr "Diğer Yapılandırma"
 
 #. module: account
 #: help:account.tax.code,sequence:0
@@ -284,7 +284,7 @@ msgstr "Ara Toplam:"
 #: model:ir.actions.act_window,name:account.action_view_account_use_model
 #: model:ir.ui.menu,name:account.menu_action_manual_recurring
 msgid "Manual Recurring"
-msgstr "Elle Özyineleme"
+msgstr "Elle Yineleme"
 
 #. module: account
 #: view:account.fiscalyear.close.state:0
@@ -2655,7 +2655,7 @@ msgstr ""
 #: model:ir.model,name:account.model_account_payment_term
 #: field:res.partner,property_payment_term:0
 msgid "Payment Term"
-msgstr "Ödeme Vadesi"
+msgstr "Ödeme Biçimi"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_fiscal_position_form
@@ -2826,9 +2826,9 @@ msgid ""
 "date empty, it means direct payment. The payment term may compute several "
 "due dates, for example 50% now, 50% in one month."
 msgstr ""
-"Eğer ödeme koşulları kullanırsanız, vade tarihi muhasebe girişlerinin "
-"oluşturulması sırasında otomatik olarak hesaplanacaktır. Ödeme koşulu ve "
-"vade tarihini boş bırakırsanız, bu peşin ödeme demektir. Ödeme koşulu "
+"Eğer ödeme biçimleri kullanırsanız, vade tarihi muhasebe girişlerinin "
+"oluşturulması sırasında otomatik olarak hesaplanacaktır. Ödeme biçimi ve "
+"vade tarihini boş bırakırsanız, bu peşin ödeme demektir. Ödeme biçimi "
 "çeşitli vade tarihleri hesaplayabilir, örneğin %50 peşin, %50 bir ayda."
 
 #. module: account
@@ -3074,7 +3074,7 @@ msgstr "Hesaba Göre Satışlar"
 #. module: account
 #: view:account.use.model:0
 msgid "This wizard will create recurring accounting entries"
-msgstr "Bu sihirbaz yinelenen muhasebe girişleri oluşturu"
+msgstr "Bu sihirbaz yinelenen muhasebe girişleri oluşturacaktır"
 
 #. module: account
 #: code:addons/account/account.py:1329
@@ -3137,7 +3137,7 @@ msgstr "August"
 #. module: account
 #: model:process.transition,note:account.process_transition_paymentreconcile0
 msgid "Payment entries are the second input of the reconciliation."
-msgstr "Payment entries are the second input of the reconciliation."
+msgstr "Ödeme girişleri, uzlaşmanın ikinci girişleridir."
 
 #. module: account
 #: field:accounting.report,debit_credit:0
@@ -4613,7 +4613,7 @@ msgstr "Görünüş Modu"
 #. module: account
 #: model:process.node,note:account.process_node_importinvoice0
 msgid "Statement from invoice or payment"
-msgstr "Fatura yada ödeme hesapözeti"
+msgstr "Fatura ya da ödeme hesapözeti"
 
 #. module: account
 #: help:product.template,property_account_expense:0
@@ -4770,7 +4770,7 @@ msgstr "Günlük Raporları için Çözümsel Maliyet Hesabı Defteri"
 #: model:ir.actions.act_window,name:account.action_model_form
 #: model:ir.ui.menu,name:account.menu_action_model_form
 msgid "Recurring Models"
-msgstr "Recurring Models"
+msgstr "Yineleme Modelleri"
 
 #. module: account
 #: code:addons/account/account_move_line.py:1266
@@ -5359,7 +5359,7 @@ msgstr "Python Code (reverse)"
 #: model:ir.actions.act_window,name:account.action_payment_term_form
 #: model:ir.ui.menu,name:account.menu_action_payment_term_form
 msgid "Payment Terms"
-msgstr "Ödeme Vadeleri"
+msgstr "Ödeme Biçimleri"
 
 #. module: account
 #: help:account.chart.template,complete_tax_set:0
@@ -5856,7 +5856,7 @@ msgid ""
 "The sequence field is used to order the payment term lines from the lowest "
 "sequences to the higher ones"
 msgstr ""
-"Sıra alanı, ödeme koşulu satırlarını düşükten yükseğe doğru sıralamak için "
+"Sıra alanı, ödeme biçimi satırlarını azdan çoğa doğru sıralamak için "
 "kullanılır"
 
 #. module: account
@@ -6135,7 +6135,7 @@ msgid ""
 "that you should have your last line with the type 'Balance' to ensure that "
 "the whole amount will be threated."
 msgstr ""
-"Brada bu ödeme koşulu öğesiyle ilintili doğrulama türünü seçin. Tüm tutarın "
+"Burada bu ödeme biçimi öğesiyle ilintili doğrulama türünü seçin. Tüm tutarın "
 "ele alınmasından emin olmak için son öğenin 'Bakiye' türünde olması "
 "gerektiğini unutmayın."
 
@@ -6350,7 +6350,7 @@ msgstr "Çözümsel Giriş"
 #: view:res.company:0
 #: field:res.company,overdue_msg:0
 msgid "Overdue Payments Message"
-msgstr "Vadesi Geçmiş Ödeme için Mesaj"
+msgstr "Vadesi Geçmiş Ödeme Mesajı"
 
 #. module: account
 #: model:ir.actions.act_window,help:account.action_account_moves_all_a
@@ -6413,7 +6413,7 @@ msgstr "Müşteri Vergileri"
 #. module: account
 #: help:account.model,name:0
 msgid "This is a model for recurring accounting entries"
-msgstr "Yinelenen muhasebe girişleri için bir modeldir"
+msgstr "Bu, yinelenen muhasebe girişleri için bir modeldir"
 
 #. module: account
 #: field:wizard.multi.charts.accounts,sale_tax_rate:0
@@ -6812,8 +6812,7 @@ msgid ""
 "Percentages for Payment Term Line must be between 0 and 1, Example: 0.02 for "
 "2% "
 msgstr ""
-"Percentages for Payment Term Line must be between 0 and 1, Example: 0.02 for "
-"2% "
+"Ödeme Biçimi Yüzde Satırı 0 ile 1 arasında olmalı, Örneğin: %2 için 0,02 "
 
 #. module: account
 #: field:account.installer,has_default_company:0
@@ -7268,7 +7267,7 @@ msgstr "General Ledger"
 #. module: account
 #: model:process.transition,note:account.process_transition_paymentorderbank0
 msgid "The payment order is sent to the bank."
-msgstr "The payment order is sent to the bank."
+msgstr "Ödeme emri bankaya gönderildi."
 
 #. module: account
 #: view:account.balance.report:0
@@ -7719,7 +7718,7 @@ msgstr "Aynı firmaya ait dönemleri seçmelisiniz"
 #. module: account
 #: model:ir.actions.act_window,name:account.action_review_payment_terms_installer
 msgid "Review your Payment Terms"
-msgstr "Ödeme Koşullarınızı gözden geçirin"
+msgstr "Ödeme Biçimlerinizi gözden geçirin"
 
 #. module: account
 #: field:account.fiscalyear.close,report_name:0
@@ -8031,7 +8030,7 @@ msgid ""
 "terms for each letter. Each customer or supplier can be assigned to one of "
 "these payment terms."
 msgstr ""
-"Ödeme koşulları, bir ya da daha çok ödemede, bir müşteri ya da tedarikçi "
+"Ödeme biçimleri, bir ya da daha çok ödemede, bir müşteri ya da tedarikçi "
 "faturasının ödeme koşullarını tanımlar. Dönemsel müşteri anımsatıcıları, her "
 "mektupta ödeme koşullarını kullanır. Her müşteri ya da tedarikçi bu ödeme "
 "koşullarından birine atanmıştır."
@@ -8137,7 +8136,7 @@ msgstr "UserError"
 #. module: account
 #: model:process.node,note:account.process_node_supplierpaymentorder0
 msgid "Payment of invoices"
-msgstr "Payment of invoices"
+msgstr "Faturaların Ödenmesi"
 
 #. module: account
 #: field:account.bank.statement.line,sequence:0
@@ -8789,7 +8788,7 @@ msgstr "Hesap Planı"
 #: model:process.node,name:account.process_node_paymententries0
 #: model:process.transition,name:account.process_transition_reconcilepaid0
 msgid "Payment"
-msgstr "Payment"
+msgstr "Ödeme"
 
 #. module: account
 #: field:account.bank.statement,balance_end_real:0
@@ -9457,7 +9456,7 @@ msgstr "Information"
 #. module: account
 #: model:process.node,note:account.process_node_bankstatement0
 msgid "Registered payment"
-msgstr "Registered payment"
+msgstr "Kayıtlı ödeme"
 
 #. module: account
 #: view:account.fiscalyear.close.state:0
@@ -9879,7 +9878,7 @@ msgstr "Müşteri ve Tedarikçi Faturaları"
 #: model:process.transition,name:account.process_transition_paymentorderbank0
 #: model:process.transition,name:account.process_transition_paymentreconcile0
 msgid "Payment entries"
-msgstr "Payment entries"
+msgstr "Ödeme girişleri"
 
 #. module: account
 #: selection:account.entries.report,month:0
@@ -10600,7 +10599,7 @@ msgstr "Firma"
 #. module: account
 #: model:ir.ui.menu,name:account.menu_action_subscription_form
 msgid "Define Recurring Entries"
-msgstr "Özyinelenen Giriş Tanımla"
+msgstr "Yinelenen Giriş Tanımla"
 
 #. module: account
 #: field:account.entries.report,date_maturity:0
@@ -10782,7 +10781,7 @@ msgstr "Günlük Girişi Numarası"
 #. module: account
 #: view:account.subscription:0
 msgid "Recurring"
-msgstr "Özyinelenen"
+msgstr "Yinelenen"
 
 #. module: account
 #: code:addons/account/account.py:642
@@ -10808,7 +10807,7 @@ msgstr "Alıcılar Hesabı"
 #. module: account
 #: selection:account.model.line,date_maturity:0
 msgid "Partner Payment Term"
-msgstr "Paydaş Ödeme Koşulu"
+msgstr "Paydaş Ödeme Biçimi"
 
 #. module: account
 #: field:temp.range,name:0
