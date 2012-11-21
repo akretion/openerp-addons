@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-01-11 11:16+0000\n"
-"PO-Revision-Date: 2012-11-16 13:47+0000\n"
+"PO-Revision-Date: 2012-11-20 11:01+0000\n"
 "Last-Translator: Normunds (Alistek) <Unknown>\n"
 "Language-Team: Latvian <lv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-11-17 05:01+0000\n"
-"X-Generator: Launchpad (build 16278)\n"
+"X-Launchpad-Export-Date: 2012-11-21 04:59+0000\n"
+"X-Generator: Launchpad (build 16293)\n"
 
 #. module: sale
 #: view:board.board:0
@@ -180,7 +180,7 @@ msgstr "Piespiedu Nodošana"
 #. module: sale
 #: help:sale.make.invoice,grouped:0
 msgid "Check the box to group the invoices for the same customers"
-msgstr ""
+msgstr "Atzīmēt lauku, lai grupētu rēķinus pa klientiem"
 
 #. module: sale
 #: selection:sale.order,invoice_quantity:0
@@ -315,7 +315,7 @@ msgstr "Konfigurēt"
 #. module: sale
 #: constraint:stock.move:0
 msgid "You try to assign a lot which is not from the same product"
-msgstr ""
+msgstr "Jūs mēģināt piesaistīt lotu no cita produkta"
 
 #. module: sale
 #: code:addons/sale/sale.py:655
@@ -370,7 +370,7 @@ msgstr "Veikt Tikai Piegādi"
 #. module: sale
 #: report:sale.order:0
 msgid "TVA :"
-msgstr ""
+msgstr "PVN:"
 
 #. module: sale
 #: help:sale.order.line,delay:0
@@ -554,7 +554,7 @@ msgstr "Pasūtījuma Rinda"
 #. module: sale
 #: view:sale.config.picking_policy:0
 msgid "Setup your sales workflow and default values."
-msgstr ""
+msgstr "Konfigurēt tirdzniecības darba plūsmu un noklusētās vērtības"
 
 #. module: sale
 #: field:sale.shop,warehouse_id:0
@@ -721,6 +721,8 @@ msgid ""
 "It indicates that the sales order has been delivered. This field is updated "
 "only after the scheduler(s) have been launched."
 msgstr ""
+"Norāda, ka tirdzniecības pasūtījums ir piegādāts. Šis lauks tiek "
+"atjaunināts, kad tiek palaista(-as) plānotā(-ās) darbība(-as)."
 
 #. module: sale
 #: view:sale.report:0
@@ -1003,7 +1005,7 @@ msgstr "Sagādes Veids"
 #: view:sale.config.picking_policy:0
 #: view:sale.installer:0
 msgid "title"
-msgstr ""
+msgstr "nosaukums"
 
 #. module: sale
 #: model:process.node,name:sale.process_node_packinglist0
@@ -1054,7 +1056,7 @@ msgstr "Datums, kurā izveidots pasūtījums."
 #. module: sale
 #: model:ir.model,name:sale.model_stock_move
 msgid "Stock Move"
-msgstr ""
+msgstr "Noliktavas Grāmatojums"
 
 #. module: sale
 #: view:sale.make.invoice:0
@@ -1161,7 +1163,7 @@ msgstr "Pārbaudīt Grāmatvedim."
 #. module: sale
 #: view:sale.report:0
 msgid "Reference UoM"
-msgstr ""
+msgstr "Atsauces Mērv."
 
 #. module: sale
 #: model:ir.model,name:sale.model_sale_order_line_make_invoice
@@ -1218,6 +1220,8 @@ msgstr ""
 msgid ""
 "You can generate invoices based on sales orders or based on shippings."
 msgstr ""
+"Iespējams veidot rēķinus, balstoties uz tirdzniecības pasūtījumiem vai uz "
+"piegādēm."
 
 #. module: sale
 #: model:ir.actions.act_window,name:sale.open_board_sales
@@ -1247,7 +1251,7 @@ msgstr "Pabeigts"
 #. module: sale
 #: model:ir.model,name:sale.model_sale_installer
 msgid "sale.installer"
-msgstr ""
+msgstr "sale.installer"
 
 #. module: sale
 #: model:process.node,name:sale.process_node_invoice0
@@ -1262,6 +1266,8 @@ msgid ""
 "You have to select a customer in the sales form !\n"
 "Please set one customer before choosing a product."
 msgstr ""
+"Tirdzniecības formā jāizvēlas klients!\n"
+"Lūdzu, izvēlieties klientu pirms izvēlaties produktu."
 
 #. module: sale
 #: selection:sale.config.picking_policy,step:0
@@ -1286,7 +1292,7 @@ msgstr "Komplektācijas Noteikumi"
 #. module: sale
 #: model:process.node,note:sale.process_node_deliveryorder0
 msgid "Document of the move to the customer."
-msgstr ""
+msgstr "Piegādes dokuments."
 
 #. module: sale
 #: help:sale.order,amount_untaxed:0
@@ -1383,7 +1389,7 @@ msgstr "Pasūtījums"
 #: code:addons/sale/wizard/sale_make_invoice_advance.py:71
 #, python-format
 msgid "There is no income account defined for this product: \"%s\" (id:%d)"
-msgstr ""
+msgstr "Produktam nav definēts ieņēmumu konts: \"%s\" (id:%d)"
 
 #. module: sale
 #: view:sale.order:0
@@ -1406,6 +1412,8 @@ msgid ""
 "You plan to sell %.2f %s but you only have %.2f %s available !\n"
 "The real stock is %.2f %s. (without reservations)"
 msgstr ""
+"Jūs plānojat pārdot %.2f %s, bet ir pieejams tikai %.2f %s!\n"
+"Reālais skaits noliktavā ir %.2f %s. (bez rezervācijām)"
 
 #. module: sale
 #: view:sale.order:0
@@ -1415,7 +1423,7 @@ msgstr "Stāvokļi"
 #. module: sale
 #: view:sale.config.picking_policy:0
 msgid "res_config_contents"
-msgstr ""
+msgstr "res_config_contents"
 
 #. module: sale
 #: field:sale.order,client_order_ref:0
@@ -1432,7 +1440,7 @@ msgstr "Kopā"
 #: code:addons/sale/sale.py:413
 #, python-format
 msgid "There is no sales journal defined for this company: \"%s\" (id:%d)"
-msgstr ""
+msgstr "Uzņēmumam \"%s\" (id:%d) nav definēts tirdzniecības žurnāls"
 
 #. module: sale
 #: model:process.transition,note:sale.process_transition_deliver0
@@ -1446,7 +1454,7 @@ msgstr ""
 #: code:addons/sale/sale.py:1165
 #, python-format
 msgid "Cannot delete a sales order line which is %s !"
-msgstr ""
+msgstr "Nav iespējams izdzēst tirdzniecības pasūtījuma rindu, kas ir %s!"
 
 #. module: sale
 #: model:ir.actions.act_window,name:sale.action_sale_order_make_invoice
