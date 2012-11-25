@@ -13,7 +13,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-11-24 07:38+0000\n"
+"X-Launchpad-Export-Date: 2012-11-25 06:50+0000\n"
 "X-Generator: Launchpad (build 16293)\n"
 
 #. module: account
@@ -11559,20 +11559,6 @@ msgstr ""
 
 #~ msgid "Invalid BBA Structured Communication !"
 #~ msgstr "Ongeldige BBA gestructureerde communicatie!"
-
-#, python-format
-#~ msgid ""
-#~ "This account does not allow reconciliation! You should update the account "
-#~ "definition to change this."
-#~ msgstr ""
-#~ "Dit account staat afletteren niet toe! U dient de rekeningdefinitie te "
-#~ "veranderen om dit mogelijk te maken."
-
-#~ msgid "The description must be unique per company!"
-#~ msgstr "De omschrijving moet uniek zijn per bedrijf!"
-
-#~ msgid "Entry Date"
-#~ msgstr "Invoerdatum"
 
 #~ msgid ""
 #~ "\n"
