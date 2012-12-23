@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-12-21 17:04+0000\n"
-"PO-Revision-Date: 2012-12-15 20:16+0000\n"
+"PO-Revision-Date: 2012-12-22 15:50+0000\n"
 "Last-Translator: Grzegorz Grzelak (OpenGLOBE.pl) <grzegorz@openglobe.pl>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-12-22 05:19+0000\n"
+"X-Launchpad-Export-Date: 2012-12-23 04:40+0000\n"
 "X-Generator: Launchpad (build 16378)\n"
 
 #. module: purchase
@@ -111,7 +111,7 @@ msgstr ""
 #: code:addons/purchase/purchase.py:1024
 #, python-format
 msgid "Configuration Error!"
-msgstr ""
+msgstr "Błąd konfiguracji!"
 
 #. module: purchase
 #: code:addons/purchase/purchase.py:587
@@ -134,7 +134,7 @@ msgstr "Zakup - cena standardowa"
 #: code:addons/purchase/purchase.py:1011
 #, python-format
 msgid "No supplier defined for this product !"
-msgstr ""
+msgstr "Nie zdefiniowano dostawcy dla tego produktu!"
 
 #. module: purchase
 #: model:ir.actions.act_window,help:purchase.action_picking_tree4_picking_to_invoice
@@ -486,7 +486,7 @@ msgstr "Zaplanowana data"
 #. module: purchase
 #: field:purchase.order,currency_id:0
 msgid "Currency"
-msgstr ""
+msgstr "Waluta"
 
 #. module: purchase
 #: field:purchase.order,journal_id:0
@@ -523,7 +523,7 @@ msgstr "Produkty przychodzące"
 #. module: purchase
 #: view:purchase.order:0
 msgid "Request for Quotation "
-msgstr ""
+msgstr "Zapytanie ofertowe "
 
 #. module: purchase
 #: help:purchase.order,partner_ref:0
@@ -532,6 +532,9 @@ msgid ""
 "used to do the matching when you receive the products as this reference is "
 "usually written on the delivery order sent by your supplier."
 msgstr ""
+"Odnośnik zamówienia sprzedaży lub oferty twojego dostawcy. Stosowane głównie "
+"do kojarzenia z nimi przyjęć, bo w dokumentach wysyłki dostawcy ten numer "
+"powinien być podany."
 
 #. module: purchase
 #: view:purchase.config.settings:0
@@ -559,7 +562,7 @@ msgstr ""
 #. module: purchase
 #: model:mail.message.subtype,name:purchase.mt_rfq_approved
 msgid "RFQ Approved"
-msgstr ""
+msgstr "Zapytanie ofertowe aprobowane."
 
 #. module: purchase
 #: view:purchase.config.settings:0
@@ -583,7 +586,7 @@ msgstr ""
 #. module: purchase
 #: model:mail.message.subtype,name:purchase.mt_rfq_confirmed
 msgid "RFQ Confirmed"
-msgstr ""
+msgstr "Zapytanie ofertowe potwierdzone"
 
 #. module: purchase
 #: view:purchase.order:0
@@ -829,7 +832,7 @@ msgstr "Kwota podatku"
 #. module: purchase
 #: field:purchase.order,shipped_rate:0
 msgid "Received Ratio"
-msgstr ""
+msgstr "Współczynnik pobranych"
 
 #. module: purchase
 #: selection:purchase.report,month:0
@@ -938,7 +941,7 @@ msgstr "Stosuj wiele kont analitycznych na zamówieniu"
 #. module: purchase
 #: view:product.product:0
 msgid "will be created in order to subcontract the job"
-msgstr ""
+msgstr "będzie utworzone jako podwykonanie zadania"
 
 #. module: purchase
 #: model:ir.actions.act_window,name:purchase.action_purchase_line_product_tree
@@ -1168,7 +1171,7 @@ msgstr ""
 #. module: purchase
 #: view:purchase.order.line_invoice:0
 msgid "Select an Open Sales Order"
-msgstr ""
+msgstr "Wybierz otwarte zamówienia sprzedaży"
 
 #. module: purchase
 #: model:ir.ui.menu,name:purchase.menu_purchase_unit_measure_purchase
@@ -1789,7 +1792,7 @@ msgstr "Otwórz menu Zakupów"
 #: code:addons/purchase/purchase.py:1028
 #, python-format
 msgid "No address defined for the supplier"
-msgstr ""
+msgstr "Nie zdefiniowano adresu dla dostawcy"
 
 #. module: purchase
 #: field:purchase.order,company_id:0
@@ -2190,7 +2193,7 @@ msgstr "Na podstawie przyjęć"
 #: code:addons/purchase/purchase.py:1018
 #, python-format
 msgid "No default supplier defined for this product"
-msgstr ""
+msgstr "Brak dostawcy dla tego produktu."
 
 #. module: purchase
 #: view:purchase.report:0
@@ -2297,7 +2300,7 @@ msgstr "Wersje cennika"
 #. module: purchase
 #: field:purchase.order,payment_term_id:0
 msgid "Payment Term"
-msgstr ""
+msgstr "Warunki płatności"
 
 #. module: purchase
 #: view:purchase.order:0
