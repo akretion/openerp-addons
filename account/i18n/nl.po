@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-10-23 11:48+0000\n"
-"PO-Revision-Date: 2012-12-21 16:50+0000\n"
+"PO-Revision-Date: 2012-12-22 20:20+0000\n"
 "Last-Translator: Erwin van der Ploeg (Endian Solutions) <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-12-22 06:35+0000\n"
+"X-Launchpad-Export-Date: 2012-12-23 04:56+0000\n"
 "X-Generator: Launchpad (build 16378)\n"
 
 #. module: account
@@ -1867,7 +1867,7 @@ msgstr "."
 #. module: account
 #: view:account.analytic.cost.ledger.journal.report:0
 msgid "and Journals"
-msgstr "en dagboeken"
+msgstr "Dagboeken"
 
 #. module: account
 #: field:account.journal,groups_id:0
@@ -9455,7 +9455,7 @@ msgstr "Verkopen dit jaar per type"
 #. module: account
 #: view:account.analytic.cost.ledger.journal.report:0
 msgid "Cost Ledger for period"
-msgstr "Kosten grootboek voor periode"
+msgstr "Kostenplaats kosten voor periode"
 
 #. module: account
 #: help:account.tax,child_depend:0
