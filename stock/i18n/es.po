@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-12-21 17:04+0000\n"
-"PO-Revision-Date: 2012-12-20 03:45+0000\n"
+"PO-Revision-Date: 2012-12-22 11:40+0000\n"
 "Last-Translator: Pedro Manuel Baeza <pedro.baeza@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-12-22 05:15+0000\n"
+"X-Launchpad-Export-Date: 2012-12-23 04:40+0000\n"
 "X-Generator: Launchpad (build 16378)\n"
 
 #~ msgid "Stock Management"
@@ -95,7 +95,7 @@ msgstr "Trazabilidad hacia arriba"
 #: field:stock.picking.in,date_done:0
 #: field:stock.picking.out,date_done:0
 msgid "Date of Transfer"
-msgstr ""
+msgstr "Fecha de transferencia"
 
 #. module: stock
 #: field:product.product,track_outgoing:0
@@ -1190,6 +1190,7 @@ msgstr "Revertir transferencia"
 #: field:stock.config.settings,group_uos:0
 msgid "Invoice products in a different unit of measure than the sales order"
 msgstr ""
+"Facturar productos en una unidad de medida diferente a la del pedido de venta"
 
 #. module: stock
 #: help:stock.location,active:0
@@ -2978,7 +2979,7 @@ msgstr ""
 #. module: stock
 #: report:stock.inventory.move:0
 msgid "Manual Quantity"
-msgstr ""
+msgstr "Cantidad manual"
 
 #. module: stock
 #: view:product.product:0
@@ -3066,7 +3067,7 @@ msgstr "Diario de inventario"
 #: code:addons/stock/wizard/stock_return_picking.py:171
 #, python-format
 msgid "%s-%s-return"
-msgstr ""
+msgstr "%s-%s-devolver"
 
 #. module: stock
 #: code:addons/stock/wizard/stock_change_product_qty.py:82
@@ -3535,7 +3536,7 @@ msgstr "No urgente"
 #. module: stock
 #: view:stock.move:0
 msgid "Scheduled"
-msgstr ""
+msgstr "Planificado"
 
 #. module: stock
 #: model:ir.actions.act_window,name:stock.action_warehouse_form
@@ -4328,7 +4329,7 @@ msgstr "Categoría de producto"
 #. module: stock
 #: view:stock.move:0
 msgid "Serial  Number"
-msgstr ""
+msgstr "Nº de serie"
 
 #. module: stock
 #: view:stock.invoice.onshipping:0
@@ -4653,7 +4654,7 @@ msgstr "¿Desea fusionar estos inventarios?"
 #. module: stock
 #: view:stock.picking.out:0
 msgid "Date of Delivery"
-msgstr ""
+msgstr "Fecha de entrega"
 
 #. module: stock
 #: field:stock.location,posy:0
@@ -5079,7 +5080,7 @@ msgstr ""
 #. module: stock
 #: view:stock.picking.in:0
 msgid "Date of Reception"
-msgstr ""
+msgstr "Fecha de recepción"
 
 #. module: stock
 #: help:stock.config.settings,group_stock_multiple_locations:0
