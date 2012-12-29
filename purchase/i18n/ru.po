@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-12-21 17:04+0000\n"
-"PO-Revision-Date: 2012-11-29 13:12+0000\n"
+"PO-Revision-Date: 2012-12-28 14:06+0000\n"
 "Last-Translator: Chertykov Denis <chertykov@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-12-22 05:19+0000\n"
+"X-Launchpad-Export-Date: 2012-12-29 05:01+0000\n"
 "X-Generator: Launchpad (build 16378)\n"
 
 #. module: purchase
@@ -105,7 +105,7 @@ msgstr ""
 #: code:addons/purchase/purchase.py:1024
 #, python-format
 msgid "Configuration Error!"
-msgstr ""
+msgstr "Ошибка конфигурации!"
 
 #. module: purchase
 #: code:addons/purchase/purchase.py:587
@@ -130,7 +130,7 @@ msgstr "Стандартная цена закупки"
 #: code:addons/purchase/purchase.py:1011
 #, python-format
 msgid "No supplier defined for this product !"
-msgstr ""
+msgstr "Не задан поставщик для этого товара!"
 
 #. module: purchase
 #: model:ir.actions.act_window,help:purchase.action_picking_tree4_picking_to_invoice
@@ -442,7 +442,7 @@ msgstr "Запланированная дата"
 #. module: purchase
 #: field:purchase.order,currency_id:0
 msgid "Currency"
-msgstr ""
+msgstr "Валюта"
 
 #. module: purchase
 #: field:purchase.order,journal_id:0
@@ -479,7 +479,7 @@ msgstr "Входящие товары"
 #. module: purchase
 #: view:purchase.order:0
 msgid "Request for Quotation "
-msgstr ""
+msgstr "Запрос цен "
 
 #. module: purchase
 #: help:purchase.order,partner_ref:0
@@ -515,7 +515,7 @@ msgstr ""
 #. module: purchase
 #: model:mail.message.subtype,name:purchase.mt_rfq_approved
 msgid "RFQ Approved"
-msgstr ""
+msgstr "ЗЦ утвержден"
 
 #. module: purchase
 #: view:purchase.config.settings:0
@@ -539,7 +539,7 @@ msgstr ""
 #. module: purchase
 #: model:mail.message.subtype,name:purchase.mt_rfq_confirmed
 msgid "RFQ Confirmed"
-msgstr ""
+msgstr "ЗЦ подтвержден"
 
 #. module: purchase
 #: view:purchase.order:0
@@ -1183,6 +1183,8 @@ msgid ""
 "Reference of the document that generated this purchase order request; a "
 "sales order or an internal procurement request."
 msgstr ""
+"Ссылка на документ, который создал этот заказ закупки,заказ продажи или "
+"внутренний запрос снабжения."
 
 #. module: purchase
 #: view:purchase.order.line:0
@@ -1416,7 +1418,7 @@ msgstr "ЗЗ: %s"
 #. module: purchase
 #: view:purchase.order:0
 msgid "Send by EMail"
-msgstr ""
+msgstr "Отправить по эл. почте"
 
 #. module: purchase
 #: code:addons/purchase/purchase.py:515
@@ -1703,7 +1705,7 @@ msgstr "Открыть меню закупок"
 #: code:addons/purchase/purchase.py:1028
 #, python-format
 msgid "No address defined for the supplier"
-msgstr ""
+msgstr "Нет адреса поставщика"
 
 #. module: purchase
 #: field:purchase.order,company_id:0
@@ -1815,7 +1817,7 @@ msgstr "№ заказа закупки"
 #. module: purchase
 #: model:ir.model,name:purchase.model_mail_compose_message
 msgid "Email composition wizard"
-msgstr ""
+msgstr "Мастер составления эл. почты"
 
 #. module: purchase
 #: report:purchase.quotation:0
@@ -2103,7 +2105,7 @@ msgstr "На основании поступающих грузов"
 #: code:addons/purchase/purchase.py:1018
 #, python-format
 msgid "No default supplier defined for this product"
-msgstr ""
+msgstr "Для товара не определен поставщик по умолчанию"
 
 #. module: purchase
 #: view:purchase.report:0
@@ -2210,7 +2212,7 @@ msgstr "Версии прайс-листов"
 #. module: purchase
 #: field:purchase.order,payment_term_id:0
 msgid "Payment Term"
-msgstr ""
+msgstr "Условие оплаты"
 
 #. module: purchase
 #: view:purchase.order:0
