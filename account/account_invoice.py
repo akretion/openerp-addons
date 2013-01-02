@@ -18,9 +18,9 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
+ 
 import time
-from lxml import etree
+from lxml import etree 
 import decimal_precision as dp
 
 import netsvc
@@ -1335,7 +1335,11 @@ class account_invoice_line(osv.osv):
             res['arch'] = etree.tostring(doc)
         return res
 
-    def product_id_change(self, cr, uid, ids, product, uom, qty=0, name='', type='out_invoice', partner_id=False, fposition_id=False, price_unit=False, address_invoice_id=False, currency_id=False, context=None, company_id=None):
+    def product_id_change(
+        self, cr, uid, ids, product, uom, qty=0, name='', type='out_invoice',
+        partner_id=False, fposition_id=False, price_unit=False,
+        address_invoice_id=False, currency_id=False, context=None,
+        company_id=None):
         if context is None:
             context = {}
         company_id = company_id if company_id != None else context.get('company_id',False)
@@ -1348,6 +1352,7 @@ class account_invoice_line(osv.osv):
                 return {'value': {}, 'domain':{'product_uom':[]}}
             else:
                 return {'value': {'price_unit': 0.0}, 'domain':{'product_uom':[]}}
+
         part = self.pool.get('res.partner').browse(cr, uid, partner_id, context=context)
         fpos_obj = self.pool.get('account.fiscal.position')
         fpos = fposition_id and fpos_obj.browse(cr, uid, fposition_id, context=context) or False
@@ -1375,33 +1380,34 @@ class account_invoice_line(osv.osv):
             taxes = res.supplier_taxes_id and res.supplier_taxes_id or (a and self.pool.get('account.account').browse(cr, uid, a, context=context).tax_ids or False)
         tax_id = fpos_obj.map_tax(cr, uid, fpos, taxes)
 
+        currency_obj = self.pool.get('res.currency')
+        obj_price_type = self.pool.get('product.price.type')
+
         if type in ('in_invoice', 'in_refund'):
-            result.update( {'price_unit': price_unit or res.standard_price,'invoice_line_tax_id': tax_id} )
+            pricelist_id = part.property_product_pricelist_purchase.id
+            field = 'list_price'
         else:
-            result.update({'price_unit': res.list_price, 'invoice_line_tax_id': tax_id})
+            pricelist_id = part.property_product_pricelist.id
+            field = 'standard_price'
+        price, warning = self._invoice_price_get(
+            cr, uid, pricelist_id, product, qty, partner_id, uom,
+            currency_obj, obj_price_type, res, price_unit,
+            currency_id, price=0, field=field)
+
+        result.update(
+            {'price_unit': price,
+             'invoice_line_tax_id': tax_id})
         result['name'] = res.partner_ref
 
         domain = {}
         result['uos_id'] = res.uom_id.id or uom or False
         result['note'] = res.description
-        if result['uos_id']:
+        if  result['uos_id']:
             res2 = res.uom_id.category_id.id
             if res2:
                 domain = {'uos_id':[('category_id','=',res2 )]}
 
-        res_final = {'value':result, 'domain':domain}
-
-        if not company_id or not currency_id:
-            return res_final
-
-        company = self.pool.get('res.company').browse(cr, uid, company_id, context=context)
-        currency = self.pool.get('res.currency').browse(cr, uid, currency_id, context=context)
-
-        if company.currency_id.id != currency.id:
-            if type in ('in_invoice', 'in_refund'):
-                res_final['value']['price_unit'] = res.standard_price
-            new_price = res_final['value']['price_unit'] * currency.rate
-            res_final['value']['price_unit'] = new_price
+        res_final = {'value': result, 'domain': domain, 'warning': warning}
 
         if uom:
             uom = self.pool.get('product.uom').browse(cr, uid, uom, context=context)
@@ -1409,6 +1415,48 @@ class account_invoice_line(osv.osv):
                 new_price = res_final['value']['price_unit'] * uom.factor_inv
                 res_final['value']['price_unit'] = new_price
         return res_final
+
+    def _invoice_price_get(
+        self, cr, uid, pricelist_id, product, qty, partner_id, uom,
+        currency_obj, obj_price_type, res, price_unit, currency_id, price=0,
+        field='standard_price', warning={}):
+        if  pricelist_id:
+            pricelist_model = self.pool.get('product.pricelist')
+            price = pricelist_model.price_get(
+                cr, uid, [pricelist_id], product, qty or 1.0, partner_id,
+                {'uom': uom,
+                 'date': time.strftime('%Y-%m-%d')})[pricelist_id]
+            if  price is False:
+                warning = {
+                   'title': 'No valid pricelist line found !',
+                   'message':
+                    "Couldn't find a pricelist line matching this product and"
+                    " quantity.\n"
+                    "You have to change either the product, the quantity or"
+                    " the pricelist."
+                }
+            else:
+                currency_pricelist = pricelist_model.browse(
+                    cr, uid, pricelist_id)
+                if  currency_pricelist.currency_id.id != currency_id:
+                    price = currency_obj.compute(
+                        cr, uid, currency_pricelist.currency_id.id,
+                        currency_id, price, round=True, context={})
+        else:
+            obj_price_id = obj_price_type.search(
+                cr, uid, [('field', '=', field)])
+            obj_price_currency = obj_price_type.browse(
+                cr, uid, obj_price_id[0])
+            price = price_unit or eval('res.' + field)
+            if obj_price_currency.currency_id.id != currency_id:
+                price = currency_obj.compute(
+                    cr, uid, obj_price_currency.currency_id.id, currency_id,
+                    price, round=True, context={})
+            if uom:
+                uom = self.pool.get('product.uom').browse(cr, uid, uom)
+                if res.uom_id.category_id.id == uom.category_id.id:
+                    price = price * uom.factor_inv
+        return price, warning
 
     def uos_id_change(self, cr, uid, ids, product, uom, qty=0, name='', type='out_invoice', partner_id=False, fposition_id=False, price_unit=False, address_invoice_id=False, currency_id=False, context=None, company_id=None):
         if context is None:
