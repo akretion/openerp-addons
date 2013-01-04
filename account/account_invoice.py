@@ -18,9 +18,9 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
- 
+
 import time
-from lxml import etree 
+from lxml import etree
 import decimal_precision as dp
 
 import netsvc
@@ -1413,7 +1413,7 @@ class account_invoice_line(osv.osv):
         partner_model = self.pool.get('res.partner')
         partner_obj = partner_model.browse(
             cr, uid, partner_id, context=context)
-        assert partner_obj, _('No partner found for id %d' % partner_id)
+        assert partner_obj, _('No partner found for id %d') % partner_id
         if invoice_type in ('in_invoice', 'in_refund'):
             field = 'list_price'
             pricelist_property = 'property_product_pricelist_purchase'
@@ -1452,9 +1452,9 @@ class account_invoice_line(osv.osv):
             product_model = self.pool.get('product.product')
             product_obj = product_model.browse(
                 cr, uid, product_id, context=context)
-            assert product_obj, _('No product found for id %d' % product_id)
+            assert product_obj, _('No product found for id %d') % product_id
             assert field in product_obj, _(
-                'Field %s not found in product' % field)
+                'Field %s not found in product') % field
             price_unit = product_obj[field]
             # If price_unit not taken from price-list, we still have to
             # take unit of measurement into account
