@@ -685,8 +685,9 @@ class stock_picking(osv.osv):
         if ('name' not in default) or (picking_obj.name=='/'):
             seq_obj_name =  'stock.picking.' + picking_obj.type
             default['name'] = self.pool.get('ir.sequence').get(cr, uid, seq_obj_name)
-            default['origin'] = ''
             default['backorder_id'] = False
+        if 'origin' not in default:
+            default['origin'] = ''
         res=super(stock_picking, self).copy(cr, uid, id, default, context)
         if res:
             picking_obj = self.browse(cr, uid, res, context=context)
