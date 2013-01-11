@@ -255,7 +255,7 @@ class mail_message(osv.osv):
             context={}
         fetchmail_server_id = context.get('fetchmail_server_id')
         if fetchmail_server_id:
-            values['fetchmail_server_id'] = server_id
+            values['fetchmail_server_id'] = fetchmail_server_id
         res = super(mail_message,self).write(cr, uid, ids, values, context=context)
         return res
 
