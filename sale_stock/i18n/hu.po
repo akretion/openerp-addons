@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-12-21 17:06+0000\n"
-"PO-Revision-Date: 2013-01-09 01:01+0000\n"
+"PO-Revision-Date: 2013-01-10 12:41+0000\n"
 "Last-Translator: krnkris <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-01-10 04:46+0000\n"
+"X-Launchpad-Export-Date: 2013-01-11 04:36+0000\n"
 "X-Generator: Launchpad (build 16412)\n"
 
 #. module: sale_stock
@@ -56,6 +56,11 @@ msgid ""
 "Here is a proposition of quantities according to the packaging:\n"
 "EAN: %s Quantity: %s Type of ul: %s"
 msgstr ""
+"Kiválasztott egy mennyiséget ezekben a mértékegységekben %d.\n"
+"De ez nem kompatibilis a kiválasztott csomagolással.\n"
+"Itt van egy javaslat a csomagolás szerinti mennyiségre:\n"
+"Globális szabványalapú azonosító (EAN): %s Mennyiség: %s Csomagolás típusa: "
+"%s"
 
 #. module: sale_stock
 #: model:process.node,note:sale_stock.process_node_packinglist0
@@ -431,6 +436,14 @@ msgid ""
 "lines.\n"
 "                This installs the modules project_timesheet and project_mrp."
 msgstr ""
+"Lehetővé teszi a Terv szervezése alatt álló bevitt feladatok átmozgatását "
+"egy\n"
+"                kiválasztott felhasználó és kiválasztott dátum időkimutatás "
+"sor tételeibe, ennek értelmében  bármilyen módon létrehozhat, szerkeszthet "
+"és törölhet \n"
+"                és automatikusan létrehoz terv feladatokat a beszerzés "
+"soraiból.\n"
+"                Ez a project_timesheet és project_mrp modult telepíti."
 
 #. module: sale_stock
 #: help:sale.config.settings,group_sale_delivery_address:0
@@ -438,6 +451,8 @@ msgid ""
 "Allows you to specify different delivery and invoice addresses on a sales "
 "order."
 msgstr ""
+"Lehetővé teszi különböző szállítási és számlázási cím meghatározását a "
+"megrendelésekhez."
 
 #. module: sale_stock
 #: model:process.node,note:sale_stock.process_node_saleprocurement0
@@ -457,7 +472,7 @@ msgstr "Hozzárendelés"
 #: code:addons/sale_stock/sale_stock.py:592
 #, python-format
 msgid "Not enough stock ! : "
-msgstr ""
+msgstr "Nincs elég raktárkészlet!: "
 
 #. module: sale_stock
 #: help:sale.order.line,delay:0
@@ -465,6 +480,8 @@ msgid ""
 "Number of days between the order confirmation and the shipping of the "
 "products to the customer"
 msgstr ""
+"A megrendelése visszaigazolás és a termék megrendelőhöz való kiszállítása "
+"közti napok száma."
 
 #. module: sale_stock
 #: help:sale.config.settings,default_picking_policy:0
@@ -473,11 +490,14 @@ msgid ""
 "instead of delivering each product when it is available. This may have an "
 "impact on the shipping price."
 msgstr ""
+"A megrendelések alapértelmezetten az összes termék egyszerre történő "
+"kiszállítására van beállítva, nem pedig az egyes termékek elérhetőségétől "
+"függően. Ez befolyással lehet a szállítási árra."
 
 #. module: sale_stock
 #: selection:sale.config.settings,default_order_policy:0
 msgid "Invoice based on sales orders"
-msgstr ""
+msgstr "Megrendeléseken alapuló számla"
 
 #. module: sale_stock
 #: model:process.node,name:sale_stock.process_node_invoiceafterdelivery0
@@ -498,6 +518,9 @@ msgid ""
 "In order to delete a confirmed sales order, you must cancel it.\n"
 "To do so, you must first cancel related picking for delivery orders."
 msgstr ""
+"Egy visszaigazolt megrendelés törléséhez, először vissza kell azt vonni.\n"
+"Ehhez, először az ide tartozó megrendelési kiválogatási listákat kell "
+"törölni."
 
 #. module: sale_stock
 #: field:sale.order.line,number_packages:0
@@ -517,7 +540,7 @@ msgstr "Számla készítése"
 #. module: sale_stock
 #: field:sale.config.settings,task_work:0
 msgid "Prepare invoices based on task's activities"
-msgstr ""
+msgstr "Számlák készítése a feladat tevékenységek alapján"
 
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_sale_advance_payment_inv
@@ -547,7 +570,7 @@ msgstr "Nemzetközi Kereskedelmi Feltételek"
 #: code:addons/sale_stock/sale_stock.py:496
 #, python-format
 msgid "Cannot cancel sales order line!"
-msgstr ""
+msgstr "A megrendelés sorát nem tudja visszavonni!"
 
 #. module: sale_stock
 #: model:process.transition.action,name:sale_stock.process_transition_action_cancelassignation0
@@ -562,7 +585,7 @@ msgstr "A kiszálított vagy a megrendelt mennyiség alapján."
 #. module: sale_stock
 #: selection:sale.order,picking_policy:0
 msgid "Deliver all products at once"
-msgstr ""
+msgstr "Minden termék egyszerre történő szállítása"
 
 #. module: sale_stock
 #: field:sale.order,picking_ids:0
@@ -572,7 +595,7 @@ msgstr "Kapcsolódó kiszedések"
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_sale_config_settings
 msgid "sale.config.settings"
-msgstr ""
+msgstr "sale.config.settings"
 
 #. module: sale_stock
 #: help:sale.order,picking_ids:0
@@ -580,6 +603,8 @@ msgid ""
 "This is a list of delivery orders that has been generated for this sales "
 "order."
 msgstr ""
+"Ez az ehhez a megrendeléshez létrehozott kiszállítási Kiszolgáltatási jegyek "
+"listája."
 
 #. module: sale_stock
 #: model:process.node,name:sale_stock.process_node_saleorderprocurement0
@@ -610,12 +635,12 @@ msgstr ""
 #. module: sale_stock
 #: view:sale.order:0
 msgid "Recreate Delivery Order"
-msgstr ""
+msgstr "Kiszállítási Kiszolgáltatási jegy létrehozása"
 
 #. module: sale_stock
 #: help:sale.config.settings,group_multiple_shops:0
 msgid "This allows to configure and use multiple shops."
-msgstr ""
+msgstr "Ez lehetővé teszi a többes eladóhelyek beállítását."
 
 #. module: sale_stock
 #: field:sale.order,picked_rate:0
@@ -625,7 +650,7 @@ msgstr "Kiszedve"
 #. module: sale_stock
 #: selection:sale.order,picking_policy:0
 msgid "Deliver each product when available"
-msgstr ""
+msgstr "Mindegyik terméket akkor szállítsa, ha azok elérhetőek"
 
 #. module: sale_stock
 #: model:process.transition,name:sale_stock.process_transition_packing0
