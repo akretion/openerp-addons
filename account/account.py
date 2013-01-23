@@ -29,6 +29,7 @@ import pooler
 from osv import fields, osv
 import decimal_precision as dp
 from tools.translate import _
+from openerp.tools.float_utils import float_round
 
 def check_cycle(self, cr, uid, ids, context=None):
     """ climbs the ``self._table.parent_id`` chains for 100 levels or
@@ -2091,7 +2092,7 @@ class account_tax(osv.osv):
         tax_compute_precision = precision
         if taxes and taxes[0].company_id.tax_calculation_rounding_method == 'round_globally':
             tax_compute_precision += 5
-        totalin = totalex = round(price_unit * quantity, precision)
+        totalin = totalex = float_round(price_unit * quantity, precision)
         tin = []
         tex = []
         for tax in taxes:
