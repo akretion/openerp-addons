@@ -2079,8 +2079,7 @@ class account_tax(osv.osv):
                 'taxes': []                  # List of taxes, see compute for the format
             }
         """
-        if  not context:
-            context = {}
+
         # By default, for each tax, tax amount will first be computed
         # and rounded at the 'Account' decimal precision for each
         # PO/SO/invoice line and then these rounded amounts will be
@@ -2092,13 +2091,10 @@ class account_tax(osv.osv):
         # rounding after the sum of the tax amounts of each line
         precision = self.pool.get('decimal.precision').precision_get(cr, uid, 'Account')
         tax_compute_precision = precision
-        rounding_method = 'round_per_line'
-        if  'tax_calculation_rounding_method' in context:
-            rounding_method = context['tax_calculation_rounding_method']
-        else:
-            if  taxes and taxes[0].company_id:
-                rounding_method = (
-                    taxes[0].company_id.tax_calculation_rounding_method)
+        rounding_method = (
+            (context and context.get('tax_calculation_rounding_method'))
+            (taxes and taxes[0].company_id.tax_calculation_rounding_method)
+            or 'round_per_line')
         if  rounding_method == 'round_globally':
             tax_compute_precision += 5
         totalin = totalex = round(price_unit * quantity, precision)
