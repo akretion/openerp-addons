@@ -358,7 +358,7 @@ class mail_thread(osv.osv):
             match = tools.reference_re.search(references)
             if match: res_id = match.group(1)
         if not res_id:
-            match = tools.res_re.search(msg['subject'])
+            match = tools.res_re.search(msg.get('subject') or '')
             if match: res_id = match.group(1)
         if res_id:
             res_id = int(res_id)
