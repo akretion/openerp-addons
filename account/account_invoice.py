@@ -1306,7 +1306,7 @@ class account_invoice_line(osv.osv):
         cur_obj = self.pool.get('res.currency')
         local_context = {}
         for line in self.browse(cr, uid, ids):
-            price = line.price_unit * (1 - (line.discount or 0.0) / 100.0)
+            price = line.price_unit * (1-(line.discount or 0.0)/100.0)
             local_context['tax_calculation_rounding_method'] = (
                     line.invoice_id.tax_calculation_rounding_method)
             taxes = tax_obj.compute_all(
@@ -1486,19 +1486,20 @@ class account_invoice_line(osv.osv):
         inv = self.pool.get('account.invoice').browse(cr, uid, invoice_id, context=context)
         company_currency = inv.company_id.currency_id.id
 
-        local_context = {}
+        local_context = {
+            'tax_calculation_rounding_method':
+                inv.tax_calculation_rounding_method
+        }
         for line in inv.invoice_line:
-            local_context['tax_calculation_rounding_method'] = (
-                    line.invoice_id.tax_calculation_rounding_method)
             mres = self.move_line_get_item(cr, uid, line, context)
             if not mres:
                 continue
             res.append(mres)
             tax_code_found= False
             for tax in tax_obj.compute_all(cr, uid, line.invoice_line_tax_id,
-                (line.price_unit * (1.0 - (line['discount'] or 0.0) / 100.0)),
-                 line.quantity, inv.address_invoice_id.id, line.product_id,
-                 inv.partner_id, context=local_context)['taxes']:
+                    (line.price_unit * (1.0 - (line['discount'] or 0.0) / 100.0)),
+                    line.quantity, inv.address_invoice_id.id, line.product_id,
+                    inv.partner_id, context=local_context)['taxes']:
 
                 if inv.type in ('out_invoice', 'in_invoice'):
                     tax_code_id = tax['base_code_id']
@@ -1634,10 +1635,11 @@ class account_invoice_tax(osv.osv):
         cur = inv.currency_id
         company_currency = inv.company_id.currency_id.id
 
-        local_context = {}
+        local_context = {
+            'tax_calculation_rounding_method':
+                inv.tax_calculation_rounding_method
+        }
         for line in inv.invoice_line:
-            local_context['tax_calculation_rounding_method'] = (
-                    line.invoice_id.tax_calculation_rounding_method)
             for tax in tax_obj.compute_all(
                     cr, uid, line.invoice_line_tax_id,
                     (line.price_unit * (1 - (line.discount or 0.0) / 100.0)),
