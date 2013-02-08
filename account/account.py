@@ -2066,7 +2066,9 @@ class account_tax(osv.osv):
                 cur_price_unit+=amount2
         return res
 
-    def compute_all(self, cr, uid, taxes, price_unit, quantity, address_id=None, product=None, partner=None, force_excluded=False):
+    def compute_all(self, cr, uid, taxes, price_unit, quantity,
+            address_id=None, product=None, partner=None, force_excluded=False,
+            context=None):
         """
         :param force_excluded: boolean used to say that we don't want to consider the value of field price_include of
             tax. It's used in encoding by line where you don't matter if you encoded a tax with that boolean to True or
@@ -2089,7 +2091,11 @@ class account_tax(osv.osv):
         # rounding after the sum of the tax amounts of each line
         precision = self.pool.get('decimal.precision').precision_get(cr, uid, 'Account')
         tax_compute_precision = precision
-        if taxes and taxes[0].company_id.tax_calculation_rounding_method == 'round_globally':
+        rounding_method = (
+            (context and context.get('tax_calculation_rounding_method'))
+            or (taxes and taxes[0].company_id.tax_calculation_rounding_method)
+            or 'round_per_line')
+        if  rounding_method == 'round_globally':
             tax_compute_precision += 5
         totalin = totalex = round(price_unit * quantity, precision)
         tin = []

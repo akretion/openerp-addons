@@ -284,8 +284,40 @@ class account_invoice(osv.osv):
         'payment_ids': fields.function(_compute_lines, relation='account.move.line', type="many2many", string='Payments'),
         'move_name': fields.char('Journal Entry', size=64, readonly=True, states={'draft':[('readonly',False)]}),
         'user_id': fields.many2one('res.users', 'Salesman', readonly=True, states={'draft':[('readonly',False)]}),
-        'fiscal_position': fields.many2one('account.fiscal.position', 'Fiscal Position', readonly=True, states={'draft':[('readonly',False)]})
+        'fiscal_position': fields.many2one('account.fiscal.position',
+            'Fiscal Position', readonly=True,
+            states={'draft':[('readonly',False)]}),
+        'tax_calculation_rounding_method': fields.selection([
+            ('round_per_line', 'Round per line'),
+            ('round_globally', 'Round globally'),
+            ], 'Tax calculation rounding method',
+            help='''If you select 'Round per line' : for each tax, the tax
+amount will first be computed and rounded for each PO/SO/invoice line and then
+these rounded amounts will be summed, leading to the total amount for that tax.
+If you select 'Round globally': for each tax, the tax amount will be computed
+for each PO/SO/invoice line, then these amounts will be summed and eventually
+this total tax amount will be rounded. If you sell with tax included, you
+should choose 'Round per line' because you certainly want the sum of your
+tax-included line subtotals to be equal to the total amount with taxes.'''),
     }
+
+    def _get_company_rounding(self, cr, uid, company_id, context=None):
+        res = 'round_per_line'
+        if  company_id:
+            company_model = self.pool.get('res.company')
+            company_obj = company_model.browse(
+                cr, uid, company_id, context=context)
+            if  company_obj and company_obj['tax_calculation_rounding_method']:
+                res = company_obj['tax_calculation_rounding_method']
+        return res
+
+    def _get_default_rounding_method(self, cr, uid, context=None):
+        # default rounding depends on company. We start with default company
+        company_model = self.pool.get('res.company')
+        company_id = company_model._company_default_get(
+            cr, uid, 'account.invoice', context=context)
+        return self._get_company_rounding(cr, uid, company_id, context)
+
     _defaults = {
         'type': _get_type,
         'state': 'draft',
@@ -296,6 +328,7 @@ class account_invoice(osv.osv):
         'check_total': 0.0,
         'internal_number': False,
         'user_id': lambda s, cr, u, c: u,
+        'tax_calculation_rounding_method': _get_default_rounding_method,
     }
     _sql_constraints = [
         ('number_uniq', 'unique(number, company_id, journal_id, type)', 'Invoice Number must be unique per Company!'),
@@ -516,6 +549,9 @@ class account_invoice(osv.osv):
         obj_journal = self.pool.get('account.journal')
         account_obj = self.pool.get('account.account')
         inv_line_obj = self.pool.get('account.invoice.line')
+        if  company_id:
+            val['tax_calculation_rounding_method'] = (
+                self._get_company_rounding(cr, uid, company_id))
         if company_id and part_id and type:
             acc_id = False
             partner_obj = self.pool.get('res.partner').browse(cr,uid,part_id)
@@ -1268,9 +1304,17 @@ class account_invoice_line(osv.osv):
         res = {}
         tax_obj = self.pool.get('account.tax')
         cur_obj = self.pool.get('res.currency')
+        local_context = {}
         for line in self.browse(cr, uid, ids):
             price = line.price_unit * (1-(line.discount or 0.0)/100.0)
-            taxes = tax_obj.compute_all(cr, uid, line.invoice_line_tax_id, price, line.quantity, product=line.product_id, address_id=line.invoice_id.address_invoice_id, partner=line.invoice_id.partner_id)
+            local_context['tax_calculation_rounding_method'] = (
+                    line.invoice_id.tax_calculation_rounding_method)
+            taxes = tax_obj.compute_all(
+                cr, uid, line.invoice_line_tax_id, price, line.quantity,
+                product=line.product_id,
+                address_id=line.invoice_id.address_invoice_id,
+                partner=line.invoice_id.partner_id,
+                context=local_context)
             res[line.id] = taxes['total']
             if line.invoice_id:
                 cur = line.invoice_id.currency_id
@@ -1442,6 +1486,10 @@ class account_invoice_line(osv.osv):
         inv = self.pool.get('account.invoice').browse(cr, uid, invoice_id, context=context)
         company_currency = inv.company_id.currency_id.id
 
+        local_context = {
+            'tax_calculation_rounding_method':
+                inv.tax_calculation_rounding_method
+        }
         for line in inv.invoice_line:
             mres = self.move_line_get_item(cr, uid, line, context)
             if not mres:
@@ -1451,7 +1499,7 @@ class account_invoice_line(osv.osv):
             for tax in tax_obj.compute_all(cr, uid, line.invoice_line_tax_id,
                     (line.price_unit * (1.0 - (line['discount'] or 0.0) / 100.0)),
                     line.quantity, inv.address_invoice_id.id, line.product_id,
-                    inv.partner_id)['taxes']:
+                    inv.partner_id, context=local_context)['taxes']:
 
                 if inv.type in ('out_invoice', 'in_invoice'):
                     tax_code_id = tax['base_code_id']
@@ -1587,8 +1635,15 @@ class account_invoice_tax(osv.osv):
         cur = inv.currency_id
         company_currency = inv.company_id.currency_id.id
 
+        local_context = {
+            'tax_calculation_rounding_method':
+                inv.tax_calculation_rounding_method
+        }
         for line in inv.invoice_line:
-            for tax in tax_obj.compute_all(cr, uid, line.invoice_line_tax_id, (line.price_unit* (1-(line.discount or 0.0)/100.0)), line.quantity, inv.address_invoice_id.id, line.product_id, inv.partner_id)['taxes']:
+                    cr, uid, line.invoice_line_tax_id,
+                    (line.price_unit * (1 - (line.discount or 0.0) / 100.0)),
+                    line.quantity, inv.address_invoice_id.id, line.product_id,
+                    inv.partner_id, context=local_context)['taxes']:
                 val={}
                 val['invoice_id'] = inv.id
                 val['name'] = tax['name']
