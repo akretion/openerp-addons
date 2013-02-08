@@ -1645,14 +1645,13 @@ class account_invoice_tax(osv.osv):
                     (line.price_unit * (1 - (line.discount or 0.0) / 100.0)),
                     line.quantity, inv.address_invoice_id.id, line.product_id,
                     inv.partner_id, context=local_context)['taxes']:
-                tax['price_unit'] = cur_obj.round(cr, uid, cur, tax['price_unit'])
                 val={}
                 val['invoice_id'] = inv.id
                 val['name'] = tax['name']
                 val['amount'] = tax['amount']
                 val['manual'] = False
                 val['sequence'] = tax['sequence']
-                val['base'] = tax['price_unit'] * line['quantity']
+                val['base'] = cur_obj.round(cr, uid, cur, tax['price_unit'] * line['quantity']) 
 
                 if inv.type in ('out_invoice','in_invoice'):
                     val['base_code_id'] = tax['base_code_id']
