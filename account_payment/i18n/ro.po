@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-10-08 12:28+0000\n"
-"PO-Revision-Date: 2012-05-23 17:56+0000\n"
+"PO-Revision-Date: 2013-02-10 16:04+0000\n"
 "Last-Translator: Fekete Mihai <mihai@erpsystems.ro>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-09 05:24+0000\n"
-"X-Generator: Launchpad (build 16112)\n"
+"X-Launchpad-Export-Date: 2013-02-11 05:23+0000\n"
+"X-Generator: Launchpad (build 16482)\n"
 
 #. module: account_payment
 #: field:payment.order,date_scheduled:0
@@ -105,7 +105,7 @@ msgstr "Inregistrari"
 #. module: account_payment
 #: report:payment.order:0
 msgid "Now"
-msgstr ""
+msgstr "Acum"
 
 #. module: account_payment
 #: report:payment.order:0
@@ -159,7 +159,7 @@ msgstr "Anulat(a)"
 #. module: account_payment
 #: model:ir.actions.act_window,name:account_payment.action_payment_order_tree_new
 msgid "New Payment Order"
-msgstr "Ordin de plata nou"
+msgstr "Ordin de Plata Nou"
 
 #. module: account_payment
 #: report:payment.order:0
@@ -241,7 +241,7 @@ msgstr "Stare"
 #: view:payment.line:0
 #: view:payment.order:0
 msgid "Transaction Information"
-msgstr "Informatii despre tranzactie"
+msgstr "Informatii despre Tranzactie"
 
 #. module: account_payment
 #: model:ir.actions.act_window,name:account_payment.action_payment_mode_form
@@ -249,6 +249,7 @@ msgstr "Informatii despre tranzactie"
 #: model:ir.ui.menu,name:account_payment.menu_action_payment_mode_form
 #: view:payment.mode:0
 #: view:payment.order:0
+#: field:payment.order,mode:0
 msgid "Payment Mode"
 msgstr "Modalitatea de plata"
 
@@ -292,10 +293,9 @@ msgstr "Data executiei"
 #. module: account_payment
 #: help:payment.mode,journal:0
 msgid "Bank or Cash Journal for the Payment Mode"
-msgstr "Jurnal Bancar sau de Numerar pentru Modalitatea de plata"
+msgstr "Registru Bancar sau de Numerar pentru Modalitatea de plata"
 
 #. module: account_payment
-#: report:payment.order:0
 #: selection:payment.order,date_prefered:0
 msgid "Fixed date"
 msgstr "Data stabilita"
@@ -354,7 +354,6 @@ msgid "Bank statement line"
 msgstr "Linie extras de cont"
 
 #. module: account_payment
-#: report:payment.order:0
 #: selection:payment.order,date_prefered:0
 msgid "Due date"
 msgstr "Data scadenta"
@@ -499,6 +498,7 @@ msgstr "Cauta"
 #. module: account_payment
 #: model:ir.actions.report.xml,name:account_payment.payment_order1
 #: model:ir.model,name:account_payment.model_payment_order
+#: view:payment.order:0
 msgid "Payment Order"
 msgstr "Ordin de plata"
 
@@ -656,7 +656,7 @@ msgstr "Sunteti sigur ca doriti sa faceti plata?"
 #: view:payment.mode:0
 #: field:payment.mode,journal:0
 msgid "Journal"
-msgstr "Jurnal"
+msgstr "Registru"
 
 #. module: account_payment
 #: field:payment.mode,bank_id:0
@@ -672,7 +672,7 @@ msgstr "Confirmati Platile"
 #: field:payment.line,company_currency:0
 #: report:payment.order:0
 msgid "Company Currency"
-msgstr "Moneda companiei"
+msgstr "Moneda Companiei"
 
 #. module: account_payment
 #: model:ir.ui.menu,name:account_payment.menu_main_payment
@@ -725,7 +725,7 @@ msgstr "creare.ordin.de.plata"
 #. module: account_payment
 #: field:payment.line,order_id:0
 msgid "Order"
-msgstr "Comanda"
+msgstr "Ordin"
 
 #. module: account_payment
 #: constraint:account.move.line:0
