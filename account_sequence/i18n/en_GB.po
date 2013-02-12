@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-05-09 10:18+0000\n"
-"PO-Revision-Date: 2013-02-07 18:36+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2013-02-11 16:14+0000\n"
+"Last-Translator: mrx5682 <Unknown>\n"
 "Language-Team: English (United Kingdom) <en_GB@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-08 04:44+0000\n"
-"X-Generator: Launchpad (build 16482)\n"
+"X-Launchpad-Export-Date: 2013-02-12 04:55+0000\n"
+"X-Generator: Launchpad (build 16491)\n"
 
 #. module: account_sequence
 #: view:account.sequence.installer:0
@@ -28,6 +28,7 @@ msgstr "Account Sequence Application Configuration"
 msgid ""
 "You cannot create entries on different periods/journals in the same move"
 msgstr ""
+"You cannot create entries on different periods/journals in the same move"
 
 #. module: account_sequence
 #: help:account.move,internal_sequence_number:0
@@ -57,11 +58,14 @@ msgid ""
 "    This module maintains internal sequence number for accounting entries.\n"
 "    "
 msgstr ""
+"\n"
+"    This module maintains internal sequence number for accounting entries.\n"
+"    "
 
 #. module: account_sequence
 #: model:ir.module.module,shortdesc:account_sequence.module_meta_information
 msgid "Entries Sequence Numbering"
-msgstr ""
+msgstr "Entries Sequence Numbering"
 
 #. module: account_sequence
 #: help:account.sequence.installer,number_increment:0
@@ -76,7 +80,7 @@ msgstr "Configure Your Account Sequence Application"
 #. module: account_sequence
 #: field:account.sequence.installer,progress:0
 msgid "Configuration Progress"
-msgstr ""
+msgstr "Configuration Progress"
 
 #. module: account_sequence
 #: help:account.sequence.installer,suffix:0
@@ -116,7 +120,7 @@ msgstr "Internal Number"
 #. module: account_sequence
 #: constraint:account.move.line:0
 msgid "Company must be same for its related account and period."
-msgstr ""
+msgstr "Company must be same for its related account and period."
 
 #. module: account_sequence
 #: help:account.sequence.installer,padding:0
@@ -135,18 +139,19 @@ msgstr "Name"
 #. module: account_sequence
 #: constraint:account.move.line:0
 msgid "You can not create move line on closed account."
-msgstr ""
+msgstr "You can not create move line on closed account."
 
 #. module: account_sequence
 #: constraint:account.move:0
 msgid ""
 "You cannot create more than one move per period on centralized journal"
 msgstr ""
+"You cannot create more than one move per period on centralized journal"
 
 #. module: account_sequence
 #: sql_constraint:account.move.line:0
 msgid "Wrong credit or debit value in accounting entry !"
-msgstr ""
+msgstr "Wrong credit or debit value in accounting entry !"
 
 #. module: account_sequence
 #: field:account.journal,internal_sequence_id:0
@@ -176,7 +181,7 @@ msgstr "Suffix"
 #. module: account_sequence
 #: field:account.sequence.installer,config_logo:0
 msgid "Image"
-msgstr ""
+msgstr "Image"
 
 #. module: account_sequence
 #: view:account.sequence.installer:0
@@ -186,7 +191,7 @@ msgstr "title"
 #. module: account_sequence
 #: sql_constraint:account.journal:0
 msgid "The name of the journal must be unique per company !"
-msgstr ""
+msgstr "The name of the journal must be unique per company !"
 
 #. module: account_sequence
 #: field:account.sequence.installer,prefix:0
@@ -196,7 +201,7 @@ msgstr "Prefix"
 #. module: account_sequence
 #: sql_constraint:account.journal:0
 msgid "The code of the journal must be unique per company !"
-msgstr ""
+msgstr "The code of the journal must be unique per company !"
 
 #. module: account_sequence
 #: model:ir.model,name:account_sequence.model_account_sequence_installer
@@ -216,4 +221,4 @@ msgstr "You can enhance the Account Sequence Application by installing ."
 #. module: account_sequence
 #: constraint:account.move.line:0
 msgid "You can not create move line on view account."
-msgstr ""
+msgstr "You can not create move line on view account."
