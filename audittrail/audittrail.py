@@ -174,6 +174,8 @@ class audittrail_objects_proxy(object_proxy):
     """ Uses Object proxy for auditing changes on object of subscribed Rules"""
 
     _default_recursive_level = 1
+    "Columns to be filtered from audited fields"
+    __filtered_columns = ('__last_update', 'id')
 
     def get_value_text(self, cr, uid, pool, resource_pool, method, field, value):
         """
@@ -332,7 +334,7 @@ class audittrail_objects_proxy(object_proxy):
             resource_id = resource['id']
             # loop on each field on the res_ids we just have read
             for field in resource:
-                if field in ('__last_update', 'id'):
+                if field in self.__filtered_columns:
                     continue
                 values[field] = resource[field]
                 # get the textual value of that field for this record
@@ -391,7 +393,7 @@ class audittrail_objects_proxy(object_proxy):
         # loop on all the fields
         for field_name, field_definition in pool.get(model.model)._all_columns.items():
             #if the field_list param is given, skip all the fields not in that list
-            if field_list and field_name not in field_list:
+            if field_list and field_name not in field_list or field_name in self.__filtered_columns:
                 continue
             field_obj = field_definition.column
             if field_obj._type in ('one2many','many2many') and recursive_level:
