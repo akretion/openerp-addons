@@ -59,14 +59,15 @@ class WebKitHelper(object):
         return toreturn
             
             
-    def get_logo_by_name(self, name):
+    def get_logo_by_name(self, name, company_id=None):
         """Return logo by name"""
         header_obj = self.pool.get('ir.header_img')
-        header_img_id = header_obj.search(
-                                            self.cursor, 
-                                            self.uid, 
-                                            [('name','=',name)]
-                                        )
+        domain = [('name','=',name)]
+        if company_id:
+            domain.append(('company_id', '=', company_id))
+        header_img_id = header_obj.search(self.cursor, 
+                                          self.uid, 
+                                          domain)
         if not header_img_id :
             return u''
         if isinstance(header_img_id, list):
@@ -75,9 +76,9 @@ class WebKitHelper(object):
         head = header_obj.browse(self.cursor, self.uid, header_img_id)
         return (head.img, head.type)
             
-    def embed_logo_by_name(self, name, width=0, height=0):
+    def embed_logo_by_name(self, name, width=0, height=0, company_id=None):
         """Return HTML embedded logo by name"""
-        img, type = self.get_logo_by_name(name)
+        img, type = self.get_logo_by_name(name, company_id=company_id)
         return self.embed_image(type, img, width, height)
         
 
