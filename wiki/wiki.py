@@ -81,6 +81,7 @@ class wiki_group(osv.osv):
         }
         group = self.browse(cr, uid, group_id, context=context)
         value['domain'] = "[('group_id','=',%d)]" % (group.id)
+        value['context'] = "{'default_group_id': %d}" % (group.id)
         if group.method == 'page':
             value['res_id'] = group.home.id
         elif group.method == 'list':

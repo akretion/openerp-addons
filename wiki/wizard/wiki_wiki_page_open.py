@@ -41,6 +41,7 @@ class wiki_wiki_page_open(osv.osv_memory):
         for group in self.pool.get('wiki.groups').browse(cr, uid, group_ids, context=context):
             value = {
                 'domain': "[('group_id','=',%d)]" % (group.id),
+                'context': "{'default_group_id': %d}" % (group.id),
                 'name': 'Wiki Page',
                 'view_type': 'form',
                 'view_mode': 'form,tree',
