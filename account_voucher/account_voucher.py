@@ -612,9 +612,8 @@ class account_voucher(osv.osv):
         account_move_lines = move_line_pool.browse(cr, uid, ids, context=context)
 
         for line in account_move_lines:
-            if line.credit and line.reconcile_partial_id and ttype == 'receipt':
-                continue
-            if line.debit and line.reconcile_partial_id and ttype == 'payment':
+            if line.reconcile_partial_id and line.amount_residual_currency < 0:
+                # skip line that are totally used within partial reconcile
                 continue
             if invoice_id:
                 if line.invoice.id == invoice_id:
@@ -641,9 +640,8 @@ class account_voucher(osv.osv):
 
         #voucher line creation
         for line in account_move_lines:
-            if line.credit and line.reconcile_partial_id and ttype == 'receipt':
-                continue
-            if line.debit and line.reconcile_partial_id and ttype == 'payment':
+            if line.reconcile_partial_id and line.amount_residual_currency < 0:
+                # skip line that are totally used within partial reconcile
                 continue
             if line.currency_id and currency_id==line.currency_id.id:
                 amount_original = abs(line.amount_currency)
