@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-12-21 17:05+0000\n"
-"PO-Revision-Date: 2012-12-26 10:06+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2013-03-16 00:16+0000\n"
+"Last-Translator: krnkris <Unknown>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-15 05:52+0000\n"
+"X-Launchpad-Export-Date: 2013-03-16 05:52+0000\n"
 "X-Generator: Launchpad (build 16532)\n"
 
 #. module: base_import
@@ -22,14 +22,14 @@ msgstr ""
 #: code:addons/base_import/static/src/js/import.js:451
 #, python-format
 msgid "Get all possible values"
-msgstr ""
+msgstr "Kapja meg az összes lehetséges értéket"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/xml/import.xml:71
 #, python-format
 msgid "Need to import data from an other application?"
-msgstr ""
+msgstr "Szükséges adatokat importálni egy másik alkalmazásból?"
 
 #. module: base_import
 #. openerp-web
@@ -47,6 +47,14 @@ msgid ""
 "give \n"
 "                        you an example for Products and their Categories."
 msgstr ""
+"Amikor külső azonositókat használ, importálhat CSV file-okat \n"
+"                        az \"External ID\" oszlopban meghatározhatja a külső "
+"\n"
+"                        azonositóját (ID) mindegyik importálandó tételnek. \n"
+"                        Utána létrehozhat egy hivatkozást arra a tételre\n"
+"                        (sorra) \"Mező/Külső ID\" -hoz hasonló oszlopokkal.\n"
+"                        A következő két CSV file a Termékek és a megfelelő\n"
+"                        Termékkategóriákra ad példát."
 
 #. module: base_import
 #. openerp-web
@@ -56,13 +64,15 @@ msgid ""
 "How to export/import different tables from an SQL \n"
 "                        application to OpenERP?"
 msgstr ""
+"Hogyan exportáljon/importáljon külömböző táblákat egy SQL\n"
+"                               alkalmazásból OpenERP-be?"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/js/import.js:331
 #, python-format
 msgid "Relation Fields"
-msgstr ""
+msgstr "Relációs mezők"
 
 #. module: base_import
 #. openerp-web
@@ -72,6 +82,9 @@ msgid ""
 "Country/Database ID: the unique OpenERP ID for a \n"
 "                        record, defined by the ID postgresql column"
 msgstr ""
+"Ország/Adatbázis ID: egy rekord egyedi OpenERP ID -ja, \n"
+"                                                  a postgresql ID oszlop "
+"alapján"
 
 #. module: base_import
 #. openerp-web
@@ -87,6 +100,14 @@ msgid ""
 "\n"
 "                        have a unique Database ID)"
 msgstr ""
+"Használat \n"
+"                        Ország/Adatbázis azonosító ID: Ne sokszor használja "
+"ezt a \n"
+"                        jelölést. Fejlesztők használják elsősorban mivel a "
+"fő  \n"
+"                        előnye, hogy nincsenek összeütközések (több rekord\n"
+"                        lehet ugyanazzal anévvel, de mindíg egyedi \n"
+"                        azonosító ID rendelkeznek)"
 
 #. module: base_import
 #. openerp-web
@@ -96,18 +117,20 @@ msgid ""
 "For the country \n"
 "                        Belgium, you can use one of these 3 ways to import:"
 msgstr ""
+"Belgiumnak, \n"
+"                        3 módot használhat az importáláshoz:"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/xml/import.xml:303
 #, python-format
 msgid "company_1,Bigees,True"
-msgstr ""
+msgstr "vállalat_1,Bigees,Igaz"
 
 #. module: base_import
 #: model:ir.model,name:base_import.model_base_import_tests_models_m2o
 msgid "base_import.tests.models.m2o"
-msgstr ""
+msgstr "base_import.tests.models.m2o"
 
 #. module: base_import
 #. openerp-web
@@ -145,28 +168,28 @@ msgstr ""
 #: code:addons/base_import/static/src/xml/import.xml:316
 #, python-format
 msgid "person_1,Fabien,False,company_1"
-msgstr ""
+msgstr "person_1,Fabien,False,company_1"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/xml/import.xml:80
 #, python-format
 msgid "XXX/External ID"
-msgstr ""
+msgstr "XXX/Külső azonosító ID"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/xml/import.xml:351
 #, python-format
 msgid "Don't Import"
-msgstr ""
+msgstr "Ne importálja"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/xml/import.xml:24
 #, python-format
 msgid "Select the"
-msgstr ""
+msgstr "Válassza ezt"
 
 #. module: base_import
 #. openerp-web
@@ -187,12 +210,12 @@ msgstr ""
 #: code:addons/base_import/static/src/xml/import.xml:141
 #, python-format
 msgid "Country: the name or code of the country"
-msgstr ""
+msgstr "Ország: az ország neve vagy kódja"
 
 #. module: base_import
 #: model:ir.model,name:base_import.model_base_import_tests_models_o2m_child
 msgid "base_import.tests.models.o2m.child"
-msgstr ""
+msgstr "base_import.tests.models.o2m.child"
 
 #. module: base_import
 #. openerp-web
@@ -206,7 +229,7 @@ msgstr ""
 #: code:addons/base_import/static/src/xml/import.xml:15
 #, python-format
 msgid "Validate"
-msgstr ""
+msgstr "Jóváhagyás"
 
 #. module: base_import
 #. openerp-web
