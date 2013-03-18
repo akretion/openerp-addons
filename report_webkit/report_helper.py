@@ -4,7 +4,8 @@
 # Copyright (c) 2010 Camptocamp SA (http://www.camptocamp.com) 
 # All Right Reserved
 #
-# Author : Nicolas Bessi (Camptocamp)
+# Authors : Nicolas Bessi (Camptocamp)
+#           Yannick Vaucher (Camptocamp)
 #
 # WARNING: This program as such is intended to be used by professional
 # programmers who take the whole responsability of assessing all potential
@@ -39,19 +40,19 @@ class WebKitHelper(object):
         self.uid = uid
         self.pool = pooler.get_pool(self.cursor.dbname)
         self.report_id = report_id
-        
-    def embed_image(self, type, img, width=0, height=0) :
+
+    def embed_image(self, type, img, width=0, height=0, unit="px"):
         "Transform a DB image into an embedded HTML image"
 
         if width :
-            width = 'width="%spx"'%(width)
+            width = 'width: %s%s;'%(width, unit)
         else :
             width = ' '
         if height :
-            height = 'height="%spx"'%(height)
+            height = 'height: %s%s;'%(height, unit)
         else :
             height = ' '
-        toreturn = '<img %s %s src="data:image/%s;base64,%s" />'%(
+        toreturn = '<img style="%s%s" src="data:image/%s;base64,%s" />'%(
             width,
             height,
             type, 
@@ -76,10 +77,10 @@ class WebKitHelper(object):
         head = header_obj.browse(self.cursor, self.uid, header_img_id)
         return (head.img, head.type)
             
-    def embed_logo_by_name(self, name, width=0, height=0, company_id=None):
+    def embed_logo_by_name(self, name, width=0, height=0, unit="px", company_id=None):
         """Return HTML embedded logo by name"""
         img, type = self.get_logo_by_name(name, company_id=company_id)
-        return self.embed_image(type, img, width, height)
+        return self.embed_image(type, img, width, height, unit)
         
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
