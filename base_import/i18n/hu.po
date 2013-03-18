@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-12-21 17:05+0000\n"
-"PO-Revision-Date: 2013-03-16 00:16+0000\n"
+"PO-Revision-Date: 2013-03-17 23:49+0000\n"
 "Last-Translator: krnkris <Unknown>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-17 04:59+0000\n"
+"X-Launchpad-Export-Date: 2013-03-18 04:46+0000\n"
 "X-Generator: Launchpad (build 16532)\n"
 
 #. module: base_import
@@ -144,13 +144,19 @@ msgid ""
 "companies) TO \n"
 "                        '/tmp/company.csv' with CSV HEADER;"
 msgstr ""
+"másolás\n"
+"                        (válasszon 'vállalat_'||id mint \"KÜLSŐ "
+"ID\",vállalat_név \n"
+"                        mint \"NÉV\",'Igaz' mint \"Ez egy vállalat\" a "
+"vállalatoktól) EHHEZ\n"
+"                        '/tmp/company.csv' ezzel a CSV FEJLÉCCEL;"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/xml/import.xml:206
 #, python-format
 msgid "CSV file for Manufacturer, Retailer"
-msgstr ""
+msgstr "CSV fájl a Gyártónak, Viszonteladónak"
 
 #. module: base_import
 #. openerp-web
@@ -162,6 +168,10 @@ msgid ""
 "\n"
 "                        data from a third party application."
 msgstr ""
+"Használja\n"
+"                        Ország/Külső ID: Használjon külső azonosítót ID ha "
+"adatot\n"
+"                        importál a harmadik fáltől származó alkalmazásból."
 
 #. module: base_import
 #. openerp-web
@@ -204,6 +214,13 @@ msgid ""
 "\n"
 "                        See the following question."
 msgstr ""
+"Jegyezze meg, ha a CSV fájlban \n"
+"                        a tabulátor mint elválasztó szerepel, OpenERP nem "
+"fogja \n"
+"                        érzékelni az elválasztókat. Meg kell változtatnia a "
+"fájl \n"
+"                        formátum lehetőséget a táblázat kezelőjében. \n"
+"                        Lásd a következő kérdést."
 
 #. module: base_import
 #. openerp-web
@@ -222,7 +239,7 @@ msgstr "base_import.tests.models.o2m.child"
 #: code:addons/base_import/static/src/xml/import.xml:239
 #, python-format
 msgid "Can I import several times the same record?"
-msgstr ""
+msgstr "Be dudom tölteni többször ugyanazt a rekordot?"
 
 #. module: base_import
 #. openerp-web
@@ -236,7 +253,7 @@ msgstr "Jóváhagyás"
 #: code:addons/base_import/static/src/xml/import.xml:55
 #, python-format
 msgid "Map your data to OpenERP"
-msgstr ""
+msgstr "Képezze le az adatait az OpenERP-be"
 
 #. module: base_import
 #. openerp-web
@@ -247,6 +264,9 @@ msgid ""
 "                        the easiest way when your data come from CSV files \n"
 "                        that have been created manually."
 msgstr ""
+"Országot használj: Ez a \n"
+"                        legkönnyebb útja, ha adat egy CSV fájlból érkezik \n"
+"                        amit kézzel készített."
 
 #. module: base_import
 #. openerp-web
@@ -256,6 +276,8 @@ msgid ""
 "What's the difference between Database ID and \n"
 "                        External ID?"
 msgstr ""
+"Mi a különbség az adatbázis ID azonosító és a\n"
+"                        Külső ID azonosító közt?"
 
 #. module: base_import
 #. openerp-web
@@ -267,25 +289,29 @@ msgid ""
 "\n"
 "                        you 3 different fields to import:"
 msgstr ""
+"Példásul, \n"
+"                        egy kapcsolat országának hivatkozásához, OpenERP "
+"három \n"
+"                        különböző mező importálását ajánlja fel:"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/xml/import.xml:175
 #, python-format
 msgid "What can I do if I have multiple matches for a field?"
-msgstr ""
+msgstr "Mit tegyek, ha több egyezőség van egy mezőre?"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/xml/import.xml:302
 #, python-format
 msgid "External ID,Name,Is a Company"
-msgstr ""
+msgstr "Klső ID,Név,Ez egy vállalat"
 
 #. module: base_import
 #: field:base_import.tests.models.preview,somevalue:0
 msgid "Some Value"
-msgstr ""
+msgstr "Néhány érték"
 
 #. module: base_import
 #. openerp-web
@@ -295,6 +321,8 @@ msgid ""
 "The following CSV file shows how to import \n"
 "                        suppliers and their respective contacts"
 msgstr ""
+"A következő CSV fájl megmutatja hogyan töltsük be a \n"
+"                        szállítókat a hozzájuk tartozó kapcsolatokhoz"
 
 #. module: base_import
 #. openerp-web
@@ -304,6 +332,8 @@ msgid ""
 "How can I change the CSV file format options when \n"
 "                        saving in my spreadsheet application?"
 msgstr ""
+"Hogyan tudom megváltoztatni a CSV fájl formátum lehetőségeket ha \n"
+"                        el akarom menteni a táblázatkezelő alkalmazásomban?"
 
 #. module: base_import
 #. openerp-web
@@ -324,6 +354,20 @@ msgid ""
 "orignial \n"
 "                        database)."
 msgstr ""
+"Mint ebben a fájlban látható, Fabien és Laurence \n"
+"                        a Bigees vállalatnál (vállalat_1) dolgoznak és \n"
+"                        Eric az Organi vállalatnnál dolgozik. A személyek \n"
+"                        és vállalatok közti kapcsolat a vállalatok Külső ID  "
+"\n"
+"                        azonosítóin keresztül történik. Nekünk előtaggal "
+"kell \n"
+"                        ellátni a \"Kükső ID\" a táblázat névvel a személy "
+"és a vállalat\n"
+"                        azonosító ID összetévesztésének erkerülése végetten "
+"(személy_1 \n"
+"                        és vállalat_1 amelyik ugyanazt az ID 1 azonosítót "
+"kapja az eredeti \n"
+"                        adatbázisban)."
 
 #. module: base_import
 #. openerp-web
@@ -338,18 +382,26 @@ msgid ""
 "\n"
 "                        '/tmp/person.csv' with CSV"
 msgstr ""
+"másol(kiválaszt \n"
+"                        'személy_'||id azonosító mint \"Külső "
+"ID\",személy_neve mint \n"
+"                        \"Név\",'Hamis' mint \"Ez egy vállalat\", "
+"'vállalat_'||vállalat_id\n"
+"                         mint \"Kapcsolódó vállalat/Külső ID\" a "
+"személyektől) IDE \n"
+"                        '/tmp/person.csv' CSV-el"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/xml/import.xml:148
 #, python-format
 msgid "Country: Belgium"
-msgstr ""
+msgstr "Ország: Belgium"
 
 #. module: base_import
 #: model:ir.model,name:base_import.model_base_import_tests_models_char_stillreadonly
 msgid "base_import.tests.models.char.stillreadonly"
-msgstr ""
+msgstr "base_import.tests.models.char.stillreadonly"
 
 #. module: base_import
 #. openerp-web
@@ -359,13 +411,15 @@ msgid ""
 "External ID,Name,Is a \n"
 "                        Company,Related Company/External ID"
 msgstr ""
+"Küső ID,Név,Ez egy \n"
+"                        vállalat,Kapcsolódó vállalat/Külső ID"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/xml/import.xml:233
 #, python-format
 msgid "Suppliers and their respective contacts"
-msgstr ""
+msgstr "Beszállítók és a hozzá tartozó kapcsolattartók"
 
 #. module: base_import
 #. openerp-web
