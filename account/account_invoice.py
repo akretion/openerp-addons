@@ -100,7 +100,7 @@ class account_invoice(osv.osv):
                     if m.account_id.type in ('receivable','payable'):
                         result[invoice.id] += m.amount_residual_currency
             #prevent the residual amount on the invoice to be less than 0
-            result[invoice.id] = max(result[invoice.id], 0.0)            
+            result[invoice.id] = max(result[invoice.id], 0.0)
         return result
 
     # Give Journal Items related to the payment reconciled to this invoice
@@ -760,9 +760,11 @@ class account_invoice(osv.osv):
 
     def action_date_assign(self, cr, uid, ids, *args):
         for inv in self.browse(cr, uid, ids):
-            res = self.onchange_payment_term_date_invoice(cr, uid, inv.id, inv.payment_term.id, inv.date_invoice)
-            if res and res['value']:
-                self.write(cr, uid, [inv.id], res['value'])
+            if not inv.date_due:
+                res = self.onchange_payment_term_date_invoice(cr, uid, inv.id,
+                                                              inv.payment_term.id, inv.date_invoice)
+                if res and res['value']:
+                    self.write(cr, uid, [inv.id], res['value'])
         return True
 
     def finalize_invoice_move_lines(self, cr, uid, invoice_browse, move_lines):
