@@ -1,16 +1,16 @@
-# Catalan translation for openobject-addons
-# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
+# Mongolian translation for openobject-addons
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the openobject-addons package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-12-21 17:06+0000\n"
-"PO-Revision-Date: 2011-08-17 21:52+0000\n"
-"Last-Translator: mgaja (GrupoIsep.com) <Unknown>\n"
-"Language-Team: Catalan <ca@li.org>\n"
+"PO-Revision-Date: 2013-02-20 07:21+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Mongolian <mn@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,17 +20,17 @@ msgstr ""
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Request a Quotation"
-msgstr "Sol·licita un pressupost"
+msgstr "Үнийн санал хүсэх"
 
 #. module: purchase_requisition
 #: selection:purchase.requisition,exclusive:0
 msgid "Multiple Requisitions"
-msgstr "Sol·licituds múltiples"
+msgstr "Олон Шаардах"
 
 #. module: purchase_requisition
 #: field:purchase.requisition.line,product_uom_id:0
 msgid "Product Unit of Measure"
-msgstr ""
+msgstr "Барааны хэмжих нэгж"
 
 #. module: purchase_requisition
 #: model:ir.actions.act_window,help:purchase_requisition.action_purchase_requisition
@@ -49,71 +49,82 @@ msgid ""
 "          </p>\n"
 "        "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"            Шинэ худалдан авалтын хүсэлтийн ажлыг эхлүүлэхдээ дарна. \n"
+"          </p><p>\n"
+"            Худалдан авалтын шаардах гэдэг нь үнийн санал хүсэхийн \n"
+"            өмнөх дотоод алхам юм. Худалдан авалтын шаардахад (эсвэл \n"
+"            худалдан авалтын тендерт), өөрт хэрэгтэй бараагаа хөтлөж \n"
+"            тэндээсээ үнийн саналын хүсэлтийг үүсгэж нийлүүлэгчид \n"
+"            илгээх боломжтой. Тохиролцоо явагдсан дараа нягтлан үзэж\n"
+"            цохолт хийх, цуцлах ажлыг хийнэ. \n"
+"          </p>\n"
+"        "
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 #: field:purchase.requisition,user_id:0
 msgid "Responsible"
-msgstr "Responsable"
+msgstr "Хариуцагч"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 #: field:purchase.requisition,state:0
 msgid "Status"
-msgstr ""
+msgstr "Төлөв"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Send to Suppliers"
-msgstr ""
+msgstr "Нийлүүлэгчрүү илгээх"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Group By..."
-msgstr "Agrupa per..."
+msgstr "Бүлэглэх..."
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 #: selection:purchase.requisition,state:0
 msgid "Purchase Done"
-msgstr ""
+msgstr "Худалдан авалт хийсэн"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,message_follower_ids:0
 msgid "Followers"
-msgstr ""
+msgstr "Дагагчид"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Purchase Requisition in negociation"
-msgstr ""
+msgstr "Тохиролцож буй худалдан авалтын шаардах"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 #: field:purchase.requisition.partner,partner_id:0
 msgid "Supplier"
-msgstr "Proveïdor"
+msgstr "Нийлүүлэгч"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 #: selection:purchase.requisition,state:0
 msgid "New"
-msgstr ""
+msgstr "Шинэ"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Product Detail"
-msgstr "Detall del producte"
+msgstr "Барааны дэлгэрэнгүй"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Qty"
-msgstr "Quant."
+msgstr "Тоо"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Type"
-msgstr "Tipus"
+msgstr "Төрөл"
 
 #. module: purchase_requisition
 #: model:ir.actions.act_window,name:purchase_requisition.action_purchase_requisition_partner
@@ -126,116 +137,116 @@ msgstr "Tipus"
 #: field:purchase.requisition.line,requisition_id:0
 #: view:purchase.requisition.partner:0
 msgid "Purchase Requisition"
-msgstr "Sol·licitud de compra"
+msgstr "Худалдан авалтын шаардах"
 
 #. module: purchase_requisition
 #: model:ir.model,name:purchase_requisition.model_purchase_requisition_line
 msgid "Purchase Requisition Line"
-msgstr "Línia sol·licitud de compra"
+msgstr "Худалдан авалтын шаардахын мөр"
 
 #. module: purchase_requisition
 #: view:purchase.order:0
 msgid "Purchase Orders with requisition"
-msgstr ""
+msgstr "Шаардах бүхий Худалдан авах захиалгууд"
 
 #. module: purchase_requisition
 #: model:ir.model,name:purchase_requisition.model_product_product
 #: field:purchase.requisition.line,product_id:0
 msgid "Product"
-msgstr "Producte"
+msgstr "Бараа"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Quotations"
-msgstr "Pressuposts"
+msgstr "Үнэ ханш"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "Гэрээний заалт/нөхцөл"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 #: field:purchase.requisition,description:0
 msgid "Description"
-msgstr "Descripció"
+msgstr "Тайлбар"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,message_unread:0
 msgid "Unread Messages"
-msgstr ""
+msgstr "Уншаагүй Зурвасууд"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,company_id:0
 #: field:purchase.requisition.line,company_id:0
 msgid "Company"
-msgstr "Companyia"
+msgstr "Компани"
 
 #. module: purchase_requisition
 #: view:purchase.requisition.partner:0
 msgid "Create Quotation"
-msgstr "Crea pressupost"
+msgstr "Үнийн санал үүсгэх"
 
 #. module: purchase_requisition
 #: help:purchase.requisition,message_ids:0
 msgid "Messages and communication history"
-msgstr ""
+msgstr "Зурвас болон харилцсан түүх"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Approved by Supplier"
-msgstr "Aprovat pel proveïdor"
+msgstr "Нийлүүлэгч зөвшөөрсөн"
 
 #. module: purchase_requisition
 #: view:purchase.requisition.partner:0
 msgid "or"
-msgstr ""
+msgstr "эсвэл"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Reset to Draft"
-msgstr "Inicialitza a esborrany"
+msgstr "Ноороглох"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Current Purchase Requisition"
-msgstr ""
+msgstr "Одоогийн худалдан авалтын шаардах"
 
 #. module: purchase_requisition
 #: model:res.groups,name:purchase_requisition.group_purchase_requisition_user
 msgid "User"
-msgstr ""
+msgstr "Хэрэглэгч"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Order Reference"
-msgstr "Referència de la comanda"
+msgstr "Захиалгын дугаар"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,message_is_follower:0
 msgid "Is a Follower"
-msgstr ""
+msgstr "Дагагч эсэх"
 
 #. module: purchase_requisition
 #: field:purchase.requisition.line,product_qty:0
 msgid "Quantity"
-msgstr "Quantitat"
+msgstr "Тоо хэмжээ"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Unassigned  Requisition"
-msgstr ""
+msgstr "Эзэнгүй шаардах"
 
 #. module: purchase_requisition
 #: model:ir.actions.act_window,name:purchase_requisition.action_purchase_requisition
 #: model:ir.ui.menu,name:purchase_requisition.menu_purchase_requisition_pro_mgt
 msgid "Purchase Requisitions"
-msgstr "Sol·licituds de compra"
+msgstr "Худалдан авалтын Шаардах"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Quotation Detail"
-msgstr "Detall del pressupost"
+msgstr "Үнэ саналын дэлгэрэнгүй"
 
 #. module: purchase_requisition
 #: code:addons/purchase_requisition/purchase_requisition.py:134
@@ -244,51 +255,52 @@ msgid ""
 "You have already one %s purchase order for this partner, you must cancel "
 "this purchase order to create a new quotation."
 msgstr ""
-"Ja heu demanat un% s de compra d'aquest empresa, heu de cancel·lar l'ordre "
-"de compra per crear una nova cotització."
+"Танд %s гэсэн хэзээний нэг худалд авалтын захиалга энэ харилцагчид байна, "
+"шинэ үнийн санал үүсгэхийн тулд эхлээд энэ худалдан авалтын захиалгыг цуцлах "
+"ёстой."
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "End Date"
-msgstr "Data de finalització"
+msgstr "Дуусах огноо"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 #: field:purchase.requisition,name:0
 msgid "Requisition Reference"
-msgstr "Referència de sol·licitud"
+msgstr "Шаардахын Дугаар"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,line_ids:0
 msgid "Products to Purchase"
-msgstr "Productes a comprar"
+msgstr "Бараа худалдан авах"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 #: selection:purchase.requisition,state:0
 msgid "Sent to Suppliers"
-msgstr ""
+msgstr "Нийлүүлэгчрүү илгээх"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Search Purchase Requisition"
-msgstr "Cerca sol·licitud de compra"
+msgstr "Худалдан авалтын Шаардах хайх"
 
 #. module: purchase_requisition
 #: code:addons/purchase_requisition/wizard/purchase_requisition_partner.py:41
 #, python-format
 msgid "No Product in Tender."
-msgstr ""
+msgstr "Тендерт бараа алга."
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Date Ordered"
-msgstr "Data comanda"
+msgstr "Захиалсан огноо"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,message_ids:0
 msgid "Messages"
-msgstr ""
+msgstr "Зурвасууд"
 
 #. module: purchase_requisition
 #: help:purchase.requisition,exclusive:0
@@ -299,123 +311,124 @@ msgid ""
 "orders.On confirmation of a purchase order it does not cancel the remaining "
 "orders"
 msgstr ""
-"Sol·licitud de compra (exclusiva): En la confirmació d'una comanda de "
-"compra, cancel·la les restants comandes de compra.\n"
-"Sol·licitud de compra (múltiple): Permet tenir diverses comandes de compra. "
-"En la confirmació d'una comanda de compra no cancel·la la resta de comandes."
+"Худалдан авалтын шаардах (онцгойлсон):  Худалдан авах захиалгыг батлахад "
+"бусад худалдан авалтын захиалгыг цуцладаг.\n"
+"Худалдан авалтын шаардах (олон): Энэ олон худалдан авалтын захиалгатай "
+"байхыг зөвшөөрдөг. Худалдан авалтын захиалгыг батлахад бусад худалдан "
+"авалтын захиалгыг цуцладаггүй."
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Cancel Purchase Order"
-msgstr "Cancel·la comanda de compra"
+msgstr "Захиалга цуцлах"
 
 #. module: purchase_requisition
 #: model:ir.model,name:purchase_requisition.model_purchase_order
 #: view:purchase.requisition:0
 msgid "Purchase Order"
-msgstr "Comanda de compra"
+msgstr "Худалдан авах захиалга"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,origin:0
 msgid "Source Document"
-msgstr ""
+msgstr "Эх баримт"
 
 #. module: purchase_requisition
 #: code:addons/purchase_requisition/wizard/purchase_requisition_partner.py:41
 #, python-format
 msgid "Error!"
-msgstr "Error!"
+msgstr "Алдаа!"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,exclusive:0
 msgid "Requisition Type"
-msgstr "Tipus de sol·licitud"
+msgstr "Шаардахын төрөл"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "New Purchase Requisition"
-msgstr ""
+msgstr "Шинэ худалдан авалтын шаардах"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Products"
-msgstr "Productes"
+msgstr "Бараа"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Order Date"
-msgstr "Data comanda"
+msgstr "Захиалгын Огноо"
 
 #. module: purchase_requisition
 #: selection:purchase.requisition,state:0
 msgid "Cancelled"
-msgstr "Cancel·lat"
+msgstr "Цуцлагдсан"
 
 #. module: purchase_requisition
 #: model:ir.model,name:purchase_requisition.model_purchase_requisition_partner
 msgid "Purchase Requisition Partner"
-msgstr "Proveïdor de sol·licitud de compra"
+msgstr "Худалдан авалтын шаардахын харилцагч"
 
 #. module: purchase_requisition
 #: help:purchase.requisition,message_unread:0
 msgid "If checked new messages require your attention."
-msgstr ""
+msgstr "Хэрэв тэмдэглэгдсэн бол шинэ зурвас нь анхаарал татахыг шаардана."
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Purchase for Requisitions"
-msgstr "Compra per a sol·licituds"
+msgstr "Шаардахад зориулсан Худалдан авалт"
 
 #. module: purchase_requisition
 #: model:ir.actions.act_window,name:purchase_requisition.act_res_partner_2_purchase_order
 msgid "Purchase orders"
-msgstr "Comanda de compra"
+msgstr "Худалдан авах захиалгууд"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,date_end:0
 msgid "Requisition Deadline"
-msgstr "Data límit de sol·licitud"
+msgstr "Шаардахын эцсийн хугацаа"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,message_summary:0
 msgid "Summary"
-msgstr ""
+msgstr "Хураангуй"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Reference"
-msgstr "Referència"
+msgstr "Код"
 
 #. module: purchase_requisition
 #: model:ir.model,name:purchase_requisition.model_procurement_order
 msgid "Procurement"
-msgstr "Proveïment"
+msgstr "Татан авалт"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 #: view:purchase.requisition:0
 msgid "Source"
-msgstr ""
+msgstr "Эх үүсвэр"
 
 #. module: purchase_requisition
 #: field:purchase.requisition,warehouse_id:0
 msgid "Warehouse"
-msgstr "Magatzem"
+msgstr "Агуулах"
 
 #. module: purchase_requisition
 #: field:procurement.order,requisition_id:0
 msgid "Latest Requisition"
-msgstr "Última sol·licitud"
+msgstr "Cүүлийн шаардах"
 
 #. module: purchase_requisition
 #: model:res.groups,name:purchase_requisition.group_purchase_requisition_manager
 msgid "Manager"
-msgstr ""
+msgstr "Менежер"
 
 #. module: purchase_requisition
 #: selection:purchase.requisition,exclusive:0
 msgid "Purchase Requisition (exclusive)"
-msgstr "Sol·licitud de compra (exclusiva)"
+msgstr "Худалдан авалтын шаардах (онцгойлсон)"
 
 #. module: purchase_requisition
 #: help:purchase.requisition,message_summary:0
@@ -423,48 +436,50 @@ msgid ""
 "Holds the Chatter summary (number of messages, ...). This summary is "
 "directly in html format in order to be inserted in kanban views."
 msgstr ""
+"Чаатлагчийн хураангуйг агуулна (зурвасын тоо,...). Энэ хураангуй нь шууд "
+"html форматтай бөгөөд канбан харагдацад шууд орж харагдах боломжтой."
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 msgid "Product UoM"
-msgstr "UdM de producte"
+msgstr "Барааны х.н"
 
 #. module: purchase_requisition
 #: code:addons/purchase_requisition/purchase_requisition.py:134
 #, python-format
 msgid "Warning!"
-msgstr ""
+msgstr "Анхааруулга!"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Confirm Purchase Order"
-msgstr "Confirma comanda de compra"
+msgstr "Худалдан авах захиалгыг батлах"
 
 #. module: purchase_requisition
 #: view:purchase.requisition.partner:0
 msgid "Cancel"
-msgstr "Cancel·la"
+msgstr "Цуцлах"
 
 #. module: purchase_requisition
 #: report:purchase.requisition:0
 #: field:purchase.requisition,date_start:0
 msgid "Requisition Date"
-msgstr "Data de sol·licitud"
+msgstr "Шаардахын огноо"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Start Date"
-msgstr "Data d'inici"
+msgstr "Эхлэх огноо"
 
 #. module: purchase_requisition
 #: view:purchase.requisition:0
 msgid "Unassigned"
-msgstr "Sense assignar"
+msgstr "Тодорхой бус"
 
 #. module: purchase_requisition
 #: view:purchase.order:0
 msgid "Requisition"
-msgstr "Requisició"
+msgstr "Шаардах"
 
 #. module: purchase_requisition
 #: help:product.product,purchase_requisition:0
@@ -472,93 +487,10 @@ msgid ""
 "Check this box to generates purchase requisition instead of generating "
 "requests for quotation from procurement."
 msgstr ""
+"Энэ талбарыг тэмдэглэснээр татан авалтын хүсэлтээс үнийн саналын хүсэлт "
+"үүсгэхийн оронд худалдан авалтын шаардах үүсгэдэг."
 
 #. module: purchase_requisition
 #: field:purchase.requisition,purchase_ids:0
 msgid "Purchase Orders"
-msgstr "Comandes de compra"
-
-#, python-format
-#~ msgid "No Product in Tender"
-#~ msgstr "No hi ha producte en la licitació"
-
-#~ msgid "State"
-#~ msgstr "Estat"
-
-#~ msgid "Draft"
-#~ msgstr "Esborrany"
-
-#~ msgid "In Progress"
-#~ msgstr "En procés"
-
-#~ msgid ""
-#~ "Check this box so that requisitions generates purchase requisitions instead "
-#~ "of directly requests for quotations."
-#~ msgstr ""
-#~ "Marqueu aquesta opció per generar sol·licituds de compra en comptes de "
-#~ "directament sol·licituds de pressupostos."
-
-#~ msgid "Order Reference must be unique !"
-#~ msgstr "La referència de la comanda ha de ser única!"
-
-#~ msgid ""
-#~ "A purchase requisition is the step before a request for quotation. In a "
-#~ "purchase requisition (or purchase tender), you can record the products you "
-#~ "need to buy and trigger the creation of RfQs to suppliers. After the "
-#~ "negotiation, once you have reviewed all the supplier's offers, you can "
-#~ "validate some and cancel others."
-#~ msgstr ""
-#~ "Una sol·licitud de compra és el pas previ a una sol·licitud de pressupost. "
-#~ "En una sol·licitud de compra (o licitació de compra), podeu registrar els "
-#~ "productes que necessiteu comprar i activar la creació de sol·licituds de "
-#~ "pressupost als proveïdors. Després de la negociació, una vegada que haveu "
-#~ "revisat totes les ofertes del proveïdor, podeu validar algunes i cancel·lar "
-#~ "unes altres."
-
-#~ msgid "["
-#~ msgstr "["
-
-#~ msgid "]"
-#~ msgstr "]"
-
-#~ msgid "Purchase - Purchase Requisition"
-#~ msgstr "Compra - Sol·licitud de compra"
-
-#~ msgid "_Cancel"
-#~ msgstr "_Cancel·la"
-
-#~ msgid "Confirm"
-#~ msgstr "Confirma"
-
-#~ msgid ""
-#~ "\n"
-#~ "    This module allows you to manage your Purchase Requisition.\n"
-#~ "    When a purchase order is created, you now have the opportunity to save "
-#~ "the related requisition.\n"
-#~ "    This new object will regroup and will allow you to easily keep track and "
-#~ "order all your purchase orders.\n"
-#~ msgstr ""
-#~ "\n"
-#~ "    Aquest mòdul li permet gestionar les seves sol·licituds de compra.\n"
-#~ "    Quan es crea una comanda de compra, ara té l'oportunitat de desar la "
-#~ "sol·licitud relacionada.\n"
-#~ "    Aquest nou objecte reagruparà i li permetrà fàcilment controlar i "
-#~ "ordenar totes les seves comandes de compra.\n"
-
-#~ msgid "Address"
-#~ msgstr "Direcció"
-
-#~ msgid "Notes"
-#~ msgstr "Notes"
-
-#~ msgid "Done"
-#~ msgstr "Realitzat"
-
-#~ msgid "Origin"
-#~ msgstr "Orígen"
-
-#~ msgid "Error: Invalid ean code"
-#~ msgstr "Error: Codi EAN erroni"
-
-#~ msgid "Partner"
-#~ msgstr "Empresa"
+msgstr "Худалдан авах захиалгууд"
