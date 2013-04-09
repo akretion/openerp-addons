@@ -66,6 +66,7 @@ class wiki_create_menu(osv.osv_memory):
         }
         group = obj_wiki_group.browse(cr, uid, group_id, context=context)
         value['domain'] = "[('group_id','=',%d)]" % (group.id)
+        value['context'] = "{'default_group_id': %d}" % (group.id)
         if group.method == 'page':
             value['res_id'] = group.home.id
         elif group.method == 'list':
