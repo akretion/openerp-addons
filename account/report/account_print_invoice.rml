@@ -161,13 +161,12 @@
           </para>
         </td>
         <td>
-          <para style="terp_default_8">[[ (o.partner_id and o.partner_id.title and o.partner_id.title.name) or '' ]] [[ (o.partner_id and o.partner_id.name) or '' ]]</para>
-          <para style="terp_default_8">[[ display_address(o.partner_id) ]]</para>
+          <para style="terp_default_8">[[ display_address(o.contact_id or o.partner_id) ]]</para>
           <para style="terp_default_8">
             <font color="white"> </font>
           </para>
-          <para style="terp_default_8">Tel. : [[ (o.partner_id.phone) or removeParentNode('para') ]]</para>
-          <para style="terp_default_8">Fax : [[ (o.partner_id.fax) or removeParentNode('para') ]]</para>
+          <para style="terp_default_8">Tel. : [[ (o.contact_id and o.contact_id.phone or o.partner_id.phone) or removeParentNode('para') ]]</para>
+          <para style="terp_default_8">Fax : [[ (o.contact_id and o.contact_id.fax or o.partner_id.fax) or removeParentNode('para') ]]</para>
           <para style="terp_default_8">TIN : [[ (o.partner_id.vat) or removeParentNode('para') ]]</para>
         </td>
       </tr>
