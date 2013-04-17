@@ -72,7 +72,7 @@ class crm_lead(base_stage, format_address, osv.osv):
     _name = "crm.lead"
     _description = "Lead/Opportunity"
     _order = "priority,date_action,id desc"
-    _inherit = ['mail.thread', 'ir.needaction_mixin']
+    _inherit = ['mail.thread', 'ir.needaction_mixin', 'res.contact.mixin']
 
     _track = {
         'state': {
@@ -240,7 +240,7 @@ class crm_lead(base_stage, format_address, osv.osv):
     _columns = {
         'partner_id': fields.many2one('res.partner', 'Partner', ondelete='set null', track_visibility='onchange',
             select=True, help="Linked partner (optional). Usually created when converting the lead."),
-
+        'contact_id': fields.many2one('res.partner', 'Contact'),
         'id': fields.integer('ID', readonly=True),
         'name': fields.char('Subject', size=64, required=True, select=1),
         'active': fields.boolean('Active', required=False),

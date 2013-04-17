@@ -178,6 +178,7 @@ class purchase_order(osv.osv):
         'date_approve':fields.date('Date Approved', readonly=1, select=True, help="Date on which purchase order has been approved"),
         'partner_id':fields.many2one('res.partner', 'Supplier', required=True, states={'confirmed':[('readonly',True)], 'approved':[('readonly',True)],'done':[('readonly',True)]},
             change_default=True, track_visibility='always'),
+        'contact_id': fields.many2one('res.partner', 'Contact'),
         'dest_address_id':fields.many2one('res.partner', 'Customer Address (Direct Delivery)',
             states={'confirmed':[('readonly',True)], 'approved':[('readonly',True)],'done':[('readonly',True)]},
             help="Put an address if you want to deliver directly from the supplier to the customer. " \
@@ -242,7 +243,7 @@ class purchase_order(osv.osv):
         ('name_uniq', 'unique(name, company_id)', 'Order Reference must be unique per Company!'),
     ]
     _name = "purchase.order"
-    _inherit = ['mail.thread', 'ir.needaction_mixin']
+    _inherit = ['mail.thread', 'ir.needaction_mixin', 'res.contact.mixin']
     _description = "Purchase Order"
     _order = "name desc"
 
@@ -542,6 +543,7 @@ class purchase_order(osv.osv):
                 'reference': order.partner_ref or order.name,
                 'account_id': pay_acc_id,
                 'type': 'in_invoice',
+                'contact_id': order.contact_id and order.contact_id.id,
                 'partner_id': order.partner_id.id,
                 'currency_id': order.pricelist_id.currency_id.id,
                 'journal_id': len(journal_ids) and journal_ids[0] or False,
@@ -624,6 +626,7 @@ class purchase_order(osv.osv):
             'origin': order.name + ((order.origin and (':' + order.origin)) or ''),
             'date': self.date_to_datetime(cr, uid, order.date_order, context),
             'partner_id': order.dest_address_id.id or order.partner_id.id,
+            'contact_id': order.contact_id and order.contact_id.id,
             'invoice_state': '2binvoiced' if order.invoice_method == 'picking' else 'none',
             'type': 'in',
             'partner_id': order.dest_address_id.id or order.partner_id.id,
