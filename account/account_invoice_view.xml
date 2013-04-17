@@ -296,7 +296,7 @@
                             </group>
                             <group col="4" colspan="2">
                                 <group colspan="2" col="1">
-                                    <button name="button_reset_taxes" states="draft" string="Compute Taxes" type="object" groups="base.group_user" icon="terp-stock_format-scientific" help="This action will erase taxes"/>
+                                    <button name="button_reset_taxes" states="draft,proforma2" string="Compute Taxes" type="object" groups="base.group_user" icon="terp-stock_format-scientific" help="This action will erase taxes"/>
                                 </group>
                                 <field name="amount_untaxed"/>
                                 <label string="" colspan="2"/>
