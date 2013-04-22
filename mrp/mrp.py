@@ -738,8 +738,17 @@ class mrp_production(osv.osv):
                     if qty <= 0.0:
                         # we already have more qtys consumed than we need
                         continue
-
-                    raw_product[0].action_consume(qty, raw_product[0].location_id.id, context=context)
+                    splitqty = qty
+                    moves = sorted(raw_product, key=lambda k: (k.product_qty))
+                    for move in moves:
+                        if splitqty <= 0:
+                            break
+                        elif move.product_qty >= qty:
+                            move.action_consume(qty, move.location_id.id, context=context)
+                            splitqty = 0
+                        else:
+                            move.action_consume(splitqty, move.location_id.id, context=context)
+                            splitqty = splitqty - move.product_qty
 
         if production_mode == 'consume_produce':
             # To produce remaining qty of final product
