@@ -77,7 +77,7 @@ class project(osv.osv):
     _description = "Project"
     _inherits = {'account.analytic.account': "analytic_account_id",
                  "mail.alias": "alias_id"}
-    _inherit = ['mail.thread', 'ir.needaction_mixin']
+    _inherit = ['mail.thread', 'ir.needaction_mixin', 'res.contact.mixin.methods']
 
     def search(self, cr, user, args, offset=0, limit=None, order=None, context=None, count=False):
         if user == 1:

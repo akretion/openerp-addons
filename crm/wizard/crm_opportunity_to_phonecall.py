@@ -42,6 +42,7 @@ class crm_opportunity2phonecall(osv.osv_memory):
         res = {}
         res.update({'action': 'log', 'date': time.strftime('%Y-%m-%d %H:%M:%S')})
         for opp in opp_obj.browse(cr, uid, record_ids, context=context):
+            contact = opp.contact_id or opp.partner_id
             if 'name' in fields:
                 res.update({'name': opp.name})
             if 'user_id' in fields:
@@ -51,11 +52,11 @@ class crm_opportunity2phonecall(osv.osv_memory):
             if 'categ_id' in fields:
                 res.update({'categ_id': categ_id})
             if 'partner_id' in fields:
-                res.update({'partner_id': opp.partner_id and opp.partner_id.id or False})
+                res.update({'partner_id': contact and contact.id or False})
             if 'contact_name' in fields:
-                res.update({'contact_name': opp.partner_id and opp.partner_id.name or False})
+                res.update({'contact_name': contact and contact.name or False})
             if 'phone' in fields:
-                res.update({'phone': opp.phone or (opp.partner_id and opp.partner_id.phone or False)})
+                res.update({'phone': opp.phone or (contact and contact.phone or False)})
         return res
 
     def action_schedule(self, cr, uid, ids, context=None):

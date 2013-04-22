@@ -168,9 +168,9 @@
         </td>
         <td>
           <para style="terp_default_Bold_9">Contact Address :</para>
-          <para style="terp_default_9">[[ picking.partner_id and picking.partner_id.title.name or '' ]] [[ picking.partner_id and picking.partner_id.name or '' ]]</para>
-          <para style="terp_default_9">[[ picking.partner_id and display_address(picking.partner_id) ]] </para>
-          <para style="terp_default_9">[[ picking.partner_id.phone or picking.partner_id.email or removeParentNode('para')]]</para>
+          <para style="terp_default_9">[[ picking.contact_id and picking.contact_id.title.name or picking.partner_id and picking.partner_id.title.name or '']] [[ picking.contact_id and picking.contact_id.name or picking.partner_id.name or '' ]]</para>
+          <para style="terp_default_9">[[ picking.partner_id and display_address(picking.contact_id or picking.partner_id) ]] </para>
+          <para style="terp_default_9">[[ picking.contact_id and picking.contact_id.phone or picking.contact_id.email or picking.partner_id and picking.partner_id.phone or picking.partner_id.email or removeParentNode('para')]]</para>
         </td>
       </tr>
     </blockTable>

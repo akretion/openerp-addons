@@ -72,7 +72,7 @@ class crm_claim(base_stage, osv.osv):
     _name = "crm.claim"
     _description = "Claim"
     _order = "priority,date desc"
-    _inherit = ['mail.thread']
+    _inherit = ['mail.thread', 'res.contact.mixin']
 
     _columns = {
         'id': fields.integer('ID', readonly=True),

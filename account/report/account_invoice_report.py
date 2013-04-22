@@ -26,6 +26,7 @@ from openerp.osv import fields,osv
 class account_invoice_report(osv.osv):
     _name = "account.invoice.report"
     _description = "Invoices Statistics"
+    _inherit = ['res.contact.mixin']
     _auto = False
     _rec_name = 'date'
 
@@ -103,7 +104,7 @@ class account_invoice_report(osv.osv):
 
     def _select(self):
         select_str = """
-            SELECT sub.id, sub.date, sub.year, sub.month, sub.day, sub.product_id, sub.partner_id,
+            SELECT sub.id, sub.date, sub.year, sub.month, sub.day, sub.product_id, sub.partner_id, sub.contact_id,
                 sub.payment_term, sub.period_id, sub.uom_name, sub.currency_id, sub.journal_id,
                 sub.fiscal_position, sub.user_id, sub.company_id, sub.nbr, sub.type, sub.state,
                 sub.categ_id, sub.date_due, sub.account_id, sub.account_line_id, sub.partner_bank_id,
@@ -119,7 +120,7 @@ class account_invoice_report(osv.osv):
                     to_char(ai.date_invoice::timestamp with time zone, 'YYYY'::text) AS year,
                     to_char(ai.date_invoice::timestamp with time zone, 'MM'::text) AS month,
                     to_char(ai.date_invoice::timestamp with time zone, 'YYYY-MM-DD'::text) AS day,
-                    ail.product_id, ai.partner_id, ai.payment_term, ai.period_id,
+                    ail.product_id, ai.partner_id, ai.contact_id, ai.payment_term, ai.period_id,
                     CASE
                      WHEN u.uom_type::text <> 'reference'::text
                         THEN ( SELECT product_uom.name
@@ -190,7 +191,7 @@ class account_invoice_report(osv.osv):
                     to_char(ai.date_invoice::timestamp with time zone, 'YYYY'::text),
                     to_char(ai.date_invoice::timestamp with time zone, 'MM'::text),
                     to_char(ai.date_invoice::timestamp with time zone, 'YYYY-MM-DD'::text),
-                    ai.partner_id, ai.payment_term, ai.period_id, u.name, ai.currency_id, ai.journal_id,
+                    ai.partner_id, ai.contact_id, ai.payment_term, ai.period_id, u.name, ai.currency_id, ai.journal_id,
                     ai.fiscal_position, ai.user_id, ai.company_id, ai.type, ai.state, pt.categ_id,
                     ai.date_due, ai.account_id, ail.account_id, ai.partner_bank_id, ai.residual,
                     ai.amount_total, u.uom_type, u.category_id

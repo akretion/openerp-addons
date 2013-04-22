@@ -101,7 +101,7 @@
         </td>
         <td>
           <para style="terp_default_9">[[ (order .partner_id and order.partner_id.title and order.partner_id.title.name) or '' ]] [[ (order .partner_id and order.partner_id.name) or '' ]] </para>
-          <para style="terp_default_9">[[ order.partner_id and display_address(order .partner_id) ]] </para>
+          <para style="terp_default_9">[[ display_address(order.contact_id or order.partner_id) ]] </para>
           <para style="terp_default_9">
             <font color="white"> </font>
           </para>

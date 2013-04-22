@@ -29,7 +29,7 @@ import openerp.addons.decimal_precision as dp
 
 class account_analytic_account(osv.osv):
     _name = 'account.analytic.account'
-    _inherit = ['mail.thread']
+    _inherit = ['mail.thread', 'res.contact.mixin']
     _description = 'Analytic Account'
     _track = {
         'state': {
