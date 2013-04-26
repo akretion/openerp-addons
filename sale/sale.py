@@ -373,7 +373,7 @@ class sale_order(osv.osv):
             'reference': order.client_order_ref or order.name,
             'account_id': order.partner_id.property_account_receivable.id,
             'contact_id': order.partner_invoice_id.id,
-            'partner_id': order.partner_invoice_id.commercial_entity_id.id,
+            'partner_id': order.partner_invoice_id.commercial_partner_id.id,
             'journal_id': journal_ids[0],
             'invoice_line': [(6, 0, lines)],
             'currency_id': order.pricelist_id.currency_id.id,
