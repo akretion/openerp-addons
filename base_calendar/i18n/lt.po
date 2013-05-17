@@ -8,20 +8,20 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-05-09 10:18+0000\n"
-"PO-Revision-Date: 2011-01-19 12:00+0000\n"
-"Last-Translator: Paulius Sladkevičius - http://www.inovera.lt <Unknown>\n"
+"PO-Revision-Date: 2013-05-16 11:52+0000\n"
+"Last-Translator: Mantas Kriaučiūnas <mantas@akl.lt>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-28 07:51+0000\n"
-"X-Generator: Launchpad (build 15864)\n"
+"X-Launchpad-Export-Date: 2013-05-17 05:40+0000\n"
+"X-Generator: Launchpad (build 16626)\n"
 
 #. module: base_calendar
 #: selection:calendar.alarm,trigger_related:0
 #: selection:res.alarm,trigger_related:0
 msgid "The event starts"
-msgstr ""
+msgstr "Įvykio pradžia"
 
 #. module: base_calendar
 #: selection:base.calendar.set.exrule,freq:0
@@ -36,10 +36,13 @@ msgstr ""
 #. module: base_calendar
 #: help:calendar.event,exdate:0
 #: help:calendar.todo,exdate:0
+#: help:crm.meeting,exdate:0
 msgid ""
 "This property defines the list of date/time exceptions for a recurring "
 "calendar component."
 msgstr ""
+"Šis nustatymas apibrėžia sąrašą datų/laikų išimčių pasikartojantiems "
+"įvykiams kalendoriuje."
 
 #. module: base_calendar
 #: constraint:res.users:0
@@ -70,8 +73,9 @@ msgstr "Kvietimas"
 #. module: base_calendar
 #: help:calendar.event,recurrency:0
 #: help:calendar.todo,recurrency:0
+#: help:crm.meeting,recurrency:0
 msgid "Recurrent Meeting"
-msgstr ""
+msgstr "Pasikartojantis susitikimas"
 
 #. module: base_calendar
 #: model:ir.actions.act_window,name:base_calendar.action_res_alarm_view
@@ -82,24 +86,25 @@ msgstr "Perspėjimai"
 #. module: base_calendar
 #: selection:calendar.event,week_list:0
 #: selection:calendar.todo,week_list:0
+#: selection:crm.meeting,week_list:0
 msgid "Sunday"
 msgstr "Sekmadienis"
 
 #. module: base_calendar
-#: view:calendar.attendee:0
 #: field:calendar.attendee,role:0
 msgid "Role"
 msgstr "Vaidmuo"
 
 #. module: base_calendar
-#: view:calendar.attendee:0
 #: view:calendar.event:0
+#: view:crm.meeting:0
 msgid "Invitation details"
-msgstr ""
+msgstr "Pakvietimo informacija"
 
 #. module: base_calendar
 #: selection:calendar.event,byday:0
 #: selection:calendar.todo,byday:0
+#: selection:crm.meeting,byday:0
 msgid "Fourth"
 msgstr "Ketvirtas"
 
@@ -114,12 +119,15 @@ msgstr "Rodyti kaip"
 #: selection:calendar.event,select1:0
 #: field:calendar.todo,day:0
 #: selection:calendar.todo,select1:0
+#: field:crm.meeting,day:0
+#: selection:crm.meeting,select1:0
 msgid "Date of month"
 msgstr "Mėnesio data"
 
 #. module: base_calendar
 #: selection:calendar.event,class:0
 #: selection:calendar.todo,class:0
+#: selection:crm.meeting,class:0
 msgid "Public"
 msgstr "Viešas"
 
@@ -131,6 +139,7 @@ msgstr " "
 #. module: base_calendar
 #: selection:calendar.event,month_list:0
 #: selection:calendar.todo,month_list:0
+#: selection:crm.meeting,month_list:0
 msgid "March"
 msgstr "Kovas"
 
@@ -144,18 +153,21 @@ msgstr "Įspėjimas!"
 #. module: base_calendar
 #: selection:calendar.event,week_list:0
 #: selection:calendar.todo,week_list:0
+#: selection:crm.meeting,week_list:0
 msgid "Friday"
 msgstr "Penktadienis"
 
 #. module: base_calendar
 #: field:calendar.event,allday:0
 #: field:calendar.todo,allday:0
+#: field:crm.meeting,allday:0
 msgid "All Day"
-msgstr "Visa diena"
+msgstr "Visą dieną"
 
 #. module: base_calendar
 #: field:calendar.event,select1:0
 #: field:calendar.todo,select1:0
+#: field:crm.meeting,select1:0
 msgid "Option"
 msgstr "Parinktis"
 
@@ -163,7 +175,7 @@ msgstr "Parinktis"
 #: selection:calendar.attendee,availability:0
 #: selection:calendar.event,show_as:0
 #: selection:calendar.todo,show_as:0
-#: selection:res.users,availability:0
+#: selection:crm.meeting,show_as:0
 msgid "Free"
 msgstr "Laisva"
 
@@ -190,6 +202,7 @@ msgstr ""
 #. module: base_calendar
 #: field:calendar.event,we:0
 #: field:calendar.todo,we:0
+#: field:crm.meeting,we:0
 msgid "Wed"
 msgstr "Tre."
 
@@ -201,6 +214,7 @@ msgstr "Rodyti laiką kaip"
 #. module: base_calendar
 #: field:calendar.event,tu:0
 #: field:calendar.todo,tu:0
+#: field:crm.meeting,tu:0
 msgid "Tue"
 msgstr "Antr."
 
@@ -218,6 +232,7 @@ msgstr "Kasmet"
 #. module: base_calendar
 #: selection:calendar.event,byday:0
 #: selection:calendar.todo,byday:0
+#: selection:crm.meeting,byday:0
 msgid "Last"
 msgstr "Paskutinis"
 
@@ -238,15 +253,12 @@ msgid "Days"
 msgstr "Dienos"
 
 #. module: base_calendar
-#: view:calendar.attendee:0
 #: view:calendar.event:0
 msgid "Invitation Detail"
-msgstr ""
+msgstr "Pakvietimo informacija"
 
 #. module: base_calendar
-#: code:addons/base_calendar/base_calendar.py:1194
-#: code:addons/base_calendar/wizard/base_calendar_invite_attendee.py:96
-#: code:addons/base_calendar/wizard/base_calendar_invite_attendee.py:143
+#: code:addons/base_calendar/base_calendar.py:1260
 #, python-format
 msgid "Error!"
 msgstr "Klaida!"
@@ -254,7 +266,7 @@ msgstr "Klaida!"
 #. module: base_calendar
 #: selection:calendar.attendee,role:0
 msgid "Chair Person"
-msgstr ""
+msgstr "Pirmininkas"
 
 #. module: base_calendar
 #: selection:calendar.alarm,action:0
@@ -297,10 +309,9 @@ msgstr "Antra"
 #: selection:calendar.alarm,trigger_related:0
 #: selection:res.alarm,trigger_related:0
 msgid "The event ends"
-msgstr ""
+msgstr "Įvykio pabaiga"
 
 #. module: base_calendar
-#: view:calendar.attendee:0
 #: view:calendar.event:0
 msgid "Group By..."
 msgstr "Grupuoti pagal..."
@@ -340,7 +351,7 @@ msgstr ""
 #. module: base_calendar
 #: selection:calendar.attendee,role:0
 msgid "Optional Participation"
-msgstr ""
+msgstr "Nebūtinas dalyvavimas"
 
 #. module: base_calendar
 #: field:calendar.event,date_deadline:0
@@ -349,9 +360,11 @@ msgid "Deadline"
 msgstr "Galutinis terminas"
 
 #. module: base_calendar
-#: code:addons/base_calendar/base_calendar.py:389
-#: code:addons/base_calendar/base_calendar.py:1004
-#: code:addons/base_calendar/base_calendar.py:1006
+#: code:addons/base_calendar/base_calendar.py:399
+#: code:addons/base_calendar/base_calendar.py:441
+#: code:addons/base_calendar/base_calendar.py:1013
+#: code:addons/base_calendar/base_calendar.py:1015
+#: code:addons/base_calendar/base_calendar.py:1460
 #, python-format
 msgid "Warning!"
 msgstr "Įspėjimas!"
@@ -359,10 +372,13 @@ msgstr "Įspėjimas!"
 #. module: base_calendar
 #: help:calendar.event,active:0
 #: help:calendar.todo,active:0
+#: help:crm.meeting,active:0
 msgid ""
 "If the active field is set to          true, it will allow you to hide the "
 "event alarm information without removing it."
 msgstr ""
+"Nebenaudojama įvykių priminimų informacija gali būti paslėpta, vietoj to, "
+"kad būtų pašalinta."
 
 #. module: base_calendar
 #: model:ir.module.module,shortdesc:base_calendar.module_meta_information
@@ -374,20 +390,22 @@ msgstr ""
 #: field:calendar.event,organizer_id:0
 #: field:calendar.todo,organizer:0
 #: field:calendar.todo,organizer_id:0
+#: field:crm.meeting,organizer:0
+#: field:crm.meeting,organizer_id:0
 msgid "Organizer"
 msgstr "Organizatorius"
 
 #. module: base_calendar
-#: view:calendar.attendee:0
 #: view:calendar.event:0
 #: field:calendar.event,user_id:0
 #: field:calendar.todo,user_id:0
+#: field:crm.meeting,user_id:0
 msgid "Responsible"
-msgstr "Atsakingas"
+msgstr "Atsakingas asmuo"
 
 #. module: base_calendar
 #: view:calendar.event:0
-#: model:res.request.link,name:base_calendar.request_link_meeting
+#: model:res.request.link,name:base_calendar.request_link_event
 msgid "Event"
 msgstr "Įvykis"
 
@@ -407,6 +425,8 @@ msgstr "Prieš"
 #: view:calendar.event:0
 #: selection:calendar.event,state:0
 #: selection:calendar.todo,state:0
+#: field:crm.meeting,date_open:0
+#: selection:crm.meeting,state:0
 msgid "Confirmed"
 msgstr "Patvirtinta"
 
@@ -418,7 +438,11 @@ msgstr ""
 #. module: base_calendar
 #: field:calendar.alarm,attendee_ids:0
 #: field:calendar.event,attendee_ids:0
+#: field:calendar.event,partner_ids:0
 #: field:calendar.todo,attendee_ids:0
+#: field:calendar.todo,partner_ids:0
+#: field:crm.meeting,attendee_ids:0
+#: field:crm.meeting,partner_ids:0
 msgid "Attendees"
 msgstr "Dalyviai"
 
@@ -435,6 +459,7 @@ msgstr ""
 #. module: base_calendar
 #: field:calendar.event,su:0
 #: field:calendar.todo,su:0
+#: field:crm.meeting,su:0
 msgid "Sun"
 msgstr "Sek."
 
@@ -451,7 +476,7 @@ msgstr ""
 #. module: base_calendar
 #: view:res.alarm:0
 msgid "Reminder details"
-msgstr ""
+msgstr "Priminimo nustatymai"
 
 #. module: base_calendar
 #: field:calendar.attendee,parent_ids:0
@@ -461,13 +486,14 @@ msgstr ""
 #. module: base_calendar
 #: selection:calendar.event,select1:0
 #: selection:calendar.todo,select1:0
+#: selection:crm.meeting,select1:0
 msgid "Day of month"
-msgstr ""
+msgstr "Mėnesio diena"
 
 #. module: base_calendar
-#: view:calendar.event:0
 #: field:calendar.event,location:0
 #: field:calendar.todo,location:0
+#: field:crm.meeting,location:0
 msgid "Location"
 msgstr "Vieta"
 
@@ -477,7 +503,6 @@ msgid "Send mail?"
 msgstr ""
 
 #. module: base_calendar
-#: field:base_calendar.invite.attendee,email:0
 #: selection:calendar.alarm,action:0
 #: field:calendar.attendee,email:0
 msgid "Email"
@@ -496,8 +521,9 @@ msgstr "Vykdyti"
 #. module: base_calendar
 #: field:calendar.event,exdate:0
 #: field:calendar.todo,exdate:0
+#: field:crm.meeting,exdate:0
 msgid "Exception Date/Times"
-msgstr ""
+msgstr "Išimtinė (-is) data/laikas"
 
 #. module: base_calendar
 #: selection:calendar.event,class:0
@@ -508,8 +534,9 @@ msgstr "Konfidencialus"
 #. module: base_calendar
 #: field:calendar.event,end_date:0
 #: field:calendar.todo,end_date:0
+#: field:crm.meeting,end_date:0
 msgid "Repeat Until"
-msgstr ""
+msgstr "Kartoti iki"
 
 #. module: base_calendar
 #: model:ir.actions.act_window,help:base_calendar.action_res_alarm_view
@@ -531,6 +558,7 @@ msgstr ""
 #. module: base_calendar
 #: field:calendar.event,base_calendar_url:0
 #: field:calendar.todo,base_calendar_url:0
+#: field:crm.meeting,base_calendar_url:0
 msgid "Caldav URL"
 msgstr ""
 
@@ -540,19 +568,20 @@ msgid "Select range to Exclude"
 msgstr ""
 
 #. module: base_calendar
-#: field:calendar.event,recurrent_uid:0
-#: field:calendar.todo,recurrent_uid:0
+#: field:calendar.event,recurrent_id:0
+#: field:calendar.todo,recurrent_id:0
+#: field:crm.meeting,recurrent_id:0
 msgid "Recurrent ID"
 msgstr ""
 
 #. module: base_calendar
 #: selection:calendar.event,month_list:0
 #: selection:calendar.todo,month_list:0
+#: selection:crm.meeting,month_list:0
 msgid "July"
 msgstr "Liepa"
 
 #. module: base_calendar
-#: view:calendar.attendee:0
 #: selection:calendar.attendee,state:0
 msgid "Accepted"
 msgstr "Priimtas"
@@ -560,6 +589,7 @@ msgstr "Priimtas"
 #. module: base_calendar
 #: field:calendar.event,th:0
 #: field:calendar.todo,th:0
+#: field:crm.meeting,th:0
 msgid "Thu"
 msgstr "Ket."
 
@@ -582,7 +612,7 @@ msgstr ""
 #. module: base_calendar
 #: selection:calendar.attendee,role:0
 msgid "Participation required"
-msgstr ""
+msgstr "Būtinas dalyvavimas"
 
 #. module: base_calendar
 #: view:base.calendar.set.exrule:0
@@ -603,6 +633,7 @@ msgstr ""
 #. module: base_calendar
 #: selection:calendar.event,class:0
 #: selection:calendar.todo,class:0
+#: selection:crm.meeting,class:0
 msgid "Private"
 msgstr "Privatus"
 
@@ -625,16 +656,16 @@ msgid "Mark as"
 msgstr "Pažymėti kaip"
 
 #. module: base_calendar
-#: view:calendar.attendee:0
-#: field:calendar.attendee,partner_address_id:0
+#: field:calendar.attendee,partner_id:0
 msgid "Contact"
 msgstr "Kontaktas"
 
 #. module: base_calendar
 #: help:calendar.event,rrule_type:0
 #: help:calendar.todo,rrule_type:0
+#: help:crm.meeting,rrule_type:0
 msgid "Let the event automatically repeat at that interval"
-msgstr ""
+msgstr "Nustatykite įvykiui intervalą, kada būtų automatiškai pakartojamas"
 
 #. module: base_calendar
 #: view:calendar.attendee:0
@@ -663,22 +694,28 @@ msgstr "_Gerai"
 #. module: base_calendar
 #: selection:calendar.event,byday:0
 #: selection:calendar.todo,byday:0
+#: selection:crm.meeting,byday:0
 msgid "First"
 msgstr "Pirmas"
 
 #. module: base_calendar
 #: view:calendar.event:0
+#: field:calendar.event,class:0
+#: field:calendar.todo,class:0
+#: field:crm.meeting,class:0
 msgid "Privacy"
-msgstr "Privatumas"
+msgstr "Slaptumas"
 
 #. module: base_calendar
 #: field:calendar.event,vtimezone:0
 #: field:calendar.todo,vtimezone:0
+#: field:crm.meeting,vtimezone:0
 msgid "Timezone"
 msgstr "Laiko juosta"
 
 #. module: base_calendar
 #: view:calendar.event:0
+#: view:crm.meeting:0
 msgid "Subject"
 msgstr "Tema"
 
@@ -690,12 +727,14 @@ msgstr "Reikia veiksmo"
 #. module: base_calendar
 #: selection:calendar.event,month_list:0
 #: selection:calendar.todo,month_list:0
+#: selection:crm.meeting,month_list:0
 msgid "September"
 msgstr "Rugsėjis"
 
 #. module: base_calendar
 #: selection:calendar.event,month_list:0
 #: selection:calendar.todo,month_list:0
+#: selection:crm.meeting,month_list:0
 msgid "December"
 msgstr "Gruodis"
 
@@ -712,7 +751,7 @@ msgstr "Prieinamumas"
 #. module: base_calendar
 #: view:calendar.event.edit.all:0
 msgid "_Save"
-msgstr "Iš_saugoti"
+msgstr "Į_rašyti"
 
 #. module: base_calendar
 #: selection:calendar.attendee,cutype:0
@@ -722,8 +761,9 @@ msgstr "Asmeninis"
 #. module: base_calendar
 #: help:calendar.event,count:0
 #: help:calendar.todo,count:0
+#: help:crm.meeting,count:0
 msgid "Repeat x times"
-msgstr "Kartoti x kartų"
+msgstr "Kiek kartų kartoti"
 
 #. module: base_calendar
 #: field:calendar.alarm,user_id:0
@@ -746,7 +786,6 @@ msgid "Common name"
 msgstr "Bendras pavadinimas"
 
 #. module: base_calendar
-#: view:calendar.attendee:0
 #: selection:calendar.attendee,state:0
 msgid "Declined"
 msgstr "Atsisakyta"
@@ -762,8 +801,8 @@ msgid "My Events"
 msgstr "Mano įvykiai"
 
 #. module: base_calendar
-#: view:calendar.attendee:0
 #: view:calendar.event:0
+#: view:crm.meeting:0
 msgid "Decline"
 msgstr "Atsisakyti"
 
@@ -797,6 +836,7 @@ msgstr ""
 #. module: base_calendar
 #: field:calendar.event,fr:0
 #: field:calendar.todo,fr:0
+#: field:crm.meeting,fr:0
 msgid "Fri"
 msgstr "Pen."
 
@@ -820,14 +860,16 @@ msgstr "Narys"
 #. module: base_calendar
 #: help:calendar.event,location:0
 #: help:calendar.todo,location:0
+#: help:crm.meeting,location:0
 msgid "Location of Event"
 msgstr "Įvykio vieta"
 
 #. module: base_calendar
 #: field:calendar.event,rrule:0
 #: field:calendar.todo,rrule:0
+#: field:crm.meeting,rrule:0
 msgid "Recurrent Rule"
-msgstr ""
+msgstr "Pasikartojimo taisyklė"
 
 #. module: base_calendar
 #: selection:calendar.alarm,state:0
@@ -851,6 +893,9 @@ msgstr ""
 
 #. module: base_calendar
 #: view:calendar.event:0
+#: field:calendar.event,alarm_id:0
+#: field:calendar.todo,alarm_id:0
+#: field:crm.meeting,alarm_id:0
 msgid "Reminder"
 msgstr "Priminimas"
 
@@ -876,12 +921,13 @@ msgstr "Pakviesti dalyvius"
 #. module: base_calendar
 #: help:calendar.attendee,email:0
 msgid "Email of Invited Person"
-msgstr ""
+msgstr "Pakviesto asmens el. paštas"
 
 #. module: base_calendar
 #: field:calendar.alarm,repeat:0
 #: field:calendar.event,count:0
 #: field:calendar.todo,count:0
+#: field:crm.meeting,count:0
 #: field:res.alarm,repeat:0
 msgid "Repeat"
 msgstr "Kartoti"
@@ -896,24 +942,28 @@ msgstr ""
 #. module: base_calendar
 #: selection:calendar.event,month_list:0
 #: selection:calendar.todo,month_list:0
+#: selection:crm.meeting,month_list:0
 msgid "August"
 msgstr "Rugpjūtis"
 
 #. module: base_calendar
 #: selection:calendar.event,week_list:0
 #: selection:calendar.todo,week_list:0
+#: selection:crm.meeting,week_list:0
 msgid "Monday"
 msgstr "Pirmadienis"
 
 #. module: base_calendar
 #: selection:calendar.event,byday:0
 #: selection:calendar.todo,byday:0
+#: selection:crm.meeting,byday:0
 msgid "Third"
 msgstr "Trečias"
 
 #. module: base_calendar
 #: selection:calendar.event,month_list:0
 #: selection:calendar.todo,month_list:0
+#: selection:crm.meeting,month_list:0
 msgid "June"
 msgstr "Birželis"
 
@@ -922,15 +972,15 @@ msgstr "Birželis"
 #: field:calendar.attendee,event_date:0
 #: view:calendar.event:0
 msgid "Event Date"
-msgstr ""
+msgstr "Įvykio data"
 
 #. module: base_calendar
 #: view:calendar.event:0
+#: view:crm.meeting:0
 msgid "The"
 msgstr ""
 
 #. module: base_calendar
-#: view:calendar.attendee:0
 #: field:calendar.attendee,delegated_from:0
 msgid "Delegated From"
 msgstr ""
@@ -943,12 +993,14 @@ msgstr "Naudotojas"
 #. module: base_calendar
 #: view:calendar.event:0
 #: field:calendar.event,date:0
+#: field:crm.meeting,date:0
 msgid "Date"
 msgstr "Data"
 
 #. module: base_calendar
 #: selection:calendar.event,month_list:0
 #: selection:calendar.todo,month_list:0
+#: selection:crm.meeting,month_list:0
 msgid "November"
 msgstr "Lapkritis"
 
@@ -965,6 +1017,7 @@ msgstr "Data"
 #. module: base_calendar
 #: field:calendar.event,mo:0
 #: field:calendar.todo,mo:0
+#: field:crm.meeting,mo:0
 msgid "Mon"
 msgstr "Pirm."
 
@@ -983,14 +1036,18 @@ msgstr "Nekartoti"
 #. module: base_calendar
 #: selection:calendar.event,month_list:0
 #: selection:calendar.todo,month_list:0
+#: selection:crm.meeting,month_list:0
 msgid "October"
 msgstr "Spalis"
 
 #. module: base_calendar
-#: view:calendar.attendee:0
+#: selection:calendar.attendee,state:0
 #: view:calendar.event:0
+#: selection:calendar.event,state:0
+#: selection:calendar.todo,state:0
+#: view:crm.meeting:0
 msgid "Uncertain"
-msgstr ""
+msgstr "Neaiškus"
 
 #. module: base_calendar
 #: field:calendar.attendee,language:0
@@ -1001,11 +1058,12 @@ msgstr "Kalba"
 #: field:calendar.alarm,trigger_occurs:0
 #: field:res.alarm,trigger_occurs:0
 msgid "Triggers"
-msgstr ""
+msgstr "Įvykdymas"
 
 #. module: base_calendar
 #: selection:calendar.event,month_list:0
 #: selection:calendar.todo,month_list:0
+#: selection:crm.meeting,month_list:0
 msgid "January"
 msgstr "Sausis"
 
@@ -1013,7 +1071,7 @@ msgstr "Sausis"
 #: field:calendar.alarm,trigger_related:0
 #: field:res.alarm,trigger_related:0
 msgid "Related to"
-msgstr "Susijęs su"
+msgstr "Susietas su"
 
 #. module: base_calendar
 #: field:calendar.alarm,trigger_interval:0
@@ -1024,6 +1082,7 @@ msgstr "Intervalas"
 #. module: base_calendar
 #: selection:calendar.event,week_list:0
 #: selection:calendar.todo,week_list:0
+#: selection:crm.meeting,week_list:0
 msgid "Wednesday"
 msgstr "Trečiadienis"
 
@@ -1036,6 +1095,7 @@ msgstr ""
 #. module: base_calendar
 #: field:calendar.alarm,name:0
 #: view:calendar.event:0
+#: field:crm.meeting,message_summary:0
 msgid "Summary"
 msgstr "Santrauka"
 
@@ -1043,6 +1103,7 @@ msgstr "Santrauka"
 #: field:calendar.alarm,active:0
 #: field:calendar.event,active:0
 #: field:calendar.todo,active:0
+#: field:crm.meeting,active:0
 #: field:res.alarm,active:0
 msgid "Active"
 msgstr "Aktyvus"
@@ -1078,10 +1139,9 @@ msgstr ""
 #. module: base_calendar
 #: help:calendar.attendee,role:0
 msgid "Participation role for the calendar user"
-msgstr ""
+msgstr "Pakviesto asmens vaidmuo susitikime"
 
 #. module: base_calendar
-#: view:calendar.attendee:0
 #: field:calendar.attendee,delegated_to:0
 msgid "Delegated To"
 msgstr ""
@@ -1094,8 +1154,9 @@ msgstr ""
 #. module: base_calendar
 #: selection:calendar.event,end_type:0
 #: selection:calendar.todo,end_type:0
+#: selection:crm.meeting,end_type:0
 msgid "End date"
-msgstr ""
+msgstr "Pabaigos data"
 
 #. module: base_calendar
 #: view:calendar.event:0
@@ -1105,7 +1166,7 @@ msgstr ""
 #. module: base_calendar
 #: view:calendar.event:0
 msgid "Recurrency Option"
-msgstr ""
+msgstr "Pasikartojimo parinktys"
 
 #. module: base_calendar
 #: selection:calendar.event,rrule_type:0
@@ -1120,10 +1181,13 @@ msgid ""
 "If the active field is set to true, it will allow you to hide the event "
 "alarm information without removing it."
 msgstr ""
+"Nebenaudojama įvykių priminimų informacija gali būti paslėpta, vietoj to, "
+"kad būtų pašalinta."
 
 #. module: base_calendar
-#: field:calendar.event,recurrent_id:0
-#: field:calendar.todo,recurrent_id:0
+#: field:calendar.event,recurrent_id_date:0
+#: field:calendar.todo,recurrent_id_date:0
+#: field:crm.meeting,recurrent_id_date:0
 msgid "Recurrent ID date"
 msgstr ""
 
@@ -1145,7 +1209,7 @@ msgstr "Būsena"
 #. module: base_calendar
 #: view:res.alarm:0
 msgid "Reminder Details"
-msgstr ""
+msgstr "Priminimo nustatymai"
 
 #. module: base_calendar
 #: view:calendar.attendee:0
@@ -1167,12 +1231,12 @@ msgstr "Atlikta"
 #. module: base_calendar
 #: help:calendar.event,interval:0
 #: help:calendar.todo,interval:0
+#: help:crm.meeting,interval:0
 msgid "Repeat every (Days/Week/Month/Year)"
-msgstr ""
+msgstr "Kartoti kas (Dieną/Savaitę/Mėnesį/Metus)"
 
 #. module: base_calendar
-#: view:base_calendar.invite.attendee:0
-#: field:base_calendar.invite.attendee,user_ids:0
+#: model:ir.model,name:base_calendar.model_res_users
 msgid "Users"
 msgstr "Naudotojai"
 
@@ -1182,7 +1246,6 @@ msgid "of"
 msgstr "iš"
 
 #. module: base_calendar
-#: view:base_calendar.invite.attendee:0
 #: view:calendar.event:0
 msgid "Cancel"
 msgstr "Atšaukti"
@@ -1195,6 +1258,7 @@ msgstr ""
 #. module: base_calendar
 #: selection:calendar.event,week_list:0
 #: selection:calendar.todo,week_list:0
+#: selection:crm.meeting,week_list:0
 msgid "Tuesday"
 msgstr "Antradienis"
 
@@ -1212,11 +1276,11 @@ msgid "Responsible User"
 msgstr "Atsakingas naudotojas"
 
 #. module: base_calendar
-#: code:addons/base_calendar/base_calendar.py:1466
+#: code:addons/base_calendar/base_calendar.py:1519
 #: selection:calendar.attendee,availability:0
 #: selection:calendar.event,show_as:0
 #: selection:calendar.todo,show_as:0
-#: selection:res.users,availability:0
+#: selection:crm.meeting,show_as:0
 #, python-format
 msgid "Busy"
 msgstr "Užsiėmęs (-usi)"
@@ -1248,14 +1312,16 @@ msgstr ""
 #. module: base_calendar
 #: field:calendar.event,recurrency:0
 #: field:calendar.todo,recurrency:0
+#: field:crm.meeting,recurrency:0
 msgid "Recurrent"
-msgstr ""
+msgstr "Pasikartojantis"
 
 #. module: base_calendar
 #: field:calendar.event,rrule_type:0
 #: field:calendar.todo,rrule_type:0
+#: field:crm.meeting,rrule_type:0
 msgid "Recurrency"
-msgstr ""
+msgstr "Pasikartojimas"
 
 #. module: base_calendar
 #: model:ir.actions.act_window,name:base_calendar.action_view_attendee_form
@@ -1266,14 +1332,16 @@ msgstr ""
 #. module: base_calendar
 #: selection:calendar.event,week_list:0
 #: selection:calendar.todo,week_list:0
+#: selection:crm.meeting,week_list:0
 msgid "Thursday"
 msgstr "Ketvirtadienis"
 
 #. module: base_calendar
 #: field:calendar.event,exrule:0
 #: field:calendar.todo,exrule:0
+#: field:crm.meeting,exrule:0
 msgid "Exception Rule"
-msgstr ""
+msgstr "Išimtinė taisyklė"
 
 #. module: base_calendar
 #: help:calendar.attendee,language:0
@@ -1289,14 +1357,18 @@ msgstr "Detalės"
 #. module: base_calendar
 #: help:calendar.event,exrule:0
 #: help:calendar.todo,exrule:0
+#: help:crm.meeting,exrule:0
 msgid ""
 "Defines a rule or repeating pattern of time to exclude from the recurring "
 "rule."
 msgstr ""
+"Nustatoma taisyklė ar laiko pasikartojimo išraiška tam, kad nenaudoti "
+"pasikartojimo taisyklėje."
 
 #. module: base_calendar
 #: field:calendar.event,month_list:0
 #: field:calendar.todo,month_list:0
+#: field:crm.meeting,month_list:0
 msgid "Month"
 msgstr "Mėnuo"
 
@@ -1327,12 +1399,14 @@ msgstr ""
 #: field:calendar.event,name:0
 #: field:calendar.todo,description:0
 #: field:calendar.todo,name:0
+#: field:crm.meeting,description:0
 msgid "Description"
 msgstr "Aprašymas"
 
 #. module: base_calendar
 #: selection:calendar.event,month_list:0
 #: selection:calendar.todo,month_list:0
+#: selection:crm.meeting,month_list:0
 msgid "May"
 msgstr "Gegužė"
 
@@ -1369,7 +1443,6 @@ msgid "Objects"
 msgstr "Objektai"
 
 #. module: base_calendar
-#: view:calendar.attendee:0
 #: selection:calendar.attendee,state:0
 msgid "Delegated"
 msgstr ""
@@ -1377,6 +1450,7 @@ msgstr ""
 #. module: base_calendar
 #: field:calendar.event,sa:0
 #: field:calendar.todo,sa:0
+#: field:crm.meeting,sa:0
 msgid "Sat"
 msgstr "Šešt."
 
@@ -1397,12 +1471,16 @@ msgstr ""
 
 #. module: base_calendar
 #: view:calendar.event:0
+#: field:calendar.event,date_deadline:0
+#: field:calendar.todo,date_deadline:0
+#: field:crm.meeting,date_deadline:0
 msgid "End Date"
 msgstr "Pabaigos data"
 
 #. module: base_calendar
 #: selection:calendar.event,month_list:0
 #: selection:calendar.todo,month_list:0
+#: selection:crm.meeting,month_list:0
 msgid "February"
 msgstr "Vasaris"
 
@@ -1418,6 +1496,7 @@ msgid "Resource"
 msgstr "Resursas"
 
 #. module: base_calendar
+#: field:crm.meeting.type,name:0
 #: field:res.alarm,name:0
 msgid "Name"
 msgstr "Pavadinimas"
@@ -1435,10 +1514,9 @@ msgid ""
 msgstr ""
 
 #. module: base_calendar
-#: field:calendar.event,alarm_id:0
 #: field:calendar.event,base_calendar_alarm_id:0
-#: field:calendar.todo,alarm_id:0
 #: field:calendar.todo,base_calendar_alarm_id:0
+#: field:crm.meeting,base_calendar_alarm_id:0
 msgid "Alarm"
 msgstr "Perspėjimas"
 
@@ -1456,23 +1534,26 @@ msgstr ""
 #. module: base_calendar
 #: selection:calendar.event,month_list:0
 #: selection:calendar.todo,month_list:0
+#: selection:crm.meeting,month_list:0
 msgid "April"
 msgstr "Balandis"
 
 #. module: base_calendar
 #: view:calendar.event:0
 msgid "Recurrency period"
-msgstr ""
+msgstr "Pasikartojimo periodas"
 
 #. module: base_calendar
 #: field:calendar.event,week_list:0
 #: field:calendar.todo,week_list:0
+#: field:crm.meeting,week_list:0
 msgid "Weekday"
 msgstr "Savaitės diena"
 
 #. module: base_calendar
 #: field:calendar.event,byday:0
 #: field:calendar.todo,byday:0
+#: field:crm.meeting,byday:0
 msgid "By day"
 msgstr "Pagal dieną"
 
@@ -1489,13 +1570,14 @@ msgstr "Audio"
 #. module: base_calendar
 #: field:calendar.event,id:0
 #: field:calendar.todo,id:0
+#: field:crm.meeting,id:0
 msgid "ID"
 msgstr "ID"
 
 #. module: base_calendar
 #: selection:calendar.attendee,role:0
 msgid "For information Purpose"
-msgstr ""
+msgstr "Informacinio pobūdžio"
 
 #. module: base_calendar
 #: view:base_calendar.invite.attendee:0
@@ -1526,14 +1608,16 @@ msgstr "Siųstas nuo"
 #. module: base_calendar
 #: field:calendar.event,sequence:0
 #: field:calendar.todo,sequence:0
+#: field:crm.meeting,sequence:0
 msgid "Sequence"
 msgstr "Seka"
 
 #. module: base_calendar
 #: help:calendar.event,alarm_id:0
 #: help:calendar.todo,alarm_id:0
+#: help:crm.meeting,alarm_id:0
 msgid "Set an alarm at this time, before the event occurs"
-msgstr ""
+msgstr "Nustatykite priminimą šiuo laikui, prieš įvykstant įvykiui"
 
 #. module: base_calendar
 #: selection:base_calendar.invite.attendee,type:0
@@ -1541,14 +1625,15 @@ msgid "Internal User"
 msgstr ""
 
 #. module: base_calendar
-#: view:calendar.attendee:0
 #: view:calendar.event:0
+#: view:crm.meeting:0
 msgid "Accept"
 msgstr "Priimti"
 
 #. module: base_calendar
 #: selection:calendar.event,week_list:0
 #: selection:calendar.todo,week_list:0
+#: selection:crm.meeting,week_list:0
 msgid "Saturday"
 msgstr "Šeštadienis"
 
@@ -1560,12 +1645,12 @@ msgstr ""
 #. module: base_calendar
 #: selection:calendar.event,byday:0
 #: selection:calendar.todo,byday:0
+#: selection:crm.meeting,byday:0
 msgid "Second"
 msgstr "Sekundė"
 
 #. module: base_calendar
 #: field:calendar.attendee,availability:0
-#: field:res.users,availability:0
 msgid "Free/Busy"
 msgstr "Laisvas/Užimtas"
 
@@ -1581,10 +1666,11 @@ msgstr ""
 #: field:calendar.event,duration:0
 #: field:calendar.todo,date:0
 #: field:calendar.todo,duration:0
+#: field:crm.meeting,duration:0
 #: field:res.alarm,duration:0
 #: field:res.alarm,trigger_duration:0
 msgid "Duration"
-msgstr "Trukmė"
+msgstr "Laikotarpis"
 
 #. module: base_calendar
 #: selection:base_calendar.invite.attendee,type:0
@@ -1594,7 +1680,7 @@ msgstr ""
 #. module: base_calendar
 #: field:calendar.alarm,trigger_date:0
 msgid "Trigger Date"
-msgstr "Įvykio data"
+msgstr "Iššaukimo data"
 
 #. module: base_calendar
 #: help:calendar.alarm,attach:0
@@ -1610,5 +1696,6 @@ msgstr ""
 #. module: base_calendar
 #: selection:calendar.event,byday:0
 #: selection:calendar.todo,byday:0
+#: selection:crm.meeting,byday:0
 msgid "Fifth"
 msgstr "Penktas"
