@@ -453,77 +453,69 @@ class mail_thread(osv.AbstractModel):
         ir_attachment_obj.unlink(cr, uid, attach_ids, context=context)
         return True
 
-    def _find_partner_from_emails(self, cr, uid, id, emails, context=None,
-                                    check_followers=True, only_users=False, take_all=False, full_info=False):
-        """ Utility method to find partners
+    def _get_formview_action(self, cr, uid, id, model=None, context=None):
+        """ Return an action to open the document. This method is meant to be
+            overridden in addons that want to give specific view ids for example.
 
-            :param boolean check_followers: TODO
-            :param boolean only_users: TODO
-            :param boolean take_all: TODO
+            :param int id: id of the document to open
+            :param string model: specific model that overrides self._name
         """
-        partner_obj = self.pool['res.partner']
-        partner_ids = []
-        obj = None
-        if id and self._name != 'mail.thread' and check_followers:
-            obj = self.browse(cr, uid, id, context=context)
-        for contact in emails:
-            partner_id = False
-            email_address = tools.email_split(contact)
-            if not email_address:
-                partner_ids.append(partner_id)
-                continue
-            email_address = email_address[0]
-            # first try: check in document's followers
-            if obj:
-                for follower in obj.message_follower_ids:
-                    if follower.email == email_address:
-                        partner_id = follower.id
-            # second try: check in partners that are also users
-            if not partner_id:
-                ids = partner_obj.search(cr, SUPERUSER_ID, [
-                                                ('email', 'ilike', email_address),
-                                                ('user_ids', '!=', False)
-                                            ], limit=1, context=context)
-                if ids:
-                    partner_id = ids[0]
-            # third try: check in partners
-            if not partner_id:
-                ids = partner_obj.search(cr, SUPERUSER_ID, [
-                                                ('email', 'ilike', email_address)
-                                            ], limit=1, context=context)
-                if ids:
-                    partner_id = ids[0]
-            partner_ids.append(partner_id)
-        return partner_ids
+        return {
+                'type': 'ir.actions.act_window',
+                'res_model': model or self._name,
+                'view_type': 'form',
+                'view_mode': 'form',
+                'views': [(False, 'form')],
+                'target': 'current',
+                'res_id': id,
+            }
 
-    def message_partner_info_from_emails(self, cr, uid, id, emails, link_mail=False, context=None):
-        """ Convert a list of emails into a list partner_ids and a list
-            new_partner_ids. The return value is non conventional because
-            it is meant to be used by the mail widget.
+    def _get_inbox_action_xml_id(self, cr, uid, context=None):
+        """ When redirecting towards the Inbox, choose which action xml_id has
+            to be fetched. This method is meant to be inherited, at least in portal
+            because portal users have a different Inbox action than classic users. """
+        return ('mail', 'action_mail_inbox_feeds')
 
-            :return dict: partner_ids and new_partner_ids
+    def message_redirect_action(self, cr, uid, context=None):
+        """ For a given message, return an action that either
+            - opens the form view of the related document if model, res_id, and
+              read access to the document
+            - opens the Inbox with a default search on the conversation if model,
+              res_id
+            - opens the Inbox with context propagated
 
-            TDE TODO: merge me with other partner finding methods in 8.0 """
-        mail_message_obj = self.pool.get('mail.message')
-        partner_ids = self._find_partner_from_emails(cr, uid, id, emails, context=context)
-        result = list()
-        for idx in range(len(emails)):
-            email_address = emails[idx]
-            partner_id = partner_ids[idx]
-            partner_info = {'full_name': email_address, 'partner_id': partner_id}
-            result.append(partner_info)
+        """
+        if context is None:
+            context = {}
 
-            # link mail with this from mail to the new partner id
-            if link_mail and partner_info['partner_id']:
-                message_ids = mail_message_obj.search(cr, SUPERUSER_ID, [
-                                    '|',
-                                    ('email_from', '=', email_address),
-                                    ('email_from', 'ilike', '<%s>' % email_address),
-                                    ('author_id', '=', False)
-                                ], context=context)
-                if message_ids:
-                    mail_message_obj.write(cr, SUPERUSER_ID, message_ids, {'author_id': partner_info['partner_id']}, context=context)
-        return result
+        # default action is the Inbox action
+        self.pool.get('res.users').browse(cr, SUPERUSER_ID, uid, context=context)
+        act_model, act_id = self.pool.get('ir.model.data').get_object_reference(cr, uid, *self._get_inbox_action_xml_id(cr, uid, context=context))
+        action = self.pool.get(act_model).read(cr, uid, act_id, [])
+
+        # if msg_id specified: try to redirect to the document or fallback on the Inbox
+        msg_id = context.get('params', {}).get('message_id')
+        if not msg_id:
+            return action
+        msg = self.pool.get('mail.message').browse(cr, uid, msg_id, context=context)
+        if msg.model and msg.res_id:
+            action.update({
+                'context': {
+                    'search_default_model': msg.model,
+                    'search_default_res_id': msg.res_id,
+                }
+            })
+            if self.pool.get(msg.model).check_access_rights(cr, uid, 'read', raise_exception=False):
+                try:
+                    model_obj = self.pool.get(msg.model)
+                    model_obj.check_access_rule(cr, uid, [msg.res_id], 'read', context=context)
+                    if not hasattr(model_obj, '_get_formview_action'):
+                        action = self.pool.get('mail.thread')._get_formview_action(cr, uid, msg.res_id, model=msg.model, context=context)
+                    else:
+                        action = model_obj._get_formview_action(cr, uid, msg.res_id, context=context)
+                except (osv.except_osv, orm.except_orm):
+                    pass
+        return action
 
     #------------------------------------------------------
     # Email specific
@@ -1054,6 +1046,78 @@ class mail_thread(osv.AbstractModel):
                 if not obj.user_id or not obj.user_id.partner_id:
                     continue
                 self._message_add_suggested_recipient(cr, uid, result, obj, partner=obj.user_id.partner_id, reason=self._all_columns['user_id'].column.string, context=context)
+        return result
+
+    def _find_partner_from_emails(self, cr, uid, id, emails, context=None,
+                                    check_followers=True, only_users=False, take_all=False, full_info=False):
+        """ Utility method to find partners
+
+            :param boolean check_followers: TODO
+            :param boolean only_users: TODO
+            :param boolean take_all: TODO
+        """
+        partner_obj = self.pool['res.partner']
+        partner_ids = []
+        obj = None
+        if id and self._name != 'mail.thread' and check_followers:
+            obj = self.browse(cr, uid, id, context=context)
+        for contact in emails:
+            partner_id = False
+            email_address = tools.email_split(contact)
+            if not email_address:
+                partner_ids.append(partner_id)
+                continue
+            email_address = email_address[0]
+            # first try: check in document's followers
+            if obj:
+                for follower in obj.message_follower_ids:
+                    if follower.email == email_address:
+                        partner_id = follower.id
+            # second try: check in partners that are also users
+            if not partner_id:
+                ids = partner_obj.search(cr, SUPERUSER_ID, [
+                                                ('email', 'ilike', email_address),
+                                                ('user_ids', '!=', False)
+                                            ], limit=1, context=context)
+                if ids:
+                    partner_id = ids[0]
+            # third try: check in partners
+            if not partner_id:
+                ids = partner_obj.search(cr, SUPERUSER_ID, [
+                                                ('email', 'ilike', email_address)
+                                            ], limit=1, context=context)
+                if ids:
+                    partner_id = ids[0]
+            partner_ids.append(partner_id)
+        return partner_ids
+
+    def message_partner_info_from_emails(self, cr, uid, id, emails, link_mail=False, context=None):
+        """ Convert a list of emails into a list partner_ids and a list
+            new_partner_ids. The return value is non conventional because
+            it is meant to be used by the mail widget.
+
+            :return dict: partner_ids and new_partner_ids
+
+            TDE TODO: merge me with other partner finding methods in 8.0 """
+        mail_message_obj = self.pool.get('mail.message')
+        partner_ids = self._find_partner_from_emails(cr, uid, id, emails, context=context)
+        result = list()
+        for idx in range(len(emails)):
+            email_address = emails[idx]
+            partner_id = partner_ids[idx]
+            partner_info = {'full_name': email_address, 'partner_id': partner_id}
+            result.append(partner_info)
+
+            # link mail with this from mail to the new partner id
+            if link_mail and partner_info['partner_id']:
+                message_ids = mail_message_obj.search(cr, SUPERUSER_ID, [
+                                    '|',
+                                    ('email_from', '=', email_address),
+                                    ('email_from', 'ilike', '<%s>' % email_address),
+                                    ('author_id', '=', False)
+                                ], context=context)
+                if message_ids:
+                    mail_message_obj.write(cr, SUPERUSER_ID, message_ids, {'author_id': partner_info['partner_id']}, context=context)
         return result
 
     def message_post(self, cr, uid, thread_id, body='', subject=None, type='notification',
