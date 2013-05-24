@@ -290,7 +290,7 @@ class account_analytic_account(osv.osv):
             res['value']['partner_id'] = partner
         return res
 
-  def name_search(self, cr, uid, name, args=None, operator='ilike', context=None, limit=100):
+    def name_search(self, cr, uid, name, args=None, operator='ilike', context=None, limit=100):
         if not args:
             args=[]
         if context is None:
