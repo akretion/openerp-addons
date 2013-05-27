@@ -725,7 +725,7 @@ class account_journal(osv.osv):
         'entry_posted': fields.boolean('Skip \'Draft\' State for Manual Entries', help='Check this box if you don\'t want new journal entries to pass through the \'draft\' state and instead goes directly to the \'posted state\' without any manual validation. \nNote that journal entries that are automatically created by the system are always skipping that state.'),
         'company_id': fields.many2one('res.company', 'Company', required=True, select=1, help="Company related to this journal"),
         'allow_date':fields.boolean('Check Date in Period', help= 'If set to True then do not accept the entry if the entry date is not into the period dates'),
-
+        'active': fields.boolean('Active', select=True),
         'profit_account_id' : fields.many2one('account.account', 'Profit Account'),
         'loss_account_id' : fields.many2one('account.account', 'Loss Account'),
         'internal_account_id' : fields.many2one('account.account', 'Internal Transfers Account', select=1),
@@ -737,6 +737,7 @@ class account_journal(osv.osv):
         'with_last_closing_balance' : False,
         'user_id': lambda self, cr, uid, context: uid,
         'company_id': lambda self, cr, uid, c: self.pool.get('res.users').browse(cr, uid, uid, c).company_id.id,
+        'active': True,
     }
     _sql_constraints = [
         ('code_company_uniq', 'unique (code, company_id)', 'The code of the journal must be unique per company !'),
@@ -1040,9 +1041,15 @@ class account_period(osv.osv):
             context = {}
         ids = []
         if name:
-            ids = self.search(cr, user, [('code','ilike',name)]+ args, limit=limit)
+            ids = self.search(cr, user,
+                              [('code', 'ilike', name)] + args,
+                              limit=limit,
+                              context=context)
         if not ids:
-            ids = self.search(cr, user, [('name',operator,name)]+ args, limit=limit)
+            ids = self.search(cr, user,
+                              [('name', operator, name)] + args,
+                              limit=limit,
+                              context=context)
         return self.name_get(cr, user, ids, context=context)
 
     def write(self, cr, uid, ids, vals, context=None):
@@ -1065,10 +1072,14 @@ class account_period(osv.osv):
             raise osv.except_osv(_('Error!'), _('You should choose the periods that belong to the same company.'))
         if period_date_start > period_date_stop:
             raise osv.except_osv(_('Error!'), _('Start period should precede then end period.'))
+
+        # /!\ We do not include a criterion on the company_id field below, to allow producing consolidated reports
+        # on multiple companies. It will only work when start/end periods are selected and no fiscal year is chosen.
+
         #for period from = january, we want to exclude the opening period (but it has same date_from, so we have to check if period_from is special or not to include that clause or not in the search).
         if period_from.special:
-            return self.search(cr, uid, [('date_start', '>=', period_date_start), ('date_stop', '<=', period_date_stop), ('company_id', '=', company1_id)])
-        return self.search(cr, uid, [('date_start', '>=', period_date_start), ('date_stop', '<=', period_date_stop), ('company_id', '=', company1_id), ('special', '=', False)])
+            return self.search(cr, uid, [('date_start', '>=', period_date_start), ('date_stop', '<=', period_date_stop)])
+        return self.search(cr, uid, [('date_start', '>=', period_date_start), ('date_stop', '<=', period_date_stop), ('special', '=', False)])
 
 account_period()
 
@@ -2718,6 +2729,11 @@ class account_tax_code_template(osv.osv):
         'child_ids': fields.one2many('account.tax.code.template', 'parent_id', 'Child Codes'),
         'sign': fields.float('Sign For Parent', required=True),
         'notprintable':fields.boolean("Not Printable in Invoice", help="Check this box if you don't want any tax related to this tax Code to appear on invoices."),
+        'sequence': fields.integer(
+            'Sequence', help=(
+                "Determine the display order in the report 'Accounting "
+                "\ Reporting \ Generic Reporting \ Taxes \ Taxes Report'"),
+            ),
     }
 
     _defaults = {
@@ -2750,6 +2766,7 @@ class account_tax_code_template(osv.osv):
                 'parent_id': tax_code_template.parent_id and ((tax_code_template.parent_id.id in tax_code_template_ref) and tax_code_template_ref[tax_code_template.parent_id.id]) or False,
                 'company_id': company_id,
                 'sign': tax_code_template.sign,
+                'sequence': tax_code_template.sequence,
             }
             #check if this tax code already exists
             rec_list = obj_tax_code.search(cr, uid, [('name', '=', vals['name']),('code', '=', vals['code']),('company_id', '=', vals['company_id'])], context=context)
