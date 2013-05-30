@@ -299,9 +299,9 @@ class account_analytic_account(osv.osv):
             # That's a bad design choice you call a model that may no be installed
             project_obj = self.pool.get('project.project')
             project_ids = []
-            aa_ids = self.search(cr, uid, [('name', 'ilike', name)] + args)
+            aa_ids = self.search(cr, uid, [('name', 'ilike', name)] + args, context=context)
             if aa_ids:
-                project_ids = project_obj.search(cr, uid, [('analytic_account_id', 'in', aa_ids)])
+                project_ids = project_obj.search(cr, uid, [('analytic_account_id', 'in', aa_ids)], context=context)
             return project_obj.name_get(cr, uid, project_ids, context=context)
         if name:
             account_ids = self.search(cr, uid, [('code', '=', name)] + args, limit=limit, context=context)
