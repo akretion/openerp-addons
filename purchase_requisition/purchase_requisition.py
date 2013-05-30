@@ -257,9 +257,8 @@ class procurement_order(osv.osv):
                    })],
                 })
              self.write(cr,uid,[procurement.id],{'state': 'running','requisition_id': res[procurement.id]},context=context)
-        else:
-            res = super(procurement_order, self).make_po(cr, uid, ids, context=context)
-        return res
+             return {}
+        return super(procurement_order, self).make_po(cr, uid, ids, context=context)
 
 procurement_order()
 
