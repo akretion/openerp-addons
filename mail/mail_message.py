@@ -534,7 +534,14 @@ class mail_message(osv.osv):
                                                 mail_server_id=message.mail_server_id.id,
                                                 context=context)
                 if res:
-                    message.write({'state':'sent', 'message_id': res})
+                    message.write(
+                            {
+                                'state':'sent',
+                                'message_id': res,
+                                'user_id': message.user_id.id or uid,
+                                'date': message.date
+                                    or datetime.datetime.now(),
+                            })
                     message_sent = True
                 else:
                     message.write({'state':'exception'})
