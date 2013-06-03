@@ -23,7 +23,7 @@ import time
 from datetime import datetime
 
 import openerp.addons.decimal_precision as dp
-from openerp.osv import fields, osv
+from openerp.osv import fields, osv, orm
 from openerp.tools import DEFAULT_SERVER_DATETIME_FORMAT, DATETIME_FORMATS_MAP
 from openerp.tools import float_compare
 from openerp.tools.translate import _
@@ -409,12 +409,22 @@ class mrp_production(osv.osv):
         return result
 
     def _src_id_default(self, cr, uid, ids, context=None):
-        src_location_id = self.pool.get('ir.model.data').get_object(cr, uid, 'stock', 'stock_location_stock', context=context)
-        return src_location_id.id
+        try:
+            src_location = self.pool.get('ir.model.data').get_object(cr, uid, 'stock', 'stock_location_stock', context=context)
+            src_location._model.check_access_rule(cr, uid, [src_location.id], 'read', context=context)
+        except (orm.except_orm, ValueError):
+            # no read access
+            return False
+        return src_location.id
 
     def _dest_id_default(self, cr, uid, ids, context=None):
-        dest_location_id = self.pool.get('ir.model.data').get_object(cr, uid, 'stock', 'stock_location_stock', context=context)
-        return dest_location_id.id
+        try:
+            dest_location = self.pool.get('ir.model.data').get_object(cr, uid, 'stock', 'stock_location_stock', context=context)
+            dest_location._model.check_access_rule(cr, uid, [dest_location.id], 'read', context=context)
+        except (orm.except_orm, ValueError):
+            # no read access
+            return False
+        return dest_location.id
 
     _columns = {
         'name': fields.char('Reference', size=64, required=True, readonly=True, states={'draft': [('readonly', False)]}),
