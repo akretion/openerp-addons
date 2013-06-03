@@ -1124,6 +1124,7 @@ class procurement_order(osv.osv):
         acc_pos_obj = self.pool.get('account.fiscal.position')
         seq_obj = self.pool.get('ir.sequence')
         warehouse_obj = self.pool.get('stock.warehouse')
+        orderpoint_obj = self.pool.get('stock.warehouse.orderpoint')
         for procurement in self.browse(cr, uid, ids, context=context):
             res_id = procurement.move_id.id
             partner = procurement.product_id.seller_id # Taken Main Supplier of Product of Procurement.
@@ -1131,7 +1132,12 @@ class procurement_order(osv.osv):
             partner_id = partner.id
             address_id = partner_obj.address_get(cr, uid, [partner_id], ['delivery'])['delivery']
             pricelist_id = partner.property_product_pricelist_purchase.id
-            warehouse_id = warehouse_obj.search(cr, uid, [('company_id', '=', procurement.company_id.id or company.id)], context=context)
+            order_point_ids = orderpoint_obj.search(cr, uid, [('procurement_id','=', procurement.id)], context=context)
+            if order_point_ids:
+                warehouse_id = orderpoint_obj.browse(cr, uid, order_point_ids[0], context=context).warehouse_id.id
+            else:
+                warehouse_ids = warehouse_obj.search(cr, uid, [('lot_input_id', '=', procurement.location_id.id)], context=context)
+                warehouse_id = warehouse_ids and warehouse_ids[0] or False
             uom_id = procurement.product_id.uom_po_id.id
 
             qty = uom_obj._compute_qty(cr, uid, procurement.product_uom.id, procurement.product_qty, uom_id)
@@ -1170,7 +1176,7 @@ class procurement_order(osv.osv):
                 'origin': procurement.origin,
                 'partner_id': partner_id,
                 'location_id': procurement.location_id.id,
-                'warehouse_id': warehouse_id and warehouse_id[0] or False,
+                'warehouse_id': warehouse_id,
                 'pricelist_id': pricelist_id,
                 'date_order': purchase_date.strftime(DEFAULT_SERVER_DATETIME_FORMAT),
                 'company_id': procurement.company_id.id,
