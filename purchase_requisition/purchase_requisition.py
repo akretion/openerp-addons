@@ -68,10 +68,14 @@ class purchase_requisition(osv.osv):
     
     def tender_cancel(self, cr, uid, ids, context=None):
         purchase_order_obj = self.pool.get('purchase.order')
+        procurement_obj = self.pool.get('procurement.order')
+        procurement_to_cancel = []
         for purchase in self.browse(cr, uid, ids, context=context):
             for purchase_id in purchase.purchase_ids:
                 if str(purchase_id.state) in('draft'):
                     purchase_order_obj.action_cancel(cr,uid,[purchase_id.id])
+            procurement_to_cancel.extend(procurement_obj.search(cr, uid, [('requisition_id', '=', purchase.id)], context=context))
+        procurement_obj.action_cancel(cr, uid, procurement_to_cancel)
         return self.write(cr, uid, ids, {'state': 'cancel'})
 
     def tender_in_progress(self, cr, uid, ids, context=None):
