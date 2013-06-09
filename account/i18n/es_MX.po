@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:36+0000\n"
-"PO-Revision-Date: 2013-06-07 22:52+0000\n"
+"PO-Revision-Date: 2013-06-08 15:29+0000\n"
 "Last-Translator: Federico Manuel Echeverri Choux -  (  Vauxoo  ) "
 "<echeverrifm@gmail.com>\n"
 "Language-Team: Spanish (Mexico) <es_MX@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-06-08 07:08+0000\n"
+"X-Launchpad-Export-Date: 2013-06-09 06:16+0000\n"
 "X-Generator: Launchpad (build 16667)\n"
 
 #. module: account
@@ -299,6 +299,16 @@ msgid ""
 "              </p>\n"
 "            "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"Pulse para crear una Nota de Credito. \n"
+"</p><p>\n"
+"Una Nota de Credito es un documento que abona una factura total o "
+"parcialmente.\n"
+"</p><p>\n"
+"En lugar de crear una Nota de Credito  manualmente, puede generarla "
+"directamente desde la misma factura origen.\n"
+"</p>\n"
+"            "
 
 #. module: account
 #: help:account.installer,charts:0
@@ -394,7 +404,7 @@ msgstr ""
 #. module: account
 #: selection:account.journal,type:0
 msgid "Purchase Refund"
-msgstr ""
+msgstr "Nota de Credito de Proveedor"
 
 #. module: account
 #: selection:account.journal,type:0
@@ -452,6 +462,7 @@ msgstr ""
 #: selection:account.invoice.refund,filter_refund:0
 msgid "Modify: create refund, reconcile and create a new draft invoice"
 msgstr ""
+"Modificar: crea Nota de Credito, concilia y crea una nueva factura borrador"
 
 #. module: account
 #: help:account.config.settings,tax_calculation_rounding_method:0
@@ -746,6 +757,9 @@ msgid ""
 "lines for refunds. Leave empty if you don't want to use an analytic account "
 "on the invoice tax lines by default."
 msgstr ""
+"Establezca la cuenta analítica que se usará por defecto en las líneas de "
+"impuestos de la Nota de Credito. Déjelo vacío si no quiere usar una cuenta "
+"analítica por defecto  en las líneas de impuestos de la factura."
 
 #. module: account
 #: view:account.account:0
@@ -808,6 +822,8 @@ msgid ""
 "Cannot %s invoice which is already reconciled, invoice should be "
 "unreconciled first. You can only refund this invoice."
 msgstr ""
+"No puede  %s  factura que está ya conciliada, primero debería romper la "
+"conciliación. Solo puede realizar una Nota de Credito de esta factura."
 
 #. module: account
 #: view:account.account:0
@@ -1198,7 +1214,7 @@ msgstr ""
 #. module: account
 #: view:account.invoice:0
 msgid "Refund "
-msgstr ""
+msgstr "Nota de Credito "
 
 #. module: account
 #: help:account.config.settings,company_footer:0
@@ -1225,7 +1241,7 @@ msgstr ""
 #. module: account
 #: field:account.config.settings,sale_refund_journal_id:0
 msgid "Sale refund journal"
-msgstr ""
+msgstr "Diario de Notas de Credito de Venta"
 
 #. module: account
 #: model:ir.actions.act_window,help:account.action_view_bank_statement_tree
@@ -1261,7 +1277,7 @@ msgstr ""
 #. module: account
 #: view:account.tax:0
 msgid "Refunds"
-msgstr ""
+msgstr "Nota de Credito"
 
 #. module: account
 #: model:process.transition,name:account.process_transition_confirmstatementfromdraft0
@@ -1652,7 +1668,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:account.action_invoice_tree4
 #: model:ir.ui.menu,name:account.menu_action_invoice_tree4
 msgid "Supplier Refunds"
-msgstr ""
+msgstr "Notas de Creditos de Proveedores"
 
 #. module: account
 #: report:account.invoice:0
@@ -1739,7 +1755,7 @@ msgstr ""
 #: field:account.tax,account_paid_id:0
 #: field:account.tax.template,account_paid_id:0
 msgid "Refund Tax Account"
-msgstr ""
+msgstr "Cuenta de Impuesto de Nota de Credito"
 
 #. module: account
 #: model:ir.model,name:account.model_ir_sequence
@@ -2654,7 +2670,7 @@ msgstr ""
 #. module: account
 #: selection:account.invoice.refund,filter_refund:0
 msgid "Create a draft refund"
-msgstr ""
+msgstr "Crear una Nota de Credito en Borrador"
 
 #. module: account
 #: view:account.partner.reconcile.process:0
@@ -4967,7 +4983,7 @@ msgstr ""
 #: field:account.tax,ref_tax_code_id:0
 #: field:account.tax.template,ref_tax_code_id:0
 msgid "Refund Tax Code"
-msgstr ""
+msgstr "Codigo de Impuesto de Nota de Credito"
 
 #. module: account
 #: view:account.invoice:0
@@ -5706,7 +5722,7 @@ msgstr ""
 #: selection:account.invoice.report,type:0
 #: selection:report.invoice.created,type:0
 msgid "Customer Refund"
-msgstr "Nota de crédito"
+msgstr "Nota de Credito de cliente"
 
 #. module: account
 #: field:account.tax,ref_tax_sign:0
@@ -5729,7 +5745,7 @@ msgstr ""
 #. module: account
 #: view:account.invoice:0
 msgid "Draft Refund "
-msgstr ""
+msgstr "Nota de Credito en Borrador "
 
 #. module: account
 #: view:cash.box.in:0
@@ -5803,7 +5819,7 @@ msgstr ""
 #. module: account
 #: view:account.invoice.report:0
 msgid "Customer Invoices And Refunds"
-msgstr ""
+msgstr "Facturas y Notas de Creditos de Clientes"
 
 #. module: account
 #: field:account.analytic.line,amount_currency:0
@@ -5852,6 +5868,18 @@ msgid ""
 "              </p>\n"
 "            "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"Pulse para crear un asiento.\n"
+"</p><p>\n"
+"Un asiento consiste en varios apuntes, cada cual es una transacción de debe "
+"o haber.\n"
+"</p><p>\n"
+"OpenERP crea automáticamente un asiento por cada documento contable: "
+"factura, Nota de Credito, pago a proveedor, extractos bancarios, etc. Por "
+"eso, sólo debería necesitar registrar manualmente asientos para operaciones "
+"misceláneas.\n"
+"</p>\n"
+"            "
 
 #. module: account
 #: selection:account.financial.report,style_overwrite:0
@@ -5901,7 +5929,7 @@ msgstr ""
 #. module: account
 #: view:account.invoice:0
 msgid "Draft Refund"
-msgstr ""
+msgstr "Nota de Credito en Borrador"
 
 #. module: account
 #: view:account.analytic.chart:0
@@ -6400,6 +6428,14 @@ msgid ""
 "              </p>\n"
 "            "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"Pulse para registrar una factura rectificativa de proveedor.\n"
+"</p><p>\n"
+"En lugar de crear la Nota de Credito de proveedor manualmente, puede "
+"generarla y conciliarla directamente desde la factura de proveedor "
+"relacionada.\n"
+"</p>\n"
+"            "
 
 #. module: account
 #: field:account.tax,type:0
@@ -6764,7 +6800,7 @@ msgstr ""
 #: selection:report.invoice.created,type:0
 #, python-format
 msgid "Supplier Refund"
-msgstr ""
+msgstr "Nota de Credito de Proveedor"
 
 #. module: account
 #: field:account.bank.statement,move_line_ids:0
@@ -7059,7 +7095,7 @@ msgstr ""
 #. module: account
 #: selection:account.invoice.refund,filter_refund:0
 msgid "Cancel: create refund and reconcile"
-msgstr ""
+msgstr "Saldar: crea la Nota de Credito y concilia"
 
 #. module: account
 #: code:addons/account/wizard/account_report_aged_partner_balance.py:58
@@ -7676,7 +7712,7 @@ msgstr ""
 #. module: account
 #: view:account.invoice.report:0
 msgid "Customer And Supplier Refunds"
-msgstr ""
+msgstr "Notas de Creditos de Clientes y Proveedores"
 
 #. module: account
 #: field:account.financial.report,sign:0
@@ -10680,7 +10716,7 @@ msgstr ""
 #: code:addons/account/account_invoice.py:1156
 #, python-format
 msgid "Refund"
-msgstr ""
+msgstr "Nota de credito"
 
 #. module: account
 #: model:ir.model,name:account.model_res_partner_bank

@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:36+0000\n"
-"PO-Revision-Date: 2013-05-27 12:50+0000\n"
+"PO-Revision-Date: 2013-06-08 11:14+0000\n"
 "Last-Translator: Erwin van der Ploeg (Endian Solutions) <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-06-08 07:02+0000\n"
+"X-Launchpad-Export-Date: 2013-06-09 06:16+0000\n"
 "X-Generator: Launchpad (build 16667)\n"
 
 #. module: account
@@ -42,7 +42,7 @@ msgstr ""
 #. module: account
 #: view:res.partner:0
 msgid "the parent company"
-msgstr ""
+msgstr "het bovenliggende bedrijf"
 
 #. module: account
 #: view:account.move.reconcile:0
@@ -745,6 +745,13 @@ msgid ""
 "either the user pressed the button \"Nothing more to reconcile\" during the "
 "manual reconciliation process."
 msgstr ""
+"Datum waarop de boekhoudkundige boekingen van de relatie volledig zijn "
+"afgeletterd. Dit verschilt ten opzichten van de laatste datum waarop een "
+"aflettering heeft plaatsgevonden. Hier geven we weer dat op deze datum niets "
+"meer was af te letteren. Dit kan worden bereikt op twee manieren. Of de "
+"laatste niet afgeletterde debet/credit boeking van de relatie is afgeletterd "
+"of de gebruiker heeft gedrukt op de knop \"niets meer af te letteren\" "
+"gedurende de handmatige aflettering."
 
 #. module: account
 #: model:ir.model,name:account.model_report_account_type_sales
@@ -799,6 +806,8 @@ msgid ""
 "The amount expressed in the secondary currency must be positive when the "
 "journal item is a debit and negative when if it is a credit."
 msgstr ""
+"Het bedrag, weergegeven in de tweede valuta moet positief zijn wanneer de "
+"boekingregel is debet en negatief bij een credit boekingsregel."
 
 #. module: account
 #: constraint:account.move:0
@@ -1022,7 +1031,7 @@ msgstr "September"
 #: code:addons/account/static/src/xml/account_move_reconciliation.xml:24
 #, python-format
 msgid "Latest Manual Reconciliation Processed:"
-msgstr ""
+msgstr "Laatste datum afletteren verwerkt:"
 
 #. module: account
 #: selection:account.subscription,period_type:0
@@ -1830,7 +1839,7 @@ msgstr "Herhalend"
 #. module: account
 #: report:account.invoice:0
 msgid "TIN :"
-msgstr ""
+msgstr "BTW Nr.:"
 
 #. module: account
 #: field:account.journal,groups_id:0
@@ -4586,7 +4595,7 @@ msgstr "Complete set van belastingen"
 #. module: account
 #: field:res.partner,last_reconciliation_date:0
 msgid "Latest Full Reconciliation Date"
-msgstr ""
+msgstr "Laatste datum van volledig afletteren"
 
 #. module: account
 #: field:account.account,name:0
@@ -5488,7 +5497,7 @@ msgstr "MEM"
 #. module: account
 #: view:res.partner:0
 msgid "Accounting-related settings are managed on"
-msgstr ""
+msgstr "Boekhouding instellingen worden beheert bij"
 
 #. module: account
 #: field:account.fiscalyear.close,fy2_id:0
@@ -6611,6 +6620,8 @@ msgstr "Maart"
 #, python-format
 msgid "You can not re-open a period which belongs to closed fiscal year"
 msgstr ""
+"Het is niet mogelijk een periode opnieuw te openen van een al afgesloten "
+"boekjaar."
 
 #. module: account
 #: report:account.analytic.account.journal:0
@@ -10641,7 +10652,7 @@ msgstr "Concept-facturen"
 #: code:addons/account/static/src/xml/account_move_reconciliation.xml:31
 #, python-format
 msgid "Nothing more to reconcile"
-msgstr ""
+msgstr "Niets meer af te letteren"
 
 #. module: account
 #: view:cash.box.in:0
