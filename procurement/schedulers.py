@@ -267,10 +267,10 @@ class procurement_order(osv.osv):
                                                          context=context)
                         wf_service.trg_validate(uid, 'procurement.order', proc_id,
                                 'button_confirm', cr)
-                        wf_service.trg_validate(uid, 'procurement.order', proc_id,
-                                'button_check', cr)
                         orderpoint_obj.write(cr, uid, [op.id],
                                 {'procurement_id': proc_id}, context=context)
+                        wf_service.trg_validate(uid, 'procurement.order', proc_id,
+                                'button_check', cr)
             offset += len(ids)
             if use_new_cursor:
                 cr.commit()
