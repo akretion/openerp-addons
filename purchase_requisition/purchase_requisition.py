@@ -65,18 +65,35 @@ class purchase_requisition(osv.osv):
             'name': self.pool.get('ir.sequence').get(cr, uid, 'purchase.order.requisition'),
         })
         return super(purchase_requisition, self).copy(cr, uid, id, default, context)
+
+    def unlink(self, cr, uid, ids, context=None):
+        purchase_obj = self.pool.get('purchase.order')
+        unlink_ids = []
+        purchase_ids = []
+        for requisition in self.browse(cr, uid, ids, context=context):
+            if requisition.state != 'cancel':
+                raise osv.except_osv(_('Invalid Action!'),
+                _('In order to delete requisition: %s, you must cancel it first') % requisition.name)
+            unlink_ids.append(requisition.id)
+            purchase_ids.extend(purchase.id for purchase in requisition.purchase_ids)
+        if purchase_ids:
+            purchase_obj.unlink(cr, uid, purchase_ids, context=context)
+        return super(purchase_requisition, self).unlink(cr, uid, unlink_ids, context=context)
     
     def tender_cancel(self, cr, uid, ids, context=None):
         purchase_order_obj = self.pool.get('purchase.order')
         procurement_obj = self.pool.get('procurement.order')
-        procurement_to_cancel = []
-        for purchase in self.browse(cr, uid, ids, context=context):
-            for purchase_id in purchase.purchase_ids:
-                if str(purchase_id.state) in('draft'):
-                    purchase_order_obj.action_cancel(cr,uid,[purchase_id.id])
-            procurement_to_cancel.extend(procurement_obj.search(cr, uid, [('requisition_id', '=', purchase.id)], context=context))
-        procurement_obj.action_cancel(cr, uid, procurement_to_cancel)
-        return self.write(cr, uid, ids, {'state': 'cancel'})
+        procurements_to_cancel = []
+        purchase_ids = []
+        for requisition in self.browse(cr, uid, ids, context=context):
+            purchase_ids.extend(purchase.id for purchase in requisition.purchase_ids)
+            procurements_to_cancel.extend(procurement_obj.search(cr, uid,\
+                [('requisition_id', '=', requisition.id)], context=context))
+        if purchase_ids:
+            purchase_order_obj.action_cancel(cr, uid, purchase_ids, context=context)
+        if procurements_to_cancel:
+            procurement_obj.action_cancel(cr, uid, procurements_to_cancel)
+        return self.write(cr, uid, ids, {'state': 'cancel'}, context=context)
 
     def tender_in_progress(self, cr, uid, ids, context=None):
         return self.write(cr, uid, ids, {'state':'in_progress'} ,context=context)
