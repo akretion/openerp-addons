@@ -67,32 +67,42 @@ class purchase_requisition(osv.osv):
         return super(purchase_requisition, self).copy(cr, uid, id, default, context)
 
     def unlink(self, cr, uid, ids, context=None):
+        """
+        Deletes Requisition and related RFQs 
+        """
+        if context is None: context = {}
         purchase_obj = self.pool.get('purchase.order')
-        unlink_ids = []
-        purchase_ids = []
-        for requisition in self.browse(cr, uid, ids, context=context):
-            if requisition.state != 'cancel':
-                raise osv.except_osv(_('Invalid Action!'),
-                _('In order to delete requisition: %s, you must cancel it first') % requisition.name)
-            unlink_ids.append(requisition.id)
-            purchase_ids.extend(purchase.id for purchase in requisition.purchase_ids)
+        purchase_ids = self._requisition_procurement_cancel(cr, uid, ids, context=context)
         if purchase_ids:
             purchase_obj.unlink(cr, uid, purchase_ids, context=context)
-        return super(purchase_requisition, self).unlink(cr, uid, unlink_ids, context=context)
-    
-    def tender_cancel(self, cr, uid, ids, context=None):
-        purchase_order_obj = self.pool.get('purchase.order')
-        procurement_obj = self.pool.get('procurement.order')
-        procurements_to_cancel = []
+        return super(purchase_requisition, self).unlink(cr, uid, ids, context=context)
+
+    def _requisition_procurement_cancel(self, cr, uid, ids, context=None):
+        """
+        Cancels procurement order related to requisition
+        @param ids: requisition ids
+        @return: Returns purchase orders associated with requisition if any
+        """
+        if context is None: context = {}
         purchase_ids = []
+        procurement_ids = []
+        procurement_obj = self.pool.get('procurement.order')
         for requisition in self.browse(cr, uid, ids, context=context):
             purchase_ids.extend(purchase.id for purchase in requisition.purchase_ids)
-            procurements_to_cancel.extend(procurement_obj.search(cr, uid,\
+            if requisition.state == 'cancel':
+                continue
+            procurement_ids.extend(procurement_obj.search(cr, uid,
                 [('requisition_id', '=', requisition.id)], context=context))
+        if procurement_ids:
+            procurement_obj.action_cancel(cr, uid, procurement_ids)
+        return purchase_ids
+
+    def tender_cancel(self, cr, uid, ids, context=None):
+        if context is None: context = {}
+        purchase_order_obj = self.pool.get('purchase.order')
+        purchase_ids = self._requisition_procurement_cancel(cr, uid, ids, context=context)
         if purchase_ids:
             purchase_order_obj.action_cancel(cr, uid, purchase_ids, context=context)
-        if procurements_to_cancel:
-            procurement_obj.action_cancel(cr, uid, procurements_to_cancel)
         return self.write(cr, uid, ids, {'state': 'cancel'}, context=context)
 
     def tender_in_progress(self, cr, uid, ids, context=None):
