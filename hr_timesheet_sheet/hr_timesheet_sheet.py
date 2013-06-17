@@ -201,21 +201,18 @@ class hr_timesheet_sheet(osv.osv):
         user = self.pool['res.users'].browse(cr, uid, uid, context=context)
         tm_range = user.company_id.timesheet_range or 'month'
         if tm_range == 'week':
-            label = 'Week '
-            tformat = '%U'
+            tformat = _('Week %U')
         elif tm_range == 'month':
-            label = 'Month '
-            tformat = '%m'
+            tformat = _('Month %m')
         elif tm_range == 'day':
-            label = ''
-            tformat = user.lang.date_format
+            tformat = user.lang.date_format if user.lang.date_format else '%Y-%m-%d'
         else:
             raise ValueError(_('Unsupported timesheet range: %s') % tm_range)
         if not ids:
             return []
         if isinstance(ids, (long, int)):
             ids = [ids]
-        return [(r['id'], _(label) + datetime.strptime(r['date_from'], '%Y-%m-%d').strftime(tformat))
+        return [(r['id'], datetime.strptime(r['date_from'], '%Y-%m-%d').strftime(tformat))
                 for r in self.read(cr, uid, ids, ['date_from'],
                                    context=context, load='_classic_write')]
 
