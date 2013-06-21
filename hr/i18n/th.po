@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:36+0000\n"
-"PO-Revision-Date: 2013-06-18 09:02+0000\n"
+"PO-Revision-Date: 2013-06-20 13:48+0000\n"
 "Last-Translator: Sumonchai ( เหลา ) <sumonchai@gmail.com>\n"
 "Language-Team: Thai <th@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-06-19 06:16+0000\n"
-"X-Generator: Launchpad (build 16673)\n"
+"X-Launchpad-Export-Date: 2013-06-21 06:06+0000\n"
+"X-Generator: Launchpad (build 16677)\n"
 
 #. module: hr
 #: model:process.node,name:hr.process_node_openerpuser0
@@ -65,7 +65,7 @@ msgstr ""
 #. module: hr
 #: view:hr.config.settings:0
 msgid "Time Tracking"
-msgstr "การติดตามเวลา"
+msgstr "ติดตามเวลา"
 
 #. module: hr
 #: view:hr.employee:0
@@ -81,7 +81,7 @@ msgstr "สร้างแผนกของคุณ"
 #. module: hr
 #: help:hr.job,no_of_employee:0
 msgid "Number of employees currently occupying this job position."
-msgstr "ตำแหน่งนี้ มีจำนวนพนักงาน"
+msgstr "ตำแหน่งนี้ มีพนักงาน"
 
 #. module: hr
 #: field:hr.config.settings,module_hr_evaluation:0
@@ -101,7 +101,7 @@ msgstr "แผนก"
 #. module: hr
 #: field:hr.employee,work_email:0
 msgid "Work Email"
-msgstr "อีเมลที่ทำงาน"
+msgstr "อีเมล์ที่ทำงาน"
 
 #. module: hr
 #: help:hr.employee,image:0
@@ -113,7 +113,7 @@ msgstr "ภาพที่นำมาใช้เป็นภาพสำหร
 #. module: hr
 #: help:hr.config.settings,module_hr_holidays:0
 msgid "This installs the module hr_holidays."
-msgstr "จะติดตั้งโมดูล hr_holidays"
+msgstr "ติดตั้งโมดูล hr_holidays"
 
 #. module: hr
 #: view:hr.job:0
@@ -123,7 +123,7 @@ msgstr "งาน"
 #. module: hr
 #: view:hr.job:0
 msgid "In Recruitment"
-msgstr "อยู่ในการรับสมัครงาน"
+msgstr "อยู่ระหว่างรับสมัครงาน"
 
 #. module: hr
 #: field:hr.job,message_unread:0
@@ -141,7 +141,7 @@ msgstr "บริษัท"
 #. module: hr
 #: field:hr.job,no_of_recruitment:0
 msgid "Expected in Recruitment"
-msgstr "ที่คาดหวังในการสรรหา"
+msgstr "คาดหวังในการสรรหา"
 
 #. module: hr
 #: view:hr.employee:0
@@ -156,7 +156,7 @@ msgstr "ข้อผิดพลาด! คุณไม่สามารถส�
 #. module: hr
 #: help:hr.config.settings,module_hr_recruitment:0
 msgid "This installs the module hr_recruitment."
-msgstr "ต้องติดตั้งโมดูล hr_recruitment."
+msgstr "ติดตั้งโมดูล hr_recruitment."
 
 #. module: hr
 #: view:hr.employee:0
@@ -182,7 +182,7 @@ msgstr "เชื่อมโยงผู้ใช้กับพนักงา
 #. module: hr
 #: field:hr.department,parent_id:0
 msgid "Parent Department"
-msgstr "ขึ้นกับ"
+msgstr "ภายใต้สังกัด"
 
 #. module: hr
 #: model:ir.ui.menu,name:hr.menu_open_view_attendance_reason_config
@@ -244,7 +244,7 @@ msgstr "ภาพขนาดกลาง"
 #. module: hr
 #: field:hr.employee,identification_id:0
 msgid "Identification No"
-msgstr "หมายเลข ระบุไม่ได้"
+msgstr "หมายเลข บัตรประชาชน"
 
 #. module: hr
 #: selection:hr.employee,gender:0
@@ -332,6 +332,7 @@ msgid ""
 "This installs the module account_analytic_analysis, which will install sales "
 "management too."
 msgstr ""
+"โมดูล account_analytic_analysis จะติดตั้ง ซึ่งจะติดตั้งการจัดการการขายด้วย"
 
 #. module: hr
 #: view:board.board:0
@@ -383,7 +384,7 @@ msgstr "หย่าร้าง"
 #. module: hr
 #: field:hr.employee.category,parent_id:0
 msgid "Parent Category"
-msgstr "กลุ่มหลัก"
+msgstr "หมวดหมู่หลัก"
 
 #. module: hr
 #: view:hr.department:0
@@ -436,11 +437,13 @@ msgid ""
 "$('.oe_employee_picture').load(function() { if($(this).width() > "
 "$(this).height()) { $(this).addClass('oe_employee_picture_wide') } });"
 msgstr ""
+"$('.oe_employee_picture').load(function() { if($(this).width() > "
+"$(this).height()) { $(this).addClass('oe_employee_picture_wide') } });"
 
 #. module: hr
 #: help:hr.config.settings,module_hr_evaluation:0
 msgid "This installs the module hr_evaluation."
-msgstr "จะติดตตั้งโมดูล hr_evaluation."
+msgstr "ติดตตั้งโมดูล hr_evaluation."
 
 #. module: hr
 #: constraint:hr.employee:0
@@ -450,7 +453,7 @@ msgstr "ข้อผิดพลาด! คุณไม่สามารถส�
 #. module: hr
 #: help:hr.config.settings,module_hr_attendance:0
 msgid "This installs the module hr_attendance."
-msgstr "โมดูล hr_attendance จะติดตั้ง"
+msgstr "ติดตั้งโมดูล hr_attendance"
 
 #. module: hr
 #: field:hr.employee,image_small:0
@@ -461,7 +464,7 @@ msgstr "ภาพขนาดเล็ก"
 #: view:hr.employee.category:0
 #: model:ir.model,name:hr.model_hr_employee_category
 msgid "Employee Category"
-msgstr "ประเภทของพนักงาน"
+msgstr "หมวดหมู่พนักงาน"
 
 #. module: hr
 #: field:hr.employee,category_ids:0
@@ -471,7 +474,7 @@ msgstr "แท็ก"
 #. module: hr
 #: help:hr.config.settings,module_hr_contract:0
 msgid "This installs the module hr_contract."
-msgstr "โมดูล  hr_contract จะติดตั้ง"
+msgstr "ติดตั้งโมดูล  hr_contract"
 
 #. module: hr
 #: view:hr.employee:0
@@ -486,7 +489,7 @@ msgstr "หรือ"
 #. module: hr
 #: field:hr.employee.category,name:0
 msgid "Category"
-msgstr "กลุ่ม"
+msgstr "หมวดหมู่"
 
 #. module: hr
 #: view:hr.job:0
@@ -496,12 +499,12 @@ msgstr "หยุดการสรรหา"
 #. module: hr
 #: field:hr.config.settings,module_hr_attendance:0
 msgid "Install attendances feature"
-msgstr "ติดตั้งคุณสมบัติ การเข้าทำงานงาน"
+msgstr "ติดตั้งคุณสมบัติ การเข้าทำงาน"
 
 #. module: hr
 #: help:hr.employee,bank_account_id:0
 msgid "Employee bank salary account"
-msgstr "หมาเลขบัญชีธนาคารพนักงาน"
+msgstr "หมายเลขบัญชีธนาคารพนักงาน"
 
 #. module: hr
 #: field:hr.department,note:0
@@ -531,7 +534,7 @@ msgstr "จัดการวันหยุด, การลา และ ค�
 #. module: hr
 #: field:hr.department,child_ids:0
 msgid "Child Departments"
-msgstr "ดูแล แผนก"
+msgstr "หน่วยงานในสังกัด"
 
 #. module: hr
 #: view:hr.employee:0
@@ -714,7 +717,7 @@ msgstr ""
 #. module: hr
 #: help:hr.config.settings,module_hr_timesheet:0
 msgid "This installs the module hr_timesheet."
-msgstr "โมดูล hr_timesheet จะถูกติดตั้ง"
+msgstr "ติดตั้งโมดูล hr_timesheet"
 
 #. module: hr
 #: help:hr.job,expected_employees:0
@@ -812,7 +815,7 @@ msgstr "ในตำแหน่ง"
 #. module: hr
 #: help:hr.config.settings,module_hr_payroll:0
 msgid "This installs the module hr_payroll."
-msgstr "โมดุล hr_payroll จะติดตั้ง"
+msgstr "ติดตั้งโมดุล hr_payroll"
 
 #. module: hr
 #: field:hr.config.settings,module_hr_contract:0
@@ -837,12 +840,12 @@ msgstr "คุณสมบัติเพิ่มเติม"
 #. module: hr
 #: field:hr.employee,notes:0
 msgid "Notes"
-msgstr "หมายเหตุ"
+msgstr "บันทึกย่อ"
 
 #. module: hr
 #: model:ir.actions.act_window,name:hr.action2
 msgid "Subordinate Hierarchy"
-msgstr "ลำดับชั้นของผู้ใต้บังคับบัญชา"
+msgstr "ลำดับรองลงมา"
 
 #. module: hr
 #: field:hr.employee,resource_id:0
@@ -890,13 +893,13 @@ msgstr "รายงาน"
 #. module: hr
 #: field:hr.config.settings,module_hr_payroll:0
 msgid "Manage payroll"
-msgstr "จัดการบัญชีค่าใช้จ่าย"
+msgstr "จัดการบัญชีเงินเดือน"
 
 #. module: hr
 #: view:hr.config.settings:0
 #: model:ir.actions.act_window,name:hr.action_human_resources_configuration
 msgid "Configure Human Resources"
-msgstr "กำหนดค่าทรัพยากรบุคคล"
+msgstr "ตั้งค่าทรัพยากรบุคคล"
 
 #. module: hr
 #: selection:hr.job,state:0
@@ -911,7 +914,7 @@ msgstr "หมายเลขประกันสังคม"
 #. module: hr
 #: model:process.node,note:hr.process_node_openerpuser0
 msgid "Creation of a OpenERP user"
-msgstr "การสร้างผู้ใช้OpenERP"
+msgstr "การสร้างผู้ใช้ OpenERP"
 
 #. module: hr
 #: field:hr.employee,login:0
@@ -921,7 +924,7 @@ msgstr "เข้าสู่ระบบ"
 #. module: hr
 #: field:hr.job,expected_employees:0
 msgid "Total Forecasted Employees"
-msgstr "พนักงานที่คาดการณ์ไว้ทั้งหมด"
+msgstr "จำนวนพนักงานที่ต้องการสรรหา"
 
 #. module: hr
 #: help:hr.job,state:0
@@ -974,7 +977,7 @@ msgstr "ชื่อของตำแหน่งงานจะต้องไ
 #. module: hr
 #: help:hr.config.settings,module_hr_expense:0
 msgid "This installs the module hr_expense."
-msgstr "จะติดตั้งโมดูล module hr_expense."
+msgstr "ติดตั้งโมดูล module hr_expense."
 
 #. module: hr
 #: model:ir.model,name:hr.model_hr_config_settings
@@ -1001,4 +1004,4 @@ msgstr "ผู้ใต้บังคับบัญชา"
 #. module: hr
 #: view:hr.config.settings:0
 msgid "Apply"
-msgstr "ปรับใช้"
+msgstr "นำไปใช้"
