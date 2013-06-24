@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-06-23 05:24+0000\n"
+"X-Launchpad-Export-Date: 2013-06-24 04:56+0000\n"
 "X-Generator: Launchpad (build 16677)\n"
 
 #. module: l10n_be_hr_payroll
@@ -40,7 +40,7 @@ msgstr "员工"
 #. module: l10n_be_hr_payroll
 #: field:hr.employee,disabled_spouse_bool:0
 msgid "Disabled Spouse"
-msgstr ""
+msgstr "残疾人配偶"
 
 #. module: l10n_be_hr_payroll
 #: field:hr.contract,retained_net_amount:0
@@ -50,12 +50,12 @@ msgstr ""
 #. module: l10n_be_hr_payroll
 #: field:hr.employee,resident_bool:0
 msgid "Nonresident"
-msgstr ""
+msgstr "非常住人口"
 
 #. module: l10n_be_hr_payroll
 #: help:hr.employee,resident_bool:0
 msgid "if recipient lives in a foreign country"
-msgstr ""
+msgstr "如果接受者居住在国外"
 
 #. module: l10n_be_hr_payroll
 #: view:hr.employee:0
@@ -75,17 +75,17 @@ msgstr ""
 #. module: l10n_be_hr_payroll
 #: selection:hr.employee,spouse_fiscal_status:0
 msgid "With Income"
-msgstr ""
+msgstr "有收入"
 
 #. module: l10n_be_hr_payroll
 #: selection:hr.employee,spouse_fiscal_status:0
 msgid "Without Income"
-msgstr ""
+msgstr "无收入"
 
 #. module: l10n_be_hr_payroll
 #: field:hr.employee,disabled_children_number:0
 msgid "Number of disabled children"
-msgstr ""
+msgstr "残疾儿童个数"
 
 #. module: l10n_be_hr_payroll
 #: field:hr.contract,additional_net_amount:0
@@ -115,12 +115,12 @@ msgstr ""
 #. module: l10n_be_hr_payroll
 #: field:hr.employee,disabled_children_bool:0
 msgid "Disabled Children"
-msgstr ""
+msgstr "残疾儿童"
 
 #. module: l10n_be_hr_payroll
 #: model:ir.model,name:l10n_be_hr_payroll.model_hr_contract
 msgid "Contract"
-msgstr ""
+msgstr "合约"
 
 #. module: l10n_be_hr_payroll
 #: field:hr.contract,meal_voucher_amount:0
@@ -130,7 +130,7 @@ msgstr ""
 #. module: l10n_be_hr_payroll
 #: field:hr.contract,travel_reimbursement_amount:0
 msgid "Reimbursement of travel expenses"
-msgstr ""
+msgstr "差旅花费补贴"
 
 #. module: l10n_be_hr_payroll
 #: constraint:hr.contract:0
@@ -140,7 +140,7 @@ msgstr ""
 #. module: l10n_be_hr_payroll
 #: field:hr.employee,spouse_fiscal_status:0
 msgid "Tax status for spouse"
-msgstr ""
+msgstr "配偶缴税状态"
 
 #. module: l10n_be_hr_payroll
 #: view:hr.contract:0
