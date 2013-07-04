@@ -73,11 +73,11 @@ class hr_analytic_timesheet(osv.osv):
     _order = "date_aal DESC, account_name ASC"
 
     def _get_account_analytic_line(self, cr, uid, ids, context=None):
-        ts_line_ids = self.pool.get('hr.analytic.timesheet').search(cr, uid, [('line_id', 'in', ids)])
+        ts_line_ids = self.pool.get('hr.analytic.timesheet').search(cr, uid, [('line_id', 'in', ids)], context=context)
         return ts_line_ids
 
     def _get_account_analytic_account(self, cr, uid, ids, context=None):
-        ts_line_ids = self.pool.get('hr.analytic.timesheet').search(cr, uid, [('account_id', 'in', ids)])
+        ts_line_ids = self.pool.get('hr.analytic.timesheet').search(cr, uid, [('account_id', 'in', ids)], context=context)
         return ts_line_ids
 
     _columns = {
