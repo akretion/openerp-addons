@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:36+0000\n"
-"PO-Revision-Date: 2013-04-07 15:28+0000\n"
+"PO-Revision-Date: 2013-07-06 06:16+0000\n"
 "Last-Translator: gobi <Unknown>\n"
 "Language-Team: Mongolian <mn@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-06-08 07:11+0000\n"
-"X-Generator: Launchpad (build 16667)\n"
+"X-Launchpad-Export-Date: 2013-07-06 06:17+0000\n"
+"X-Generator: Launchpad (build 16696)\n"
 
 #. module: account_followup
 #: model:email.template,subject:account_followup.email_template_account_followup_default
@@ -690,6 +690,8 @@ msgid ""
 "He said the problem was temporary and promised to pay 50% before 15th of "
 "May, balance before 1st of July."
 msgstr ""
+"Түр зуур асуудалтай байгаа бөгөөд 50%-г нь 5 сарын 15-с өмнө, үлдсэнийг нь 7 "
+"сарын 1-нд төлөхөөр амласан байгаа."
 
 #. module: account_followup
 #: view:res.partner:0
@@ -720,7 +722,7 @@ msgstr "Мөшгөлтийн түвшингүүдийн өдөрүүд нь ял
 #. module: account_followup
 #: view:res.partner:0
 msgid "Click to mark the action as done."
-msgstr ""
+msgstr "Арга хэмжээг хийгдсэнээр тэмдэглэхдээ дарна уу."
 
 #. module: account_followup
 #: model:ir.ui.menu,name:account_followup.menu_action_followup_stat_follow
@@ -730,7 +732,7 @@ msgstr "Мөшгөлтийн анализ"
 #. module: account_followup
 #: view:res.partner:0
 msgid "Action to be taken e.g. Give a phonecall, Check if it's paid, ..."
-msgstr ""
+msgstr "Авах арга хэмжээ. Жишээлбэл: утсаар ярих, төлсөн эсэхийг шалгах..."
 
 #. module: account_followup
 #: help:res.partner,payment_next_action_date:0
@@ -740,17 +742,22 @@ msgid ""
 "action. Can be practical to set manually e.g. to see if he keeps his "
 "promises."
 msgstr ""
+"Энэ нь гар мөшгилт шаардлагатай тохиолдол юм. Харилцагч нь гар мөшгилт "
+"хэрэгтэй түвшинд хүрсэн бол огноо нь одоогийн огноогоор тохируулагдана. "
+"Гараараа амлалт дээр нь үндэслэн өөрчилж болно."
 
 #. module: account_followup
 #: view:res.partner:0
 msgid "Print overdue payments report independent of follow-up line"
 msgstr ""
+"Мөшгөлтийн мөрөөс үл хамааруулан хугацаа хэтэрсэн төлбөрийн тайланг хэвлэх"
 
 #. module: account_followup
 #: help:account_followup.print,date:0
 msgid ""
 "This field allow you to select a forecast date to plan your follow-ups"
 msgstr ""
+"Энэ талбар нь мөшгилтийг төлөвлөх ирээдүйн огноог сонгоход ашиглагддаг"
 
 #. module: account_followup
 #: field:account_followup.print,date:0
@@ -798,6 +805,35 @@ msgid ""
 "</div>\n"
 "            "
 msgstr ""
+"\n"
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-"
+"serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, "
+"255, 255); \">\n"
+"    \n"
+"    <p>Эрхэм ${object.name},</p>\n"
+"    <p>\n"
+"    Танд олон удаа сануулсан боловч тооцоо дуусаагүй хэвээр байна.\n"
+"8 хоногийн хугацаанд бүрэн төлбөр хийгдэхгүй бол дахин мэдэгдэл үгүйгээр "
+"хуулийн арга хэмжээнд шилжих болно.\n"
+"Төлбөрийн тухай мэдээллийг доор хэвлэлээ.  \n"
+"Үүнтэй холбоотой асуух, магадлах зүйлс байвал санаа зоволгүйгээр манай "
+"санхүүгийн албатай холбогдоно уу.\n"
+"</p>\n"
+"<br/>\n"
+"Хүндэтгэсэн\n"
+"<br/>\n"
+"<br/>\n"
+"${user.name}\n"
+"<br/>\n"
+"<br/>\n"
+"\n"
+"\n"
+"${object.get_followup_table_html() | safe}\n"
+"\n"
+"    <br/>\n"
+"\n"
+"</div>\n"
+"            "
 
 #. module: account_followup
 #: report:account_followup.followup.print:0
@@ -830,11 +866,23 @@ msgid ""
 "Best Regards,\n"
 "            "
 msgstr ""
+"\n"
+"Эрхэм ${object.name},\n"
+"\n"
+"Танд олон удаа сануулсан боловч тооцоо дуусаагүй хэвээр байна.\n"
+"8 хоногийн хугацаанд бүрэн төлбөр хийгдэхгүй бол дахин мэдэгдэл үгүйгээр "
+"хуулийн арга хэмжээнд шилжих болно.\n"
+"Төлбөрийн тухай мэдээллийг доор хэвлэлээ.  \n"
+"Үүнтэй холбоотой асуух, магадлах зүйлс байвал санаа зоволгүйгээр манай "
+"санхүүгийн албатай холбогдоно уу.\n"
+"\n"
+"Хүндэтгэсэн\n"
+"            "
 
 #. module: account_followup
 #: field:res.partner,payment_amount_due:0
 msgid "Amount Due"
-msgstr ""
+msgstr "Хугацаа хэтэрсэн дүн"
 
 #. module: account_followup
 #: field:account.move.line,followup_date:0
@@ -844,7 +892,7 @@ msgstr "Сүүлийн Мөшгөлт"
 #. module: account_followup
 #: view:account_followup.sending.results:0
 msgid "Download Letters"
-msgstr ""
+msgstr "Захидалуудыг татах"
 
 #. module: account_followup
 #: field:account_followup.print,company_id:0
