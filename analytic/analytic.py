@@ -271,7 +271,7 @@ class account_analytic_account(osv.osv):
                             limit=limit, context=context)
                     if not account:
                         break
-                    dom = [('parent_id','in',account_ids)]
+                    dom = [('parent_id','in',account)]
         else:
             account = self.search(cr, uid, args, limit=limit, context=context)
         return self.name_get(cr, uid, account, context=context)
