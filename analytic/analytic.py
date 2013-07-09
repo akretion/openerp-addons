@@ -267,7 +267,7 @@ class account_analytic_account(osv.osv):
                 for name2 in map(lambda i : i.strip(),name.split('/')):
                     account = self.search(
                             cr, uid, 
-                            dom + [('name', 'ilike', name)] + args,
+                            dom + [('name', 'ilike', name2)] + args,
                             limit=limit, context=context)
                     if not account:
                         break
