@@ -14,8 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-06-08 07:15+0000\n"
-"X-Generator: Launchpad (build 16667)\n"
+"X-Launchpad-Export-Date: 2013-07-11 05:52+0000\n"
+"X-Generator: Launchpad (build 16696)\n"
 
 #. module: base_calendar
 #: selection:calendar.alarm,trigger_related:0
@@ -42,7 +42,7 @@ msgstr "这属性定义循环日程的日期/时间异常列表。"
 #: selection:calendar.todo,rrule_type:0
 #: selection:crm.meeting,rrule_type:0
 msgid "Week(s)"
-msgstr ""
+msgstr "周"
 
 #. module: base_calendar
 #: field:calendar.event,we:0
@@ -473,7 +473,7 @@ msgstr "日期"
 #. module: base_calendar
 #: field:crm.meeting,message_follower_ids:0
 msgid "Followers"
-msgstr ""
+msgstr "关注者"
 
 #. module: base_calendar
 #: field:calendar.event,location:0
@@ -561,7 +561,7 @@ msgstr "Caldav 服务的URL"
 #. module: base_calendar
 #: model:ir.model,name:base_calendar.model_mail_wizard_invite
 msgid "Invite wizard"
-msgstr ""
+msgstr "邀请向导"
 
 #. module: base_calendar
 #: selection:calendar.event,month_list:0
@@ -585,7 +585,7 @@ msgstr "周四"
 #. module: base_calendar
 #: view:crm.meeting:0
 msgid "Meeting Details"
-msgstr ""
+msgstr "会议详情"
 
 #. module: base_calendar
 #: field:calendar.attendee,child_ids:0
@@ -603,14 +603,14 @@ msgstr "下列联系人没有电子邮件地址："
 #: selection:calendar.todo,rrule_type:0
 #: selection:crm.meeting,rrule_type:0
 msgid "Year(s)"
-msgstr ""
+msgstr "年"
 
 #. module: base_calendar
 #: view:crm.meeting.type:0
 #: model:ir.actions.act_window,name:base_calendar.action_crm_meeting_type
 #: model:ir.ui.menu,name:base_calendar.menu_crm_meeting_type
 msgid "Meeting Types"
-msgstr ""
+msgstr "会议类型"
 
 #. module: base_calendar
 #: field:calendar.event,create_date:0
@@ -628,7 +628,7 @@ msgstr "全员可见"
 #. module: base_calendar
 #: view:crm.meeting:0
 msgid "hours"
-msgstr ""
+msgstr "小时"
 
 #. module: base_calendar
 #: view:calendar.event:0
@@ -655,7 +655,7 @@ msgstr "重复直到"
 #. module: base_calendar
 #: view:crm.meeting:0
 msgid "Options"
-msgstr ""
+msgstr "选项"
 
 #. module: base_calendar
 #: selection:calendar.event,byday:0
@@ -694,7 +694,7 @@ msgstr "周二"
 #. module: base_calendar
 #: field:crm.meeting,categ_ids:0
 msgid "Tags"
-msgstr ""
+msgstr "标签"
 
 #. module: base_calendar
 #: view:calendar.event:0
