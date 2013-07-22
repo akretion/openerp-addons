@@ -81,6 +81,7 @@ Dashboard / Reports for MRP will include:
 #         'test/order_demo.yml',
 #         'test/order_process.yml',
 #         'test/cancel_order.yml',
+        'test/order_process_prodlot_split.yml',
     ],
     'installable': True,
     'application': True,
