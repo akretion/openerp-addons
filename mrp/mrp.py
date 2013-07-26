@@ -28,6 +28,7 @@ from openerp.tools import DEFAULT_SERVER_DATETIME_FORMAT, DATETIME_FORMATS_MAP
 from openerp.tools import float_compare
 from openerp.tools.translate import _
 from openerp import tools
+from openerp import SUPERUSER_ID
 
 #----------------------------------------------------------
 # Work Centers
@@ -605,8 +606,12 @@ class mrp_production(osv.osv):
         prod_line_obj = self.pool.get('mrp.production.product.line')
         workcenter_line_obj = self.pool.get('mrp.production.workcenter.line')
         for production in self.browse(cr, uid, ids):
-            cr.execute('delete from mrp_production_product_line where production_id=%s', (production.id,))
-            cr.execute('delete from mrp_production_workcenter_line where production_id=%s', (production.id,))
+
+            p_ids = prod_line_obj.search(cr, SUPERUSER_ID, [('production_id', '=', production.id)], context=context)
+            prod_line_obj.unlink(cr, SUPERUSER_ID, p_ids, context=context)
+            w_ids = workcenter_line_obj.search(cr, SUPERUSER_ID, [('production_id', '=', production.id)], context=context)
+            workcenter_line_obj.unlink(cr, SUPERUSER_ID, w_ids, context=context)
+
             bom_point = production.bom_id
             bom_id = production.bom_id.id
             if not bom_point:
