@@ -75,7 +75,7 @@ class stock_picking(osv.osv):
             :param browse_record picking: the stock picking being invoiced
             :param browse_record invoice: the stock picking's invoice
             :return: dict containing the values to create the invoice line,
-                     or None to create nothing
+            or None to create nothing
         """
         carrier_obj = self.pool.get('delivery.carrier')
         grid_obj = self.pool.get('delivery.grid')
@@ -159,6 +159,17 @@ class stock_move(osv.osv):
                             'weight_net': weight_net,
                             }
         return res
+
+    def _prepare_chained_picking(self, cr, uid, picking_name, picking, picking_type, moves_todo, context=None):
+        values = super(stock_move, self)._prepare_chained_picking(cr, uid, picking_name, picking, picking_type, moves_todo, context=context)
+        if picking.carrier_id:
+            values['carrier_id'] = picking.carrier_id.id
+        values['volume'] = picking.volume
+        values['weight'] = picking.weight
+        values['weight_net'] = picking.weight_net
+        values['carrier_tracking_ref'] = picking.carrier_tracking_ref
+        values['number_of_packages'] = picking.number_of_packages
+        return values
 
     _columns = {
         'weight': fields.function(_cal_move_weight, type='float', string='Weight', digits_compute= dp.get_precision('Stock Weight'), multi='_cal_move_weight',
