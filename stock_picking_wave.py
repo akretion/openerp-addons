@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-from openerp.tools.translate import _
 from openerp.osv import fields, osv
-from openerp import workflow
 
 class stock_picking_wave(osv.osv):
     _name = "stock.picking.wave"
@@ -16,33 +14,29 @@ class stock_picking_wave(osv.osv):
 
     def confirm_picking(self, cr, uid, ids, context=None):
         picking_todo = self.pool.get('stock.picking').search(cr, uid, [('wave_id', 'in', ids)], context=context)
-        self.pool.get('stock.picking').action_done(cr, uid, picking_todo, context=context)
-        return True
+        return self.pool.get('stock.picking').action_done(cr, uid, picking_todo, context=context)
 
     def cancel_picking(self, cr, uid, ids, context=None):
         picking_todo = self.pool.get('stock.picking').search(cr, uid, [('wave_id', 'in', ids)], context=context)
-        self.pool.get('stock.picking').action_cancel(cr, uid, picking_todo, context=context)
-        return True
+        return self.pool.get('stock.picking').action_cancel(cr, uid, picking_todo, context=context)
 
     def print_picking(self, cr, uid, ids, context=None):
         '''
         This function print the report for all picking_ids associated to the picking wave
         '''
-        assert len(ids) == 1, 'This option should only be used for a single wave picking at a time.'
-        browse_picking_ids = self.browse(cr, uid, ids, context)[0].picking_ids
         picking_ids = []
-        for picking in browse_picking_ids:
-            picking_ids.append(picking.id)
+        for wave in self.browse(cr, uid, ids, context=context):
+            picking_ids.append([picking.id for picking in wave.picking_ids])
         datas = {
-             'ids': picking_ids,
-             'model': 'stock.picking',
-             'form': self.read(cr, uid, picking_ids[0], context=context)
+            'ids': picking_ids,
+            'model': 'stock.picking',
+            'form': self.read(cr, uid, picking_ids, context=context)
         }
         return {
             'type': 'ir.actions.report.xml',
             'report_name': context.get('report', 'stock.picking.list'),
             'datas': datas,
-            'nodestroy' : True
+            'nodestroy': True
         }
 
 
@@ -51,3 +45,4 @@ class stock_picking(osv.osv):
     _columns = {
         'wave_id': fields.many2one('stock.picking.wave', 'Picking Wave', help='Picking wave associated to this picking'),
     }
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
