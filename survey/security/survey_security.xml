@@ -15,5 +15,8 @@
             <field name="name">Survey / User</field>
             <field name="users" eval="[(4, ref('base.user_root'))]"/>
         </record>
-    </data>
+        <record model="res.groups" id="base.group_survey_invitee">
+            <field name="name">Survey / Invitee</field>
+        </record>
+     </data>
 </openerp>
