@@ -194,6 +194,7 @@ Thanks,''') % (
                                 'groups_id': [[6, 0, [group_id]]],
                                 'action_id': act_id[0],
                                 'survey_id': [[6, 0, survey_ids]],
+                                'partner_id': partner.id,
                                 'tz': context.get('tz'),
                                }
                     user = user_ref.create(cr, uid, res_data)

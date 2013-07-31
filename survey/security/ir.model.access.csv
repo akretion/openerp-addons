@@ -27,8 +27,8 @@ access_survey_page_invitee,survey.page.invitee,model_survey_page,base.group_surv
 access_survey_question_invitee,survey.question.invitee,model_survey_question,base.group_survey_invitee,1,0,0,0
 access_survey_answer_invitee,survey.answer.invitee,model_survey_answer,base.group_survey_invitee,1,0,0,0
 access_survey_response_invitee,survey.response.invitee,model_survey_response,base.group_survey_invitee,1,1,1,0
-access_survey_response_line_invitee,survey.response.line.invitee,model_survey_response_line,base.group_survey_invitee,1,0,1,0
-access_survey_response_answer_invitee,survey.response.answer.invitee,model_survey_response_answer,base.group_survey_invitee,1,0,1,0
+access_survey_response_line_invitee,survey.response.line.invitee,model_survey_response_line,base.group_survey_invitee,1,1,1,0
+access_survey_response_answer_invitee,survey.response.answer.invitee,model_survey_response_answer,base.group_survey_invitee,1,1,1,0
 access_survey_history_invitee,survey.history.invitee,model_survey_history,base.group_survey_invitee,1,0,1,0
 access_survey_question_column_heading_invitee,survey.question.column.heading.invitee,model_survey_question_column_heading,base.group_survey_invitee,1,0,0,0
 access_res_partner_invitee,res.partner.invitee,base.model_res_partner,base.group_survey_invitee,1,0,0,0
