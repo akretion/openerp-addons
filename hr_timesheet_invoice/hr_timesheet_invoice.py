@@ -183,20 +183,21 @@ class account_analytic_line(osv.osv):
             journal_types[line.journal_id.type].add(line.account_id.id)
         for journal_type, account_ids in journal_types.items():
             for account in analytic_account_obj.browse(cr, uid, list(account_ids), context=context):
-                context2 = context.copy()
-                context2['lang'] = account.partner_id.lang
-                # set company_id in context, so the correct default journal will be selected
-                # when creating the invoice 
-                context2['company_id'] = account.company_id.id
-                # set force_company in context so the correct properties are selected 
-                # (eg. income account, receivable account) 
-                context2['force_company'] = account.company_id.id
-                
-                partner = res_partner_obj.browse(cr, uid, account.partner_id.id, context=context2)
-                
+                partner = account.partner_id
+
                 if (not partner) or not (account.pricelist_id):
                     raise osv.except_osv(_('Analytic Account Incomplete!'),
                             _('Contract incomplete. Please fill in the Customer and Pricelist fields.'))
+                context2 = context.copy()
+                context2['lang'] = account.partner_id.lang
+                # set company_id in context, so the correct default journal will be selected
+                # when creating the invoice
+                context2['company_id'] = account.company_id.id
+                # set force_company in context so the correct properties are selected
+                # (eg. income account, receivable account)
+                context2['force_company'] = account.company_id.id
+
+                partner = res_partner_obj.browse(cr, uid, account.partner_id.id, context=context2)
 
                 date_due = False
                 if partner.property_payment_term:
