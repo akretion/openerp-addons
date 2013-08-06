@@ -2,7 +2,6 @@
 
 from openerp.addons.web import http
 from openerp.addons.web.http import request
-from openerp.addons.website import website
 import werkzeug
 from openerp.tools.translate import _
 from openerp.tools.safe_eval import safe_eval
@@ -15,17 +14,18 @@ class website_mail(http.Controller):
 
     @http.route(['/blog', '/blog/<int:mail_group_id>', '/blog/<int:mail_group_id>/<int:blog_id>'], type='http', auth="public")
     def blog(self, mail_group_id=None, blog_id=None, **post):
+        website = request.registry['website']
         group_obj = request.registry['mail.group']
         message_obj = request.registry['mail.message']
 
-        values = {
+        values = website.get_rendering_context({
             'blog_ids': None,
             'blog_id': None,
             'nav_list': dict(),
             'prev_date': None,
             'next_date': None,
             'mail_group_id': mail_group_id,
-        }
+        })
         domain = mail_group_id and [("res_id", "=", mail_group_id)] or []
 
         for group in message_obj.read_group(request.cr, request.uid, domain + group_obj.get_public_blog(request.cr, request.uid), ['subject', 'date'], groupby="date", orderby="create_date asc"):
@@ -49,11 +49,8 @@ class website_mail(http.Controller):
 
         if blog_id:
             values['blog_id'] = message_obj.browse(request.cr, request.uid, blog_id)
-            comment_ids = [child_id.id for child_id in values['blog_id'].child_ids]
-            values['comments'] = message_obj.read(request.cr, request.uid, comment_ids, ['website_published', 'author_id', 'date', 'body'])
 
-        html = website.render("website_mail.index", values)
-        return html
+        return website.render("website_mail.index", values)
 
     @http.route(['/blog/nav'], type='http', auth="public")
     def nav(self, **post):
@@ -62,7 +59,7 @@ class website_mail(http.Controller):
 
     @http.route(['/blog/publish'], type='http', auth="public")
     def publish(self, **post):
-        message_id = int(post['message_id'])
+        message_id = int(post['id'])
         message_obj = request.registry['mail.message']
 
         blog = message_obj.browse(request.cr, request.uid, message_id)
