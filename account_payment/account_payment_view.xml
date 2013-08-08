@@ -162,7 +162,7 @@
                             <field name="amount_currency" string="Amount" groups="base.group_multi_currency"/>
                             <field name="currency" groups="base.group_multi_currency"/>
                             <field name="name"/>
-                            <field name="amount" sum="Total in Company Currency" invisible="1"/>
+                            <field name="amount" sum="Total in Company Currency"/>
                         </tree>
                     </field>
                     </sheet>
