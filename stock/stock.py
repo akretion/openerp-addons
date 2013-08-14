@@ -140,7 +140,8 @@ class stock_quant(osv.osv):
         """
         res = {}
         for q in self.browse(cr, uid, ids, context=context):
-            res[q.id] = q.product_id.code
+
+            res[q.id] = q.product_id.code or ''
             if q.lot_id:
                 res[q.id] = q.lot_id.name 
             res[q.id] += ': '+  str(q.qty) + q.product_id.uom_id.name
@@ -152,6 +153,7 @@ class stock_quant(osv.osv):
         'location_id': fields.many2one('stock.location', 'Location', required=True),
         'qty': fields.float('Quantity', required=True, help="Quantity of products in this quant, in the default unit of measure of the product"),
         'package_id': fields.many2one('stock.quant.package', string='Package', help="The package containing this quant"),
+        'packaging_type_id': fields.related('package_id', 'packaging_id', type='many2one', relation='product.packaging', string='Type of packaging', store=True),
         'reservation_id': fields.many2one('stock.move', 'Reserved for Move', help="Is this quant reserved for a stock.move?"),
         'lot_id': fields.many2one('stock.production.lot', 'Lot'),
         'cost': fields.float('Unit Cost'),
@@ -903,6 +905,21 @@ class stock_move(osv.osv):
                 res[move.id] = [q.id for q in move.reserved_quant_ids]
         return res
 
+    def _get_product_availability(self, cr, uid, ids, field_name, args, context=None):
+        quant_obj = self.pool.get('stock.quant')
+        res = dict.fromkeys(ids, False)
+        for move in self.browse(cr, uid, ids, context=context):
+            if move.state == 'done':
+                res[move.id] = move.product_qty
+            else:
+                sublocation_ids = self.pool.get('stock.location').search(cr, uid, [('id', 'child_of', [move.location_id.id])], context=context)
+                quant_ids = quant_obj.search(cr, uid, [('location_id', 'in', sublocation_ids), ('product_id', '=', move.product_id.id), ('reservation_id', '=', False)], context=context)
+                availability = 0
+                for quant in quant_obj.browse(cr, uid, quant_ids, context=context):
+                    availability += quant.qty
+                res[move.id] = min(move.product_qty, availability)
+        return res
+
     _columns = {
         'name': fields.char('Description', required=True, select=True),
         'priority': fields.selection([('0', 'Not urgent'), ('1', 'Urgent')], 'Priority'),
@@ -978,6 +995,7 @@ class stock_move(osv.osv):
         'lot_ids': fields.function(_get_lot_ids, type='many2many', relation='stock.quant', string='Lots'),
         'origin_returned_move_id': fields.many2one('stock.move', 'Origin return move', help='move that created the return move'),
         'returned_move_ids': fields.one2many('stock.move', 'origin_returned_move_id', 'All returned moves', help='Optional: all returned moves created from this move'),
+        'availability': fields.function(_get_product_availability, type='float', string='Availability'),
     }
 
     def copy(self, cr, uid, id, default=None, context=None):
@@ -1379,13 +1397,13 @@ class stock_move(osv.osv):
             uos_qty = quantity / move_qty * move.product_uos_qty
             default_val = {
                 'location_id': source_location.id,
-                'product_qty': quantity,
+                'product_uom_qty': quantity,
                 'product_uos_qty': uos_qty,
                 'state': move.state,
                 'scrapped': True,
                 'location_dest_id': location_id,
-                'tracking_id': move.tracking_id.id,
-                'lot_id': move.lot_id.id,
+                #TODO lot_id is now on quant and not on move, need to do something for this
+                #'lot_id': move.lot_id.id,
             }
             new_move = self.copy(cr, uid, move.id, default_val)
 
@@ -1491,16 +1509,6 @@ class stock_move(osv.osv):
             'reserved_quant_ids': []
         }, context=context)
         return new_move
-
-    def get_type_from_usage(self, cr, uid, location, location_dest, context=None):
-        '''
-            Returns the type to be chosen based on the usages of the locations
-        '''
-        if location.usage == 'internal' and location_dest.usage in ['supplier', 'customer']:
-            return 'out'
-        if location.usage in ['supplier', 'customer'] and location_dest.usage == 'internal' :
-            return 'in'
-        return 'internal'
 
 class stock_inventory(osv.osv):
     _name = "stock.inventory"
