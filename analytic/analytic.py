@@ -296,9 +296,13 @@ class account_analytic_account(osv.osv):
         if context is None:
             context={}
         if context.get('current_model') == 'project.project':
-            project_obj = self.pool.get("account.analytic.account")
-            project_ids = project_obj.search(cr, uid, args)
-            return self.name_get(cr, uid, project_ids, context=context)
+            # That's a bad design choice you call a model that may no be installed
+            project_obj = self.pool.get('project.project')
+            project_ids = []
+            aa_ids = self.search(cr, uid, [('name', 'ilike', name)] + args, context=context)
+            if aa_ids:
+                project_ids = project_obj.search(cr, uid, [('analytic_account_id', 'in', aa_ids)], context=context)
+            return project_obj.name_get(cr, uid, project_ids, context=context)
         if name:
             account_ids = self.search(cr, uid, [('code', '=', name)] + args, limit=limit, context=context)
             if not account_ids:
