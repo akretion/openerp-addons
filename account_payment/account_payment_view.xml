@@ -102,6 +102,7 @@
                     </div>
                     <group>
                         <group>
+                            <field name="total"/>
                             <field name="user_id"/>
                             <field name="mode"/>
                         </group>
@@ -159,7 +160,7 @@
                             <field name="bank_id" domain="[('partner_id', '=', partner_id)]"/>
                             <field name="ml_maturity_date"/>
                             <field name="date"/>
-                            <field name="amount_currency" string="Amount" groups="base.group_multi_currency"/>
+                            <field name="amount_currency" string="Amount"/>
                             <field name="currency" groups="base.group_multi_currency"/>
                             <field name="name"/>
                             <field name="amount" sum="Total in Company Currency" invisible="1"/>
