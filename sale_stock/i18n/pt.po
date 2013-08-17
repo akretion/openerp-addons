@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:37+0000\n"
-"PO-Revision-Date: 2013-08-14 17:03+0000\n"
+"PO-Revision-Date: 2013-08-16 14:04+0000\n"
 "Last-Translator: Ricardo Santa Ana <ricardosantana@gmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-15 05:51+0000\n"
+"X-Launchpad-Export-Date: 2013-08-17 06:16+0000\n"
 "X-Generator: Launchpad (build 16723)\n"
 
 #. module: sale_stock
@@ -78,7 +78,7 @@ msgstr "Validar"
 #. module: sale_stock
 #: view:sale.order:0
 msgid "Cancel Order"
-msgstr ""
+msgstr "Cancelar Pedido"
 
 #. module: sale_stock
 #: code:addons/sale_stock/sale_stock.py:209
@@ -244,7 +244,7 @@ msgstr "Opções por Omissão"
 #. module: sale_stock
 #: field:sale.config.settings,module_project_mrp:0
 msgid "Project MRP"
-msgstr ""
+msgstr "Projecto MRP"
 
 #. module: sale_stock
 #: model:process.transition,note:sale_stock.process_transition_invoiceafterdelivery0
@@ -299,7 +299,7 @@ msgstr "Gera facturas depois e baseadas em ordens de entrega"
 #. module: sale_stock
 #: field:sale.config.settings,module_delivery:0
 msgid "Allow adding shipping costs"
-msgstr ""
+msgstr "Permitir adicionar custos de envio"
 
 #. module: sale_stock
 #: view:sale.order:0
@@ -331,11 +331,12 @@ msgstr ""
 #: field:sale.config.settings,default_picking_policy:0
 msgid "Deliver all at once when all products are available."
 msgstr ""
+"Entregrar tudo de uma vez quando todos os productos estiverem disponíveis."
 
 #. module: sale_stock
 #: model:res.groups,name:sale_stock.group_invoice_deli_orders
 msgid "Enable Invoicing Delivery orders"
-msgstr ""
+msgstr "Activar Facturação de ordens de entrega"
 
 #. module: sale_stock
 #: field:res.company,security_lead:0
@@ -357,7 +358,7 @@ msgstr ""
 #: code:addons/sale_stock/sale_stock.py:208
 #, python-format
 msgid "Cannot cancel sales order!"
-msgstr ""
+msgstr "Não é possivel cancelar ordens de venda!"
 
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_sale_shop
@@ -464,7 +465,7 @@ msgstr ""
 #. module: sale_stock
 #: selection:sale.config.settings,default_order_policy:0
 msgid "Invoice based on sales orders"
-msgstr ""
+msgstr "Factura baseada em ordens de venda"
 
 #. module: sale_stock
 #: model:process.node,name:sale_stock.process_node_invoiceafterdelivery0
@@ -533,7 +534,7 @@ msgstr "Incoterm"
 #: code:addons/sale_stock/sale_stock.py:522
 #, python-format
 msgid "Cannot cancel sales order line!"
-msgstr ""
+msgstr "Não é possível cancelar linhas de ordens de venda!"
 
 #. module: sale_stock
 #: model:process.transition.action,name:sale_stock.process_transition_action_cancelassignation0
@@ -596,7 +597,7 @@ msgstr ""
 #. module: sale_stock
 #: view:sale.order:0
 msgid "Recreate Delivery Order"
-msgstr ""
+msgstr "Recriar Ordem de Entrega"
 
 #. module: sale_stock
 #: help:sale.config.settings,group_multiple_shops:0
