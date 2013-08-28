@@ -2999,6 +2999,10 @@ class stock_picking_in(osv.osv):
         # instead of its own workflow (which is not existing)
         return self.pool.get('stock.picking').signal_workflow(cr, uid, ids, signal, context=context)
 
+    def message_post(self, *args, **kwargs):
+        """Post the message on stock.picking to be able to see it in the form view when using the chatter"""
+        return self.pool.get('stock.picking').message_post(*args, **kwargs)
+
     _columns = {
         'backorder_id': fields.many2one('stock.picking.in', 'Back Order of', states={'done':[('readonly', True)], 'cancel':[('readonly',True)]}, help="If this shipment was split, then this field links to the shipment which contains the already processed part.", select=True),
         'state': fields.selection(
@@ -3059,6 +3063,10 @@ class stock_picking_out(osv.osv):
         # overridden in order to fire the workflow signal on given stock.picking workflow instance
         # instead of its own workflow (which is not existing)
         return self.pool.get('stock.picking').signal_workflow(cr, uid, ids, signal, context=context)
+
+    def message_post(self, *args, **kwargs):
+        """Post the message on stock.picking to be able to see it in the form view when using the chatter"""
+        return self.pool.get('stock.picking').message_post(*args, **kwargs)
 
     _columns = {
         'backorder_id': fields.many2one('stock.picking.out', 'Back Order of', states={'done':[('readonly', True)], 'cancel':[('readonly',True)]}, help="If this shipment was split, then this field links to the shipment which contains the already processed part.", select=True),
