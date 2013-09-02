@@ -1,0 +1,25 @@
+language: python
+python:
+  - "2.7"
+virtualenv:
+  system_site_packages: true
+
+before_install:
+ - sudo apt-get install -qq graphviz
+
+services:
+  - postgresql
+
+before_script:
+    - psql -c "CREATE USER openerp WITH PASSWORD 'admin';" -U postgres
+    - psql -c 'create database rsocb with owner openerp;' -U postgres
+
+install:
+    - ./.travis_install_nightly.sh
+
+script:
+    - ./.travis_test_script.sh
+
+notifications:
+  email:
+    - raphael.valyi@akretion.com
