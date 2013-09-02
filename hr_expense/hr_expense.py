@@ -236,10 +236,10 @@ class hr_expense_expense(osv.osv):
                          raise osv.except_osv(_('Error!'), _('Please unreconcile payment accounting entries before cancelling this expense'))
                 ### Then we unlink the move line
                 self.pool.get('account.move').unlink(cr,uid,[expense.account_move_id.id],context=context)
-                wf_service = netsvc.LocalService("workflow")
-                wf_service.trg_delete(uid, 'hr.expense.expense', expense.id, cr)
-                wf_service.trg_create(uid, 'hr.expense.expense', expense.id, cr)
-                wf_service.trg_validate(uid, 'hr.expense.expense', expense.id, 'draft', cr)
+            wf_service = netsvc.LocalService("workflow")
+            wf_service.trg_delete(uid, 'hr.expense.expense', expense.id, cr)
+            wf_service.trg_create(uid, 'hr.expense.expense', expense.id, cr)
+            wf_service.trg_validate(uid, 'hr.expense.expense', expense.id, 'draft', cr)
 
         return True
 
