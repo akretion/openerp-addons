@@ -18,3 +18,4 @@ cd openerp
 python setup.py --quiet install
 cd ..
 git clone --depth=50 https://github.com/akretion/openerp-server.git -b rs-ocb-7.0 server
+git clone --depth=50 https://github.com/akretion/openerp-web.git -b ocb-7.0 web
