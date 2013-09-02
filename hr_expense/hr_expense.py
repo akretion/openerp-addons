@@ -240,7 +240,7 @@ class hr_expense_expense(osv.osv):
                 wf_service.trg_delete(uid, 'hr.expense.expense', expense.id, cr)
                 wf_service.trg_create(uid, 'hr.expense.expense', expense.id, cr)
                 wf_service.trg_validate(uid, 'hr.expense.expense', expense.id, 'draft', cr)
-  
+
         return True
 
 
