@@ -57,6 +57,8 @@ class third_party_ledger(report_sxw.rml_parse, common_report_header):
         return super(third_party_ledger, self)._get_filter(data)
 
     def set_context(self, objects, data, ids, report_type=None):
+        import pdb
+        pdb.set_trace()
         obj_move = self.pool.get('account.move.line')
         obj_partner = self.pool.get('res.partner')
         self.query = obj_move._query_get(self.cr, self.uid, obj='l', context=data['form'].get('used_context', {}))
