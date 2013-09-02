@@ -229,7 +229,7 @@ class hr_expense_expense(osv.osv):
 
     def action_expense_cancel(self, cr, uid, ids, context=None):
         ## We will first check the the move is not reconciled
-        for expense in self.browse(cr,uid,ids):
+        for expense in self.browse(cr,uid,ids, context=context):
             if expense.account_move_id:
                 for move_line in expense.account_move_id.line_id:
                     if move_line.reconcile_id or move_line.reconcile_partial_id:
