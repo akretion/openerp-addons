@@ -234,6 +234,8 @@ class aged_trial_report(report_sxw.rml_parse, common_report_header):
         return res
 
     def _get_lines_with_out_partner(self, form):
+        if self.partner_ids:
+            return []
         res = []
         move_state = ['draft','posted']
         if self.target_move == 'posted':
