@@ -133,16 +133,6 @@ class account_move_line_reconcile_writeoff(osv.osv_memory):
         account_move_line_obj = self.pool.get('account.move.line')
         if context is None:
             context = {}
-        for line in account_move_line_obj.browse(cr, uid, context['active_ids'], context=context):
-            accnt_id = line.account_id.id
-            cr.execute('SELECT l.account_id '\
-                   'FROM account_move_line l '\
-                   'WHERE l.id IN %s '\
-                   'AND l.account_id = l.account_id',
-                   (tuple(context['active_ids']),))
-            for res in cr.fetchall():
-                if res[0] != accnt_id:
-                    raise osv.except_osv(_('User Error!'), _('Journal Items Must Have Same Account'))
         account_move_line_obj.reconcile_partial(cr, uid, context['active_ids'], 'manual', context=context)
         return {'type': 'ir.actions.act_window_close'}
 
@@ -164,16 +154,6 @@ class account_move_line_reconcile_writeoff(osv.osv_memory):
         ids = period_obj.find(cr, uid, dt=date, context=context)
         if ids:
             period_id = ids[0]
-        for line in account_move_line_obj.browse(cr, uid, context['active_ids'], context=context):
-            accnt_id = line.account_id.id
-            cr.execute('SELECT l.account_id '\
-                   'FROM account_move_line l '\
-                   'WHERE l.id IN %s '\
-                   'AND l.account_id = l.account_id',
-                   (tuple(context['active_ids']),))
-            for res in cr.fetchall():
-                if res[0] != accnt_id:
-                    raise osv.except_osv(_('User Error!'), _('Journal Items Must Have Same Account'))
         account_move_line_obj.reconcile(cr, uid, context['active_ids'], 'manual', account_id,
                 period_id, journal_id, context=context)
         return {'type': 'ir.actions.act_window_close'}
