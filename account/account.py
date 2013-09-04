@@ -1702,6 +1702,25 @@ class account_move_reconcile(osv.osv):
     _constraints = [
         (_check_same_partner, 'You can only reconcile journal items with the same partner.', ['line_id']),
     ]
+    # To reconcile journal items must have same account
+    def _check_same_account(self,cr,uid,ids,context=None):
+        for rec_line in self.browse(cr, uid, ids, context=context):
+            move_lines  = []
+            if not rec_line.opening_reconciliation:
+                if rec_line.line_id:
+                    first_account = rec_line.line_id[0].account_id.id
+                    move_lines = rec_line.line_id
+                elif rec_line.line_partial_ids:
+                    first_account = rec_line.line_partial_ids[0].account_id.id
+                    print first_account
+                    move_lines = rec_line.line_partial_ids
+                if any([(line.account_id.type in ('receivable', 'payable') and line.account_id.id != first_account) for line in move_lines]):
+                    return False
+        return True
+        
+    _constraints = [
+        (_check_same_account, 'You can only reconcile journal items with the same account.',['line_id']),
+    ]
     
     def reconcile_partial_check(self, cr, uid, ids, type='auto', context=None):
         total = 0.0
