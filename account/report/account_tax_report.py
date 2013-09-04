@@ -64,11 +64,11 @@ class tax_report(report_sxw.rml_parse, common_report_header):
     def _get_basedon(self, form):
         return form['form']['based_on']
 
-    def _get_lines(self, based_on, company_id=False, parent=False, level=0, context=None):
+    def _get_lines(self, based_on, target_move, company_id=False, parent=False, level=0, context=None):
         period_list = self.period_ids
         res = self._get_codes(based_on, company_id, parent, level, period_list, context=context)
         if period_list:
-            res = self._add_codes(based_on, res, period_list, context=context)
+            res = self._add_codes(based_on, target_move, res, period_list, context=context)
         else:
             self.cr.execute ("select id from account_fiscalyear")
             fy = self.cr.fetchall()
@@ -76,7 +76,7 @@ class tax_report(report_sxw.rml_parse, common_report_header):
             periods = self.cr.fetchall()
             for p in periods:
                 period_list.append(p[0])
-            res = self._add_codes(based_on, res, period_list, context=context)
+            res = self._add_codes(based_on, target_move, res, period_list, context=context)
 
         i = 0
         top_result = []
@@ -171,7 +171,7 @@ class tax_report(report_sxw.rml_parse, common_report_header):
             res += self._get_codes(based_on, company_id, code.id, level+1, context=context)
         return res
 
-    def _add_codes(self, based_on, account_list=None, period_list=None, context=None):
+    def _add_codes(self, based_on, target_move, account_list=None, period_list=None, context=None):
         if account_list is None:
             account_list = []
         if period_list is None:
@@ -181,8 +181,13 @@ class tax_report(report_sxw.rml_parse, common_report_header):
         for account in account_list:
             ids = obj_tc.search(self.cr, self.uid, [('id','=', account[1].id)], context=context)
             sum_tax_add = 0
-            for period_ind in period_list:
-                for code in obj_tc.browse(self.cr, self.uid, ids, {'period_id':period_ind,'based_on': based_on}):
+            for period_id in period_list:
+                ctx = {
+                        'period_id':period_id,
+                        'based_on': based_on,
+                        'state': target_move,
+                        }
+                for code in obj_tc.browse(self.cr, self.uid, ids, context=ctx):
                     sum_tax_add = sum_tax_add + code.sum_period
 
             code.sum_period = sum_tax_add
