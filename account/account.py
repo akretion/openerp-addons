@@ -1699,9 +1699,6 @@ class account_move_reconcile(osv.osv):
                     return False
         return True
 
-    _constraints = [
-        (_check_same_partner, 'You can only reconcile journal items with the same partner.', ['line_id']),
-    ]
     # To reconcile journal items must have same account
     def _check_same_account(self,cr,uid,ids,context=None):
         for rec_line in self.browse(cr, uid, ids, context=context):
@@ -1719,6 +1716,7 @@ class account_move_reconcile(osv.osv):
         return True
         
     _constraints = [
+        (_check_same_partner, 'You can only reconcile journal items with the same partner.', ['line_id']),
         (_check_same_account, 'You can only reconcile journal items with the same account.',['line_id']),
     ]
     
