@@ -59,6 +59,7 @@ class tax_report(report_sxw.rml_parse, common_report_header):
             'get_start_period': self.get_start_period,
             'get_end_period': self.get_end_period,
             'get_basedon': self._get_basedon,
+            'get_target_move': self._get_target_move,
         })
 
     def _get_basedon(self, form):
