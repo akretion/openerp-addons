@@ -183,7 +183,7 @@ class tax_report(report_sxw.rml_parse, common_report_header):
             sum_tax_add = 0
             for period_id in period_list:
                 ctx = {
-                        'period_id':period_id,
+                        'period_id': period_id,
                         'based_on': based_on,
                         'state': target_move,
                         }
