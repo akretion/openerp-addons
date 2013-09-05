@@ -710,8 +710,12 @@ class stock_picking(osv.osv):
             Needed for parameter create
         '''
         self.rereserve(cr, uid, picking_ids, context=context)
-
-
+        
+    #
+    # TODO:rereserve should be improved for giving negative quants when a certain lot is not there
+    # (Suppose you have a pack op for 20 lot B and lot B does not have any quants in the source location
+    # and could be used also instead of do_split
+    #
     def rereserve(self, cr, uid, picking_ids, create=False, context=None):
         """
             This will unreserve all products and reserve the quants from the operations
@@ -2402,11 +2406,10 @@ class stock_picking_type(osv.osv):
         res = []
         if not ids:
             return res
-        reads = self.browse(cr, uid, ids, context=context)
-        for record in reads:
+        for record in self.browse(cr, uid, ids, context=context):
             name = record.name
             if record.warehouse_id:
-                name = record.warehouse_id.name+': '+name
+                name = record.warehouse_id.name + ': ' +name
             res.append((record.id, name))
         return res
 
@@ -2418,7 +2421,7 @@ class stock_picking_type(osv.osv):
     _columns = {
         'name': fields.char('name', translate=True, required=True),
         'pack': fields.boolean('Prefill Pack Operations', help='This picking type needs packing interface'),
-        'auto_force_assign': fields.boolean('Automatic Availability', help='This picking type does\'t need to check for the availability in stock'),
+        'auto_force_assign': fields.boolean('Automatic Availability', help='This picking type does\'t need to check for the availability in source location.'),
         'color': fields.integer('Color Index'),
         'delivery': fields.boolean('Print delivery'),
         'sequence_id': fields.many2one('ir.sequence', 'Sequence', required=True),
