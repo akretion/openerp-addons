@@ -23,3 +23,7 @@ script:
 notifications:
   email:
     - raphael.valyi@akretion.com
+
+branches:
+  only:
+    - rs-ocb-7.0
