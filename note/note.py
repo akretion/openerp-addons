@@ -194,12 +194,8 @@ class res_users(osv.Model):
         model_id = data_obj.get_object_reference(cr, uid, 'base', 'group_user') #Employee Group
         group_id = model_id and model_id[1] or False
         if group_id in [x.id for x in user.groups_id]:
-            for note_xml_id in ['note_stage_00','note_stage_01','note_stage_02','note_stage_03','note_stage_04']:
-                try:
-                    data_id = data_obj._get_id(cr, uid, 'note', note_xml_id)
-                except ValueError:
-                    continue
-                stage_id  = data_obj.browse(cr, uid, data_id, context=context).res_id
-                note_obj.copy(cr, uid, stage_id, default = { 
-                                        'user_id': user_id}, context=context)
+            stage_ids = note_obj.search(cr, uid, [('user_id', '=', uid)], context=context)
+            for stage_id in stage_ids:
+                note_stage_id = note_obj.copy(cr, uid, stage_id, {}, context=context)
+                note_obj.write(cr, uid, [note_stage_id], {'user_id': user_id}, context=context)
         return user_id
