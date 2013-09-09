@@ -401,7 +401,9 @@ class purchase_order(osv.osv):
         action_model, action_id = tuple(mod_obj.get_object_reference(cr, uid, 'stock', 'action_picking_tree'))
         action = self.pool[action_model].read(cr, uid, action_id, context=context)
         active_id = context.get('active_id',ids[0])
-        ctx = eval(action['context'],{'active_id': active_id}, nocopy=True)
+        picking_type_id = self.browse(cr, uid, active_id, context=context)['picking_type_id'].id
+
+        ctx = eval(action['context'],{'active_id': picking_type_id}, nocopy=True)
         ctx.update({
             'search_default_purchase_id': ids[0]
         })
@@ -683,7 +685,11 @@ class purchase_order(osv.osv):
     def _prepare_order_line_move(self, cr, uid, order, order_line, picking_id, context=None):
         ''' prepare the stock move data from the PO line '''
         type_id = self.pool.get('ir.model.data').get_object_reference(cr, uid, 'stock', 'picking_type_in')[1]
-        type = self.pool.get("stock.picking.type").browse(cr, uid, type_id, context=context)
+        price_unit = order_line.price_unit
+        if order_line.product_uom.id != order_line.product_id.uom_id.id:
+            price_unit *= order_line.product_uom.factor
+        if order.currency_id.id != order.company_id.currency_id.id:
+            price_unit = self.pool.get('res.currency').compute(cr, uid, order.currency_id.id, order.company_id.currency_id.id, price_unit, context=context)
 
         return {
             'name': order_line.name or '',
@@ -702,7 +708,7 @@ class purchase_order(osv.osv):
             'state': 'draft',
             'purchase_line_id': order_line.id,
             'company_id': order.company_id.id,
-            'price_unit': order_line.price_unit,
+            'price_unit': price_unit,
             'picking_type_id': type_id, 
         }
 
@@ -743,30 +749,26 @@ class purchase_order(osv.osv):
         return [picking_id]
 
     def test_moves_done(self, cr, uid, ids, context=None):
-        done = True
+        '''PO is done at the delivery side if all the incoming shipments are done'''
         for purchase in self.browse(cr, uid, ids, context=context):
-            for line in purchase.order_line:
-                for move in line.move_ids:
-                    if move.state != 'done':
-                        done = False
-        return done
-        
+            for picking in purchase.picking_ids:
+                if picking.state != 'done':
+                    return False
+        return True
 
     def test_moves_except(self, cr, uid, ids, context=None):
+        ''' PO is in exception at the delivery side if one of the picking is canceled
+            and the other pickings are completed (done or canceled)
         '''
-            If one of the pickings is cancel and the other pickings are done: except
-        '''
-        cancel = False
+        at_least_one_canceled = False
         alldoneorcancel = True
         for purchase in self.browse(cr, uid, ids, context=context):
-            for line in purchase.order_line:
-                for move in line.move_ids:
-                    if move.state == 'cancel':
-                        cancel = True
-                    if move.state not in  ['done', 'cancel']:
-                        alldoneorcancel = False
-        return cancel and alldoneorcancel
-
+            for picking in purchase.picking_ids:
+                if picking.state == 'cancel':
+                    at_least_one_canceled = True
+                if picking.state not in ['done', 'cancel']:
+                    alldoneorcancel = False
+        return at_least_one_canceled and alldoneorcancel
 
     def move_lines_get(self, cr, uid, ids, *args):
         res = []
@@ -774,7 +776,6 @@ class purchase_order(osv.osv):
             for line in order.order_line:
                 res += [x.id for x in line.move_ids]
         return res
-
 
     def action_picking_create(self, cr, uid, ids, context=None):
         picking_ids = []

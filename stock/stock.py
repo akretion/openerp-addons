@@ -231,7 +231,6 @@ class stock_quant(osv.osv):
                 result += self._quants_get_lifo(cr, uid, location, product, qty, domain, prefered_order=prefered_order, context=context)
             else:
                 raise osv.except_osv(_('Error!'), _('Removal strategy %s not implemented.' % (removal_strategy,)))
-        print 'Quant get result', result
         return result
 
     #
@@ -710,8 +709,12 @@ class stock_picking(osv.osv):
             Needed for parameter create
         '''
         self.rereserve(cr, uid, picking_ids, context=context)
-
-
+        
+    #
+    # TODO:rereserve should be improved for giving negative quants when a certain lot is not there
+    # (Suppose you have a pack op for 20 lot B and lot B does not have any quants in the source location
+    # and could be used also instead of do_split
+    #
     def rereserve(self, cr, uid, picking_ids, create=False, context=None):
         """
             This will unreserve all products and reserve the quants from the operations
@@ -774,7 +777,7 @@ class stock_picking(osv.osv):
                             quant_obj.quants_reserve(cr, uid, quants, move, context=context)
                             #In the end, move quants in correct package
                             if create:
-                                quant_obj.write(cr, uid, [x[0].id for x in quants], {'package_id': ops.result_package_id and ops.result_package_id.id or False}, context=context)
+                                quant_obj.write(cr, uid, [x[0].id for x in quants if x[0] != None], {'package_id': ops.result_package_id and ops.result_package_id.id or False}, context=context)
                         res2[move.id] -= qty
                     res[ops.id] = {}
                     res[ops.id][ops.product_id.id] = qty_to_do
@@ -976,13 +979,13 @@ class stock_move(osv.osv):
     _log_create = False
 
     def get_price_unit(self, cr, uid, move, context=None):
-        """ Returns the unit price to store on the move """
+        """ Returns the unit price to store on the quant """
         return move.price_unit or move.product_id.standard_price
 
     def name_get(self, cr, uid, ids, context=None):
         res = []
         for line in self.browse(cr, uid, ids, context=context):
-            name = line.location_id.name+' > '+line.location_dest_id.name
+            name = line.location_id.name + ' > ' + line.location_dest_id.name
             if line.product_id.code:
                 name = line.product_id.code + ': ' + name
             if line.picking_id.origin:
@@ -1012,7 +1015,7 @@ class stock_move(osv.osv):
         uom_obj = self.pool.get('product.uom')
         res = {}
         for m in self.browse(cr, uid, ids, context=context):
-            res[m.id] = uom_obj._compute_qty_obj(cr, uid, m.product_uom, m.product_uom_qty, m.product_id.uom_id)
+            res[m.id] = uom_obj._compute_qty_obj(cr, uid, m.product_uom, m.product_uom_qty, m.product_id.uom_id, round=False)
         return res
 
 #     def _get_remaining_qty(self, cr, uid, ids, field_name, args, context=None):
@@ -1037,7 +1040,6 @@ class stock_move(osv.osv):
             for quant in move.reserved_quant_ids:
                 res[move.id] -= quant.qty
         return res
-    
 
     def _get_lot_ids(self, cr, uid, ids, field_name, args, context=None):
         res = dict.fromkeys(ids, False)
@@ -1123,8 +1125,7 @@ class stock_move(osv.osv):
                        "* Available: When products are reserved, it is set to \'Available\'.\n"\
                        "* Done: When the shipment is processed, the state is \'Done\'."),
 
-        'price_unit': fields.float('Unit Price', help="Technical field used to record the product cost set by the user during a picking confirmation (when average price costing method is used)"),  # as it's a technical field, we intentionally don't provide the digits attribute
-        'price_currency_id': fields.many2one('res.currency', 'Currency for average price', help="Technical field used to record the currency chosen by the user during a picking confirmation (when average price costing method is used)"),
+        'price_unit': fields.float('Unit Price', help="Technical field used to record the product cost set by the user during a picking confirmation (when average price costing method is used). Value given in company currency and in product uom."),  # as it's a technical field, we intentionally don't provide the digits attribute
 
         'company_id': fields.many2one('res.company', 'Company', required=True, select=True),
         'backorder_id': fields.related('picking_id','backorder_id',type='many2one', relation="stock.picking", string="Back Order of", select=True),
@@ -1138,7 +1139,7 @@ class stock_move(osv.osv):
         'reserved_quant_ids': fields.one2many('stock.quant', 'reservation_id', 'Reserved quants'),
         'remaining_qty': fields.function(_get_remaining_qty, type='float', string='Remaining Quantity', 
                                          digits_compute=dp.get_precision('Product Unit of Measure'), states={'done': [('readonly', True)]},
-                                         store = {'stock.move': (lambda self, cr, uid, ids, c={}: ids , ['product_qty', 'product_uom', 'reserved_quant_ids'], 10), 
+                                         store = {'stock.move': (lambda self, cr, uid, ids, c={}: ids , ['product_uom_qty', 'product_uom', 'reserved_quant_ids'], 20), 
                                                   'stock.quant': (_get_move, ['reservation_id'], 10)}),
         'procurement_id': fields.many2one('procurement.order', 'Procurement'),
         'group_id': fields.related('procurement_id', 'group_id', type='many2one', relation="procurement.group", string='Procurement Group'),
@@ -1439,7 +1440,7 @@ class stock_move(osv.osv):
                 done.append(move.id)
                 continue
             else:
-                qty = uom_obj._compute_qty(cr, uid, move.product_uom.id, move.product_qty, move.product_id.uom_id.id)
+                qty = move.product_qty
                 dp = []
                 for m2 in move.move_orig_ids:
                     for q in m2.quant_ids:
@@ -1554,9 +1555,10 @@ class stock_move(osv.osv):
             source_location = move.location_id
             if move.state == 'done':
                 source_location = move.location_dest_id
-            if source_location.usage != 'internal':
+            #Previously used to prevent scraping from virtual location but not necessary anymore
+            #if source_location.usage != 'internal':
                 #restrict to scrap from a virtual location because it's meaningless and it may introduce errors in stock ('creating' new products from nowhere)
-                raise osv.except_osv(_('Error!'), _('Forbidden operation: it is not allowed to scrap products from a virtual location.'))
+                #raise osv.except_osv(_('Error!'), _('Forbidden operation: it is not allowed to scrap products from a virtual location.'))
             move_qty = move.product_qty
             uos_qty = quantity / move_qty * move.product_uos_qty
             default_val = {
@@ -1866,20 +1868,19 @@ class stock_inventory_line(osv.osv):
         'company_id': fields.related('inventory_id', 'company_id', type='many2one', relation='res.company', string='Company', store=True, select=True, readonly=True),
         'prod_lot_id': fields.many2one('stock.production.lot', 'Serial Number', domain="[('product_id','=',product_id)]"),
         'state': fields.related('inventory_id', 'state', type='char', string='Status', readonly=True),
+        'partner_id': fields.many2one('res.partner', 'Owner'),
     }
 
     def _resolve_inventory_line(self, cr, uid, inventory_line, theorical_lines, context=None):
         found = False
-        #first try to match the inventory line with a theorical line with same product, lot and location
+        
         for th_line in theorical_lines:
-            if th_line['location_id'] == inventory_line.location_id.id and th_line['product_id'] == inventory_line.product_id.id and th_line['prod_lot_id'] == inventory_line.prod_lot_id.id:
-                th_line['product_qty'] -= inventory_line.product_qty
-                found = True
-                break
-        #then if the line was not found, try to match the inventory line with a theorical line with same product and location (only if it has no lot information given)
-        if not found:
-            for th_line in theorical_lines:
-                if th_line['location_id'] == inventory_line.location_id.id and th_line['product_id'] == inventory_line.product_id.id and not inventory_line.prod_lot_id.id:
+            #We try to match the inventory line with a theorical line with same product, lot and location and owner
+            #or match with same product and lot (only if owner is missing)
+            #or match with same product and owner (only if lot is missing)
+            #or match with same product (only if owner and lot are missing)
+            if th_line['location_id'] == inventory_line.location_id.id and th_line['product_id'] == inventory_line.product_id.id:
+                if (not inventory_line.prod_lot_id.id or th_line['prod_lot_id'] == inventory_line.prod_lot_id.id) and (not inventory_line.partner_id.id or th_line['partner_id'] == inventory_line.partner_id.id):
                     th_line['product_qty'] -= inventory_line.product_qty
                     found = True
                     break
@@ -1949,7 +1950,10 @@ class stock_package(osv.osv):
     """
     _name = "stock.quant.package"
     _description = "Physical Packages"
-    _order = 'name'
+    _parent_name = "parent_id"
+    _parent_store = True
+    _parent_order = 'name'
+    _order = 'parent_left'
 
     def name_get(self, cr, uid, ids, context=None):
         res = self._complete_name(cr, uid, ids, 'complete_name', None, context=context)
@@ -1984,16 +1988,20 @@ class stock_package(osv.osv):
                 res.add(pack.parent_id.id)
         return list(res)
 
+    # TODO: Problem when package is empty!
+    #
     def _get_package_info(self, cr, uid, ids, name, args, context=None):
         default_company_id = self.pool.get('res.users').browse(cr, uid, uid, context=context).company_id.id
         res = {}.fromkeys(ids, {'location_id': False, 'company_id': default_company_id})
         for pack in self.browse(cr, uid, ids, context=context):
             if pack.quant_ids:
                 res[pack.id]['location_id'] = pack.quant_ids[0].location_id.id
+                res[pack.id]['owner_id'] = pack.quant_ids[0].owner_id and pack.quant_ids[0].owner_id.id or False
                 res[pack.id]['company_id'] = pack.quant_ids[0].company_id.id
             elif pack.children_ids:
-                res[pack.id]['location_id'] = pack.children_ids[0].location_id.id
-                res[pack.id]['company_id'] = pack.children_ids[0].company_id.id
+                res[pack.id]['location_id'] = pack.children_ids[0].location_id and pack.children_ids[0].location_id.id or False
+                res[pack.id]['owner_id'] = pack.children_ids[0].owner_id and pack.children_ids[0].owner_id.id or False
+                res[pack.id]['company_id'] = pack.children_ids[0].company_id and pack.children_ids[0].company_id.id or False
         return res
 
     _columns = {
@@ -2005,12 +2013,21 @@ class stock_package(osv.osv):
         'location_id': fields.function(_get_package_info, type='many2one', relation='stock.location', string='Location', multi="package",
                                     store={
                                        'stock.quant': (_get_packages, ['location_id'], 10),
-                                       'stock.quant.package': (_get_packages_to_relocate, ['children_ids', 'quant_ids', 'parent_id'], 10),
+                                       'stock.quant.package': (_get_packages_to_relocate, ['quant_ids', 'children_ids', 'parent_id'], 10),
                                     }, readonly=True),
         'quant_ids': fields.one2many('stock.quant', 'package_id', 'Bulk Content'),
         'parent_id': fields.many2one('stock.quant.package', 'Parent Package', help="The package containing this item"),
         'children_ids': fields.one2many('stock.quant.package', 'parent_id', 'Contained Packages'),
-        'company_id': fields.function(_get_package_info, type="many2one", relation='res.company', string='Company', multi="package"),
+        'company_id': fields.function(_get_package_info, type="many2one", relation='res.company', string='Company', multi="package", 
+                                    store={
+                                       'stock.quant': (_get_packages, ['company_id'], 10),
+                                       'stock.quant.package': (_get_packages_to_relocate, ['quant_ids', 'children_ids', 'parent_id'], 10),
+                                    }, readonly=True),
+        'owner_id': fields.function(_get_package_info, type='many2one', relation='res.partner', string='Owner', multi="package",
+                                store={
+                                       'stock.quant': (_get_packages, ['owner_id'], 10),
+                                       'stock.quant.package': (_get_packages_to_relocate, ['quant_ids', 'children_ids', 'parent_id'], 10),
+                                    }, readonly=True),
     }
     _defaults = {
         'name': lambda self, cr, uid, context: self.pool.get('ir.sequence').get(cr, uid, 'stock.quant.package') or _('Unknown Pack')
@@ -2390,6 +2407,9 @@ class stock_picking_type(osv.osv):
         else:
             return {'value': result}
 
+    def _get_name(self, cr, uid, ids, field_names, arg, context=None):
+        return dict(self.name_get(cr, uid, ids, context=context))
+
     def name_get(self, cr, uid, ids, context=None):
         """Overides orm name_get method to display 'Warehouse_name: PickingType_name' """
         if not isinstance(ids, list):
@@ -2397,11 +2417,10 @@ class stock_picking_type(osv.osv):
         res = []
         if not ids:
             return res
-        reads = self.browse(cr, uid, ids, context=context)
-        for record in reads:
+        for record in self.browse(cr, uid, ids, context=context):
             name = record.name
             if record.warehouse_id:
-                name = record.warehouse_id.name+': '+name
+                name = record.warehouse_id.name + ': ' +name
             res.append((record.id, name))
         return res
 
@@ -2412,13 +2431,15 @@ class stock_picking_type(osv.osv):
 
     _columns = {
         'name': fields.char('name', translate=True, required=True),
+        'complete_name': fields.function(_get_name, type='char', string='Name'),
         'pack': fields.boolean('Prefill Pack Operations', help='This picking type needs packing interface'),
-        'auto_force_assign': fields.boolean('Automatic Availability', help='This picking type does\'t need to check for the availability in stock'),
+        'auto_force_assign': fields.boolean('Automatic Availability', help='This picking type does\'t need to check for the availability in source location.'),
         'color': fields.integer('Color Index'),
         'delivery': fields.boolean('Print delivery'),
         'sequence_id': fields.many2one('ir.sequence', 'Sequence', required=True),
         'default_location_src_id': fields.many2one('stock.location', 'Default Source Location'),
         'default_location_dest_id': fields.many2one('stock.location', 'Default Destination Location'),
+        #TODO: change field name to "code" as it's not a many2one anymore
         'code_id': fields.selection([('incoming', 'Suppliers'), ('outgoing', 'Customers'), ('internal', 'Internal')], 'Picking type code', required=True),
         'return_picking_type_id': fields.many2one('stock.picking.type', 'Picking Type for Returns'),
         'warehouse_id': fields.many2one('stock.warehouse', 'Warehouse'),
