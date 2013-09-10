@@ -1711,8 +1711,12 @@ class account_move_reconcile(osv.osv):
                     first_account = rec_line.line_partial_ids[0].account_id.id
                     print first_account
                     move_lines = rec_line.line_partial_ids
-                if any([(line.account_id.type in ('receivable', 'payable') and line.account_id.id != first_account) for line in move_lines]):
-                    return False
+                for line in move_lines:
+                    if line.account_id.id != first_account:
+                        return False
+                    else:
+                        if line.account_id.reconcile == False:
+                            raise osv.except_osv(_('Error!'), _("Allow reconcilation should be checked in account"))
         return True
         
     _constraints = [
