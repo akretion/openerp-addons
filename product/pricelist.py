@@ -269,10 +269,17 @@ class product_pricelist(osv.osv):
                                     price_type.field, context=context)[product_id], round=False, context=context)
 
                         if price is not False:
+                            surcharge = res['price_surcharge'] or 0.0 
+                            if 'uom' in context: 
+                                product = products_dict[product_id]
+                                uom = product.uos_id or product.uom_id
+                                surcharge = product_uom_obj._compute_price(cr, uid, uom.id, surcharge, context['uom'])
+                            
                             price_limit = price
                             price = price * (1.0+(res['price_discount'] or 0.0))
                             price = rounding(price, res['price_round']) #TOFIX: rounding with tools.float_rouding
-                            price += (res['price_surcharge'] or 0.0)
+                            price += surcharge
+                            
                             if res['price_min_margin']:
                                 price = max(price, price_limit+res['price_min_margin'])
                             if res['price_max_margin']:
