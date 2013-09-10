@@ -183,11 +183,12 @@ class tax_report(report_sxw.rml_parse, common_report_header):
             ids = obj_tc.search(self.cr, self.uid, [('id','=', account[1].id)], context=context)
             sum_tax_add = 0
             for period_id in period_list:
-                ctx = {
-                        'period_id': period_id,
-                        'based_on': based_on,
-                        'state': target_move,
-                        }
+                ctx = context.copy()
+                ctx.update(
+                        period_id=period_id,
+                        based_on=based_on,
+                        state=target_move,
+                        )
                 for code in obj_tc.browse(self.cr, self.uid, ids, context=ctx):
                     sum_tax_add = sum_tax_add + code.sum_period
 
