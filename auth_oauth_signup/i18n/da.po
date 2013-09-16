@@ -1,14 +1,14 @@
 # Danish translation for openobject-addons
-# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the openobject-addons package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-06-07 19:37+0000\n"
-"PO-Revision-Date: 2013-09-15 20:21+0000\n"
+"POT-Creation-Date: 2013-06-07 19:36+0000\n"
+"PO-Revision-Date: 2013-09-15 20:08+0000\n"
 "Last-Translator: Morten Schou <ms@msteknik.dk>\n"
 "Language-Team: Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Launchpad-Export-Date: 2013-09-16 06:14+0000\n"
 "X-Generator: Launchpad (build 16761)\n"
 
-#. module: stock_invoice_directly
-#: model:ir.model,name:stock_invoice_directly.model_stock_partial_picking
-msgid "Partial Picking Processing Wizard"
-msgstr "Del-pluk guide"
+#. module: auth_oauth_signup
+#: model:ir.model,name:auth_oauth_signup.model_res_users
+msgid "Users"
+msgstr "Bruger"
