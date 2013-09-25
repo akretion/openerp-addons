@@ -1709,19 +1709,30 @@ class account_move_reconcile(osv.osv):
                     move_lines = rec_line.line_id
                 elif rec_line.line_partial_ids:
                     first_account = rec_line.line_partial_ids[0].account_id.id
-                    print first_account
                     move_lines = rec_line.line_partial_ids
                 for line in move_lines:
                     if line.account_id.id != first_account:
                         return False
-                    else:
-                        if line.account_id.reconcile == False:
-                            raise osv.except_osv(_('Error!'), _("Allow reconcilation should be checked in account"))
         return True
         
+    # To reconcile allow reconcilation must be True in account
+    def _check_allow_reconcile(self, cr, uid, ids, context=None):
+        for move_line in self.browse(cr ,uid ,ids ,context=context):
+            lines = []
+            if not move_line.opening_reconciliation:
+                if move_line.line_id:
+                    lines = move_line.line_id
+                elif move_line.line_partial_ids:
+                    lines = move_line.line_partial_ids
+                for line in lines:
+                    if not line.account_id.reconcile:
+                        return False
+        return True
+            
     _constraints = [
         (_check_same_partner, 'You can only reconcile journal items with the same partner.', ['line_id']),
         (_check_same_account, 'You can only reconcile journal items with the same account.',['line_id']),
+        (_check_allow_reconcile,'To reconcile , allow reconcilation must be true in account.',['line_id']),
     ]
     
     def reconcile_partial_check(self, cr, uid, ids, type='auto', context=None):
