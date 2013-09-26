@@ -52,7 +52,7 @@
             <search string="Sales Analysis">
                 <group>
                     <filter icon="terp-go-year" string="Year" name="year"
-                        domain="[('date','&lt;=', time.strftime('%%Y-%%m-%%d')),('date','&gt;=',time.strftime('%%Y-01-01'))]"
+                        domain="[('date','&lt;=', time.strftime('%%Y-12-31')),('date','&gt;=',time.strftime('%%Y-01-01'))]"
                         help="Sales order created in current year"/>
                     <separator orientation="vertical"/>
                     <filter icon="terp-go-month" string="Month"
