@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-14 22:29+0000\n"
-"PO-Revision-Date: 2013-09-23 14:10+0000\n"
-"Last-Translator: Marko Carevic <Unknown>\n"
+"PO-Revision-Date: 2013-09-25 13:01+0000\n"
+"Last-Translator: Krešimir Jeđud <kresimir.jedud@infokom.hr>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-09-24 06:36+0000\n"
+"X-Launchpad-Export-Date: 2013-09-26 05:54+0000\n"
 "X-Generator: Launchpad (build 16771)\n"
 
 #. module: account
@@ -1028,7 +1028,7 @@ msgstr "dana"
 #: help:account.account.template,nocreate:0
 msgid ""
 "If checked, the new chart of accounts will not contain this by default."
-msgstr "Ako je označeno, novi računski plan neće sadržavati ove po defaultu."
+msgstr "Ako je označeno, novi kontni plan neće sadržavati ovo po defaultu."
 
 #. module: account
 #: model:ir.actions.act_window,help:account.action_account_manual_reconcile
@@ -1243,7 +1243,7 @@ msgstr ""
 "                                                           određeni iznos "
 "zbog tečajnih razlika. Ovaj izbornik pruža Vam\n"
 "                                                           predviđanje "
-"dobiti i gubitka ostvarenoog ukoliko bi se te\n"
+"dobiti i gubitka ostvarenog ukoliko bi se te\n"
 "                                                           transakcije "
 "završile danas. Samo za račune koji imaju postavljenu sekundarnu valutu.\n"
 "                                                        </p>\n"
@@ -1341,6 +1341,18 @@ msgid ""
 "              </p>\n"
 "            "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Pritisnite za kreiranje novog unosa u blagajnu.\n"
+"              </p><p>\n"
+"                Pomoću blagajne moguće je na jednostavan način upravljati "
+"dnevnicima\n"
+"                blagajne. Na jednostavan način možete pratiti uplate "
+"gotovine\n"
+"                na dnevnoj bazi. Moguće je evidentirati novac u blagajni, a "
+"zatim\n"
+"                pratiti sve ulaze i izlaze novca iz nje.\n"
+"              </p>\n"
+"            "
 
 #. module: account
 #: model:account.account.type,name:account.data_account_type_bank
@@ -1622,7 +1634,7 @@ msgstr "Status računa"
 #: model:ir.actions.act_window,name:account.action_account_open_closed_fiscalyear
 #: model:ir.ui.menu,name:account.menu_wizard_account_open_closed_fiscalyear
 msgid "Cancel Closing Entries"
-msgstr ""
+msgstr "Otkaži zatvaranje"
 
 #. module: account
 #: view:account.bank.statement:0
@@ -1892,6 +1904,14 @@ msgid ""
 "              </p>\n"
 "            "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Pritisnite za kreiranje nove vrste konta.\n"
+"              </p><p>\n"
+"                Vrsta konta se koristi za određivanje načina korištenja "
+"konta u\n"
+"                dnevniku. \n"
+"              </p>\n"
+"            "
 
 #. module: account
 #: report:account.invoice:0
@@ -2265,6 +2285,18 @@ msgid ""
 "              </p>\n"
 "            "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Pritisnite za kreiranje novog bankovnog izvoda.\n"
+"              </p><p>\n"
+"                Bankovni izvod sadrži pregled svih financijskih transakcija\n"
+"                koje su nastale u danom razdoblju po bankovnom računu. "
+"Bankovne \n"
+"                izvode šalje banka periodično.\n"
+"              </p><p>\n"
+"                OpenERP dozvoljava izravno zatvaranje stavaka sa povezanim\n"
+"                ulaznim ili izlaznim računima.\n"
+"              </p>\n"
+"            "
 
 #. module: account
 #: field:account.config.settings,currency_id:0
@@ -3455,7 +3487,7 @@ msgstr "Valuta računa"
 #: field:accounting.report,account_report_id:0
 #: model:ir.ui.menu,name:account.menu_account_financial_reports_tree
 msgid "Account Reports"
-msgstr ""
+msgstr "Računovodstveni izvještaj"
 
 #. module: account
 #: field:account.payment.term,line_ids:0
@@ -3575,7 +3607,7 @@ msgstr "Elektronska datoteka"
 #. module: account
 #: field:account.move.line,reconcile:0
 msgid "Reconcile Ref"
-msgstr ""
+msgstr "Oznaka zatvaranja"
 
 #. module: account
 #: field:account.config.settings,has_chart_of_accounts:0
@@ -4123,7 +4155,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:account.action_account_tree
 #: model:ir.ui.menu,name:account.menu_action_account_tree2
 msgid "Chart of Accounts"
-msgstr "Chart of Accounts"
+msgstr "Kontni plan"
 
 #. module: account
 #: view:account.tax.chart:0
@@ -4908,7 +4940,7 @@ msgstr ""
 #: view:account.move:0
 #: view:account.move.line:0
 msgid "Add an internal note..."
-msgstr ""
+msgstr "Dodaj internu napomenu ..."
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_wizard_multi_chart
@@ -6325,7 +6357,7 @@ msgstr "Slobodna vezna oznaka"
 #: code:addons/account/report/account_partner_ledger.py:276
 #, python-format
 msgid "Receivable and Payable Accounts"
-msgstr "Konta potraživanja i dugovanja partnera"
+msgstr "Dugovna i potražna konta"
 
 #. module: account
 #: field:account.fiscal.position.account.template,position_id:0
@@ -7277,7 +7309,7 @@ msgstr "Stvori stavku"
 #. module: account
 #: view:account.open.closed.fiscalyear:0
 msgid "Cancel Fiscal Year Closing Entries"
-msgstr ""
+msgstr "Otkaži unose zatvaranja fiskalne godine"
 
 #. module: account
 #: selection:account.account.type,report_type:0
@@ -7319,7 +7351,7 @@ msgstr ""
 #: model:ir.actions.report.xml,name:account.account_vat_declaration
 #: model:ir.ui.menu,name:account.menu_account_vat_declaration
 msgid "Taxes Report"
-msgstr "Porezni Izvestaj"
+msgstr "Porezne prijave"
 
 #. module: account
 #: selection:account.journal.period,state:0
@@ -8107,7 +8139,7 @@ msgstr "Ne postoji broj dijela !"
 #: view:account.financial.report:0
 #: model:ir.ui.menu,name:account.menu_account_report_tree_hierarchy
 msgid "Account Reports Hierarchy"
-msgstr ""
+msgstr "Hijerarhija računovodstvenih izvještaja"
 
 #. module: account
 #: help:account.account.template,chart_template_id:0
@@ -8290,7 +8322,7 @@ msgstr ""
 #. module: account
 #: selection:account.print.journal,sort_selection:0
 msgid "Journal Entry Number"
-msgstr ""
+msgstr "Broj unosa u dnevnik"
 
 #. module: account
 #: view:account.financial.report:0
@@ -8787,6 +8819,9 @@ msgid ""
 "This wizard will remove the end of year journal entries of selected fiscal "
 "year. Note that you can run this wizard many times for the same fiscal year."
 msgstr ""
+"Ovaj konfigurator pomaže u micanju stavaka zatvaranja odabrane fiskalne "
+"godine. Ovaj je konfigurator moguće koristiti više puta za istu fiskalnu "
+"godinu."
 
 #. module: account
 #: report:account.invoice:0
@@ -8832,7 +8867,7 @@ msgstr "Rezultat zatvaranja"
 #: field:account.bank.statement,balance_end_real:0
 #: field:account.treasury.report,ending_balance:0
 msgid "Ending Balance"
-msgstr "Ending Balance"
+msgstr "Završni saldo"
 
 #. module: account
 #: field:account.journal,centralisation:0
@@ -8895,7 +8930,7 @@ msgstr "Primjeni"
 #: model:ir.actions.act_window,name:account.action_account_type_form
 #: model:ir.ui.menu,name:account.menu_action_account_type_form
 msgid "Account Types"
-msgstr "Account Types"
+msgstr "Vrste konta"
 
 #. module: account
 #: model:email.template,subject:account.email_template_edi_invoice
@@ -9035,7 +9070,7 @@ msgstr "Podzbroj"
 #. module: account
 #: view:account.vat.declaration:0
 msgid "Print Tax Statement"
-msgstr "Ispis porezne izjave"
+msgstr "Ispis porezne prijave"
 
 #. module: account
 #: view:account.model.line:0
@@ -9170,6 +9205,17 @@ msgid ""
 "              </p>\n"
 "            "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Pritisnite za kreiranje nove ponavljajuće stavke.\n"
+"              </p><p>\n"
+"                Ponavljajuća stavka je stavka koja već postoji u sustavu ali "
+"se ponavlja\n"
+"                određenog datuma, npr. povezana je uz potpisani ugovor ili "
+"dogovor sa\n"
+"                kupcem ili dobavljaćem. Takve je unose moguće automatizirati "
+"u sustavu.\n"
+"                </p>\n"
+"            "
 
 #. module: account
 #: view:account.journal:0
@@ -10280,7 +10326,7 @@ msgstr "Nacrt računa "
 #. module: account
 #: model:ir.ui.menu,name:account.menu_account_general_journal
 msgid "General Journals"
-msgstr "General Journals"
+msgstr "Opći dnevnici"
 
 #. module: account
 #: view:account.model:0
@@ -10454,7 +10500,7 @@ msgstr "Vrsta konta"
 #. module: account
 #: field:account.subscription.generate,date:0
 msgid "Generate Entries Before"
-msgstr ""
+msgstr "Generiraj stavke prije"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_subscription_form_running
@@ -10533,7 +10579,7 @@ msgstr "Bez detalja"
 #: model:ir.actions.act_window,name:account.action_account_gain_loss
 #: model:ir.ui.menu,name:account.menu_unrealized_gains_losses
 msgid "Unrealized Gain or Loss"
-msgstr ""
+msgstr "Nerealizirana dobit ili gubitak"
 
 #. module: account
 #: view:account.move:0
@@ -11009,6 +11055,14 @@ msgid ""
 "              </p>\n"
 "            "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Odaberite razdoblje i dokument koji želite kreirati.\n"
+"              </p><p>\n"
+"                Kroz ovaj modul moguće je jednostavno i efikasno "
+"evidentirati\n"
+"                stavke glavne knjige.\n"
+"              </p>\n"
+"            "
 
 #. module: account
 #: help:account.invoice.line,account_id:0
