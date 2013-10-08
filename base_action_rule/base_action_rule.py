@@ -208,7 +208,7 @@ the rule to mark CC(mail to any other person defined in actions)."),
         Wrap every `create` and `write` methods of the models specified by
         the rules (given by `ids`).
         """
-        if ids is None:
+        if ids == [] or ids is None:
             ids = self.search(cr, uid, [])
         for action_rule in self.browse(cr, uid, ids, context=context):
             model = action_rule.model_id.model
