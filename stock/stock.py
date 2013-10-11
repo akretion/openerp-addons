@@ -1269,8 +1269,11 @@ class stock_picking(osv.osv):
                     move_currency_id = move.company_id.currency_id.id
                     context['currency_id'] = move_currency_id
                     qty = uom_obj._compute_qty(cr, uid, product_uom, product_qty, product.uom_id.id)
-                    price_type_id = pricetype_obj.search(cr, uid, [('field','=','standard_price')])[0]
-                    price_type_currency_id = pricetype_obj.browse(cr,uid,price_type_id).currency_id.id
+                    price_type_id = pricetype_obj.search(cr, uid,
+                                                         [('field', '=', 'standard_price')],
+                                                         context=context)[0]
+                    price_type = pricetype_obj.browse(cr, uid, price_type_id, context=context)
+                    price_type_currency_id = price_type.currency_id.id
                     if product.id in product_avail:
                         product_avail[product.id] += qty
                     else:
@@ -1293,7 +1296,8 @@ class stock_picking(osv.osv):
                             new_std_price = ((amount_unit * product_avail[product.id])\
                                 + (new_price * qty))/(product_avail[product.id] + qty)
                         # Convert the price in price_type currency
-                        new_std_price = currency_obj.compute(cr, uid, move_currency_id,
+                        new_std_price = currency_obj.compute(
+                                cr, uid, move_currency_id,
                                 price_type_currency_id, new_std_price)
                         # Write the field according to price type field
                         product_obj.write(cr, uid, [product.id], {'standard_price': new_std_price})

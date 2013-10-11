@@ -18,12 +18,12 @@
     currency_id: base.CHF
 -
  !record {model: product.pricelist, id: purchase.list0}:
-    currency_id: base.EUR 
+    currency_id: base.EUR
 -
   Affect the admin user to the main company
 -
  !record {model: res.users, id: base.user_root}:
-    company_id: base.main_company 
+    company_id: base.main_company
 -
   Create a stock location for the test
 -
@@ -147,7 +147,7 @@
     pick_ids = self.pool.get('purchase.order').browse(cr, uid, ref("purchase_order_lcost_06bis")).picking_ids
     partial_id = self.create(cr, uid, {},context={'active_model': 'stock.picking','active_ids': [pick_ids[0].id]})
     self.do_partial(cr, uid, [partial_id])
-    picking = self.pool.get('stock.picking').browse(cr, uid, [pick_ids[0].id])[0]
+    picking = self.pool.get('stock.picking').browse(cr, uid, pick_ids[0].id)
     for move in picking.move_lines:
       if move.product_id.name == 'Wine J':
         assert move.price_unit == 200.0,"Technical field price_unit of Wine J stock move should record the purchase price"

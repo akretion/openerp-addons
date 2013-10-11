@@ -18,12 +18,12 @@
     currency_id: base.EUR
 -
  !record {model: product.pricelist, id: purchase.list0}:
-    currency_id: base.CHF 
+    currency_id: base.CHF
 -
   Affect the admin user to the main company
 -
  !record {model: res.users, id: base.user_root}:
-    company_id: base.main_company 
+    company_id: base.main_company
 -
   Create a stock location for the test
 -
@@ -97,7 +97,7 @@
     pick_ids = self.pool.get('purchase.order').browse(cr, uid, ref("purchase_order_lcost_04")).picking_ids
     partial_id = self.create(cr, uid, {},context={'active_model': 'stock.picking','active_ids': [pick_ids[0].id]})
     self.do_partial(cr, uid, [partial_id])
-    picking = self.pool.get('stock.picking').browse(cr, uid, [pick_ids[0].id])[0]
+    picking = self.pool.get('stock.picking').browse(cr, uid, pick_ids[0].id)
     for move in picking.move_lines:
       if move.product_id.name == 'Wine A':
         assert move.price_unit == 100.0,"Technical field price_unit of Wine F stock move should record the purchase price"
@@ -116,8 +116,6 @@
      # computed as : (100 * 15 / 15) / exchange rate of 1.3086 
      # => because we store price in EUR and 100 is CHF
      value_a = round(100.0 / xchg_rate_chf, 2)
-     print self.browse(cr, uid, ref("product_product_f_avg_01")).standard_price
-     print self.browse(cr, uid, ref("product_product_f_avg_01")).qty_available
      # computed as : (200 * 5 / 5) / exchange rate of 1.3086
      # => because we store price in EUR and 200 is CHF
      value_b = round(200.0 / xchg_rate_chf, 2)
@@ -147,9 +145,9 @@
 -
   !python {model: stock.partial.picking}: |
     pick_ids = self.pool.get('purchase.order').browse(cr, uid, ref("purchase_order_lcost_04bis")).picking_ids
-    partial_id = self.create(cr, uid, {},context={'active_model': 'stock.picking','active_ids': [pick_ids[0].id]})
+    partial_id = self.create(cr, uid, {}, context={'active_model': 'stock.picking','active_ids': [pick_ids[0].id]})
     self.do_partial(cr, uid, [partial_id])
-    picking = self.pool.get('stock.picking').browse(cr, uid, [pick_ids[0].id])[0]
+    picking = self.pool.get('stock.picking').browse(cr, uid, pick_ids[0].id)
     for move in picking.move_lines:
       if move.product_id.name == 'Wine A':
         assert move.price_unit == 200.0,"Technical field price_unit of Wine F stock move should record the purchase price"
