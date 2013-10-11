@@ -1236,6 +1236,7 @@ class stock_picking(osv.osv):
         product_obj = self.pool.get('product.product')
         currency_obj = self.pool.get('res.currency')
         uom_obj = self.pool.get('product.uom')
+        pricetype_obj = self.pool.get('product.price.type')
         sequence_obj = self.pool.get('ir.sequence')
         wf_service = netsvc.LocalService("workflow")
         for pick in self.browse(cr, uid, ids, context=context):
@@ -1268,13 +1269,15 @@ class stock_picking(osv.osv):
                     move_currency_id = move.company_id.currency_id.id
                     context['currency_id'] = move_currency_id
                     qty = uom_obj._compute_qty(cr, uid, product_uom, product_qty, product.uom_id.id)
-
+                    price_type_id = pricetype_obj.search(cr, uid, [('field','=','standard_price')])[0]
+                    price_type_currency_id = pricetype_obj.browse(cr,uid,price_type_id).currency_id.id
                     if product.id in product_avail:
                         product_avail[product.id] += qty
                     else:
                         product_avail[product.id] = product.qty_available
 
                     if qty > 0:
+                        # New price in company currency
                         new_price = currency_obj.compute(cr, uid, product_currency,
                                 move_currency_id, product_price)
                         new_price = uom_obj._compute_price(cr, uid, product_uom, new_price,
@@ -1284,8 +1287,14 @@ class stock_picking(osv.osv):
                         else:
                             # Get the standard price
                             amount_unit = product.price_get('standard_price', context=context)[product.id]
+                            # Here we must convert the new price computed in the currency of the price_type
+                            # of the product (e.g. company currency: EUR, price_type: USD)
+                            # The current value is still in company currency at this stage
                             new_std_price = ((amount_unit * product_avail[product.id])\
                                 + (new_price * qty))/(product_avail[product.id] + qty)
+                        # Convert the price in price_type currency
+                        new_std_price = currency_obj.compute(cr, uid, move_currency_id,
+                                price_type_currency_id, new_std_price)
                         # Write the field according to price type field
                         product_obj.write(cr, uid, [product.id], {'standard_price': new_std_price})
 
@@ -2669,6 +2678,7 @@ class stock_move(osv.osv):
         picking_obj = self.pool.get('stock.picking')
         product_obj = self.pool.get('product.product')
         currency_obj = self.pool.get('res.currency')
+        pricetype_obj = self.pool.get('product.price.type')
         uom_obj = self.pool.get('product.uom')
         wf_service = netsvc.LocalService("workflow")
 
@@ -2702,6 +2712,8 @@ class stock_move(osv.osv):
                 move_currency_id = move.company_id.currency_id.id
                 context['currency_id'] = move_currency_id
                 qty = uom_obj._compute_qty(cr, uid, product_uom, product_qty, product.uom_id.id)
+                price_type_id = pricetype_obj.search(cr, uid, [('field','=','standard_price')])[0]
+                price_type_currency_id = pricetype_obj.browse(cr,uid,price_type_id).currency_id.id
                 if qty > 0:
                     new_price = currency_obj.compute(cr, uid, product_currency,
                             move_currency_id, product_price)
@@ -2712,9 +2724,15 @@ class stock_move(osv.osv):
                     else:
                         # Get the standard price
                         amount_unit = product.price_get('standard_price', context=context)[product.id]
+                        # Here we must convert the new price computed in the currency of the price_type
+                        # of the product (e.g. company currency: EUR, price_type: USD)
+                        # The current value is still in company currency at this stage
                         new_std_price = ((amount_unit * product.qty_available)\
                             + (new_price * qty))/(product.qty_available + qty)
-
+                    # Convert the price in price_type currency
+                    new_std_price = currency_obj.compute(cr, uid, move_currency_id,
+                            price_type_currency_id, new_std_price)
+                    # Write the field according to price type field
                     product_obj.write(cr, uid, [product.id],{'standard_price': new_std_price})
 
                     # Record the values that were chosen in the wizard, so they can be

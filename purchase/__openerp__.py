@@ -77,6 +77,9 @@ Dashboard / Reports for Purchase Management will include:
         'test/ui/print_report.yml',
         'test/ui/duplicate_order.yml',
         'test/ui/delete_order.yml',
+        'test/process/average_price_multicurrency_company.yml',
+        'test/process/average_price_multicurrency_pricetype.yml',
+        'test/process/average_price_multicurrency_pricelist.yml',
     ],
     'demo': [
         'purchase_order_demo.yml',
