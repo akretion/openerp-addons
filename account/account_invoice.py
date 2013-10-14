@@ -1537,14 +1537,6 @@ class account_invoice_line(osv.osv):
 
         result['name'] = res.partner_ref
 
-        domain = {}
-        result['uos_id'] = res.uom_id.id or uom_id or False
-        result['note'] = res.description
-        if result['uos_id']:
-            res2 = res.uom_id.category_id.id
-            if res2:
-                domain = {'uos_id':[('category_id','=',res2 )]}
-
         res_final = {'value': result, 'domain': domain, 'warning': warning}
         return res_final
 
