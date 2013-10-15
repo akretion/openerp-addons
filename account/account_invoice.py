@@ -1595,15 +1595,8 @@ class account_invoice_line(osv.osv):
             assert product_obj, _('No product found for id %d') % product_id
             assert field in product_obj, _(
                 'Field %s not found in product') % field
-            price_unit = product_obj[field]
-            # If price_unit not taken from price-list, we still have to
-            # take unit of measurement into account
-            if  uom_id:
-                uom_model = self.pool.get('product.uom')
-                uom_obj = uom_model.browse(cr, uid, uom_id, context=context)
-                p_uom_category_id = product_obj.uom_id.category_id.id
-                if  p_uom_category_id == uom_obj.category_id.id:
-                    price_unit = price_unit * uom_obj.factor_inv
+            price_unit = product_obj.uom_id._compute_price(
+                    cr, uid, product_obj.uom_id.id, product_obj[field], uom_id)
             # When price not taken from pricelist, the currency is
             # determined by the price_type:
             price_type_model = self.pool.get('product.price.type')
