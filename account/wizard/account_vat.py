@@ -43,8 +43,7 @@ class account_vat_declaration(osv.osv_memory):
 
     _defaults = {
         'based_on': 'invoices',
-        'chart_tax_id': _get_tax,
-        'target_move': 'posted',
+        'chart_tax_id': _get_tax
     }
 
     def create_vat(self, cr, uid, ids, context=None):
