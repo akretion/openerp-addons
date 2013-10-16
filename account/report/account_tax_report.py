@@ -177,6 +177,8 @@ class tax_report(report_sxw.rml_parse, common_report_header):
             account_list = []
         if period_list is None:
             period_list = []
+        if context is None:
+            context = {}
         res = []
         obj_tc = self.pool.get('account.tax.code')
         for account in account_list:
