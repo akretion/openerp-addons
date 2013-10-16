@@ -140,7 +140,7 @@
 		</td>
                 <td>
                     <para style="terp_default_Centre_8">[[ get_basedon(data)  or '' ]]</para>
-                    <para style="terp_default_Centre_8">[[ get_target_move(data)  or '' ]]</para>
+                    <para style="terp_default_Centre_8">[[ get_target_move(data) or '' ]]</para>
                 </td>
    </tr>
   </blockTable>
