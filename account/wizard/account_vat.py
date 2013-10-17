@@ -31,9 +31,6 @@ class account_vat_declaration(osv.osv_memory):
                                       'Based on', required=True),
         'chart_tax_id': fields.many2one('account.tax.code', 'Chart of Tax', help='Select Charts of Taxes', required=True, domain = [('parent_id','=', False)]),
         'display_detail': fields.boolean('Display Detail'),
-        'target_move': fields.selection([('posted', 'All Posted Entries'),
-                                         ('all', 'All Entries'),
-                                         ], 'Target Moves', required=True),
     }
 
     def _get_tax(self, cr, uid, context=None):
