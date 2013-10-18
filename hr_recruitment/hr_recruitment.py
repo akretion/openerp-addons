@@ -52,12 +52,21 @@ class hr_recruitment_stage(osv.osv):
         'name': fields.char('Name', size=64, required=True, translate=True),
         'sequence': fields.integer('Sequence', help="Gives the sequence order when displaying a list of stages."),
         'department_id':fields.many2one('hr.department', 'Specific to a Department', help="Stages of the recruitment process may be different per department. If this stage is common to all departments, keep this field empty."),
-        'fold': fields.boolean('Hide in views if empty', help="This stage is not visible, for example in status bar or kanban view, when there are no records in that stage to display."),
         'requirements': fields.text('Requirements'),
+        'fold': fields.boolean('Folded in Kanban View',
+                               help='This stage is folded in the kanban view when'
+                               'there are no records in that stage to display.'),
+        'bar_fold': fields.boolean('Folded in Status Bar',
+                                   help='This stage is folded in the form view when'
+                                   'using the statusbar widget.'),
+        'bar_color': fields.integer('Status Bar Color'),
+        'closed': fields.boolean('Closing Stage',
+                                 help='Indicates whether this field is the end of'
+                                 'the maangement process. This is for example a'
+                                 'stage considering the applicant as hired or refused.'),
     }
     _defaults = {
         'sequence': 1,
-        'fold': False,
     }
 
 class hr_recruitment_degree(osv.osv):
