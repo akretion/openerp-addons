@@ -2397,7 +2397,6 @@ class stock_move(osv.osv):
                 todo.append(move.id)
         if todo:
             self.action_confirm(cr, uid, todo, context=context)
-            todo = []
 
         for move in self.browse(cr, uid, ids, context=context):
             if move.state in ['done','cancel']:
@@ -2421,12 +2420,11 @@ class stock_move(osv.osv):
 
             self._create_product_valuation_moves(cr, uid, move, context=context)
             if move.state not in ('confirmed','done','assigned'):
-                todo.append(move.id)
-
-        if todo:
-            self.action_confirm(cr, uid, todo, context=context)
-
-        self.write(cr, uid, move_ids, {'state': 'done', 'date': time.strftime(DEFAULT_SERVER_DATETIME_FORMAT)}, context=context)
+                self.action_confirm(cr, uid, [move.id], context=context)
+            self.write(cr, uid, [move.id], 
+                       {'state': 'done', 
+                       'date': time.strftime(DEFAULT_SERVER_DATETIME_FORMAT)}, 
+                       context=context)
         for id in move_ids:
              wf_service.trg_trigger(uid, 'stock.move', id, cr)
 
