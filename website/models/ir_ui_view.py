@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
-
-from lxml import etree, html
-from openerp.osv import osv, fields
 from urlparse import urlparse
 
+from lxml import etree, html
+
+from openerp.osv import osv, fields
+from openerp.addons.base import ir
 
 class view(osv.osv):
     _inherit = "ir.ui.view"
@@ -83,31 +84,40 @@ class view(osv.osv):
         return out
 
     def replace_arch_section(self, cr, uid, view_id, section_xpath, replacement, context=None):
-        arch = replacement
-        if section_xpath:
-            previous_arch = etree.fromstring(self.browse(cr, uid, view_id, context=context).arch.encode('utf-8'))
+        # remove branding from replacement section
+        for att in ir.ir_ui_view.MOVABLE_BRANDING:
+            replacement.attrib.pop(att, None)
+
+        if not section_xpath:
+            # replace all of the arch, not just a fragment
+            arch = replacement
+        else:
+            arch = etree.fromstring(self.browse(cr, uid, view_id, context=context).arch.encode('utf-8'))
             # ensure there's only one match
-            [previous_section] = previous_arch.xpath(section_xpath)
+            [previous_section] = arch.xpath(section_xpath)
+
             previous_section.getparent().replace(previous_section, replacement)
-            arch = previous_arch
+
         return arch
 
-    def _normalize_urls(self, element):
-        attr = None
-        if element.tag == 'form':
-            attr = 'action' if 'action' in element.attrib else None
-        elif element.tag in ['a', 'link']:
-            attr = 'href' if 'href' in element.attrib else None
-        elif element.tag in ['frame', 'iframe', 'img', 'input', 'script']:
-            attr = 'src' if 'src' in element.attrib else None
-        if attr:
-            value = element.attrib[attr]
+    URL_ATTRS = {
+        'form': 'action',
+        'a': 'href',
+        'link': 'href',
+        'frame': 'src',
+        'iframe': 'src',
+        'script': 'src',
+    }
+    def _normalize_urls(self, root):
+        for element in root.iter():
+            attr = self.URL_ATTRS.get(element.tag)
+            if attr is None or attr not in element.attrib:
+                continue
+
+            value = element.get(attr)
             if not urlparse(value).scheme:
                 element.attrib.pop(attr)
-                element.attrib['t-' + attr] = value
-        for el in list(element):
-            self._normalize_urls(el)
-        return element
+                element.set('t-' + attr, value)
 
     def save(self, cr, uid, res_id, value, xpath=None, context=None):
         """ Update a view section. The view section may embed fields to write
