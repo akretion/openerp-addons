@@ -32,9 +32,7 @@ class purchase_order(osv.osv):
             acc_id = order_line.product_id.property_stock_account_input and order_line.product_id.property_stock_account_input.id
             if not acc_id:
                 acc_id = order_line.product_id.categ_id.property_stock_account_input_categ and order_line.product_id.categ_id.property_stock_account_input_categ.id
-            if not acc_id:
-                raise osv.except_osv(_('Error !'), _('There is no stock input account defined for this product or category: "%s" (id:%d)') % (order_line.product_id.name, order_line.product_id.id,))    
-            else:    
+            if acc_id:
                 fpos = order_line.order_id.fiscal_position or False
                 account_id = self.pool.get('account.fiscal.position').map_account(cr, uid, fpos, acc_id)
         return account_id
