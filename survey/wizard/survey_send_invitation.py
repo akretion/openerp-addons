@@ -57,8 +57,6 @@ class survey_send_invitation(osv.osv_memory):
         if context is None:
             context = {}
         data = super(survey_send_invitation, self).default_get(cr, uid, fields_list, context)
-        if not context.get('active_ids'):
-            return data
         survey_obj = self.pool.get('survey')
         msg = ""
         name = ""
