@@ -38,7 +38,7 @@ Secondly, price differences between actual purchase price and fixed product stan
     "depends": ["product", "purchase"],
     "category": "Hidden/Dependency",
     "init_xml": [],
-    "demo_xml": [],
+    "demo_xml": ['account_anglo_saxon_demo.xml'],
     "update_xml": ["product_view.xml",],
     "auto_install": False,
     "installable": True,
