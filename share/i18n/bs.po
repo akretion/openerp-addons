@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:37+0000\n"
-"PO-Revision-Date: 2013-08-08 22:30+0000\n"
+"PO-Revision-Date: 2013-10-26 00:41+0000\n"
 "Last-Translator: Bosko Stojakovic <bluesoft83@gmail.com>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-09 05:35+0000\n"
-"X-Generator: Launchpad (build 16723)\n"
+"X-Launchpad-Export-Date: 2013-10-26 06:25+0000\n"
+"X-Generator: Launchpad (build 16810)\n"
 
 #. module: share
 #: code:addons/share/wizard/share_wizard.py:842
@@ -157,12 +157,12 @@ msgstr "URL djeljenja"
 #: code:addons/share/wizard/share_wizard.py:881
 #, python-format
 msgid "These are your credentials to access this protected area:\n"
-msgstr ""
+msgstr "Ovo su vaši podaci za pristup ovom zaštićenom području:\n"
 
 #. module: share
 #: view:share.wizard:0
 msgid "Access info"
-msgstr ""
+msgstr "Pristupni podatci"
 
 #. module: share
 #. openerp-web
@@ -170,7 +170,7 @@ msgstr ""
 #: view:share.wizard:0
 #, python-format
 msgid "Share"
-msgstr ""
+msgstr "Podijeli"
 
 #. module: share
 #: code:addons/share/wizard/share_wizard.py:571
@@ -183,7 +183,7 @@ msgstr ""
 #, python-format
 msgid ""
 "Please indicate the emails of the persons to share with, one per line."
-msgstr ""
+msgstr "Unesite e-mail adrese osoba za dijeljenje, jednu u svaki red."
 
 #. module: share
 #: help:share.wizard,domain:0
@@ -193,7 +193,7 @@ msgstr ""
 #. module: share
 #: view:share.wizard:0
 msgid "Next"
-msgstr ""
+msgstr "Slijedeće"
 
 #. module: share
 #: code:addons/share/wizard/share_wizard.py:662
@@ -206,12 +206,12 @@ msgstr ""
 #: code:addons/share/wizard/share_wizard.py:882
 #, python-format
 msgid "Username"
-msgstr ""
+msgstr "Korisničko ime"
 
 #. module: share
 #: view:share.wizard:0
 msgid "Sharing Options"
-msgstr ""
+msgstr "Opcije dijeljenja"
 
 #. module: share
 #. openerp-web
