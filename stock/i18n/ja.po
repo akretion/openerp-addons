@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:36+0000\n"
-"PO-Revision-Date: 2013-10-15 07:11+0000\n"
-"Last-Translator: Yoshi Tashiro <yostashiro@gmail.com>\n"
+"PO-Revision-Date: 2013-10-26 14:56+0000\n"
+"Last-Translator: kohji katayama <kohji.jyoji4113@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-10-16 05:14+0000\n"
-"X-Generator: Launchpad (build 16799)\n"
+"X-Launchpad-Export-Date: 2013-10-27 06:13+0000\n"
+"X-Generator: Launchpad (build 16810)\n"
 
 #. module: stock
 #: field:stock.inventory.line.split,line_exist_ids:0
@@ -54,13 +54,13 @@ msgstr ""
 #. module: stock
 #: view:stock.picking.out:0
 msgid "Confirm & Deliver"
-msgstr ""
+msgstr "確認および出荷"
 
 #. module: stock
 #: model:ir.actions.act_window,name:stock.action_view_change_product_quantity
 #: view:stock.change.product.qty:0
 msgid "Update Product Quantity"
-msgstr ""
+msgstr "製品数変更"
 
 #. module: stock
 #: field:stock.location,chained_location_id:0
@@ -86,7 +86,7 @@ msgstr "上流追跡能力"
 #: field:stock.picking.in,date_done:0
 #: field:stock.picking.out,date_done:0
 msgid "Date of Transfer"
-msgstr ""
+msgstr "移動日"
 
 #. module: stock
 #: field:product.product,track_outgoing:0
@@ -128,7 +128,7 @@ msgstr "製品移動"
 #: code:addons/stock/stock.py:2585
 #, python-format
 msgid "Please provide proper quantity."
-msgstr ""
+msgstr "数量を入力してください。"
 
 #. module: stock
 #: model:ir.ui.menu,name:stock.menu_stock_inventory_control
