@@ -199,8 +199,10 @@ class product_pricelist(osv.osv):
                 categ_ids = _create_parent_category_list(categ_id, [categ_id])
                 if categ_ids:
                     categ_where = '(categ_id IN (' + ','.join(map(str, categ_ids)) + '))'
+                    categ_where_i = '(i.categ_id IN (' + ','.join(map(str, categ_ids)) + '))'
                 else:
                     categ_where = '(categ_id IS NULL)'
+                    categ_where_i = '(i.categ_id IS NULL)'
 
                 if partner:
                     partner_where = 'base <> -2 OR %s IN (SELECT name FROM product_supplierinfo WHERE product_id = %s) '
@@ -208,20 +210,41 @@ class product_pricelist(osv.osv):
                 else:
                     partner_where = 'base <> -2 '
                     partner_args = ()
-
-                cr.execute(
-                    'SELECT i.*, pl.currency_id '
-                    'FROM product_pricelist_item AS i, '
-                        'product_pricelist_version AS v, product_pricelist AS pl '
-                    'WHERE (product_tmpl_id IS NULL OR product_tmpl_id = %s) '
-                        'AND (product_id IS NULL OR product_id = %s) '
-                        'AND (' + categ_where + ' OR (categ_id IS NULL)) '
-                        'AND (' + partner_where + ') '
-                        'AND price_version_id = %s '
-                        'AND (min_quantity IS NULL OR min_quantity <= %s) '
-                        'AND i.price_version_id = v.id AND v.pricelist_id = pl.id '
-                    'ORDER BY sequence',
-                    (tmpl_id, product_id) + partner_args + (pricelist_version_ids[0], qty))
+                  
+                query = (  
+                'SELECT '
+                    'i.*, pl.currency_id , p.* '
+                'FROM '
+                    'product_pricelist_item AS i '
+                    'JOIN product_pricelist_version AS v '
+                        'ON i.price_version_id = v.id '
+                    'JOIN product_pricelist AS pl '
+                        'ON v.pricelist_id = pl.id '
+                    'LEFT OUTER JOIN ( '
+                        'WITH RECURSIVE subtree(depth, categ_id, parent_id, name) AS ( '
+                                'SELECT 0, id, parent_id, name FROM product_category WHERE parent_id is NULL '
+                            'UNION '
+                                'SELECT depth+1, m.id, m.parent_id, m.name '
+                                'FROM subtree t, product_category m '
+                                'WHERE m.parent_id = t.categ_id '
+                        ') '
+                        'SELECT * '
+                        'FROM subtree '
+                        'WHERE (' + categ_where + ' OR (categ_id IS NULL)) ' 
+                    ') AS p '
+                        'on i.categ_id = p.categ_id '
+                'WHERE '
+                    '(product_tmpl_id IS NULL OR product_tmpl_id = %s) ' 
+                    'AND (product_id IS NULL OR product_id = %s) '
+                    'AND (' + categ_where_i + ' OR (i.categ_id IS NULL)) ' 
+                    'AND (' + partner_where + ') ' 
+                    'AND price_version_id = %s ' 
+                    'AND (min_quantity IS NULL OR min_quantity <= %s) '
+                'ORDER BY ' 
+                    'sequence, depth desc '  
+                ) % ((tmpl_id, product_id) + partner_args + (pricelist_version_ids[0], qty))
+                              
+                cr.execute(query)
                 res1 = cr.dictfetchall()
                 uom_price_already_computed = False
                 for res in res1:
@@ -303,6 +326,7 @@ class product_pricelist(osv.osv):
         res = res_multi[prod_id]
         res.update({'item_id': {ids[-1]: res_multi.get('item_id', ids[-1])}})
         return res
+
 
 product_pricelist()
 
