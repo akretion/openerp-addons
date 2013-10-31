@@ -297,6 +297,7 @@ class hr_expense_expense(osv.osv):
             if not mres:
                 continue
             res.append(mres)
+            current_product_line_pos = len(res) - 1
             tax_code_found= False
             
             #Calculate tax according to default tax on product
@@ -340,7 +341,7 @@ class hr_expense_expense(osv.osv):
                 is_price_include = tax_obj.read(cr,uid,tax['id'],['price_include'],context)['price_include']
                 if is_price_include:
                     ## We need to deduce the price for the tax
-                    res[-1]['price'] = res[-1]['price']  - (tax['amount'] * tax['base_sign'] or 0.0)
+                    res[current_product_line_pos]['price'] = res[current_product_line_pos]['price']  - (-(tax['amount'] * tax['base_sign'] or 0.0))
                 assoc_tax = {
                              'type':'tax',
                              'name':tax['name'],
