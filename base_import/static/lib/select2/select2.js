@@ -162,10 +162,6 @@
         });
     }
 
-    $(document).delegate("*", "mousemove", function (e) {
-        $.data(document, "select2-lastpos", {x: e.pageX, y: e.pageY});
-    });
-
     /**
      * filters mouse events so an event is fired only if the mouse moved.
      *
@@ -598,6 +594,9 @@
             this.initContainerWidth();
 
             installFilteredMouseMove(this.results);
+            this.dropdown.delegate(resultsSelector, "mousemove", function (e) {
+                $.data(document, "select2-lastpos", {x: e.pageX, y: e.pageY});
+            });
             this.dropdown.delegate(resultsSelector, "mousemove-filtered", this.bind(this.highlightUnderEvent));
 
             installDebouncedScroll(80, this.results);
