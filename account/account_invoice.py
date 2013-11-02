@@ -1519,11 +1519,19 @@ class account_invoice_line(osv.osv):
         else:
             taxes = res.supplier_taxes_id and res.supplier_taxes_id or (a and self.pool.get('account.account').browse(cr, uid, a, context=context).tax_ids or False)
         tax_id = fpos_obj.map_tax(cr, uid, fpos, taxes)
+        result['invoice_line_tax_id'] = tax_id
 
-        if type in ('in_invoice', 'in_refund'):
-            result.update( {'price_unit': price_unit or res.standard_price,'invoice_line_tax_id': tax_id} )
-        else:
-            result.update({'price_unit': res.list_price, 'invoice_line_tax_id': tax_id})
+        warning = {}
+        # When product changes, price ALWAYS need to be reset. If not price
+        # found in product, or pricelist, it should become False. Only if
+        # product_id has been cleared by user, we will leave price_unit as is.
+        if  product:
+            price_unit, pu_warning = self._price_unit_get(
+                cr, uid, product, uom_id, qty, type, partner_id,
+                currency_id, context=context)
+            result['price_unit'] = price_unit  # might be False
+            warning.update(pu_warning)
+
         result['name'] = res.partner_ref
 
         result['uos_id'] = uom_id or res.uom_id.id
@@ -1532,25 +1540,80 @@ class account_invoice_line(osv.osv):
 
         domain = {'uos_id':[('category_id','=',res.uom_id.category_id.id)]}
 
-        res_final = {'value':result, 'domain':domain}
-
-        if not company_id or not currency_id:
-            return res_final
-
-        company = self.pool.get('res.company').browse(cr, uid, company_id, context=context)
-        currency = self.pool.get('res.currency').browse(cr, uid, currency_id, context=context)
-
-        if company.currency_id.id != currency.id:
-            if type in ('in_invoice', 'in_refund'):
-                res_final['value']['price_unit'] = res.standard_price
-            new_price = res_final['value']['price_unit'] * currency.rate
-            res_final['value']['price_unit'] = new_price
-
-        if result['uos_id'] and result['uos_id'] != res.uom_id.id:
-            selected_uom = self.pool.get('product.uom').browse(cr, uid, result['uos_id'], context=context)
-            new_price = self.pool.get('product.uom')._compute_price(cr, uid, res.uom_id.id, res_final['value']['price_unit'], result['uos_id'])
-            res_final['value']['price_unit'] = new_price
+        res_final = {'value': result, 'domain': domain, 'warning': warning}
         return res_final
+
+    def _price_unit_get(
+            self, cr, uid, product_id, uom_id, qty, invoice_type, partner_id,
+            currency_id, context=None):
+        price_unit = False
+        warning = {}
+        standard_currency_id = currency_id
+        partner_model = self.pool.get('res.partner')
+        partner_obj = partner_model.browse(
+            cr, uid, partner_id, context=context)
+        assert partner_obj, _('No partner found for id %d') % partner_id
+        if invoice_type in ('in_invoice', 'in_refund'):
+            field = 'list_price'
+            pricelist_property = 'property_product_pricelist_purchase'
+        else:
+            field = 'standard_price'
+            pricelist_property = 'property_product_pricelist'
+        if  pricelist_property in partner_obj:
+            pricelist_id = partner_obj[pricelist_property].id
+        else:
+            pricelist_id = False
+        # Check whether standard price p.u. modified by pricelist
+        if  pricelist_id:
+            pricelist_model = self.pool.get('product.pricelist')
+            price_unit = pricelist_model.price_get(
+                cr, uid, [pricelist_id], product_id, qty or 1.0,
+                partner=partner_id,
+                context=dict(context, uom=uom_id))[pricelist_id]
+            if  price_unit is False:  # 0.0 is OK, we night have free products
+                warning = {
+                   'title': _('No valid pricelist line found!'),
+                   'message':
+                    _("Couldn't find a pricelist line matching this product"
+                    " and quantity.\n"
+                    "You have to change either the product, the quantity or"
+                    " the pricelist.")
+                }
+            # Pricelist converts price from standard currency to pricelist
+            # currency. We have to convert this to the invoice currency.
+            # In practice that will often mean undoing the conversion
+            # done by the pricelist object
+            pricelist_obj = pricelist_model.browse(
+                    cr, uid, pricelist_id, context=context)
+            if  pricelist_obj and pricelist_obj.currency_id:
+                standard_currency_id = pricelist_obj.currency_id.id
+        else:
+            # Take standard price per unit directly from product
+            product_model = self.pool.get('product.product')
+            product_obj = product_model.browse(
+                cr, uid, product_id, context=context)
+            assert product_obj, _('No product found for id %d') % product_id
+            assert field in product_obj, _(
+                'Field %s not found in product') % field
+            price_unit = product_obj.uom_id._compute_price(
+                    cr, uid, product_obj.uom_id.id, product_obj[field], uom_id)
+            # When price not taken from pricelist, the currency is
+            # determined by the price_type:
+            price_type_model = self.pool.get('product.price.type')
+            price_type_ids = price_type_model.search(
+                cr, uid, [('field', '=', field)], context=context)
+            if  price_type_ids:
+                price_type_obj = price_type_model.browse(
+                    cr, uid, price_type_ids[0], context=context)
+                if price_type_obj and price_type_obj.currency_id:
+                    standard_currency_id = price_type_obj.currency_id.id
+        # convert price_unit to currency of invoice
+        if  standard_currency_id != currency_id:
+            currency_model = self.pool.get('res.currency')
+            price_unit = currency_model.compute(
+                cr, uid, standard_currency_id, currency_id,
+                price_unit, round=True, context=context)
+        return price_unit, warning
 
     def uos_id_change(self, cr, uid, ids, product, uom, qty=0, name='', type='out_invoice', partner_id=False, fposition_id=False, price_unit=False, currency_id=False, context=None, company_id=None):
         if context is None:
