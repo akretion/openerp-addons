@@ -65,14 +65,45 @@ class purchase_requisition(osv.osv):
             'name': self.pool.get('ir.sequence').get(cr, uid, 'purchase.order.requisition'),
         })
         return super(purchase_requisition, self).copy(cr, uid, id, default, context)
-    
+
+    def unlink(self, cr, uid, ids, context=None):
+        """
+        Deletes Requisition and related RFQs 
+        """
+        if context is None: context = {}
+        purchase_obj = self.pool.get('purchase.order')
+        purchase_ids = self._requisition_procurement_cancel(cr, uid, ids, context=context)
+        if purchase_ids:
+            purchase_obj.unlink(cr, uid, purchase_ids, context=context)
+        return super(purchase_requisition, self).unlink(cr, uid, ids, context=context)
+
+    def _requisition_procurement_cancel(self, cr, uid, ids, context=None):
+        """
+        Cancels procurement order related to requisition
+        @param ids: requisition ids
+        @return: Returns purchase orders associated with requisition if any
+        """
+        if context is None: context = {}
+        purchase_ids = []
+        procurement_ids = []
+        procurement_obj = self.pool.get('procurement.order')
+        for requisition in self.browse(cr, uid, ids, context=context):
+            purchase_ids.extend(purchase.id for purchase in requisition.purchase_ids)
+            if requisition.state == 'cancel':
+                continue
+            procurement_ids.extend(procurement_obj.search(cr, uid,
+                [('requisition_id', '=', requisition.id)], context=context))
+        if procurement_ids:
+            procurement_obj.action_cancel(cr, uid, procurement_ids)
+        return purchase_ids
+
     def tender_cancel(self, cr, uid, ids, context=None):
+        if context is None: context = {}
         purchase_order_obj = self.pool.get('purchase.order')
-        for purchase in self.browse(cr, uid, ids, context=context):
-            for purchase_id in purchase.purchase_ids:
-                if str(purchase_id.state) in('draft'):
-                    purchase_order_obj.action_cancel(cr,uid,[purchase_id.id])
-        return self.write(cr, uid, ids, {'state': 'cancel'})
+        purchase_ids = self._requisition_procurement_cancel(cr, uid, ids, context=context)
+        if purchase_ids:
+            purchase_order_obj.action_cancel(cr, uid, purchase_ids, context=context)
+        return self.write(cr, uid, ids, {'state': 'cancel'}, context=context)
 
     def tender_in_progress(self, cr, uid, ids, context=None):
         return self.write(cr, uid, ids, {'state':'in_progress'} ,context=context)
@@ -240,14 +271,20 @@ class procurement_order(osv.osv):
         res = {}
         requisition_obj = self.pool.get('purchase.requisition')
         warehouse_obj = self.pool.get('stock.warehouse')
+        orderpoint_obj = self.pool.get('stock.warehouse.orderpoint')
         procurement = self.browse(cr, uid, ids, context=context)[0]
         if procurement.product_id.purchase_requisition:
-             warehouse_id = warehouse_obj.search(cr, uid, [('company_id', '=', procurement.company_id.id or company.id)], context=context)
+             order_point_ids = orderpoint_obj.search(cr, uid, [('procurement_id','=', procurement.id)], context=context)
+             if order_point_ids:
+                warehouse_id = orderpoint_obj.browse(cr, uid, order_point_ids[0], context=context).warehouse_id.id
+             else:
+                 warehouse_ids = warehouse_obj.search(cr, uid, [('lot_input_id', '=', procurement.location_id.id)], context=context)
+                 warehouse_id = warehouse_ids and warehouse_ids[0] or False
              res[procurement.id] = requisition_obj.create(cr, uid, 
                    {
                     'origin': procurement.origin,
                     'date_end': procurement.date_planned,
-                    'warehouse_id':warehouse_id and warehouse_id[0] or False,
+                    'warehouse_id': warehouse_id,
                     'company_id':procurement.company_id.id,
                     'line_ids': [(0,0,{
                         'product_id': procurement.product_id.id,
@@ -257,9 +294,8 @@ class procurement_order(osv.osv):
                    })],
                 })
              self.write(cr,uid,[procurement.id],{'state': 'running','requisition_id': res[procurement.id]},context=context)
-        else:
-            res = super(procurement_order, self).make_po(cr, uid, ids, context=context)
-        return res
+             return {}
+        return super(procurement_order, self).make_po(cr, uid, ids, context=context)
 
 procurement_order()
 
