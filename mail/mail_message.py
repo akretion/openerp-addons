@@ -60,9 +60,28 @@ def decode(text):
         return ''.join([tools.ustr(x[0], x[1]) for x in text])
 
 def to_email(text):
-    """Return a list of the email addresses found in ``text``"""
+    """Returns a list of the email addresses found in ``text``
+    
+     According to rfc2822 the allowed characters are letter and digits and  
+            "!" / "#" /     ;  SP, and specials.
+                        "$" / "%" /     ;  Used for atoms
+                        "&" / "'" /
+                        "*" / "+" /
+                        "-" / "/" /
+                        "=" / "?" /
+                        "^" / "_" /
+                        "`" / "{" /
+                        "|" / "}" /
+                        "~"
+    Therefore remove also " and () around the addresses
+    and additionally ' because it is sometimes added to names that are taken from email address
+    and I doubt that other clients can handle it.
+    
+    Warning: can create double entries                     
+                       
+    """
     if not text: return []
-    return re.findall(r'([^ ,<@]+@[^> ,]+)', text)
+    return re.findall(r'([^ ,(\'"<@]+@[^> ,)\'"]+)',text)
 
 class mail_message_common(osv.osv_memory):
     """Common abstract class for holding the main attributes of a 
