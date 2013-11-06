@@ -1280,9 +1280,9 @@ class stock_picking(osv.osv):
                                                          context=context)[0]
                     price_type = pricetype_obj.browse(cr, uid, price_type_id, context=context)
                     price_type_currency_id = price_type.currency_id.id
-                    if product.id in product_avail:
-                        product_avail[product.id] += qty
-                    else:
+
+                    if product.id not in product_avail:
+                        # keep track of stock on hand including processed lines not yet marked as done
                         product_avail[product.id] = product.qty_available
 
                     if qty > 0:
@@ -1291,7 +1291,8 @@ class stock_picking(osv.osv):
                                 move_currency_id, product_price, round=False)
                         new_price = uom_obj._compute_price(cr, uid, product_uom, new_price,
                                 product.uom_id.id)
-                        if product.qty_available <= 0:
+                        if product_avail[product.id] <= 0:
+                            product_avail[product.id] = 0
                             new_std_price = new_price
                         else:
                             # Get the standard price
@@ -1313,6 +1314,9 @@ class stock_picking(osv.osv):
                         move_obj.write(cr, uid, [move.id],
                                 {'price_unit': product_price,
                                  'price_currency_id': product_currency})
+
+                        product_avail[product.id] += qty
+
 
 
             for move in too_few:
