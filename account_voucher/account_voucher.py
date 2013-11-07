@@ -1049,7 +1049,7 @@ class account_voucher(osv.osv):
                 'partner_id': voucher.partner_id.id,
                 'currency_id': company_currency <> current_currency and  current_currency or False,
                 'amount_currency': (sign * abs(voucher.amount)
-                    if company_currency !=current_currency else 0.0),
+                    if company_currency != current_currency else 0.0),
                 'date': voucher.date,
                 'date_maturity': voucher.date_due
             }
