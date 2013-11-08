@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:36+0000\n"
-"PO-Revision-Date: 2013-11-05 12:33+0000\n"
+"PO-Revision-Date: 2013-11-07 14:04+0000\n"
 "Last-Translator: Krešimir Jeđud <kresimir.jedud@infokom.hr>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-11-06 05:51+0000\n"
+"X-Launchpad-Export-Date: 2013-11-08 06:26+0000\n"
 "X-Generator: Launchpad (build 16820)\n"
 
 #. module: stock
@@ -1063,7 +1063,7 @@ msgstr "Datum kreiranja, obično vrijeme naloga"
 #: view:report.stock.inventory:0
 #: view:stock.move:0
 msgid "Scrap"
-msgstr "Scrap"
+msgstr "Otpis"
 
 #. module: stock
 #: field:product.template,property_stock_inventory:0
@@ -2644,7 +2644,7 @@ msgstr "Ostalo"
 #: model:stock.location,name:stock.stock_location_scrapped
 #: field:stock.move,scrapped:0
 msgid "Scrapped"
-msgstr "Scrapped"
+msgstr "Otpisano"
 
 #. module: stock
 #: field:product.product,track_incoming:0
@@ -2777,7 +2777,7 @@ msgstr ""
 #. module: stock
 #: view:report.stock.move:0
 msgid "Delay(Days)"
-msgstr "Delay(Days)"
+msgstr "Odgoda (dana)"
 
 #. module: stock
 #: field:stock.partial.move.line,move_id:0
@@ -2926,7 +2926,7 @@ msgstr "Fiksna lokacija"
 #. module: stock
 #: field:report.stock.inventory,scrap_location:0
 msgid "scrap"
-msgstr ""
+msgstr "otpis"
 
 #. module: stock
 #: code:addons/stock/stock.py:1891
@@ -3047,7 +3047,7 @@ msgstr "Polica"
 #: model:ir.actions.act_window,name:stock.move_scrap
 #: view:stock.move.scrap:0
 msgid "Scrap Move"
-msgstr "Premjesti Otpad"
+msgstr ""
 
 #. module: stock
 #: help:stock.move,prodlot_id:0
