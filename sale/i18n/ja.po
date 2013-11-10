@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:36+0000\n"
-"PO-Revision-Date: 2013-11-07 14:38+0000\n"
+"PO-Revision-Date: 2013-11-10 05:03+0000\n"
 "Last-Translator: Yoshi Tashiro <yostashiro@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-11-08 06:26+0000\n"
+"X-Launchpad-Export-Date: 2013-11-10 06:45+0000\n"
 "X-Generator: Launchpad (build 16820)\n"
 
 #. module: sale
@@ -276,7 +276,7 @@ msgstr ""
 #. module: sale
 #: field:sale.shop,name:0
 msgid "Shop Name"
-msgstr "店名"
+msgstr "店舗名"
 
 #. module: sale
 #: code:addons/sale/sale.py:598
@@ -526,7 +526,7 @@ msgstr ""
 #: model:mail.message.subtype,description:sale.mt_order_sent
 #: model:mail.message.subtype,name:sale.mt_order_sent
 msgid "Quotation sent"
-msgstr ""
+msgstr "見積送信"
 
 #. module: sale
 #: field:sale.order,invoice_exists:0
@@ -548,7 +548,7 @@ msgstr "確認日"
 #. module: sale
 #: field:sale.order.line,address_allotment_id:0
 msgid "Allotment Partner"
-msgstr "割当パートナ"
+msgstr "割当取引先"
 
 #. module: sale
 #: model:ir.actions.act_window,name:sale.action_view_sale_advance_payment_inv
@@ -1324,7 +1324,7 @@ msgstr ""
 #: code:addons/sale/sale.py:185
 #, python-format
 msgid "There is no default shop for the current user's company!"
-msgstr ""
+msgstr "ユーザの会社にデフォルト店舗がありません。"
 
 #. module: sale
 #: code:addons/sale/sale.py:277
@@ -1379,7 +1379,7 @@ msgstr "請求書"
 #. module: sale
 #: field:sale.order,origin:0
 msgid "Source Document"
-msgstr "元となるドキュメント"
+msgstr "参照元"
 
 #. module: sale
 #: view:sale.order.line:0
@@ -1686,7 +1686,7 @@ msgstr "配送先"
 #. module: sale
 #: selection:sale.order,state:0
 msgid "Sale to Invoice"
-msgstr ""
+msgstr "請求待ち"
 
 #. module: sale
 #: view:sale.config.settings:0
@@ -1760,7 +1760,7 @@ msgstr ""
 #: view:sale.report:0
 #: field:sale.report,shop_id:0
 msgid "Shop"
-msgstr "店"
+msgstr "店舗"
 
 #. module: sale
 #: field:sale.report,date_confirm:0
@@ -2081,7 +2081,7 @@ msgstr "本当に請求書を作成しますか？"
 #. module: sale
 #: view:sale.order:0
 msgid "Order Number"
-msgstr ""
+msgstr "オーダ番号"
 
 #. module: sale
 #: view:sale.order:0

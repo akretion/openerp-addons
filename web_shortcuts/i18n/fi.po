@@ -1,14 +1,14 @@
 # Finnish translation for openobject-addons
-# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the openobject-addons package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:37+0000\n"
-"PO-Revision-Date: 2013-11-08 09:05+0000\n"
+"PO-Revision-Date: 2013-11-08 21:06+0000\n"
 "Last-Translator: Harri Luuppala <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,9 @@ msgstr ""
 "X-Launchpad-Export-Date: 2013-11-10 06:45+0000\n"
 "X-Generator: Launchpad (build 16820)\n"
 
-#. module: stock_invoice_directly
-#: model:ir.model,name:stock_invoice_directly.model_stock_partial_picking
-msgid "Partial Picking Processing Wizard"
-msgstr "Osittaisen keräilyn avustaja"
+#. module: web_shortcuts
+#. openerp-web
+#: code:addons/web_shortcuts/static/src/xml/web_shortcuts.xml:21
+#, python-format
+msgid "Add / Remove Shortcut..."
+msgstr "Lisää / Poista pikavalinta..."
