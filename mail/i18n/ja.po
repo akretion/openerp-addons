@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:36+0000\n"
-"PO-Revision-Date: 2013-11-07 08:08+0000\n"
+"PO-Revision-Date: 2013-11-10 05:46+0000\n"
 "Last-Translator: Yoshi Tashiro <yostashiro@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-11-08 06:26+0000\n"
+"X-Launchpad-Export-Date: 2013-11-10 06:44+0000\n"
 "X-Generator: Launchpad (build 16820)\n"
 
 #. module: mail
@@ -146,7 +146,7 @@ msgstr ""
 #: code:addons/mail/static/src/xml/mail_followers.xml:23
 #, python-format
 msgid "Add others"
-msgstr ""
+msgstr "フォロワー追加"
 
 #. module: mail
 #: field:mail.message.subtype,parent_id:0
@@ -810,7 +810,7 @@ msgstr ""
 #: code:addons/mail/static/src/xml/mail.xml:337
 #, python-format
 msgid "like"
-msgstr ""
+msgstr "いいね"
 
 #. module: mail
 #: view:mail.compose.message:0
@@ -1310,7 +1310,7 @@ msgstr ""
 #: code:addons/mail/static/src/xml/mail_followers.xml:13
 #, python-format
 msgid "Following"
-msgstr ""
+msgstr "フォロー中"
 
 #. module: mail
 #: sql_constraint:mail.alias:0
@@ -1409,14 +1409,14 @@ msgstr ""
 #. module: mail
 #: model:mail.message.subtype,name:mail.mt_comment
 msgid "Discussions"
-msgstr ""
+msgstr "ディスカッション"
 
 #. module: mail
 #. openerp-web
 #: code:addons/mail/static/src/xml/mail_followers.xml:11
 #, python-format
 msgid "Follow"
-msgstr ""
+msgstr "フォロー"
 
 #. module: mail
 #: model:mail.group,name:mail.group_all_employees
@@ -1524,7 +1524,7 @@ msgstr ""
 #: code:addons/mail/static/src/xml/mail_followers.xml:35
 #, python-format
 msgid "Remove this follower"
-msgstr ""
+msgstr "このフォロワーを削除"
 
 #. module: mail
 #: selection:res.partner,notification_email_send:0
@@ -1743,7 +1743,7 @@ msgstr ""
 #: code:addons/mail/static/src/xml/mail.xml:338
 #, python-format
 msgid "unlike"
-msgstr ""
+msgstr "いいね取消"
 
 #. module: mail
 #: model:ir.model,name:mail.model_mail_group
