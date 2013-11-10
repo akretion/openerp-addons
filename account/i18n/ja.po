@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-14 22:29+0000\n"
-"PO-Revision-Date: 2013-11-08 01:49+0000\n"
+"PO-Revision-Date: 2013-11-10 04:10+0000\n"
 "Last-Translator: Yoshi Tashiro <yostashiro@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-11-08 06:25+0000\n"
+"X-Launchpad-Export-Date: 2013-11-10 06:44+0000\n"
 "X-Generator: Launchpad (build 16820)\n"
 
 #. module: account
@@ -1486,7 +1486,7 @@ msgstr "エントリーの消し込み"
 #: model:ir.actions.report.xml,name:account.account_overdue
 #: view:res.company:0
 msgid "Overdue Payments"
-msgstr "期限超過の支払い"
+msgstr "滞納"
 
 #. module: account
 #: report:account.third_party_ledger:0
@@ -1557,7 +1557,7 @@ msgstr "銀行取引明細書"
 #. module: account
 #: field:res.partner,property_account_receivable:0
 msgid "Account Receivable"
-msgstr "売掛金"
+msgstr "売掛金勘定"
 
 #. module: account
 #: code:addons/account/account.py:612
@@ -2302,7 +2302,7 @@ msgstr ""
 #: code:addons/account/report/account_partner_ledger.py:274
 #, python-format
 msgid "Payable Accounts"
-msgstr "買掛金"
+msgstr "買掛金勘定"
 
 #. module: account
 #: constraint:account.move.line:0
@@ -2500,7 +2500,7 @@ msgstr "動作中"
 #: field:product.category,property_account_income_categ:0
 #: field:product.template,property_account_income:0
 msgid "Income Account"
-msgstr "損益勘定"
+msgstr "収益勘定"
 
 #. module: account
 #: help:account.config.settings,default_sale_tax:0
@@ -2768,7 +2768,7 @@ msgstr ""
 #. module: account
 #: field:product.template,supplier_taxes_id:0
 msgid "Supplier Taxes"
-msgstr "仕入先税金"
+msgstr "仕入先税"
 
 #. module: account
 #: view:res.partner:0
@@ -4158,7 +4158,7 @@ msgstr "分析行検索"
 #. module: account
 #: field:res.partner,property_account_payable:0
 msgid "Account Payable"
-msgstr "買掛金"
+msgstr "買掛金勘定"
 
 #. module: account
 #: code:addons/account/wizard/account_fiscalyear_close.py:88
@@ -5038,7 +5038,7 @@ msgstr ""
 #. module: account
 #: field:account.chart.template,property_account_income:0
 msgid "Income Account on Product Template"
-msgstr "製品テンプレート上の損益勘定"
+msgstr "製品テンプレート上の収益勘定"
 
 #. module: account
 #: help:account.journal.period,state:0
@@ -6396,7 +6396,7 @@ msgstr "分析エントリー"
 #: view:res.company:0
 #: field:res.company,overdue_msg:0
 msgid "Overdue Payments Message"
-msgstr "支払延滞のメッセージ"
+msgstr "督促メッセージ"
 
 #. module: account
 #: field:account.entries.report,date_created:0
@@ -7182,7 +7182,7 @@ msgstr ""
 #: model:ir.ui.menu,name:account.menu_action_move_journal_line_form
 #: model:ir.ui.menu,name:account.menu_finance_entries
 msgid "Journal Entries"
-msgstr "仕訳帳エントリー"
+msgstr "仕訳"
 
 #. module: account
 #: code:addons/account/wizard/account_invoice_refund.py:147
@@ -7910,7 +7910,7 @@ msgstr ""
 #. module: account
 #: view:account.move:0
 msgid "Unposted Journal Entries"
-msgstr "未記帳の仕訳帳エントリー"
+msgstr "未記帳仕訳"
 
 #. module: account
 #: help:account.invoice.refund,date:0
@@ -8016,7 +8016,7 @@ msgstr ""
 #: view:validate.account.move:0
 #: view:validate.account.move.lines:0
 msgid "Post Journal Entries"
-msgstr "仕訳帳エントリーの記帳"
+msgstr "仕訳の記帳"
 
 #. module: account
 #: selection:account.bank.statement.line,type:0
@@ -8078,7 +8078,7 @@ msgstr ""
 #. module: account
 #: selection:account.print.journal,sort_selection:0
 msgid "Journal Entry Number"
-msgstr "仕訳帳エントリー番号"
+msgstr "仕訳番号"
 
 #. module: account
 #: view:account.financial.report:0
