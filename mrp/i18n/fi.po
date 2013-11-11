@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:36+0000\n"
-"PO-Revision-Date: 2013-11-09 21:15+0000\n"
+"PO-Revision-Date: 2013-11-10 09:17+0000\n"
 "Last-Translator: Harri Luuppala <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-11-10 06:44+0000\n"
+"X-Launchpad-Export-Date: 2013-11-11 05:38+0000\n"
 "X-Generator: Launchpad (build 16820)\n"
 
 #. module: mrp
@@ -29,6 +29,14 @@ msgid ""
 "                    * Notes for the technician and for the final customer.\n"
 "                This installs the module mrp_repair."
 msgstr ""
+"Sallii kaikkien tuotekorjausten hallinnan. \n"
+"                    * Lisää/poista korjattavia tuotteita\n"
+"                    * Vaikutus varastoon\n"
+"                    * Laskutus (tuotteet ja/tai palvelut)\n"
+"                    * Takuukonsepti\n"
+"                    * Korjausraportti\n"
+"                    * Huomautus teknikolle ja loppuasiakkaalle\n"
+"                Tämä asentaa moduulin  mrp_repair."
 
 #. module: mrp
 #: report:mrp.production.order:0
@@ -63,8 +71,8 @@ msgid ""
 "The 'Minimum stock rule' allows the system to create procurement orders "
 "automatically as soon as the minimum stock is reached."
 msgstr ""
-"'Minimivarastosääntö' sallii järjestelmän luoda hankitatilauksen "
-"automaattisesti kun minimivarastomäärä on alitettu"
+"Minimivarastosääntö sallii järjestelmän luoda hankitatilauksen "
+"automaattisesti, kun minimivarastomäärä on alitettu."
 
 #. module: mrp
 #: code:addons/mrp/report/price.py:130
@@ -80,7 +88,7 @@ msgstr "Romutetut"
 #. module: mrp
 #: view:mrp.workcenter:0
 msgid "Mrp Workcenter"
-msgstr "MRP Työpiste"
+msgstr "MRP-työpiste"
 
 #. module: mrp
 #: model:ir.actions.act_window,name:mrp.mrp_routing_action
@@ -253,6 +261,16 @@ msgid ""
 "              </p>\n"
 "            "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Klikkaa luodaksesi vaiheen.\n"
+"              </p><p>\n"
+"                Vaiheistus sallii valmistusoperaatioiden luonnin ja "
+"hallinnan.\n"
+"                Tuotteiden valmistusta tulee seurata työpisteissä. \n"
+"                Valmistettavat tuotteet on liitetty osaluetteloon, joka\n"
+"                määrittelee tarvittavat raaka-aineet.\n"
+"              </p>\n"
+"            "
 
 #. module: mrp
 #: view:mrp.production:0
@@ -281,6 +299,8 @@ msgid ""
 "The selection of the right Bill of Material to use will depend on the "
 "properties specified on the sales order and the Bill of Material."
 msgstr ""
+"Oikean osaluettelon valinta käyttöön riippuu myyntitilauksesta ja "
+"osaluettelosta."
 
 #. module: mrp
 #: view:mrp.bom:0
@@ -289,6 +309,9 @@ msgid ""
 "                                will contain the raw materials, instead of "
 "the finished product."
 msgstr ""
+"Kun myyntitilausta käsitellään tälle tuotteelle, niin toimitustilaus\n"
+"                                sisältää raaka-aineet lopputuotteiden "
+"asemesta."
 
 #. module: mrp
 #: report:mrp.production.order:0
@@ -363,6 +386,18 @@ msgid ""
 "              </p>\n"
 "            "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Klikkaa luodaksesi valmistustilaus.\n"
+"              </p><p>\n"
+"                Valmistustilaus joka perustuu osaluetteloon\n"
+"                kuluttaa raaka-aineita ja tuottaa valmistuotteita.\n"
+"              </p><p>\n"
+"                Valmistustilaukset ehdotetaan yleensä automaattisesti "
+"perustuen\n"
+"                asiakasvaatimuksiin tai automaattisiin sääntöihin kuten \n"
+"                minimivarastosääntöön.\n"
+"              </p>\n"
+"            "
 
 #. module: mrp
 #: sql_constraint:mrp.production:0
@@ -386,6 +421,8 @@ msgid ""
 "Fill this product to easily track your production costs in the analytic "
 "accounting."
 msgstr ""
+"Täytä tämän tuotteen tiedot seurataksesi tuotantokustannuksia analyyttisessä "
+"kirjanpidossa."
 
 #. module: mrp
 #: field:mrp.workcenter,product_id:0
@@ -450,6 +487,17 @@ msgid ""
 "'In Production'.\n"
 "                When the production is over, the status is set to 'Done'."
 msgstr ""
+"Kun tuotantotilaus on luotu, niin sen tila on \"Ehdotus\".\n"
+"                Jos tilaus vahvistetaan, niin tilaksi asetetaan \"Odottaa "
+"komponentteja\".\n"
+"                Jos havaitaan poikkeus, niin tilaksi asetetaan "
+"\"Keräilypoikkeama\".\n"
+"                Jos varastoa on riittävästi, niin tilaksi asetetaan \"Valmis "
+"valmistettavaksi\".\n"
+"                Jos valmistus aloitetaan, niin tilaksi asetetaan "
+"\"Valmistuksessa\".\n"
+"                Jos valmistus on suoritettu loppuun, niin tilaksi asetetaan "
+"\"Valmis\"."
 
 #. module: mrp
 #: model:ir.actions.act_window,name:mrp.action_report_in_out_picking_tree
@@ -783,7 +831,7 @@ msgstr ""
 #. module: mrp
 #: model:process.node,note:mrp.process_node_minimumstockrule0
 msgid "Linked to the 'Minimum stock rule' supplying method."
-msgstr "Kytketty toimitusmetodiin 'minimivarasto sääntö'"
+msgstr "Kytketty toimitusmenetelmään minimivarastosäännöllä."
 
 #. module: mrp
 #: selection:mrp.workcenter.load,time_unit:0
@@ -862,6 +910,9 @@ msgid ""
 "order creates a RFQ for a subcontracting purchase order or waits until the "
 "service is done (= the delivery of the products)."
 msgstr ""
+"Valitusta valmistusmenetelmästä riippuen palvelun \"toimitus\", "
+"hankintatilaus luo tarjouspyynnön alihankinnan ostotilaukseksi tai odottaa, "
+"että palvelu on suoritettu (=tuotteiden toimitus)."
 
 #. module: mrp
 #: selection:mrp.production,priority:0
@@ -904,6 +955,9 @@ msgid ""
 "You should install the mrp_byproduct module if you want to manage extra "
 "products on BoMs !"
 msgstr ""
+"Kaikkien tuotemäärien pitää olla yli nollan.\n"
+"Asenna moduuli mrp_byproduct, jos haluat hallita lisätuotteita "
+"osaluetteloissa!"
 
 #. module: mrp
 #: view:mrp.production:0
@@ -1163,7 +1217,7 @@ msgstr "Tuotannossa olevat valmistustilaukset"
 #. module: mrp
 #: model:ir.actions.client,name:mrp.action_client_mrp_menu
 msgid "Open MRP Menu"
-msgstr "Avaa tuotannonohjaus valikko"
+msgstr "Avaa tuotannonohjausvalikko"
 
 #. module: mrp
 #: model:ir.actions.act_window,name:mrp.mrp_production_action4
@@ -1426,7 +1480,7 @@ msgstr "Tuotannon työpisteet"
 #. module: mrp
 #: view:mrp.workcenter:0
 msgid "Search for mrp workcenter"
-msgstr "Etsi valmistuksen MRP työpisteitä"
+msgstr "Etsi valmistuksen MRP-työpiste"
 
 #. module: mrp
 #: view:mrp.bom:0
@@ -1505,7 +1559,7 @@ msgstr "Viittaus dokumenttiin, joka synnytti tämän valmistustilauspyynnön."
 #. module: mrp
 #: model:process.transition,name:mrp.process_transition_minimumstockprocure0
 msgid "'Minimum stock rule' material"
-msgstr "'Minimivarasto' säännön mukaiset materiaalit"
+msgstr "Minimivarastosäännön mukaiset materiaalit"
 
 #. module: mrp
 #: view:mrp.production:0
@@ -1710,6 +1764,10 @@ msgid ""
 "operations and to plan future loads on work centers based on production "
 "planning."
 msgstr ""
+"Luettelo operaatioista (luettelo työpisteistä), joilla tuotetaan lopputuote. "
+"Vaiheistusta käytetään pääasiassa työpisteiden valmistuskustannusten "
+"laskennassa ja valmistussuunnitelmien pohjalta tulevan kuormituksen "
+"suunnittelussa."
 
 #. module: mrp
 #: view:change.production.qty:0
@@ -1919,7 +1977,7 @@ msgstr "Tuotteen myyntiyksikkö määrä"
 #. module: mrp
 #: field:mrp.production,move_prod_id:0
 msgid "Product Move"
-msgstr ""
+msgstr "Tuotteen siirto"
 
 #. module: mrp
 #: model:ir.actions.act_window,help:mrp.action_report_in_out_picking_tree
@@ -2067,7 +2125,7 @@ msgstr "Asetuksiin kuluva aika tunneissa."
 #. module: mrp
 #: field:mrp.config.settings,module_mrp_repair:0
 msgid "Manage repairs of products "
-msgstr ""
+msgstr "Hallitse tuotekorjaukset "
 
 #. module: mrp
 #: help:mrp.config.settings,module_mrp_byproduct:0
@@ -2224,7 +2282,7 @@ msgstr "Tuotannot"
 #: model:ir.model,name:mrp.model_stock_move_split
 #: view:mrp.production:0
 msgid "Split in Serial Numbers"
-msgstr ""
+msgstr "Pilkotaan sarjanumeroiksi"
 
 #. module: mrp
 #: help:mrp.bom,product_uos:0
@@ -2284,7 +2342,7 @@ msgstr "Valmistuksen työpöytä"
 #: code:addons/mrp/wizard/change_production_qty.py:68
 #, python-format
 msgid "Active Id not found"
-msgstr ""
+msgstr "Aktiivista tunnusta ei löydy"
 
 #. module: mrp
 #: model:process.node,note:mrp.process_node_procureproducts0
@@ -2325,7 +2383,7 @@ msgstr ""
 #. module: mrp
 #: field:mrp.config.settings,group_mrp_properties:0
 msgid "Allow several bill of materials per products using properties"
-msgstr ""
+msgstr "Sallii tuotteelle useita ominaisuuksiin perustuvia osaluetteloita"
 
 #. module: mrp
 #: model:ir.actions.act_window,name:mrp.mrp_property_group_action
@@ -2350,6 +2408,8 @@ msgid ""
 "Depending on the chosen method to supply the stockable products, the "
 "procurement order creates a RFQ, a production order, ... "
 msgstr ""
+"Riippuen valitusta varastotuotteen toimitusmenetelmästä hankintatilaus luo "
+"tarjouspyynnön, valmistustilauksen,... "
 
 #. module: mrp
 #: help:mrp.workcenter,time_stop:0
@@ -2384,6 +2444,9 @@ msgid ""
 "production order creates as much procurement orders as components listed in "
 "the BOM, through a run of the schedulers (MRP)."
 msgstr ""
+"Raaka-aineiden toimittamiseksi (osto tai valmistus) tuotantotilaus luo "
+"jokaiselle osaluettelossa luetellulle komponentille oman hankintatilauksen "
+"automaattisesti vuorottajan (MRP scheduler) toimesta."
 
 #. module: mrp
 #: help:mrp.product_price,number:0

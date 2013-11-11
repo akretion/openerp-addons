@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:36+0000\n"
-"PO-Revision-Date: 2013-11-09 11:18+0000\n"
+"PO-Revision-Date: 2013-11-10 08:30+0000\n"
 "Last-Translator: Darja Zorman <darja.zorman@mentis.si>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-11-10 06:44+0000\n"
+"X-Launchpad-Export-Date: 2013-11-11 05:38+0000\n"
 "X-Generator: Launchpad (build 16820)\n"
 
 #. module: base_calendar
@@ -1259,7 +1259,7 @@ msgstr "Pravilo izjeme"
 #: help:calendar.attendee,language:0
 msgid ""
 "To specify the language for text values in aproperty or property parameter."
-msgstr ""
+msgstr "Določitev jezika za besedila v lastnostih ali parametrih."
 
 #. module: base_calendar
 #: view:calendar.event:0
@@ -1274,6 +1274,8 @@ msgid ""
 "Defines a rule or repeating pattern of time to exclude from the recurring "
 "rule."
 msgstr ""
+"Določitev pravila ali ponavljajočega vzorca časa za izključitev iz "
+"ponavljajočega pravila."
 
 #. module: base_calendar
 #: field:calendar.event,month_list:0
@@ -1292,12 +1294,12 @@ msgstr "Dan(Dni)"
 #. module: base_calendar
 #: view:calendar.event:0
 msgid "Confirmed Events"
-msgstr ""
+msgstr "Potrjeni dogodki"
 
 #. module: base_calendar
 #: field:calendar.attendee,dir:0
 msgid "URI Reference"
-msgstr ""
+msgstr "URI referenca"
 
 #. module: base_calendar
 #: field:calendar.alarm,description:0
@@ -1336,7 +1338,7 @@ msgstr "ir.values"
 #. module: base_calendar
 #: view:crm.meeting:0
 msgid "Search Meetings"
-msgstr ""
+msgstr "Iskanje sestankov"
 
 #. module: base_calendar
 #: model:ir.model,name:base_calendar.model_ir_attachment
@@ -1346,12 +1348,12 @@ msgstr "ir.attachment"
 #. module: base_calendar
 #: model:ir.model,name:base_calendar.model_crm_meeting_type
 msgid "Meeting Type"
-msgstr ""
+msgstr "Tip sestanka"
 
 #. module: base_calendar
 #: selection:calendar.attendee,state:0
 msgid "Delegated"
-msgstr ""
+msgstr "Delegirano"
 
 #. module: base_calendar
 #: field:calendar.event,sa:0
@@ -1372,6 +1374,13 @@ msgid ""
 "              </p>\n"
 "            "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Kliknite za določitev novega tipa alarma.\n"
+"              </p><p>\n"
+"                Določite lahko poljuben tip alarma koledarja, ki se lahko \n"
+"                priredi koledarskih dogodkom ali sestankom.\n"
+"              </p>\n"
+"            "
 
 #. module: base_calendar
 #: selection:crm.meeting,state:0
@@ -1381,7 +1390,7 @@ msgstr "Nepotrjeno"
 #. module: base_calendar
 #: help:calendar.attendee,sent_by:0
 msgid "Specify the user that is acting on behalf of the calendar user"
-msgstr ""
+msgstr "Določite uporabnika, ki ukrepa namesto koledarskega uporabnika"
 
 #. module: base_calendar
 #: view:calendar.event:0
@@ -1414,7 +1423,7 @@ msgstr "Ime"
 #: field:calendar.todo,exdate:0
 #: field:crm.meeting,exdate:0
 msgid "Exception Date/Times"
-msgstr ""
+msgstr "Datum/čas izjeme"
 
 #. module: base_calendar
 #: help:calendar.alarm,name:0
@@ -1422,11 +1431,13 @@ msgid ""
 "Contains the text to be                      used as the message subject for "
 "email                      or contains the text to be used for display"
 msgstr ""
+"Vsebuje tekst za uporabo v naslovu elektronskega sporočila ali tekst, ki se "
+"uporabi za izpis"
 
 #. module: base_calendar
 #: model:ir.model,name:base_calendar.model_mail_message
 msgid "Message"
-msgstr ""
+msgstr "Sporočilo"
 
 #. module: base_calendar
 #: field:calendar.event,base_calendar_alarm_id:0
@@ -1438,7 +1449,7 @@ msgstr "Opozorilo"
 #. module: base_calendar
 #: field:calendar.attendee,sent_by_uid:0
 msgid "Sent By User"
-msgstr ""
+msgstr "Poslal uporabnik"
 
 #. module: base_calendar
 #: selection:calendar.event,month_list:0
@@ -1451,12 +1462,12 @@ msgstr "April"
 #: code:addons/base_calendar/crm_meeting.py:106
 #, python-format
 msgid "Email addresses not found"
-msgstr ""
+msgstr "Ne najdem elektronskega naslova"
 
 #. module: base_calendar
 #: view:calendar.event:0
 msgid "Recurrency period"
-msgstr ""
+msgstr "Obdobje ponavljanja"
 
 #. module: base_calendar
 #: field:calendar.event,week_list:0
@@ -1469,7 +1480,7 @@ msgstr "Delovni dan"
 #: code:addons/base_calendar/base_calendar.py:1015
 #, python-format
 msgid "Interval cannot be negative."
-msgstr ""
+msgstr "Interval ne more biti negativen."
 
 #. module: base_calendar
 #: field:calendar.event,byday:0
@@ -1482,12 +1493,12 @@ msgstr "Po dnevih"
 #: code:addons/base_calendar/base_calendar.py:441
 #, python-format
 msgid "First you have to specify the date of the invitation."
-msgstr ""
+msgstr "Najprej določite datum povabila."
 
 #. module: base_calendar
 #: field:calendar.alarm,model_id:0
 msgid "Model"
-msgstr ""
+msgstr "Model"
 
 #. module: base_calendar
 #: selection:calendar.alarm,action:0
@@ -1504,7 +1515,7 @@ msgstr "ID"
 #. module: base_calendar
 #: selection:calendar.attendee,role:0
 msgid "For information Purpose"
-msgstr ""
+msgstr "Za informativni namen"
 
 #. module: base_calendar
 #: field:calendar.event,select1:0
@@ -1516,7 +1527,7 @@ msgstr "Možnost"
 #. module: base_calendar
 #: model:ir.model,name:base_calendar.model_calendar_attendee
 msgid "Attendee information"
-msgstr ""
+msgstr "Prisotnost"
 
 #. module: base_calendar
 #: field:calendar.alarm,res_id:0
@@ -1545,7 +1556,7 @@ msgstr "Zaporedje"
 #: help:calendar.todo,alarm_id:0
 #: help:crm.meeting,alarm_id:0
 msgid "Set an alarm at this time, before the event occurs"
-msgstr ""
+msgstr "Nastavi alarm za ta čas, preden nastopi dogodek"
 
 #. module: base_calendar
 #: view:calendar.event:0
@@ -1565,7 +1576,7 @@ msgstr "Sobota"
 #: field:calendar.todo,interval:0
 #: field:crm.meeting,interval:0
 msgid "Repeat Every"
-msgstr ""
+msgstr "Ponavljaj vsakih"
 
 #. module: base_calendar
 #: selection:calendar.event,byday:0
@@ -1606,6 +1617,11 @@ msgid ""
 "                    * Points to a procedure resource, which is invoked when  "
 "                    the alarm is triggered for procedure."
 msgstr ""
+"* Določite zvok, ki bo klican ko se sproži akcija za zvok,\n"
+"                    * datoteka, predvidena za pošiljanje kot priponka "
+"elektronskemu sporočilu,\n"
+"                    * določitev vira postopka, ki bo klican, ko se sproži "
+"alarm za postopek."
 
 #. module: base_calendar
 #: selection:calendar.event,byday:0
