@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-14 22:29+0000\n"
-"PO-Revision-Date: 2013-11-10 04:10+0000\n"
+"PO-Revision-Date: 2013-11-10 09:05+0000\n"
 "Last-Translator: Yoshi Tashiro <yostashiro@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-11-10 06:44+0000\n"
+"X-Launchpad-Export-Date: 2013-11-11 05:38+0000\n"
 "X-Generator: Launchpad (build 16820)\n"
 
 #. module: account
@@ -2676,7 +2676,7 @@ msgstr "請求書のドラフト状態"
 #. module: account
 #: view:product.category:0
 msgid "Account Properties"
-msgstr ""
+msgstr "勘定属性"
 
 #. module: account
 #: selection:account.invoice.refund,filter_refund:0
@@ -4223,7 +4223,7 @@ msgstr "前回完全消込日"
 #: field:account.move.reconcile,name:0
 #: field:account.subscription,name:0
 msgid "Name"
-msgstr "名前"
+msgstr "名称"
 
 #. module: account
 #: code:addons/account/installer.py:115
