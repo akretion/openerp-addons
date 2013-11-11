@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:37+0000\n"
-"PO-Revision-Date: 2013-11-09 20:07+0000\n"
+"PO-Revision-Date: 2013-11-10 08:44+0000\n"
 "Last-Translator: Yoshi Tashiro <yostashiro@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-11-10 06:44+0000\n"
+"X-Launchpad-Export-Date: 2013-11-11 05:38+0000\n"
 "X-Generator: Launchpad (build 16820)\n"
 
 #. module: product
@@ -897,7 +897,7 @@ msgstr ""
 #: model:ir.ui.menu,name:product.menu_product_category_action_form
 #: view:product.category:0
 msgid "Product Categories"
-msgstr "製品分類"
+msgstr "製品カテゴリ"
 
 #. module: product
 #: view:product.template:0
@@ -1108,7 +1108,7 @@ msgstr ""
 #. module: product
 #: model:product.category,name:product.product_category_9
 msgid "Softwares"
-msgstr ""
+msgstr "ソフトウェア"
 
 #. module: product
 #: field:product.product,packaging:0
@@ -1124,12 +1124,12 @@ msgstr "物流ユニット"
 #: field:product.ul,name:0
 #: field:product.uom.categ,name:0
 msgid "Name"
-msgstr "名前"
+msgstr "名称"
 
 #. module: product
 #: model:product.category,name:product.product_category_4
 msgid "Computers"
-msgstr ""
+msgstr "コンピュータ"
 
 #. module: product
 #: help:product.product,message_ids:0
@@ -1548,7 +1548,7 @@ msgstr ""
 #: field:product.product,active:0
 #: field:product.uom,active:0
 msgid "Active"
-msgstr "アクティブ"
+msgstr "有効"
 
 #. module: product
 #: field:product.product,price_margin:0
@@ -1563,7 +1563,7 @@ msgstr "価格リスト名"
 #. module: product
 #: model:product.category,name:product.product_category_1
 msgid "Saleable"
-msgstr ""
+msgstr "販売可能"
 
 #. module: product
 #: sql_constraint:product.uom:0
@@ -1877,7 +1877,7 @@ msgstr "長さ / 距離"
 #. module: product
 #: model:product.category,name:product.product_category_8
 msgid "Components"
-msgstr ""
+msgstr "部材"
 
 #. module: product
 #: field:product.product,code:0
@@ -1899,7 +1899,7 @@ msgstr "価格リストタイプ"
 #. module: product
 #: model:product.category,name:product.product_category_6
 msgid "External Devices"
-msgstr ""
+msgstr "外付デバイス"
 
 #. module: product
 #: field:product.product,color:0
@@ -2163,7 +2163,7 @@ msgstr ""
 #. module: product
 #: model:product.category,name:product.product_category_2
 msgid "Internal"
-msgstr ""
+msgstr "内部"
 
 #. module: product
 #: model:product.template,name:product.product_product_45_product_template
@@ -2327,7 +2327,7 @@ msgstr "遅延"
 #. module: product
 #: field:product.category,type:0
 msgid "Category Type"
-msgstr "分類タイプ"
+msgstr "カテゴリタイプ"
 
 #. module: product
 #: model:process.node,note:product.process_node_product0
@@ -2443,7 +2443,7 @@ msgstr "原価計算法"
 #: model:ir.model,name:product.model_product_category
 #: field:product.pricelist.item,categ_id:0
 msgid "Product Category"
-msgstr "製品分類"
+msgstr "製品カテゴリ"
 
 #. module: product
 #: model:product.template,description:product.product_product_19_product_template
