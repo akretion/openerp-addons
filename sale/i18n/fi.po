@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:36+0000\n"
-"PO-Revision-Date: 2013-11-08 19:07+0000\n"
-"Last-Translator: Mikko Salmela <salmemik@gmail.com>\n"
+"PO-Revision-Date: 2013-11-12 06:17+0000\n"
+"Last-Translator: Harri Luuppala <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-11-10 06:45+0000\n"
+"X-Launchpad-Export-Date: 2013-11-12 06:23+0000\n"
 "X-Generator: Launchpad (build 16820)\n"
 
 #. module: sale
@@ -242,12 +242,12 @@ msgstr "Tarjoukset ja myynnit"
 #: help:sale.config.settings,group_uom:0
 msgid ""
 "Allows you to select and maintain different units of measure for products."
-msgstr "Sallii eri mittayksiköiden valinnan ja ylläpidon"
+msgstr "Sallii tuotteille eri yksiköiden valinnan ja ylläpidon"
 
 #. module: sale
 #: model:ir.model,name:sale.model_sale_make_invoice
 msgid "Sales Make Invoice"
-msgstr "Myyntilaskun luonti"
+msgstr "Myynti luo lasku"
 
 #. module: sale
 #: code:addons/sale/sale.py:307
@@ -316,7 +316,7 @@ msgstr "Ennakko  %s %%"
 #. module: sale
 #: model:ir.actions.act_window,name:sale.action_orders_exception
 msgid "Sales in Exception"
-msgstr "Myydyt joissa poikkeus toimituksessa"
+msgstr "Myynnit joissa poikkeus"
 
 #. module: sale
 #: help:sale.order.line,address_allotment_id:0
@@ -469,7 +469,7 @@ msgstr ""
 #. module: sale
 #: selection:sale.report,state:0
 msgid "In Progress"
-msgstr "Käynnissä"
+msgstr "Käsittelyssä"
 
 #. module: sale
 #: model:process.transition,note:sale.process_transition_confirmquotation0
@@ -492,7 +492,7 @@ msgid ""
 "If you change the pricelist of this order (and eventually the currency), "
 "prices of existing order lines will not be updated."
 msgstr ""
-"Jos muutat rämän tilauksen hinnaston (ja mahdollisesti valuutan), aiempien "
+"Jos muutat tämän tilauksen hinnaston (ja mahdollisesti valuutan), aiempien "
 "tilausrivien hinnat eivät muutu."
 
 #. module: sale
@@ -523,7 +523,7 @@ msgid ""
 "default properties of Product categories."
 msgstr ""
 "Taloudellista tilannetta ei ole määritelty tai oletusmyyntitiliä määritelty "
-"tuoteryhmille."
+"tuotekategorioille."
 
 #. module: sale
 #: field:sale.order,project_id:0
