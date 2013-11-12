@@ -147,6 +147,9 @@ class document_file(osv.osv):
         # filename_uniq is not possible in pure SQL
     ]
     def _check_duplication(self, cr, uid, vals, ids=[], op='create'):
+        """
+        Returns True if not same filename is attached already to an object (res_model, res_id) 
+        """    
         name = vals.get('name', False)
         parent_id = vals.get('parent_id', False)
         res_model = vals.get('res_model', False)
@@ -324,8 +327,8 @@ class document_file(osv.osv):
         return False
 
     def unlink(self, cr, uid, ids, context=None):
+        attachment_ref = self.pool.get('ir.attachment')
         stor = self.pool.get('document.storage')
-        unres = []
         # We have to do the unlink in 2 stages: prepare a list of actual
         # files to be unlinked, update the db (safer to do first, can be
         # rolled back) and then unlink the files. The list wouldn't exist
@@ -333,6 +336,7 @@ class document_file(osv.osv):
         ids = self.search(cr, uid, [('id','in',ids)])
         for f in self.browse(cr, uid, ids, context=context):
             # TODO: update the node cache
+            unres = []
             par = f.parent_id
             storage_id = None
             while par:
@@ -340,16 +344,24 @@ class document_file(osv.osv):
                     storage_id = par.storage_id
                     break
                 par = par.parent_id
-            #assert storage_id, "Strange, found file #%s w/o storage!" % f.id #TOCHECK: after run yml, it's fail
-            if storage_id:
-                r = stor.prepare_unlink(cr, uid, storage_id, f)
-                if r:
-                    unres.append(r)
-            else:
-                logging.getLogger('document').warning("Unlinking attachment #%s %s that has no storage",
-                                                f.id, f.name)
-        res = super(document_file, self).unlink(cr, uid, ids, context)
-        stor.do_unlink(cr, uid, unres)
+            #We get the ids of attachement that correspond to the document
+            attachment_ids = attachment_ref.search(cr, uid, [('store_fname', '=', f.store_fname), ('parent_id.name', '=', f.parent_id.name)], context=context)
+            #If we have more than 1 attachment for a same file, we will not unlink it.
+            canUnlink = len(attachment_ids)
+            #If canUnlink is bigger than 1 it means that the document has more than 1 attachement.
+            #We therefore cannot unlink that document.
+            if canUnlink == 1:
+                #assert storage_id, "Strange, found file #%s w/o storage!" % f.id #TOCHECK: after run yml, it's fail            
+                if storage_id:
+                    r = stor.prepare_unlink(cr, uid, storage_id, f)
+                    if r:
+                        unres.append(r)
+                else:
+                    logging.getLogger('document').warning("Unlinking attachment #%s %s that has no storage",
+                                                    f.id, f.name)
+            #do the unlink per document in order to delete the filestorage with the last deleted document of the same file!        
+            res = super(document_file, self).unlink(cr, uid, [f.id], context)
+            stor.do_unlink(cr, uid, unres)
         return res
 
 document_file()
