@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-11-24 02:53+0000\n"
-"PO-Revision-Date: 2013-11-11 21:04+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2013-11-12 08:36+0000\n"
+"Last-Translator: Jan Jurkus (GCE CAD-Service) <ict@gcecad-service.nl>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-11-12 06:22+0000\n"
+"X-Launchpad-Export-Date: 2013-11-13 06:08+0000\n"
 "X-Generator: Launchpad (build 16820)\n"
 
 #. module: l10n_ec
@@ -30,7 +30,7 @@ msgstr ""
 #. module: l10n_ec
 #: model:account.account.type,name:l10n_ec.account_type_liability
 msgid "Pasivo"
-msgstr ""
+msgstr "Passiva"
 
 #. module: l10n_ec
 #: model:account.account.type,name:l10n_ec.account_type_receivable
@@ -40,7 +40,7 @@ msgstr ""
 #. module: l10n_ec
 #: model:account.account.type,name:l10n_ec.account_type_asset
 msgid "Activo"
-msgstr ""
+msgstr "Activa"
 
 #. module: l10n_ec
 #: model:account.account.type,name:l10n_ec.account_type_tax
@@ -50,7 +50,7 @@ msgstr ""
 #. module: l10n_ec
 #: model:account.account.type,name:l10n_ec.account_type_capital
 msgid "Capital"
-msgstr ""
+msgstr "Kapitaal"
 
 #. module: l10n_ec
 #: model:account.account.type,name:l10n_ec.account_type_cash
@@ -70,4 +70,4 @@ msgstr ""
 #. module: l10n_ec
 #: model:account.account.type,name:l10n_ec.account_type_view
 msgid "View"
-msgstr ""
+msgstr "Weergave"
