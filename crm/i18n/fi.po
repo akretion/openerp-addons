@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:36+0000\n"
-"PO-Revision-Date: 2013-10-30 10:45+0000\n"
-"Last-Translator: Jussi Mikkola <Unknown>\n"
+"PO-Revision-Date: 2013-11-13 04:53+0000\n"
+"Last-Translator: Harri Luuppala <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-10-31 05:47+0000\n"
+"X-Launchpad-Export-Date: 2013-11-13 06:08+0000\n"
 "X-Generator: Launchpad (build 16820)\n"
 
 #. module: crm
@@ -398,7 +398,7 @@ msgstr ""
 #: field:crm.lead,message_unread:0
 #: field:crm.phonecall,message_unread:0
 msgid "Unread Messages"
-msgstr ""
+msgstr "Lukemattomat viestit"
 
 #. module: crm
 #: view:crm.segmentation:0
@@ -412,7 +412,7 @@ msgstr "Segmentointi"
 #: selection:crm.lead2opportunity.partner.mass,action:0
 #: selection:crm.partner.binding,action:0
 msgid "Link to an existing customer"
-msgstr ""
+msgstr "Yhdistetään olemassaolevaan asiakkaaseen"
 
 #. module: crm
 #: field:crm.lead,write_date:0
@@ -428,7 +428,7 @@ msgstr "Tiiminvetajä"
 #: code:addons/crm/crm_lead.py:1052
 #, python-format
 msgid "%s a call for %s.%s"
-msgstr ""
+msgstr "%s soitto %s.%s"
 
 #. module: crm
 #: help:crm.case.stage,probability:0
@@ -462,7 +462,7 @@ msgstr ""
 #. module: crm
 #: field:crm.lead,partner_address_email:0
 msgid "Partner Contact Email"
-msgstr ""
+msgstr "Kumppanin yhteystieto; sähköposti"
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_case_section_act
@@ -514,7 +514,7 @@ msgstr "Postitukset"
 #. module: crm
 #: model:mail.message.subtype,description:crm.mt_lead_stage
 msgid "Stage changed"
-msgstr ""
+msgstr "Tila muuttunut"
 
 #. module: crm
 #: selection:crm.lead.report,creation_month:0
@@ -537,7 +537,7 @@ msgstr "Suunniteltu tuotto"
 #: code:addons/crm/crm_lead.py:988
 #, python-format
 msgid "Customer Email"
-msgstr ""
+msgstr "Asiakkaan sähköposti"
 
 #. module: crm
 #: field:crm.lead,planned_revenue:0
@@ -576,7 +576,7 @@ msgstr "Yhteenveto"
 #. module: crm
 #: view:crm.merge.opportunity:0
 msgid "Merge"
-msgstr ""
+msgstr "Yhdistä"
 
 #. module: crm
 #: view:crm.case.categ:0
@@ -586,7 +586,7 @@ msgstr "Asiakategoria"
 #. module: crm
 #: field:crm.lead,partner_address_name:0
 msgid "Partner Contact Name"
-msgstr ""
+msgstr "Kumppanin yhteystieto; nimi"
 
 #. module: crm
 #: model:ir.actions.server,subject:crm.action_email_reminder_lead
@@ -621,14 +621,14 @@ msgstr "Myyntitiimin koodin tulee olla uniikki !"
 #. module: crm
 #: help:crm.lead,email_from:0
 msgid "Email address of the contact"
-msgstr ""
+msgstr "Kontaktin sähköposti"
 
 #. module: crm
 #: selection:crm.case.stage,state:0
 #: view:crm.lead:0
 #: selection:crm.lead,state:0
 msgid "In Progress"
-msgstr ""
+msgstr "Käsittelyssä"
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_phonecall_categ_action
@@ -655,7 +655,7 @@ msgstr ""
 #. module: crm
 #: field:crm.lead.report,creation_month:0
 msgid "Creation Month"
-msgstr ""
+msgstr "Luontikuukausi"
 
 #. module: crm
 #: field:crm.case.section,resource_calendar_id:0
@@ -688,7 +688,7 @@ msgstr "Kumppanijaottelu"
 #. module: crm
 #: field:crm.lead,company_currency:0
 msgid "Currency"
-msgstr ""
+msgstr "Valuutta"
 
 #. module: crm
 #: field:crm.lead.report,probable_revenue:0
@@ -698,7 +698,7 @@ msgstr "Todennäköinen liikevaihto"
 #. module: crm
 #: help:crm.lead.report,creation_month:0
 msgid "Creation month"
-msgstr ""
+msgstr "Luontikuukausi"
 
 #. module: crm
 #: help:crm.segmentation,name:0
@@ -708,7 +708,7 @@ msgstr "Jaottelun nimi"
 #. module: crm
 #: model:ir.filters,name:crm.filter_usa_lead
 msgid "Leads from USA"
-msgstr ""
+msgstr "Liidit USA:sta"
 
 #. module: crm
 #: sql_constraint:crm.lead:0
@@ -747,12 +747,12 @@ msgstr "Televisio"
 #. module: crm
 #: model:ir.actions.act_window,name:crm.action_crm_send_mass_convert
 msgid "Convert to opportunities"
-msgstr ""
+msgstr "Muunnetaan mahdollisuuksiksi"
 
 #. module: crm
 #: model:ir.model,name:crm.model_sale_config_settings
 msgid "sale.config.settings"
-msgstr ""
+msgstr "sale.config.settings"
 
 #. module: crm
 #: view:crm.segmentation:0
@@ -762,7 +762,7 @@ msgstr "Pysäytä prosessi"
 #. module: crm
 #: field:crm.case.section,alias_id:0
 msgid "Alias"
-msgstr ""
+msgstr "Nimimerkki"
 
 #. module: crm
 #: view:crm.phonecall:0
@@ -794,12 +794,12 @@ msgstr "Poissulkeva"
 #: code:addons/crm/crm_lead.py:600
 #, python-format
 msgid "From %s : %s"
-msgstr ""
+msgstr "Alkaen %s : %s"
 
 #. module: crm
 #: view:crm.lead2opportunity.partner.mass:0
 msgid "Convert to Opportunities"
-msgstr ""
+msgstr "Muunnetaan mahdollisuuksiksi"
 
 #. module: crm
 #: view:crm.lead:0
@@ -813,7 +813,7 @@ msgstr ""
 #: view:crm.opportunity2phonecall:0
 #: view:crm.phonecall2phonecall:0
 msgid "or"
-msgstr ""
+msgstr "tai"
 
 #. module: crm
 #: field:crm.lead.report,create_date:0
@@ -847,7 +847,7 @@ msgstr "Postinumero"
 #. module: crm
 #: view:crm.phonecall:0
 msgid "Unassigned Phonecalls"
-msgstr ""
+msgstr "Soitot joita ei ole vastuutettu"
 
 #. module: crm
 #: view:crm.lead:0
@@ -885,7 +885,7 @@ msgstr "Lähtevä"
 #. module: crm
 #: view:crm.lead:0
 msgid "Leads that are assigned to me"
-msgstr ""
+msgstr "Minulle vastuutetut liidit."
 
 #. module: crm
 #: view:crm.lead:0
@@ -905,7 +905,7 @@ msgstr "Merkitse hävityksi"
 #. module: crm
 #: model:ir.filters,name:crm.filter_draft_lead
 msgid "Draft Leads"
-msgstr ""
+msgstr "Liidiehdotukset"
 
 #. module: crm
 #: selection:crm.lead.report,creation_month:0
@@ -917,7 +917,7 @@ msgstr "Maaliskuu"
 #. module: crm
 #: view:crm.lead:0
 msgid "Send Email"
-msgstr ""
+msgstr "Lähetä sähköposti"
 
 #. module: crm
 #: code:addons/crm/wizard/crm_lead_to_opportunity.py:89
@@ -940,7 +940,7 @@ msgstr "Päiviä avaamiseen"
 #. module: crm
 #: view:crm.lead:0
 msgid "ZIP"
-msgstr ""
+msgstr "Postinumero"
 
 #. module: crm
 #: field:crm.lead,mobile:0
@@ -1004,7 +1004,7 @@ msgstr "Aihe"
 #. module: crm
 #: view:crm.lead:0
 msgid "Show Sales Team"
-msgstr ""
+msgstr "Näytä myyntitiimi"
 
 #. module: crm
 #: help:sale.config.settings,module_crm_claim:0
@@ -1070,7 +1070,7 @@ msgstr ""
 #: code:addons/crm/crm_lead.py:715
 #, python-format
 msgid "Lead <b>converted into an Opportunity</b>"
-msgstr ""
+msgstr "Liidi <b>muunnettu Mahdollisuudeksi</b>"
 
 #. module: crm
 #: selection:crm.segmentation.line,expr_name:0
@@ -1080,12 +1080,12 @@ msgstr "Ostomäärä"
 #. module: crm
 #: view:crm.phonecall.report:0
 msgid "Year of call"
-msgstr ""
+msgstr "Puhelun vuosi"
 
 #. module: crm
 #: view:crm.lead:0
 msgid "Open Leads"
-msgstr ""
+msgstr "Avoimet liidit"
 
 #. module: crm
 #: view:crm.case.stage:0
@@ -1099,22 +1099,22 @@ msgstr "Vaihe"
 #. module: crm
 #: view:crm.phonecall.report:0
 msgid "Phone Calls that are assigned to me"
-msgstr ""
+msgstr "Minulle tehtäväksi annetut soitot"
 
 #. module: crm
 #: field:crm.lead,user_login:0
 msgid "User Login"
-msgstr ""
+msgstr "Käyttäjätunnus"
 
 #. module: crm
 #: view:crm.lead:0
 msgid "No salesperson"
-msgstr ""
+msgstr "Ei myyjää"
 
 #. module: crm
 #: view:crm.phonecall.report:0
 msgid "Phone calls which are in pending state"
-msgstr ""
+msgstr "Puhelut hoitamatta"
 
 #. module: crm
 #: view:crm.case.section:0
@@ -1132,16 +1132,18 @@ msgid ""
 "Allows you to communicate with Customer,  process Customer query, and "
 "provide better help and support. This installs the module crm_helpdesk."
 msgstr ""
+"Sallii sinun kommunikoida asiakkaan kanssa, käsitellä asikaskyselyitä ja "
+"tarjota parempaa apua ja tukea.  Tämä asentaa crm_helpdesk-moduulin."
 
 #. module: crm
 #: view:crm.lead:0
 msgid "Delete"
-msgstr ""
+msgstr "Poista"
 
 #. module: crm
 #: model:mail.message.subtype,description:crm.mt_lead_create
 msgid "Opportunity created"
-msgstr ""
+msgstr "Mahdollisuus luotu"
 
 #. module: crm
 #: view:crm.lead:0
