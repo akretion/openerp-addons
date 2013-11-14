@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-14 22:29+0000\n"
-"PO-Revision-Date: 2013-11-11 16:29+0000\n"
+"PO-Revision-Date: 2013-11-14 01:22+0000\n"
 "Last-Translator: Yoshi Tashiro <yostashiro@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-11-12 06:22+0000\n"
+"X-Launchpad-Export-Date: 2013-11-14 06:30+0000\n"
 "X-Generator: Launchpad (build 16820)\n"
 
 #. module: account
@@ -601,7 +601,7 @@ msgstr "税マッピング"
 #: model:ir.actions.act_window,name:account.action_account_fiscalyear_close_state
 #: model:ir.ui.menu,name:account.menu_wizard_fy_close_state
 msgid "Close a Fiscal Year"
-msgstr "会計年度を閉じる"
+msgstr "会計年度締"
 
 #. module: account
 #: model:process.transition,note:account.process_transition_confirmstatementfromdraft0
@@ -1508,7 +1508,7 @@ msgstr "レポートオプション"
 #. module: account
 #: field:account.fiscalyear.close.state,fy_id:0
 msgid "Fiscal Year to Close"
-msgstr ""
+msgstr "締対象会計年度"
 
 #. module: account
 #: field:account.config.settings,sale_sequence_prefix:0
@@ -1704,7 +1704,7 @@ msgstr ""
 #: selection:account.fiscalyear,state:0
 #: selection:account.period,state:0
 msgid "Closed"
-msgstr "閉じた"
+msgstr "クローズ"
 
 #. module: account
 #: model:ir.ui.menu,name:account.menu_finance_recurrent_entries
@@ -7958,7 +7958,7 @@ msgstr "通貨調整"
 #. module: account
 #: field:account.fiscalyear.close,fy_id:0
 msgid "Fiscal Year to close"
-msgstr "閉じる会計年度"
+msgstr "締対象会計年度"
 
 #. module: account
 #: view:account.invoice.cancel:0
@@ -8877,7 +8877,7 @@ msgstr ""
 #. module: account
 #: model:ir.model,name:account.model_account_fiscalyear_close
 msgid "Fiscalyear Close"
-msgstr "会計年度を閉じる"
+msgstr "会計年度締"
 
 #. module: account
 #: sql_constraint:account.account:0
