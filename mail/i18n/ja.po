@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:36+0000\n"
-"PO-Revision-Date: 2013-11-11 04:17+0000\n"
+"PO-Revision-Date: 2013-11-14 03:01+0000\n"
 "Last-Translator: Yoshi Tashiro <yostashiro@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-11-12 06:23+0000\n"
+"X-Launchpad-Export-Date: 2013-11-14 06:30+0000\n"
 "X-Generator: Launchpad (build 16820)\n"
 
 #. module: mail
@@ -169,7 +169,7 @@ msgstr ""
 #: field:mail.thread,message_unread:0
 #: field:res.partner,message_unread:0
 msgid "Unread Messages"
-msgstr ""
+msgstr "未読メッセージ"
 
 #. module: mail
 #. openerp-web
@@ -512,7 +512,7 @@ msgstr "件名"
 #. module: mail
 #: field:mail.wizard.invite,partner_ids:0
 msgid "Partners"
-msgstr ""
+msgstr "取引先"
 
 #. module: mail
 #: view:mail.mail:0
@@ -710,7 +710,7 @@ msgstr ""
 #: code:addons/mail/static/src/js/mail.js:978
 #, python-format
 msgid "read more"
-msgstr ""
+msgstr "全文表示"
 
 #. module: mail
 #: code:addons/mail/wizard/invite.py:40
@@ -722,7 +722,7 @@ msgstr ""
 #: field:mail.compose.message,parent_id:0
 #: field:mail.message,parent_id:0
 msgid "Parent Message"
-msgstr ""
+msgstr "親メッセージ"
 
 #. module: mail
 #: selection:res.partner,notification_email_send:0
@@ -803,7 +803,7 @@ msgstr ""
 #: code:addons/mail/static/src/js/mail.js:979
 #, python-format
 msgid "read less"
-msgstr ""
+msgstr "全文表示解除"
 
 #. module: mail
 #. openerp-web
@@ -965,7 +965,7 @@ msgstr "Eメール検索"
 #: field:mail.compose.message,child_ids:0
 #: field:mail.message,child_ids:0
 msgid "Child Messages"
-msgstr ""
+msgstr "子メッセージ"
 
 #. module: mail
 #: field:mail.alias,alias_user_id:0
@@ -985,7 +985,7 @@ msgstr ""
 #: field:mail.notification,message_id:0
 #: field:mail.wizard.invite,message:0
 msgid "Message"
-msgstr ""
+msgstr "メッセージ"
 
 #. module: mail
 #: help:mail.followers,res_id:0
@@ -1105,7 +1105,7 @@ msgstr "送信"
 #: view:mail.wizard.invite:0
 #, python-format
 msgid "or"
-msgstr ""
+msgstr "または"
 
 #. module: mail
 #: code:addons/mail/mail_thread.py:111
@@ -1811,7 +1811,7 @@ msgstr "人事ポリシー"
 #: code:addons/mail/static/src/xml/mail.xml:323
 #, python-format
 msgid "Compose new Message"
-msgstr ""
+msgstr "新規メッセージ作成"
 
 #. module: mail
 #: model:ir.actions.client,name:mail.action_mail_inbox_feeds
