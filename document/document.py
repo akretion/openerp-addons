@@ -329,6 +329,7 @@ class document_file(osv.osv):
     def unlink(self, cr, uid, ids, context=None):
         attachment_ref = self.pool.get('ir.attachment')
         stor = self.pool.get('document.storage')
+        unres = []
         # We have to do the unlink in 2 stages: prepare a list of actual
         # files to be unlinked, update the db (safer to do first, can be
         # rolled back) and then unlink the files. The list wouldn't exist
@@ -336,7 +337,6 @@ class document_file(osv.osv):
         ids = self.search(cr, uid, [('id','in',ids)])
         for f in self.browse(cr, uid, ids, context=context):
             # TODO: update the node cache
-            unres = []
             par = f.parent_id
             storage_id = None
             while par:
@@ -359,9 +359,8 @@ class document_file(osv.osv):
                 else:
                     logging.getLogger('document').warning("Unlinking attachment #%s %s that has no storage",
                                                     f.id, f.name)
-            #do the unlink per document in order to delete the filestorage with the last deleted document of the same file!        
-            res = super(document_file, self).unlink(cr, uid, [f.id], context)
-            stor.do_unlink(cr, uid, unres)
+        res = super(document_file, self).unlink(cr, uid, ids, context)
+        stor.do_unlink(cr, uid, unres)
         return res
 
 document_file()
