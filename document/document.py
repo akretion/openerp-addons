@@ -327,7 +327,6 @@ class document_file(osv.osv):
         return False
 
     def unlink(self, cr, uid, ids, context=None):
-        attachment_ref = self.pool.get('ir.attachment')
         stor = self.pool.get('document.storage')
         unres = []
         # We have to do the unlink in 2 stages: prepare a list of actual
@@ -345,7 +344,7 @@ class document_file(osv.osv):
                     break
                 par = par.parent_id
             #We get the ids of attachement that correspond to the document
-            attachment_ids = attachment_ref.search(cr, uid, [('store_fname', '=', f.store_fname), ('parent_id.name', '=', f.parent_id.name)], context=context)
+            attachment_ids = self.search(cr, uid, [('store_fname', '=', f.store_fname), ('parent_id.name', '=', f.parent_id.name)], context=context)
             #If we have more than 1 attachment for a same file, we will not unlink it.
             canUnlink = len(attachment_ids)
             #If canUnlink is bigger than 1 it means that the document has more than 1 attachement.
