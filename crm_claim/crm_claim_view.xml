@@ -91,7 +91,9 @@
                                     <field name="partner_id" string="Partner"
                                         on_change="onchange_partner_id(partner_id)" />
                                     <field name="partner_address_id" string="Contact"
-                                        on_change="onchange_partner_address_id(partner_address_id, email_from)" />
+                                        on_change="onchange_partner_address_id(partner_address_id, email_from)" 
+                                        options='{"quick_create": false}' 
+                                        context="{'default_partner_id':partner_id}" />
                                     <field name="partner_phone"/>
                                     <field name="email_from" widget="email"/>
                                 </group>
