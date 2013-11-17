@@ -62,7 +62,9 @@
                                 on_change="onchange_partner_id(partner_id)" />
                             <field name="partner_address_id"
                                 string="Contact"
-                                on_change="onchange_partner_address_id(partner_address_id, email_from)" />
+                                on_change="onchange_partner_address_id(partner_address_id, email_from)"
+                                options='{"quick_create": false}' 
+                                context="{'default_partner_id':partner_id}" />
                             <field name="email_from"/>
                         </group><group col="2" colspan="2">
                             <separator colspan="2" string="Visibility"/>
