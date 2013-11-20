@@ -147,6 +147,9 @@ class document_file(osv.osv):
         # filename_uniq is not possible in pure SQL
     ]
     def _check_duplication(self, cr, uid, vals, ids=[], op='create'):
+        """
+        Returns True if not same filename is attached already to an object (res_model, res_id) 
+        """    
         name = vals.get('name', False)
         parent_id = vals.get('parent_id', False)
         res_model = vals.get('res_model', False)
@@ -340,14 +343,21 @@ class document_file(osv.osv):
                     storage_id = par.storage_id
                     break
                 par = par.parent_id
-            #assert storage_id, "Strange, found file #%s w/o storage!" % f.id #TOCHECK: after run yml, it's fail
-            if storage_id:
-                r = stor.prepare_unlink(cr, uid, storage_id, f)
-                if r:
-                    unres.append(r)
-            else:
-                logging.getLogger('document').warning("Unlinking attachment #%s %s that has no storage",
-                                                f.id, f.name)
+            #We get the ids of attachement that correspond to the document
+            attachment_ids = self.search(cr, uid, [('store_fname', '=', f.store_fname), ('parent_id.name', '=', f.parent_id.name)], context=context)
+            #If we have more than 1 attachment for a same file, we will not unlink it.
+            canUnlink = len(attachment_ids)
+            #If canUnlink is bigger than 1 it means that the document has more than 1 attachement.
+            #We therefore cannot unlink that document.
+            if canUnlink == 1:
+                #assert storage_id, "Strange, found file #%s w/o storage!" % f.id #TOCHECK: after run yml, it's fail            
+                if storage_id:
+                    r = stor.prepare_unlink(cr, uid, storage_id, f)
+                    if r:
+                        unres.append(r)
+                else:
+                    logging.getLogger('document').warning("Unlinking attachment #%s %s that has no storage",
+                                                    f.id, f.name)
         res = super(document_file, self).unlink(cr, uid, ids, context)
         stor.do_unlink(cr, uid, unres)
         return res
