@@ -343,7 +343,7 @@ class hr_expense_expense(osv.osv):
                     ## We need to deduce the price for the tax
                     res[current_product_line_pos]['price'] = res[current_product_line_pos]['price']  - (-(tax['amount'] * tax['base_sign'] or 0.0))
                 #Will create the tax here as we don't have the access
-                if ((tax['amount'] * tax['base_sign'] or 0.0) != 0.0 or (tax['tax_code_id'] != False )): 
+                if (tax['amount'] * tax['base_sign'] or 0.0) or (tax['tax_code_id'] != False ): 
                     assoc_tax = {
                                  'type':'tax',
                                  'name':tax['name'],
