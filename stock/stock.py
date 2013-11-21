@@ -2196,6 +2196,7 @@ class stock_move(osv.osv):
 
                     while res:
                         r = res.pop(0)
+                        product_uos_qty = self.pool.get('stock.move').onchange_quantity(cr, uid, ids, move.product_id.id, r[0], move.product_id.uom_id.id, move.product_id.uos_id.id)['value']['product_uos_qty']
                         move_id = self.copy(cr, uid, move.id, {'product_uos_qty': product_uos_qty, 'product_qty': r[0], 'location_id': r[1]})
                         done.append(move_id)
         if done:
@@ -3047,7 +3048,7 @@ class stock_picking_in(osv.osv):
     def default_get(self, cr, uid, fields_list, context=None):
         # merge defaults from stock.picking with possible defaults defined on stock.picking.in
         defaults = self.pool['stock.picking'].default_get(cr, uid, fields_list, context=context)
-        out_defaults = super(stock_picking_in, self).default_get(cr, uid, fields_list, context=context)
+        in_defaults = super(stock_picking_in, self).default_get(cr, uid, fields_list, context=context)
         defaults.update(in_defaults)
         return defaults
 
