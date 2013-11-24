@@ -1054,6 +1054,8 @@ class mrp_production(osv.osv):
 
             if shipment_id:
                 wf_service.trg_validate(uid, 'stock.picking', shipment_id, 'button_confirm', cr)
+                self.pool.get('stock.picking').action_assign(
+                        cr, uid, [shipment_id])
             production.write({'state':'confirmed'}, context=context)
         return shipment_id
 
