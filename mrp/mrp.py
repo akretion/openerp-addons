@@ -942,7 +942,7 @@ class mrp_production(osv.osv):
                         'move_dest_id': parent_move_id,
                         'location_id': source_location_id,
                         'location_dest_id': destination_location_id,
-                        'state': 'waiting',
+                        'state': 'draft',
                         'company_id': production.company_id.id,
                 })
 
