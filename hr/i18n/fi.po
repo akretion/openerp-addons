@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:36+0000\n"
-"PO-Revision-Date: 2013-11-22 23:03+0000\n"
+"PO-Revision-Date: 2013-11-23 07:20+0000\n"
 "Last-Translator: Harri Luuppala <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-11-23 06:26+0000\n"
+"X-Launchpad-Export-Date: 2013-11-24 05:47+0000\n"
 "X-Generator: Launchpad (build 16831)\n"
 
 #. module: hr
@@ -122,7 +122,7 @@ msgstr "Työt"
 #. module: hr
 #: view:hr.job:0
 msgid "In Recruitment"
-msgstr "Rekrytoitavana"
+msgstr "Käynnissä"
 
 #. module: hr
 #: field:hr.job,message_unread:0
@@ -800,7 +800,7 @@ msgstr "Hallitse tuntikortteja"
 #. module: hr
 #: model:ir.actions.act_window,name:hr.open_payroll_modules
 msgid "Payroll"
-msgstr "Palkanmaksu"
+msgstr "Palkkahallinto"
 
 #. module: hr
 #: selection:hr.employee,marital:0
@@ -810,22 +810,22 @@ msgstr "Naimaton"
 #. module: hr
 #: field:hr.job,name:0
 msgid "Job Name"
-msgstr "Tehtävän nimi"
+msgstr "Tehtävänimike"
 
 #. module: hr
 #: view:hr.job:0
 msgid "In Position"
-msgstr "Asemassa"
+msgstr "Tehtävässä"
 
 #. module: hr
 #: help:hr.config.settings,module_hr_payroll:0
 msgid "This installs the module hr_payroll."
-msgstr ""
+msgstr "Tämä asnetaa moduulin hr_payroll."
 
 #. module: hr
 #: field:hr.config.settings,module_hr_contract:0
 msgid "Record contracts per employee"
-msgstr ""
+msgstr "Tallenna sopimistiedot työntekijälle"
 
 #. module: hr
 #: view:hr.department:0
@@ -835,22 +835,22 @@ msgstr "osasto"
 #. module: hr
 #: field:hr.employee,country_id:0
 msgid "Nationality"
-msgstr "Kansallisuus"
+msgstr "Kansalaisuus"
 
 #. module: hr
 #: view:hr.config.settings:0
 msgid "Additional Features"
-msgstr ""
+msgstr "Lisäominaisuudet"
 
 #. module: hr
 #: field:hr.employee,notes:0
 msgid "Notes"
-msgstr "Huomautukset"
+msgstr "Muistiinpanot"
 
 #. module: hr
 #: model:ir.actions.act_window,name:hr.action2
 msgid "Subordinate Hierarchy"
-msgstr ""
+msgstr "Alaishierarkkia"
 
 #. module: hr
 #: field:hr.employee,resource_id:0
@@ -893,23 +893,23 @@ msgstr "Osaston nimi"
 #. module: hr
 #: model:ir.ui.menu,name:hr.menu_hr_reporting_timesheet
 msgid "Reports"
-msgstr ""
+msgstr "Raportit"
 
 #. module: hr
 #: field:hr.config.settings,module_hr_payroll:0
 msgid "Manage payroll"
-msgstr ""
+msgstr "Hallitse palkkoja"
 
 #. module: hr
 #: view:hr.config.settings:0
 #: model:ir.actions.act_window,name:hr.action_human_resources_configuration
 msgid "Configure Human Resources"
-msgstr ""
+msgstr "Konfiguroi henkilöstöhallintoa"
 
 #. module: hr
 #: selection:hr.job,state:0
 msgid "No Recruitment"
-msgstr ""
+msgstr "Ei rekrytointeja"
 
 #. module: hr
 #: help:hr.employee,ssnid:0
@@ -924,12 +924,12 @@ msgstr "OpenERP käyttäjätunnuksen luonti"
 #. module: hr
 #: field:hr.employee,login:0
 msgid "Login"
-msgstr "Kirjaudu"
+msgstr "Kirjautuminen"
 
 #. module: hr
 #: field:hr.job,expected_employees:0
 msgid "Total Forecasted Employees"
-msgstr ""
+msgstr "Ennuste yhteensä työntekijöitä"
 
 #. module: hr
 #: help:hr.job,state:0
@@ -937,11 +937,13 @@ msgid ""
 "By default 'In position', set it to 'In Recruitment' if recruitment process "
 "is going on for this job position."
 msgstr ""
+"Oletuksena \"Tehtävässä\" asetetaan tilaan \"Käynnissä\", jos "
+"rekrytointiprosessi on käynnissä tähän tehtävään."
 
 #. module: hr
 #: model:ir.model,name:hr.model_res_users
 msgid "Users"
-msgstr ""
+msgstr "Käyttäjät"
 
 #. module: hr
 #: model:ir.actions.act_window,name:hr.action_hr_job
@@ -977,17 +979,17 @@ msgstr "Valmentaja"
 #. module: hr
 #: sql_constraint:hr.job:0
 msgid "The name of the job position must be unique per company!"
-msgstr "Tehtäväkuvauksen nimen tulee olla ainutkertainen yrityskohtaisesti!"
+msgstr "Tehtävänimikeen tulee olla ainutkertainen yrityskohtaisesti!"
 
 #. module: hr
 #: help:hr.config.settings,module_hr_expense:0
 msgid "This installs the module hr_expense."
-msgstr ""
+msgstr "Tämä asentaa moduulin hr_expense."
 
 #. module: hr
 #: model:ir.model,name:hr.model_hr_config_settings
 msgid "hr.config.settings"
-msgstr ""
+msgstr "hr.config.settings"
 
 #. module: hr
 #: field:hr.department,manager_id:0
@@ -999,7 +1001,7 @@ msgstr "Esimies"
 #. module: hr
 #: selection:hr.employee,marital:0
 msgid "Widower"
-msgstr "Leski (mies)"
+msgstr "Leski"
 
 #. module: hr
 #: field:hr.employee,child_ids:0
@@ -1009,4 +1011,4 @@ msgstr "Alaiset"
 #. module: hr
 #: view:hr.config.settings:0
 msgid "Apply"
-msgstr ""
+msgstr "Käytä"
