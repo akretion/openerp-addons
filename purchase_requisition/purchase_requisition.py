@@ -278,11 +278,13 @@ class procurement_order(osv.osv):
         #      Do not forget to update both version in case of modification.
         Orderpoint = self.pool['stock.warehouse.orderpoint']
         ids = Orderpoint.search(
-                cr, uid, [('procurement_id','=', procurement.id)],
+                procurement._cr, procurement._uid,
+                [('procurement_id','=', procurement.id)],
                 context=context)
         if ids:
             return Orderpoint.browse(
-                    cr, uid, ids[0], context=context).warehouse_id.id
+                    procurement._cr, procurement._uid, ids[0],
+                    context=context).warehouse_id.id
 
         company_id = (procurement.company_id or user_company).id
         domains = [
