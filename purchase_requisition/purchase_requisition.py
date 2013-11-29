@@ -280,11 +280,11 @@ class procurement_order(osv.osv):
         ids = Orderpoint.search(
                 procurement._cr, procurement._uid,
                 [('procurement_id','=', procurement.id)],
-                context=context)
+                context=procurement._context)
         if ids:
             return Orderpoint.browse(
                     procurement._cr, procurement._uid, ids[0],
-                    context=context).warehouse_id.id
+                    context=procurement._context).warehouse_id.id
 
         company_id = (procurement.company_id or user_company).id
         domains = [
