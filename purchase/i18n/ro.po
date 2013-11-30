@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:36+0000\n"
-"PO-Revision-Date: 2013-04-02 16:37+0000\n"
+"PO-Revision-Date: 2013-11-30 05:26+0000\n"
 "Last-Translator: Dorin <dhongu@gmail.com>\n"
 "Language-Team: Romanian <ro@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-11-21 06:31+0000\n"
-"X-Generator: Launchpad (build 16831)\n"
+"X-Launchpad-Export-Date: 2013-11-30 05:31+0000\n"
+"X-Generator: Launchpad (build 16856)\n"
 
 #. module: purchase
 #: view:purchase.report:0
@@ -254,7 +254,7 @@ msgstr "Daca este selectat, mesajele noi necesita atentia dumneavoastra."
 #: model:process.node,name:purchase.process_node_packinglist0
 #: model:process.node,name:purchase.process_node_productrecept0
 msgid "Incoming Products"
-msgstr "Produse intrate"
+msgstr "Recepție prduse"
 
 #. module: purchase
 #: view:purchase.order:0
@@ -564,7 +564,7 @@ msgstr "Metoda de control a facturarii implicite"
 #: model:ir.ui.menu,name:purchase.menu_action_picking_tree4
 #: view:purchase.order:0
 msgid "Incoming Shipments"
-msgstr "Incarcaturi primite"
+msgstr "Recepție comenzi"
 
 #. module: purchase
 #: model:ir.actions.act_window,help:purchase.act_res_partner_2_supplier_invoices
@@ -687,7 +687,7 @@ msgstr "Poate fi achizitionat"
 #. module: purchase
 #: model:ir.ui.menu,name:purchase.menu_action_picking_tree_in_move
 msgid "Incoming  Products"
-msgstr "Produse Primite"
+msgstr "Recepție produse"
 
 #. module: purchase
 #: view:purchase.order:0
@@ -1034,7 +1034,7 @@ msgstr "Cerere de oferta:"
 #: model:ir.actions.act_window,name:purchase.action_picking_tree4_picking_to_invoice
 #: model:ir.ui.menu,name:purchase.menu_action_picking_tree4_picking_to_invoice
 msgid "On Incoming Shipments"
-msgstr "Livrari Primite"
+msgstr "Pe recepțiile primite"
 
 #. module: purchase
 #: report:purchase.order:0
@@ -1510,6 +1510,16 @@ msgid ""
 "              </p>\n"
 "            "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Clic pentru a crea o recepție.\n"
+"                </p><p>\n"
+"                Aici puteți urmări toate recepțiile comenzilor de "
+"aprovizionare \n"
+"                unde facturare este ”Bazată pe comenzi recepționate”,\n"
+"                și la care nu este primită factura de la furnizor.\n"
+"                Puteți genera facturi bazate pe aceste repeții.\n"
+"               </p>\n"
+"            "
 
 #. module: purchase
 #: model:ir.model,name:purchase.model_procurement_order
@@ -2230,7 +2240,7 @@ msgstr "Lista produselor comandate."
 #. module: purchase
 #: view:purchase.order:0
 msgid "Incoming Shipments & Invoices"
-msgstr "Transporturi Primite & Facturi"
+msgstr "Comenzi Primite & Facturi"
 
 #. module: purchase
 #: selection:purchase.order,state:0
