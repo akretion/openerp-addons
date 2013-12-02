@@ -213,9 +213,9 @@ class project(osv.osv):
         GROUP BY project_id
             """, (tuple(ids),))
         # aggregate results into res
-        res = dict([(result_line[0], {'planned_hours':result_line[1],
-                                      'total_hours':result_line[2],
-                                      'effective_hours':result_line[3]})
+        res = dict([(result_line[0], {'planned_hours': result_line[1],
+                                      'total_hours': result_line[2],
+                                      'effective_hours': result_line[3]})
                     for result_line in cr.fetchall()])
         # compute progress rates
         for id in ids:
