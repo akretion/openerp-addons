@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-14 22:29+0000\n"
-"PO-Revision-Date: 2013-11-30 21:43+0000\n"
+"PO-Revision-Date: 2013-12-01 22:14+0000\n"
 "Last-Translator: Harri Luuppala <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-12-01 05:44+0000\n"
+"X-Launchpad-Export-Date: 2013-12-02 05:51+0000\n"
 "X-Generator: Launchpad (build 16856)\n"
 
 #. module: account
@@ -73,7 +73,7 @@ msgstr "Päiväkirjamerkintä \"%s\" ei ole kelvollinen"
 #. module: account
 #: model:ir.model,name:account.model_report_aged_receivable
 msgid "Aged Receivable Till Today"
-msgstr "Ikääntyneet saatavat tähän päivään asti"
+msgstr "Erääntyneet saatavat tähän päivään asti"
 
 #. module: account
 #: model:process.transition,name:account.process_transition_invoiceimport0
@@ -325,6 +325,16 @@ msgid ""
 "              </p>\n"
 "            "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Klikkaa luodaksesi asiakkaalle hyvityksen. \n"
+"              </p><p>\n"
+"                Hyvitys on dokumentti, joka hyvittää laskun kokonaan \n"
+"                tai osittain.\n"
+"              </p><p>\n"
+"                Sen sijaan että loisit hyvityksen manuaalisesti, \n"
+"                voit luoda laskun vastaavasta myyntilaskusta.\n"
+"              </p>\n"
+"            "
 
 #. module: account
 #: help:account.installer,charts:0
@@ -864,7 +874,7 @@ msgstr "Tilikoodi"
 #. module: account
 #: selection:account.financial.report,display_detail:0
 msgid "Display children with hierarchy"
-msgstr "Näytä alataso ja sen hierarkia"
+msgstr "Näytä alatasot ja niiden hierarkiat"
 
 #. module: account
 #: selection:account.payment.term.line,value:0
@@ -1233,7 +1243,7 @@ msgstr "Tilin nimi."
 #. module: account
 #: field:account.journal,with_last_closing_balance:0
 msgid "Opening With Last Closing Balance"
-msgstr "Avataan edellisen tilikauden sulkemisen pohjalta"
+msgstr "Avataan edellisen suljetun tilikauden saldoilla"
 
 #. module: account
 #: help:account.tax.code,notprintable:0
@@ -1296,7 +1306,7 @@ msgstr "Kassakoneet"
 #. module: account
 #: field:account.config.settings,sale_refund_journal_id:0
 msgid "Sale refund journal"
-msgstr "Päiväkirja myyntihyvitykset"
+msgstr "Myyntihyvitykset päiväkirja"
 
 #. module: account
 #: model:ir.actions.act_window,help:account.action_view_bank_statement_tree
@@ -1438,7 +1448,7 @@ msgstr "Muut"
 #. module: account
 #: view:account.subscription:0
 msgid "Draft Subscription"
-msgstr "Rekisteröitymisehdotus"
+msgstr "Merkintäehdotus"
 
 #. module: account
 #: view:account.account:0
@@ -1550,7 +1560,7 @@ msgstr "Alkusaldo"
 #. module: account
 #: view:account.invoice:0
 msgid "Reset to Draft"
-msgstr "Palauta tilaan Ehdotus"
+msgstr "Palauta ehdotukseksi"
 
 #. module: account
 #: view:account.aged.trial.balance:0
@@ -1586,7 +1596,7 @@ msgid ""
 "status."
 msgstr ""
 "Kun uusi tiliote luodaan, sen tila on \"Ehdotus\".\n"
-"Kun pankista on saatu vahvistus, tilitooteen tila on \"Vahvistettu\"."
+"Kun pankista on saatu vahvistus, tilitotteen tila on \"Vahvistettu\"."
 
 #. module: account
 #: field:account.invoice.report,state:0
@@ -1630,7 +1640,7 @@ msgstr "%s (kopio)"
 #: selection:account.partner.balance,display_partner:0
 #: selection:account.report.general.ledger,display_account:0
 msgid "With balance is not equal to 0"
-msgstr "Saldo ei ole tasan 0"
+msgstr "Tili saldo ei ole nolla (0)"
 
 #. module: account
 #: code:addons/account/account.py:1483
@@ -2176,6 +2186,16 @@ msgid ""
 "              </p>\n"
 "            "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Klikkaa kirjataksesi uuden ostolaskun.\n"
+"              </p><p>\n"
+"                Voit kontrolloida ostolaskuja toimittajilta sen perusteella, "
+"mitä \n"
+"                tilasit ja mitä vastaanotettiin. OpenERP voi myös luoda \n"
+"                laskuehdotukset automaattisesti ostotilauksilta tai "
+"kuiteilta.\n"
+"              </p>\n"
+"            "
 
 #. module: account
 #: sql_constraint:account.move.line:0
@@ -2313,7 +2333,7 @@ msgstr ""
 #. module: account
 #: model:ir.model,name:account.model_account_aged_trial_balance
 msgid "Account Aged Trial balance Report"
-msgstr ""
+msgstr "Kirjanpidon koetaseen aikaraportti"
 
 #. module: account
 #: view:account.fiscalyear.close.state:0
@@ -2355,7 +2375,7 @@ msgid ""
 "If set to True then do not accept the entry if the entry date is not into "
 "the period dates"
 msgstr ""
-"Jos asetettu arvoon tosi (true), ei hyväksy kirjauspäiviä, jotka eivät kuulu "
+"Jos asetettu arvoon Tosi (True), ei hyväksy kirjauspäiviä, jotka eivät kuulu "
 "tilijaksolle."
 
 #. module: account
@@ -3088,20 +3108,20 @@ msgstr "Päivämäärät"
 #. module: account
 #: field:account.chart.template,parent_id:0
 msgid "Parent Chart Template"
-msgstr ""
+msgstr "Ylätason tilikartan malli"
 
 #. module: account
 #: field:account.tax,parent_id:0
 #: field:account.tax.template,parent_id:0
 msgid "Parent Tax Account"
-msgstr "Ylin verotili"
+msgstr "Ylätason verotili"
 
 #. module: account
 #: view:account.aged.trial.balance:0
 #: model:ir.actions.act_window,name:account.action_account_aged_balance_view
 #: model:ir.ui.menu,name:account.menu_aged_trial_balance
 msgid "Aged Partner Balance"
-msgstr "Kumppanien ikääntyvät saldo"
+msgstr "Kumppanien erääntymisraportti"
 
 #. module: account
 #: model:process.transition,name:account.process_transition_entriesreconcile0
@@ -3314,7 +3334,7 @@ msgstr "Peruskoodin määrä"
 #. module: account
 #: field:wizard.multi.charts.accounts,sale_tax:0
 msgid "Default Sale Tax"
-msgstr "Oletus myyntivero"
+msgstr "Oletusmyyntivero"
 
 #. module: account
 #: help:account.model.line,date_maturity:0
@@ -3373,7 +3393,7 @@ msgstr "Alatilit"
 #: model:ir.actions.report.xml,name:account.account_account_balance
 #: model:ir.ui.menu,name:account.menu_general_Balance_report
 msgid "Trial Balance"
-msgstr "Koesaldo"
+msgstr "Koetase"
 
 #. module: account
 #: code:addons/account/account.py:431
@@ -3429,7 +3449,7 @@ msgstr "Veromallilista"
 #. module: account
 #: model:ir.ui.menu,name:account.menu_account_print_sale_purchase_journal
 msgid "Sale/Purchase Journals"
-msgstr "Myynti-/Ostopäiväkirja"
+msgstr "Myynti-/ostopäiväkirja"
 
 #. module: account
 #: help:account.account,currency_mode:0
@@ -3970,6 +3990,19 @@ msgid ""
 "              </p>\n"
 "            "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Klikkaa luodaksesi asiakaslaskun.\n"
+"              </p><p>\n"
+"                OpenERP:in sähköinen laskutus mahdollistaa helpon ja nopean\n"
+"                asiakkaiden maksusuoritusten keruun. Asiakaasi saa laskun \n"
+"                sähköpostilla ja hän voi maksaa sen verkossa ja/tai lukea "
+"sen\n"
+"                omaan tietojärjestelmäänsä.\n"
+"              </p><p>\n"
+"                Asiakaskeskustelut näytetään automaattisesti kunkin laskun\n"
+"                alapuolella.\n"
+"              </p>\n"
+"            "
 
 #. module: account
 #: field:account.tax.code,name:0
@@ -4230,6 +4263,8 @@ msgid ""
 "When monthly periods are created. The status is 'Draft'. At the end of "
 "monthly period it is in 'Done' status."
 msgstr ""
+"Kun kuukausijaksot on luotu, niin tila on \"Ehdotus\" ja kun kuukauden "
+"lopussa sen tila on \"Valmis\""
 
 #. module: account
 #: view:account.invoice.report:0
@@ -5009,7 +5044,7 @@ msgstr "Toistuvat mallit"
 #. module: account
 #: view:account.tax:0
 msgid "Children/Sub Taxes"
-msgstr ""
+msgstr "Alatilit/alaverot"
 
 #. module: account
 #: xsl:account.transfer:0
@@ -5115,7 +5150,7 @@ msgstr "Uusi"
 #. module: account
 #: view:wizard.multi.charts.accounts:0
 msgid "Sale Tax"
-msgstr ""
+msgstr "Myyntivero"
 
 #. module: account
 #: view:account.move:0
@@ -5146,8 +5181,8 @@ msgid ""
 "comes in 'Done' status."
 msgstr ""
 "Kun päiväkirjakausi on luotu, till on \"Ehdotus\". Kun raportti tulostetaan, "
-"niin siitä tulle \"Tulostettu\". Kun kaikki tapahtumat on käsitelty loppuun, "
-"niin tilaksi tulee \"Valmis\"."
+"niin tilaksi tulee \"Tulostettu\". Kun kaikki tapahtumat on käsitelty "
+"loppuun, niin tilaksi tulee \"Valmis\"."
 
 #. module: account
 #: code:addons/account/account.py:3205
@@ -5715,7 +5750,7 @@ msgstr ""
 #: field:account.tax,child_depend:0
 #: field:account.tax.template,child_depend:0
 msgid "Tax on Children"
-msgstr "Vero alemmille"
+msgstr "Vero alatileille"
 
 #. module: account
 #: field:account.journal,update_posted:0
@@ -5734,7 +5769,7 @@ msgstr ""
 #. module: account
 #: field:account.tax.code,sign:0
 msgid "Coefficent for parent"
-msgstr ""
+msgstr "Kerroin ylätasolle"
 
 #. module: account
 #: report:account.partner.balance:0
@@ -6446,7 +6481,7 @@ msgstr "Asiakashyvitykset"
 #. module: account
 #: field:account.account,foreign_balance:0
 msgid "Foreign Balance"
-msgstr ""
+msgstr "Saldo toisessa valuutassa"
 
 #. module: account
 #: field:account.journal.period,name:0
@@ -6524,6 +6559,8 @@ msgid ""
 "As soon as the reconciliation is done, the invoice's state turns to “done” "
 "(i.e. paid) in the system."
 msgstr ""
+"Heti kun täsmäytys on tehty, niin laskun tilaksi tulee \"Valmis\" (esim. "
+"maksettu)."
 
 #. module: account
 #: view:account.chart.template:0
@@ -6563,7 +6600,7 @@ msgstr "Tämä on malli toistuvasta kirjanpidon merkinnästä"
 #. module: account
 #: field:wizard.multi.charts.accounts,sale_tax_rate:0
 msgid "Sales Tax(%)"
-msgstr ""
+msgstr "Myyntivero(%)"
 
 #. module: account
 #: view:account.tax.code:0
@@ -6583,6 +6620,16 @@ msgid ""
 "              </p>\n"
 "            "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Klikkaa rekisteröidäksesi toimittajalta saapuneen "
+"hyvityksen.\n"
+"              </p><p>\n"
+"                Sen sijaan, että loisit toimittajalta saapuneen hyvityksen "
+"manuaalisesti, voit\n"
+"                luoda hyvitykset ja täsmäyttää ne suoraan vastaavilta "
+"ostolaskuilta.\n"
+"              </p>\n"
+"            "
 
 #. module: account
 #: field:account.tax,type:0
@@ -6707,7 +6754,7 @@ msgstr "Peruuta"
 #: model:account.account.type,name:account.data_account_type_receivable
 #: selection:account.entries.report,type:0
 msgid "Receivable"
-msgstr "Saatavat"
+msgstr "Saatava"
 
 #. module: account
 #: constraint:account.move.line:0
@@ -7479,7 +7526,7 @@ msgstr ""
 #. module: account
 #: view:account.tax.template:0
 msgid "Taxes used in Sales"
-msgstr ""
+msgstr "Myynnissä käytetyt verot"
 
 #. module: account
 #: view:account.period:0
@@ -7522,7 +7569,7 @@ msgstr ""
 #. module: account
 #: model:process.transition,note:account.process_transition_invoicemanually0
 msgid "A statement with manual entries becomes a draft statement."
-msgstr "Manuaalisia kirjauksia sisältävä ote tilaan \"Ehdotus\""
+msgstr "Manuaalisia kirjauksia sisältävä ote muutetaan tilaan \"Ehdotus\""
 
 #. module: account
 #: view:account.aged.trial.balance:0
@@ -7560,6 +7607,8 @@ msgid ""
 "You cannot define children to an account with internal type different of "
 "\"View\"."
 msgstr ""
+"Konfigurointivirhe!\n"
+"Et voi määritellä alatiliä tilille, jonka sisäinen tyyppi on \"Näkymä\"."
 
 #. module: account
 #: model:ir.model,name:account.model_accounting_report
@@ -7690,7 +7739,7 @@ msgstr "Asiakkaan kokonaisvelan määrä."
 #. module: account
 #: view:account.move.line:0
 msgid "Unbalanced Journal Items"
-msgstr ""
+msgstr "Päiväkirjaviennit"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.open_account_charts_modules
@@ -7926,7 +7975,7 @@ msgstr "Proforma"
 #: view:account.move.line:0
 #: selection:account.move.line,state:0
 msgid "Unbalanced"
-msgstr "Epätasapainossa"
+msgstr "Saldoero"
 
 #. module: account
 #: selection:account.move.line,centralisation:0
@@ -8186,7 +8235,7 @@ msgstr "Päiväkirjaviennin numero"
 #. module: account
 #: view:account.financial.report:0
 msgid "Parent Report"
-msgstr ""
+msgstr "Ylätason raportti"
 
 #. module: account
 #: constraint:account.account:0
@@ -8225,7 +8274,7 @@ msgstr "Varat"
 #. module: account
 #: field:account.bank.statement,balance_end:0
 msgid "Computed Balance"
-msgstr ""
+msgstr "Laskettu saldo"
 
 #. module: account
 #. openerp-web
@@ -8238,7 +8287,7 @@ msgstr ""
 #: field:account.account,parent_id:0
 #: field:account.financial.report,parent_id:0
 msgid "Parent"
-msgstr "Ylempi tili"
+msgstr "Ylätaso"
 
 #. module: account
 #: code:addons/account/account_cash_statement.py:292
@@ -8269,8 +8318,8 @@ msgid ""
 "You cannot delete an invoice which is not draft or cancelled. You should "
 "refund it instead."
 msgstr ""
-"Et voi poistaa laskua, joka ei ole ehdotus tai peruttu. Sen sijaan hyvitä "
-"lasku."
+"Et voi poistaa laskua, joka ei ole ehdotus tai peruttu. Sen sijaan sinun "
+"tulisi ensin hyvittää lasku."
 
 #. module: account
 #: model:ir.ui.menu,name:account.menu_finance_legal_statement
@@ -8289,9 +8338,10 @@ msgid ""
 "to the higher ones. The order is important if you have a tax with several "
 "tax children. In this case, the evaluation order is important."
 msgstr ""
-"Sekvenssikenttää käytetään verorivien tuomiseen alemmista sekvensseistä "
-"ylempiin. Tuominen on tärkeää jos käyttämälläsi verolla on useita alaveroja. "
-"Tässä tapauksessa arviointia on tärkeää."
+"Sarjanumerokenttää käytetään verorivien järjestämiseen alemmista "
+"sarjanumeroista ylempiin. Järjestys on tärkeä, jos on määritelty vero "
+"useilla alaveroilla.  Järjestys on tärkeä, jos verolla on useita alaveroja, "
+"jolloin käsittelyjärjestys on olennaisen tärkeä."
 
 #. module: account
 #: model:ir.model,name:account.model_account_cashbox_line
@@ -8419,6 +8469,8 @@ msgid ""
 "The statement balance is incorrect !\n"
 "The expected balance (%.2f) is different than the computed one. (%.2f)"
 msgstr ""
+"Otteen saldo on virheellinen!\n"
+"Oletettu saldo \"%.2f\" poikkeaa lasketusta saldosta\"%.2f\"."
 
 #. module: account
 #: code:addons/account/account_bank_statement.py:420
@@ -8651,7 +8703,7 @@ msgstr "Tulo kategoria tili"
 #. module: account
 #: field:account.account,adjusted_balance:0
 msgid "Adjusted Balance"
-msgstr ""
+msgstr "Säädetty saldo"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_fiscal_position_template_form
@@ -8743,7 +8795,7 @@ msgstr "Osittaissuoritus"
 #. module: account
 #: model:ir.model,name:account.model_account_analytic_inverted_balance
 msgid "Account Analytic Inverted Balance"
-msgstr ""
+msgstr "Analyyttisen tilin käänteinen saldo"
 
 #. module: account
 #: model:ir.model,name:account.model_account_common_report
@@ -8902,7 +8954,7 @@ msgstr ""
 #: view:account.tax.code.template:0
 #: field:account.tax.code.template,parent_id:0
 msgid "Parent Code"
-msgstr "Ylempi koodi"
+msgstr "Ylätason koodi"
 
 #. module: account
 #: model:ir.model,name:account.model_account_payment_term_line
@@ -9033,7 +9085,7 @@ msgstr "Tilit Sallittuja (tyhjä tarkoittaa ei kontrollia)"
 #. module: account
 #: field:account.config.settings,sale_tax_rate:0
 msgid "Sales tax (%)"
-msgstr ""
+msgstr "Myyntivero(%)"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_analytic_account_tree2
@@ -9214,7 +9266,7 @@ msgstr "Pakota jakso"
 #. module: account
 #: model:ir.model,name:account.model_account_partner_balance
 msgid "Print Account Partner Balance"
-msgstr ""
+msgstr "Tulosta kumppanin tilin saldo"
 
 #. module: account
 #: code:addons/account/account_move_line.py:1121
@@ -9283,8 +9335,8 @@ msgid ""
 msgstr ""
 "Konfigurointivirhe\n"
 "Et voi valita tilityyppiä, jolla on jaksotusmenetelmänä muu kuin \"Ei "
-"täsmäytetä\" tileille, jotka ovat sisäiseltä tyypiltään "
-"\"Maksettava/Saatava\"."
+"täsmäytetä\" tileille, jotka ovat sisäiseltä tyypiltään \"Ostovelka\" tai "
+"\"Saatava\"."
 
 #. module: account
 #: field:account.config.settings,has_fiscal_year:0
@@ -9354,7 +9406,7 @@ msgstr ""
 #: code:addons/account/account.py:3195
 #, python-format
 msgid "Sales Refund Journal"
-msgstr ""
+msgstr "Myyntihyvitysten päiväkirja"
 
 #. module: account
 #: view:account.move:0
@@ -9433,7 +9485,7 @@ msgstr ""
 #. module: account
 #: field:account.vat.declaration,display_detail:0
 msgid "Display Detail"
-msgstr ""
+msgstr "Näytä tiedot"
 
 #. module: account
 #: code:addons/account/account.py:3203
@@ -9653,7 +9705,7 @@ msgstr "Näytä tili"
 #: model:account.account.type,name:account.data_account_type_payable
 #: selection:account.entries.report,type:0
 msgid "Payable"
-msgstr "Ostovelat"
+msgstr "Ostovelka"
 
 #. module: account
 #: view:account.account:0
@@ -9800,7 +9852,7 @@ msgstr "Yleisraportti"
 #: field:account.config.settings,default_sale_tax:0
 #: field:account.config.settings,sale_tax:0
 msgid "Default sale tax"
-msgstr ""
+msgstr "Oletusmyyntivero"
 
 #. module: account
 #: report:account.overdue:0
@@ -9852,7 +9904,7 @@ msgstr "Ennakkomaksu"
 #. module: account
 #: model:ir.model,name:account.model_account_analytic_balance
 msgid "Account Analytic Balance"
-msgstr ""
+msgstr "Analyyttisen tilin saldo"
 
 #. module: account
 #: report:account.account.balance:0
@@ -10244,7 +10296,7 @@ msgstr "Valuuttakurssi"
 #. module: account
 #: view:account.config.settings:0
 msgid "e.g. sales@openerp.com"
-msgstr ""
+msgstr "esim. myynti@erppian.fi"
 
 #. module: account
 #: field:account.account,tax_ids:0
@@ -10276,7 +10328,7 @@ msgstr "Avaa täsmäytettäväksi"
 #. module: account
 #: field:account.account,parent_left:0
 msgid "Parent Left"
-msgstr "Ylävasen"
+msgstr "Ylätaso vasen"
 
 #. module: account
 #: selection:account.financial.report,style_overwrite:0
@@ -10414,7 +10466,7 @@ msgstr "Tilikauden numeroinnit"
 #. module: account
 #: selection:account.financial.report,display_detail:0
 msgid "No detail"
-msgstr ""
+msgstr "Ei tietoja"
 
 #. module: account
 #: field:account.account,unrealized_gain_loss:0
@@ -10558,12 +10610,12 @@ msgstr "Luo kuukausijaksot"
 #. module: account
 #: field:account.tax.code.template,sign:0
 msgid "Sign For Parent"
-msgstr ""
+msgstr "Ylätason merkki"
 
 #. module: account
 #: model:ir.model,name:account.model_account_balance_report
 msgid "Trial Balance Report"
-msgstr ""
+msgstr "Koetaseraportti"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_bank_statement_draft_tree
@@ -10646,7 +10698,7 @@ msgstr "Hallitse asiakkaan maksuseurantaa"
 #. module: account
 #: model:ir.model,name:account.model_report_account_sales
 msgid "Report of the Sales by Account"
-msgstr ""
+msgstr "Myyntiraportti tileittäin"
 
 #. module: account
 #: model:ir.model,name:account.model_account_fiscal_position_account
@@ -10718,7 +10770,7 @@ msgstr ""
 #. module: account
 #: report:account.analytic.account.inverted.balance:0
 msgid "Inverted Analytic Balance -"
-msgstr "Käännetty analyyttinen saldo -"
+msgstr "Käänteinen analyyttinen saldo -"
 
 #. module: account
 #: field:temp.range,name:0
@@ -10789,7 +10841,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:account.action_aged_receivable_graph
 #: view:report.aged.receivable:0
 msgid "Aged Receivable"
-msgstr ""
+msgstr "Erääntynyt saatava"
 
 #. module: account
 #: field:account.tax,applicable_type:0
@@ -10816,7 +10868,7 @@ msgstr "Laskutus"
 #: view:account.account:0
 #: view:account.analytic.account:0
 msgid "Parent Account"
-msgstr ""
+msgstr "Ylätason tili"
 
 #. module: account
 #: view:report.account.receivable:0
@@ -10970,12 +11022,12 @@ msgstr ""
 #. module: account
 #: model:process.node,note:account.process_node_supplierpaidinvoice0
 msgid "Invoice's state is Done."
-msgstr "Laskun tila on valmis"
+msgstr "Laskun tila on valmis."
 
 #. module: account
 #: model:process.transition,note:account.process_transition_reconcilepaid0
 msgid "As soon as the reconciliation is done, the invoice can be paid."
-msgstr "Kun täsmäytys on tehty, lasku voidaan maksaa"
+msgstr "Kun täsmäytys on tehty, lasku voidaan maksaa."
 
 #. module: account
 #: code:addons/account/wizard/account_change_currency.py:59
@@ -11002,7 +11054,7 @@ msgstr "Toimittajan maksuehdossa ei ole maksuehtoriviä."
 #. module: account
 #: field:account.account,parent_right:0
 msgid "Parent Right"
-msgstr "Yläoikea"
+msgstr "Ylätaso oikea"
 
 #. module: account
 #. openerp-web
