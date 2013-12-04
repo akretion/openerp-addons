@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-10-08 12:28+0000\n"
-"PO-Revision-Date: 2013-11-23 13:21+0000\n"
-"Last-Translator: Normunds (Alistek) <Unknown>\n"
+"PO-Revision-Date: 2013-12-03 09:47+0000\n"
+"Last-Translator: sraps (Alistek) <Unknown>\n"
 "Language-Team: Latvian <lv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-11-24 05:43+0000\n"
-"X-Generator: Launchpad (build 16831)\n"
+"X-Launchpad-Export-Date: 2013-12-04 05:52+0000\n"
+"X-Generator: Launchpad (build 16861)\n"
 
 #. module: stock
 #: field:product.product,track_outgoing:0
@@ -1245,7 +1245,7 @@ msgstr "Produkta Mērv."
 #. module: stock
 #: model:stock.location,name:stock.stock_location_locations_partner
 msgid "Partner Locations"
-msgstr "Noliktavas postenis Partneri"
+msgstr "Partneri"
 
 #. module: stock
 #: code:addons/stock/report/stock_graph.py:106
