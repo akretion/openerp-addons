@@ -86,7 +86,7 @@ def base_calendar_id2real_id(base_calendar_id=None, with_date=False):
                 return (int(real_id), real_date, end.strftime("%Y-%m-%d %H:%M:%S"))
             return int(real_id)
 
-    return base_calendar_id and int(base_calendar_id) or base_calendar_id 
+    return base_calendar_id and int(base_calendar_id) or base_calendar_id
 
 def real_id2base_calendar_id(real_id, recurrent_date):
     """
@@ -1305,7 +1305,7 @@ rule or repeating pattern of time to exclude from the recurring rule."),
             return res
 
     def _multikeysort(self, items, columns):
-       
+
         comparers = [ ((itemgetter(col[1:].strip()), -1) if col.startswith('-') else (itemgetter(col.strip()), 1)) for col in columns]
         def comparer(left, right):
             for fn, mult in comparers:
@@ -1349,8 +1349,7 @@ rule or repeating pattern of time to exclude from the recurring rule."),
                 fields = sortby.keys()
                 ordered = self.read(cr, uid, res, fields=fields, context=context)
                 res = self._multikeysort(ordered, [key.split()[0] if sortby[key.split()[0]] == 'ASC' else '-%s' % key.split()[0] for key in order])
-                res = [x['id'] for x in res]                                                      
-                                                      
+                res = [x['id'] for x in res]
 
         if count:
             return len(res)
