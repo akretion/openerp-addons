@@ -30,7 +30,7 @@ class product_price_list(osv.osv_memory):
     _columns = {
         'partner_id': fields.many2one('res.partner', 'Supplier',
             help='For price lists based on the supplier price, fill in the '
-            'supplier in quesion here'),
+            'supplier in question here'),
         'price_list': fields.many2one('product.pricelist', 'PriceList', required=True),
         'qty1': fields.integer('Quantity-1'),
         'qty2': fields.integer('Quantity-2'),
