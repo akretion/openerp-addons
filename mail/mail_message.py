@@ -65,10 +65,8 @@ def to_email(text):
     if not text: return []
     
     people = getaddresses([text])
-    addresses = []
-    for person in people:
-        addresses.append(person[1])
-    
+    addresses = [person[1] for person in people]    
+
     return addresses
     
 
