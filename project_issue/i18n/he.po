@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:36+0000\n"
-"PO-Revision-Date: 2013-12-26 23:15+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2013-12-30 20:33+0000\n"
+"Last-Translator: Amir Elion <Unknown>\n"
 "Language-Team: Hebrew <he@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-12-27 05:39+0000\n"
+"X-Launchpad-Export-Date: 2013-12-31 05:26+0000\n"
 "X-Generator: Launchpad (build 16877)\n"
 
 #. module: project_issue
@@ -38,7 +38,7 @@ msgstr ""
 #: view:project.issue:0
 #: view:project.issue.report:0
 msgid "Group By..."
-msgstr ""
+msgstr "קבץ לפי..."
 
 #. module: project_issue
 #: field:project.issue,working_hours_open:0
@@ -53,35 +53,35 @@ msgstr ""
 #. module: project_issue
 #: field:project.issue,date_open:0
 msgid "Opened"
-msgstr ""
+msgstr "נפתח"
 
 #. module: project_issue
 #: field:project.issue.report,opening_date:0
 msgid "Date of Opening"
-msgstr ""
+msgstr "תאריך הפתיחה"
 
 #. module: project_issue
 #: selection:project.issue.report,month:0
 msgid "March"
-msgstr ""
+msgstr "מרץ"
 
 #. module: project_issue
 #: field:project.issue,progress:0
 msgid "Progress (%)"
-msgstr ""
+msgstr "התקדמות (%)"
 
 #. module: project_issue
 #: view:project.issue:0
 #: field:project.issue,message_unread:0
 msgid "Unread Messages"
-msgstr ""
+msgstr "הודעות שלא נקראו"
 
 #. module: project_issue
 #: field:project.issue,company_id:0
 #: view:project.issue.report:0
 #: field:project.issue.report,company_id:0
 msgid "Company"
-msgstr ""
+msgstr "חברה"
 
 #. module: project_issue
 #: field:project.issue,email_cc:0
@@ -130,7 +130,7 @@ msgstr ""
 #: selection:project.issue,priority:0
 #: selection:project.issue.report,priority:0
 msgid "Highest"
-msgstr ""
+msgstr "גבוהה ביותר"
 
 #. module: project_issue
 #: help:project.issue,inactivity_days:0
@@ -141,7 +141,7 @@ msgstr ""
 #: view:project.issue.report:0
 #: field:project.issue.report,day:0
 msgid "Day"
-msgstr ""
+msgstr "יום"
 
 #. module: project_issue
 #: field:project.issue,days_since_creation:0
@@ -153,7 +153,7 @@ msgstr ""
 #: view:project.issue.report:0
 #: field:project.issue.report,task_id:0
 msgid "Task"
-msgstr ""
+msgstr "משימה"
 
 #. module: project_issue
 #: model:mail.message.subtype,name:project_issue.mt_project_issue_stage
@@ -163,7 +163,7 @@ msgstr ""
 #. module: project_issue
 #: field:project.issue,message_ids:0
 msgid "Messages"
-msgstr ""
+msgstr "הודעות"
 
 #. module: project_issue
 #: field:project.issue,inactivity_days:0
@@ -177,7 +177,7 @@ msgstr ""
 #: view:project.issue.report:0
 #: field:project.issue.report,project_id:0
 msgid "Project"
-msgstr ""
+msgstr "פרוייקט"
 
 #. module: project_issue
 #: model:ir.actions.act_window,help:project_issue.project_issue_categ_act0
@@ -197,7 +197,7 @@ msgstr ""
 #: selection:project.issue,state:0
 #: selection:project.issue.report,state:0
 msgid "Cancelled"
-msgstr ""
+msgstr "בוטל"
 
 #. module: project_issue
 #: field:project.issue,description:0
@@ -207,7 +207,7 @@ msgstr ""
 #. module: project_issue
 #: field:project.issue.report,date_closed:0
 msgid "Date of Closing"
-msgstr ""
+msgstr "תאריך סגירה"
 
 #. module: project_issue
 #: view:project.issue:0
@@ -217,7 +217,7 @@ msgstr ""
 #. module: project_issue
 #: field:project.issue,color:0
 msgid "Color Index"
-msgstr ""
+msgstr "מקרא צבעים"
 
 #. module: project_issue
 #: field:project.issue.report,working_hours_open:0
@@ -246,23 +246,23 @@ msgstr ""
 #. module: project_issue
 #: view:project.issue:0
 msgid "Extra Info"
-msgstr ""
+msgstr "מידע נוסף"
 
 #. module: project_issue
 #: code:addons/project_issue/project_issue.py:479
 #, python-format
 msgid "Warning!"
-msgstr ""
+msgstr "אזהרה!"
 
 #. module: project_issue
 #: view:project.issue:0
 msgid "Edit..."
-msgstr ""
+msgstr "ערוך..."
 
 #. module: project_issue
 #: view:project.issue:0
 msgid "Responsible"
-msgstr ""
+msgstr "אחראי"
 
 #. module: project_issue
 #: model:mail.message.subtype,name:project_issue.mt_issue_blocked
@@ -273,7 +273,7 @@ msgstr ""
 #. module: project_issue
 #: view:project.issue:0
 msgid "Statistics"
-msgstr ""
+msgstr "סטטיסטיקה"
 
 #. module: project_issue
 #: field:project.issue,kanban_state:0
@@ -292,7 +292,7 @@ msgstr ""
 #: view:project.issue.report:0
 #: field:project.issue.report,priority:0
 msgid "Priority"
-msgstr ""
+msgstr "עדיפות"
 
 #. module: project_issue
 #: view:project.issue:0
@@ -300,19 +300,19 @@ msgstr ""
 #: view:project.issue.report:0
 #: field:project.issue.report,version_id:0
 msgid "Version"
-msgstr ""
+msgstr "גרסה"
 
 #. module: project_issue
 #: field:project.issue,message_follower_ids:0
 msgid "Followers"
-msgstr ""
+msgstr "עוקבים"
 
 #. module: project_issue
 #: view:project.issue:0
 #: selection:project.issue,state:0
 #: view:project.issue.report:0
 msgid "New"
-msgstr ""
+msgstr "חדש"
 
 #. module: project_issue
 #: view:project.project:0
@@ -322,25 +322,25 @@ msgstr ""
 #. module: project_issue
 #: field:project.issue,email_from:0
 msgid "Email"
-msgstr ""
+msgstr "דוא״ל"
 
 #. module: project_issue
 #: field:project.issue,channel_id:0
 #: field:project.issue.report,channel_id:0
 msgid "Channel"
-msgstr ""
+msgstr "ערוץ"
 
 #. module: project_issue
 #: selection:project.issue,priority:0
 #: selection:project.issue.report,priority:0
 msgid "Lowest"
-msgstr ""
+msgstr "נמוכה ביותר"
 
 #. module: project_issue
 #: code:addons/project_issue/project_issue.py:388
 #, python-format
 msgid "%s (copy)"
-msgstr ""
+msgstr "%s (העתק)"
 
 #. module: project_issue
 #: view:project.issue:0
@@ -352,13 +352,13 @@ msgstr ""
 #: view:project.issue.report:0
 #: field:project.issue.report,creation_date:0
 msgid "Creation Date"
-msgstr ""
+msgstr "תאריך היצירה"
 
 #. module: project_issue
 #: model:ir.actions.act_window,name:project_issue.project_issue_version_action
 #: model:ir.ui.menu,name:project_issue.menu_project_issue_version_act
 msgid "Versions"
-msgstr ""
+msgstr "גרסאות"
 
 #. module: project_issue
 #: view:project.issue:0
@@ -380,12 +380,12 @@ msgstr ""
 #: selection:project.issue,state:0
 #: view:project.issue.report:0
 msgid "Done"
-msgstr ""
+msgstr "בוצע"
 
 #. module: project_issue
 #: selection:project.issue.report,month:0
 msgid "July"
-msgstr ""
+msgstr "יולי"
 
 #. module: project_issue
 #: model:ir.actions.act_window,help:project_issue.action_project_issue_report
@@ -402,7 +402,7 @@ msgstr ""
 #: view:project.issue.report:0
 #: field:project.issue.report,stage_id:0
 msgid "Stage"
-msgstr ""
+msgstr "שלב"
 
 #. module: project_issue
 #: model:ir.actions.act_window,name:project_issue.action_project_issue_report
@@ -415,7 +415,7 @@ msgstr ""
 #: code:addons/project_issue/project_issue.py:516
 #, python-format
 msgid "No Subject"
-msgstr ""
+msgstr "ללא נושא"
 
 #. module: project_issue
 #: model:ir.actions.act_window,name:project_issue.action_view_my_project_issue_tree
@@ -428,38 +428,38 @@ msgstr ""
 #: view:project.issue.report:0
 #: field:project.issue.report,partner_id:0
 msgid "Contact"
-msgstr ""
+msgstr "איש קשר"
 
 #. module: project_issue
 #: view:project.issue:0
 msgid "Delete"
-msgstr ""
+msgstr "מחק"
 
 #. module: project_issue
 #: code:addons/project_issue/project_issue.py:371
 #, python-format
 msgid "Tasks"
-msgstr ""
+msgstr "משימות"
 
 #. module: project_issue
 #: field:project.issue.report,nbr:0
 msgid "# of Issues"
-msgstr ""
+msgstr "# פניות"
 
 #. module: project_issue
 #: selection:project.issue.report,month:0
 msgid "September"
-msgstr ""
+msgstr "ספטמבר"
 
 #. module: project_issue
 #: selection:project.issue.report,month:0
 msgid "December"
-msgstr ""
+msgstr "דצמבר"
 
 #. module: project_issue
 #: field:project.issue,categ_ids:0
 msgid "Tags"
-msgstr ""
+msgstr "תגיות"
 
 #. module: project_issue
 #: view:project.issue:0
@@ -474,17 +474,17 @@ msgstr ""
 #. module: project_issue
 #: view:project.project:0
 msgid "creates"
-msgstr ""
+msgstr "יוצר"
 
 #. module: project_issue
 #: field:project.issue,write_date:0
 msgid "Update Date"
-msgstr ""
+msgstr "תאריך עדכון"
 
 #. module: project_issue
 #: view:project.issue:0
 msgid "Project:"
-msgstr ""
+msgstr "פרוייקט:"
 
 #. module: project_issue
 #: view:project.issue:0
@@ -494,13 +494,13 @@ msgstr ""
 #. module: project_issue
 #: field:project.issue,date_action_next:0
 msgid "Next Action"
-msgstr ""
+msgstr "פעולה הבאה"
 
 #. module: project_issue
 #: view:project.issue:0
 #: selection:project.issue,kanban_state:0
 msgid "Blocked"
-msgstr ""
+msgstr "חסום"
 
 #. module: project_issue
 #: field:project.issue,user_email:0
@@ -528,19 +528,19 @@ msgstr ""
 #. module: project_issue
 #: selection:project.issue.report,state:0
 msgid "Draft"
-msgstr ""
+msgstr "טיוטה"
 
 #. module: project_issue
 #: selection:project.issue,priority:0
 #: selection:project.issue.report,priority:0
 msgid "Low"
-msgstr ""
+msgstr "נמוכה"
 
 #. module: project_issue
 #: field:project.issue,date_closed:0
 #: selection:project.issue.report,state:0
 msgid "Closed"
-msgstr ""
+msgstr "סגור"
 
 #. module: project_issue
 #: field:project.issue.report,delay_close:0
