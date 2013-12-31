@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:36+0000\n"
-"PO-Revision-Date: 2013-12-26 23:09+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2013-12-30 20:48+0000\n"
+"Last-Translator: Amir Elion <Unknown>\n"
 "Language-Team: Hebrew <he@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-12-27 05:39+0000\n"
+"X-Launchpad-Export-Date: 2013-12-31 05:26+0000\n"
 "X-Generator: Launchpad (build 16877)\n"
 
 #. module: crm
@@ -44,7 +44,7 @@ msgstr ""
 #: view:crm.lead:0
 #: field:crm.lead,title:0
 msgid "Title"
-msgstr ""
+msgstr "כותרת"
 
 #. module: crm
 #: model:ir.actions.server,message:crm.action_email_reminder_lead
@@ -60,7 +60,7 @@ msgstr ""
 #: field:crm.opportunity2phonecall,action:0
 #: field:crm.phonecall2phonecall,action:0
 msgid "Action"
-msgstr ""
+msgstr "פעולה"
 
 #. module: crm
 #: model:ir.actions.server,name:crm.action_set_team_sales_department
@@ -93,7 +93,7 @@ msgstr ""
 #: view:crm.case.stage:0
 #: field:crm.case.stage,name:0
 msgid "Stage Name"
-msgstr ""
+msgstr "שם השלב"
 
 #. module: crm
 #: view:crm.lead:0
@@ -101,7 +101,7 @@ msgstr ""
 #: view:crm.lead.report:0
 #: view:crm.phonecall.report:0
 msgid "Salesperson"
-msgstr ""
+msgstr "איש מכירות"
 
 #. module: crm
 #: model:ir.model,name:crm.model_crm_lead_report
@@ -113,17 +113,17 @@ msgstr ""
 #: view:crm.phonecall.report:0
 #: field:crm.phonecall.report,day:0
 msgid "Day"
-msgstr ""
+msgstr "יום"
 
 #. module: crm
 #: view:crm.lead:0
 msgid "Company Name"
-msgstr ""
+msgstr "שם חברה"
 
 #. module: crm
 #: model:crm.case.categ,name:crm.categ_oppor6
 msgid "Training"
-msgstr ""
+msgstr "הדרכה"
 
 #. module: crm
 #: model:ir.actions.act_window,name:crm.crm_lead_categ_action
@@ -139,7 +139,7 @@ msgstr ""
 #. module: crm
 #: view:crm.phonecall:0
 msgid "Cancel Call"
-msgstr ""
+msgstr "בטל שיחה"
 
 #. module: crm
 #: help:crm.lead.report,creation_day:0
@@ -149,7 +149,7 @@ msgstr ""
 #. module: crm
 #: field:crm.segmentation.line,name:0
 msgid "Rule Name"
-msgstr ""
+msgstr "שם הכלל"
 
 #. module: crm
 #: code:addons/crm/crm_phonecall.py:280
@@ -165,7 +165,7 @@ msgstr ""
 #: field:crm.lead.report,type_id:0
 #: model:ir.model,name:crm.model_crm_case_resource_type
 msgid "Campaign"
-msgstr ""
+msgstr "קמפיין"
 
 #. module: crm
 #: view:crm.lead:0
@@ -192,7 +192,7 @@ msgstr ""
 #: code:addons/crm/crm_phonecall.py:280
 #, python-format
 msgid "Warning!"
-msgstr ""
+msgstr "אזהרה!"
 
 #. module: crm
 #: view:crm.lead:0
@@ -207,7 +207,7 @@ msgstr ""
 #: model:ir.model,name:crm.model_res_partner
 #: model:process.node,name:crm.process_node_partner0
 msgid "Partner"
-msgstr ""
+msgstr "שותף"
 
 #. module: crm
 #: view:crm.phonecall:0
@@ -220,7 +220,7 @@ msgstr ""
 #: view:crm.phonecall:0
 #, python-format
 msgid "Phone Call"
-msgstr ""
+msgstr "שיחת טלפון"
 
 #. module: crm
 #: field:crm.lead,opt_out:0
@@ -240,12 +240,12 @@ msgstr ""
 #. module: crm
 #: model:ir.actions.server,name:crm.action_email_reminder_lead
 msgid "Reminder to User"
-msgstr ""
+msgstr "תזכורת למשתמש"
 
 #. module: crm
 #: field:crm.segmentation,segmentation_line:0
 msgid "Criteria"
-msgstr ""
+msgstr "קריטריון"
 
 #. module: crm
 #: view:crm.lead:0
@@ -260,14 +260,14 @@ msgstr ""
 #. module: crm
 #: model:ir.model,name:crm.model_crm_merge_opportunity
 msgid "Merge opportunities"
-msgstr ""
+msgstr "מזג הזדמנויות"
 
 #. module: crm
 #: view:crm.lead.report:0
 #: model:ir.actions.act_window,name:crm.action_report_crm_lead
 #: model:ir.ui.menu,name:crm.menu_report_crm_leads_tree
 msgid "Leads Analysis"
-msgstr ""
+msgstr "ניתוח לידים"
 
 #. module: crm
 #: model:ir.actions.act_window,name:crm.crm_case_resource_type_act
@@ -286,7 +286,7 @@ msgstr ""
 #: field:crm.lead,categ_ids:0
 #: model:ir.ui.menu,name:crm.menu_crm_case_phonecall-act
 msgid "Categories"
-msgstr ""
+msgstr "קטגוריות"
 
 #. module: crm
 #: view:crm.segmentation:0
@@ -302,12 +302,12 @@ msgstr ""
 #: code:addons/crm/crm_lead.py:1002
 #, python-format
 msgid "No Subject"
-msgstr ""
+msgstr "ללא נושא"
 
 #. module: crm
 #: field:crm.lead,contact_name:0
 msgid "Contact Name"
-msgstr ""
+msgstr "שם איש הקשר"
 
 #. module: crm
 #: help:crm.segmentation,categ_id:0
@@ -335,7 +335,7 @@ msgstr ""
 #: field:crm.phonecall,partner_id:0
 #: field:crm.phonecall2phonecall,contact_name:0
 msgid "Contact"
-msgstr ""
+msgstr "איש קשר"
 
 #. module: crm
 #: help:crm.case.section,change_responsible:0
@@ -394,7 +394,7 @@ msgstr ""
 #: field:crm.lead,message_unread:0
 #: field:crm.phonecall,message_unread:0
 msgid "Unread Messages"
-msgstr ""
+msgstr "הודעות שלא נקראו"
 
 #. module: crm
 #: view:crm.segmentation:0
@@ -413,7 +413,7 @@ msgstr ""
 #. module: crm
 #: field:crm.lead,write_date:0
 msgid "Update Date"
-msgstr ""
+msgstr "תאריך עדכון"
 
 #. module: crm
 #: field:crm.case.section,user_id:0
@@ -441,7 +441,7 @@ msgstr ""
 #: field:crm.phonecall.report,categ_id:0
 #: field:crm.phonecall2phonecall,categ_id:0
 msgid "Category"
-msgstr ""
+msgstr "קטגוריה"
 
 #. module: crm
 #: view:crm.lead.report:0
@@ -485,7 +485,7 @@ msgstr ""
 #: view:crm.phonecall.report:0
 #: field:crm.phonecall.report,state:0
 msgid "Status"
-msgstr ""
+msgstr "סטטוס"
 
 #. module: crm
 #: view:crm.lead2opportunity.partner:0
@@ -495,7 +495,7 @@ msgstr ""
 #. module: crm
 #: view:sale.config.settings:0
 msgid "Configure"
-msgstr ""
+msgstr "הגדר"
 
 #. module: crm
 #: view:crm.lead:0
@@ -517,7 +517,7 @@ msgstr ""
 #: selection:crm.lead.report,deadline_month:0
 #: selection:crm.phonecall.report,month:0
 msgid "June"
-msgstr ""
+msgstr "יוני"
 
 #. module: crm
 #: selection:crm.segmentation,state:0
@@ -545,7 +545,7 @@ msgstr ""
 #: selection:crm.lead.report,deadline_month:0
 #: selection:crm.phonecall.report,month:0
 msgid "October"
-msgstr ""
+msgstr "אוקטובר"
 
 #. module: crm
 #: view:crm.segmentation:0
@@ -567,12 +567,12 @@ msgstr ""
 #: field:crm.lead,message_summary:0
 #: field:crm.phonecall,message_summary:0
 msgid "Summary"
-msgstr ""
+msgstr "תקציר"
 
 #. module: crm
 #: view:crm.merge.opportunity:0
 msgid "Merge"
-msgstr ""
+msgstr "מזג"
 
 #. module: crm
 #: view:crm.case.categ:0
@@ -624,7 +624,7 @@ msgstr ""
 #: view:crm.lead:0
 #: selection:crm.lead,state:0
 msgid "In Progress"
-msgstr ""
+msgstr "בתהליך"
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_phonecall_categ_action
