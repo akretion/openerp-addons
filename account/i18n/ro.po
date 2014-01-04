@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-14 22:29+0000\n"
-"PO-Revision-Date: 2014-01-03 06:17+0000\n"
+"PO-Revision-Date: 2014-01-03 08:34+0000\n"
 "Last-Translator: Dorin <dhongu@gmail.com>\n"
 "Language-Team: Romanian <ro@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-01-03 06:24+0000\n"
+"X-Launchpad-Export-Date: 2014-01-04 06:19+0000\n"
 "X-Generator: Launchpad (build 16877)\n"
 
 #. module: account
@@ -4877,7 +4877,8 @@ msgstr ""
 msgid ""
 "If you put \"%(year)s\" in the prefix, it will be replaced by the current "
 "year."
-msgstr "Daca introduceti \"%(an)s\" in pefix, va fi inlocuit cu anul curent."
+msgstr ""
+"Dacă introduceți \"%(year)s\" în pefix, va fi înlocuit cu anul curent."
 
 #. module: account
 #: help:account.account,active:0
