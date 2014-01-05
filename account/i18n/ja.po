@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-14 22:29+0000\n"
-"PO-Revision-Date: 2014-01-04 05:54+0000\n"
+"PO-Revision-Date: 2014-01-05 03:10+0000\n"
 "Last-Translator: hiro TAKADA <tkhiro0712@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-01-04 06:19+0000\n"
+"X-Launchpad-Export-Date: 2014-01-05 05:47+0000\n"
 "X-Generator: Launchpad (build 16877)\n"
 
 #. module: account
@@ -447,6 +447,11 @@ msgid ""
 "this box, you will be able to do invoicing & payments,\n"
 "                but not accounting (Journal Items, Chart of Accounts, ...)"
 msgstr ""
+"企業や個人が所有する資産を管理します。\n"
+"                資産で発生した減価償却費を追跡して、It keeps track of the depreciation "
+"occurred on those assets, and creates account move for those depreciation "
+"lines. This installs the module account_asset.\n"
+"                このボックスをチェックしない場合も請求と支払いはできますが、仕入項目や勘定科目には影響しません。"
 
 #. module: account
 #: help:account.bank.statement.line,name:0
@@ -5359,7 +5364,7 @@ msgstr ""
 msgid ""
 "If you do not check this box, you will be able to do invoicing & payments, "
 "but not accounting (Journal Items, Chart of  Accounts, ...)"
-msgstr ""
+msgstr "このボックスをチェックしない場合も請求と支払いは行いますが、仕訳項目や勘定科目には影響しません。"
 
 #. module: account
 #: view:account.period:0
