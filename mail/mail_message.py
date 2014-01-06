@@ -26,10 +26,10 @@ import dateutil.parser
 import email
 import logging
 import pytz
-import re
 import time
 from email.header import decode_header
 from email.message import Message
+from email.utils import getaddresses
 
 import tools
 from osv import osv
@@ -60,9 +60,15 @@ def decode(text):
         return ''.join([tools.ustr(x[0], x[1]) for x in text])
 
 def to_email(text):
-    """Return a list of the email addresses found in ``text``"""
+    """Returns a list of the email addresses found in ``text``                       
+    """
     if not text: return []
-    return re.findall(r'([^ ,<@]+@[^> ,]+)', text)
+    
+    people = getaddresses([text])
+    addresses = [person[1] for person in people]    
+
+    return addresses
+    
 
 class mail_message_common(osv.osv_memory):
     """Common abstract class for holding the main attributes of a 
