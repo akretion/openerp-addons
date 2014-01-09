@@ -10,15 +10,14 @@ from openerp import tools
 def _exc_info_to_string(err, test):
     return err
 
-# TODO according to al this should be one line of Python
-class LineReader:
+class Stream:
     def __init__(self, file_descriptor):
         self._file_descriptor = file_descriptor
         self._buffer = ''
 
     def fileno(self):
         return self._file_descriptor
-
+    # TODO Rewrite & fix
     def readlines(self):
         data = os.read(self._file_descriptor, 4096)
         if not data: # EOF
@@ -74,7 +73,6 @@ class WebsiteUiSuite(unittest.TestSuite):
         self._options['timeout'] = self._timeout
         self._options['port'] = tools.config.get('xmlrpc_port', 80)
         self._options['db'] = tools.config.get('db_name', '')
-        # TODO use correct key from tools if exists (I could not find it --ddm)
         self._options['user'] = 'admin'
         self._options['password'] = tools.config.get('admin_passwd', 'admin')
 
@@ -84,7 +82,7 @@ class WebsiteUiSuite(unittest.TestSuite):
             json.dumps(self._options)
         ], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
-        readable = [LineReader(phantom.stdout.fileno())]
+        readable = [Stream(phantom.stdout.fileno())]
 
         try:
             output = []
@@ -138,7 +136,7 @@ def full_path(filename):
     return os.path.join(os.path.join(os.path.dirname(__file__), 'ui_suite'), filename)
 
 def load_tests(loader, base, _):
-    base.addTest(WebsiteUiSuite(full_path('dummy_test.js'), {}))
+    base.addTest(WebsiteUiSuite(full_path('dummy_test.js'), {}, 5.0))
     base.addTest(WebsiteUiSuite(full_path('simple_dom_test.js'), { 'action': 'website.action_website_homepage' }, 60.0))
     base.addTest(WebsiteUiSuite(full_path('homepage_test.js'),   { 'action': 'website.action_website_homepage' }, 60.0))
     return base
