@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-14 22:29+0000\n"
-"PO-Revision-Date: 2014-01-08 08:27+0000\n"
+"PO-Revision-Date: 2014-01-11 02:07+0000\n"
 "Last-Translator: hiro TAKADA <tkhiro0712@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-01-09 05:38+0000\n"
-"X-Generator: Launchpad (build 16884)\n"
+"X-Launchpad-Export-Date: 2014-01-11 06:26+0000\n"
+"X-Generator: Launchpad (build 16890)\n"
 
 #. module: account
 #: model:process.transition,name:account.process_transition_supplierreconcilepaid0
@@ -2187,6 +2187,15 @@ msgid ""
 "              </p>\n"
 "            "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                クリックして銀行取引明細書を登録してください。\n"
+"              </p><p>\n"
+"                "
+"銀行取引明細書は一定の期間に渡って銀行口座に発生するすべての金融取引の要約です。あなたは、これを銀行から定期的に受け取るべきです。\n"
+"              </p><p>\n"
+"                OpenERPは関連する販売または購買の請求書と取引明細書を直接に擦り合わせることができます。\n"
+"</p>\n"
+"            "
 
 #. module: account
 #: field:account.config.settings,currency_id:0
@@ -3180,7 +3189,7 @@ msgstr "8月"
 #. module: account
 #: field:accounting.report,debit_credit:0
 msgid "Display Debit/Credit Columns"
-msgstr ""
+msgstr "借方/貸方欄を表示"
 
 #. module: account
 #: report:account.journal.period.print:0
