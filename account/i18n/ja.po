@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-14 22:29+0000\n"
-"PO-Revision-Date: 2014-01-18 15:46+0000\n"
+"PO-Revision-Date: 2014-01-19 08:21+0000\n"
 "Last-Translator: hiro TAKADA <tkhiro0712@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-01-19 05:58+0000\n"
+"X-Launchpad-Export-Date: 2014-01-20 05:59+0000\n"
 "X-Generator: Launchpad (build 16901)\n"
 
 #. module: account
@@ -1988,7 +1988,7 @@ msgstr "支払指図を管理"
 #. module: account
 #: view:account.period:0
 msgid "Duration"
-msgstr ""
+msgstr "期間"
 
 #. module: account
 #: view:account.bank.statement:0
@@ -5038,7 +5038,7 @@ msgstr ""
 msgid ""
 "It adds the currency column on report if the currency differs from the "
 "company currency."
-msgstr ""
+msgstr "会社の通貨と異なる場合はレポートに通貨欄を追加します。"
 
 #. module: account
 #: code:addons/account/account.py:3394
