@@ -30,6 +30,7 @@ import pytz
 import re
 import time
 import tools
+from operator import itemgetter
 
 months = {
     1: "January", 2: "February", 3: "March", 4: "April", \
@@ -1306,6 +1307,18 @@ rule or repeating pattern of time to exclude from the recurring rule."),
                 res.append(base_calendar_id2real_id(id))
             return res
 
+    def _multikeysort(self, items, columns):
+
+        comparers = [ ((itemgetter(col[1:].strip()), -1) if col.startswith('-') else (itemgetter(col.strip()), 1)) for col in columns]
+        def comparer(left, right):
+            for fn, mult in comparers:
+                result = cmp(fn(left), fn(right))
+                if result:
+                    return mult * result
+                else:
+                    return 0
+        return sorted(items, cmp=comparer)
+
     def search(self, cr, uid, args, offset=0, limit=0, order=None, context=None, count=False):
         context = context or {}
         args_without_date = []
@@ -1330,6 +1343,16 @@ rule or repeating pattern of time to exclude from the recurring rule."),
                                  0, 0, order, context, count=False)
         if context.get('virtual_id', True):
             res = self.get_recurrent_ids(cr, uid, res, args, limit, context=context)
+            if order:
+                order = order.split(',')
+                sortby = {}
+                for o in order:
+                    spl = o.split()
+                    sortby[spl[0]] = spl[1]
+                fields = sortby.keys()
+                ordered = self.read(cr, uid, res, fields=fields, context=context)
+                res = self._multikeysort(ordered, [key.split()[0] if sortby[key.split()[0]] == 'ASC' else '-%s' % key.split()[0] for key in order])
+                res = [x['id'] for x in res]
 
         if count:
             return len(res)

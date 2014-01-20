@@ -72,9 +72,10 @@ class stock_return_picking(osv.osv_memory):
                     res.update({'invoice_state': 'none'})
             return_history = self.get_return_history(cr, uid, record_id, context)       
             for line in pick.move_lines:
-                qty = line.product_qty - return_history[line.id]
-                if qty > 0:
-                    result1.append({'product_id': line.product_id.id, 'quantity': qty,'move_id':line.id})
+                if line.state <> 'cancel':
+                    qty = line.product_qty - return_history[line.id]
+                    if qty > 0:
+                        result1.append({'product_id': line.product_id.id, 'quantity': qty,'move_id':line.id})
             if 'product_return_moves' in fields:
                 res.update({'product_return_moves': result1})
         return res
@@ -128,7 +129,7 @@ class stock_return_picking(osv.osv_memory):
                     # a valid return move will be the exact opposite of ours:
                     #     (src location, dest location) <=> (dest location, src location))
                     if rec.location_dest_id.id == m.location_id.id \
-                        and rec.location_id.id == m.location_dest_id.id:
+                        and rec.location_id.id == m.location_dest_id.id and rec.state != 'cancel':
                         return_history[m.id] += (rec.product_qty * rec.product_uom.factor)
         return return_history
 
