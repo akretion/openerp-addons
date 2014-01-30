@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
-    <data>
+    <data noupdate="1">
 
         <!-- My task -->
         <record id="view_task_tree" model="ir.ui.view">

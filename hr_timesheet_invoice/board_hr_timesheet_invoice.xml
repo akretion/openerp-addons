@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
-    <data>
+    <data noupdate="1">
 
         <act_window domain="[('state','&lt;&gt;','close'),('partner_id','&lt;&gt;',False),('to_invoice', '&lt;&gt;', False)]" id="act_my_account" name="Accounts to invoice" res_model="account.analytic.account" src_model="res.users" view_mode="tree,form" view_type="form"/>
 

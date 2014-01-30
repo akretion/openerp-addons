@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <openerp>
-    <data>
+    <data noupdate="1">
         <record model="ir.ui.view" id="board_crm_form_inherit_replace1">
             <field name="name">board.crm.form.inherit.replace1</field>
             <field name="model">board.board</field>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
-    <data>
+    <data noupdate="1">
         <record model="ir.actions.act_window" id="action_hr_holidays_leaves_by_month">
             <field name="name">My Leaves</field>
             <field name="res_model">hr.holidays.status</field>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <openerp>
-    <data>
+    <data noupdate="1">
         <record model="ir.actions.act_window" id="action_report_latest_objects_tree">
             <field name="name">Latest objects</field>
             <field name="res_model">auction.lots</field>

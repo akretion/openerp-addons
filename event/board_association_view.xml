@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <openerp>
-    <data>
+    <data noupdate="1">
     <!--  Need to merge this action in associations -->
 
         <record model ="ir.ui.view" id="view_report_event_reg_graph">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
-    <data>
+    <data noupdate="1">
         <record id="action_incoming_product_board" model="ir.actions.act_window">
             <field name="name">Incoming Shipments</field>
             <field name="res_model">stock.move</field>
