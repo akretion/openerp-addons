@@ -185,6 +185,7 @@ class product_product(osv.osv):
         location_obj = self.pool.get('stock.location')
         warehouse_obj = self.pool.get('stock.warehouse')
         shop_obj = self.pool.get('sale.shop')
+        uom_obj = self.pool.get('product.uom')
         
         states = context.get('states',[])
         what = context.get('what',())
@@ -222,13 +223,15 @@ class product_product(osv.osv):
             child_location_ids = location_obj.search(cr, uid, [('location_id', 'child_of', location_ids)])
             location_ids = child_location_ids or location_ids
         
-        # this will be a dictionary of the UoM resources we need for conversion purposes, by UoM id
-        uoms_o = {}
-        # this will be a dictionary of the product UoM by product id
+        # Extract UoM id from product ids 
         product2uom = {}
-        for product in self.browse(cr, uid, ids, context=context):
-            product2uom[product.id] = product.uom_id.id
-            uoms_o[product.uom_id.id] = product.uom_id
+        for product in self.read(cr, uid, ids, ['uom_id'], context=context):
+            product2uom[product['id']] = product['uom_id'][0]
+            
+        # Create a dict of the UoM resources by id that we need for conversion purposes
+        uoms_o = {}
+        for uom in uom_obj.browse(cr, uid, product2uom.values(), context=context):
+            uoms_o[uom.id] = uom
 
         results = []
         results2 = []
