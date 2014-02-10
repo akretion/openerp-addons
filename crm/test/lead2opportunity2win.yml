@@ -75,7 +75,9 @@
     opp = self.browse(cr, uid, ref('crm_case_11'))
     assert opp.name == "Need estimated cost for new project", "Opportunity name not correct"
     assert opp.type == 'opportunity', 'Lead is not converted to opportunity!'
-    expected_partner = "Thomas Passot"
+    expected_contact = "Thomas Passot"
+    expected_partner = "Agrolait"
+    assert opp.contact_id.name == expected_contact, 'Partner mismatch! %s vs %s' % (opp.contact_id.name, expected_contact)
     assert opp.partner_id.name == expected_partner, 'Partner mismatch! %s vs %s' % (opp.partner_id.name, expected_partner)
     assert opp.stage_id.id == ref("stage_lead1"), 'Stage of probability is incorrect!'
 -
