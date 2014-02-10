@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:37+0000\n"
-"PO-Revision-Date: 2014-02-07 09:35+0000\n"
+"PO-Revision-Date: 2014-02-09 14:00+0000\n"
 "Last-Translator: Andy Cheng <andy@dobtor.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-02-08 07:16+0000\n"
+"X-Launchpad-Export-Date: 2014-02-10 05:53+0000\n"
 "X-Generator: Launchpad (build 16916)\n"
 
 #. module: sale_stock
@@ -245,6 +245,8 @@ msgid ""
 "order to create invoice 'On Demand', then track and process the sales order "
 "that have been fully delivered and invoice them from there."
 msgstr ""
+"假如銷售訂單是設為「依出貨單開立發票」，則發票是依出貨內容自動建立。假如您要依銷售訂單開立發票，您可以設定銷售訂單為「依需求開立發票」，然後追蹤及處理銷售"
+"訂單至完全出貨後並開立發票。"
 
 #. module: sale_stock
 #: field:sale.order.line,procurement_id:0
@@ -271,7 +273,7 @@ msgid ""
 "confirmed or as the invoice is paid. It drives the purchasing and the "
 "production of products regarding to the rules and to the sales order's "
 "parameters. "
-msgstr ""
+msgstr "採購單於銷售訂單確認後，或當發票已經付款時，自動建立。依採購規則及銷售訂單的參數，啟動採購及產品生產。 "
 
 #. module: sale_stock
 #: help:sale.config.settings,group_mrp_properties:0
@@ -313,6 +315,9 @@ msgid ""
 "prices.\n"
 "                This installs the module delivery."
 msgstr ""
+"允許您在銷售訂單及出貨單中增加運送方式。\n"
+"                您可以依價格考量設定你的貨運廠商及貨運網絡。\n"
+"                此功能將安裝 delivery 模組。"
 
 #. module: sale_stock
 #: field:sale.config.settings,default_picking_policy:0
@@ -356,7 +361,7 @@ msgstr "銷售店點"
 msgid ""
 "It indicates that the sales order has been delivered. This field is updated "
 "only after the scheduler(s) have been launched."
-msgstr ""
+msgstr "指出銷售訂單已經出貨。此欄位只有在排程器執行後更新。"
 
 #. module: sale_stock
 #: field:sale.order.line,property_ids:0
