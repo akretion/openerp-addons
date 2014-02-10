@@ -1051,7 +1051,7 @@ class stock_picking(osv.osv):
             'origin': (picking.name or '') + (picking.origin and (':' + picking.origin) or ''),
             'type': inv_type,
             'account_id': account_id,
-            'contact': picking.contact_id and picking.contact_id.id,
+            'contact_id': picking.contact_id and picking.contact_id.id,
             'partner_id': partner.id,
             'comment': comment,
             'payment_term': payment_term,
