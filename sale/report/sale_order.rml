@@ -156,8 +156,8 @@
           </para>
         </td>
         <td>
-          <para style="terp_default_9">[[ (o.contact_id and o.contact_id.title and o.contact_id.title.name) or '' ]] [[ (o.contact_id and o.contact_id.name) or '' ]]</para>
-          <para style="terp_default_9">[[ o.contact_id and display_address(o.contact_id) ]] </para>
+          <para style="terp_default_9">[[ (o.partner_id and o.partner_id.title and o.partner_id.title.name) or '' ]] [[ (o.partner_id and o.partner_id.name) or '' ]]<
+          <para style="terp_default_9">[[ o.partner_id and display_address(o.partner_id) ]] </para>
           <para style="terp_default_9">
             <font color="white"> </font>
           </para>

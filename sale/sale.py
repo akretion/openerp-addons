@@ -47,7 +47,7 @@ sale_shop()
 
 class sale_order(osv.osv):
     _name = "sale.order"
-    _inherit = ['mail.thread', 'ir.needaction_mixin', 'res.contact.mixin']
+    _inherit = ['mail.thread', 'ir.needaction_mixin']
     _description = "Sales Order"
     _track = {
         'state': {
@@ -370,7 +370,7 @@ class sale_order(osv.osv):
             'type': 'out_invoice',
             'reference': order.client_order_ref or order.name,
             'account_id': order.partner_id.property_account_receivable.id,
-            'contact_id': order.contact_id and order.contact_id.id or order.partner_id.id,
+            'contact_id': order.partner_id.id,
             'partner_id': order.partner_invoice_id.commercial_partner_id.id,
             'journal_id': journal_ids[0],
             'invoice_line': [(6, 0, lines)],
