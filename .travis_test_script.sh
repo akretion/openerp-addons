@@ -2,7 +2,7 @@
 
 cd ../server
 
-./openerp-server --db_user=postgres --db_user=openerp --db_password=admin --db_host=localhost --stop-after-init --addons-path=../openerp-addons,../web/addons -i sale,purchase,stock,crm,project -d rsocb > >(tee stdout.log)
+./openerp-server --db_user=postgres --db_user=openerp --db_password=admin --db_host=localhost --test-enable --stop-after-init --addons-path=../openerp-addons,../web/addons -i sale,purchase,stock,crm_claim,project -d rsocb > >(tee stdout.log)
 
 if $(grep -v mail stdout.log | grep -q ERROR)
 then
