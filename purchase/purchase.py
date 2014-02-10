@@ -783,7 +783,7 @@ class purchase_order_line(osv.osv):
 
         qty = qty or 1.0
         supplierinfo = False
-        supplierinfo_ids = product_supplierinfo.search(cr, uid, [('name','=',partner_id),('product_id','=',product.id)])
+        supplierinfo_ids = product_supplierinfo.search(cr, uid, [('name', '=', partner_id),('product_id', '=', product.product_tmpl_id.id)])
         if supplierinfo_ids:
             supplierinfo = product_supplierinfo.browse(cr, uid, supplierinfo_ids[0], context=context)
             if supplierinfo.product_uom.id != uom_id:
