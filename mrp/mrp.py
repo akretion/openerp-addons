@@ -23,6 +23,7 @@ from datetime import datetime
 from osv import osv, fields
 import decimal_precision as dp
 from tools import float_compare
+from tools import DEFAULT_SERVER_DATETIME_FORMAT
 from tools.translate import _
 import netsvc
 import time
@@ -280,8 +281,10 @@ class mrp_bom(osv.osv):
         @param properties: List of related properties.
         @return: False or BoM id.
         """
-        cr.execute('select id from mrp_bom where product_id=%s and bom_id is null order by sequence', (product_id,))
-        ids = map(lambda x: x[0], cr.fetchall())
+        domain = [('product_id', '=', product_id), ('bom_id', '=', False),
+                  '|', ('date_start', '=', False), ('date_start', '<=', time.strftime(DEFAULT_SERVER_DATETIME_FORMAT)),
+                  '|', ('date_stop', '=', False), ('date_stop', '>=', time.strftime(DEFAULT_SERVER_DATETIME_FORMAT))]
+        ids = self.search(cr, uid, domain, order='sequence')
         max_prop = 0
         result = False
         for bom in self.pool.get('mrp.bom').browse(cr, uid, ids):
