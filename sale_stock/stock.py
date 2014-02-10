@@ -83,6 +83,7 @@ class stock_picking(osv.osv):
             invoice_vals['payment_term'] = picking.sale_id.payment_term.id
             invoice_vals['user_id'] = picking.sale_id.user_id.id
             invoice_vals['name'] = picking.sale_id.client_order_ref or ''
+            invoice_vals['contact_id'] = picking.sale_id.partner_id.id
         return invoice_vals
 
     def _prepare_invoice_line(self, cr, uid, group, picking, move_line, invoice_id, invoice_vals, context=None):
