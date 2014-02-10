@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:36+0000\n"
-"PO-Revision-Date: 2014-02-08 10:06+0000\n"
+"PO-Revision-Date: 2014-02-09 14:03+0000\n"
 "Last-Translator: Yoshi Tashiro <yostashiro@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-02-09 06:51+0000\n"
+"X-Launchpad-Export-Date: 2014-02-10 05:52+0000\n"
 "X-Generator: Launchpad (build 16916)\n"
 
 #. module: mrp
@@ -125,7 +125,7 @@ msgstr "参照"
 #. module: mrp
 #: view:mrp.production:0
 msgid "Finished Products"
-msgstr "完成した製品"
+msgstr "完成品"
 
 #. module: mrp
 #: view:mrp.production:0
@@ -250,7 +250,7 @@ msgstr ""
 #: view:mrp.production:0
 #: field:mrp.production,move_created_ids2:0
 msgid "Produced Products"
-msgstr "生産される製品"
+msgstr "生産済"
 
 #. module: mrp
 #: report:mrp.production.order:0
@@ -316,7 +316,7 @@ msgstr "外部計画の中への参照"
 #. module: mrp
 #: model:res.groups,name:mrp.group_mrp_routings
 msgid "Manage Routings"
-msgstr ""
+msgstr "工順管理"
 
 #. module: mrp
 #: model:ir.model,name:mrp.model_mrp_product_produce
@@ -415,7 +415,7 @@ msgstr "製品数量"
 msgid ""
 "This is the Internal Picking List that brings the finished product to the "
 "production plan"
-msgstr "これは製造計画のために完成した製品を持ってくる内部の集荷リストです。"
+msgstr "これは製造計画のために完成品を持ってくる内部の集荷リストです。"
 
 #. module: mrp
 #: model:ir.ui.menu,name:mrp.menu_view_resource_calendar_search_mrp
@@ -489,8 +489,8 @@ msgid ""
 "needed.Set a location if you produce at a fixed location. This can be a "
 "partner location if you subcontract the manufacturing operations."
 msgstr ""
-"完成した製品を必要とされる場所で製造する場合は空のままとして下さい。固定の場所で製造する場合は場所を設定して下さい。製造業務を外注する場合は、パートナの場"
-"所として下さい。"
+"完成品を必要とされる場所で製造する場合は空のままとして下さい。固定の場所で製造する場合は場所を設定して下さい。製造業務を外注する場合は、パートナの場所とし"
+"て下さい。"
 
 #. module: mrp
 #: view:board.board:0
@@ -548,7 +548,7 @@ msgstr "部品表は工順、すなわち作業センタの連携とリンクし
 #: view:mrp.production:0
 #: field:mrp.production,move_created_ids:0
 msgid "Products to Produce"
-msgstr "生産する製品"
+msgstr "生産予定"
 
 #. module: mrp
 #: view:mrp.config.settings:0
@@ -688,8 +688,8 @@ msgid ""
 "operations and to plan future loads on work centers based on production "
 "plannification."
 msgstr ""
-"完成した製品を製造するための操作のリスト（作業センタのリスト）。工順は操作の間の作業センタのコストを計算し、製造計画化を基本とする作業センタの将来の負荷を"
-"計画するために主に利用されます。"
+"完成品を製造するための操作のリスト（作業センタのリスト）。工順は操作の間の作業センタのコストを計算し、製造計画化を基本とする作業センタの将来の負荷を計画す"
+"るために主に利用されます。"
 
 #. module: mrp
 #: help:mrp.workcenter,time_cycle:0
@@ -1007,7 +1007,7 @@ msgstr "属性グループ"
 #. module: mrp
 #: field:mrp.config.settings,group_mrp_routings:0
 msgid "Manage routings and work orders "
-msgstr ""
+msgstr "工順および作業オーダを使用 "
 
 #. module: mrp
 #: model:process.node,note:mrp.process_node_production0
@@ -1174,7 +1174,7 @@ msgstr "サイクルの量"
 #. module: mrp
 #: field:mrp.production,location_dest_id:0
 msgid "Finished Products Location"
-msgstr "完成した製品の場所"
+msgstr "完成品ロケーション"
 
 #. module: mrp
 #: model:ir.ui.menu,name:mrp.menu_pm_resources_config
@@ -1262,7 +1262,7 @@ msgstr "作業センタの負荷"
 #. module: mrp
 #: help:mrp.production,location_dest_id:0
 msgid "Location where the system will stock the finished products."
-msgstr "システムが完成した製品を在庫する場所です。"
+msgstr "システムが完成品を在庫するロケーション。"
 
 #. module: mrp
 #: help:mrp.routing.workcenter,routing_id:0
@@ -1366,7 +1366,7 @@ msgstr "調達"
 #. module: mrp
 #: field:mrp.config.settings,module_product_manufacturer:0
 msgid "Define manufacturers on products "
-msgstr ""
+msgstr "製品に製造者を定義 "
 
 #. module: mrp
 #: model:ir.actions.act_window,name:mrp.action_view_mrp_product_price_wizard
@@ -1613,7 +1613,7 @@ msgstr "製品販売単位"
 #. module: mrp
 #: view:mrp.production:0
 msgid "Consume Products"
-msgstr "消費製品"
+msgstr "消費済"
 
 #. module: mrp
 #: model:ir.actions.act_window,name:mrp.act_mrp_product_produce
@@ -1670,8 +1670,8 @@ msgid ""
 "operations and to plan future loads on work centers based on production "
 "planning."
 msgstr ""
-"完成した製品を製造するための操作のリスト（作業センタのリスト）。工順は操作の間の作業センタのコストを計算し、製造計画化を基本とする作業センタの将来の負荷を"
-"計画するために主に利用されます。"
+"完成品を製造するための操作のリスト（作業センタのリスト）。工順は操作の間の作業センタのコストを計算し、製造計画化を基本とする作業センタの将来の負荷を計画す"
+"るために主に利用されます。"
 
 #. module: mrp
 #: view:change.production.qty:0
@@ -1847,7 +1847,7 @@ msgstr "部品表構造"
 #. module: mrp
 #: field:mrp.config.settings,module_mrp_jit:0
 msgid "Generate procurement in real time"
-msgstr ""
+msgstr "調達オーダをリアルタイムに生成"
 
 #. module: mrp
 #: field:mrp.bom,date_stop:0
@@ -2382,4 +2382,4 @@ msgstr ""
 #: field:mrp.production,move_lines:0
 #: report:mrp.production.order:0
 msgid "Products to Consume"
-msgstr "消費製品"
+msgstr "消費予定"
