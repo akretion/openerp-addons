@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 #################################################################################
 #                                                                               #
-# Copyright (C) 2009  Renato Lima - Akretion                                    #
+# Copyright (C) 2009  Renato Lima - Akretion LTDA                               #
 #                                                                               #
 #This program is free software: you can redistribute it and/or modify           #
 #it under the terms of the GNU Affero General Public License as published by    #
@@ -15,6 +15,9 @@
 #                                                                               #
 #You should have received a copy of the GNU General Public License              #
 #along with this program.  If not, see <http://www.gnu.org/licenses/>.          #
+#                                                                               #
+# Alternatively, the contents of this file may be used under the terms of       #
+# the GNU General Public License Version 2 or later (the "GPL")                 #
 #################################################################################
 
 from openerp import pooler
@@ -22,9 +25,14 @@ from openerp.osv import fields, osv
 
 TAX_CODE_COLUMNS = {
                     'domain':fields.char('Domain', size=32, 
-                                         help="This field is only used if you develop your own module allowing developers to create specific taxes in a custom domain."),
+                                         help="This field is only used if you\
+                                         develop your own module allowing\
+                                         developers to create specific taxes\
+                                         in a custom domain."),
                     'tax_discount': fields.boolean('Discount this Tax in Prince', 
-                                                   help="Mark it for (ICMS, PIS, COFINS and others taxes included)."),
+                                                   help="Mark it for (ICMS, PIS,\
+                                                   COFINS and others taxes\
+                                                   included)."),
                     }
 
 TAX_DEFAULTS = {
@@ -54,12 +62,15 @@ class account_tax_code_template(osv.osv):
         obj_tax_code_template = self.pool.get('account.tax.code.template')
         obj_tax_code = self.pool.get('account.tax.code')
         tax_code_template_ref = {}
-        company = self.pool.get('res.company').browse(cr, uid, company_id, context=context)
+        company = self.pool.get('res.company').browse(cr, uid, company_id,
+                                                      context=context)
 
         #find all the children of the tax_code_root_id
-        children_tax_code_template = tax_code_root_id and obj_tax_code_template.search(cr, uid, [('parent_id','child_of',[tax_code_root_id])], order='id') or []
+        children_tax_code_template = tax_code_root_id and obj_tax_code_template.search(cr, uid,
+            [('parent_id','child_of',[tax_code_root_id])], order='id') or []
         for tax_code_template in obj_tax_code_template.browse(cr, uid, children_tax_code_template, context=context):
-            parent_id = tax_code_template.parent_id and ((tax_code_template.parent_id.id in tax_code_template_ref) and tax_code_template_ref[tax_code_template.parent_id.id]) or False
+            parent_id = tax_code_template.parent_id and ((tax_code_template.parent_id.id in tax_code_template_ref) 
+                                                         and tax_code_template_ref[tax_code_template.parent_id.id]) or False
             vals = {
                 'name': (tax_code_root_id == tax_code_template.id) and company.name or tax_code_template.name,
                 'code': tax_code_template.code,
@@ -141,8 +152,9 @@ class account_tax_template(osv.osv):
         obj_acc_tax = self.pool.get('account.tax')
         for tax_template in tax_templates:
             if tax_template.tax_code_id:
-                obj_acc_tax.write(cr, uid, result['tax_template_to_tax'][tax_template.id], {'domain': tax_template.tax_code_id.domain,
-                                                                                            'tax_discount': tax_template.tax_code_id.tax_discount})    
+                obj_acc_tax.write(cr, uid, result['tax_template_to_tax'][tax_template.id],
+                                  {'domain': tax_template.tax_code_id.domain,
+                                   'tax_discount': tax_template.tax_code_id.tax_discount})    
         return result
     
     def onchange_tax_code_id(self, cr, uid, ids, tax_code_id, context=None):

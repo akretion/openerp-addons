@@ -1,4 +1,9 @@
 <?xml version="1.0"?>
+<!--
+  Brazilian localization module for OpenERP
+  Copyright (C) 2009 Renato Lima - Akretion LTDA
+  The licence is in the file __openerp__.py
+-->
 <openerp>
 	<data>
 
