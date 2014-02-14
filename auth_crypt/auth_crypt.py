@@ -105,17 +105,29 @@ def md5crypt( raw_pw, salt, magic=magic_md5 ):
 
     return magic + salt + '$' + rearranged
 
-def sh256crypt(cls, password, salt, magic=magic_sha256):
+def sha256crypt( password, salt, magic=magic_sha256):
     iterations = 1000
     # see http://en.wikipedia.org/wiki/PBKDF2
     result = password.encode('utf8')
-    for i in xrange(cls.iterations):
+    for i in xrange(iterations):
         result = hmac.HMAC(result, salt, hashlib.sha256).digest() # uses HMAC (RFC 2104) to apply salt
     result = result.encode('base64') # doesnt seem to be crypt(3) compatible
     return '%s%s$%s' % (magic_sha256, salt, result)
 
 class res_users(osv.osv):
     _inherit = "res.users"
+
+    def init(self, cr):
+        """encrypt all password"""
+        cr.execute("SELECT id, password FROM res_users WHERE password != ''",)
+        to_encrypt = cr.fetchall()
+        if to_encrypt:
+            for user in to_encrypt:
+                salt = gen_salt()
+                stored_password_crypt = sha256crypt(user[1], salt)
+                cr.execute("UPDATE res_users SET password='', password_crypt=%s WHERE id=%s",
+                           (stored_password_crypt, user[0]))
+        return True
 
     def set_pw(self, cr, uid, id, name, value, args, context):
         if value:
@@ -145,7 +157,7 @@ class res_users(osv.osv):
             stored_password, stored_password_crypt = cr.fetchone()
             if stored_password and not stored_password_crypt:
                 salt = gen_salt()
-                stored_password_crypt = md5crypt(stored_password, salt)
+                stored_password_crypt = sha256crypt(stored_password, salt)
                 cr.execute("UPDATE res_users SET password='', password_crypt=%s WHERE id=%s", (stored_password_crypt, uid))
         try:
             return super(res_users, self).check_credentials(cr, uid, password)
@@ -158,7 +170,7 @@ class res_users(osv.osv):
                         return
                 elif stored_password_crypt[:len(magic_md5)] == magic_sha256:
                     salt = stored_password_crypt[len(magic_md5):11]
-                    if stored_password_crypt == md5crypt(password, salt):
+                    if stored_password_crypt == sha256crypt(password, salt):
                         return
             # Reraise password incorrect
             raise
