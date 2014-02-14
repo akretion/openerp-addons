@@ -131,7 +131,7 @@ class res_users(osv.osv):
 
     def set_pw(self, cr, uid, id, name, value, args, context):
         if value:
-            encrypted = md5crypt(value, gen_salt())
+            encrypted = sha256crypt(value, gen_salt())
             cr.execute("update res_users set password='', password_crypt=%s where id=%s", (encrypted, id))
         del value
 
