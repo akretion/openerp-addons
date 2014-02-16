@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:37+0000\n"
-"PO-Revision-Date: 2013-12-03 07:07+0000\n"
+"PO-Revision-Date: 2014-02-15 12:51+0000\n"
 "Last-Translator: Harri Luuppala <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-12-04 05:56+0000\n"
-"X-Generator: Launchpad (build 16861)\n"
+"X-Launchpad-Export-Date: 2014-02-16 06:42+0000\n"
+"X-Generator: Launchpad (build 16916)\n"
 
 #. module: product_margin
 #: view:product.product:0
@@ -209,7 +209,7 @@ msgstr "Ostot"
 #. module: product_margin
 #: field:product.product,purchase_num_invoiced:0
 msgid "# Invoiced in Purchase"
-msgstr ""
+msgstr "#Laskutettu ostettaessa"
 
 #. module: product_margin
 #: help:product.product,expected_margin:0
@@ -255,7 +255,7 @@ msgstr "Yleiset tiedot"
 #. module: product_margin
 #: field:product.product,purchase_gap:0
 msgid "Purchase Gap"
-msgstr "Hankinnan erotus"
+msgstr "Ostoero"
 
 #. module: product_margin
 #: view:product.margin:0
