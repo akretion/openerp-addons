@@ -338,7 +338,6 @@ class crm_lead(base_stage, format_address, osv.osv):
         return {'value':{'probability': stage.probability}}
 
     def on_change_partner(self, cr, uid, ids, partner_id, context=None):
-        result = {}
         values = {}
         if partner_id:
             partner = self.pool.get('res.partner').browse(cr, uid, partner_id, context=context)
@@ -353,6 +352,7 @@ class crm_lead(base_stage, format_address, osv.osv):
                 'phone' : partner.phone,
                 'mobile' : partner.mobile,
                 'fax' : partner.fax,
+                'zip': partner.zip,
             }
         return {'value' : values}
 
