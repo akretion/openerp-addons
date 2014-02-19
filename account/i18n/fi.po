@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-14 22:29+0000\n"
-"PO-Revision-Date: 2014-02-16 21:05+0000\n"
+"PO-Revision-Date: 2014-02-18 15:33+0000\n"
 "Last-Translator: Harri Luuppala <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-02-17 06:03+0000\n"
+"X-Launchpad-Export-Date: 2014-02-19 05:39+0000\n"
 "X-Generator: Launchpad (build 16916)\n"
 
 #. module: account
@@ -7600,7 +7600,7 @@ msgstr ""
 #. module: account
 #: view:account.account.template:0
 msgid "Internal notes..."
-msgstr ""
+msgstr "Sisäiset muistiinpanot..."
 
 #. module: account
 #: constraint:account.account:0
@@ -11085,7 +11085,7 @@ msgstr "Kumppanin"
 #. module: account
 #: field:account.account,note:0
 msgid "Internal Notes"
-msgstr ""
+msgstr "Sisäiset muistiinpanot"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_fiscalyear
