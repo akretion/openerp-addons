@@ -20,9 +20,10 @@
 ##############################################################################
 
 from datetime import datetime
-from osv import osv, fields
+from osv import osv, fields, orm
 import decimal_precision as dp
 from tools import float_compare
+from tools import DEFAULT_SERVER_DATETIME_FORMAT
 from tools.translate import _
 import netsvc
 import time
@@ -280,8 +281,10 @@ class mrp_bom(osv.osv):
         @param properties: List of related properties.
         @return: False or BoM id.
         """
-        cr.execute('select id from mrp_bom where product_id=%s and bom_id is null order by sequence', (product_id,))
-        ids = map(lambda x: x[0], cr.fetchall())
+        domain = [('product_id', '=', product_id), ('bom_id', '=', False),
+                  '|', ('date_start', '=', False), ('date_start', '<=', time.strftime(DEFAULT_SERVER_DATETIME_FORMAT)),
+                  '|', ('date_stop', '=', False), ('date_stop', '>=', time.strftime(DEFAULT_SERVER_DATETIME_FORMAT))]
+        ids = self.search(cr, uid, domain, order='sequence')
         max_prop = 0
         result = False
         for bom in self.pool.get('mrp.bom').browse(cr, uid, ids):
@@ -434,6 +437,22 @@ class mrp_production(osv.osv):
         for prod in self.browse(cr, uid, ids, context=context):
             result[prod.id] = prod.date_planned[:10]
         return result
+    
+    def _src_id_default(self, cr, uid, ids, context=None):
+        try:
+            location_model, location_id = self.pool.get('ir.model.data').get_object_reference(cr, uid, 'stock', 'stock_location_stock')
+            self.pool.get('stock.location').check_access_rule(cr, uid, [location_id], 'read', context=context)
+        except (orm.except_orm, ValueError):
+            location_id = False
+        return location_id
+
+    def _dest_id_default(self, cr, uid, ids, context=None):
+        try:
+            location_model, location_id = self.pool.get('ir.model.data').get_object_reference(cr, uid, 'stock', 'stock_location_stock')
+            self.pool.get('stock.location').check_access_rule(cr, uid, [location_id], 'read', context=context)
+        except (orm.except_orm, ValueError):
+            location_id = False
+        return location_id
 
     _columns = {
         'name': fields.char('Reference', size=64, required=True),
@@ -481,6 +500,8 @@ class mrp_production(osv.osv):
         'state': lambda *a: 'draft',
         'date_planned': lambda *a: time.strftime('%Y-%m-%d %H:%M:%S'),
         'product_qty':  lambda *a: 1.0,
+        'location_src_id': _src_id_default,
+        'location_dest_id': _dest_id_default,
         'name': lambda x, y, z, c: x.pool.get('ir.sequence').get(y, z, 'mrp.production') or '/',
         'company_id': lambda self, cr, uid, c: self.pool.get('res.company')._company_default_get(cr, uid, 'mrp.production', context=c),
     }
