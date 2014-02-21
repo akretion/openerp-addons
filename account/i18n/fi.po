@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-14 22:29+0000\n"
-"PO-Revision-Date: 2014-02-19 19:41+0000\n"
+"PO-Revision-Date: 2014-02-20 13:20+0000\n"
 "Last-Translator: Harri Luuppala <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-02-20 05:41+0000\n"
+"X-Launchpad-Export-Date: 2014-02-21 06:38+0000\n"
 "X-Generator: Launchpad (build 16916)\n"
 
 #. module: account
@@ -681,7 +681,7 @@ msgstr ""
 #: view:account.fiscal.position:0
 #: view:account.fiscal.position.template:0
 msgid "Taxes Mapping"
-msgstr "Verokohdistus"
+msgstr "Verojen kohdistus"
 
 #. module: account
 #: report:account.central.journal:0
@@ -5127,7 +5127,7 @@ msgstr "Valitse verokartta"
 #: field:account.fiscal.position,account_ids:0
 #: field:account.fiscal.position.template,account_ids:0
 msgid "Account Mapping"
-msgstr "Tilikartoitus"
+msgstr "Tiliin kohdistus"
 
 #. module: account
 #: view:account.bank.statement:0
@@ -6415,7 +6415,7 @@ msgstr "Tappiotili"
 #: field:account.tax,account_collected_id:0
 #: field:account.tax.template,account_collected_id:0
 msgid "Invoice Tax Account"
-msgstr "Laskuverotili"
+msgstr "Laskun verotili"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_general_journal
@@ -10904,7 +10904,7 @@ msgstr ""
 #: view:account.fiscal.position:0
 #: view:account.fiscal.position.template:0
 msgid "Accounts Mapping"
-msgstr "Tilien kartoitus"
+msgstr "Tileihin kohdistus"
 
 #. module: account
 #: model:ir.actions.act_window,help:account.action_tax_code_list
