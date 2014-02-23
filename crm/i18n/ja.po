@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-01-07 16:56+0000\n"
-"PO-Revision-Date: 2014-02-22 03:10+0000\n"
+"PO-Revision-Date: 2014-02-22 13:53+0000\n"
 "Last-Translator: hiro TAKADA <tkhiro0712@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-02-22 07:32+0000\n"
+"X-Launchpad-Export-Date: 2014-02-23 07:44+0000\n"
 "X-Generator: Launchpad (build 16926)\n"
 
 #. module: crm
@@ -101,7 +101,7 @@ msgstr "ステージ名"
 #: view:crm.lead.report:0
 #: view:crm.phonecall.report:0
 msgid "Salesperson"
-msgstr "営業担当者"
+msgstr "販売担当者"
 
 #. module: crm
 #: model:ir.model,name:crm.model_crm_lead_report
@@ -1613,7 +1613,7 @@ msgstr "通話の月"
 #. module: crm
 #: view:crm.lead:0
 msgid "Describe the lead..."
-msgstr ""
+msgstr "リードを記述してください..."
 
 #. module: crm
 #: code:addons/crm/crm_phonecall.py:292
