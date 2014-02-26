@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-14 22:29+0000\n"
-"PO-Revision-Date: 2014-01-28 16:20+0000\n"
-"Last-Translator: Erwin van der Ploeg (BAS Solutions) <Unknown>\n"
+"PO-Revision-Date: 2014-02-25 12:37+0000\n"
+"Last-Translator: Jan Jurkus (GCE CAD-Service) <ict@gcecad-service.nl>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-01-29 06:02+0000\n"
-"X-Generator: Launchpad (build 16916)\n"
+"X-Launchpad-Export-Date: 2014-02-26 07:31+0000\n"
+"X-Generator: Launchpad (build 16935)\n"
 
 #. module: account
 #: model:process.transition,name:account.process_transition_supplierreconcilepaid0
@@ -307,7 +307,7 @@ msgstr "Handmatige herhaling"
 #. module: account
 #: field:account.automatic.reconcile,allow_write_off:0
 msgid "Allow write off"
-msgstr "Afschrijven toegestaan"
+msgstr "Afschrijven toestaan"
 
 #. module: account
 #: view:account.analytic.chart:0
@@ -880,7 +880,7 @@ msgstr "Weet u zeker dat u boekingen wilt maken?"
 #: code:addons/account/account_invoice.py:1361
 #, python-format
 msgid "Invoice partially paid: %s%s of %s%s (%s%s remaining)."
-msgstr "Factuur gedeeltelijk betaald %s%s van %s%s (%s%s resterend)"
+msgstr "Factuur gedeeltelijk betaald: %s%s van %s%s (%s%s resterend)."
 
 #. module: account
 #: view:account.invoice:0
@@ -905,7 +905,7 @@ msgstr "Rekening"
 #. module: account
 #: selection:account.financial.report,display_detail:0
 msgid "Display children with hierarchy"
-msgstr "Weergave kinderen met hiërarchie"
+msgstr "Weergave onderliggende met hiërarchie"
 
 #. module: account
 #: selection:account.payment.term.line,value:0
@@ -970,7 +970,7 @@ msgstr "Grootboekrekening verdeelboeking"
 #. module: account
 #: help:account.invoice,reference:0
 msgid "The partner reference of this invoice."
-msgstr "Het relatiekenmerk of deze factuur"
+msgstr "Het relatiekenmerk van deze factuur."
 
 #. module: account
 #: view:account.invoice.report:0
@@ -1133,7 +1133,7 @@ msgstr "Totaalbedrag"
 #. module: account
 #: help:account.invoice,supplier_invoice_number:0
 msgid "The reference of this invoice as provided by the supplier."
-msgstr "De referentie van deze factuur zoals opgegeven door de leverancier"
+msgstr "De referentie van deze factuur zoals opgegeven door de leverancier."
 
 #. module: account
 #: selection:account.account,type:0
@@ -1815,7 +1815,7 @@ msgstr "Code"
 #. module: account
 #: field:account.config.settings,company_footer:0
 msgid "Bank accounts footer preview"
-msgstr "Bank rekening vet voorbeeld"
+msgstr "Voorbeeld voettekst bankrekeningen"
 
 #. module: account
 #: selection:account.account,type:0
