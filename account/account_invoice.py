@@ -1026,7 +1026,7 @@ class account_invoice(osv.osv):
             move = {
                 'ref': (inv.supplier_invoice_number and
                         inv.supplier_invoice_number or
-                        (inv.reference and inv.reference or inv.name)),
+                        inv.number or inv.name),
                 'line_id': line,
                 'journal_id': journal_id,
                 'date': date,
