@@ -1024,9 +1024,7 @@ class account_invoice(osv.osv):
             line = self.finalize_invoice_move_lines(cr, uid, inv, line)
 
             move = {
-                'ref': (inv.supplier_invoice_number and
-                        inv.supplier_invoice_number or
-                        inv.number or inv.name),
+                'ref': inv.reference or inv.supplier_invoice_number or inv.name,
                 'line_id': line,
                 'journal_id': journal_id,
                 'date': date,
