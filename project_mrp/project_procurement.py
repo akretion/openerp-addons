@@ -82,6 +82,7 @@ class procurement_order(osv.osv):
                 'description': procurement.note,
                 'project_id':  project and project.id or False,
                 'company_id': procurement.company_id.id,
+                'partner_id': procurement.sale_line_id and procurement.sale_line_id.order_id.partner_id.id,
             },context=context)
             self.write(cr, uid, [procurement.id], {'task_id': task_id, 'state': 'running', 'message':_('Task created.')}, context=context)
         return task_id
