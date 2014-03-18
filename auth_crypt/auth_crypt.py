@@ -117,6 +117,18 @@ def sh256crypt(cls, password, salt, magic=magic_sha256):
 class res_users(osv.osv):
     _inherit = "res.users"
 
+    def init(self, cr):
+        """Encrypt all passwords at module installation"""
+        cr.execute("SELECT id, password FROM res_users WHERE password != ''",)
+        to_encrypt = cr.fetchall()
+        if to_encrypt:
+            for user in to_encrypt:
+                salt = gen_salt()
+                stored_password_crypt = md5crypt(user[1], salt)
+                cr.execute("UPDATE res_users SET password='', password_crypt=%s WHERE id=%s",
+                           (stored_password_crypt, user[0]))
+        return True
+
     def set_pw(self, cr, uid, id, name, value, args, context):
         if value:
             encrypted = md5crypt(value, gen_salt())
