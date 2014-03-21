@@ -1,0 +1,22 @@
+@charset "UTF-8";
+.css_website_mail .has-error {
+  border-color: red;
+}
+.css_website_mail .css_nav_month {
+  display: none;
+}
+.css_website_mail .css_nav_month:first-of-type {
+  display: block;
+}
+
+.blog_content a.oe_mail_expand:after {
+  content: " →";
+}
+.blog_content a.oe_mail_expand {
+  font-weight: bold;
+}
+
+p.post-meta {
+  position: relative;
+  top: -5px;
+}

@@ -1,0 +1,386 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#    * board
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 6.0dev\n"
+"Report-Msgid-Bugs-To: support@openerp.com\n"
+"POT-Creation-Date: 2012-12-21 17:05+0000\n"
+"PO-Revision-Date: 2011-02-02 18:41+0000\n"
+"Last-Translator: Krisztian Eyssen <krisz@eyssen.hu>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-01-28 06:15+0000\n"
+"X-Generator: Launchpad (build 16914)\n"
+
+#. module: board
+#: model:ir.actions.act_window,name:board.action_board_create
+#: model:ir.ui.menu,name:board.menu_board_create
+msgid "Create Board"
+msgstr "Vezérlőpult létrehozás"
+
+#. module: board
+#: view:board.create:0
+msgid "Create"
+msgstr "Létrehozás"
+
+#. module: board
+#. openerp-web
+#: code:addons/board/static/src/xml/board.xml:4
+#, python-format
+msgid "Reset Layout.."
+msgstr "Nézet visszaállítása.."
+
+#. module: board
+#: view:board.create:0
+msgid "Create New Dashboard"
+msgstr "Új Dashboard/Műszerfal létrehozása"
+
+#. module: board
+#. openerp-web
+#: code:addons/board/static/src/xml/board.xml:40
+#, python-format
+msgid "Choose dashboard layout"
+msgstr "Dashboard/Műszerfal nézet kiválasztása"
+
+#. module: board
+#. openerp-web
+#: code:addons/board/static/src/xml/board.xml:70
+#, python-format
+msgid "Add"
+msgstr "Hozzáadás"
+
+#. module: board
+#. openerp-web
+#: code:addons/board/static/src/js/dashboard.js:139
+#, python-format
+msgid "Are you sure you want to remove this item ?"
+msgstr "Biztosan el szeretné távolítani ezt az elemet?"
+
+#. module: board
+#: model:ir.model,name:board.model_board_board
+msgid "Board"
+msgstr "Vezérlőpult"
+
+#. module: board
+#: view:board.board:0
+#: model:ir.actions.act_window,name:board.open_board_my_dash_action
+#: model:ir.ui.menu,name:board.menu_board_my_dash
+msgid "My Dashboard"
+msgstr "Dashboard/Műszerfalam"
+
+#. module: board
+#: field:board.create,name:0
+msgid "Board Name"
+msgstr "Vezérlőpult neve"
+
+#. module: board
+#: model:ir.model,name:board.model_board_create
+msgid "Board Creation"
+msgstr "Vezérlőpult létrehozás"
+
+#. module: board
+#. openerp-web
+#: code:addons/board/static/src/xml/board.xml:67
+#, python-format
+msgid "Add to Dashboard"
+msgstr "Hozzáadás Dashboard/Műszerfalhoz"
+
+#. module: board
+#. openerp-web
+#: code:addons/board/static/src/xml/board.xml:28
+#, python-format
+msgid "&nbsp;"
+msgstr "&nbsp;"
+
+#. module: board
+#: model:ir.actions.act_window,help:board.open_board_my_dash_action
+msgid ""
+"<div class=\"oe_empty_custom_dashboard\">\n"
+"                  <p>\n"
+"                    <b>Your personal dashboard is empty.</b>\n"
+"                  </p><p>\n"
+"                    To add your first report into this dashboard, go to any\n"
+"                    menu, switch to list or graph view, and click <i>'Add "
+"to\n"
+"                    Dashboard'</i> in the extended search options.\n"
+"                  </p><p>\n"
+"                    You can filter and group data before inserting into the\n"
+"                    dashboard using the search options.\n"
+"                  </p>\n"
+"              </div>\n"
+"            "
+msgstr ""
+"<div class=\"oe_empty_custom_dashboard\">\n"
+"                  <p>\n"
+"                    <b>A személyes Dashboard/Műszerfala üres.</b>\n"
+"                  </p><p>\n"
+"                    Az első jelentés Dashboard/Műszerfalhoz való "
+"hozzáadásához, \n"
+"                    lépjen bármely menübe, váltson lista vagy grafikus "
+"nézetre, és kattintson\n"
+"                    a kiterjesztett keresési lehetőségeknél ide "
+"<i>'Dashboard/Műszerfalhoz hozzáadás'</i>.\n"
+"                  </p><p>\n"
+"                    Szűrheti a csoport adatokat, a keresési lehetőségekkel, "
+"mielőtt \n"
+"                    beillesztené azokat a Dashboard/Műszerfal-ba.\n"
+"                  </p>\n"
+"              </div>\n"
+"            "
+
+#. module: board
+#. openerp-web
+#: code:addons/board/static/src/xml/board.xml:6
+#, python-format
+msgid "Reset"
+msgstr "Visszaállítás"
+
+#. module: board
+#: field:board.create,menu_parent_id:0
+msgid "Parent Menu"
+msgstr "Főmenü"
+
+#. module: board
+#. openerp-web
+#: code:addons/board/static/src/xml/board.xml:8
+#, python-format
+msgid "Change Layout.."
+msgstr "Nézet megváltoztatása.."
+
+#. module: board
+#. openerp-web
+#: code:addons/board/static/src/js/dashboard.js:93
+#, python-format
+msgid "Edit Layout"
+msgstr "Nézet szerkesztése"
+
+#. module: board
+#. openerp-web
+#: code:addons/board/static/src/xml/board.xml:10
+#, python-format
+msgid "Change Layout"
+msgstr "Nézet megváltoztatása"
+
+#. module: board
+#: view:board.create:0
+msgid "Cancel"
+msgstr "Visszavonás"
+
+#. module: board
+#: view:board.create:0
+msgid "or"
+msgstr "vagy"
+
+#. module: board
+#. openerp-web
+#: code:addons/board/static/src/xml/board.xml:69
+#, python-format
+msgid "Title of new dashboard item"
+msgstr "Az új Dashboard/Műszerfal elem neve"
+
+#~ msgid "  Year  "
+#~ msgstr "  Év  "
+
+#~ msgid "Menu Create"
+#~ msgstr "Menü létrehozása"
+
+#~ msgid "Note Type"
+#~ msgstr "Megjegyzés típusa"
+
+#~ msgid "Author"
+#~ msgstr "Szerző"
+
+#~ msgid "Dashboard main module"
+#~ msgstr "Vezérlőpult főmodulja"
+
+#~ msgid "Latest Connections"
+#~ msgstr "Legutolsó kapcsolatok"
+
+#, python-format
+#~ msgid "User Error!"
+#~ msgstr "Felhasználói hiba!"
+
+#~ msgid "Administration Dashboard"
+#~ msgstr "Adminisztrációs vezérlőpult"
+
+#~ msgid "Note"
+#~ msgstr "Megjegyzés"
+
+#~ msgid "Group By..."
+#~ msgstr "Csoportosítás..."
+
+#~ msgid "Title"
+#~ msgstr "Pozíció"
+
+#~ msgid "# of Entries"
+#~ msgstr "Tételek száma"
+
+#~ msgid "Month"
+#~ msgstr "Hónap"
+
+#~ msgid "Open Dashboard"
+#~ msgstr "Vezérlőpult megnyitása"
+
+#~ msgid "Dashboard Definition"
+#~ msgstr "Vezérlőpult meghatározása"
+
+#~ msgid "March"
+#~ msgstr "Március"
+
+#~ msgid "August"
+#~ msgstr "Augusztus"
+
+#~ msgid "User Connections"
+#~ msgstr "Felhasználói kapcsolatok"
+
+#~ msgid "Creation Date"
+#~ msgstr "Létrehozás dátuma"
+
+#~ msgid "June"
+#~ msgstr "Június"
+
+#~ msgid "Note type"
+#~ msgstr "Megjegyzés típusa"
+
+#~ msgid "Action Views"
+#~ msgstr "Művelet nézetek"
+
+#~ msgid "Date"
+#~ msgstr "Dátum"
+
+#~ msgid "July"
+#~ msgstr "Július"
+
+#~ msgid "Extended Filters..."
+#~ msgstr "Kiterjesztett szűrők…"
+
+#~ msgid "Day"
+#~ msgstr "Nap"
+
+#~ msgid "Create Menu For Dashboard"
+#~ msgstr "Menü létrehozása a vezérlőpulton"
+
+#~ msgid "February"
+#~ msgstr "Február"
+
+#~ msgid "October"
+#~ msgstr "Október"
+
+#~ msgid "January"
+#~ msgstr "Január"
+
+#~ msgid "Notes"
+#~ msgstr "Megjegyzések"
+
+#~ msgid "April"
+#~ msgstr "Április"
+
+#~ msgid "Dashboard"
+#~ msgstr "Vezérlőpult"
+
+#~ msgid "Action"
+#~ msgstr "Művelet"
+
+#~ msgid "Position"
+#~ msgstr "Pozíció"
+
+#~ msgid "Model"
+#~ msgstr "Modell"
+
+#~ msgid "Latest Activities"
+#~ msgstr "Legutolsó tevékenységek"
+
+#~ msgid "Width"
+#~ msgstr "Szélesség"
+
+#~ msgid "   Month   "
+#~ msgstr "   Hónap   "
+
+#~ msgid "Sequence"
+#~ msgstr "Sorszám"
+
+#~ msgid "September"
+#~ msgstr "Szeptember"
+
+#~ msgid "Create Menu"
+#~ msgstr "Menü létrehozása"
+
+#~ msgid "Height"
+#~ msgstr "Magasság"
+
+#~ msgid "May"
+#~ msgstr "Május"
+
+#~ msgid "Object"
+#~ msgstr "Tárgy"
+
+#~ msgid "Year"
+#~ msgstr "Év"
+
+#~ msgid "Dashboard View"
+#~ msgstr "Vezérlőpult nézet"
+
+#~ msgid "Subject"
+#~ msgstr "Tárgy"
+
+#~ msgid "November"
+#~ msgstr "November"
+
+#~ msgid "December"
+#~ msgstr "December"
+
+#~ msgid "Menu Information"
+#~ msgstr "Menü információ"
+
+#~ msgid "Menu Name"
+#~ msgstr "Menü neve"
+
+#~ msgid "Weekly Global Activity"
+#~ msgstr "Teljes heti tevékenység"
+
+#~ msgid "Monthly Activity per Document"
+#~ msgstr "Havi tevékenység  dokumentumonként"
+
+#~ msgid "Log Analysis"
+#~ msgstr "Naplóelemzés"
+
+#~ msgid "Publish a note"
+#~ msgstr "Megjegyzés megjelentetése"
+
+#~ msgid "Log Report"
+#~ msgstr "Naplójelentés"
+
+#~ msgid "Board Line"
+#~ msgstr "Vezérlőpult sor"
+
+#~ msgid "    Month-1    "
+#~ msgstr "    Hónap - 1    "
+
+#~ msgid ""
+#~ "Gives the sequence order                         when displaying a list of "
+#~ "board lines."
+#~ msgstr ""
+#~ "Megadja a sorrendet, amikor a vezérlőpult sorainak listáját megjelenítjük."
+
+#~ msgid "Base module for all dashboards."
+#~ msgstr "Az alapmodul az összes vezérlőpulthoz."
+
+#~ msgid "Left"
+#~ msgstr "Bal"
+
+#~ msgid "Board View"
+#~ msgstr "Vezérlőpult nézet"
+
+#~ msgid "Right"
+#~ msgstr "Jobb"
+
+#~ msgid "Create Board Menu"
+#~ msgstr "Vezérlőpult menü létrehozása"
+
+#, python-format
+#~ msgid "Please Insert Dashboard View(s) !"
+#~ msgstr "Kérem, illesze be a vezérlőpult nézet(ek)et!"

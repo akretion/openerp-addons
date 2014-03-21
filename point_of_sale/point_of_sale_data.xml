@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data noupdate="1">
+
+
+        <!-- After installation of the module, open the related menu -->
+        <record id="action_client_pos_menu" model="ir.actions.client">
+            <field name="name">Open POS Menu</field>
+            <field name="tag">reload</field>
+            <field name="params" eval="{'menu_id': ref('menu_point_root')}"/>
+        </record>
+        <record id="base.open_menu" model="ir.actions.todo">
+            <field name="action_id" ref="action_client_pos_menu"/>
+            <field name="state">open</field>
+        </record>
+        <record model="pos.config" id="pos_config_main">
+            <field name="name">Main</field>
+        </record>
+
+        <!-- notify all employees of module installation -->
+        <record model="mail.message" id="module_install_notification">
+            <field name="model">mail.group</field>
+            <field name="res_id" ref="mail.group_all_employees"/>
+            <field name="type">notification</field>
+            <field name="subtype_id" ref="mail.mt_comment"/>
+            <field name="subject">Point of Sale application installed!</field>
+            <field name="body"><![CDATA[<p>Record sale orders, register payments, compute change to return, create invoices, and manage refunds through a specific web touch-screen interface.</p>
+<p>If you install the PoS proxy you will be able to interface OpenERP with retail hardware: barcode scanners, printers, cash registers, weighing machines, credit card payment terminals.</p>]]></field>
+        </record>
+
+    </data>
+</openerp>
+
