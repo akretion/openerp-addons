@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-07 19:36+0000\n"
-"PO-Revision-Date: 2014-03-31 05:31+0000\n"
+"PO-Revision-Date: 2014-04-01 02:49+0000\n"
 "Last-Translator: hiro TAKADA <tkhiro0712@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-03-31 06:40+0000\n"
+"X-Launchpad-Export-Date: 2014-04-01 06:52+0000\n"
 "X-Generator: Launchpad (build 16967)\n"
 
 #. module: point_of_sale
@@ -52,7 +52,7 @@ msgstr "販売レシートの印刷"
 #. module: point_of_sale
 #: field:pos.session,cash_register_balance_end:0
 msgid "Computed Balance"
-msgstr ""
+msgstr "計算残高"
 
 #. module: point_of_sale
 #: view:pos.session:0
@@ -112,7 +112,7 @@ msgstr ""
 #: view:report.pos.order:0
 #: field:report.pos.order,user_id:0
 msgid "Salesperson"
-msgstr ""
+msgstr "営業担当者"
 
 #. module: point_of_sale
 #: view:report.pos.order:0
@@ -135,7 +135,7 @@ msgstr ""
 #: code:addons/point_of_sale/point_of_sale.py:1373
 #, python-format
 msgid "Assign a Custom EAN"
-msgstr ""
+msgstr "カスタムEANを割り当て"
 
 #. module: point_of_sale
 #: view:pos.session.opening:0
@@ -165,7 +165,7 @@ msgstr "現金取出"
 #: code:addons/point_of_sale/point_of_sale.py:105
 #, python-format
 msgid "not used"
-msgstr ""
+msgstr "未使用"
 
 #. module: point_of_sale
 #: field:pos.config,iface_vkeyboard:0
@@ -425,7 +425,7 @@ msgstr ""
 #. module: point_of_sale
 #: field:product.product,to_weight:0
 msgid "To Weight"
-msgstr ""
+msgstr "重量"
 
 #. module: point_of_sale
 #. openerp-web
@@ -748,7 +748,7 @@ msgstr ""
 msgid ""
 "Check if, this is a product you can use to take cash from a statement for "
 "the point of sale backend, example: money lost, transfer to bank, etc."
-msgstr ""
+msgstr "チェックした場合、この製品は販売時点バックエンドの計算書から現金を取り出すために使用できます。例：金銭紛失、銀行振込など。"
 
 #. module: point_of_sale
 #: view:report.pos.order:0
@@ -956,7 +956,7 @@ msgstr "売上合計"
 msgid ""
 "Check this if you want to group the Journal Items by Product while closing a "
 "Session"
-msgstr ""
+msgstr "セッションのクローズ中に製品単位で仕訳項目をグループ化する場合はチェックします。"
 
 #. module: point_of_sale
 #: report:pos.details:0
@@ -1080,7 +1080,7 @@ msgstr ""
 #. module: point_of_sale
 #: view:product.product:0
 msgid "Set a Custom EAN"
-msgstr ""
+msgstr "カスタムEANを設定"
 
 #. module: point_of_sale
 #. openerp-web
@@ -1341,7 +1341,7 @@ msgstr "請求合計"
 #: model:ir.model,name:point_of_sale.model_pos_category
 #: field:product.product,pos_categ_id:0
 msgid "Point of Sale Category"
-msgstr ""
+msgstr "販売時点カテゴリ"
 
 #. module: point_of_sale
 #: view:report.pos.order:0
@@ -1354,7 +1354,7 @@ msgstr "数量の数"
 msgid ""
 "This sequence is automatically created by OpenERP but you can change it to "
 "customize the reference numbers of your orders."
-msgstr ""
+msgstr "このシーケンスはOpenERPが自動で作成しますが、注文の参照番号をカスタマイズするために変更もできます。"
 
 #. module: point_of_sale
 #. openerp-web
@@ -1482,7 +1482,7 @@ msgstr "製品カテゴリ"
 #. module: point_of_sale
 #: help:pos.config,journal_id:0
 msgid "Accounting journal used to post sales entries."
-msgstr ""
+msgstr "売上高の記帳に使われる会計仕訳"
 
 #. module: point_of_sale
 #: field:report.transaction.pos,disc:0
@@ -1540,7 +1540,7 @@ msgstr "不明"
 #. module: point_of_sale
 #: field:product.product,income_pdt:0
 msgid "Point of Sale Cash In"
-msgstr ""
+msgstr "販売時点の現金入"
 
 #. module: point_of_sale
 #. openerp-web
@@ -1594,7 +1594,7 @@ msgstr ""
 #. module: point_of_sale
 #: field:product.product,available_in_pos:0
 msgid "Available in the Point of Sale"
-msgstr ""
+msgstr "販売時点で利用可能"
 
 #. module: point_of_sale
 #: selection:pos.config,state:0
@@ -1649,7 +1649,7 @@ msgstr ""
 #. module: point_of_sale
 #: field:product.product,expense_pdt:0
 msgid "Point of Sale Cash Out"
-msgstr ""
+msgstr "販売時点の現金出"
 
 #. module: point_of_sale
 #: selection:report.pos.order,month:0
@@ -1754,7 +1754,7 @@ msgstr "Timmermans Kriek 375ml"
 #. module: point_of_sale
 #: field:pos.config,sequence_id:0
 msgid "Order IDs Sequence"
-msgstr ""
+msgstr "注文IDシーケンス"
 
 #. module: point_of_sale
 #: report:pos.invoice:0
@@ -1939,7 +1939,7 @@ msgstr ""
 msgid ""
 "Check if, this is a product you can use to put cash into a statement for the "
 "point of sale backend."
-msgstr ""
+msgstr "チェックした場合、この製品は販売時点バックエンドの計算書に現金を引き当てるために使用できます。"
 
 #. module: point_of_sale
 #: model:product.template,name:point_of_sale.ijsboerke_moka_2,5l_product_template
@@ -2473,7 +2473,7 @@ msgstr "日付順"
 msgid ""
 "Check if the product should be weighted (mainly used with self check-out "
 "interface)."
-msgstr ""
+msgstr "製品の重量を測定する場合にチェックします(主にセルフチェックアウト・インターフェースで使用)。"
 
 #. module: point_of_sale
 #: model:ir.actions.act_window,name:point_of_sale.action_new_bank_statement_tree
@@ -2568,7 +2568,7 @@ msgstr "ビール"
 #. module: point_of_sale
 #: help:pos.config,name:0
 msgid "An internal identification of the point of sale"
-msgstr ""
+msgstr "販売時点の内部識別"
 
 #. module: point_of_sale
 #: view:pos.config:0
@@ -2766,7 +2766,7 @@ msgstr ""
 #: code:addons/point_of_sale/static/src/xml/pos.xml:460
 #, python-format
 msgid "Custom Ean13"
-msgstr ""
+msgstr "カスタムEAN13"
 
 #. module: point_of_sale
 #. openerp-web
@@ -3217,7 +3217,7 @@ msgstr "終了日"
 msgid ""
 "The Point of Sale Category this products belongs to. Those categories are "
 "used to group similar products and are specific to the Point of Sale."
-msgstr ""
+msgstr "販売時点カテゴリは、この製品に属します。これらのカテゴリは類似する製品のグループに使用され、販売時点に固有のものです。"
 
 #. module: point_of_sale
 #: model:product.template,name:point_of_sale.orangina_1,5l_product_template
@@ -3389,7 +3389,7 @@ msgstr "ファンタ ゼロ オレンジ 330ml"
 #. module: point_of_sale
 #: help:product.product,available_in_pos:0
 msgid "Check if you want this product to appear in the Point of Sale"
-msgstr ""
+msgstr "この製品を販売時点で表示する場合はチェックします。"
 
 #. module: point_of_sale
 #: view:report.pos.order:0
