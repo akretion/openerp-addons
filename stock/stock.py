@@ -718,7 +718,6 @@ class stock_picking(osv.osv):
             default = {}
         default = default.copy()
         picking_obj = self.browse(cr, uid, id, context=context)
-        move_obj = self.pool.get('stock.move')
         if ('name' not in default) or (picking_obj.name == '/'):
             seq_obj_name = 'stock.picking.' + picking_obj.type
             default['name'] = self.pool.get('ir.sequence').get(cr, uid, seq_obj_name)
