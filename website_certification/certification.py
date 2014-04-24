@@ -1,8 +1,8 @@
-# -*- coding: utf-8 -*-
+# -*- encoding: utf-8 -*-
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2013-Today OpenERP SA (<http://www.openerp.com>).
+#    Copyright (C) 2004-TODAY OpenERP S.A. <http://www.openerp.com>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,16 +19,25 @@
 #
 ##############################################################################
 
-from openerp.addons.web import http
-from openerp.addons.web.http import request
 
-class website_project(http.Controller):
+from openerp.osv import osv, fields
 
-    @http.route(['/project/<model("project.project"):project>'], type='http', auth="public", website=True, multilang=True)
-    def project(self, project=None, **post):
-        cr, uid, context = request.cr, request.uid, request.context
-        render_values = {
-            'project': project,
-            'main_object': project,
-        }
-        return request.website.render("website_project.index", render_values)
+
+class certification_type(osv.Model):
+    _name = 'certification.type'
+    _order = 'name ASC'
+    _columns = {
+        'name': fields.char("Certification Type", required=True)
+    }
+
+
+class certification_certification(osv.Model):
+    _name = 'certification.certification'
+    _order =  'certification_date DESC'
+    _columns = {
+        'partner_id': fields.many2one('res.partner', string="Partner", required=True),
+        'type_id': fields.many2one('certification.type', string="Certification", required=True),
+        'certification_date': fields.date("Certification Date", required=True),
+        'certification_score': fields.char("Certification Score", required=True),
+        'certification_hidden_score': fields.boolean("Hide score on website?")
+    }
