@@ -105,6 +105,7 @@ def md5crypt( raw_pw, salt, magic=magic_md5 ):
 
     return magic + salt + '$' + rearranged
 
+
 def sh256crypt(cls, password, salt, magic=magic_sha256):
     iterations = 1000
     # see http://en.wikipedia.org/wiki/PBKDF2
@@ -114,16 +115,41 @@ def sh256crypt(cls, password, salt, magic=magic_sha256):
     result = result.encode('base64') # doesnt seem to be crypt(3) compatible
     return '%s%s$%s' % (magic_sha256, salt, result)
 
+
 class res_users(osv.osv):
     _inherit = "res.users"
 
+    def init(self, cr):
+        """Encrypt all passwords at module installation"""
+        cr.execute("SELECT id, password FROM res_users WHERE password != ''",)
+        to_encrypt = cr.fetchall()
+        if to_encrypt:
+            for user in to_encrypt:
+                self._set_encrypted_password(cr, user[0], user[1])
+        return True
+
+    def _set_encrypted_password(self, cr, user_id, plain_password):
+        """Set an encrypted password for a given user
+
+        :param cr: database cursor
+        :param user_id: user_id
+        :param plain_password: plain password to encrypt
+
+        :returns: user id
+
+        """
+        salt = gen_salt()
+        stored_password_crypt = md5crypt(plain_password, salt)
+        cr.execute("UPDATE res_users SET password='', password_crypt=%s WHERE id=%s",
+                   (stored_password_crypt, user_id))
+        return user_id
+
     def set_pw(self, cr, uid, id, name, value, args, context):
         if value:
-            encrypted = md5crypt(value, gen_salt())
-            cr.execute("update res_users set password='', password_crypt=%s where id=%s", (encrypted, id))
+            self._set_encrypted_password(cr, id, value)
         del value
 
-    def get_pw( self, cr, uid, ids, name, args, context ):
+    def get_pw(self, cr, uid, ids, name, args, context):
         cr.execute('select id, password from res_users where id in %s', (tuple(map(int, ids)),))
         stored_pws = cr.fetchall()
         res = {}
@@ -144,9 +170,7 @@ class res_users(osv.osv):
         if cr.rowcount:
             stored_password, stored_password_crypt = cr.fetchone()
             if stored_password and not stored_password_crypt:
-                salt = gen_salt()
-                stored_password_crypt = md5crypt(stored_password, salt)
-                cr.execute("UPDATE res_users SET password='', password_crypt=%s WHERE id=%s", (stored_password_crypt, uid))
+                self._set_encrypted_password(cr, uid, stored_password)
         try:
             return super(res_users, self).check_credentials(cr, uid, password)
         except openerp.exceptions.AccessDenied:
