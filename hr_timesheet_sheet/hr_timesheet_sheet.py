@@ -20,15 +20,12 @@
 ##############################################################################
 
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
-from pytz import timezone
-import pytz
 
 from openerp.osv import fields, osv
 from openerp.tools.translate import _
 from openerp import netsvc
-from openerp.tools import DEFAULT_SERVER_DATE_FORMAT, DEFAULT_SERVER_DATETIME_FORMAT
 
 class hr_timesheet_sheet(osv.osv):
     _name = "hr_timesheet_sheet.sheet"
@@ -418,20 +415,9 @@ class hr_attendance(osv.osv):
         sheet_obj = self.pool.get('hr_timesheet_sheet.sheet')
         res = {}.fromkeys(ids, False)
         for attendance in self.browse(cursor, user, ids, context=context):
-
-            # Simulate timesheet in employee timezone
-            att_tz = timezone(attendance.employee_id.user_id.partner_id.tz or 'utc')
-
-            attendance_dt = datetime.strptime(attendance.name, DEFAULT_SERVER_DATETIME_FORMAT)
-            att_tz_dt = pytz.utc.localize(attendance_dt)
-            att_tz_dt = att_tz_dt.astimezone(att_tz)
-            # We take only the date omiting the hours as we compare with timesheet
-            # date_from which is a date format thus using hours would lead to
-            # be out of scope of timesheet
-            att_tz_date_str = datetime.strftime(att_tz_dt, DEFAULT_SERVER_DATE_FORMAT)
+            date_to = datetime.strftime(datetime.strptime(attendance.name[0:10], '%Y-%m-%d'), '%Y-%m-%d %H:%M:%S')
             sheet_ids = sheet_obj.search(cursor, user,
-                [('date_from', '<=', att_tz_date_str),
-                 ('date_to', '>=', att_tz_date_str),
+                [('date_to', '>=', date_to), ('date_from', '<=', attendance.name),
                  ('employee_id', '=', attendance.employee_id.id)],
                 context=context)
             if sheet_ids:
