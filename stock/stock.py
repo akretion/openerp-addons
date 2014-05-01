@@ -26,6 +26,7 @@ from operator import itemgetter
 from itertools import groupby
 
 from osv import fields, osv
+from osv.orm import except_orm
 from tools.translate import _
 import netsvc
 import tools
@@ -1651,7 +1652,14 @@ class stock_move(osv.osv):
             elif picking_type == 'out':
                 location_xml_id = 'stock_location_customers'
             if location_xml_id:
-                location_model, location_id = mod_obj.get_object_reference(cr, uid, 'stock', location_xml_id)
+                try:
+                    location = mod_obj.get_object(cr, uid, 'stock', location_xml_id)
+                    # can I read?
+                    __ = location.name
+                    location_id = location.id
+                except (except_orm, ValueError):
+                    # likely the user does not have read access on the location
+                    location_id = False
         return location_id
 
     def _default_location_source(self, cr, uid, context=None):
@@ -1680,7 +1688,15 @@ class stock_move(osv.osv):
             elif picking_type == 'out':
                 location_xml_id = 'stock_location_stock'
             if location_xml_id:
-                location_model, location_id = mod_obj.get_object_reference(cr, uid, 'stock', location_xml_id)
+                try:
+                    location = mod_obj.get_object(cr, uid, 'stock', location_xml_id)
+                    # can I read?
+                    __ = location.name
+                    location_id = location.id
+                except (except_orm, ValueError):
+                    # likely the user does not have read access on the location
+                    location_id = False
+
         return location_id
 
     _defaults = {
