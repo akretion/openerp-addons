@@ -85,7 +85,7 @@ class project_work(osv.osv):
         if not context.get('no_analytic_entry',False):
             obj_task = task_obj.browse(cr, uid, vals['task_id'])
             result = self.get_user_related_details(cr, uid, vals.get('user_id', uid))
-            vals_line['name'] = '%s: %s' % (tools.ustr(obj_task.name), tools.ustr(vals['name']) or '/')
+            vals_line['name'] = '%s: %s' % (tools.ustr(obj_task.name), tools.ustr(vals['name'] or '/'))
             vals_line['user_id'] = vals['user_id']
             vals_line['product_id'] = result['product_id']
             vals_line['date'] = vals['date'][:10]
@@ -139,7 +139,7 @@ class project_work(osv.osv):
                 continue
             vals_line = {}
             if 'name' in vals:
-                vals_line['name'] = '%s: %s' % (tools.ustr(task.task_id.name), tools.ustr(vals['name']) or '/')
+                vals_line['name'] = '%s: %s' % (tools.ustr(task.task_id.name), tools.ustr(vals['name'] or '/'))
             if 'user_id' in vals:
                 vals_line['user_id'] = vals['user_id']
                         
@@ -219,7 +219,7 @@ class task(osv.osv):
                         if vals.get('project_id',False):
                             vals_line['account_id'] = acc_id
                         if vals.get('name',False):
-                            vals_line['name'] = '%s: %s' % (tools.ustr(vals['name']), tools.ustr(task_work.name) or '/')
+                            vals_line['name'] = '%s: %s' % (tools.ustr(vals['name']), tools.ustr(task_work.name or '/'))
                         hr_anlytic_timesheet.write(cr, uid, [line_id], vals_line, {})
         return super(task,self).write(cr, uid, ids, vals, context)
 
