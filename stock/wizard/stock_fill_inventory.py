@@ -28,6 +28,9 @@ class stock_fill_inventory(osv.osv_memory):
     _name = "stock.fill.inventory"
     _description = "Import Inventory"
 
+    # Maximum size of a batch of lines we can import without risking OOM
+    MAX_IMPORT_LINES = 10000
+
     def _default_location(self, cr, uid, ids, context=None):
         try:
             location = self.pool.get('ir.model.data').get_object(cr, uid, 'stock', 'stock_location_stock')
@@ -107,9 +110,10 @@ class stock_fill_inventory(osv.osv_memory):
             all_move_ids = move_obj.search(cr, uid, ['|',('location_dest_id','=',location),('location_id','=',location),('state','=','done')], context=context)
             local_context = dict(context)
             local_context['raise-exception'] = False
-            # due to memory high usage, i made smaller lists of 10 000 elements
-            for i in range(int(math.ceil(len(all_move_ids) / 10000.0))):
-                move_ids = all_move_ids[i * 10000: (i + 1) * 10000]
+            # To avoid running out of memory, process limited batches
+            for i in range(0, len(all_move_ids), self.MAX_IMPORT_LINES):
+                move_ids = all_move_ids[i * self.MAX_IMPORT_LINES:
+                                        (i + 1) * self.MAX_IMPORT_LINES]
                 for move in move_obj.browse(cr, uid, move_ids, context=context):
                     lot_id = move.prodlot_id.id
                     prod_id = move.product_id.id
