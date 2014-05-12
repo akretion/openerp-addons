@@ -22,7 +22,6 @@
 from openerp.osv import fields, osv, orm
 from openerp.tools.translate import _
 from openerp.tools import mute_logger
-import math
 
 class stock_fill_inventory(osv.osv_memory):
     _name = "stock.fill.inventory"
