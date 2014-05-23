@@ -14,8 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-22 07:19+0000\n"
-"X-Generator: Launchpad (build 16985)\n"
+"X-Launchpad-Export-Date: 2014-05-23 07:29+0000\n"
+"X-Generator: Launchpad (build 17017)\n"
 
 #. module: mrp_byproduct
 #: help:mrp.subproduct,subproduct_type:0
@@ -54,7 +54,7 @@ msgstr "Fertigungsauftrag"
 #. module: mrp_byproduct
 #: model:ir.model,name:mrp_byproduct.model_change_production_qty
 msgid "Change Quantity of Products"
-msgstr "Ändere Menge bei Produkten"
+msgstr "Ändere Menge der Produkte"
 
 #. module: mrp_byproduct
 #: view:mrp.bom:0

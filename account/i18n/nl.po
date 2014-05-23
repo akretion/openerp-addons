@@ -13,8 +13,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-22 06:33+0000\n"
-"X-Generator: Launchpad (build 16985)\n"
+"X-Launchpad-Export-Date: 2014-05-23 06:49+0000\n"
+"X-Generator: Launchpad (build 17017)\n"
 
 #, python-format
 #~ msgid "Integrity Error !"
@@ -5108,7 +5108,7 @@ msgstr ""
 #: code:addons/account/report/common_report_header.py:68
 #, python-format
 msgid "All Posted Entries"
-msgstr "Alle geboekte boekingen"
+msgstr "Alleen definitieve boekingen"
 
 #. module: account
 #: field:report.aged.receivable,name:0

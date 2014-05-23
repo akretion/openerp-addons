@@ -14,8 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-22 07:42+0000\n"
-"X-Generator: Launchpad (build 16985)\n"
+"X-Launchpad-Export-Date: 2014-05-23 07:49+0000\n"
+"X-Generator: Launchpad (build 17017)\n"
 
 #. module: mail
 #: view:mail.followers:0
@@ -787,9 +787,7 @@ msgstr "Bericht subtypen"
 #: help:mail.message,notified_partner_ids:0
 msgid ""
 "Partners that have a notification pushing this message in their mailboxes"
-msgstr ""
-"Relaties die een notificatie hebben, die dit bericht doorgestuurd hebben "
-"naar hun e-mailbox"
+msgstr "Relaties welke berichten ontvangen via de e-mail."
 
 #. module: mail
 #: selection:mail.compose.message,type:0
