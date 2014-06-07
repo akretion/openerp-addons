@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-12-21 17:04+0000\n"
-"PO-Revision-Date: 2012-05-10 17:23+0000\n"
-"Last-Translator: 开阖软件     Jeff Wang <jeff@osbzr.com>\n"
+"PO-Revision-Date: 2014-06-07 04:46+0000\n"
+"Last-Translator: MofeLee <Mofe@me.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-23 07:19+0000\n"
-"X-Generator: Launchpad (build 17017)\n"
+"X-Launchpad-Export-Date: 2014-06-07 05:40+0000\n"
+"X-Generator: Launchpad (build 17031)\n"
 
 #. module: hr_expense
 #: view:hr.expense.expense:0
@@ -35,7 +35,7 @@ msgstr "财务报销这费用"
 #. module: hr_expense
 #: model:mail.message.subtype,description:hr_expense.mt_expense_approved
 msgid "Expense approved"
-msgstr ""
+msgstr "支付已批准"
 
 #. module: hr_expense
 #: field:hr.expense.expense,date_confirm:0
@@ -76,7 +76,7 @@ msgstr "新建报销单"
 #: field:hr.expense.line,uom_id:0
 #: view:product.product:0
 msgid "Unit of Measure"
-msgstr ""
+msgstr "计量单位"
 
 #. module: hr_expense
 #: selection:hr.expense.report,month:0
@@ -86,7 +86,7 @@ msgstr "3月"
 #. module: hr_expense
 #: field:hr.expense.expense,message_unread:0
 msgid "Unread Messages"
-msgstr ""
+msgstr "未读消息"
 
 #. module: hr_expense
 #: field:hr.expense.expense,company_id:0
@@ -144,7 +144,7 @@ msgstr "备注"
 #. module: hr_expense
 #: field:hr.expense.expense,message_ids:0
 msgid "Messages"
-msgstr ""
+msgstr "消息"
 
 #. module: hr_expense
 #: code:addons/hr_expense/hr_expense.py:172
@@ -154,12 +154,12 @@ msgstr ""
 #: code:addons/hr_expense/hr_expense.py:353
 #, python-format
 msgid "Error!"
-msgstr ""
+msgstr "错误！"
 
 #. module: hr_expense
 #: model:mail.message.subtype,description:hr_expense.mt_expense_refused
 msgid "Expense refused"
-msgstr ""
+msgstr "支付被拒绝"
 
 #. module: hr_expense
 #: model:ir.actions.act_window,name:hr_expense.hr_expense_product
@@ -185,7 +185,7 @@ msgstr "管理者直接拒绝这表重新设为草稿"
 #. module: hr_expense
 #: help:hr.expense.expense,message_unread:0
 msgid "If checked new messages require your attention."
-msgstr ""
+msgstr "如果要求你关注新消息，勾选此项"
 
 #. module: hr_expense
 #: selection:hr.expense.report,state:0

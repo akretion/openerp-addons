@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-12-21 17:05+0000\n"
-"PO-Revision-Date: 2012-11-30 11:49+0000\n"
-"Last-Translator: 盈通 ccdos <ccdos@intoerp.com>\n"
+"PO-Revision-Date: 2014-06-07 04:48+0000\n"
+"Last-Translator: Wei \"oldrev\" Li <oldrev@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-23 07:52+0000\n"
-"X-Generator: Launchpad (build 17017)\n"
+"X-Launchpad-Export-Date: 2014-06-07 05:40+0000\n"
+"X-Generator: Launchpad (build 17031)\n"
 
 #. module: portal
 #: view:portal.payment.acquirer:0
@@ -37,16 +37,19 @@ msgid ""
 "                        If necessary, you can fix any contact's email "
 "address directly in the list."
 msgstr ""
+"请从下面的列表选择需要显示在门户页面的联系人。\n"
+"    请确认每个联系人的email地址是有效且唯一的。\n"
+"    如果需要，可以直接在列表中修改联系人的email地址。"
 
 #. module: portal
 #: model:mail.group,name:portal.company_jobs
 msgid "Company Jobs"
-msgstr ""
+msgstr "公司招聘职位"
 
 #. module: portal
 #: view:portal.payment.acquirer:0
 msgid "amount: the total amount to pay, as a float"
-msgstr ""
+msgstr "总额：这是所有付款的总和，是一个实数类型"
 
 #. module: portal
 #: view:portal.wizard.user:0
@@ -88,12 +91,12 @@ msgstr "详情"
 #. module: portal
 #: model:ir.ui.menu,name:portal.portal_orders
 msgid "Quotations and Sales Orders"
-msgstr ""
+msgstr "报价单和销售订单"
 
 #. module: portal
 #: view:portal.payment.acquirer:0
 msgid "reference: the reference number of the document to pay"
-msgstr ""
+msgstr "参考编号：即需要付款的单据的参考编号"
 
 #. module: portal
 #: help:portal.payment.acquirer,visible:0
@@ -120,6 +123,10 @@ msgid ""
 "                </p>\n"
 "            "
 msgstr ""
+"<p>\n"
+"                你没有未读的公司新闻。\n"
+"            </p>\n"
+"            "
 
 #. module: portal
 #: code:addons/portal/wizard/portal_wizard.py:194
@@ -149,7 +156,7 @@ msgstr "安全在线支付"
 #: code:addons/portal/acquirer.py:77
 #, python-format
 msgid "No online payment acquirers configured"
-msgstr ""
+msgstr "未配置在线交易的账号信息"
 
 #. module: portal
 #: view:portal.payment.acquirer:0
@@ -161,7 +168,7 @@ msgstr ""
 #. module: portal
 #: help:portal.wizard,portal_id:0
 msgid "The portal that users can be added in or removed from."
-msgstr ""
+msgstr "用户能够添加或删除的门户"
 
 #. module: portal
 #: code:addons/portal/wizard/share_wizard.py:38
@@ -177,6 +184,10 @@ msgid ""
 "                </p>\n"
 "            "
 msgstr ""
+"<p>\n"
+"                        你已经看过所有的空缺职位。\n"
+"               </p>\n"
+"            "
 
 #. module: portal
 #: view:portal.payment.acquirer:0
@@ -184,6 +195,8 @@ msgid ""
 ", so it may use Mako expressions.\n"
 "                                The Mako evaluation context provides:"
 msgstr ""
+"，该处使用 Mako 模版表达式，\n"
+"　　　　Mako 模版的求值上下文提供："
 
 #. module: portal
 #: model:ir.ui.menu,name:portal.portal_menu
@@ -202,7 +215,7 @@ msgstr "你在 %(company)s 的OpenERP帐号"
 #. module: portal
 #: model:res.groups,name:portal.group_anonymous
 msgid "Anonymous"
-msgstr ""
+msgstr "匿名"
 
 #. module: portal
 #: field:portal.wizard.user,in_portal:0
@@ -232,7 +245,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:portal.action_acquirer_list
 #: view:portal.payment.acquirer:0
 msgid "Payment Acquirers"
-msgstr ""
+msgstr "收单银行"
 
 #. module: portal
 #: model:ir.ui.menu,name:portal.portal_projects
@@ -243,7 +256,7 @@ msgstr "项目"
 #: model:ir.actions.client,name:portal.action_mail_inbox_feeds_portal
 #: model:ir.ui.menu,name:portal.portal_inbox
 msgid "Inbox"
-msgstr ""
+msgstr "收件箱"
 
 #. module: portal
 #: view:share.wizard:0
@@ -281,12 +294,12 @@ msgstr ""
 #. module: portal
 #: help:res.groups,is_portal:0
 msgid "If checked, this group is usable as a portal."
-msgstr ""
+msgstr "如果选中，该用户组可以在门户页面中使用。"
 
 #. module: portal
 #: field:portal.payment.acquirer,form_template:0
 msgid "Payment form template (HTML)"
-msgstr ""
+msgstr "付款单据模板（HTML）"
 
 #. module: portal
 #: field:portal.wizard.user,partner_id:0
@@ -307,7 +320,7 @@ msgstr "必须输入邮件地址"
 #. module: portal
 #: model:ir.ui.menu,name:portal.portal_messages
 msgid "Messaging"
-msgstr ""
+msgstr "信息"
 
 #. module: portal
 #: model:res.groups,comment:portal.group_anonymous
@@ -325,7 +338,7 @@ msgstr ""
 #. module: portal
 #: model:mail.group,name:portal.company_news_feed
 msgid "Company News"
-msgstr ""
+msgstr "公司新闻"
 
 #. module: portal
 #: code:addons/portal/acquirer.py:76
@@ -353,6 +366,13 @@ msgid ""
 "                </p>\n"
 "            "
 msgstr ""
+"<p>\n"
+"                                 <b>做得不错！</b>你的收件箱是空的.\n"
+"                          </p><p>\n"
+"                                    你的收件箱包含了你的私人消息或者发给你的邮件 ，\n"
+"                                    包括你关注的文档或者个人的信息。\n"
+"                          </p>\n"
+"            "
 
 #. module: portal
 #: view:portal.payment.acquirer:0
@@ -364,19 +384,19 @@ msgstr ""
 #. module: portal
 #: help:portal.wizard,welcome_message:0
 msgid "This text is included in the email sent to new users of the portal."
-msgstr ""
+msgstr "这段文字会被包含在发给门户网站的新用户的email中。"
 
 #. module: portal
 #: model:ir.ui.menu,name:portal.portal_company
 msgid "About Us"
-msgstr ""
+msgstr "关于我们"
 
 #. module: portal
 #: view:portal.payment.acquirer:0
 msgid ""
 "currency: the currency record in which the document is issued (e.g. "
 "currency.name could be EUR)"
-msgstr ""
+msgstr "货币：在发出的单据中使用的货币记录。（例如，currency.name 可以是 EUR）"
 
 #. module: portal
 #: view:portal.payment.acquirer:0

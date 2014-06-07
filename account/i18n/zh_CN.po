@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-12-21 17:04+0000\n"
-"PO-Revision-Date: 2014-03-06 02:20+0000\n"
-"Last-Translator: Baich-info <baich.info@gmail.com>\n"
+"PO-Revision-Date: 2014-06-07 04:40+0000\n"
+"Last-Translator: Wei \"oldrev\" Li <oldrev@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-23 07:02+0000\n"
-"X-Generator: Launchpad (build 17017)\n"
+"X-Launchpad-Export-Date: 2014-06-07 05:40+0000\n"
+"X-Generator: Launchpad (build 17031)\n"
 
 #. module: account
 #: model:process.transition,name:account.process_transition_supplierreconcilepaid0
@@ -1243,6 +1243,14 @@ msgid ""
 "              </p>\n"
 "            "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                点击创建新的现金记录.\n"
+"              </p><p>\n"
+"                Cash Register可以使你在你的现金日记账中管理你的现金项目。\n"
+"                这个特性提供了，按每天的方式来跟踪现金付款的方式。\n"
+"                你可以查看在你钱箱中的每一分钱，并且在资金进出时创建记录。\n"
+"              </p>\n"
+"            "
 
 #. module: account
 #: model:account.account.type,name:account.data_account_type_bank
@@ -1301,7 +1309,7 @@ msgstr "税编码模板"
 msgid ""
 "The amount expressed in the secondary currency must be positif when journal "
 "item are debit and negatif when journal item are credit."
-msgstr ""
+msgstr "第二货币名义记录的总额，科目总额正数记到借方，科目总额负数记到贷方"
 
 #. module: account
 #: view:account.invoice.cancel:0
@@ -4950,7 +4958,7 @@ msgstr "它将充当默认帐户的信贷数额"
 #. module: account
 #: view:cash.box.out:0
 msgid "Describe why you take money from the cash register:"
-msgstr ""
+msgstr "描述从钱箱移出现金的原因："
 
 #. module: account
 #: selection:account.invoice,state:0
@@ -4967,7 +4975,7 @@ msgstr ""
 #. module: account
 #: view:account.journal:0
 msgid "Unit Of Currency Definition"
-msgstr ""
+msgstr "货币单位定义"
 
 #. module: account
 #: help:account.partner.ledger,amount_currency:0
