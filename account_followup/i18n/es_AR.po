@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 5.0.0\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-12-21 17:05+0000\n"
-"PO-Revision-Date: 2009-09-15 15:33+0000\n"
-"Last-Translator: Silvana Herrera <sherrera@thymbra.com>\n"
+"PO-Revision-Date: 2014-06-13 13:46+0000\n"
+"Last-Translator: Juan José Scarafía (ADHOC) <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-23 06:45+0000\n"
-"X-Generator: Launchpad (build 17017)\n"
+"X-Launchpad-Export-Date: 2014-06-14 05:41+0000\n"
+"X-Generator: Launchpad (build 17045)\n"
 
 #. module: account_followup
 #: model:email.template,subject:account_followup.email_template_account_followup_default
@@ -22,18 +22,18 @@ msgstr ""
 #: model:email.template,subject:account_followup.email_template_account_followup_level1
 #: model:email.template,subject:account_followup.email_template_account_followup_level2
 msgid "${user.company_id.name} Payment Reminder"
-msgstr ""
+msgstr "${user.company_id.name} Recordatorio de Pago"
 
 #. module: account_followup
 #: help:res.partner,latest_followup_level_id:0
 msgid "The maximum follow-up level"
-msgstr ""
+msgstr "Nivel máximo de seguimiento"
 
 #. module: account_followup
 #: view:account_followup.stat:0
 #: view:res.partner:0
 msgid "Group By..."
-msgstr ""
+msgstr "Agrupar Por..."
 
 #. module: account_followup
 #: field:account_followup.print,followup_id:0
@@ -43,33 +43,33 @@ msgstr "Seguimiento"
 #. module: account_followup
 #: view:account_followup.followup.line:0
 msgid "%(date)s"
-msgstr ""
+msgstr "%(date)s"
 
 #. module: account_followup
 #: field:res.partner,payment_next_action_date:0
 msgid "Next Action Date"
-msgstr ""
+msgstr "Fecha  de la Próxima Acción"
 
 #. module: account_followup
 #: view:account_followup.followup.line:0
 #: field:account_followup.followup.line,manual_action:0
 msgid "Manual Action"
-msgstr ""
+msgstr "Acción Manual"
 
 #. module: account_followup
 #: field:account_followup.sending.results,needprinting:0
 msgid "Needs Printing"
-msgstr ""
+msgstr "Requiere Impresión"
 
 #. module: account_followup
 #: view:res.partner:0
 msgid "⇾ Mark as Done"
-msgstr ""
+msgstr "⇾ Marcar como Hecho"
 
 #. module: account_followup
 #: field:account_followup.followup.line,manual_action_note:0
 msgid "Action To Do"
-msgstr ""
+msgstr "Acción a Realizar"
 
 #. module: account_followup
 #: field:account_followup.followup,company_id:0
@@ -94,7 +94,7 @@ msgstr "Asunto del correo electrónico"
 #. module: account_followup
 #: view:account_followup.followup.line:0
 msgid "%(user_signature)s"
-msgstr ""
+msgstr "%(user_signature)s"
 
 #. module: account_followup
 #: view:account_followup.followup.line:0
