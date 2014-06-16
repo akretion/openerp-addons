@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-12-21 17:04+0000\n"
-"PO-Revision-Date: 2012-12-19 19:03+0000\n"
+"PO-Revision-Date: 2014-06-15 09:49+0000\n"
 "Last-Translator: Grzegorz Grzelak (OpenGLOBE.pl) <grzegorz@openglobe.pl>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-23 06:37+0000\n"
-"X-Generator: Launchpad (build 17017)\n"
+"X-Launchpad-Export-Date: 2014-06-16 05:37+0000\n"
+"X-Generator: Launchpad (build 17045)\n"
 
 #. module: point_of_sale
 #: field:report.transaction.pos,product_nb:0
@@ -128,7 +128,7 @@ msgstr "Nazwa produktu"
 #. module: point_of_sale
 #: model:product.template,name:point_of_sale.pamplemousse_rouge_pamplemousse_product_template
 msgid "Red grapefruit"
-msgstr ""
+msgstr "Czerwony grejpfrut"
 
 #. module: point_of_sale
 #: code:addons/point_of_sale/point_of_sale.py:1373
@@ -200,26 +200,26 @@ msgstr "Data rozpoczęcia"
 #. module: point_of_sale
 #: constraint:pos.session:0
 msgid "You cannot create two active sessions with the same responsible!"
-msgstr ""
+msgstr "Nie możesz mieć dwóch aktywnych sesji dla tego samego Sprzedawcy!"
 
 #. module: point_of_sale
 #. openerp-web
 #: code:addons/point_of_sale/static/src/xml/pos.xml:473
 #, python-format
 msgid "Weighting"
-msgstr ""
+msgstr "Ważenie"
 
 #. module: point_of_sale
 #: model:product.template,name:point_of_sale.fenouil_fenouil_product_template
 msgid "Fennel"
-msgstr ""
+msgstr "Koper"
 
 #. module: point_of_sale
 #. openerp-web
 #: code:addons/point_of_sale/static/src/xml/pos.xml:472
 #, python-format
 msgid "Help needed"
-msgstr ""
+msgstr "Potrzebna pomoc"
 
 #. module: point_of_sale
 #: code:addons/point_of_sale/point_of_sale.py:760
@@ -237,7 +237,7 @@ msgstr "Partner"
 #. module: point_of_sale
 #: view:pos.session:0
 msgid "Closing Cash Control"
-msgstr ""
+msgstr "Zamykanie kasy"
 
 #. module: point_of_sale
 #: report:pos.details:0
@@ -259,7 +259,7 @@ msgstr "Informacje księgowe"
 #. module: point_of_sale
 #: field:pos.session.opening,show_config:0
 msgid "Show Config"
-msgstr ""
+msgstr "Pokaż konfigurację"
 
 #. module: point_of_sale
 #: report:pos.lines:0
@@ -353,7 +353,7 @@ msgstr "Napoje"
 #: model:ir.actions.act_window,name:point_of_sale.action_pos_session_opening
 #: model:ir.ui.menu,name:point_of_sale.menu_pos_session_opening
 msgid "Your Session"
-msgstr ""
+msgstr "Twoja sesja"
 
 #. module: point_of_sale
 #: model:product.template,name:point_of_sale.stella_50cl_product_template
@@ -409,7 +409,7 @@ msgstr "Wyliczona płatność"
 #. module: point_of_sale
 #: field:product.product,to_weight:0
 msgid "To Weight"
-msgstr ""
+msgstr "Do zważenia"
 
 #. module: point_of_sale
 #. openerp-web
@@ -422,7 +422,7 @@ msgstr ""
 #: code:addons/point_of_sale/point_of_sale.py:301
 #, python-format
 msgid "You should assign a Point of Sale to your session."
-msgstr ""
+msgstr "Powinieneś powiązać Punkt Sprzedaży z sesją"
 
 #. module: point_of_sale
 #: view:pos.order.line:0
@@ -454,7 +454,7 @@ msgstr "błąd!"
 #. module: point_of_sale
 #: model:ir.actions.act_window,name:point_of_sale.action_report_sales_by_user_pos_month
 msgid "Sales by User Monthly"
-msgstr ""
+msgstr "Sprzedaż wg Użytkowników miesięcznie"
 
 #. module: point_of_sale
 #: help:pos.session,cash_register_difference:0
@@ -466,7 +466,7 @@ msgstr ""
 #. module: point_of_sale
 #: view:pos.session.opening:0
 msgid ") is \""
-msgstr ""
+msgstr ") jest \""
 
 #. module: point_of_sale
 #: model:product.template,name:point_of_sale.Onions_product_template
