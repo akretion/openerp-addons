@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
-    <data>
+    <data noupdate="1">
 
         <record id="action_view_holiday_status_manager_board" model="ir.actions.act_window">
             <field name="name">Leaves To Validate</field>

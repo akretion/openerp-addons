@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
-    <data>
+    <data noupdate="1">
             <record id="view_scrum_sprint_dashboard_tree" model="ir.ui.view">
             <field name="name">project.scrum.sprint.dashboard.tree</field>
             <field name="model">project.scrum.sprint</field>

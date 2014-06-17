@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <openerp>
-     <data>
+     <data noupdate="1">
           <record model="ir.ui.view" id="view_crm_opportunity_user_graph1">
                <field name="name">crm.opportunity.user.graph1</field>
                <field name="model">crm.lead.report</field>
