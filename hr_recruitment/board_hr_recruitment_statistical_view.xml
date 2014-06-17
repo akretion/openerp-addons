@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <openerp>
-    <data>
+    <data noupdate="1">
 
     <record id="view_applicants_status_tree" model="ir.ui.view">
         <field name="name">applicants.status.tree</field>
