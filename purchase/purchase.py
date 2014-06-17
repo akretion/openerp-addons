@@ -90,10 +90,10 @@ class purchase_order(osv.osv):
         for purchase in self.browse(cursor, user, ids, context=context):
             tot = 0.0
             for invoice in purchase.invoice_ids:
-                if invoice.state not in ('draft','cancel'):
+                if invoice.state not in ('draft','cancel') and invoice.type == 'in_invoice':
                     tot += invoice.amount_untaxed
             if purchase.amount_untaxed:
-                res[purchase.id] = tot * 100.0 / purchase.amount_untaxed
+                res[purchase.id] = min(100.0, tot * 100.0 / purchase.amount_untaxed)
             else:
                 res[purchase.id] = 0.0
         return res
