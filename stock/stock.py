@@ -634,13 +634,11 @@ class stock_picking(osv.osv):
         '''Return the ids of pickings that should change, due to changes
         in stock moves.'''
         move_pool = self.pool['stock.move']
-        picking_ids = []
+        picking_ids = set()
         for move_obj in move_pool.browse(cr, uid, ids, context=context):
             if move_obj.picking_id:
-                picking_id = move_obj.picking_id.id
-                if picking_id not in picking_ids:
-                    picking_ids.append(picking_id)
-        return picking_ids
+                picking_ids.add(move_obj.picking_id.id)
+        return list(picking_ids)
 
     def create(self, cr, user, vals, context=None):
         if ('name' not in vals) or (vals.get('name')=='/'):
