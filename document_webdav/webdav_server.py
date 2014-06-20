@@ -38,7 +38,6 @@ import logging
 import netsvc
 from dav_fs import openerp_dav_handler
 from tools.config import config
-from DAV.WebDAVServer import DAVRequestHandler
 from service import http_server
 from service.websrv_lib import FixSendError, HttpOptions
 from BaseHTTPServer import BaseHTTPRequestHandler
@@ -48,12 +47,19 @@ import re
 import time
 from string import atoi
 import addons
-from DAV.utils import IfParser, TagList
-from DAV.errors import DAV_Error, DAV_Forbidden, DAV_NotFound
-from DAV.propfind import PROPFIND
-# from DAV.constants import DAV_VERSION_1, DAV_VERSION_2
 from xml.dom import minidom
 from redirect import RedirectHTTPHandler
+
+try:
+    from pywebdav.lib.WebDAVServer import DAVRequestHandler
+    from pywebdav.lib.utils import IfParser, TagList
+    from pywebdav.lib.errors import DAV_Error, DAV_Forbidden, DAV_NotFound
+    from pywebdav.lib.propfind import PROPFIND
+except ImportError:
+    from DAV.WebDAVServer import DAVRequestHandler
+    from DAV.utils import IfParser, TagList
+    from DAV.errors import DAV_Error, DAV_Forbidden, DAV_NotFound
+    from DAV.propfind import PROPFIND
 
 khtml_re = re.compile(r' KHTML/([0-9\.]+) ')
 
