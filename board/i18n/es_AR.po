@@ -7,58 +7,58 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 5.0.0\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-12-21 17:05+0000\n"
-"PO-Revision-Date: 2012-06-18 18:46+0000\n"
-"Last-Translator: Eduardo Alberto Calvo <Unknown>\n"
+"PO-Revision-Date: 2014-06-23 15:48+0000\n"
+"Last-Translator: Juan José Scarafía (ADHOC) <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-23 07:21+0000\n"
-"X-Generator: Launchpad (build 17017)\n"
+"X-Launchpad-Export-Date: 2014-06-24 05:50+0000\n"
+"X-Generator: Launchpad (build 17065)\n"
 
 #. module: board
 #: model:ir.actions.act_window,name:board.action_board_create
 #: model:ir.ui.menu,name:board.menu_board_create
 msgid "Create Board"
-msgstr ""
+msgstr "Crear Tablero"
 
 #. module: board
 #: view:board.create:0
 msgid "Create"
-msgstr ""
+msgstr "Crear"
 
 #. module: board
 #. openerp-web
 #: code:addons/board/static/src/xml/board.xml:4
 #, python-format
 msgid "Reset Layout.."
-msgstr ""
+msgstr "Reestablecer Disposición.."
 
 #. module: board
 #: view:board.create:0
 msgid "Create New Dashboard"
-msgstr ""
+msgstr "Crear Nuevo Tablero"
 
 #. module: board
 #. openerp-web
 #: code:addons/board/static/src/xml/board.xml:40
 #, python-format
 msgid "Choose dashboard layout"
-msgstr ""
+msgstr "Elegir Disposición del Tablero"
 
 #. module: board
 #. openerp-web
 #: code:addons/board/static/src/xml/board.xml:70
 #, python-format
 msgid "Add"
-msgstr ""
+msgstr "Agregar"
 
 #. module: board
 #. openerp-web
 #: code:addons/board/static/src/js/dashboard.js:139
 #, python-format
 msgid "Are you sure you want to remove this item ?"
-msgstr ""
+msgstr "¿Está seguro que quiere eliminar este item?"
 
 #. module: board
 #: model:ir.model,name:board.model_board_board
@@ -70,31 +70,31 @@ msgstr "Tabla"
 #: model:ir.actions.act_window,name:board.open_board_my_dash_action
 #: model:ir.ui.menu,name:board.menu_board_my_dash
 msgid "My Dashboard"
-msgstr ""
+msgstr "Mi Tablero"
 
 #. module: board
 #: field:board.create,name:0
 msgid "Board Name"
-msgstr ""
+msgstr "Nombre de Tablero"
 
 #. module: board
 #: model:ir.model,name:board.model_board_create
 msgid "Board Creation"
-msgstr ""
+msgstr "Creación de Tablero"
 
 #. module: board
 #. openerp-web
 #: code:addons/board/static/src/xml/board.xml:67
 #, python-format
 msgid "Add to Dashboard"
-msgstr ""
+msgstr "Añadir al Tablero"
 
 #. module: board
 #. openerp-web
 #: code:addons/board/static/src/xml/board.xml:28
 #, python-format
 msgid "&nbsp;"
-msgstr ""
+msgstr "&nbsp;"
 
 #. module: board
 #: model:ir.actions.act_window,help:board.open_board_my_dash_action
@@ -114,13 +114,29 @@ msgid ""
 "              </div>\n"
 "            "
 msgstr ""
+"<div class=\"oe_empty_custom_dashboard\">\n"
+"                  <p>\n"
+"                    <b>Tu tablero personal está vacío.</b>\n"
+"                  </p><p>\n"
+"                    Para añadir su primer informe al tablero, vaya a "
+"cualquier\n"
+"                    menú, cambie a vista lista o gráfico y pulse <i>'Añadir "
+"al\n"
+"                    Tablero'</i> en las opciones de búsqueda extendidas.\n"
+"                  </p><p>\n"
+"                    Puede filtrar y agrupar datos antes de insertarlos en "
+"el\n"
+"                    tablero usando las opciones de búsqueda.\n"
+"                  </p>\n"
+"              </div>\n"
+"            "
 
 #. module: board
 #. openerp-web
 #: code:addons/board/static/src/xml/board.xml:6
 #, python-format
 msgid "Reset"
-msgstr ""
+msgstr "Restablecer"
 
 #. module: board
 #: field:board.create,menu_parent_id:0
@@ -132,21 +148,21 @@ msgstr "Menú padre"
 #: code:addons/board/static/src/xml/board.xml:8
 #, python-format
 msgid "Change Layout.."
-msgstr ""
+msgstr "Cambiar Disposición.."
 
 #. module: board
 #. openerp-web
 #: code:addons/board/static/src/js/dashboard.js:93
 #, python-format
 msgid "Edit Layout"
-msgstr ""
+msgstr "Editar Disposición"
 
 #. module: board
 #. openerp-web
 #: code:addons/board/static/src/xml/board.xml:10
 #, python-format
 msgid "Change Layout"
-msgstr ""
+msgstr "Cambiar Disposición"
 
 #. module: board
 #: view:board.create:0
@@ -156,14 +172,14 @@ msgstr "Cancelar"
 #. module: board
 #: view:board.create:0
 msgid "or"
-msgstr ""
+msgstr "o"
 
 #. module: board
 #. openerp-web
 #: code:addons/board/static/src/xml/board.xml:69
 #, python-format
 msgid "Title of new dashboard item"
-msgstr ""
+msgstr "Título del nuevo elemento del tablero"
 
 #~ msgid "Dashboard Definition"
 #~ msgstr "Definición del tablero"
