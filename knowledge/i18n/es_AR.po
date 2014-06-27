@@ -8,24 +8,24 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-12-21 17:05+0000\n"
-"PO-Revision-Date: 2012-06-18 18:39+0000\n"
-"Last-Translator: Eduardo Alberto Calvo <Unknown>\n"
+"PO-Revision-Date: 2014-06-26 15:58+0000\n"
+"Last-Translator: Juan José Scarafía (ADHOC) <Unknown>\n"
 "Language-Team: Spanish (Argentina) <es_AR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-23 07:42+0000\n"
-"X-Generator: Launchpad (build 17017)\n"
+"X-Launchpad-Export-Date: 2014-06-27 06:09+0000\n"
+"X-Generator: Launchpad (build 17077)\n"
 
 #. module: knowledge
 #: view:knowledge.config.settings:0
 msgid "Documents"
-msgstr ""
+msgstr "Documentos"
 
 #. module: knowledge
 #: model:ir.model,name:knowledge.model_knowledge_config_settings
 msgid "knowledge.config.settings"
-msgstr ""
+msgstr "knowledge.config.settings"
 
 #. module: knowledge
 #: help:knowledge.config.settings,module_document_webdav:0
@@ -37,7 +37,7 @@ msgstr ""
 #. module: knowledge
 #: help:knowledge.config.settings,module_document_page:0
 msgid "This installs the module document_page."
-msgstr ""
+msgstr "Esto instala el módulo document_page."
 
 #. module: knowledge
 #: model:ir.ui.menu,name:knowledge.menu_document2
@@ -48,12 +48,12 @@ msgstr "Contenido colaborativo"
 #: model:ir.actions.act_window,name:knowledge.action_knowledge_configuration
 #: view:knowledge.config.settings:0
 msgid "Configure Knowledge"
-msgstr ""
+msgstr "Configurar Conocimiento"
 
 #. module: knowledge
 #: view:knowledge.config.settings:0
 msgid "Knowledge and Documents Management"
-msgstr ""
+msgstr "Gestión de Documentos y Conocimientos"
 
 #. module: knowledge
 #: help:knowledge.config.settings,module_document:0
@@ -67,17 +67,17 @@ msgstr ""
 #. module: knowledge
 #: field:knowledge.config.settings,module_document_page:0
 msgid "Create static web pages"
-msgstr ""
+msgstr "Crear páginas web estáticas"
 
 #. module: knowledge
 #: field:knowledge.config.settings,module_document_ftp:0
 msgid "Share repositories (FTP)"
-msgstr ""
+msgstr "Repositorios compartidos (FTP)"
 
 #. module: knowledge
 #: field:knowledge.config.settings,module_document:0
 msgid "Manage documents"
-msgstr ""
+msgstr "Administrar documentos"
 
 #. module: knowledge
 #: view:knowledge.config.settings:0

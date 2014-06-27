@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 5.0.0\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-12-21 17:04+0000\n"
-"PO-Revision-Date: 2009-09-23 20:21+0000\n"
-"Last-Translator: Silvana Herrera <sherrera@thymbra.com>\n"
+"PO-Revision-Date: 2014-06-26 16:26+0000\n"
+"Last-Translator: Juan José Scarafía (ADHOC) <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-23 07:17+0000\n"
-"X-Generator: Launchpad (build 17017)\n"
+"X-Launchpad-Export-Date: 2014-06-27 06:08+0000\n"
+"X-Generator: Launchpad (build 17077)\n"
 
 #. module: hr_timesheet_sheet
 #: field:hr.analytic.timesheet,sheet_id:0
@@ -27,13 +27,13 @@ msgstr "Hoja"
 #. module: hr_timesheet_sheet
 #: model:process.transition,name:hr_timesheet_sheet.process_transition_timesheetdraft0
 msgid "Service"
-msgstr ""
+msgstr "Servicio"
 
 #. module: hr_timesheet_sheet
 #: field:hr.timesheet.report,quantity:0
 #: field:timesheet.report,quantity:0
 msgid "Time"
-msgstr ""
+msgstr "Tiempo"
 
 #. module: hr_timesheet_sheet
 #: help:hr.config.settings,timesheet_max_difference:0
@@ -42,13 +42,17 @@ msgid ""
 "                computation for one sheet. Set this to 0 if you do not want "
 "any control."
 msgstr ""
+"Diferencia permitida en horas entre los registros de entrada y de salida y "
+"el cálculo\n"
+"                del parte de horas para un parte. Establézcalo a 0 si no "
+"quiere ningún control."
 
 #. module: hr_timesheet_sheet
 #: view:hr.timesheet.report:0
 #: view:hr_timesheet_sheet.sheet:0
 #: view:timesheet.report:0
 msgid "Group By..."
-msgstr ""
+msgstr "Agrupar Por..."
 
 #. module: hr_timesheet_sheet
 #: field:hr_timesheet_sheet.sheet,total_attendance:0
@@ -61,12 +65,12 @@ msgstr "Total servicio"
 #: view:timesheet.report:0
 #: field:timesheet.report,department_id:0
 msgid "Department"
-msgstr ""
+msgstr "Departamento"
 
 #. module: hr_timesheet_sheet
 #: model:process.transition,name:hr_timesheet_sheet.process_transition_tasktimesheet0
 msgid "Task timesheet"
-msgstr ""
+msgstr "Parte de horas de Tarea"
 
 #. module: hr_timesheet_sheet
 #: code:addons/hr_timesheet_sheet/hr_timesheet_sheet.py:73
@@ -76,23 +80,25 @@ msgid ""
 "In order to create a timesheet for this employee, you must assign an "
 "analytic journal to the employee, like 'Timesheet Journal'."
 msgstr ""
+"En orden para crear un parte de horas para este empleado, debe asignar un "
+"diario analítico al empleado, como por ejemplo 'Diario de Partes de Horas'."
 
 #. module: hr_timesheet_sheet
 #: selection:hr.timesheet.report,month:0
 #: selection:timesheet.report,month:0
 msgid "March"
-msgstr ""
+msgstr "Marzo"
 
 #. module: hr_timesheet_sheet
 #: view:timesheet.report:0
 #: field:timesheet.report,cost:0
 msgid "#Cost"
-msgstr ""
+msgstr "#Costo"
 
 #. module: hr_timesheet_sheet
 #: field:hr_timesheet_sheet.sheet,message_unread:0
 msgid "Unread Messages"
-msgstr ""
+msgstr "Mensajes No Leídos"
 
 #. module: hr_timesheet_sheet
 #: view:hr.timesheet.report:0

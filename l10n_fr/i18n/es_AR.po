@@ -7,65 +7,65 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 5.0.0\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-11-24 02:53+0000\n"
-"PO-Revision-Date: 2009-02-04 09:37+0000\n"
-"Last-Translator: Fabien (Open ERP) <fp@tinyerp.com>\n"
+"PO-Revision-Date: 2014-06-26 16:40+0000\n"
+"Last-Translator: Juan José Scarafía (ADHOC) <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-23 06:44+0000\n"
-"X-Generator: Launchpad (build 17017)\n"
+"X-Launchpad-Export-Date: 2014-06-27 06:08+0000\n"
+"X-Generator: Launchpad (build 17077)\n"
 
 #. module: l10n_fr
 #: constraint:res.company:0
 msgid "Error! You can not create recursive companies."
-msgstr ""
+msgstr "¡Error! No puede crear compañías recursivas."
 
 #. module: l10n_fr
 #: view:account.bilan.report:0
 #: view:account.cdr.report:0
 msgid "Print"
-msgstr ""
+msgstr "Imprimir"
 
 #. module: l10n_fr
 #: field:l10n.fr.report,line_ids:0
 msgid "Lines"
-msgstr ""
+msgstr "Líneas"
 
 #. module: l10n_fr
 #: model:ir.model,name:l10n_fr.model_account_bilan_report
 msgid "Account Bilan Report"
-msgstr ""
+msgstr "Cuenta de Informe de Balance"
 
 #. module: l10n_fr
 #: model:ir.model,name:l10n_fr.model_account_cdr_report
 msgid "Account CDR Report"
-msgstr ""
+msgstr "Informe Cuenta CDR"
 
 #. module: l10n_fr
 #: model:account.fiscal.position.template,note:l10n_fr.fiscal_position_template_import_export
 msgid "French VAT exemption according to articles 262 I of \"CGI\""
-msgstr ""
+msgstr "Exención del IVA francés, de acuerdo al artículo 262 I del \"CGI\""
 
 #. module: l10n_fr
 #: field:l10n.fr.line,report_id:0
 msgid "Report"
-msgstr ""
+msgstr "Informe"
 
 #. module: l10n_fr
 #: view:account.cdr.report:0
 msgid "Compte de resultat"
-msgstr ""
+msgstr "Cuenta de resultado"
 
 #. module: l10n_fr
 #: model:ir.model,name:l10n_fr.model_l10n_fr_line
 msgid "Report Lines for l10n_fr"
-msgstr ""
+msgstr "Líneas Informe para l10n_fr"
 
 #. module: l10n_fr
 #: field:l10n.fr.line,definition:0
 msgid "Definition"
-msgstr ""
+msgstr "Definición"
 
 #. module: l10n_fr
 #: sql_constraint:res.company:0
