@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-12-21 17:06+0000\n"
-"PO-Revision-Date: 2014-06-26 17:20+0000\n"
+"PO-Revision-Date: 2014-06-30 12:34+0000\n"
 "Last-Translator: Juan José Scarafía (ADHOC) <Unknown>\n"
 "Language-Team: Spanish (Argentina) <es_AR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-06-27 06:09+0000\n"
-"X-Generator: Launchpad (build 17077)\n"
+"X-Launchpad-Export-Date: 2014-07-01 05:44+0000\n"
+"X-Generator: Launchpad (build 17082)\n"
 
 #. module: sale_order_dates
 #: view:sale.order:0
@@ -48,6 +48,14 @@ msgid ""
 "default method: based on the Product Lead Times and the Company's Security "
 "Delay."
 msgstr ""
+"Fecha en la que el cliente ha solicitado los artículos que se entregarán. \n"
+"Cuando se confirmó esta Orden, la fecha esperada de la Orden de Entrega será "
+"calculada basada en esta fecha y  en la Seguridad de Retardo de la Compañía. "
+"\n"
+"Deje este campo en blanco si desea que la Orden de Entrega sea procesada tan "
+"pronto como sea posible. En ese caso, la fecha prevista se calcula "
+"utilizando el método por defecto: se basa en los Tiempos de Entrega del "
+"Producto y Seguridad de Retardo de la Compañía."
 
 #. module: sale_order_dates
 #: field:sale.order,requested_date:0

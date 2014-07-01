@@ -7,19 +7,19 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 5.0.0\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-12-21 17:04+0000\n"
-"PO-Revision-Date: 2009-09-23 17:51+0000\n"
-"Last-Translator: Silvana Herrera <sherrera@thymbra.com>\n"
+"PO-Revision-Date: 2014-06-30 13:00+0000\n"
+"Last-Translator: Juan José Scarafía (ADHOC) <Unknown>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-23 06:18+0000\n"
-"X-Generator: Launchpad (build 17017)\n"
+"X-Launchpad-Export-Date: 2014-07-01 05:43+0000\n"
+"X-Generator: Launchpad (build 17082)\n"
 
 #. module: project
 #: view:project.project:0
 msgid "Email Interface"
-msgstr ""
+msgstr "Interface de correo electrónico"
 
 #. module: project
 #: help:account.analytic.account,use_tasks:0
@@ -27,6 +27,8 @@ msgid ""
 "If checked, this contract will be available in the project menu and you will "
 "be able to manage tasks or track issues"
 msgstr ""
+"Si se marca, este contrato estará disponible en el menú del proyecto y podrá "
+"gestionar las tareas o seguir las incidencias"
 
 #. module: project
 #: field:project.project,progress_rate:0
@@ -43,7 +45,7 @@ msgstr "Tarea por delegación"
 #. module: project
 #: view:project.project:0
 msgid "Parent"
-msgstr ""
+msgstr "Padre"
 
 #. module: project
 #: model:ir.actions.act_window,name:project.dblc_proj
@@ -53,7 +55,7 @@ msgstr "Tareas del proyecto"
 #. module: project
 #: field:project.task.type,name:0
 msgid "Stage Name"
-msgstr ""
+msgstr "Nombre de Etapa"
 
 #. module: project
 #: model:process.transition.action,name:project.process_transition_action_openpendingtask0
@@ -69,12 +71,12 @@ msgstr "Nuevo proyecto basado en plantilla"
 #: view:report.project.task.user:0
 #: field:report.project.task.user,day:0
 msgid "Day"
-msgstr ""
+msgstr "Día"
 
 #. module: project
 #: model:project.task.type,name:project.project_tt_merge
 msgid "Merge"
-msgstr ""
+msgstr "Fusionar"
 
 #. module: project
 #: view:res.partner:0
@@ -85,13 +87,13 @@ msgstr "Tarea inicial"
 #: code:addons/project/project.py:944
 #, python-format
 msgid "Warning !"
-msgstr ""
+msgstr "¡Atención!"
 
 #. module: project
 #: help:project.project,message_unread:0
 #: help:project.task,message_unread:0
 msgid "If checked new messages require your attention."
-msgstr ""
+msgstr "Si esta marcado, los nuevos mensajes requieren su atención."
 
 #. module: project
 #: model:process.node,name:project.process_node_donetask0
@@ -106,12 +108,12 @@ msgstr "La tarea está completa"
 #. module: project
 #: view:res.partner:0
 msgid "False"
-msgstr ""
+msgstr "Falso"
 
 #. module: project
 #: model:project.task.type,name:project.project_tt_testing
 msgid "Testing"
-msgstr ""
+msgstr "Testeo"
 
 #. module: project
 #: model:ir.model,name:project.model_account_analytic_account
