@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-12-21 17:04+0000\n"
-"PO-Revision-Date: 2014-06-26 16:02+0000\n"
+"PO-Revision-Date: 2014-07-04 17:03+0000\n"
 "Last-Translator: Juan José Scarafía (ADHOC) <Unknown>\n"
 "Language-Team: Spanish (Argentina) <es_AR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-06-27 06:08+0000\n"
-"X-Generator: Launchpad (build 17077)\n"
+"X-Launchpad-Export-Date: 2014-07-05 04:54+0000\n"
+"X-Generator: Launchpad (build 17086)\n"
 
 #. module: hr_holidays
 #: selection:hr.holidays.status,color_name:0
@@ -232,6 +232,9 @@ msgid ""
 "Choose 'Allocation Request' if you want to increase the number of leaves "
 "available for someone"
 msgstr ""
+"Seleccione 'Petición de Ausencia' si alguien quiere tomarse un día libre. \n"
+"Seleccione 'Petición de Asignación' si quiere incrementar el número de "
+"ausencias disponibles para alguien."
 
 #. module: hr_holidays
 #: view:hr.holidays.status:0
@@ -294,12 +297,12 @@ msgstr "Magenta"
 #. module: hr_holidays
 #: model:ir.actions.act_window,name:hr_holidays.act_hr_leave_request_to_meeting
 msgid "Leave Meetings"
-msgstr ""
+msgstr "Reuniones de Ausencia"
 
 #. module: hr_holidays
 #: model:hr.holidays.status,name:hr_holidays.holiday_status_cl
 msgid "Legal Leaves 2012"
-msgstr ""
+msgstr "Ausencias Legales 2012"
 
 #. module: hr_holidays
 #: selection:hr.holidays.summary.dept,holiday_type:0
@@ -316,24 +319,24 @@ msgstr "Desde"
 #. module: hr_holidays
 #: model:hr.holidays.status,name:hr_holidays.holiday_status_sl
 msgid "Sick Leaves"
-msgstr ""
+msgstr "Ausencias por Enfermedad"
 
 #. module: hr_holidays
 #: code:addons/hr_holidays/hr_holidays.py:489
 #, python-format
 msgid "Leave Request for %s"
-msgstr ""
+msgstr "Petición de Ausencia para %s"
 
 #. module: hr_holidays
 #: xsl:holidays.summary:0
 msgid "Sum"
-msgstr ""
+msgstr "Suma"
 
 #. module: hr_holidays
 #: view:hr.holidays.status:0
 #: model:ir.actions.act_window,name:hr_holidays.open_view_holiday_status
 msgid "Leave Types"
-msgstr ""
+msgstr "Tipos de Ausencias"
 
 #. module: hr_holidays
 #: field:hr.holidays.status,remaining_leaves:0
@@ -343,12 +346,12 @@ msgstr "Vacaciones restantes"
 #. module: hr_holidays
 #: field:hr.holidays,message_follower_ids:0
 msgid "Followers"
-msgstr ""
+msgstr "Seguidores"
 
 #. module: hr_holidays
 #: model:ir.model,name:hr_holidays.model_hr_holidays_remaining_leaves_user
 msgid "Total holidays by type"
-msgstr ""
+msgstr "Total feriados por tipo"
 
 #. module: hr_holidays
 #: view:hr.employee:0
@@ -362,7 +365,7 @@ msgstr "Empleado"
 #. module: hr_holidays
 #: selection:hr.employee,current_leave_state:0
 msgid "New"
-msgstr ""
+msgstr "Nuevo"
 
 #. module: hr_holidays
 #: view:hr.holidays:0
