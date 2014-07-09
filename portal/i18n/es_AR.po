@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-12-21 17:05+0000\n"
-"PO-Revision-Date: 2014-06-27 16:57+0000\n"
+"PO-Revision-Date: 2014-07-08 13:22+0000\n"
 "Last-Translator: Juan José Scarafía (ADHOC) <Unknown>\n"
 "Language-Team: Spanish (Argentina) <es_AR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-06-28 05:35+0000\n"
-"X-Generator: Launchpad (build 17077)\n"
+"X-Launchpad-Export-Date: 2014-07-09 05:52+0000\n"
+"X-Generator: Launchpad (build 17100)\n"
 
 #. module: portal
 #: view:portal.payment.acquirer:0
@@ -78,22 +78,22 @@ msgstr "Grupos No Portales"
 #: code:addons/portal/wizard/share_wizard.py:54
 #, python-format
 msgid "Please select at least one group to share with"
-msgstr ""
+msgstr "Por favor seleccione al menos un grupo con quien compartir"
 
 #. module: portal
 #: view:share.wizard:0
 msgid "Details"
-msgstr ""
+msgstr "Detalles"
 
 #. module: portal
 #: model:ir.ui.menu,name:portal.portal_orders
 msgid "Quotations and Sales Orders"
-msgstr ""
+msgstr "Presupuestos y Pedidos de Venta"
 
 #. module: portal
 #: view:portal.payment.acquirer:0
 msgid "reference: the reference number of the document to pay"
-msgstr ""
+msgstr "referencia: el número de referencia del documento a pagar"
 
 #. module: portal
 #: help:portal.payment.acquirer,visible:0
@@ -101,16 +101,18 @@ msgid ""
 "Make this payment acquirer available in portal forms (Customer invoices, "
 "etc.)"
 msgstr ""
+"Hacer que este método de pago esté disponible en los formularios del portal "
+"(Facturas de cliente, etc.)"
 
 #. module: portal
 #: model:ir.model,name:portal.model_share_wizard
 msgid "Share Wizard"
-msgstr ""
+msgstr "Asistente de Compartido"
 
 #. module: portal
 #: field:portal.wizard.user,email:0
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #. module: portal
 #: model:ir.actions.client,help:portal.action_news
@@ -120,6 +122,10 @@ msgid ""
 "                </p>\n"
 "            "
 msgstr ""
+"<p>\n"
+"                   No tiene noticias de la compañía sin leer.\n"
+"                </p>\n"
+"            "
 
 #. module: portal
 #: code:addons/portal/wizard/portal_wizard.py:194
@@ -127,29 +133,31 @@ msgstr ""
 msgid ""
 "You must have an email address in your User Preferences to send emails."
 msgstr ""
+"Debe tener una dirección email en sus Preferencias de Usuario para enviar "
+"emails"
 
 #. module: portal
 #: model:ir.actions.client,name:portal.action_jobs
 #: model:ir.ui.menu,name:portal.portal_jobs
 msgid "Jobs"
-msgstr ""
+msgstr "Trabajos"
 
 #. module: portal
 #: field:portal.wizard,user_ids:0
 msgid "Users"
-msgstr ""
+msgstr "Usuarios"
 
 #. module: portal
 #: code:addons/portal/acquirer.py:82
 #, python-format
 msgid "Pay safely online"
-msgstr ""
+msgstr "Pague en línea de forma segura"
 
 #. module: portal
 #: code:addons/portal/acquirer.py:77
 #, python-format
 msgid "No online payment acquirers configured"
-msgstr ""
+msgstr "No se ha configurado ningún método de pago online"
 
 #. module: portal
 #: view:portal.payment.acquirer:0
@@ -157,17 +165,19 @@ msgid ""
 "kind: the kind of document on which the payment form is rendered (translated "
 "to user language, e.g. \"Invoice\")"
 msgstr ""
+"tipo: el tipo de documento sobre el que el formulario de pago se "
+"representará (traducido al idioma del usuario, por ejemplo, \"Factura\")"
 
 #. module: portal
 #: help:portal.wizard,portal_id:0
 msgid "The portal that users can be added in or removed from."
-msgstr ""
+msgstr "El portal al que los usuarios pueden ser añadidos o quitados."
 
 #. module: portal
 #: code:addons/portal/wizard/share_wizard.py:38
 #, python-format
 msgid "Users you already shared with"
-msgstr ""
+msgstr "Usuarios con los que ya ha compartido"
 
 #. module: portal
 #: model:ir.actions.client,help:portal.action_jobs
@@ -177,6 +187,10 @@ msgid ""
 "                </p>\n"
 "            "
 msgstr ""
+"<p>\n"
+"                    No tiene ofertas de trabajo sin leer.\n"
+"                </p>\n"
+"            "
 
 #. module: portal
 #: view:portal.payment.acquirer:0
@@ -184,6 +198,8 @@ msgid ""
 ", so it may use Mako expressions.\n"
 "                                The Mako evaluation context provides:"
 msgstr ""
+", por lo que puede usar expresiones Mako.\n"
+"                                La evaluación del contexto de Mako provee:"
 
 #. module: portal
 #: model:ir.ui.menu,name:portal.portal_menu
@@ -191,7 +207,7 @@ msgstr ""
 #: field:res.groups,is_portal:0
 #: model:res.groups,name:portal.group_portal
 msgid "Portal"
-msgstr ""
+msgstr "Portal"
 
 #. module: portal
 #: code:addons/portal/wizard/portal_wizard.py:34

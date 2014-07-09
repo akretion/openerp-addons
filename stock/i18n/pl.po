@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-12-21 17:04+0000\n"
-"PO-Revision-Date: 2014-07-07 14:48+0000\n"
-"Last-Translator: Poul Skladowski <p.skladanowski@hotmail.com>\n"
+"PO-Revision-Date: 2014-07-08 19:15+0000\n"
+"Last-Translator: Grzegorz Grzelak (OpenGLOBE.pl) <grzegorz@openglobe.pl>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-07-08 06:00+0000\n"
-"X-Generator: Launchpad (build 17086)\n"
+"X-Launchpad-Export-Date: 2014-07-09 05:52+0000\n"
+"X-Generator: Launchpad (build 17100)\n"
 
 #. module: stock
 #: field:stock.inventory.line.split,line_exist_ids:0
@@ -161,7 +161,7 @@ msgstr "Ilość nie może być ujemna"
 #: view:stock.picking:0
 #: view:stock.picking.in:0
 msgid "Picking list"
-msgstr "Lista towarów do pobrania"
+msgstr "Pobranie"
 
 #. module: stock
 #: report:lot.stock.overview:0
@@ -1652,7 +1652,7 @@ msgstr "Wystawianie faktur"
 #. module: stock
 #: view:stock.picking:0
 msgid "Internal Picking List"
-msgstr "Pobranie wewnętrzne (MM)"
+msgstr "Przesunięcie wewnątrzmagazynowe (MM)"
 
 #. module: stock
 #: selection:report.stock.inventory,state:0
@@ -2768,7 +2768,7 @@ msgstr "Ilość bieżąca"
 #. module: stock
 #: model:ir.model,name:stock.model_stock_config_settings
 msgid "stock.config.settings"
-msgstr "Konfiguracja ustawienia zapasów"
+msgstr ""
 
 #. module: stock
 #: view:stock.production.lot:0
