@@ -7,15 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-12-21 17:05+0000\n"
-"PO-Revision-Date: 2012-05-10 17:52+0000\n"
-"Last-Translator: Maxime Chambreuil (http://www.savoirfairelinux.com) "
-"<maxime.chambreuil@savoirfairelinux.com>\n"
+"PO-Revision-Date: 2014-07-14 08:27+0000\n"
+"Last-Translator: Mathieu Stumpf <ms@tempo-consulting.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-23 07:47+0000\n"
-"X-Generator: Launchpad (build 17017)\n"
+"X-Launchpad-Export-Date: 2014-07-15 04:51+0000\n"
+"X-Generator: Launchpad (build 17111)\n"
 
 #. module: base_action_rule
 #: selection:base.action.rule.lead.test,state:0
@@ -29,6 +28,9 @@ msgid ""
 "enter the name (Ex: Create the 01/01/2012) and add the option \"Share with "
 "all users\""
 msgstr ""
+"- Dans cette même vue de  « Recherche », sélectionner le menu « Sauvegarder "
+"le filtre actuel », entrer le nom (ex: Créé le 01/01/2012) et ajouter "
+"l'option « Partager avec tous les usagers »"
 
 #. module: base_action_rule
 #: model:ir.model,name:base_action_rule.model_base_action_rule
@@ -38,7 +40,7 @@ msgstr "Règles d'action"
 #. module: base_action_rule
 #: view:base.action.rule:0
 msgid "Select a filter or a timer as condition."
-msgstr ""
+msgstr "Sélectionner un filtre ou une minuterie comme condition"
 
 #. module: base_action_rule
 #: field:base.action.rule.lead.test,user_id:0
@@ -58,7 +60,7 @@ msgstr "Ajouter des abonnés"
 #. module: base_action_rule
 #: field:base.action.rule,act_user_id:0
 msgid "Set Responsible"
-msgstr ""
+msgstr "Définir comme responsable"
 
 #. module: base_action_rule
 #: help:base.action.rule,trg_date_range:0
@@ -67,6 +69,9 @@ msgid ""
 "delay before thetrigger date, like sending a reminder 15 minutes before a "
 "meeting."
 msgstr ""
+"Délai après la date de déclenchement. Vous pouvez mettre une valeur négative "
+"si vous avez besoin d'un délai avant la date de déclenchement, comme envoyer "
+"un rappel 15 minutes avant une réunion."
 
 #. module: base_action_rule
 #: model:ir.model,name:base_action_rule.model_base_action_rule_lead_test
@@ -106,7 +111,7 @@ msgstr ""
 #. module: base_action_rule
 #: field:base.action.rule,filter_pre_id:0
 msgid "Before Update Filter"
-msgstr ""
+msgstr "Avant  la mise à jour du filtre"
 
 #. module: base_action_rule
 #: view:base.action.rule:0
@@ -134,7 +139,7 @@ msgstr "Le filtre doit par conséquent être disponible dans cette page."
 #. module: base_action_rule
 #: field:base.action.rule,filter_id:0
 msgid "After Update Filter"
-msgstr ""
+msgstr "Après la mise à jour du filtre"
 
 #. module: base_action_rule
 #: selection:base.action.rule,trg_date_range_type:0
@@ -165,11 +170,16 @@ msgid ""
 "while the postcondition filter is checked after the modification. A "
 "precondition filter will therefore not work during a creation."
 msgstr ""
+"Une règle d'action est cochée lorsque vous créez ou modifiez le \"Modèle de "
+"document connexe\". Le filtre de précondition est vérifié juste avant la "
+"modification tandis que le filte de postcondition est vérifié après la "
+"modification. Un filtre de précondition ne  fonctionnera donc pas lors de la "
+"création."
 
 #. module: base_action_rule
 #: view:base.action.rule:0
 msgid "Filter Condition"
-msgstr ""
+msgstr "Condition du filtre"
 
 #. module: base_action_rule
 #: view:base.action.rule:0
@@ -178,6 +188,10 @@ msgid ""
 "in the \"Search\" view (Example of filter based on Leads/Opportunities: "
 "Creation Date \"is equal to\" 01/01/2012)"
 msgstr ""
+"- Allez à votre page \"Modèle de document associé\" et définissez les "
+"paramètres du filtre de la vue \"Recherche\" (Par exemple sur  "
+"\"Affaires/Opportunités\" on peut créer le filter : Date de création \"est "
+"égale à\" 01/01/2012)"
 
 #. module: base_action_rule
 #: field:base.action.rule,name:0
@@ -209,7 +223,7 @@ msgstr "Jours"
 #. module: base_action_rule
 #: view:base.action.rule:0
 msgid "Timer"
-msgstr ""
+msgstr "Minuterie"
 
 #. module: base_action_rule
 #: field:base.action.rule,trg_date_range_type:0
@@ -229,12 +243,12 @@ msgstr "Lorsque décoché, la règle est cachée et ne sera pas exécutée."
 #. module: base_action_rule
 #: selection:base.action.rule.lead.test,state:0
 msgid "Cancelled"
-msgstr ""
+msgstr "Annulé"
 
 #. module: base_action_rule
 #: field:base.action.rule,model:0
 msgid "Model"
-msgstr ""
+msgstr "Modèle"
 
 #. module: base_action_rule
 #: field:base.action.rule,last_run:0
@@ -285,6 +299,20 @@ msgid ""
 "              </p>\n"
 "            "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Cliquez pour paramétrer une nouvelle règle d'action "
+"automatique. \n"
+"              </p><p>\n"
+"               Utilisez une action automatique pour déclencher "
+"automatiquement des actions pour\n"
+"                différents écrans. Par exemple  une piste créée par un "
+"utilisateur donné \n"
+"                peut être automatiquement assignée à une équipe de ventes "
+"donnée, ou une \n"
+"                opportunité qui est toujours en attente après 14 jours peut\n"
+"                déclencher un courriel automatique de rappel.\n"
+"              </p>\n"
+"            "
 
 #. module: base_action_rule
 #: field:base.action.rule,create_date:0
@@ -294,7 +322,7 @@ msgstr "Date de création"
 #. module: base_action_rule
 #: field:base.action.rule.lead.test,date_action_last:0
 msgid "Last Action"
-msgstr ""
+msgstr "Dernière action"
 
 #. module: base_action_rule
 #: field:base.action.rule.lead.test,partner_id:0
@@ -310,7 +338,7 @@ msgstr "Date de déclenchement"
 #: view:base.action.rule:0
 #: field:base.action.rule,server_action_ids:0
 msgid "Server Actions"
-msgstr ""
+msgstr "Actions du serveur"
 
 #. module: base_action_rule
 #: field:base.action.rule.lead.test,name:0
