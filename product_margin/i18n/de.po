@@ -7,15 +7,14 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 6.0dev\n"
 "Report-Msgid-Bugs-To: support@openerp.com\n"
 "POT-Creation-Date: 2012-12-21 17:06+0000\n"
-"PO-Revision-Date: 2010-12-29 11:55+0000\n"
-"Last-Translator: Thorsten Vocks (OpenBig.org) <thorsten.vocks@big-"
-"consulting.net>\n"
+"PO-Revision-Date: 2014-07-29 12:24+0000\n"
+"Last-Translator: Rudolf Schnapka <rs@techno-flex.de>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-23 07:27+0000\n"
-"X-Generator: Launchpad (build 17017)\n"
+"X-Launchpad-Export-Date: 2014-07-30 05:59+0000\n"
+"X-Generator: Launchpad (build 17131)\n"
 
 #. module: product_margin
 #: view:product.product:0
@@ -38,6 +37,8 @@ msgstr "Von"
 msgid ""
 "Sum of Multiplication of Invoice price and quantity of Supplier Invoices "
 msgstr ""
+"Betrag aus der Multipikation des Verkaufspreises mit der Anzahl "
+"Lieferantenrechnungen "
 
 #. module: product_margin
 #: field:product.margin,to_date:0
@@ -47,12 +48,12 @@ msgstr "Bis Datum"
 #. module: product_margin
 #: help:product.product,total_margin:0
 msgid "Turnover - Standard price"
-msgstr ""
+msgstr "Umsatz - Einstandspreis"
 
 #. module: product_margin
 #: field:product.product,total_margin_rate:0
 msgid "Total Margin Rate(%)"
-msgstr ""
+msgstr "Gesamtmarge (%)"
 
 #. module: product_margin
 #: selection:product.margin,invoice_state:0
@@ -78,7 +79,7 @@ msgstr "Durch. Preis pro Einheit"
 #. module: product_margin
 #: field:product.product,sale_num_invoiced:0
 msgid "# Invoiced in Sale"
-msgstr ""
+msgstr "Anz. im Verkauf fakturiert"
 
 #. module: product_margin
 #: view:product.product:0
@@ -120,7 +121,7 @@ msgstr "Summe in Eingangsrechnungen"
 #. module: product_margin
 #: field:product.product,date_to:0
 msgid "Margin Date To"
-msgstr ""
+msgstr "Marge datiert bis"
 
 #. module: product_margin
 #: view:product.product:0
@@ -137,6 +138,8 @@ msgstr "Gesamtkosten"
 #: help:product.product,normal_cost:0
 msgid "Sum of Multiplication of Cost price and quantity of Supplier Invoices"
 msgstr ""
+"Betrag aus Multiplikation von Beschaffungspreis mit Anzahl "
+"Lieferantenrechnungen"
 
 #. module: product_margin
 #: field:product.product,expected_margin:0
@@ -156,7 +159,7 @@ msgstr "Erwartete Marge * 100 / Erwartete Verkäufe"
 #. module: product_margin
 #: help:product.product,sale_avg_price:0
 msgid "Avg. Price in Customer Invoices."
-msgstr ""
+msgstr "Durchschnittspreis in Kundenrechnungen"
 
 #. module: product_margin
 #: help:product.product,purchase_avg_price:0
@@ -179,6 +182,7 @@ msgstr "Normalkosten - Ist-Kosten"
 msgid ""
 "Sum of Multiplication of Sale Catalog price and quantity of Customer Invoices"
 msgstr ""
+"Betrag aus Multiplikation von Listenpreis mit der Anzahl Kundenrechnungen"
 
 #. module: product_margin
 #: field:product.product,total_margin:0
@@ -188,13 +192,14 @@ msgstr "Gesamtsumme Margen"
 #. module: product_margin
 #: field:product.product,date_from:0
 msgid "Margin Date From"
-msgstr ""
+msgstr "Marge datiert ab"
 
 #. module: product_margin
 #: help:product.product,turnover:0
 msgid ""
 "Sum of Multiplication of Invoice price and quantity of Customer Invoices"
 msgstr ""
+"Betrag aus Multiplikation von Rechnungspreis mit Anzahl Kundenrechnungen"
 
 #. module: product_margin
 #: field:product.product,normal_cost:0
@@ -209,7 +214,7 @@ msgstr "Einkäufe"
 #. module: product_margin
 #: field:product.product,purchase_num_invoiced:0
 msgid "# Invoiced in Purchase"
-msgstr ""
+msgstr "Anz. bei Beschaffung in Rechnung gestellt"
 
 #. module: product_margin
 #: help:product.product,expected_margin:0
