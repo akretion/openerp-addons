@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-14 06:41+0000\n"
+"X-Launchpad-Export-Date: 2014-08-15 06:22+0000\n"
 "X-Generator: Launchpad (build 17156)\n"
 
 #. module: base_action_rule
@@ -104,7 +104,7 @@ msgid "Delay after trigger date"
 msgstr "Délai après la date de déclenchement"
 
 #. module: base_action_rule
-#: view:base.action.rule:0
+#: view:base.action.rule:base_action_rule.view_base_action_rule_form
 msgid "Conditions"
 msgstr "Conditions"
 
@@ -124,7 +124,8 @@ msgid "Before Update Filter"
 msgstr "Avant  la mise à jour du filtre"
 
 #. module: base_action_rule
-#: view:base.action.rule:0
+#: view:base.action.rule:base_action_rule.view_base_action_rule_form
+#: view:base.action.rule:base_action_rule.view_base_action_rule_tree
 msgid "Action Rule"
 msgstr "Règle d'action"
 
@@ -137,12 +138,12 @@ msgstr ""
 "l'enregistrement."
 
 #. module: base_action_rule
-#: view:base.action.rule:0
+#: view:base.action.rule:base_action_rule.view_base_action_rule_form
 msgid "Fields to Change"
 msgstr "Champs à modifier"
 
 #. module: base_action_rule
-#: view:base.action.rule:0
+#: view:base.action.rule:base_action_rule.view_base_action_rule_form
 msgid "The filter must therefore be available in this page."
 msgstr "Le filtre doit par conséquent être disponible dans cette page."
 
@@ -168,7 +169,7 @@ msgid "Active"
 msgstr "Actif"
 
 #. module: base_action_rule
-#: view:base.action.rule:0
+#: view:base.action.rule:base_action_rule.view_base_action_rule_form
 msgid "Delay After Trigger Date"
 msgstr "Délai après la date de déclenchement"
 
@@ -241,7 +242,7 @@ msgid "Delay type"
 msgstr "Type de délai"
 
 #. module: base_action_rule
-#: view:base.action.rule:0
+#: view:base.action.rule:base_action_rule.view_base_action_rule_form
 msgid "Server actions to run"
 msgstr "Actions du serveur à exécuter"
 
@@ -289,7 +290,7 @@ msgid "Sequence"
 msgstr "Séquence"
 
 #. module: base_action_rule
-#: view:base.action.rule:0
+#: view:base.action.rule:base_action_rule.view_base_action_rule_form
 msgid "Actions"
 msgstr "Actions"
 
@@ -345,7 +346,7 @@ msgid "Trigger Date"
 msgstr "Date de déclenchement"
 
 #. module: base_action_rule
-#: view:base.action.rule:0
+#: view:base.action.rule:base_action_rule.view_base_action_rule_form
 #: field:base.action.rule,server_action_ids:0
 msgid "Server Actions"
 msgstr "Actions du serveur"

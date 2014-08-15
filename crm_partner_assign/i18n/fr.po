@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-14 06:48+0000\n"
+"X-Launchpad-Export-Date: 2014-08-15 06:22+0000\n"
 "X-Generator: Launchpad (build 17156)\n"
 
 #. module: crm_partner_assign
@@ -207,7 +207,7 @@ msgid "System notification"
 msgstr ""
 
 #. module: crm_partner_assign
-#: code:addons/crm_partner_assign/wizard/crm_forward_to_partner.py:74
+#: code:addons/crm_partner_assign/wizard/crm_forward_to_partner.py:77
 #, python-format
 msgid "Lead forward"
 msgstr ""
@@ -371,7 +371,7 @@ msgid "To read"
 msgstr ""
 
 #. module: crm_partner_assign
-#: code:addons/crm_partner_assign/wizard/crm_forward_to_partner.py:74
+#: code:addons/crm_partner_assign/wizard/crm_forward_to_partner.py:77
 #, python-format
 msgid "Fwd"
 msgstr "Transférer"
