@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-08-14 00:10+0000\n"
-"PO-Revision-Date: 2013-08-19 10:58+0000\n"
+"PO-Revision-Date: 2014-09-02 08:58+0000\n"
 "Last-Translator: Erwin van der Ploeg (BAS Solutions) <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-14 07:11+0000\n"
-"X-Generator: Launchpad (build 17156)\n"
+"X-Launchpad-Export-Date: 2014-09-03 06:59+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
 #. module: procurement
 #: model:ir.ui.menu,name:procurement.menu_stock_sched
@@ -76,7 +76,7 @@ msgstr ""
 "                        genereren."
 
 #. module: procurement
-#: view:procurement.order:0
+#: view:procurement.order:procurement.procurement_form_view
 msgid "External note..."
 msgstr "Externe notitie..."
 
@@ -121,7 +121,7 @@ msgstr "Regels"
 
 #. module: procurement
 #: field:procurement.order,company_id:0
-#: field:stock.warehouse.orderpoint,company_id:0
+#: field:procurement.rule,company_id:0
 msgid "Company"
 msgstr "Bedrijf"
 
@@ -189,7 +189,7 @@ msgid "Messages"
 msgstr "Berichten"
 
 #. module: procurement
-#: view:procurement.order:0
+#: view:procurement.order:procurement.procurement_form_view
 msgid "Cancel Procurement"
 msgstr "Verwerving annuleren"
 
@@ -214,7 +214,7 @@ msgid "If checked new messages require your attention."
 msgstr "Indien aangevinkt zullen nieuwe berichten uw aandacht vragen."
 
 #. module: procurement
-#: view:procurement.order.compute.all:0
+#: view:procurement.order.compute.all:procurement.view_compute_schedulers_wizard
 msgid "Scheduler Parameters"
 msgstr "Parameters planner"
 
@@ -229,7 +229,7 @@ msgid "Stockable products"
 msgstr "Voorraad producten"
 
 #. module: procurement
-#: code:addons/procurement/procurement.py:154
+#: code:addons/procurement/procurement.py:155
 #, python-format
 msgid "Invalid Action!"
 msgstr "Ongeldige actie!"
@@ -402,12 +402,11 @@ msgid "Planned Date"
 msgstr "Datum gepland"
 
 #. module: procurement
-#: view:procurement.order:0
+#: view:procurement.order:procurement.view_procurement_filter
 msgid "Group By"
 msgstr "Groepeer op"
 
 #. module: procurement
-#: field:make.procurement,qty:0
 #: field:procurement.order,product_qty:0
 msgid "Quantity"
 msgstr "Hoeveelheid"
@@ -419,8 +418,7 @@ msgid "Not enough stock and no minimum orderpoint rule defined."
 msgstr "Onvoldoende voorraad en geen minimale voorraadregel gedefinieerd."
 
 #. module: procurement
-#: field:make.procurement,uom_id:0
-#: view:procurement.order:0
+#: view:procurement.order:procurement.procurement_tree_view
 msgid "Unit of Measure"
 msgstr "Maateenheid"
 
@@ -494,8 +492,8 @@ msgstr ""
 
 #. module: procurement
 #: model:ir.model,name:procurement.model_procurement_order
-#: model:process.process,name:procurement.process_process_procurementprocess0
-#: view:procurement.order:0
+#: view:procurement.order:procurement.procurement_form_view
+#: view:procurement.order:procurement.view_procurement_filter
 msgid "Procurement"
 msgstr "Verwerving"
 
@@ -510,7 +508,7 @@ msgid "To Fix"
 msgstr "Te herstellen"
 
 #. module: procurement
-#: view:procurement.order:0
+#: view:procurement.order:procurement.view_procurement_filter
 msgid "Exceptions"
 msgstr "Fouten"
 
@@ -536,7 +534,7 @@ msgid "Compute Stock"
 msgstr "Voorraad berekenen"
 
 #. module: procurement
-#: view:procurement.order:0
+#: view:procurement.order:procurement.procurement_form_view
 msgid "e.g. SO005"
 msgstr "Bijv. SO005"
 
@@ -600,7 +598,6 @@ msgstr ""
 
 #. module: procurement
 #: field:procurement.order,product_uom:0
-#: field:stock.warehouse.orderpoint,product_uom:0
 msgid "Product Unit of Measure"
 msgstr "Maateenheid product"
 
@@ -614,7 +611,7 @@ msgstr ""
 "maateenheid."
 
 #. module: procurement
-#: view:procurement.order:0
+#: view:procurement.order:procurement.procurement_tree_view
 msgid "Procurement Lines"
 msgstr "Verwervingsregels"
 
@@ -650,8 +647,7 @@ msgstr "Concept"
 
 #. module: procurement
 #: model:ir.actions.act_window,name:procurement.action_compute_schedulers
-#: model:ir.ui.menu,name:procurement.menu_stock_proc_schedulers
-#: view:procurement.order.compute.all:0
+#: view:procurement.order.compute.all:procurement.view_compute_schedulers_wizard
 msgid "Run Schedulers"
 msgstr "Starten planners"
 
@@ -661,7 +657,7 @@ msgid "This wizard will schedule procurements."
 msgstr "Deze wizard zal verwervingen inplannen"
 
 #. module: procurement
-#: view:procurement.order:0
+#: view:procurement.order:procurement.view_procurement_filter
 #: field:procurement.order,state:0
 msgid "Status"
 msgstr "Status"
@@ -709,7 +705,7 @@ msgid "Not enough stock."
 msgstr "Onvoldoende voorraad."
 
 #. module: procurement
-#: field:stock.warehouse.orderpoint,active:0
+#: field:procurement.rule,active:0
 msgid "Active"
 msgstr "Actief"
 
@@ -789,7 +785,7 @@ msgid "Companies"
 msgstr "Bedrijven"
 
 #. module: procurement
-#: view:procurement.order:0
+#: view:procurement.order:procurement.procurement_form_view
 msgid "Extra Information"
 msgstr "Extra informatie"
 
@@ -814,7 +810,7 @@ msgid "Date Closed"
 msgstr "Datum gesloten"
 
 #. module: procurement
-#: view:res.company:0
+#: view:res.company:procurement.mrp_company
 msgid "Logistics"
 msgstr "Logistiek"
 
@@ -847,12 +843,14 @@ msgid "Misc"
 msgstr "Overig"
 
 #. module: procurement
-#: field:stock.move,procurements:0
+#: model:ir.actions.act_window,name:procurement.procurement_exceptions
+#: view:procurement.group:procurement.procurement_group_form_view
+#: field:procurement.group,procurement_ids:0
 msgid "Procurements"
 msgstr "Verwervingen"
 
 #. module: procurement
-#: view:procurement.order:0
+#: view:procurement.order:procurement.procurement_form_view
 msgid "Run Procurement"
 msgstr "Verwerving uitvoeren"
 
@@ -862,10 +860,7 @@ msgid "Done"
 msgstr "Verwerkt"
 
 #. module: procurement
-#: view:make.procurement:0
-#: view:procurement.order.compute:0
-#: view:procurement.order.compute.all:0
-#: view:procurement.orderpoint.compute:0
+#: view:procurement.order.compute.all:procurement.view_compute_schedulers_wizard
 msgid "Cancel"
 msgstr "Annuleren"
 
@@ -873,7 +868,7 @@ msgstr "Annuleren"
 #: code:addons/procurement/procurement.py:329
 #, python-format
 msgid "Data Insufficient!"
-msgstr ""
+msgstr "Onvoldoende gegevens!"
 
 #. module: procurement
 #: field:stock.warehouse.orderpoint,logic:0
@@ -892,10 +887,7 @@ msgstr "Niet urgent"
 
 #. module: procurement
 #: model:ir.actions.act_window,name:procurement.procurement_action5
-#: model:ir.actions.act_window,name:procurement.procurement_action_board
-#: model:ir.actions.act_window,name:procurement.procurement_exceptions
-#: model:ir.ui.menu,name:procurement.menu_stock_procurement_action
-#: view:procurement.order:0
+#: view:procurement.order:procurement.view_procurement_filter
 msgid "Procurement Exceptions"
 msgstr "Verwervingsfouten"
 
@@ -916,7 +908,7 @@ msgid "Compute all schedulers"
 msgstr "Alle planningen berekenen"
 
 #. module: procurement
-#: view:procurement.order:0
+#: view:procurement.order:procurement.view_procurement_filter
 msgid "Late"
 msgstr "Te laat"
 
@@ -942,16 +934,13 @@ msgid "Close Move at end"
 msgstr "Boeking aan einde sluiten"
 
 #. module: procurement
-#: view:procurement.order:0
+#: field:procurement.order,date_planned:0
 msgid "Scheduled Date"
 msgstr "Datum gepland"
 
 #. module: procurement
-#: model:ir.model,name:procurement.model_product_product
-#: field:make.procurement,product_id:0
-#: view:procurement.order:0
+#: view:procurement.order:procurement.view_procurement_filter
 #: field:procurement.order,product_id:0
-#: field:stock.warehouse.orderpoint,product_id:0
 msgid "Product"
 msgstr "Product"
 
@@ -961,8 +950,6 @@ msgid "Temporary"
 msgstr "Tijdelijk"
 
 #. module: procurement
-#: field:mrp.property,description:0
-#: field:mrp.property.group,description:0
 #: field:procurement.order,name:0
 msgid "Description"
 msgstr "Omschrijving"
@@ -1019,8 +1006,7 @@ msgid "Temporary Procurement Exceptions"
 msgstr "Tijdelijke verwervingsfouten"
 
 #. module: procurement
-#: field:mrp.property,name:0
-#: field:stock.warehouse.orderpoint,name:0
+#: field:procurement.rule,name:0
 msgid "Name"
 msgstr "Naam"
 
@@ -1039,7 +1025,7 @@ msgid "Reordering Rules"
 msgstr "Aanvulopdracht regels"
 
 #. module: procurement
-#: code:addons/procurement/procurement.py:155
+#: code:addons/procurement/procurement.py:156
 #, python-format
 msgid "Cannot delete Procurement Order(s) which are in %s state."
 msgstr ""
@@ -1065,7 +1051,7 @@ msgstr ""
 "verwervingsopdracht."
 
 #. module: procurement
-#: view:procurement.order:0
+#: view:procurement.order:procurement.view_procurement_filter
 msgid "Search Procurement"
 msgstr "Verwerving zoeken"
 
@@ -1090,7 +1076,7 @@ msgid "Messages and communication history"
 msgstr "Berichten en communicatie historie"
 
 #. module: procurement
-#: view:procurement.order:0
+#: view:procurement.order:procurement.view_procurement_filter
 msgid "Procurement started late"
 msgstr "Verwerving is te laat gestart"
 

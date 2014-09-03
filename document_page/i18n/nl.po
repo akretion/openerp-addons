@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-08-14 00:10+0000\n"
-"PO-Revision-Date: 2013-06-08 11:21+0000\n"
-"Last-Translator: Erwin van der Ploeg (BAS Solutions) <Unknown>\n"
+"PO-Revision-Date: 2014-09-02 08:55+0000\n"
+"Last-Translator: Yenthe - Bapps.be <yenthespam@gmail.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-14 06:50+0000\n"
-"X-Generator: Launchpad (build 17156)\n"
+"X-Launchpad-Export-Date: 2014-09-03 06:59+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
 #. module: document_page
 #: view:document.page:0
@@ -206,7 +206,7 @@ msgstr "bijv. Op enig moment..."
 #: code:addons/document_page/wizard/wiki_make_index.py:52
 #, python-format
 msgid "There is no section in this Page."
-msgstr ""
+msgstr "Er is geen sectie in deze pagina."
 
 #. module: document_page
 #: view:document.page.history:0
