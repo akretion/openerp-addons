@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-12-21 17:05+0000\n"
-"PO-Revision-Date: 2014-09-02 03:01+0000\n"
+"PO-Revision-Date: 2014-09-02 08:40+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,12 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-09-03 05:57+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
-#. module: account_cancel
-#: view:account.bank.statement:account_cancel.bank_statement_cancel_form_inherit
-msgid "Cancel"
-msgstr "취소"
+#. module: auth_crypt
+#: field:res.users,password_crypt:0
+msgid "Encrypted Password"
+msgstr "암호화된 암호"
+
+#. module: auth_crypt
+#: model:ir.model,name:auth_crypt.model_res_users
+msgid "Users"
+msgstr "사용자"
