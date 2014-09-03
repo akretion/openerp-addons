@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-02-08 00:35+0000\n"
-"PO-Revision-Date: 2014-09-02 03:01+0000\n"
+"POT-Creation-Date: 2012-02-08 00:36+0000\n"
+"PO-Revision-Date: 2014-09-02 08:17+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-09-03 06:53+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
-#. module: account_cancel
-#: view:account.bank.statement:account_cancel.bank_statement_cancel_form_inherit
-msgid "Cancel"
-msgstr "취소"
+#. module: claim_from_delivery
+#: model:ir.actions.act_window,name:claim_from_delivery.action_claim_from_delivery
+msgid "Claim"
+msgstr ""
