@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-08-14 00:10+0000\n"
-"PO-Revision-Date: 2014-08-15 10:09+0000\n"
+"PO-Revision-Date: 2014-10-15 12:41+0000\n"
 "Last-Translator: biniyam <life2enough@gmail.com>\n"
 "Language-Team: Amharic <am@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-16 06:46+0000\n"
-"X-Generator: Launchpad (build 17156)\n"
+"X-Launchpad-Export-Date: 2014-10-16 05:38+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
 #. module: hr_holidays
 #: selection:hr.holidays.status,color_name:0
 msgid "Blue"
-msgstr ""
+msgstr "ሰማያዊ"
 
 #. module: hr_holidays
 #: field:hr.holidays,linked_request_ids:0
@@ -66,7 +66,6 @@ msgid "From Date"
 msgstr "ከዚህ ቀን"
 
 #. module: hr_holidays
-#: view:hr.holidays:hr_holidays.view_hr_holidays_filter
 #: field:hr.holidays,department_id:0
 msgid "Department"
 msgstr "የስራ ክፍል"
@@ -272,8 +271,10 @@ msgstr ""
 #: code:addons/hr_holidays/hr_holidays.py:274
 #: code:addons/hr_holidays/hr_holidays.py:285
 #: code:addons/hr_holidays/hr_holidays.py:310
-#: code:addons/hr_holidays/hr_holidays.py:496
-#: code:addons/hr_holidays/hr_holidays.py:503
+#: code:addons/hr_holidays/hr_holidays.py:329
+#: code:addons/hr_holidays/hr_holidays.py:334
+#: code:addons/hr_holidays/hr_holidays.py:502
+#: code:addons/hr_holidays/hr_holidays.py:509
 #, python-format
 msgid "Warning!"
 msgstr "ማስጠንቀቅያ!"
@@ -373,7 +374,7 @@ msgid "Wheat"
 msgstr ""
 
 #. module: hr_holidays
-#: code:addons/hr_holidays/hr_holidays.py:501
+#: code:addons/hr_holidays/hr_holidays.py:507
 #, python-format
 msgid "Allocation for %s"
 msgstr ""
@@ -398,7 +399,7 @@ msgid "Number of Days"
 msgstr ""
 
 #. module: hr_holidays
-#: code:addons/hr_holidays/hr_holidays.py:496
+#: code:addons/hr_holidays/hr_holidays.py:502
 #, python-format
 msgid ""
 "The feature behind the field 'Remaining Legal Leaves' can only be used when "
@@ -597,7 +598,6 @@ msgid ""
 msgstr ""
 
 #. module: hr_holidays
-#: view:hr.holidays:hr_holidays.view_hr_holidays_filter
 #: field:hr.holidays,state:0
 msgid "Status"
 msgstr "ሁኔታ"
@@ -816,7 +816,7 @@ msgid "To Submit"
 msgstr "ማስገባት"
 
 #. module: hr_holidays
-#: code:addons/hr_holidays/hr_holidays.py:367
+#: code:addons/hr_holidays/hr_holidays.py:373
 #: view:hr.holidays:hr_holidays.edit_holiday_new
 #: view:hr.holidays:hr_holidays.view_holiday_new_calendar
 #: selection:hr.holidays,type:0
@@ -918,7 +918,7 @@ msgid "Both Approved and Confirmed"
 msgstr "ፀድቆ የተረጋገጠ"
 
 #. module: hr_holidays
-#: code:addons/hr_holidays/hr_holidays.py:466
+#: code:addons/hr_holidays/hr_holidays.py:472
 #, python-format
 msgid "Request approved, waiting second validation."
 msgstr "ጥያቂው ፀድቆ የበላይ አለቃ እስኪያረጋግጥ መጠበቅ"
@@ -980,7 +980,7 @@ msgid "Light Pink"
 msgstr "ሮዝ"
 
 #. module: hr_holidays
-#: code:addons/hr_holidays/hr_holidays.py:503
+#: code:addons/hr_holidays/hr_holidays.py:509
 #, python-format
 msgid "You cannot reduce validated allocation requests"
 msgstr ""
