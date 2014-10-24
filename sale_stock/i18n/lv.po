@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-12-21 17:06+0000\n"
-"PO-Revision-Date: 2012-09-21 13:56+0000\n"
-"Last-Translator: Fabien (Open ERP) <fp@tinyerp.com>\n"
+"PO-Revision-Date: 2014-10-23 15:41+0000\n"
+"Last-Translator: Vladimirs Kuzmins <Unknown>\n"
 "Language-Team: Latvian <lv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-23 07:54+0000\n"
-"X-Generator: Launchpad (build 17017)\n"
+"X-Launchpad-Export-Date: 2014-10-24 05:39+0000\n"
+"X-Generator: Launchpad (build 17203)\n"
 
 #. module: sale_stock
 #: help:sale.config.settings,group_invoice_deli_orders:0
@@ -33,21 +33,21 @@ msgstr "Piegādes Pasūtījums"
 #: model:ir.actions.act_window,name:sale_stock.outgoing_picking_list_to_invoice
 #: model:ir.ui.menu,name:sale_stock.menu_action_picking_list_to_invoice
 msgid "Deliveries to Invoice"
-msgstr ""
+msgstr "Piegādes rēķinu izrakstīšanai"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:570
+#: code:addons/sale_stock/sale_stock.py:275
 #, python-format
 msgid "Picking Information ! : "
-msgstr ""
+msgstr "Komplektācijas informācija!: "
 
 #. module: sale_stock
 #: model:process.node,name:sale_stock.process_node_packinglist0
 msgid "Pick List"
-msgstr ""
+msgstr "Komplektācijas Saraksts"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:565
+#: code:addons/sale_stock/sale_stock.py:270
 #, python-format
 msgid ""
 "You selected a quantity of %d Units.\n"
@@ -64,7 +64,7 @@ msgstr ""
 #. module: sale_stock
 #: field:sale.config.settings,group_multiple_shops:0
 msgid "Manage multiple shops"
-msgstr ""
+msgstr "Pārvaldīt vairākus veikalus"
 
 #. module: sale_stock
 #: model:process.transition.action,name:sale_stock.process_transition_action_validate0
@@ -72,7 +72,7 @@ msgid "Validate"
 msgstr "Apstiprināt"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:209
+#: code:addons/sale_stock/sale_stock.py:161
 #, python-format
 msgid ""
 "You must first cancel all delivery order(s) attached to this sales order."
@@ -81,10 +81,10 @@ msgstr ""
 #. module: sale_stock
 #: model:process.transition,name:sale_stock.process_transition_saleprocurement0
 msgid "Create Procurement Order"
-msgstr ""
+msgstr "Veidot Iepirkuma Pasūtījumu"
 
 #. module: sale_stock
-#: field:stock.picking.out,sale_id:0
+#: field:stock.picking,sale_id:0
 msgid "Sale Order"
 msgstr "Tirdzniecības Pasūtījums"
 
@@ -99,7 +99,7 @@ msgstr ""
 #: code:addons/sale_stock/sale_stock.py:615
 #, python-format
 msgid "Error!"
-msgstr ""
+msgstr "Kļūda!"
 
 #. module: sale_stock
 #: field:sale.order,picking_policy:0
@@ -127,57 +127,55 @@ msgstr ""
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_stock_move
 msgid "Stock Move"
-msgstr ""
+msgstr "Atlikumu kustība"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:163
+#: code:addons/sale_stock/sale_stock.py:164
 #, python-format
 msgid "Invalid Action!"
-msgstr ""
+msgstr "Nekorekta darbība!"
 
 #. module: sale_stock
 #: field:sale.config.settings,module_project_timesheet:0
 msgid "Project Timesheet"
-msgstr ""
+msgstr "Projekta darbu uzskaites Tabele"
 
 #. module: sale_stock
 #: field:sale.config.settings,group_sale_delivery_address:0
 msgid "Allow a different address for delivery and invoicing "
-msgstr ""
+msgstr "Atļaut dažādas adreses piegādei un rēķinam "
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:572
-#: code:addons/sale_stock/sale_stock.py:623
+#: code:addons/sale_stock/sale_stock.py:277
+#: code:addons/sale_stock/sale_stock.py:351
 #, python-format
 msgid "Configuration Error!"
-msgstr ""
+msgstr "Konfigurācijas kļūda!"
 
 #. module: sale_stock
 #: model:process.node,name:sale_stock.process_node_saleprocurement0
 msgid "Procurement Order"
-msgstr ""
+msgstr "Iepirkuma Pasūtījums"
 
 #. module: sale_stock
 #: selection:sale.config.settings,default_order_policy:0
 msgid "Invoice based on deliveries"
-msgstr ""
+msgstr "Rēķins bāzēts uz piegādēm"
 
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_sale_order
-#: field:stock.picking,sale_id:0
 msgid "Sales Order"
-msgstr ""
+msgstr "Klienta pasūtījums"
 
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_stock_picking_out
 msgid "Delivery Orders"
-msgstr ""
+msgstr "Piegādes Pasūtījumi"
 
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_sale_order_line
-#: field:stock.move,sale_line_id:0
 msgid "Sales Order Line"
-msgstr ""
+msgstr "Klienta pasūtījuma rinda"
 
 #. module: sale_stock
 #: model:process.transition,note:sale_stock.process_transition_packing0
@@ -197,10 +195,11 @@ msgstr ""
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_stock_picking
 msgid "Picking List"
-msgstr ""
+msgstr "Komplektācijas Saraksts"
 
 #. module: sale_stock
-#: field:sale.shop,warehouse_id:0
+#: field:sale.order,warehouse_id:0
+#: field:sale.report,warehouse_id:0
 msgid "Warehouse"
 msgstr "Noliktava"
 
@@ -212,22 +211,22 @@ msgstr "Piespiedu Nodošana"
 #. module: sale_stock
 #: field:sale.config.settings,default_order_policy:0
 msgid "The default invoicing method is"
-msgstr ""
+msgstr "Noklusējuma rēķinu izrakstīšanas metode ir"
 
 #. module: sale_stock
 #: field:sale.order.line,delay:0
 msgid "Delivery Lead Time"
-msgstr ""
+msgstr "Piegādes laiks"
 
 #. module: sale_stock
 #: model:process.node,note:sale_stock.process_node_deliveryorder0
 msgid "Document of the move to the customer."
-msgstr ""
+msgstr "Piegādes dokuments."
 
 #. module: sale_stock
-#: view:sale.order:0
+#: view:sale.order:sale_stock.view_order_form_inherit
 msgid "View Delivery Order"
-msgstr ""
+msgstr "Parādīt piegādes pasūtījumu"
 
 #. module: sale_stock
 #: field:sale.order.line,move_ids:0
@@ -235,14 +234,14 @@ msgid "Inventory Moves"
 msgstr "Kustība Noliktavā"
 
 #. module: sale_stock
-#: view:sale.config.settings:0
+#: view:sale.config.settings:sale_stock.view_sales_config_sale_stock
 msgid "Default Options"
-msgstr ""
+msgstr "Noklusējuma iespējas"
 
 #. module: sale_stock
 #: field:sale.config.settings,module_project_mrp:0
 msgid "Project MRP"
-msgstr ""
+msgstr "Projekta MRP"
 
 #. module: sale_stock
 #: model:process.transition,note:sale_stock.process_transition_invoiceafterdelivery0
@@ -257,14 +256,13 @@ msgid "Procurement"
 msgstr "Iepirkums"
 
 #. module: sale_stock
-#: view:sale.report:0
 #: field:sale.report,shipped:0
 #: field:sale.report,shipped_qty_1:0
 msgid "Shipped"
-msgstr ""
+msgstr "Izsūtīts"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:265
+#: code:addons/sale_stock/sale_stock.py:266
 #, python-format
 msgid "invalid mode for test_state"
 msgstr "nepareizs režīms test_state"
@@ -291,12 +289,12 @@ msgstr ""
 #. module: sale_stock
 #: field:sale.config.settings,module_delivery:0
 msgid "Allow adding shipping costs"
-msgstr ""
+msgstr "Atļaut pievienot transporta izmaksas"
 
 #. module: sale_stock
-#: view:sale.order:0
+#: view:sale.order:sale_stock.view_order_form_inherit
 msgid "days"
-msgstr ""
+msgstr "dienas"
 
 #. module: sale_stock
 #: field:sale.order.line,product_packaging:0
@@ -322,7 +320,7 @@ msgstr ""
 #. module: sale_stock
 #: field:sale.config.settings,default_picking_policy:0
 msgid "Deliver all at once when all products are available."
-msgstr ""
+msgstr "Piegādāt visu kopā, kad preces būs pieejamas."
 
 #. module: sale_stock
 #: model:res.groups,name:sale_stock.group_invoice_deli_orders
@@ -337,7 +335,7 @@ msgstr ""
 #. module: sale_stock
 #: model:process.transition,name:sale_stock.process_transition_saleorderprocurement0
 msgid "Procurement of sold material"
-msgstr ""
+msgstr "Pārdoto materiālu iepirkums"
 
 #. module: sale_stock
 #: help:sale.order,picking_policy:0
@@ -346,15 +344,15 @@ msgid ""
 msgstr ""
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:208
+#: code:addons/sale_stock/sale_stock.py:160
 #, python-format
 msgid "Cannot cancel sales order!"
-msgstr ""
+msgstr "Nevar atcelt klienta pasūtījumu!"
 
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_sale_shop
 msgid "Sales Shop"
-msgstr ""
+msgstr "Veikals"
 
 #. module: sale_stock
 #: help:sale.order,shipped:0
@@ -362,32 +360,35 @@ msgid ""
 "It indicates that the sales order has been delivered. This field is updated "
 "only after the scheduler(s) have been launched."
 msgstr ""
+"Norāda, ka klienta pasūtījums ir piegādāts. Šis lauks tiek atjaunināts, kad "
+"tiek palaista(-as) plānotā(-ās) darbība(-as)."
 
 #. module: sale_stock
 #: field:sale.order.line,property_ids:0
 msgid "Properties"
-msgstr ""
+msgstr "Īpašības"
 
 #. module: sale_stock
 #: field:sale.config.settings,group_mrp_properties:0
 msgid "Product properties on order lines"
-msgstr ""
+msgstr "Produkta īpašības pasūtījuma rindā"
 
 #. module: sale_stock
 #: help:sale.config.settings,default_order_policy:0
 msgid ""
 "You can generate invoices based on sales orders or based on shippings."
 msgstr ""
+"Iespējams veidot rēķinus, balstoties uz klientu pasūtījumiem vai uz piegādēm."
 
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_sale_report
 msgid "Sales Orders Statistics"
-msgstr ""
+msgstr "Klientu pasūtījumu statistika"
 
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_res_company
 msgid "Companies"
-msgstr ""
+msgstr "Uzņēmumi"
 
 #. module: sale_stock
 #: help:sale.config.settings,task_work:0
@@ -421,10 +422,10 @@ msgid "Assign"
 msgstr "Piešķirt"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:618
+#: code:addons/sale_stock/sale_stock.py:346
 #, python-format
 msgid "Not enough stock ! : "
-msgstr ""
+msgstr "Nepietiek atlikuma!: "
 
 #. module: sale_stock
 #: help:sale.order.line,delay:0
@@ -444,7 +445,7 @@ msgstr ""
 #. module: sale_stock
 #: selection:sale.config.settings,default_order_policy:0
 msgid "Invoice based on sales orders"
-msgstr ""
+msgstr "Izrakstīt rēķinus pēc klientu pasūtījumiem"
 
 #. module: sale_stock
 #: model:process.node,name:sale_stock.process_node_invoiceafterdelivery0
@@ -458,7 +459,7 @@ msgid "Cancel"
 msgstr "Atcelt"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:163
+#: code:addons/sale_stock/sale_stock.py:164
 #, python-format
 msgid ""
 "In order to delete a confirmed sales order, you must cancel it.\n"
@@ -468,12 +469,12 @@ msgstr ""
 #. module: sale_stock
 #: field:sale.order.line,number_packages:0
 msgid "Number Packages"
-msgstr ""
+msgstr "Iepakojumu Skaits"
 
 #. module: sale_stock
 #: field:sale.order,shipped:0
 msgid "Delivered"
-msgstr ""
+msgstr "Piegādāts"
 
 #. module: sale_stock
 #: model:process.transition,name:sale_stock.process_transition_invoiceafterdelivery0
@@ -488,19 +489,19 @@ msgstr ""
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_sale_advance_payment_inv
 msgid "Sales Advance Payment Invoice"
-msgstr ""
+msgstr "Priekšapmaksas Rēķins"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:523
+#: code:addons/sale_stock/sale_stock.py:532
 #, python-format
 msgid "You must first cancel stock moves attached to this sales order line."
 msgstr ""
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:561
+#: code:addons/sale_stock/sale_stock.py:266
 #, python-format
 msgid "(n/a)"
-msgstr ""
+msgstr "(nav pieejams)"
 
 #. module: sale_stock
 #: field:sale.order,incoterm:0
@@ -508,10 +509,10 @@ msgid "Incoterm"
 msgstr "Inkoterms"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:522
+#: code:addons/sale_stock/sale_stock.py:531
 #, python-format
 msgid "Cannot cancel sales order line!"
-msgstr ""
+msgstr "Nevar atcelt klientu pasūtījuma rindu!"
 
 #. module: sale_stock
 #: model:process.transition.action,name:sale_stock.process_transition_action_cancelassignation0
@@ -521,17 +522,17 @@ msgstr "Atcelt preču nodošanu"
 #. module: sale_stock
 #: model:process.node,note:sale_stock.process_node_invoiceafterdelivery0
 msgid "Based on the shipped or on the ordered quantities."
-msgstr ""
+msgstr "Balstīts uz piegādāto vai pasūtīto skaitu."
 
 #. module: sale_stock
 #: selection:sale.order,picking_policy:0
 msgid "Deliver all products at once"
-msgstr ""
+msgstr "Piegādāt visus produktus uzreiz"
 
 #. module: sale_stock
 #: field:sale.order,picking_ids:0
 msgid "Related Picking"
-msgstr ""
+msgstr "Saistītā Komplektēšana Noliktavā"
 
 #. module: sale_stock
 #: model:ir.model,name:sale_stock.model_sale_config_settings
@@ -553,23 +554,25 @@ msgstr ""
 #. module: sale_stock
 #: model:process.transition,name:sale_stock.process_transition_deliver0
 msgid "Create Delivery Order"
-msgstr ""
+msgstr "Veidot Piegādes Pasūtījumu"
 
 #. module: sale_stock
-#: view:sale.order:0
+#: view:sale.order:sale_stock.view_order_form_inherit
 msgid "Ignore Exception"
-msgstr ""
+msgstr "Ignorēt Izņēmumu"
 
 #. module: sale_stock
-#: code:addons/sale_stock/sale_stock.py:614
+#: code:addons/sale_stock/sale_stock.py:342
 #, python-format
 msgid ""
 "You plan to sell %.2f %s but you only have %.2f %s available !\n"
 "The real stock is %.2f %s. (without reservations)"
 msgstr ""
+"Jūs plānojat pārdot %.2f %s, bet ir pieejams tikai %.2f %s!\n"
+"Reālais skaits noliktavā ir %.2f %s. (bez rezervācijām)"
 
 #. module: sale_stock
-#: view:sale.order:0
+#: view:sale.order:sale_stock.view_order_form_inherit
 msgid "Recreate Delivery Order"
 msgstr ""
 
@@ -579,19 +582,19 @@ msgid "This allows to configure and use multiple shops."
 msgstr ""
 
 #. module: sale_stock
-#: field:sale.order,picked_rate:0
+#: view:sale.report:sale_stock.view_order_product_search_sale_stock_inherit
 msgid "Picked"
 msgstr "Pieņemts piegādei"
 
 #. module: sale_stock
 #: selection:sale.order,picking_policy:0
 msgid "Deliver each product when available"
-msgstr ""
+msgstr "Piegādāt katru produktu, kad tie ir pieejami"
 
 #. module: sale_stock
 #: model:process.transition,name:sale_stock.process_transition_packing0
 msgid "Create Pick List"
-msgstr ""
+msgstr "Veidot Komplektēšanas Sarakstu"
 
 #. module: sale_stock
 #: model:process.transition,note:sale_stock.process_transition_deliver0
