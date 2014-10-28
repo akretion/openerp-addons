@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-08-14 00:10+0000\n"
-"PO-Revision-Date: 2014-08-15 10:35+0000\n"
-"Last-Translator: Olivier Dony (Odoo) <Unknown>\n"
+"PO-Revision-Date: 2014-10-27 08:47+0000\n"
+"Last-Translator: Yenthe - Bapps.be <yenthespam@gmail.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-16 06:46+0000\n"
-"X-Generator: Launchpad (build 17156)\n"
+"X-Launchpad-Export-Date: 2014-10-28 07:11+0000\n"
+"X-Generator: Launchpad (build 17203)\n"
 
 #. module: mail
 #: view:mail.followers:mail.view_mail_subscription_form
@@ -23,7 +23,7 @@ msgid "Followers Form"
 msgstr "Volgers formulier"
 
 #. module: mail
-#: code:addons/mail/mail_thread.py:385
+#: code:addons/mail/mail_thread.py:384
 #, python-format
 msgid "%s created"
 msgstr "%s aangemaakt"
@@ -214,7 +214,7 @@ msgstr ""
 #: code:addons/mail/wizard/invite.py:76
 #, python-format
 msgid "Invitation to follow %s"
-msgstr ""
+msgstr "Uitnodiging om te volgen %s"
 
 #. module: mail
 #. openerp-web
@@ -255,7 +255,7 @@ msgid "Related Document ID"
 msgstr "Gerelateerde document ID"
 
 #. module: mail
-#: code:addons/mail/mail_message.py:755
+#: code:addons/mail/mail_message.py:763
 #, python-format
 msgid "Access Denied"
 msgstr "Toegang geweigerd"
@@ -284,7 +284,7 @@ msgid "Support"
 msgstr "Ondersteuning"
 
 #. module: mail
-#: code:addons/mail/mail_message.py:756
+#: code:addons/mail/mail_message.py:764
 #, python-format
 msgid ""
 "The requested operation cannot be completed due to security restrictions. "
@@ -391,6 +391,10 @@ msgid ""
 "automatic subscription on a related document. The field is used to compute "
 "getattr(related_document.relation_field)."
 msgstr ""
+"Veld dat wordt gebruikt om het bijbehorende model te koppelen aan het "
+"subtype, wanneer automatische aanmelding wordt gebruikt op het bijbehorende "
+"model. Dit veld wordt gebruikt om om "
+"getattr(related_document.relation_field) te berekenen."
 
 #. module: mail
 #: selection:mail.mail,state:0
@@ -517,6 +521,9 @@ msgid ""
 "incoming email that does not reply to an existing record will cause the "
 "creation of a new record of this model (e.g. a Project Task)"
 msgstr ""
+"Het model (OpenERP document type) op welke deze alias reageert. Alle e-mail "
+"die niet reageert op een bestaande item zal een nieuw item voor dit model "
+"aanmaken (Als een projecttaak)"
 
 #. module: mail
 #: view:base.config.settings:0
@@ -661,7 +668,7 @@ msgid "Delete this attachment"
 msgstr "Verwijder deze bijlage"
 
 #. module: mail
-#: code:addons/mail/mail_thread.py:173
+#: code:addons/mail/mail_thread.py:172
 #, python-format
 msgid "New"
 msgstr "Nieuw"
@@ -875,7 +882,7 @@ msgstr "lees minder"
 #: code:addons/mail/static/src/xml/mail.xml:54
 #, python-format
 msgid "Send a message to all followers of the document"
-msgstr ""
+msgstr "Verstuur een bericht naar alle volgers van dit documnent"
 
 #. module: mail
 #. openerp-web
@@ -1110,7 +1117,7 @@ msgstr ""
 #: code:addons/mail/static/src/xml/mail.xml:57
 #, python-format
 msgid "Log a note for this document. No notification will be sent"
-msgstr ""
+msgstr "Maak een notitie voor dit document. Er wordt geen melding gestuurd."
 
 #. module: mail
 #: view:mail.group:mail.view_group_search
@@ -1212,7 +1219,7 @@ msgid "or"
 msgstr "of"
 
 #. module: mail
-#: code:addons/mail/mail_thread.py:172
+#: code:addons/mail/mail_thread.py:171
 #, python-format
 msgid "You have one unread message"
 msgstr "U heeft een ongelezen bericht"
@@ -1265,6 +1272,11 @@ msgid ""
 "subtypes allow to precisely tune the notifications the user want to receive "
 "on its wall."
 msgstr ""
+"Berichten subtypes geven een nauwkeurigere type aanduiding bij een bericht, "
+"speciaal bij systeem meldingen. Het kan bijvoorbeeld een melding zijn "
+"behorend bij het aanmaken van een nieuwe regel, of bij een fase verandering. "
+"Berichten subtypes geven u de mogelijkheid om de meldingen welke een "
+"werknemer wil ontvangen, precies in te stellen."
 
 #. module: mail
 #: field:res.partner,notification_email_send:0
@@ -1320,7 +1332,7 @@ msgstr "Uitgebreide filters..."
 #: code:addons/mail/mail_group.py:174
 #, python-format
 msgid "Warning!"
-msgstr ""
+msgstr "Waarschuwing!"
 
 #. module: mail
 #: selection:res.partner,notification_email_send:0
@@ -1414,7 +1426,7 @@ msgid "Related Menu"
 msgstr "Gerelateerd menu"
 
 #. module: mail
-#: code:addons/mail/update.py:93
+#: code:addons/mail/update.py:91
 #, python-format
 msgid "Error"
 msgstr "Fout"
@@ -1439,6 +1451,8 @@ msgid ""
 "You cannot delete those groups, as the Whole Company group is required by "
 "other modules."
 msgstr ""
+"U kunt deze groep niet verwijderen omdat deze groep nodig is voor andere "
+"modules."
 
 #. module: mail
 #: help:mail.alias,alias_user_id:0
@@ -1448,6 +1462,11 @@ msgid ""
 "the sender (From) address, or will use the Administrator account if no "
 "system user is found for that address."
 msgstr ""
+"De eigenaar van de regels welker zijn aangemaakt bij het ontvangen van de e-"
+"mails op deze alias. Indien dit veld niet is ingesteld zal het systeem "
+"proberen om de juiste eigenaar te vinden op basis van het verzend (van) "
+"adres. Indien geen gebruiker wordt gevonden, wordt de Administrator "
+"gebruiker gebruikt."
 
 #. module: mail
 #. openerp-web
@@ -1457,7 +1476,7 @@ msgid "And"
 msgstr "En"
 
 #. module: mail
-#: code:addons/mail/mail_thread.py:172
+#: code:addons/mail/mail_thread.py:171
 #, python-format
 msgid "You have %d unread messages"
 msgstr "U heeft %d ongelezen berichten"
@@ -1792,7 +1811,7 @@ msgstr "Berichten"
 #: code:addons/mail/mail_mail.py:243
 #, python-format
 msgid "Followers of %s"
-msgstr ""
+msgstr "Volgers van %s"
 
 #. module: mail
 #. openerp-web
@@ -1862,6 +1881,8 @@ msgid ""
 "Message subtypes followed, meaning subtypes that will be pushed onto the "
 "user's Wall."
 msgstr ""
+"Bericht subtypes welke u volgt. Dit zijn subtypes weke worden weergegeven "
+"bij de gebruikers berichten."
 
 #. module: mail
 #: help:mail.group,message_ids:0
@@ -1911,7 +1932,7 @@ msgid "Alias domain"
 msgstr "Alias domein"
 
 #. module: mail
-#: code:addons/mail/update.py:93
+#: code:addons/mail/update.py:91
 #, python-format
 msgid "Error during communication with the publisher warranty server."
 msgstr "Fout tijdens communicatie met de uitgevers garantie server."
