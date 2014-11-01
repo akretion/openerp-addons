@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: openobject-addons\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-08-14 00:10+0000\n"
-"PO-Revision-Date: 2014-10-31 06:27+0000\n"
+"PO-Revision-Date: 2014-10-31 08:47+0000\n"
 "Last-Translator: biniyam <life2enough@gmail.com>\n"
 "Language-Team: Amharic <am@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-10-31 06:40+0000\n"
+"X-Launchpad-Export-Date: 2014-11-01 06:30+0000\n"
 "X-Generator: Launchpad (build 17211)\n"
 
 #. module: hr_holidays
@@ -143,7 +143,7 @@ msgstr "አረንጝዴ"
 #. module: hr_holidays
 #: field:hr.employee,current_leave_id:0
 msgid "Current Leave Type"
-msgstr "የፍቃድ አይነት"
+msgstr "አሁን ያለው የፍቃድ አይነት"
 
 #. module: hr_holidays
 #: view:hr.holidays:hr_holidays.edit_holiday_new
@@ -236,7 +236,7 @@ msgstr "ፀድቆል"
 #. module: hr_holidays
 #: help:hr.holidays,message_unread:0
 msgid "If checked new messages require your attention."
-msgstr ""
+msgstr "አዳዲስ መልእክቶችን ስናይ አስፈላጊ ትኩረት መስጠት"
 
 #. module: hr_holidays
 #: field:hr.holidays.status,color_name:0
